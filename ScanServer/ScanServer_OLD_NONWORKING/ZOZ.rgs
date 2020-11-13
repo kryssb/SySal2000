@@ -1,0 +1,23 @@
+HKCR
+{
+	ScanServer.ZOZ.1 = s 'ZOZ Class'
+	{
+		CLSID = s '{6F867FAB-9E58-4B67-982C-D33F2863CC25}'
+	}
+	ScanServer.ZOZ = s 'ZOZ Class'
+	{
+		CLSID = s '{6F867FAB-9E58-4B67-982C-D33F2863CC25}'
+		CurVer = s 'ScanServer.ZOZ.1'
+	}
+	NoRemove CLSID
+	{
+		ForceRemove {6F867FAB-9E58-4B67-982C-D33F2863CC25} = s 'ZOZ Class'
+		{
+			ProgID = s 'ScanServer.ZOZ.1'
+			VersionIndependentProgID = s 'ScanServer.ZOZ'
+			LocalServer32 = s '%MODULE%'
+			val AppID = s '%APPID%'
+			'TypeLib' = s '{62B20409-94B8-41A5-9445-AE463EF2960A}'
+		}
+	}
+}

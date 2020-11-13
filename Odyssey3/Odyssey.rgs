@@ -1,0 +1,25 @@
+HKCR
+{
+	Odyssey.Odyssey.3 = s 'Odyssey Class'
+	{
+		CLSID = s '{aca929f0-3f96-4f17-9415-c7f85dae3b27}'
+	}
+	Odyssey3.Odyssey3 = s 'Odyssey3 Class'
+	{
+		CLSID = s '{aca929f0-3f96-4f17-9415-c7f85dae3b27}'
+		CurVer = s 'Odyssey.Odyssey.2'
+	}
+	NoRemove CLSID
+	{
+		ForceRemove {aca929f0-3f96-4f17-9415-c7f85dae3b27} = s 'Odyssey Class'
+		{
+			ProgID = s 'Odyssey.Odyssey.3'
+			VersionIndependentProgID = s 'Odyssey.Odyssey'
+			InprocServer32 = s '%MODULE%'
+			{
+				val ThreadingModel = s 'Free'
+			}
+			'TypeLib' = s '{48b7a011-ba80-4c0a-8c9b-8d3aa3509d47}'
+		}
+	}
+}

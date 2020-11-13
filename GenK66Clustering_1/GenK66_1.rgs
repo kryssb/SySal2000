@@ -1,0 +1,25 @@
+HKCR
+{
+	GenK66Clustering_1.GenK66_1.1 = s 'GenK66_1 Class'
+	{
+		CLSID = s '{4AD314CE-A033-11D3-A47D-A9A77D89893C}'
+	}
+	GenK66Clustering_1.GenK66_1 = s 'GenK66_1 Class'
+	{
+		CLSID = s '{4AD314CE-A033-11D3-A47D-A9A77D89893C}'
+		CurVer = s 'GenK66Clustering_1.GenK66_1.1'
+	}
+	NoRemove CLSID
+	{
+		ForceRemove {4AD314CE-A033-11D3-A47D-A9A77D89893C} = s 'GenK66_1 Class'
+		{
+			ProgID = s 'GenK66Clustering_1.GenK66_1.1'
+			VersionIndependentProgID = s 'GenK66Clustering_1.GenK66_1'
+			InprocServer32 = s '%MODULE%'
+			{
+				val ThreadingModel = s 'Free'
+			}
+			'TypeLib' = s '{4AD314C0-A033-11D3-A47D-A9A77D89893C}'
+		}
+	}
+}

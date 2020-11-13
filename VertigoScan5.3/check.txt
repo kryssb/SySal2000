@@ -1,0 +1,73 @@
+Comparing files debug.cpp and ..\VERTIGOSCAN5_WITH_THICKNESS\DEBUG.CPP
+FC: no differences encountered
+
+Comparing files EditConfig.cpp and ..\VERTIGOSCAN5_WITH_THICKNESS\EDITCONFIG.CPP
+FC: no differences encountered
+
+Comparing files EditGridOptions.cpp and ..\VERTIGOSCAN5_WITH_THICKNESS\EDITGRIDOPTIONS.CPP
+FC: no differences encountered
+
+Comparing files Globals.cpp and ..\VERTIGOSCAN5_WITH_THICKNESS\GLOBALS.CPP
+FC: no differences encountered
+
+Comparing files MainSwitch.cpp and ..\VERTIGOSCAN5_WITH_THICKNESS\MAINSWITCH.CPP
+FC: no differences encountered
+
+Comparing files ManualChecks.cpp and ..\VERTIGOSCAN5_WITH_THICKNESS\MANUALCHECKS.CPP
+FC: no differences encountered
+
+Comparing files MapInitString.cpp and ..\VERTIGOSCAN5_WITH_THICKNESS\MAPINITSTRING.CPP
+FC: no differences encountered
+
+Comparing files MouseControl.cpp and ..\VERTIGOSCAN5_WITH_THICKNESS\MOUSECONTROL.CPP
+FC: no differences encountered
+
+Comparing files RemoteScan.cpp and ..\VERTIGOSCAN5_WITH_THICKNESS\REMOTESCAN.CPP
+FC: no differences encountered
+
+Comparing files Scan.cpp and ..\VERTIGOSCAN5_WITH_THICKNESS\SCAN.CPP
+FC: no differences encountered
+
+Comparing files ScanStart.cpp and ..\VERTIGOSCAN5_WITH_THICKNESS\SCANSTART.CPP
+FC: no differences encountered
+
+Comparing files SelectField.cpp and ..\VERTIGOSCAN5_WITH_THICKNESS\SELECTFIELD.CPP
+FC: no differences encountered
+
+Comparing files StdAfx.cpp and ..\VERTIGOSCAN5_WITH_THICKNESS\STDAFX.CPP
+FC: no differences encountered
+
+Comparing files TestAndConfig.cpp and ..\VERTIGOSCAN5_WITH_THICKNESS\TESTANDCONFIG.CPP
+FC: no differences encountered
+
+Comparing files VertigoScan5.cpp and ..\VERTIGOSCAN5_WITH_THICKNESS\VERTIGOSCAN5.CPP
+FC: no differences encountered
+
+Comparing files VertigoScan5Class.cpp and ..\VERTIGOSCAN5_WITH_THICKNESS\VERTIGOSCAN5CLASS.CPP
+FC: no differences encountered
+
+Comparing files VertigoScanner.cpp and ..\VERTIGOSCAN5_WITH_THICKNESS\VERTIGOSCANNER.CPP
+***** VertigoScanner.cpp
+                ProcessVariables.pAZT[1].NewPos.Y = ProcessVariables.StartY;
+                ProcessVariables.pAZT[1].ZExtent = RelZ.TopInt - C.SurfaceAdjustment;
+                ProcessVariables.pAZT[1].NewPos.Z = RelZ.TopExt + C.SurfaceAdjustment;
+***** ..\VERTIGOSCAN5_WITH_THICKNESS\VERTIGOSCANNER.CPP
+                ProcessVariables.pAZT[1].NewPos.Y = ProcessVariables.StartY;
+                ProcessVariables.pAZT[1].ZExtent = RelZ.BottomExt - C.SurfaceAdjustment; //BUGFIX 
+                ProcessVariables.pAZT[1].NewPos.Z = RelZ.TopExt + C.SurfaceAdjustment;
+*****
+
+***** VertigoScanner.cpp
+                ProcessVariables.ValidLayers = lastlayer + 1 - firstlayer;
+                if (ProcessVariables.ValidLayers < C.MinValidLayers || (ProcessVariables.ValidLayers < C.VLayers && (firstlayer
+<= C.VInactiveLayers || lastlayer >= ProcessVariables.pAIS[s].ImageCount - 1)))
+                {
+***** ..\VERTIGOSCAN5_WITH_THICKNESS\VERTIGOSCANNER.CPP
+                ProcessVariables.ValidLayers = lastlayer + 1 - firstlayer;
+                //BUGFIX if (ProcessVariables.ValidLayers < C.MinValidLayers || (ProcessVariables.ValidLayers < C.VLayers && (f
+rstlayer <= C.VInactiveLayers || lastlayer >= ProcessVariables.pAIS[s].ImageCount - 1)))
+                if (ProcessVariables.ValidLayers < C.MinValidLayers || (!retry && (firstlayer <= C.VInactiveLayers || lastlayer
+>= ProcessVariables.pAIS[s].ImageCount - 1)))
+                {
+*****
+

@@ -1,0 +1,52 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" >
+<HTML>
+	<HEAD>
+		<TITLE>Cluster Finding</TITLE>
+		<META content="Microsoft Visual Studio 7.0" name="GENERATOR">
+	</HEAD>
+	<BODY>
+		<P><FONT face="Arial" color="#000066" size="5"><EM> Odyssey&nbsp;- Cluster Finding</EM></FONT>
+			<EM><FONT size="4"><FONT face="Arial">
+						<HR width="100%" SIZE="2">
+					</FONT>
+					<P></P>
+					<P align="justify">
+				</FONT></EM><FONT face="Arial" size="2">Once the image has been binarized, 
+				finding clusters of interesting pixels (1s on&nbsp;background of 0s)&nbsp;is a 
+				very well defined mathematical operation. Thus, it makes no sense to talk about 
+				cluster finding efficiency.&nbsp;Missing a cluster just signals the presence of 
+				a bug.</FONT>&nbsp;
+		</P>
+		<P align="justify"><FONT face="Arial"><FONT size="2">The Odyssey clustering algorithm is 
+					the usual SySal one. It also correctly handles "A-shaped clusters" and 
+					"V-shaped clusters".<BR>
+					For each cluster, the returned information is:</FONT></FONT></P>
+		<P align="justify"><FONT face="Arial" size="2"><EM> Area, X, Y, InertiaXX, InertiaXY, 
+					InertiaIYY.</EM></FONT></P>
+		<P align="justify"><FONT face="Arial" size="2"> <FONT color="#ff0066">Area</FONT> is 
+				the number of pixels that make up this cluster.<BR>
+				<FONT color="#ff0066">X</FONT> and <FONT color="#ff0066">Y</FONT> are the 
+				cluster coordinates (measured from the center of the field of view in pixels).<BR>
+				<FONT color="#ff0066">InertiaXX</FONT>, <FONT color="#ff0066">InertiaXY</FONT>, <FONT color="#ff0066">
+					InertiaYY</FONT>: components of the matrix of inertia of that cluster. They 
+				are only three&nbsp;because&nbsp;the matrix of inertia is symmetric.</FONT></P>
+		<P align="justify"><FONT face="Arial" size="2">In order to speed up the clustering 
+				process, it can be split over several threads. The&nbsp;clustering 
+				speed&nbsp;is usually proportional to the number of threads used,&nbsp;until 
+				this number reaches the number of processors in the machine. Increasing the 
+				number of threads over the number of processors then just increases the 
+				overhead for managing multiple threads.&nbsp;Parallel clustering only works in 
+				asynchronous processing mode. <FONT face="Arial" size="2">In asynchronous mode, 
+					clusters for each sequence are produced after the next sequence starts, so 
+					there is 1 sequence delay.</FONT></FONT></P>
+		<P align="justify"><FONT face="Arial" size="2">Clustering needs the intervention of the 
+				host CPU</FONT><FONT face="Arial" size="2">. In synchronous mode, it must be so 
+				fast that it stays in sync with the acquisition, and it has 1 field delay with 
+				respect to grabbing end (2 field delay with respect to grabbing start). With 
+				fast cameras (&gt;60 fps) this requirement is hardly met, and frames are 
+				missed, also because of OS thread time slicing (10 ms under Windows). Thus, for 
+				high performances, asynchronous operation is recommended. The synchronous 
+				functions have been implemented just for completeness and back-compatibility 
+				with older scanning modules.</FONT></P>
+	</BODY>
+</HTML>

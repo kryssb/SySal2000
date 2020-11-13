@@ -1,0 +1,33 @@
+Microsoft Visual Studio Solution File, Format Version 7.00
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Genesis4", "Genesis4.vcproj", "{AD6722E6-5CD5-4A6C-87AA-2401E94D65AD}"
+EndProject
+Global
+	GlobalSection(SolutionConfiguration) = preSolution
+		ConfigName.0 = Debug
+		ConfigName.1 = Release MinDependency
+		ConfigName.2 = Release MinSize
+		ConfigName.3 = Unicode Debug
+		ConfigName.4 = Unicode Release MinDependency
+		ConfigName.5 = Unicode Release MinSize
+	EndGlobalSection
+	GlobalSection(ProjectDependencies) = postSolution
+	EndGlobalSection
+	GlobalSection(ProjectConfiguration) = postSolution
+		{AD6722E6-5CD5-4A6C-87AA-2401E94D65AD}.Debug.ActiveCfg = Debug|Win32
+		{AD6722E6-5CD5-4A6C-87AA-2401E94D65AD}.Debug.Build.0 = Debug|Win32
+		{AD6722E6-5CD5-4A6C-87AA-2401E94D65AD}.Release MinDependency.ActiveCfg = Release MinDependency|Win32
+		{AD6722E6-5CD5-4A6C-87AA-2401E94D65AD}.Release MinDependency.Build.0 = Release MinDependency|Win32
+		{AD6722E6-5CD5-4A6C-87AA-2401E94D65AD}.Release MinSize.ActiveCfg = Release MinSize|Win32
+		{AD6722E6-5CD5-4A6C-87AA-2401E94D65AD}.Release MinSize.Build.0 = Release MinSize|Win32
+		{AD6722E6-5CD5-4A6C-87AA-2401E94D65AD}.Unicode Debug.ActiveCfg = Unicode Debug|Win32
+		{AD6722E6-5CD5-4A6C-87AA-2401E94D65AD}.Unicode Debug.Build.0 = Unicode Debug|Win32
+		{AD6722E6-5CD5-4A6C-87AA-2401E94D65AD}.Unicode Release MinDependency.ActiveCfg = Unicode Release MinDependency|Win32
+		{AD6722E6-5CD5-4A6C-87AA-2401E94D65AD}.Unicode Release MinDependency.Build.0 = Unicode Release MinDependency|Win32
+		{AD6722E6-5CD5-4A6C-87AA-2401E94D65AD}.Unicode Release MinSize.ActiveCfg = Unicode Release MinSize|Win32
+		{AD6722E6-5CD5-4A6C-87AA-2401E94D65AD}.Unicode Release MinSize.Build.0 = Unicode Release MinSize|Win32
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+	EndGlobalSection
+	GlobalSection(ExtensibilityAddIns) = postSolution
+	EndGlobalSection
+EndGlobal

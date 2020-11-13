@@ -1,0 +1,260 @@
+//Microsoft Developer Studio generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// English (U.S.) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
+#pragma code_page(1252)
+#endif //_WIN32
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_ABOUTBOX DIALOG DISCARDABLE  0, 0, 235, 55
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "About EasyLink"
+FONT 8, "MS Sans Serif"
+BEGIN
+    ICON            IDR_MAINFRAME,IDC_STATIC,11,17,20,20
+    LTEXT           "EasyLink Version 1.0",IDC_STATIC,40,10,119,8,
+                    SS_NOPREFIX
+    LTEXT           "Copyright (C) 2001",IDC_STATIC,40,25,119,8
+    DEFPUSHBUTTON   "OK",IDOK,178,7,50,14,WS_GROUP
+END
+
+IDD_EASYLINK_DIALOG DIALOGEX 0, 0, 261, 173
+STYLE DS_MODALFRAME | WS_MINIMIZEBOX | WS_POPUP | WS_VISIBLE | WS_CAPTION | 
+    WS_SYSMENU
+EXSTYLE WS_EX_APPWINDOW
+CAPTION "EasyLink - 2001 by Cristiano Bozza"
+FONT 8, "MS Sans Serif"
+BEGIN
+    PUSHBUTTON      "E&xit",IDCANCEL,204,152,50,14
+    DEFPUSHBUTTON   "Select Catalog",IDC_SEL_CATALOG,7,7,65,14
+    EDITTEXT        IDC_EDIT_CATALOG,78,7,176,13,ES_AUTOHSCROLL
+    DEFPUSHBUTTON   "Select Output File",IDC_SEL_OUTPUT,7,23,65,14
+    EDITTEXT        IDC_EDIT_OUTPUT,78,23,176,13,ES_AUTOHSCROLL
+    CONTROL         "Progress1",IDC_LINKPROGRESS,"msctls_progress32",
+                    PBS_SMOOTH | WS_BORDER,114,152,86,14
+    PUSHBUTTON      "&Start",IDC_START,7,152,50,14
+    PUSHBUTTON      "Sto&p",IDC_STOP,60,152,50,14
+    LTEXT           "Min points",IDC_STATIC,7,40,40,11
+    EDITTEXT        IDC_C_MINPTS,49,39,23,13,ES_AUTOHSCROLL
+    LTEXT           "Slope tol.",IDC_STATIC,79,40,40,11
+    EDITTEXT        IDC_C_SLOPETOL,139,39,17,13,ES_AUTOHSCROLL
+    LTEXT           "Position tol.",IDC_STATIC,163,40,52,11
+    EDITTEXT        IDC_C_POSTOL,237,39,17,13,ES_AUTOHSCROLL
+    LTEXT           "Min slope",IDC_STATIC,7,57,40,11
+    EDITTEXT        IDC_C_MINSLOPE,49,56,23,13,ES_AUTOHSCROLL
+    LTEXT           "Merging Slope tol.",IDC_STATIC,80,57,55,11
+    EDITTEXT        IDC_C_MERGESLOPETOL,139,56,17,13,ES_AUTOHSCROLL
+    LTEXT           "Merging Position tol.",IDC_STATIC,162,57,70,11
+    EDITTEXT        IDC_C_MERGEPOSTOL,237,56,17,13,ES_AUTOHSCROLL
+    GROUPBOX        "Slope Corrections",IDC_STATIC,7,74,247,74
+    LTEXT           "SX'=(1 + Ax) SX + Bx",IDC_STATIC,15,88,72,9
+    LTEXT           "SY'=(1 + Ay) SY + By",IDC_STATIC,15,101,71,9
+    LTEXT           "Ax",IDC_STATIC,93,88,16,9
+    EDITTEXT        IDC_TOP_AX,114,86,22,12,ES_AUTOHSCROLL
+    LTEXT           "Bx",IDC_STATIC,141,88,16,9
+    EDITTEXT        IDC_TOP_BX,162,86,22,12,ES_AUTOHSCROLL
+    LTEXT           "Ay",IDC_STATIC,93,101,16,9
+    EDITTEXT        IDC_TOP_AY,114,99,22,12,ES_AUTOHSCROLL
+    LTEXT           "By",IDC_STATIC,141,101,16,9
+    EDITTEXT        IDC_TOP_BY,162,99,22,12,ES_AUTOHSCROLL
+    LTEXT           "SX'=(1 + Ax) SX + Bx",IDC_STATIC,15,116,66,9
+    LTEXT           "SY'=(1 + Ay) SY + By",IDC_STATIC,15,129,68,9
+    LTEXT           "Ax",IDC_STATIC,93,116,16,9
+    EDITTEXT        IDC_BOTTOM_AX,114,114,22,12,ES_AUTOHSCROLL
+    LTEXT           "Bx",IDC_STATIC,141,116,16,9
+    EDITTEXT        IDC_BOTTOM_BX,162,114,22,12,ES_AUTOHSCROLL
+    LTEXT           "Ay",IDC_STATIC,93,129,16,9
+    EDITTEXT        IDC_BOTTOM_AY,114,127,22,12,ES_AUTOHSCROLL
+    LTEXT           "By",IDC_STATIC,141,129,16,9
+    EDITTEXT        IDC_BOTTOM_BY,162,127,22,12,ES_AUTOHSCROLL
+    LTEXT           "Top",IDC_STATIC,194,95,52,9
+    LTEXT           "Bottom",IDC_STATIC,194,121,52,9
+END
+
+
+#ifndef _MAC
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION 1,0,0,1
+ PRODUCTVERSION 1,0,0,1
+ FILEFLAGSMASK 0x3fL
+#ifdef _DEBUG
+ FILEFLAGS 0x1L
+#else
+ FILEFLAGS 0x0L
+#endif
+ FILEOS 0x4L
+ FILETYPE 0x1L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "040904B0"
+        BEGIN
+            VALUE "CompanyName", "\0"
+            VALUE "FileDescription", "EasyLink MFC Application\0"
+            VALUE "FileVersion", "1, 0, 0, 1\0"
+            VALUE "InternalName", "EasyLink\0"
+            VALUE "LegalCopyright", "Copyright (C) 2001\0"
+            VALUE "LegalTrademarks", "\0"
+            VALUE "OriginalFilename", "EasyLink.EXE\0"
+            VALUE "ProductName", "EasyLink Application\0"
+            VALUE "ProductVersion", "1, 0, 0, 1\0"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x409, 1200
+    END
+END
+
+#endif    // !_MAC
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO DISCARDABLE 
+BEGIN
+    IDD_ABOUTBOX, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 228
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 48
+    END
+
+    IDD_EASYLINK_DIALOG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 254
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 166
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_ABOUTBOX            "&About EasyLink..."
+END
+
+#endif    // English (U.S.) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+/////////////////////////////////////////////////////////////////////////////
+// Italian (Italy) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ITA)
+#ifdef _WIN32
+LANGUAGE LANG_ITALIAN, SUBLANG_ITALIAN
+#pragma code_page(1252)
+#endif //_WIN32
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "#define _AFX_NO_SPLITTER_RESOURCES\r\n"
+    "#define _AFX_NO_OLE_RESOURCES\r\n"
+    "#define _AFX_NO_TRACKER_RESOURCES\r\n"
+    "#define _AFX_NO_PROPERTY_RESOURCES\r\n"
+    "\r\n"
+    "#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)\r\n"
+    "#ifdef _WIN32\r\n"
+    "LANGUAGE 9, 1\r\n"
+    "#pragma code_page(1252)\r\n"
+    "#endif //_WIN32\r\n"
+    "#include ""res\\EasyLink.rc2""  // non-Microsoft Visual C++ edited resources\r\n"
+    "#include ""afxres.rc""         // Standard components\r\n"
+    "#endif\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDR_MAINFRAME           ICON    DISCARDABLE     "res\\EasyLink.ico"
+#endif    // Italian (Italy) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+#define _AFX_NO_SPLITTER_RESOURCES
+#define _AFX_NO_OLE_RESOURCES
+#define _AFX_NO_TRACKER_RESOURCES
+#define _AFX_NO_PROPERTY_RESOURCES
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+LANGUAGE 9, 1
+#pragma code_page(1252)
+#endif //_WIN32
+#include "res\EasyLink.rc2"  // non-Microsoft Visual C++ edited resources
+#include "afxres.rc"         // Standard components
+#endif
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+

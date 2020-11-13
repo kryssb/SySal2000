@@ -1,0 +1,156 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" >
+<HTML>
+	<HEAD>
+		<TITLE>Overview</TITLE>
+		<META content="Microsoft Visual Studio 7.0" name="GENERATOR">
+	</HEAD>
+	<BODY>
+		<P><FONT face="Arial" color="#000066" size="5"><EM>Odyssey&nbsp;Overview</EM></FONT></P>
+		<EM><FONT size="4"><FONT face="Arial">
+					<HR width="100%" SIZE="2">
+				</FONT>
+				<P align="justify">
+			</FONT></EM><FONT face="Arial" size="2">Odyssey represents the interface 
+			between SySal 2000 and the Matrox Odyssey vision processor. It is much more 
+			than a driver library, since it includes many high level functions and 
+			interfaces.</FONT></P>
+		<P align="justify"><FONT face="Arial" size="2">The specific interfaces implemented 
+				in&nbsp;this module are:</FONT></P>
+		<UL>
+			<LI>
+				<DIV align="justify"><FONT size="2"><FONT size="2"><FONT color="#ff0033"><FONT size="2"><FONT face="Arial"><FONT color="#ff0033">IFrameGrabber</FONT><FONT color="black">: 
+											basic image acquisition and graphics functions.</FONT></FONT></FONT></FONT></FONT></FONT></DIV>
+			<LI>
+				<DIV align="justify"><FONT size="2">
+						<DIV align="justify"><FONT size="2"><FONT size="2"><FONT color="#ff0033"><FONT size="2"><FONT face="Arial"><FONT color="#ff0033">IVisionProcessor</FONT><FONT color="black">: 
+													synchronous filtering, image processing and cluster recognition functions.</FONT></FONT></FONT></FONT></FONT></FONT></DIV>
+					</FONT>
+				</DIV>
+			<LI>
+				<DIV align="justify"><FONT size="2">
+						<DIV align="justify">
+							<DIV align="justify"><FONT size="2"><FONT size="2"><FONT color="#ff0033"><FONT size="2"><FONT face="Arial"><FONT color="#ff0033">IVisionProcessor2</FONT><FONT color="black">: 
+														multiple filtering support for synchronous acquisition.</FONT></FONT></FONT></FONT></FONT></FONT></DIV>
+						</DIV>
+					</FONT>
+				</DIV>
+			<LI>
+				<DIV align="justify"><FONT size="2">
+						<DIV align="justify">
+							<DIV align="justify">
+								<DIV align="justify"><FONT size="2"><FONT size="2"><FONT color="#ff0033"><FONT size="2"><FONT face="Arial"><FONT color="#ff0033">IVisionProcessor3</FONT><FONT color="black">: 
+															asynchronous image processing and cluster recognition&nbsp;functions.</FONT></FONT></FONT></FONT></FONT></FONT></DIV>
+							</DIV>
+						</DIV>
+					</FONT>
+				</DIV>
+			<LI>
+				<DIV align="justify"><FONT size="2">
+						<DIV align="justify">
+							<DIV align="justify">
+								<DIV align="justify">
+									<DIV align="justify"><FONT size="2"><FONT size="2"><FONT color="#ff0033"><FONT size="2"><FONT face="Arial"><FONT color="#ff0033">IAutomaticLightControl</FONT><FONT color="black">: 
+																support for self-adjustment of light (requires connection to a stage control 
+																module).</FONT></FONT></FONT></FONT></FONT></FONT></DIV>
+								</DIV>
+							</DIV>
+						</DIV>
+					</FONT>
+				</DIV>
+			</LI>
+		</UL>
+		<P align="justify"><FONT face="Arial" size="2">Most of these functionalities are 
+				intended for use by scanning driving modules. Nevertheless, some of them can be 
+				used directly in interactive mode, mainly for setup purposes, but also to help 
+				developers improve image handling software.</FONT></P>
+		<P align="justify"><FONT face="Arial" size="2">Odyssey can apply several processing 
+				steps to the images supplied by the camera. You can click on the highlighted 
+				text to be directed to a page containing detailed discussion. In order of 
+				execution, we have:</FONT></P>
+		<UL>
+			<LI>
+				<DIV align="justify"><FONT size="2">
+						<DIV align="justify"><FONT size="2"><FONT size="2"><FONT color="#ff0033"><FONT size="2"><FONT color="black"><FONT face="Arial"><FONT color="#ff0033"><A href="HelpFlatField.htm">Flat 
+															field subtraction</A> </FONT>(optional): reduces the effect of 
+													electronic noise and nonuniform lighting.</FONT></FONT></FONT></FONT></FONT></FONT></DIV>
+					</FONT>
+				</DIV>
+			<LI>
+				<DIV align="justify"><FONT size="2">
+						<DIV align="justify">
+							<DIV align="justify"><FONT size="2"><FONT size="2"><FONT color="#ff0033"><FONT size="2"><FONT face="Arial"><FONT color="#ff0033"><A href="HelpXop.htm">Extended 
+															operations</A> </FONT><FONT color="black">(optional):&nbsp; image regions 
+														can be copied, flipped or rotated, so that defective areas can be masked and 
+														camera input is corrected.</FONT></FONT></FONT></FONT></FONT></FONT></DIV>
+						</DIV>
+					</FONT>
+				</DIV>
+			<LI>
+				<DIV align="justify"><FONT size="2">
+						<DIV align="justify">
+							<DIV align="justify">
+								<DIV align="justify"><FONT size="2"><FONT size="2"><FONT color="#ff0033"><FONT size="2"><FONT face="Arial"><FONT color="#ff0033"><A href="Help2DFilter.htm">2D 
+																FIR (Finite Impulse Response) Filtering</A></FONT><FONT color="black">: a 
+															digital filter prepares the image for&nbsp;the clustering algorithm and cleans 
+															unwanted features.</FONT></FONT></FONT></FONT></FONT></FONT></DIV>
+							</DIV>
+						</DIV>
+					</FONT>
+				</DIV>
+			<LI>
+				<DIV align="justify"><FONT size="2">
+						<DIV align="justify">
+							<DIV align="justify">
+								<DIV align="justify">
+									<DIV align="justify"><FONT size="2"><FONT size="2"><FONT color="#ff0033"><FONT size="2"><FONT face="Arial"><FONT color="#ff0033"><A href="HelpFilterEq.htm">Post-filtering 
+																	equalization</A></FONT><FONT color="black"> (optional):&nbsp;&nbsp;compensates 
+																lighting and astygmatism effects by reshaping the output of the digital filter.</FONT></FONT></FONT></FONT></FONT></FONT></DIV>
+								</DIV>
+							</DIV>
+						</DIV>
+					</FONT>
+				</DIV>
+			<LI>
+				<DIV align="justify"><FONT size="2">
+						<DIV align="justify">
+							<DIV align="justify">
+								<DIV align="justify">
+									<DIV align="justify">
+										<DIV align="justify"><FONT size="2"><FONT size="2"><FONT color="#ff0033"><FONT size="2"><FONT face="Arial"><FONT color="#ff0033"><A href="HelpClusterFinding.htm">Cluster 
+																		finding</A></FONT><FONT color="black">: clusters of interesting pixels are 
+																	recognized and represented in mathematical form. Applies both to simple objects 
+																	such as silver grains in the emulsion and to complex shapes such as calibration 
+																	grid marks.</FONT></FONT></FONT></FONT></FONT></FONT></DIV>
+									</DIV>
+								</DIV>
+							</DIV>
+						</DIV>
+					</FONT>
+				</DIV>
+			</LI>
+		</UL>
+		<P align="justify"><FONT face="Arial" size="2">Odyssey can store up to 8 programs. Each 
+				program is a coherent set of parameters and settings. It is possible to switch 
+				dynamically from one program to another. In common practice, up to 4 programs 
+				are used in a scanning session: one is to acquire calibration marks, one is for 
+				top side, one is for bottom side, and the fourth one can be allocated for 
+				focusing purposes.</FONT></P>
+		<P align="justify"><FONT face="Arial" size="2">Cluster finding is performed by the PC 
+				CPU(s). The clustering algorithm can profit of the presence of several 
+				processors, and usually the clustering speed scales linearly with the number of 
+				processors involved. Multiprocessor clustering is activated only in 
+				asynchronous mode (IVisionProcessor3 functions).</FONT></P>
+		<P align="justify"><FONT face="Arial" size="2">As mentioned above, Odyssey can 
+				automatically adjust the light. In order to do this, it must drive a lamp, 
+				which is achieved if an external stage control module is connected to the <STRONG>LampController</STRONG>
+				slot (the only connection slot featured by Odyssey). During <A href="HelpAutoLightControl.htm">
+					Automatic Light Control</A>, none of the image processing operations is 
+				used.</FONT></P>
+		<P align="justify"><FONT size="2"><FONT face="Arial"><IMG alt="" src="HelpHelmet.jpg" align="right">
+					The&nbsp;SySal icon for this module&nbsp;is a photo of a Greek helmet from 
+					Great Greece.&nbsp;
+					<BR>
+					It should recall Ulysses, </FONT><FONT face="Arial">the legendary, clever and 
+					subtle&nbsp;Greek hero whose deeds Homer sang in his poem, The Odyssey</FONT></FONT><FONT face="Arial"><FONT size="2">.</FONT></FONT></P>
+	</BODY>
+</HTML>

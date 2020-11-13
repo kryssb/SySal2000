@@ -1,0 +1,596 @@
+//Microsoft Developer Studio generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// Neutral resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_NEU)
+#ifdef _WIN32
+LANGUAGE LANG_NEUTRAL, SUBLANG_NEUTRAL
+#pragma code_page(1252)
+#endif //_WIN32
+
+#ifndef _MAC
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION 1,0,0,1
+ PRODUCTVERSION 1,0,0,1
+ FILEFLAGSMASK 0x3fL
+#ifdef _DEBUG
+ FILEFLAGS 0x1L
+#else
+ FILEFLAGS 0x0L
+#endif
+ FILEOS 0x4L
+ FILETYPE 0x2L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "040904b0"
+        BEGIN
+            VALUE "Comments", "\0"
+            VALUE "CompanyName", "\0"
+            VALUE "FileDescription", "Odyssey Module\0"
+            VALUE "FileVersion", "2, 0, 0, 0\0"
+            VALUE "InternalName", "Odyssey\0"
+            VALUE "LegalCopyright", "Copyright 2002\0"
+            VALUE "LegalTrademarks", "\0"
+            VALUE "OLESelfRegister", "\0"
+            VALUE "OriginalFilename", "Odyssey.dll\0"
+            VALUE "PrivateBuild", "\0"
+            VALUE "ProductName", "Odyssey Module\0"
+            VALUE "ProductVersion", "2, 0, 0, 0\0"
+            VALUE "SpecialBuild", "\0"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x409, 1200
+    END
+END
+
+#endif    // !_MAC
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_PROJNAME            "ODYSSEY"
+END
+
+#endif    // Neutral resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+/////////////////////////////////////////////////////////////////////////////
+// Neutral (Default) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_NEUD)
+#ifdef _WIN32
+LANGUAGE LANG_NEUTRAL, SUBLANG_DEFAULT
+#pragma code_page(1252)
+#endif //_WIN32
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// REGISTRY
+//
+
+IDR_ODYSSEY             REGISTRY DISCARDABLE    "Odyssey.rgs"
+#endif    // Neutral (Default) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+/////////////////////////////////////////////////////////////////////////////
+// English (U.S.) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
+#pragma code_page(1252)
+#endif //_WIN32
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDI_ICON64              ICON    DISCARDABLE     "icon64.ico"
+IDI_ICON32              ICON    DISCARDABLE     "icon32.ico"
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+3 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_EDIT_CONFIG DIALOG DISCARDABLE  0, 0, 490, 278
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Edit Configuration for Odyssey"
+FONT 8, "MS Sans Serif"
+BEGIN
+    CONTROL         "Tab2",IDC_PROG_TAB,"SysTabControl32",WS_TABSTOP,13,18,
+                    181,156
+    GROUPBOX        "Programs",IDC_STATIC,7,7,194,191
+    GROUPBOX        "Kernel",IDC_STATIC,19,36,170,60
+    LTEXT           "Width",IDC_STATIC,25,47,31,10
+    COMBOBOX        IDC_PROG_KWIDTH,61,45,28,96,CBS_DROPDOWNLIST | CBS_SORT | 
+                    WS_VSCROLL | WS_TABSTOP
+    LTEXT           "Height",IDC_STATIC,25,58,31,10
+    COMBOBOX        IDC_PROG_KHEIGHT,61,57,28,96,CBS_DROPDOWNLIST | CBS_SORT | 
+                    WS_VSCROLL | WS_TABSTOP
+    EDITTEXT        IDC_PROG_K00,110,45,17,12,ES_AUTOHSCROLL
+    EDITTEXT        IDC_PROG_K01,128,45,17,12,ES_AUTOHSCROLL
+    EDITTEXT        IDC_PROG_K02,145,45,17,12,ES_AUTOHSCROLL
+    EDITTEXT        IDC_PROG_K03,163,45,17,12,ES_AUTOHSCROLL
+    EDITTEXT        IDC_PROG_K10,110,57,17,12,ES_AUTOHSCROLL
+    EDITTEXT        IDC_PROG_K11,128,57,17,12,ES_AUTOHSCROLL
+    EDITTEXT        IDC_PROG_K12,145,57,17,12,ES_AUTOHSCROLL
+    EDITTEXT        IDC_PROG_K13,163,57,17,12,ES_AUTOHSCROLL
+    EDITTEXT        IDC_PROG_K20,110,69,17,12,ES_AUTOHSCROLL
+    EDITTEXT        IDC_PROG_K21,128,69,17,12,ES_AUTOHSCROLL
+    EDITTEXT        IDC_PROG_K22,145,69,17,12,ES_AUTOHSCROLL
+    EDITTEXT        IDC_PROG_K23,163,69,17,12,ES_AUTOHSCROLL
+    EDITTEXT        IDC_PROG_K30,110,81,17,12,ES_AUTOHSCROLL
+    EDITTEXT        IDC_PROG_K31,128,81,17,12,ES_AUTOHSCROLL
+    EDITTEXT        IDC_PROG_K32,145,81,17,12,ES_AUTOHSCROLL
+    EDITTEXT        IDC_PROG_K33,163,81,17,12,ES_AUTOHSCROLL
+    LTEXT           "Cutoff",IDC_STATIC,20,100,25,10
+    EDITTEXT        IDC_PROG_CUTOFF,62,99,25,12,ES_AUTOHSCROLL
+    LTEXT           "X Offset",IDC_STATIC,20,115,29,10
+    EDITTEXT        IDC_PROG_OFFX,62,114,25,12,ES_AUTOHSCROLL
+    LTEXT           "Window Width",IDC_STATIC,93,115,61,10
+    EDITTEXT        IDC_PROG_WINWIDTH,161,114,25,12,ES_AUTOHSCROLL
+    LTEXT           "Y Offset",IDC_STATIC,20,127,29,10
+    EDITTEXT        IDC_PROG_OFFY,62,126,25,12,ES_AUTOHSCROLL
+    LTEXT           "Window Height",IDC_STATIC,93,127,62,10
+    EDITTEXT        IDC_PROG_WINHEIGHT,161,126,25,12,ES_AUTOHSCROLL
+    PUSHBUTTON      "&Flat Field",IDC_PROG_SELFLATFIELD,21,140,33,13
+    EDITTEXT        IDC_PROG_FLATFIELD,62,140,125,12,ES_AUTOHSCROLL
+    PUSHBUTTON      "Filter E&q",IDC_PROG_SELFILTEREQ,21,155,33,13
+    EDITTEXT        IDC_PROG_FILTEREQ,62,155,125,12,ES_AUTOHSCROLL
+    PUSHBUTTON      "&New",IDC_PROGRAM_NEW,13,179,33,13
+    PUSHBUTTON      "&Remove",IDC_PROGRAM_REMOVE,49,179,33,13
+    GROUPBOX        "Extended Operations",IDC_STATIC,204,7,279,191
+    LTEXT           "Image Region Modification",IDC_XOP_COPY_TITLE,216,20,
+                    133,11
+    CONTROL         "List1",IDC_XOP_LIST,"SysListView32",LVS_REPORT | 
+                    LVS_SINGLESEL | WS_BORDER | WS_TABSTOP,217,36,257,80
+    LTEXT           "Source (L, T, W, H)",IDC_XOP_COPY_SRC,217,122,66,10
+    EDITTEXT        IDC_XOP_SRC_L,292,121,29,12,ES_AUTOHSCROLL
+    EDITTEXT        IDC_XOP_SRC_T,323,121,29,12,ES_AUTOHSCROLL
+    EDITTEXT        IDC_XOP_SRC_W,354,121,29,12,ES_AUTOHSCROLL
+    EDITTEXT        IDC_XOP_SRC_H,385,121,29,12,ES_AUTOHSCROLL
+    LTEXT           "Dest (L, T, W, H)",IDC_XOP_COPY_DEST,217,136,66,10
+    EDITTEXT        IDC_XOP_DEST_L,292,135,29,12,ES_AUTOHSCROLL
+    EDITTEXT        IDC_XOP_DEST_T,323,135,29,12,ES_AUTOHSCROLL
+    EDITTEXT        IDC_XOP_DEST_W,354,135,29,12,ES_AUTOHSCROLL
+    EDITTEXT        IDC_XOP_DEST_H,385,135,29,12,ES_AUTOHSCROLL
+    PUSHBUTTON      "&Add",IDC_XOP_ADD,216,152,33,13
+    PUSHBUTTON      "&Set",IDC_XOP_SET,252,152,33,13
+    PUSHBUTTON      "&Copy",IDC_XOP_COPY,287,152,33,13
+    PUSHBUTTON      "&Delete",IDC_XOP_DEL,322,152,33,13
+    GROUPBOX        "Light Control",IDC_STATIC,61,197,289,73
+    LTEXT           "Min Control Level",IDC_STATIC,72,217,70,11
+    EDITTEXT        IDC_LC_MINLEV,169,216,34,13,ES_AUTOHSCROLL
+    LTEXT           "Max Control Level",IDC_STATIC,72,234,70,11
+    EDITTEXT        IDC_LC_MAXLEV,169,233,34,13,ES_AUTOHSCROLL
+    LTEXT           "Lamp Time Constant (ms)",IDC_STATIC,72,251,93,11
+    EDITTEXT        IDC_LC_TIMECONST,169,250,34,13,ES_AUTOHSCROLL
+    LTEXT           "Target Gray Level",IDC_STATIC,211,218,89,11
+    EDITTEXT        IDC_LC_TARGETGRAYLEV,311,215,34,13,ES_AUTOHSCROLL
+    LTEXT           "Saturation Gray Level",IDC_STATIC,211,234,89,11
+    EDITTEXT        IDC_LC_SATGRAYLEV,311,232,34,13,ES_AUTOHSCROLL
+    LTEXT           "Target Saturation Fraction",IDC_STATIC,212,251,90,11
+    EDITTEXT        IDC_LC_TARGETSATURATION,311,249,34,13,ES_AUTOHSCROLL
+    PUSHBUTTON      "OK",IDOK,7,204,50,14
+    DEFPUSHBUTTON   "&Test",IDC_EC_TEST,7,223,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,7,255,50,14
+    COMBOBOX        IDC_XOP_TYPE,418,121,57,43,CBS_DROPDOWNLIST | CBS_SORT | 
+                    WS_VSCROLL | WS_TABSTOP
+    LTEXT           "Refresh cycle time (ms)",IDC_STATIC,360,218,80,14
+    EDITTEXT        IDC_EC_REFRESHCYCLETIME,442,215,34,13,ES_AUTOHSCROLL
+    LTEXT           "Clustering processors",IDC_STATIC,360,234,76,14
+    EDITTEXT        IDC_EC_CLUSTERINGPROCESSORS,442,232,34,13,ES_AUTOHSCROLL
+    GROUPBOX        "General settings",IDC_STATIC,356,197,127,73
+    PUSHBUTTON      "&Help",IDC_EC_HELP,7,239,50,14
+    LTEXT           "Grab - Process time (ms)",IDC_STATIC,360,251,81,14
+    EDITTEXT        IDC_EC_PROCESSINGSTARTDELAY,442,250,34,13,ES_AUTOHSCROLL
+END
+
+IDD_TEST_CONFIG DIALOGEX 0, 0, 501, 164
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Test Odyssey Configuration"
+FONT 8, "MS Sans Serif"
+BEGIN
+    LTEXT           "Active Program",IDC_STATIC,7,7,62,10
+    COMBOBOX        IDC_TS_ACTIVEPROGRAM,75,7,30,83,CBS_DROPDOWN | 
+                    WS_VSCROLL | WS_TABSTOP
+    PUSHBUTTON      "&Find Clusters",IDC_TS_FINDCLUSTERS,7,23,52,13
+    LTEXT           "Max Clusters",IDC_STATIC,66,25,50,12
+    EDITTEXT        IDC_TS_MAXCLUSTERS,119,23,35,13,ES_AUTOHSCROLL
+    CONTROL         "Compute Frame Rate",IDC_TS_CHECKFRAMERATE,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,159,24,105,10
+    LTEXT           "Found 0 Clusters",IDC_TS_FOUND,7,40,243,11
+    PUSHBUTTON      "Dump &Clusters",IDC_TS_DUMPCLUSTERS,7,55,52,13
+    EDITTEXT        IDC_TS_CLUSTERFILE,63,55,254,13,ES_AUTOHSCROLL
+    PUSHBUTTON      "...",IDC_TS_SELCLUSTERFILE,322,55,13,13
+    PUSHBUTTON      "Dump &Image",IDC_TS_DUMPIMAGE,7,71,52,13
+    EDITTEXT        IDC_TS_IMAGEFILE,63,71,254,13,ES_AUTOHSCROLL
+    PUSHBUTTON      "...",IDC_TS_SELIMAGEFILE,322,71,13,13
+    PUSHBUTTON      "&Asynchronously Find Clusters",IDC_TS_ASYNCFINDCLUSTERS,
+                    7,89,119,13
+    LTEXT           "Images",IDC_STATIC,140,89,40,12
+    EDITTEXT        IDC_TS_IMAGES,192,89,35,13,ES_AUTOHSCROLL
+    PUSHBUTTON      "&Optimize Async Program",IDC_TS_ASYNCOPTIMIZE,242,89,93,
+                    13
+    CONTROL         "&Show Clusters",IDC_TS_SHOWCLUSTERS,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,11,105,73,12
+    PUSHBUTTON      "Make &Flat Field Image",IDC_TS_MAKEFLATFIELD,7,124,92,
+                    13
+    LTEXT           "Images to use",IDC_STATIC,106,127,50,12
+    EDITTEXT        IDC_TS_FLATFIELDIMGCOUNT,159,124,35,13,ES_AUTOHSCROLL
+    PUSHBUTTON      "Make Filter &Equalization Image",IDC_TS_MAKEFILTEREQ,
+                    229,124,106,13
+    PUSHBUTTON      "&Gray Level",IDC_TS_GRAYLEVEL,7,144,52,13
+    PUSHBUTTON      "Test A&utomatic Light Control",IDC_TS_TESTAUTOLIGHT,63,
+                    144,117,13
+    PUSHBUTTON      "&Help",IDC_TC_HELP,229,143,50,14
+    PUSHBUTTON      "E&xit",IDCANCEL,285,143,50,14
+    GROUPBOX        "HW Report",IDC_STATIC,340,7,154,150
+    PUSHBUTTON      "&Inquire",IDC_TS_INQUIRE,345,23,55,14
+    LTEXT           "Max Asynchronous Frames",IDC_STATIC,348,41,93,12
+    EDITTEXT        IDC_TS_MAXASYNCFRAMES,454,40,35,13,ES_RIGHT | 
+                    ES_AUTOHSCROLL | ES_READONLY
+    LTEXT           "Max Optimizable Frames",IDC_STATIC,348,57,93,12
+    EDITTEXT        IDC_TS_MAXOPTFRAMES,454,56,35,13,ES_RIGHT | 
+                    ES_AUTOHSCROLL | ES_READONLY
+    LTEXT           "Camera Frame Rate (fps)",IDC_STATIC,348,73,93,12
+    EDITTEXT        IDC_TS_CAMERAFRAMERATE,454,72,35,13,ES_RIGHT | 
+                    ES_AUTOHSCROLL | ES_READONLY
+    LTEXT           "Processing Time / Frame (ms)",IDC_STATIC,348,90,98,12
+    EDITTEXT        IDC_TS_PROCESSTIMEFRAME,454,89,35,13,ES_RIGHT | 
+                    ES_AUTOHSCROLL | ES_READONLY
+    LTEXT           "Grabbing Time / Frame (ms)",IDC_STATIC,348,106,98,12
+    EDITTEXT        IDC_TS_GRABTIMEFRAME,454,106,35,13,ES_RIGHT | 
+                    ES_AUTOHSCROLL | ES_READONLY
+    LTEXT           "Available Processors",IDC_STATIC,348,129,93,12,NOT 
+                    WS_VISIBLE
+    EDITTEXT        IDC_TS_AVAILABLEPROCESSORS,454,127,35,13,ES_RIGHT | 
+                    ES_AUTOHSCROLL | ES_READONLY | NOT WS_VISIBLE
+    LTEXT           "Command Queue Length",IDC_STATIC,348,144,93,12,NOT 
+                    WS_VISIBLE
+    EDITTEXT        IDC_TS_COMMANDQUEUELENGTH,454,142,35,13,ES_RIGHT | 
+                    ES_AUTOHSCROLL | ES_READONLY | NOT WS_VISIBLE
+    CONTROL         "Clear &on redraw",IDC_TS_CLEARONREDRAW,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,90,105,73,12
+    CONTROL         "&Centers",IDC_TS_CENTERS,"Button",BS_AUTORADIOBUTTON | 
+                    BS_PUSHLIKE,171,105,38,13,WS_EX_CLIENTEDGE
+    CONTROL         "&Areas",IDC_TS_AREA,"Button",BS_AUTORADIOBUTTON | 
+                    BS_PUSHLIKE,209,105,38,13,WS_EX_CLIENTEDGE
+END
+
+IDD_SEL_GRAB_BUFFER DIALOG DISCARDABLE  0, 0, 203, 46
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Select Grab Buffer"
+FONT 8, "MS Sans Serif"
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,146,7,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,146,24,50,14
+    LTEXT           "Bank",IDC_STATIC,7,9,46,11
+    COMBOBOX        IDC_GB_BANK,61,7,45,32,CBS_DROPDOWNLIST | WS_VSCROLL | 
+                    WS_TABSTOP
+    LTEXT           "Number",IDC_STATIC,7,23,46,11
+    COMBOBOX        IDC_GB_NUMBER,61,22,45,32,CBS_DROPDOWNLIST | WS_VSCROLL | 
+                    WS_TABSTOP
+END
+
+IDD_MAKE_FILTER_EQ DIALOG DISCARDABLE  0, 0, 224, 55
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Filter Equalization Image"
+FONT 8, "MS Sans Serif"
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,167,7,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,167,24,50,14
+    LTEXT           "X Center",IDC_STATIC,7,9,57,11
+    EDITTEXT        IDC_FE_XCENTER,112,7,41,12,ES_AUTOHSCROLL
+    LTEXT           "Y Center",IDC_STATIC,7,23,57,11
+    EDITTEXT        IDC_FE_YCENTER,112,21,41,12,ES_AUTOHSCROLL
+    LTEXT           "Radial Compensation Factor",IDC_STATIC,7,37,97,11
+    EDITTEXT        IDC_FE_COMPFACT,112,35,41,12,ES_AUTOHSCROLL
+END
+
+IDD_OPTIMIZE_PROGRAM DIALOG DISCARDABLE  0, 0, 387, 196
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Asynchronous Program Optimization"
+FONT 8, "MS Sans Serif"
+BEGIN
+    LTEXT           "Min CutOff",IDC_STATIC,7,7,68,12,SS_CENTERIMAGE
+    EDITTEXT        IDC_PO_MINCUTOFF,82,7,39,13,ES_AUTOHSCROLL
+    LTEXT           "Max CutOff",IDC_STATIC,7,22,68,12,SS_CENTERIMAGE
+    EDITTEXT        IDC_PO_MAXCUTOFF,82,22,39,13,ES_AUTOHSCROLL
+    LTEXT           "CutOff Scan Step",IDC_STATIC,7,37,68,12,SS_CENTERIMAGE
+    EDITTEXT        IDC_PO_CUTOFFSCANSTEP,82,37,39,13,ES_AUTOHSCROLL
+    LTEXT           "Min Cluster Size",IDC_STATIC,8,52,68,12,SS_CENTERIMAGE
+    EDITTEXT        IDC_PO_MINCLUSTERSIZE,82,52,39,13,ES_AUTOHSCROLL
+    LTEXT           "Max Cluster Size",IDC_STATIC,8,67,68,12,SS_CENTERIMAGE
+    EDITTEXT        IDC_PO_MAXCLUSTERSIZE,82,67,39,13,ES_AUTOHSCROLL
+    LTEXT           "Max Clusters",IDC_STATIC,8,82,68,12,SS_CENTERIMAGE
+    EDITTEXT        IDC_PO_MAXCLUSTERS,82,82,39,13,ES_AUTOHSCROLL
+    PUSHBUTTON      "Scan CutOff",IDC_PO_SCANCUTOFF,7,99,114,15
+    CONTROL         "Result Display",IDC_PO_DISPLAY,"Button",BS_OWNERDRAW | 
+                    BS_FLAT | WS_TABSTOP,129,7,251,182
+    PUSHBUTTON      "E&xit",IDCANCEL,7,175,50,14
+END
+
+IDD_GAIN_COMPENSATION DIALOG DISCARDABLE  0, 0, 409, 225
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Gain Compensation Image"
+FONT 8, "MS Sans Serif"
+BEGIN
+    PUSHBUTTON      "OK",IDOK,7,188,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,7,204,50,14
+    LTEXT           "X Cosine Wavelets",IDC_STATIC,7,7,79,12,SS_CENTERIMAGE
+    EDITTEXT        IDC_GC_XWAVES,101,7,21,13,ES_RIGHT | ES_AUTOHSCROLL
+    LTEXT           "Y Cosine Wavelets",IDC_STATIC,8,21,79,12,SS_CENTERIMAGE
+    EDITTEXT        IDC_GC_YWAVES,101,21,21,13,ES_RIGHT | ES_AUTOHSCROLL
+    LTEXT           "X Sampling Factor",IDC_STATIC,8,37,79,12,SS_CENTERIMAGE
+    EDITTEXT        IDC_GC_XSAMPLINGFACTOR,101,37,21,13,ES_RIGHT | 
+                    ES_AUTOHSCROLL
+    LTEXT           "Y Sampling Factor",IDC_STATIC,8,52,79,12,SS_CENTERIMAGE
+    EDITTEXT        IDC_GC_YSAMPLINGFACTOR,101,52,21,13,ES_RIGHT | 
+                    ES_AUTOHSCROLL
+    CONTROL         "DisplayPanel",IDC_GC_PANEL,"Button",BS_OWNERDRAW | 
+                    BS_FLAT | WS_TABSTOP,133,7,269,211
+    DEFPUSHBUTTON   "&Compute",IDC_GC_COMPUTE,7,136,50,14
+    LTEXT           "Min / Max Gain",IDC_STATIC,7,155,70,12,SS_CENTERIMAGE
+    EDITTEXT        IDC_GC_MINMAXGAIN,79,155,29,13,ES_RIGHT | ES_AUTOHSCROLL | 
+                    ES_READONLY
+    LTEXT           "Min Grey Level",IDC_STATIC,8,69,79,12,SS_CENTERIMAGE
+    EDITTEXT        IDC_GC_MINGREYLEVEL,101,69,21,13,ES_RIGHT | 
+                    ES_AUTOHSCROLL
+END
+
+IDD_THRESHOLD_EQ_MAP DIALOG DISCARDABLE  0, 0, 402, 225
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Threshold Equalization Map"
+FONT 8, "MS Sans Serif"
+BEGIN
+    LTEXT           "Rectangle Width (pixels)",IDC_STATIC,7,7,79,12,
+                    SS_CENTERIMAGE
+    EDITTEXT        IDC_TQ_WIDTH,101,7,21,13,ES_RIGHT | ES_AUTOHSCROLL
+    LTEXT           "Rectangle Height (pixels)",IDC_STATIC,7,23,79,12,
+                    SS_CENTERIMAGE
+    EDITTEXT        IDC_TQ_HEIGHT,101,23,21,13,ES_RIGHT | ES_AUTOHSCROLL
+    LTEXT           "Min Cluster Area",IDC_STATIC,7,38,79,12,SS_CENTERIMAGE
+    EDITTEXT        IDC_TQ_MINAREA,101,38,21,13,ES_RIGHT | ES_AUTOHSCROLL
+    LTEXT           "Min Filter Multiplier",IDC_STATIC,7,53,79,12,
+                    SS_CENTERIMAGE
+    EDITTEXT        IDC_TQ_MINMULT,101,53,21,13,ES_RIGHT | ES_AUTOHSCROLL
+    LTEXT           "Max Filter Multiplier",IDC_STATIC,7,68,79,12,
+                    SS_CENTERIMAGE
+    EDITTEXT        IDC_TQ_MAXMULT,101,68,21,13,ES_RIGHT | ES_AUTOHSCROLL
+    LTEXT           "Filter Multiplier Steps",IDC_STATIC,7,83,79,12,
+                    SS_CENTERIMAGE
+    EDITTEXT        IDC_TQ_MULTSTEPS,101,83,21,13,ES_RIGHT | ES_AUTOHSCROLL
+    LTEXT           "X Cosine Wavelets",IDC_STATIC,7,99,79,12,SS_CENTERIMAGE
+    EDITTEXT        IDC_TQ_XWAVES,101,99,21,13,ES_RIGHT | ES_AUTOHSCROLL
+    LTEXT           "Y Cosine Wavelets",IDC_STATIC,8,113,79,12,
+                    SS_CENTERIMAGE
+    EDITTEXT        IDC_TQ_YWAVES,101,113,21,13,ES_RIGHT | ES_AUTOHSCROLL
+    LTEXT           "X Sampling Factor",IDC_STATIC,8,129,79,12,
+                    SS_CENTERIMAGE
+    EDITTEXT        IDC_TQ_XSAMPLINGFACTOR,101,129,21,13,ES_RIGHT | 
+                    ES_AUTOHSCROLL
+    LTEXT           "Y Sampling Factor",IDC_STATIC,8,144,79,12,
+                    SS_CENTERIMAGE
+    EDITTEXT        IDC_TQ_YSAMPLINGFACTOR,101,144,21,13,ES_RIGHT | 
+                    ES_AUTOHSCROLL
+    DEFPUSHBUTTON   "&Start",IDC_TQ_START,7,167,50,14
+    PUSHBUTTON      "OK",IDOK,7,187,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,7,204,50,14
+    CONTROL         "DisplayPanel",IDC_TQ_PANEL,"Button",BS_OWNERDRAW | 
+                    BS_FLAT | WS_TABSTOP,126,7,269,211
+    EDITTEXT        IDC_FQ_OPT,85,168,35,11,ES_RIGHT | ES_AUTOHSCROLL | 
+                    ES_READONLY
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO DISCARDABLE 
+BEGIN
+    IDD_EDIT_CONFIG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 483
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 271
+    END
+
+    IDD_TEST_CONFIG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 494
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 157
+    END
+
+    IDD_SEL_GRAB_BUFFER, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 196
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 39
+    END
+
+    IDD_MAKE_FILTER_EQ, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 217
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 48
+    END
+
+    IDD_GAIN_COMPENSATION, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 402
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 218
+    END
+
+    IDD_THRESHOLD_EQ_MAP, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 395
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 218
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog Info
+//
+
+IDD_EDIT_CONFIG DLGINIT
+BEGIN
+    IDC_PROG_KWIDTH, 0x403, 2, 0
+0x0031, 
+    IDC_PROG_KWIDTH, 0x403, 2, 0
+0x0032, 
+    IDC_PROG_KWIDTH, 0x403, 2, 0
+0x0033, 
+    IDC_PROG_KWIDTH, 0x403, 2, 0
+0x0034, 
+    IDC_PROG_KWIDTH, 0x403, 2, 0
+0x0035, 
+    IDC_PROG_KWIDTH, 0x403, 2, 0
+0x0036, 
+    IDC_PROG_KWIDTH, 0x403, 2, 0
+0x0037, 
+    IDC_PROG_KWIDTH, 0x403, 2, 0
+0x0038, 
+    IDC_PROG_KHEIGHT, 0x403, 2, 0
+0x0031, 
+    IDC_PROG_KHEIGHT, 0x403, 2, 0
+0x0032, 
+    IDC_PROG_KHEIGHT, 0x403, 2, 0
+0x0033, 
+    IDC_PROG_KHEIGHT, 0x403, 2, 0
+0x0034, 
+    IDC_PROG_KHEIGHT, 0x403, 2, 0
+0x0035, 
+    IDC_PROG_KHEIGHT, 0x403, 2, 0
+0x0036, 
+    IDC_PROG_KHEIGHT, 0x403, 2, 0
+0x0037, 
+    IDC_PROG_KHEIGHT, 0x403, 2, 0
+0x0038, 
+    0
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Cursor
+//
+
+IDC_ODYSSEY             CURSOR  DISCARDABLE     "cursor1.cur"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Bitmap
+//
+
+IDB_THEME               BITMAP  DISCARDABLE     "theme.bmp"
+#endif    // English (U.S.) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+/////////////////////////////////////////////////////////////////////////////
+// Italian (Italy) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ITA)
+#ifdef _WIN32
+LANGUAGE LANG_ITALIAN, SUBLANG_ITALIAN
+#pragma code_page(1252)
+#endif //_WIN32
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+#endif    // Italian (Italy) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+

@@ -1,0 +1,151 @@
+<html>
+<body>
+<pre>
+<h1>Build Log</h1>
+<h3>
+--------------------Configuration: FlexStageFiberOpticLamp - Win32 Release MinSize--------------------
+</h3>
+<h3>Command Lines</h3>
+Creating command line "midl.exe /tlb ".\FlexStageFiberOpticLamp.tlb" /h "FlexStageFiberOpticLamp.h" /iid "FlexStageFiberOpticLamp_i.c" /Oicf "D:\SySal2\FlexStageFiberOpticLamp\FlexStageFiberOpticLamp.idl""
+Creating command line "rc.exe /l 0x410 /fo"ReleaseMinSize/FlexStageFiberOpticLamp.res" /d "NDEBUG" /d "_AFXDLL" "D:\SySal2\FlexStageFiberOpticLamp\FlexStageFiberOpticLamp.rc"" 
+Creating temporary file "C:\DOCUME~1\Kryss\LOCALS~1\Temp\RSPDA.tmp" with contents
+[
+/nologo /MD /W3 /GX /O1 /I "..\Common" /I "." /D "WIN32" /D "NDEBUG" /D "_WINDOWS" /D "_WINDLL" /D "_AFXDLL" /D "_MBCS" /D "_USRDLL" /D "_ATL_DLL" /Fp"ReleaseMinSize/FlexStageFiberOpticLamp.pch" /Yu"stdafx.h" /Fo"ReleaseMinSize/" /Fd"ReleaseMinSize/" /FD /c 
+"D:\SySal2\FlexStageFiberOpticLamp\EditConfig.cpp"
+"D:\SySal2\FlexStageFiberOpticLamp\FlexStageFiberOpticLamp.cpp"
+"D:\SySal2\FlexStageFiberOpticLamp\FlexStageFiberOpticLampClass.cpp"
+"D:\SySal2\FlexStageFiberOpticLamp\Monitor.cpp"
+"D:\SySal2\FlexStageFiberOpticLamp\XYSpeed.cpp"
+"D:\SySal2\FlexStageFiberOpticLamp\ZSpeed.cpp"
+]
+Creating command line "cl.exe @C:\DOCUME~1\Kryss\LOCALS~1\Temp\RSPDA.tmp" 
+Creating temporary file "C:\DOCUME~1\Kryss\LOCALS~1\Temp\RSPDB.tmp" with contents
+[
+/nologo /MD /W3 /GX /O1 /I "..\Common" /I "." /D "WIN32" /D "NDEBUG" /D "_WINDOWS" /D "_WINDLL" /D "_AFXDLL" /D "_MBCS" /D "_USRDLL" /D "_ATL_DLL" /Fp"ReleaseMinSize/FlexStageFiberOpticLamp.pch" /Yc"stdafx.h" /Fo"ReleaseMinSize/" /Fd"ReleaseMinSize/" /FD /c 
+"D:\SySal2\FlexStageFiberOpticLamp\StdAfx.cpp"
+]
+Creating command line "cl.exe @C:\DOCUME~1\Kryss\LOCALS~1\Temp\RSPDB.tmp" 
+Creating temporary file "C:\DOCUME~1\Kryss\LOCALS~1\Temp\RSPDC.tmp" with contents
+[
+/nologo /subsystem:windows /dll /incremental:no /pdb:"ReleaseMinSize/FlexStageFiberOpticLamp.pdb" /machine:I386 /def:".\FlexStageFiberOpticLamp.def" /out:"ReleaseMinSize/FlexStageFiberOpticLamp.dll" /implib:"ReleaseMinSize/FlexStageFiberOpticLamp.lib" 
+.\ReleaseMinSize\EditConfig.obj
+.\ReleaseMinSize\FlexStageFiberOpticLamp.obj
+.\ReleaseMinSize\FlexStageFiberOpticLampClass.obj
+.\ReleaseMinSize\Monitor.obj
+.\ReleaseMinSize\StdAfx.obj
+.\ReleaseMinSize\XYSpeed.obj
+.\ReleaseMinSize\ZSpeed.obj
+.\ReleaseMinSize\FlexStageFiberOpticLamp.res
+.\FlexMS32.lib
+]
+Creating command line "link.exe @C:\DOCUME~1\Kryss\LOCALS~1\Temp\RSPDC.tmp"
+Creating temporary file "C:\DOCUME~1\Kryss\LOCALS~1\Temp\RSPDD.bat" with contents
+[
+@echo off
+regsvr32 /s /c ".\ReleaseMinSize\FlexStageFiberOpticLamp.dll"
+echo regsvr32 exec. time > ".\ReleaseMinSize\regsvr32.trg"
+]
+Creating command line "C:\DOCUME~1\Kryss\LOCALS~1\Temp\RSPDD.bat"
+Creating Type Library...
+Microsoft (R) MIDL Compiler Version 5.01.0164  
+Copyright (c) Microsoft Corp 1991-1997. All rights reserved.
+Processing D:\SySal2\FlexStageFiberOpticLamp\FlexStageFiberOpticLamp.idl
+FlexStageFiberOpticLamp.idl
+Processing D:\Program Files\Microsoft Visual Studio\VC98\INCLUDE\oaidl.idl
+oaidl.idl
+Processing D:\Program Files\Microsoft Visual Studio\VC98\INCLUDE\objidl.idl
+objidl.idl
+Processing D:\Program Files\Microsoft Visual Studio\VC98\INCLUDE\unknwn.idl
+unknwn.idl
+Processing D:\Program Files\Microsoft Visual Studio\VC98\INCLUDE\wtypes.idl
+wtypes.idl
+Processing D:\Program Files\Microsoft Visual Studio\VC98\INCLUDE\ocidl.idl
+ocidl.idl
+Processing D:\Program Files\Microsoft Visual Studio\VC98\INCLUDE\oleidl.idl
+oleidl.idl
+Processing D:\Program Files\Microsoft Visual Studio\VC98\INCLUDE\servprov.idl
+servprov.idl
+Processing D:\Program Files\Microsoft Visual Studio\VC98\INCLUDE\urlmon.idl
+urlmon.idl
+Processing D:\Program Files\Microsoft Visual Studio\VC98\INCLUDE\msxml.idl
+msxml.idl
+Processing ..\Common\Connection.h
+Connection.h
+Processing ..\Common\Config.h
+Config.h
+Processing ..\Common\GUIdefs.h
+GUIdefs.h
+Compiling resources...
+Compiling...
+StdAfx.cpp
+Compiling...
+EditConfig.cpp
+FlexStageFiberOpticLamp.cpp
+FlexStageFiberOpticLampClass.cpp
+D:\SySal2\FlexStageFiberOpticLamp\FlexStageFiberOpticLampClass.cpp(373) : warning C4244: '=' : conversion from 'float' to 'int', possible loss of data
+D:\SySal2\FlexStageFiberOpticLamp\FlexStageFiberOpticLampClass.cpp(375) : warning C4244: 'argument' : conversion from 'float' to 'int', possible loss of data
+D:\SySal2\FlexStageFiberOpticLamp\FlexStageFiberOpticLampClass.cpp(376) : warning C4244: '=' : conversion from 'float' to 'int', possible loss of data
+D:\SySal2\FlexStageFiberOpticLamp\FlexStageFiberOpticLampClass.cpp(377) : warning C4244: 'argument' : conversion from 'float' to 'int', possible loss of data
+D:\SySal2\FlexStageFiberOpticLamp\FlexStageFiberOpticLampClass.cpp(381) : warning C4244: '=' : conversion from 'float' to 'int', possible loss of data
+D:\SySal2\FlexStageFiberOpticLamp\FlexStageFiberOpticLampClass.cpp(383) : warning C4244: 'argument' : conversion from 'float' to 'int', possible loss of data
+D:\SySal2\FlexStageFiberOpticLamp\FlexStageFiberOpticLampClass.cpp(384) : warning C4244: '=' : conversion from 'float' to 'int', possible loss of data
+D:\SySal2\FlexStageFiberOpticLamp\FlexStageFiberOpticLampClass.cpp(385) : warning C4244: 'argument' : conversion from 'float' to 'int', possible loss of data
+D:\SySal2\FlexStageFiberOpticLamp\FlexStageFiberOpticLampClass.cpp(423) : warning C4244: '=' : conversion from 'float' to 'int', possible loss of data
+D:\SySal2\FlexStageFiberOpticLamp\FlexStageFiberOpticLampClass.cpp(425) : warning C4244: '=' : conversion from 'float' to 'int', possible loss of data
+D:\SySal2\FlexStageFiberOpticLamp\FlexStageFiberOpticLampClass.cpp(426) : warning C4244: '=' : conversion from 'float' to 'int', possible loss of data
+D:\SySal2\FlexStageFiberOpticLamp\FlexStageFiberOpticLampClass.cpp(430) : warning C4244: '=' : conversion from 'float' to 'int', possible loss of data
+D:\SySal2\FlexStageFiberOpticLamp\FlexStageFiberOpticLampClass.cpp(432) : warning C4244: '=' : conversion from 'float' to 'int', possible loss of data
+D:\SySal2\FlexStageFiberOpticLamp\FlexStageFiberOpticLampClass.cpp(433) : warning C4244: '=' : conversion from 'float' to 'int', possible loss of data
+D:\SySal2\FlexStageFiberOpticLamp\FlexStageFiberOpticLampClass.cpp(415) : warning C4101: 'ActAccel' : unreferenced local variable
+D:\SySal2\FlexStageFiberOpticLamp\FlexStageFiberOpticLampClass.cpp(516) : warning C4800: 'unsigned char' : forcing value to bool 'true' or 'false' (performance warning)
+D:\SySal2\FlexStageFiberOpticLamp\FlexStageFiberOpticLampClass.cpp(605) : warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+D:\SySal2\FlexStageFiberOpticLamp\FlexStageFiberOpticLampClass.cpp(606) : warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+D:\SySal2\FlexStageFiberOpticLamp\FlexStageFiberOpticLampClass.cpp(644) : warning C4244: 'argument' : conversion from 'float' to 'int', possible loss of data
+D:\SySal2\FlexStageFiberOpticLamp\FlexStageFiberOpticLampClass.cpp(645) : warning C4244: 'argument' : conversion from 'float' to 'int', possible loss of data
+D:\SySal2\FlexStageFiberOpticLamp\FlexStageFiberOpticLampClass.cpp(646) : warning C4244: 'argument' : conversion from 'float' to 'int', possible loss of data
+D:\SySal2\FlexStageFiberOpticLamp\FlexStageFiberOpticLampClass.cpp(647) : warning C4244: 'argument' : conversion from 'float' to 'int', possible loss of data
+D:\SySal2\FlexStageFiberOpticLamp\FlexStageFiberOpticLampClass.cpp(648) : warning C4244: 'argument' : conversion from 'float' to 'int', possible loss of data
+D:\SySal2\FlexStageFiberOpticLamp\FlexStageFiberOpticLampClass.cpp(649) : warning C4244: 'argument' : conversion from 'float' to 'int', possible loss of data
+Monitor.cpp
+D:\SySal2\FlexStageFiberOpticLamp\Monitor.cpp(149) : warning C4800: 'unsigned long' : forcing value to bool 'true' or 'false' (performance warning)
+D:\SySal2\FlexStageFiberOpticLamp\Monitor.cpp(156) : warning C4800: 'unsigned long' : forcing value to bool 'true' or 'false' (performance warning)
+D:\SySal2\FlexStageFiberOpticLamp\Monitor.cpp(163) : warning C4800: 'unsigned long' : forcing value to bool 'true' or 'false' (performance warning)
+D:\SySal2\FlexStageFiberOpticLamp\Monitor.cpp(226) : warning C4800: 'int' : forcing value to bool 'true' or 'false' (performance warning)
+XYSpeed.cpp
+D:\SySal2\FlexStageFiberOpticLamp\XYSpeed.cpp(63) : warning C4244: 'argument' : conversion from 'float' to 'int', possible loss of data
+D:\SySal2\FlexStageFiberOpticLamp\XYSpeed.cpp(63) : warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+D:\SySal2\FlexStageFiberOpticLamp\XYSpeed.cpp(65) : warning C4244: 'argument' : conversion from 'float' to 'int', possible loss of data
+D:\SySal2\FlexStageFiberOpticLamp\XYSpeed.cpp(65) : warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+D:\SySal2\FlexStageFiberOpticLamp\XYSpeed.cpp(79) : warning C4244: 'argument' : conversion from 'float' to 'int', possible loss of data
+D:\SySal2\FlexStageFiberOpticLamp\XYSpeed.cpp(79) : warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+D:\SySal2\FlexStageFiberOpticLamp\XYSpeed.cpp(81) : warning C4244: 'argument' : conversion from 'float' to 'int', possible loss of data
+D:\SySal2\FlexStageFiberOpticLamp\XYSpeed.cpp(81) : warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+D:\SySal2\FlexStageFiberOpticLamp\XYSpeed.cpp(188) : warning C4244: '=' : conversion from 'float' to 'int', possible loss of data
+D:\SySal2\FlexStageFiberOpticLamp\XYSpeed.cpp(189) : warning C4244: '=' : conversion from 'float' to 'int', possible loss of data
+D:\SySal2\FlexStageFiberOpticLamp\XYSpeed.cpp(190) : warning C4244: '=' : conversion from 'float' to 'int', possible loss of data
+D:\SySal2\FlexStageFiberOpticLamp\XYSpeed.cpp(200) : warning C4244: '=' : conversion from 'float' to 'int', possible loss of data
+D:\SySal2\FlexStageFiberOpticLamp\XYSpeed.cpp(201) : warning C4244: '=' : conversion from 'float' to 'int', possible loss of data
+D:\SySal2\FlexStageFiberOpticLamp\XYSpeed.cpp(202) : warning C4244: '=' : conversion from 'float' to 'int', possible loss of data
+ZSpeed.cpp
+D:\SySal2\FlexStageFiberOpticLamp\ZSpeed.cpp(62) : warning C4244: 'argument' : conversion from 'float' to 'int', possible loss of data
+D:\SySal2\FlexStageFiberOpticLamp\ZSpeed.cpp(62) : warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+D:\SySal2\FlexStageFiberOpticLamp\ZSpeed.cpp(83) : warning C4244: 'argument' : conversion from 'float' to 'int', possible loss of data
+D:\SySal2\FlexStageFiberOpticLamp\ZSpeed.cpp(83) : warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+D:\SySal2\FlexStageFiberOpticLamp\ZSpeed.cpp(163) : warning C4244: '=' : conversion from 'float' to 'int', possible loss of data
+D:\SySal2\FlexStageFiberOpticLamp\ZSpeed.cpp(164) : warning C4244: '=' : conversion from 'float' to 'int', possible loss of data
+D:\SySal2\FlexStageFiberOpticLamp\ZSpeed.cpp(165) : warning C4244: '=' : conversion from 'float' to 'int', possible loss of data
+Generating Code...
+Linking...
+   Creating library ReleaseMinSize/FlexStageFiberOpticLamp.lib and object ReleaseMinSize/FlexStageFiberOpticLamp.exp
+FlexStageFiberOpticLamp.exp : warning LNK4070: /OUT:FlexStage.DLL directive in .EXP differs from output filename "ReleaseMinSize/FlexStageFiberOpticLamp.dll"; ignoring directive
+LINK : warning LNK4089: all references to "OLEAUT32.dll" discarded by /OPT:REF
+<h3>Output Window</h3>
+Performing registration
+
+
+
+<h3>Results</h3>
+FlexStageFiberOpticLamp.dll - 0 error(s), 51 warning(s)
+</pre>
+</body>
+</html>

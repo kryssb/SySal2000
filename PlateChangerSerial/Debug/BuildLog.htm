@@ -1,0 +1,241 @@
+<html>
+<head>
+<META HTTP-EQUIV="Content-Type" content="text/html; charset=Windows-1252">
+</head>
+<body>
+<pre>
+<table width=100% bgcolor=#CFCFE5><tr> <td> <font face=arial size=+3>
+Build Log
+</font></table><table width=* cellspacing=0 cellpadding=0><tr><td width=0 bgcolor=#EDEDF5>&nbsp;</td><td width=0 bgcolor=#FFFFFF>&nbsp;</td><td width=*><pre>
+<h3>------- Build started: Project: PlateChanger, Configuration: Debug|Win32 -------
+</h3>
+</pre></table><table width=100% bgcolor=#DFDFE5><tr><td><font face=arial size=+2>
+Command Lines
+</font></table><table width=* cellspacing=0 cellpadding=0><tr><td width=0 bgcolor=#EDEDF5>&nbsp;</td><td width=0 bgcolor=#FFFFFF>&nbsp;</td><td width=*><pre>Creating temporary file "c:\sysal\PlateChangerSerial\Debug\RSP000001.rsp" with contents
+[
+/env win32 /Oicf  /tlb ".\PlateChanger.tlb" /h "PlateChanger.h" /iid "PlateChanger_i.c"
+.\PlateChanger.idl
+]
+Creating command line "midl.exe @c:\sysal\PlateChangerSerial\Debug\RSP000001.rsp /nologo"
+Creating temporary file "c:\sysal\PlateChangerSerial\Debug\RSP000002.rsp" with contents
+[
+/Od /I "..\Common" /I "." /D "WIN32" /D "_DEBUG" /D "_WINDOWS" /D "_USRDLL" /D "_WINDLL" /D "_AFXDLL" /D "_MBCS" /FD /EHsc /RTC1 /MDd /Yc"stdafx.h" /Fp".\Debug/PlateChanger.pch" /Fo".\Debug/" /Fd".\Debug/" /FR".\Debug/" /W3 /c /ZI
+.\StdAfx.cpp
+]
+Creating command line "cl.exe @c:\sysal\PlateChangerSerial\Debug\RSP000002.rsp /nologo"
+Creating temporary file "c:\sysal\PlateChangerSerial\Debug\RSP000003.rsp" with contents
+[
+/Od /I "..\Common" /I "." /D "WIN32" /D "_DEBUG" /D "_WINDOWS" /D "_USRDLL" /D "_WINDLL" /D "_AFXDLL" /D "_MBCS" /FD /EHsc /RTC1 /MDd /YX"stdafx.h" /Fp".\Debug/PlateChanger.pch" /Fo".\Debug/" /Fd".\Debug/" /FR".\Debug/" /W3 /c /ZI
+\sysal\Common\Stage3_i.c
+.\serialport.cpp
+.\PlateChangerClass.cpp
+.\PlateChanger.cpp
+.\Monitor.cpp
+\sysal\Common\FrameGrabber_i.c
+\sysal\Common\FlexMap3_i.c
+.\EditConfig.cpp
+\sysal\Common\AutomaticLightControl_i.c
+]
+Creating command line "cl.exe @c:\sysal\PlateChangerSerial\Debug\RSP000003.rsp /nologo"
+Creating command line "rc.exe /d "_DEBUG" /d "_AFXDLL" /l 0x410 /I ".\Debug" /fo".\Debug/PlateChanger.res" .\PlateChanger.rc"
+Creating temporary file "c:\sysal\PlateChangerSerial\Debug\RSP000004.rsp" with contents
+[
+/OUT:".\Debug/PlateChanger.dll" /INCREMENTAL:NO /NOLOGO /DLL /NODEFAULTLIB:"mfcs71d.lib" /DEF:".\PlateChanger.def" /DEBUG /PDB:".\Debug/PlateChanger.pdb" /SUBSYSTEM:WINDOWS /IMPLIB:".\Debug/PlateChanger.lib" /MACHINE:X86 /verbose:lib mfcs71d.lib
+.\Debug\AutomaticLightControl_i.obj
+.\Debug\EditConfig.obj
+.\Debug\FlexMap3_i.obj
+.\Debug\FrameGrabber_i.obj
+.\Debug\Monitor.obj
+.\Debug\PlateChanger.obj
+.\Debug\PlateChanger.res
+.\Debug\PlateChangerClass.obj
+.\Debug\serialport.obj
+.\Debug\Stage3_i.obj
+.\Debug\StdAfx.obj
+]
+Creating command line "link.exe @c:\sysal\PlateChangerSerial\Debug\RSP000004.rsp"
+Creating temporary file "c:\sysal\PlateChangerSerial\Debug\BAT000005.bat" with contents
+[
+@echo off
+regsvr32 /s /c "c:\sysal\PlateChangerSerial\Debug\PlateChanger.dll"
+echo regsvr32 exec. time > ".\Debug\regsvr32.trg"
+
+if errorlevel 1 goto VCReportError
+goto VCEnd
+:VCReportError
+echo Project : error PRJ0019: A tool returned an error code from "Performing registration"
+exit 1
+:VCEnd
+]
+Creating command line "c:\sysal\PlateChangerSerial\Debug\BAT000005.bat"
+</pre></table><table width=100% bgcolor=#DFDFE5><tr><td><font face=arial size=+2>
+Output Window
+</font></table><table width=* cellspacing=0 cellpadding=0><tr><td width=0 bgcolor=#EDEDF5>&nbsp;</td><td width=0 bgcolor=#FFFFFF>&nbsp;</td><td width=*><pre>Creating Type Library...
+Processing .\PlateChanger.idl
+PlateChanger.idl
+Processing C:\Program Files\Microsoft Visual Studio .NET 2003\Vc7\PlatformSDK\include\oaidl.idl
+oaidl.idl
+Processing C:\Program Files\Microsoft Visual Studio .NET 2003\Vc7\PlatformSDK\include\objidl.idl
+objidl.idl
+Processing C:\Program Files\Microsoft Visual Studio .NET 2003\Vc7\PlatformSDK\include\unknwn.idl
+unknwn.idl
+Processing C:\Program Files\Microsoft Visual Studio .NET 2003\Vc7\PlatformSDK\include\wtypes.idl
+wtypes.idl
+Processing C:\Program Files\Microsoft Visual Studio .NET 2003\Vc7\PlatformSDK\include\basetsd.h
+basetsd.h
+Processing C:\Program Files\Microsoft Visual Studio .NET 2003\Vc7\PlatformSDK\include\guiddef.h
+guiddef.h
+Processing C:\Program Files\Microsoft Visual Studio .NET 2003\Vc7\PlatformSDK\include\ocidl.idl
+ocidl.idl
+Processing C:\Program Files\Microsoft Visual Studio .NET 2003\Vc7\PlatformSDK\include\oleidl.idl
+oleidl.idl
+Processing C:\Program Files\Microsoft Visual Studio .NET 2003\Vc7\PlatformSDK\include\servprov.idl
+servprov.idl
+Processing C:\Program Files\Microsoft Visual Studio .NET 2003\Vc7\PlatformSDK\include\urlmon.idl
+urlmon.idl
+Processing C:\Program Files\Microsoft Visual Studio .NET 2003\Vc7\PlatformSDK\include\msxml.idl
+msxml.idl
+Processing ..\Common\Connection.h
+Connection.h
+Processing ..\Common\Config.h
+Config.h
+Processing ..\Common\GUIdefs.h
+GUIdefs.h
+Processing ..\Common\AsyncStageDefs.h
+AsyncStageDefs.h
+Processing ..\Common\id.h
+id.h
+Processing C:\Program Files\Microsoft Visual Studio .NET 2003\Vc7\PlatformSDK\include\oaidl.acf
+oaidl.acf
+Processing C:\Program Files\Microsoft Visual Studio .NET 2003\Vc7\PlatformSDK\include\ocidl.acf
+ocidl.acf
+Compiling...
+StdAfx.cpp
+statreg.cpp is obsolete. Please remove it from your project.
+atlimpl.cpp is obsolete. Please remove it from your project.
+Compiling...
+Stage3_i.c
+serialport.cpp
+PlateChangerClass.cpp
+c:\sysal\PlateChangerSerial\PlateChangerClass.cpp(399) : warning C4800: 'boolean' : forcing value to bool 'true' or 'false' (performance warning)
+PlateChanger.cpp
+c:\sysal\PlateChangerSerial\PlateChanger.cpp(103) : warning C4996: 'ATL::CRegKey::SetValue' was declared deprecated
+        c:\Program Files\Microsoft Visual Studio .NET 2003\Vc7\atlmfc\include\atlbase.h(4730) : see declaration of 'ATL::CRegKey::SetValue'
+Monitor.cpp
+c:\sysal\PlateChangerSerial\Monitor.cpp(181) : warning C4101: 'read' : unreferenced local variable
+c:\sysal\PlateChangerSerial\Monitor.cpp(521) : warning C4101: 'read' : unreferenced local variable
+c:\sysal\PlateChangerSerial\Monitor.cpp(522) : warning C4101: 'bytesPerSamp' : unreferenced local variable
+c:\sysal\PlateChangerSerial\Monitor.cpp(595) : warning C4101: 'read' : unreferenced local variable
+c:\sysal\PlateChangerSerial\Monitor.cpp(596) : warning C4101: 'bytesPerSamp' : unreferenced local variable
+c:\sysal\PlateChangerSerial\Monitor.cpp(656) : warning C4101: 'read' : unreferenced local variable
+c:\sysal\PlateChangerSerial\Monitor.cpp(657) : warning C4101: 'bytesPerSamp' : unreferenced local variable
+c:\sysal\PlateChangerSerial\Monitor.cpp(658) : warning C4101: 'datain' : unreferenced local variable
+c:\sysal\PlateChangerSerial\Monitor.cpp(1047) : warning C4800: 'int' : forcing value to bool 'true' or 'false' (performance warning)
+c:\sysal\PlateChangerSerial\Monitor.cpp(1601) : warning C4244: 'argument' : conversion from 'double' to 'float', possible loss of data
+c:\sysal\PlateChangerSerial\Monitor.cpp(1620) : warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+c:\sysal\PlateChangerSerial\Monitor.cpp(1621) : warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+c:\sysal\PlateChangerSerial\Monitor.cpp(1622) : warning C4244: 'argument' : conversion from 'double' to 'float', possible loss of data
+c:\sysal\PlateChangerSerial\Monitor.cpp(1622) : warning C4244: 'argument' : conversion from 'double' to 'float', possible loss of data
+c:\sysal\PlateChangerSerial\Monitor.cpp(1626) : warning C4244: 'argument' : conversion from 'double' to 'float', possible loss of data
+c:\sysal\PlateChangerSerial\Monitor.cpp(1626) : warning C4244: 'argument' : conversion from 'double' to 'float', possible loss of data
+c:\sysal\PlateChangerSerial\Monitor.cpp(1634) : warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+c:\sysal\PlateChangerSerial\Monitor.cpp(1635) : warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+c:\sysal\PlateChangerSerial\Monitor.cpp(1636) : warning C4244: 'argument' : conversion from 'double' to 'float', possible loss of data
+c:\sysal\PlateChangerSerial\Monitor.cpp(1639) : warning C4244: 'argument' : conversion from 'double' to 'float', possible loss of data
+c:\sysal\PlateChangerSerial\Monitor.cpp(1670) : warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+c:\sysal\PlateChangerSerial\Monitor.cpp(1671) : warning C4244: 'argument' : conversion from 'double' to 'float', possible loss of data
+c:\sysal\PlateChangerSerial\Monitor.cpp(1671) : warning C4244: 'argument' : conversion from 'double' to 'float', possible loss of data
+c:\sysal\PlateChangerSerial\Monitor.cpp(1675) : warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+c:\sysal\PlateChangerSerial\Monitor.cpp(1676) : warning C4244: 'argument' : conversion from 'double' to 'float', possible loss of data
+c:\sysal\PlateChangerSerial\Monitor.cpp(1715) : warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+c:\sysal\PlateChangerSerial\Monitor.cpp(1838) : warning C4101: 'result' : unreferenced local variable
+c:\sysal\PlateChangerSerial\Monitor.cpp(1837) : warning C4101: 'PORT' : unreferenced local variable
+c:\sysal\platechangerserial\monitor.cpp(528) : warning C4700: local variable 'datain' used without having been initialized
+c:\sysal\platechangerserial\monitor.cpp(604) : warning C4700: local variable 'datain' used without having been initialized
+FrameGrabber_i.c
+FlexMap3_i.c
+EditConfig.cpp
+AutomaticLightControl_i.c
+Compiling resources...
+Linking...
+LINK : warning LNK4075: ignoring '/EDITANDCONTINUE' due to '/INCREMENTAL:NO' specification
+Searching libraries
+    Searching C:\Program Files\Microsoft Visual Studio .NET 2003\Vc7\atlmfc\lib\mfcs71d.lib:
+    Searching C:\Program Files\Microsoft Visual Studio .NET 2003\Vc7\lib\MSVCRTD.lib:
+    Searching C:\Program Files\Microsoft Visual Studio .NET 2003\Vc7\lib\OLDNAMES.lib:
+    Searching C:\Program Files\Microsoft Visual Studio .NET 2003\Vc7\atlmfc\lib\mfc71d.lib:
+    Searching C:\Program Files\Microsoft Visual Studio .NET 2003\Vc7\lib\kernel32.lib:
+    Searching C:\Program Files\Microsoft Visual Studio .NET 2003\Vc7\PlatformSDK\lib\user32.lib:
+    Searching C:\Program Files\Microsoft Visual Studio .NET 2003\Vc7\PlatformSDK\lib\gdi32.lib:
+    Searching C:\Program Files\Microsoft Visual Studio .NET 2003\Vc7\PlatformSDK\lib\msimg32.lib:
+    Searching C:\Program Files\Microsoft Visual Studio .NET 2003\Vc7\PlatformSDK\lib\comdlg32.lib:
+    Searching C:\Program Files\Microsoft Visual Studio .NET 2003\Vc7\PlatformSDK\lib\winspool.lib:
+    Searching C:\Program Files\Microsoft Visual Studio .NET 2003\Vc7\PlatformSDK\lib\advapi32.lib:
+    Searching C:\Program Files\Microsoft Visual Studio .NET 2003\Vc7\PlatformSDK\lib\shell32.lib:
+    Searching C:\Program Files\Microsoft Visual Studio .NET 2003\Vc7\PlatformSDK\lib\comctl32.lib:
+    Searching C:\Program Files\Microsoft Visual Studio .NET 2003\Vc7\PlatformSDK\lib\shlwapi.lib:
+    Searching C:\Program Files\Microsoft Visual Studio .NET 2003\Vc7\PlatformSDK\lib\uuid.lib:
+    Searching C:\Program Files\Microsoft Visual Studio .NET 2003\Vc7\PlatformSDK\lib\oledlg.lib:
+    Searching C:\Program Files\Microsoft Visual Studio .NET 2003\Vc7\PlatformSDK\lib\ole32.lib:
+    Searching C:\Program Files\Microsoft Visual Studio .NET 2003\Vc7\PlatformSDK\lib\oleaut32.lib:
+    Searching C:\Program Files\Microsoft Visual Studio .NET 2003\Vc7\PlatformSDK\lib\urlmon.lib:
+    Searching C:\Program Files\Microsoft Visual Studio .NET 2003\Vc7\atlmfc\lib\atlsd.lib:
+    Searching C:\Program Files\Microsoft Visual Studio .NET 2003\Vc7\PlatformSDK\lib\ws2_32.lib:
+    Searching C:\Program Files\Microsoft Visual Studio .NET 2003\Vc7\PlatformSDK\lib\mswsock.lib:
+    Searching C:\Program Files\Microsoft Visual Studio .NET 2003\Vc7\atlmfc\lib\mfcs71d.lib:
+    Searching C:\Program Files\Microsoft Visual Studio .NET 2003\Vc7\lib\MSVCRTD.lib:
+    Searching C:\Program Files\Microsoft Visual Studio .NET 2003\Vc7\lib\OLDNAMES.lib:
+    Searching C:\Program Files\Microsoft Visual Studio .NET 2003\Vc7\atlmfc\lib\mfc71d.lib:
+    Searching C:\Program Files\Microsoft Visual Studio .NET 2003\Vc7\lib\kernel32.lib:
+    Searching C:\Program Files\Microsoft Visual Studio .NET 2003\Vc7\PlatformSDK\lib\user32.lib:
+    Searching C:\Program Files\Microsoft Visual Studio .NET 2003\Vc7\PlatformSDK\lib\gdi32.lib:
+    Searching C:\Program Files\Microsoft Visual Studio .NET 2003\Vc7\PlatformSDK\lib\msimg32.lib:
+    Searching C:\Program Files\Microsoft Visual Studio .NET 2003\Vc7\PlatformSDK\lib\comdlg32.lib:
+    Searching C:\Program Files\Microsoft Visual Studio .NET 2003\Vc7\PlatformSDK\lib\winspool.lib:
+    Searching C:\Program Files\Microsoft Visual Studio .NET 2003\Vc7\PlatformSDK\lib\advapi32.lib:
+    Searching C:\Program Files\Microsoft Visual Studio .NET 2003\Vc7\PlatformSDK\lib\shell32.lib:
+    Searching C:\Program Files\Microsoft Visual Studio .NET 2003\Vc7\PlatformSDK\lib\comctl32.lib:
+    Searching C:\Program Files\Microsoft Visual Studio .NET 2003\Vc7\PlatformSDK\lib\shlwapi.lib:
+    Searching C:\Program Files\Microsoft Visual Studio .NET 2003\Vc7\PlatformSDK\lib\uuid.lib:
+    Searching C:\Program Files\Microsoft Visual Studio .NET 2003\Vc7\PlatformSDK\lib\oledlg.lib:
+    Searching C:\Program Files\Microsoft Visual Studio .NET 2003\Vc7\PlatformSDK\lib\ole32.lib:
+    Searching C:\Program Files\Microsoft Visual Studio .NET 2003\Vc7\PlatformSDK\lib\oleaut32.lib:
+    Searching C:\Program Files\Microsoft Visual Studio .NET 2003\Vc7\PlatformSDK\lib\urlmon.lib:
+Finished searching libraries
+.\PlateChanger.def : warning LNK4222: exported symbol 'DllCanUnloadNow' should not be assigned an ordinal
+.\PlateChanger.def : warning LNK4222: exported symbol 'DllGetClassObject' should not be assigned an ordinal
+.\PlateChanger.def : warning LNK4222: exported symbol 'DllRegisterServer' should not be assigned an ordinal
+.\PlateChanger.def : warning LNK4222: exported symbol 'DllUnregisterServer' should not be assigned an ordinal
+   Creating library .\Debug/PlateChanger.lib and object .\Debug/PlateChanger.exp
+Searching libraries
+    Searching C:\Program Files\Microsoft Visual Studio .NET 2003\Vc7\atlmfc\lib\mfcs71d.lib:
+    Searching C:\Program Files\Microsoft Visual Studio .NET 2003\Vc7\lib\MSVCRTD.lib:
+    Searching C:\Program Files\Microsoft Visual Studio .NET 2003\Vc7\lib\OLDNAMES.lib:
+    Searching C:\Program Files\Microsoft Visual Studio .NET 2003\Vc7\atlmfc\lib\mfc71d.lib:
+    Searching C:\Program Files\Microsoft Visual Studio .NET 2003\Vc7\lib\kernel32.lib:
+    Searching C:\Program Files\Microsoft Visual Studio .NET 2003\Vc7\PlatformSDK\lib\user32.lib:
+    Searching C:\Program Files\Microsoft Visual Studio .NET 2003\Vc7\PlatformSDK\lib\gdi32.lib:
+    Searching C:\Program Files\Microsoft Visual Studio .NET 2003\Vc7\PlatformSDK\lib\msimg32.lib:
+    Searching C:\Program Files\Microsoft Visual Studio .NET 2003\Vc7\PlatformSDK\lib\comdlg32.lib:
+    Searching C:\Program Files\Microsoft Visual Studio .NET 2003\Vc7\PlatformSDK\lib\winspool.lib:
+    Searching C:\Program Files\Microsoft Visual Studio .NET 2003\Vc7\PlatformSDK\lib\advapi32.lib:
+    Searching C:\Program Files\Microsoft Visual Studio .NET 2003\Vc7\PlatformSDK\lib\shell32.lib:
+    Searching C:\Program Files\Microsoft Visual Studio .NET 2003\Vc7\PlatformSDK\lib\comctl32.lib:
+    Searching C:\Program Files\Microsoft Visual Studio .NET 2003\Vc7\PlatformSDK\lib\shlwapi.lib:
+    Searching C:\Program Files\Microsoft Visual Studio .NET 2003\Vc7\PlatformSDK\lib\uuid.lib:
+    Searching C:\Program Files\Microsoft Visual Studio .NET 2003\Vc7\PlatformSDK\lib\oledlg.lib:
+    Searching C:\Program Files\Microsoft Visual Studio .NET 2003\Vc7\PlatformSDK\lib\ole32.lib:
+    Searching C:\Program Files\Microsoft Visual Studio .NET 2003\Vc7\PlatformSDK\lib\oleaut32.lib:
+    Searching C:\Program Files\Microsoft Visual Studio .NET 2003\Vc7\PlatformSDK\lib\urlmon.lib:
+    Searching C:\Program Files\Microsoft Visual Studio .NET 2003\Vc7\atlmfc\lib\atlsd.lib:
+    Searching C:\Program Files\Microsoft Visual Studio .NET 2003\Vc7\PlatformSDK\lib\ws2_32.lib:
+    Searching C:\Program Fil
+es\Microsoft Visual Studio .NET 2003\Vc7\PlatformSDK\lib\mswsock.lib:
+Finished searching libraries
+Performing registration
+</pre></table><table width=100% bgcolor=#DFDFE5><tr><td><font face=arial size=+2>
+Results
+</font></table><table width=* cellspacing=0 cellpadding=0><tr><td width=0 bgcolor=#EDEDF5>&nbsp;</td><td width=0 bgcolor=#FFFFFF>&nbsp;</td><td width=*><pre>
+Build log was saved at "file://c:\sysal\PlateChangerSerial\Debug\BuildLog.htm"
+PlateChanger - 0 error(s), 37 warning(s)</pre></table><table   width=100% height=20 bgcolor=#CFCFE5><tr><td><font face=arial size=+2>
+</font></table></body></html>

@@ -1,0 +1,107 @@
+<html>
+<body>
+<pre>
+<h1>Build Log</h1>
+<h3>
+--------------------Configuration: FlexStage3 - Win32 Release MinSize--------------------
+</h3>
+<h3>Command Lines</h3>
+Creating temporary file "C:\DOCUME~1\Kryss\LOCALS~1\Temp\RSPCC.tmp" with contents
+[
+/nologo /MD /W3 /GX /O1 /I "..\Common" /I "." /D "WIN32" /D "NDEBUG" /D "_WINDOWS" /D "_WINDLL" /D "_AFXDLL" /D "_MBCS" /D "_USRDLL" /D "_ATL_DLL" /Fp"ReleaseMinSize/FlexStage3.pch" /Yu"stdafx.h" /Fo"ReleaseMinSize/" /Fd"ReleaseMinSize/" /FD /c 
+"D:\SySal2\FlexStage3\FlexStage3Class.cpp"
+]
+Creating command line "cl.exe @C:\DOCUME~1\Kryss\LOCALS~1\Temp\RSPCC.tmp" 
+Creating temporary file "C:\DOCUME~1\Kryss\LOCALS~1\Temp\RSPCD.tmp" with contents
+[
+/nologo /subsystem:windows /dll /incremental:no /pdb:"ReleaseMinSize/FlexStage3.pdb" /machine:I386 /def:".\FlexStage3.def" /out:"ReleaseMinSize/FlexStage3.dll" /implib:"ReleaseMinSize/FlexStage3.lib" 
+.\ReleaseMinSize\EditConfig.obj
+.\ReleaseMinSize\FlexStage3.obj
+.\ReleaseMinSize\FlexStage3Class.obj
+.\ReleaseMinSize\Monitor.obj
+.\ReleaseMinSize\StdAfx.obj
+.\ReleaseMinSize\TestDlg.obj
+.\ReleaseMinSize\XYSpeed.obj
+.\ReleaseMinSize\ZSpeed.obj
+.\ReleaseMinSize\FlexStage3.res
+.\FlexMS32.lib
+]
+Creating command line "link.exe @C:\DOCUME~1\Kryss\LOCALS~1\Temp\RSPCD.tmp"
+Creating temporary file "C:\DOCUME~1\Kryss\LOCALS~1\Temp\RSPCE.bat" with contents
+[
+@echo off
+regsvr32 /s /c ".\ReleaseMinSize\FlexStage3.dll"
+echo regsvr32 exec. time > ".\ReleaseMinSize\regsvr32.trg"
+]
+Creating command line "C:\DOCUME~1\Kryss\LOCALS~1\Temp\RSPCE.bat"
+Compiling...
+FlexStage3Class.cpp
+D:\SySal2\FlexStage3\FlexStage3Class.cpp(417) : warning C4244: '=' : conversion from 'float' to 'int', possible loss of data
+D:\SySal2\FlexStage3\FlexStage3Class.cpp(419) : warning C4244: 'argument' : conversion from 'float' to 'int', possible loss of data
+D:\SySal2\FlexStage3\FlexStage3Class.cpp(420) : warning C4244: '=' : conversion from 'float' to 'int', possible loss of data
+D:\SySal2\FlexStage3\FlexStage3Class.cpp(421) : warning C4244: 'argument' : conversion from 'float' to 'int', possible loss of data
+D:\SySal2\FlexStage3\FlexStage3Class.cpp(425) : warning C4244: '=' : conversion from 'float' to 'int', possible loss of data
+D:\SySal2\FlexStage3\FlexStage3Class.cpp(427) : warning C4244: 'argument' : conversion from 'float' to 'int', possible loss of data
+D:\SySal2\FlexStage3\FlexStage3Class.cpp(428) : warning C4244: '=' : conversion from 'float' to 'int', possible loss of data
+D:\SySal2\FlexStage3\FlexStage3Class.cpp(429) : warning C4244: 'argument' : conversion from 'float' to 'int', possible loss of data
+D:\SySal2\FlexStage3\FlexStage3Class.cpp(472) : warning C4244: '=' : conversion from 'float' to 'int', possible loss of data
+D:\SySal2\FlexStage3\FlexStage3Class.cpp(474) : warning C4244: '=' : conversion from 'float' to 'int', possible loss of data
+D:\SySal2\FlexStage3\FlexStage3Class.cpp(475) : warning C4244: '=' : conversion from 'float' to 'int', possible loss of data
+D:\SySal2\FlexStage3\FlexStage3Class.cpp(476) : warning C4244: '=' : conversion from 'float' to 'int', possible loss of data
+D:\SySal2\FlexStage3\FlexStage3Class.cpp(480) : warning C4244: '=' : conversion from 'float' to 'int', possible loss of data
+D:\SySal2\FlexStage3\FlexStage3Class.cpp(482) : warning C4244: '=' : conversion from 'float' to 'int', possible loss of data
+D:\SySal2\FlexStage3\FlexStage3Class.cpp(483) : warning C4244: '=' : conversion from 'float' to 'int', possible loss of data
+D:\SySal2\FlexStage3\FlexStage3Class.cpp(484) : warning C4244: '=' : conversion from 'float' to 'int', possible loss of data
+D:\SySal2\FlexStage3\FlexStage3Class.cpp(597) : warning C4800: 'unsigned char' : forcing value to bool 'true' or 'false' (performance warning)
+D:\SySal2\FlexStage3\FlexStage3Class.cpp(715) : warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+D:\SySal2\FlexStage3\FlexStage3Class.cpp(716) : warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+D:\SySal2\FlexStage3\FlexStage3Class.cpp(754) : warning C4244: 'argument' : conversion from 'float' to 'int', possible loss of data
+D:\SySal2\FlexStage3\FlexStage3Class.cpp(755) : warning C4244: 'argument' : conversion from 'float' to 'int', possible loss of data
+D:\SySal2\FlexStage3\FlexStage3Class.cpp(756) : warning C4244: 'argument' : conversion from 'float' to 'int', possible loss of data
+D:\SySal2\FlexStage3\FlexStage3Class.cpp(757) : warning C4244: 'argument' : conversion from 'float' to 'int', possible loss of data
+D:\SySal2\FlexStage3\FlexStage3Class.cpp(758) : warning C4244: 'argument' : conversion from 'float' to 'int', possible loss of data
+D:\SySal2\FlexStage3\FlexStage3Class.cpp(759) : warning C4244: 'argument' : conversion from 'float' to 'int', possible loss of data
+D:\SySal2\FlexStage3\FlexStage3Class.cpp(843) : warning C4244: 'argument' : conversion from 'float' to 'long', possible loss of data
+D:\SySal2\FlexStage3\FlexStage3Class.cpp(844) : warning C4244: 'argument' : conversion from 'float' to 'long', possible loss of data
+D:\SySal2\FlexStage3\FlexStage3Class.cpp(845) : warning C4244: 'argument' : conversion from 'float' to 'int', possible loss of data
+D:\SySal2\FlexStage3\FlexStage3Class.cpp(846) : warning C4244: 'argument' : conversion from 'float' to 'int', possible loss of data
+D:\SySal2\FlexStage3\FlexStage3Class.cpp(847) : warning C4244: 'argument' : conversion from 'float' to 'long', possible loss of data
+D:\SySal2\FlexStage3\FlexStage3Class.cpp(848) : warning C4244: 'argument' : conversion from 'float' to 'long', possible loss of data
+D:\SySal2\FlexStage3\FlexStage3Class.cpp(849) : warning C4244: 'argument' : conversion from 'float' to 'int', possible loss of data
+D:\SySal2\FlexStage3\FlexStage3Class.cpp(850) : warning C4244: 'argument' : conversion from 'float' to 'int', possible loss of data
+D:\SySal2\FlexStage3\FlexStage3Class.cpp(851) : warning C4244: 'argument' : conversion from 'float' to 'long', possible loss of data
+D:\SySal2\FlexStage3\FlexStage3Class.cpp(852) : warning C4244: 'argument' : conversion from 'float' to 'long', possible loss of data
+D:\SySal2\FlexStage3\FlexStage3Class.cpp(853) : warning C4244: 'argument' : conversion from 'float' to 'int', possible loss of data
+D:\SySal2\FlexStage3\FlexStage3Class.cpp(854) : warning C4244: 'argument' : conversion from 'float' to 'int', possible loss of data
+D:\SySal2\FlexStage3\FlexStage3Class.cpp(904) : warning C4244: 'argument' : conversion from 'float' to 'long', possible loss of data
+D:\SySal2\FlexStage3\FlexStage3Class.cpp(905) : warning C4244: 'argument' : conversion from 'float' to 'long', possible loss of data
+D:\SySal2\FlexStage3\FlexStage3Class.cpp(906) : warning C4244: 'argument' : conversion from 'float' to 'int', possible loss of data
+D:\SySal2\FlexStage3\FlexStage3Class.cpp(907) : warning C4244: 'argument' : conversion from 'float' to 'int', possible loss of data
+D:\SySal2\FlexStage3\FlexStage3Class.cpp(911) : warning C4244: 'argument' : conversion from 'float' to 'long', possible loss of data
+D:\SySal2\FlexStage3\FlexStage3Class.cpp(912) : warning C4244: 'argument' : conversion from 'float' to 'long', possible loss of data
+D:\SySal2\FlexStage3\FlexStage3Class.cpp(913) : warning C4244: 'argument' : conversion from 'float' to 'int', possible loss of data
+D:\SySal2\FlexStage3\FlexStage3Class.cpp(914) : warning C4244: 'argument' : conversion from 'float' to 'int', possible loss of data
+D:\SySal2\FlexStage3\FlexStage3Class.cpp(915) : warning C4244: 'argument' : conversion from 'float' to 'long', possible loss of data
+D:\SySal2\FlexStage3\FlexStage3Class.cpp(916) : warning C4244: 'argument' : conversion from 'float' to 'long', possible loss of data
+D:\SySal2\FlexStage3\FlexStage3Class.cpp(917) : warning C4244: 'argument' : conversion from 'float' to 'int', possible loss of data
+D:\SySal2\FlexStage3\FlexStage3Class.cpp(918) : warning C4244: 'argument' : conversion from 'float' to 'int', possible loss of data
+D:\SySal2\FlexStage3\FlexStage3Class.cpp(919) : warning C4244: 'argument' : conversion from 'float' to 'long', possible loss of data
+D:\SySal2\FlexStage3\FlexStage3Class.cpp(920) : warning C4244: 'argument' : conversion from 'float' to 'long', possible loss of data
+D:\SySal2\FlexStage3\FlexStage3Class.cpp(984) : warning C4018: '<' : signed/unsigned mismatch
+D:\SySal2\FlexStage3\FlexStage3Class.cpp(994) : warning C4101: 'tempsample' : unreferenced local variable
+D:\SySal2\FlexStage3\FlexStage3Class.cpp(1080) : warning C4018: '<' : signed/unsigned mismatch
+D:\SySal2\FlexStage3\FlexStage3Class.cpp(1118) : warning C4018: '<' : signed/unsigned mismatch
+D:\SySal2\FlexStage3\FlexStage3Class.cpp(1255) : warning C4018: '<' : signed/unsigned mismatch
+Linking...
+   Creating library ReleaseMinSize/FlexStage3.lib and object ReleaseMinSize/FlexStage3.exp
+LINK : warning LNK4089: all references to "OLEAUT32.dll" discarded by /OPT:REF
+<h3>Output Window</h3>
+Performing registration
+
+
+
+<h3>Results</h3>
+FlexStage3.dll - 0 error(s), 57 warning(s)
+</pre>
+</body>
+</html>

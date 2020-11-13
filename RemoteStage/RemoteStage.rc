@@ -1,0 +1,217 @@
+//Microsoft Developer Studio generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// English (U.S.) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
+#pragma code_page(1252)
+#endif //_WIN32
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDI_ICON64              ICON    DISCARDABLE     "icon1.ico"
+IDI_ICON32              ICON    DISCARDABLE     "icon32.ico"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_MONITOR DIALOGEX 0, 0, 218, 94
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION
+EXSTYLE WS_EX_TOOLWINDOW
+CAPTION "Stage Monitor"
+FONT 8, "MS Sans Serif"
+BEGIN
+    LTEXT           "X",IDC_STATIC,7,7,9,11
+    EDITTEXT        IDC_M_XPOS,16,7,33,12,ES_RIGHT | ES_AUTOHSCROLL | 
+                    ES_READONLY
+    LTEXT           "Y",IDC_STATIC,7,20,9,11
+    EDITTEXT        IDC_M_YPOS,16,20,33,12,ES_RIGHT | ES_AUTOHSCROLL | 
+                    ES_READONLY
+    LTEXT           "Z",IDC_STATIC,7,33,9,11
+    EDITTEXT        IDC_M_ZPOS,16,33,33,12,ES_RIGHT | ES_AUTOHSCROLL | 
+                    ES_READONLY
+    CONTROL         "",IDC_M_XRED,"Button",BS_OWNERDRAW | BS_FLAT | 
+                    WS_TABSTOP,53,8,11,10,WS_EX_CLIENTEDGE
+    CONTROL         "",IDC_M_XGREEN,"Button",BS_OWNERDRAW | BS_FLAT | 
+                    WS_TABSTOP,63,8,11,10,WS_EX_CLIENTEDGE
+    CONTROL         "",IDC_M_YRED,"Button",BS_OWNERDRAW | BS_FLAT | 
+                    WS_TABSTOP,53,21,11,10,WS_EX_CLIENTEDGE
+    CONTROL         "",IDC_M_YGREEN,"Button",BS_OWNERDRAW | BS_FLAT | 
+                    WS_TABSTOP,63,21,11,10,WS_EX_CLIENTEDGE
+    CONTROL         "",IDC_M_ZRED,"Button",BS_OWNERDRAW | BS_FLAT | 
+                    WS_TABSTOP,53,34,11,10,WS_EX_CLIENTEDGE
+    CONTROL         "",IDC_M_ZGREEN,"Button",BS_OWNERDRAW | BS_FLAT | 
+                    WS_TABSTOP,63,34,11,10,WS_EX_CLIENTEDGE
+    PUSHBUTTON      "&Hide",IDC_M_HIDE,7,60,67,10
+    PUSHBUTTON      "&Toggle Manual/Auto",IDC_M_TOGGLEMANUAL,7,48,67,10
+    PUSHBUTTON      "&Reset",IDC_M_RESET,7,77,27,10
+    CONTROL         "",IDC_M_XYSPEED,"Button",BS_OWNERDRAW | BS_FLAT | 
+                    WS_DISABLED,79,7,80,80,WS_EX_CLIENTEDGE
+    CONTROL         "",IDC_M_ZSPEED,"Button",BS_OWNERDRAW | BS_FLAT | 
+                    WS_DISABLED,167,7,16,80,WS_EX_CLIENTEDGE
+    CONTROL         "Slider1",IDC_M_LIGHT,"msctls_trackbar32",TBS_VERT | 
+                    TBS_BOTH | WS_DISABLED | WS_TABSTOP,189,7,20,65
+    EDITTEXT        IDC_M_LIGHTLEVEL,187,75,24,12,ES_RIGHT | ES_AUTOHSCROLL | 
+                    ES_READONLY
+    PUSHBUTTON      "1&0x",IDC_M_10,36,77,19,10
+    PUSHBUTTON      "&1x",IDC_M_1,55,77,19,10
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO DISCARDABLE 
+BEGIN
+    IDD_MONITOR, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 211
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 87
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+#endif    // English (U.S.) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+/////////////////////////////////////////////////////////////////////////////
+// Italian (Italy) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ITA)
+#ifdef _WIN32
+LANGUAGE LANG_ITALIAN, SUBLANG_ITALIAN
+#pragma code_page(1252)
+#endif //_WIN32
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+#ifdef INCLUDE_TYPELIB
+3 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "1 TYPELIB ""RemoteStage.tlb""\r\n"
+    "\0"
+END
+#endif
+
+#endif    // APSTUDIO_INVOKED
+
+
+#ifndef _MAC
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION 1,0,0,1
+ PRODUCTVERSION 1,0,0,1
+ FILEFLAGSMASK 0x3fL
+#ifdef _DEBUG
+ FILEFLAGS 0x1L
+#else
+ FILEFLAGS 0x0L
+#endif
+ FILEOS 0x4L
+ FILETYPE 0x2L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "040904B0"
+        BEGIN
+            VALUE "CompanyName", "\0"
+            VALUE "FileDescription", "RemoteStage Module\0"
+            VALUE "FileVersion", "1, 0, 0, 1\0"
+            VALUE "InternalName", "RemoteStage\0"
+            VALUE "LegalCopyright", "Copyright 2000\0"
+            VALUE "OriginalFilename", "RemoteStage.DLL\0"
+            VALUE "ProductName", "RemoteStage Module\0"
+            VALUE "ProductVersion", "1, 0, 0, 1\0"
+            VALUE "OLESelfRegister", "\0"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x409, 1200
+    END
+END
+
+#endif    // !_MAC
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// REGISTRY
+//
+
+IDR_REMOTESTAGE         REGISTRY DISCARDABLE    "RemoteStage.rgs"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_PROJNAME            "RemoteStage"
+END
+
+#endif    // Italian (Italy) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+#ifdef INCLUDE_TYPELIB
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+1 TYPELIB "RemoteStage.tlb"
+
+/////////////////////////////////////////////////////////////////////////////
+#endif
+#endif    // not APSTUDIO_INVOKED
+

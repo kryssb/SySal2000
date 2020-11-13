@@ -1,0 +1,25 @@
+HKCR
+{
+	SWK66Clustering_1.SWK66Clustering.1 = s 'SWK66Clustering Class'
+	{
+		CLSID = s '{4BF01B2F-A4E1-11D3-A47D-D5D85B532837}'
+	}
+	SWK66Clustering_1.SWK66Clustering = s 'SWK66Clustering Class'
+	{
+		CLSID = s '{4BF01B2F-A4E1-11D3-A47D-D5D85B532837}'
+		CurVer = s 'SWK66Clustering_1.SWK66Clustering.1'
+	}
+	NoRemove CLSID
+	{
+		ForceRemove {4BF01B2F-A4E1-11D3-A47D-D5D85B532837} = s 'SWK66Clustering Class'
+		{
+			ProgID = s 'SWK66Clustering_1.SWK66Clustering.1'
+			VersionIndependentProgID = s 'SWK66Clustering_1.SWK66Clustering'
+			InprocServer32 = s '%MODULE%'
+			{
+				val ThreadingModel = s 'Free'
+			}
+			'TypeLib' = s '{4BF01B20-A4E1-11D3-A47D-D5D85B532837}'
+		}
+	}
+}

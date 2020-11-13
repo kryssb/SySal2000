@@ -1,0 +1,365 @@
+// Microsoft Visual C++ generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// Neutral resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_NEU)
+#ifdef _WIN32
+LANGUAGE LANG_NEUTRAL, SUBLANG_NEUTRAL
+#pragma code_page(1252)
+#endif //_WIN32
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_TESTMODE DIALOGEX 0, 0, 574, 417
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "ScanServer Test Bench"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    CONTROL         "Load Plate",IDC_TB_LOADPLATE,"Button",BS_AUTORADIOBUTTON | WS_GROUP,7,7,52,13
+    CONTROL         "Unload Plate",IDC_TB_UNLOADPLATE,"Button",BS_AUTORADIOBUTTON,7,24,61,13
+    CONTROL         "Scan",IDC_TB_SCAN,"Button",BS_AUTORADIOBUTTON,7,41,37,13
+    CONTROL         "Set Single Parameter",IDC_TB_SETSINGLEPARAM,"Button",BS_AUTORADIOBUTTON,7,101,87,13
+    CONTROL         "Set Object Configuration",IDC_TB_SETOBJCONFIG,"Button",BS_AUTORADIOBUTTON,7,120,98,13
+    CONTROL         "Set Scan Layout",IDC_TB_SETSCANLAYOUT,"Button",BS_AUTORADIOBUTTON,7,178,98,13
+    CONTROL         "Manual Check",IDC_TB_MANUALCHECK,"Button",BS_AUTORADIOBUTTON,7,252,65,13
+    CONTROL         "Measure Fog and Thickness",IDC_TB_GETFOGTHICKNESS,"Button",BS_AUTORADIOBUTTON,7,291,110,13
+    CONTROL         "Image Dump",IDC_TB_IMAGEDUMPREQ,"Button",BS_AUTORADIOBUTTON,7,317,110,13
+    PUSHBUTTON      "Hide",ID_TB_HIDE,517,396,50,14
+    RTEXT           "Brick",IDC_STATIC,63,9,25,13
+    EDITTEXT        IDC_TB_LOADPLATE_BRICK,97,7,42,14,ES_AUTOHSCROLL
+    RTEXT           "Plate",IDC_STATIC,141,9,25,13
+    EDITTEXT        IDC_TB_LOADPLATE_PLATE,175,7,42,14,ES_AUTOHSCROLL
+    RTEXT           "TextDesc",IDC_STATIC,219,9,35,13
+    EDITTEXT        IDC_TB_LOADPLATE_TEXTDESC,263,7,96,14,ES_AUTOHSCROLL
+    RTEXT           "MapInit",IDC_STATIC,367,9,35,13
+    EDITTEXT        IDC_TB_LOADPLATE_MAPINIT,416,7,151,14,ES_AUTOHSCROLL
+    RTEXT           "Zone Id",IDC_STATIC,41,44,31,13
+    EDITTEXT        IDC_TB_SCAN_ZONEID,77,41,42,14,ES_AUTOHSCROLL
+    RTEXT           "Min X",IDC_STATIC,123,44,27,13
+    EDITTEXT        IDC_TB_SCAN_MINX,155,41,42,14,ES_AUTOHSCROLL
+    RTEXT           "Max X",IDC_STATIC,203,44,27,13
+    EDITTEXT        IDC_TB_SCAN_MAXX,235,41,42,14,ES_AUTOHSCROLL
+    RTEXT           "Min Y",IDC_STATIC,281,44,26,13
+    EDITTEXT        IDC_TB_SCAN_MINY,312,41,42,14,ES_AUTOHSCROLL
+    RTEXT           "Max Y",IDC_STATIC,360,44,27,13
+    EDITTEXT        IDC_TB_SCAN_MAXY,392,41,42,14,ES_AUTOHSCROLL
+    CONTROL         "Preset slope",IDC_TB_SCAN_PRESETSLOPE,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,43,61,59,13
+    RTEXT           "Slope X",IDC_STATIC,119,63,27,13
+    EDITTEXT        IDC_TB_SCAN_SLOPEX,155,60,42,14,ES_AUTOHSCROLL
+    RTEXT           "Slope Y",IDC_STATIC,199,63,27,13
+    EDITTEXT        IDC_TB_SCAN_SLOPEY,235,60,42,14,ES_AUTOHSCROLL
+    RTEXT           "SX Acc",IDC_STATIC,277,63,26,13
+    EDITTEXT        IDC_TB_SCAN_SLOPEXACC,311,60,42,14,ES_AUTOHSCROLL
+    RTEXT           "SY Acc",IDC_STATIC,355,63,27,13
+    EDITTEXT        IDC_TB_SCAN_SLOPEYACC,391,60,42,14,ES_AUTOHSCROLL
+    CONTROL         "Move next",IDC_TB_SCAN_MOVENEXT,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,43,80,59,13
+    RTEXT           "Min X",IDC_STATIC,119,82,27,13
+    EDITTEXT        IDC_TB_SCAN_NEXTMINX,155,79,42,14,ES_AUTOHSCROLL
+    RTEXT           "Max X",IDC_STATIC,199,82,27,13
+    EDITTEXT        IDC_TB_SCAN_NEXTMAXX,235,79,42,14,ES_AUTOHSCROLL
+    RTEXT           "Min Y",IDC_STATIC,277,82,26,13
+    EDITTEXT        IDC_TB_SCAN_NEXTMINY,311,79,42,14,ES_AUTOHSCROLL
+    RTEXT           "Max Y",IDC_STATIC,355,82,27,13
+    EDITTEXT        IDC_TB_SCAN_NEXTMAXY,391,79,42,14,ES_AUTOHSCROLL
+    RTEXT           "Object",IDC_STATIC,97,104,35,13
+    EDITTEXT        IDC_TB_SETSINGLEPARAM_OBJECT,141,101,96,14,ES_AUTOHSCROLL
+    RTEXT           "Parameter",IDC_STATIC,241,104,35,13
+    EDITTEXT        IDC_TB_SETSINGLEPARAM_PARAM,285,101,96,14,ES_AUTOHSCROLL
+    RTEXT           "Value",IDC_STATIC,387,104,35,13
+    EDITTEXT        IDC_TB_SETSINGLEPARAM_VALUE,429,101,138,14,ES_AUTOHSCROLL
+    RTEXT           "Object",IDC_STATIC,97,123,35,13
+    EDITTEXT        IDC_TB_SETOBJCONFIG_OBJECT,141,120,96,14,ES_AUTOHSCROLL
+    RTEXT           "Configuration",IDC_STATIC,241,123,47,13
+    EDITTEXT        IDC_TB_SETOBJCONFIG_CONFIG,295,120,272,52,ES_MULTILINE | ES_AUTOVSCROLL | ES_AUTOHSCROLL
+    EDITTEXT        IDC_TB_SETSCANLAYOUT_LAYOUT,113,180,454,52,ES_MULTILINE | ES_AUTOVSCROLL | ES_AUTOHSCROLL
+    RTEXT           "Id",IDC_STATIC,66,255,17,13
+    EDITTEXT        IDC_TB_MANUALCHECK_ID,92,252,42,14,ES_AUTOHSCROLL
+    RTEXT           "Pos X",IDC_STATIC,140,255,20,13
+    EDITTEXT        IDC_TB_MANUALCHECK_POSX,165,252,42,14,ES_AUTOHSCROLL
+    RTEXT           "Pos Y",IDC_STATIC,208,255,23,13
+    EDITTEXT        IDC_TB_MANUALCHECK_POSY,236,252,42,14,ES_AUTOHSCROLL
+    RTEXT           "Slope X",IDC_STATIC,280,255,26,13
+    EDITTEXT        IDC_TB_MANUALCHECK_SLOPEX,309,252,42,14,ES_AUTOHSCROLL
+    RTEXT           "Slope Y",IDC_STATIC,355,255,27,13
+    EDITTEXT        IDC_TB_MANUALCHECK_SLOPEY,386,252,42,14,ES_AUTOHSCROLL
+    RTEXT           "Pos Tol",IDC_STATIC,428,255,27,13
+    EDITTEXT        IDC_TB_MANUALCHECK_POSTOL,460,252,31,14,ES_AUTOHSCROLL
+    RTEXT           "Slope Tol",IDC_STATIC,496,255,34,13
+    EDITTEXT        IDC_TB_MANUALCHECK_SLOPETOL,535,252,31,14,ES_AUTOHSCROLL
+    RTEXT           "Grains",IDC_STATIC,139,270,20,13
+    EDITTEXT        IDC_TB_MANUALCHECK_GRAINS,165,268,42,14,ES_AUTOHSCROLL | ES_READONLY
+    RTEXT           "X",IDC_STATIC,210,270,20,13
+    EDITTEXT        IDC_TB_MANUALCHECK_FOUNDX,236,268,42,14,ES_AUTOHSCROLL | ES_READONLY
+    RTEXT           "Y",IDC_STATIC,283,270,20,13
+    EDITTEXT        IDC_TB_MANUALCHECK_FOUNDY,309,268,42,14,ES_AUTOHSCROLL | ES_READONLY
+    RTEXT           "SX",IDC_STATIC,360,270,20,13
+    EDITTEXT        IDC_TB_MANUALCHECK_FOUNDSX,386,268,42,14,ES_AUTOHSCROLL | ES_READONLY
+    RTEXT           "SY",IDC_STATIC,434,270,20,13
+    EDITTEXT        IDC_TB_MANUALCHECK_FOUNDSY,460,268,42,14,ES_AUTOHSCROLL | ES_READONLY
+    RTEXT           "Top Fog",IDC_STATIC,107,294,32,13
+    EDITTEXT        IDC_TB_GETFOGTHICK_TOPFOG,145,292,42,14,ES_AUTOHSCROLL | ES_READONLY
+    RTEXT           "Bottom Fog",IDC_STATIC,189,294,41,13
+    EDITTEXT        IDC_TB_GETFOGTHICK_BOTFOG,237,292,42,14,ES_AUTOHSCROLL | ES_READONLY
+    RTEXT           "Top Thick",IDC_STATIC,280,294,35,13
+    EDITTEXT        IDC_TB_GETFOGTHICK_TOPTHK,322,292,42,14,ES_AUTOHSCROLL | ES_READONLY
+    RTEXT           "Bottom Thick",IDC_STATIC,377,294,43,13
+    EDITTEXT        IDC_TB_GETFOGTHICK_BOTTHK,427,292,42,14,ES_AUTOHSCROLL | ES_READONLY
+    RTEXT           "Base Thick",IDC_STATIC,475,293,43,13
+    EDITTEXT        IDC_TB_GETFOGTHICK_BASETHK,525,292,42,14,ES_AUTOHSCROLL | ES_READONLY
+    RTEXT           "Id",IDC_STATIC,124,320,15,13
+    EDITTEXT        IDC_TB_IMDUMP_ID1,145,318,42,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_TB_IMDUMP_ID2,188,318,42,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_TB_IMDUMP_ID3,231,318,42,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_TB_IMDUMP_ID4,274,318,42,14,ES_AUTOHSCROLL
+    RTEXT           "X/Y",IDC_STATIC,327,320,19,13
+    EDITTEXT        IDC_TB_IMDUMP_X,352,318,42,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_TB_IMDUMP_Y,395,318,42,14,ES_AUTOHSCROLL
+    RTEXT           "SlopeX/Y",IDC_STATIC,439,320,37,13
+    EDITTEXT        IDC_TB_IMDUMP_SX,482,318,42,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_TB_IMDUMP_SY,525,318,42,14,ES_AUTOHSCROLL
+    RTEXT           "Output path",IDC_STATIC,91,338,47,13
+    EDITTEXT        IDC_TB_IMDUMP_OUTPATH,145,335,170,14,ES_AUTOHSCROLL
+    PUSHBUTTON      "Send",ID_TB_SEND,7,396,50,14
+    RTEXT           "Exception",IDC_STATIC,7,359,47,13,NOT WS_GROUP
+    CONTROL         "Done",IDC_TB_DONE,"Button",BS_AUTOCHECKBOX | WS_DISABLED | WS_TABSTOP,527,356,40,11
+    EDITTEXT        IDC_TB_EXCEPTION,61,358,449,52,ES_MULTILINE | ES_AUTOVSCROLL | ES_AUTOHSCROLL | ES_READONLY
+    RTEXT           "Outname",IDC_STATIC,438,44,35,13
+    EDITTEXT        IDC_TB_LOADPLATE_OUTNAME,476,41,91,14,ES_AUTOHSCROLL
+    CONTROL         "Done",IDC_TB_CHECKDONE,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,55,269,36,11
+    CONTROL         "Found",IDC_TB_FOUND,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,99,269,32,11
+    PUSHBUTTON      "Load from file",IDC_TB_LOADSCANLAYOUT,7,197,63,15
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO 
+BEGIN
+    IDD_TESTMODE, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 567
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 410
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+#endif    // Neutral resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+/////////////////////////////////////////////////////////////////////////////
+// English (U.S.) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
+#pragma code_page(1252)
+#endif //_WIN32
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_ABOUTBOX DIALOGEX 0, 0, 235, 55
+STYLE DS_SETFONT | DS_FIXEDSYS | WS_POPUP | WS_SYSMENU
+FONT 8, "MS Shell Dlg", 0, 0, 0x1
+BEGIN
+    CONTROL         133,IDC_STATIC,"Static",SS_BITMAP | SS_REALSIZEIMAGE,0,0,391,204
+END
+
+IDD_SCANSERVER_DIALOG DIALOGEX 0, 0, 414, 203
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_MINIMIZEBOX | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
+EXSTYLE WS_EX_APPWINDOW
+CAPTION "Scan Server for SySal 2000"
+FONT 8, "MS Shell Dlg", 0, 0, 0x1
+BEGIN
+    PUSHBUTTON      "Close",IDC_CLOSE,357,180,50,16
+    PUSHBUTTON      "Test",IDC_TEST,77,180,50,16
+    EDITTEXT        IDC_MAIN_LOGBOX,7,7,400,167,ES_MULTILINE | ES_AUTOVSCROLL | ES_AUTOHSCROLL | ES_READONLY | ES_WANTRETURN | WS_VSCROLL | WS_HSCROLL
+    PUSHBUTTON      "Show Monitors",IDC_SHOWMONITORS,7,180,64,16
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO 
+BEGIN
+    IDD_ABOUTBOX, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 228
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 48
+    END
+
+    IDD_SCANSERVER_DIALOG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 407
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 196
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE 
+BEGIN
+    "#define _AFX_NO_SPLITTER_RESOURCES\r\n"
+    "#define _AFX_NO_OLE_RESOURCES\r\n"
+    "#define _AFX_NO_TRACKER_RESOURCES\r\n"
+    "#define _AFX_NO_PROPERTY_RESOURCES\r\n"
+    "\r\n"
+    "#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)\r\n"
+    "LANGUAGE 9, 1\r\n"
+    "#pragma code_page(1252)\r\n"
+    "#include ""res\\ScanServer.rc2""  // non-Microsoft Visual C++ edited resources\r\n"
+    "#include ""afxres.rc""         // Standard components\r\n"
+    "#endif\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDR_MAINFRAME           ICON                    "res\\ScanServer.ico"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION 1,0,0,1
+ PRODUCTVERSION 1,0,0,1
+ FILEFLAGSMASK 0x3fL
+#ifdef _DEBUG
+ FILEFLAGS 0x1L
+#else
+ FILEFLAGS 0x0L
+#endif
+ FILEOS 0x4L
+ FILETYPE 0x1L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "040904e4"
+        BEGIN
+            VALUE "CompanyName", "European Emulsion Group"
+            VALUE "FileDescription", "ScanServer for SySal2000"
+            VALUE "FileVersion", "2.3.1.1"
+            VALUE "InternalName", "ScanServer.exe"
+            VALUE "LegalCopyright", "(c) European Emulsion Group.  All rights reserved."
+            VALUE "OriginalFilename", "ScanServer.exe"
+            VALUE "ProductName", "SySal2000 ScanServer"
+            VALUE "ProductVersion", "2.3.1.1"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x409, 1252
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// RT_MANIFEST
+//
+
+IDR_MANIFEST            RT_MANIFEST             "res\\ScanServer.manifest"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Bitmap
+//
+
+IDB_BANNER              BITMAP                  "res\\banner2.BMP"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE 
+BEGIN
+    IDS_ABOUTBOX            "&About ScanServer..."
+END
+
+#endif    // English (U.S.) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+#define _AFX_NO_SPLITTER_RESOURCES
+#define _AFX_NO_OLE_RESOURCES
+#define _AFX_NO_TRACKER_RESOURCES
+#define _AFX_NO_PROPERTY_RESOURCES
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+LANGUAGE 9, 1
+#pragma code_page(1252)
+#include "res\ScanServer.rc2"  // non-Microsoft Visual C++ edited resources
+#include "afxres.rc"         // Standard components
+#endif
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+

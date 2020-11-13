@@ -1,0 +1,19 @@
+Comparing files FindHomeDlg.cpp and D:\SYSAL2\FLEXSTAGE4\FINDHOMEDLG.CPP
+***** FindHomeDlg.cpp
+ure, click on Cancel.\r\nClick on Cancel at any time to immediately stop moving.");
+OnStart(); //KRESLO FOR NON-INTERACTIVE
+        return TRUE;  // return TRUE unless you set the focus to a control
+***** D:\SYSAL2\FLEXSTAGE4\FINDHOMEDLG.CPP
+ure, click on Cancel.\r\nClick on Cancel at any time to immediately stop moving.");
+        return TRUE;  // return TRUE unless you set the focus to a control
+*****
+
+***** FindHomeDlg.cpp
+                                                                m_WarningText.SetWindowText("Done.");
+OnStart(); //KRESLO FOR NON-INTERACTIVE
+                                                        }
+***** D:\SYSAL2\FLEXSTAGE4\FINDHOMEDLG.CPP
+                                                                m_WarningText.SetWindowText("Done.");
+                                                        }
+*****
+

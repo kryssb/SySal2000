@@ -1,0 +1,327 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+   <head>
+      <title>Binary Logic Bit Operations In C and C++</title><link rel="alternate" type="application/rss+xml" title="Somacon" href="p998.php"><link rel="stylesheet" href="p996.php" type="text/css"><script type="text/javascript" src="p997.php"></script>
+            <style type="text/css"> <!-- table.bitops { border: 1px solid black; border-collapse: collapse;}
+	table.bitops th { border: 1px solid black; background-color: teal; color: white; padding: 3px; }
+	table.bitops td { border: 1px solid black; padding: 3px; }
+	pre { font-family: monospace; }
+	code { font-family: monospace; }
+	code.comment { color: #009900; }
+	--></style>
+            <script type="text/javascript">
+function convert(extraOperation)
+{
+	var inputVal, outputObj, inputBaseVal, outputBaseVal;
+	var inputBaseObj, outputBaseObj, i;
+
+	inputBaseObj = document.forms[0].inputBase;
+	outputBaseObj = document.forms[0].outputBase;
+	outputObj = document.forms[0].elements['convertedValue'];
+
+	for(i = 0; i < inputBaseObj.length; i++)
+	{
+		if(inputBaseObj[i].checked == true)
+		{
+			inputBaseVal = parseInt(inputBaseObj[i].value);
+		}
+	}
+	for(i = 0; i < outputBaseObj.length; i++)                  
+	{
+		if(outputBaseObj[i].checked == true)
+ 		{
+ 			outputBaseVal = parseInt(outputBaseObj[i].value);
+		}
+	}
+
+	inputVal = document.forms[0].elements['valueToConvert'].value;
+	inputVal = parseInt(inputVal, inputBaseVal);
+
+	if(isNaN(inputVal))
+	{
+		outputObj.value = "not a number";
+		return;
+	}
+
+	switch(extraOperation)
+	{
+	case 1:
+		inputVal = ~inputVal;
+		break;
+	case 2:
+		inputVal = inputVal << 1;
+		break;
+	case 3:
+		inputVal = inputVal >> 1;
+		break;
+	}
+
+	if(outputBaseVal == 2)
+	{
+		outputObj.value = binary32(inputVal);
+	}
+	else
+	{
+		outputObj.value = (inputVal.toString(outputBaseVal)).toUpperCase();
+	}
+}
+
+function binary32(aValue)
+{
+	myArray = new Array(32);
+
+	for(myEnum=0; myEnum<32; myEnum++)
+	{
+		if(aValue & Math.pow(2, myEnum))
+		{
+			myArray[31-myEnum] = "1";
+		}
+		else
+		{
+			myArray[31-myEnum] = "0";
+		}
+	}
+	return myArray.join("");
+}
+</script>
+   </head>
+   <body onload="blogInitPage();">
+      <span class="noprint">
+         <a href="http://www.somacon.com/"></a>
+      </span>
+      <h1>Binary Logic Bit Operations In C and C++</h1>
+      <h2>Programming Practice</h2>
+      <table class="bitops">
+         <tr>
+            <th colspan="5">
+               Common Synonyms for True and False</th>
+         </tr>
+         <tr>
+            <td>0</td>
+            <td>false</td>
+            <td>off</td>
+            <td>unset</td>
+            <td>zero</td>
+         </tr>
+         <tr>
+            <td>1</td>
+            <td>true</td>
+            <td>on</td>
+            <td>set</td>
+            <td>non-zero</td>
+         </tr>
+      </table>
+      <p>
+         In C/C++, anything other than zero is considered a <i>true</i> value in 
+         statements.<br>
+         Many Windows API functions return zero in the common case and non-zero in the 
+         failure case. Note that they do not use macros such as TRUE, FALSE, or BOOLEAN, 
+         as these may cause global namespace conflicts, type initialization errors, and 
+         other portability problems. In statements, I suggest checking for the expected 
+         value explicitly.
+         <pre>
+
+// Check for the expected return value explicitly, to avoid ambiguity.
+if(GetErrorStatus() != 0)
+{
+	printf("Error");
+}
+// This way is logically equivalent, but less clear.
+if(GetErrorStatus())
+{
+	printf("Error");
+}
+
+</pre>
+         <h2>C Bitwise Operators</h2>
+         <table class="bitops">
+            <tr>
+               <th>
+                  &amp;</th><td>binary bitwise AND</td>
+            </tr>
+            <tr>
+               <th>
+                  ^</th><td>binary bitwise exclusive OR (XOR)</td>
+            </tr>
+            <tr>
+               <th>
+                  |</th><td>binary bitwise inclusive OR</td>
+            </tr>
+            <tr>
+               <th>
+                  ~</th><td>unary bitwise complement (NOT)</td>
+            </tr>
+         </table>
+      <p>
+         An <i>operand</i> is the variable or value on which the operator acts.
+         <br>
+         <i>Bitwise</i> operators perform the given operation on each bit in the 
+         operand.
+         <br>
+         <i>Binary</i> means the operator operates on two operands and <i>unary</i> means 
+         the operator operates on a single operand.
+      </p>
+      <h2>Toggling a bit and leaving all other bits unchanged</h2>
+      <code>x = x ^ mask;
+         <br>
+         (or shorthand x ^= mask;) </code>
+      <p>Bits that are set to 1 in the mask will be toggled in x.
+         <br>
+      Bits that are set to 0 in the mask will be unchanged in x.
+      <p>Toggling means that if the bit is 1, it is set to 0, and if the bit is 0, it is 
+         set to 1.
+         <pre>
+XOR truth table
+0 ^ 0 = 0
+1 ^ 0 = 1
+0 ^ 1 = 1
+1 ^ 1 = 0
+</pre>
+         <h2>Setting a bit to zero and leaving all other bits unchanged</h2>
+         <code>x = x &amp; mask;
+            <br>
+            (or x &amp;= mask;) </code>
+      <p>Bits that are set to 1 in the mask will be unchanged in x.
+         <br>
+         Bits that are set to 0 in the mask will be set to zero in x.
+         <pre>
+AND truth table
+0 &amp; 0 = 0
+1 &amp; 0 = 0
+0 &amp; 1 = 0
+1 &amp; 1 = 1
+</pre>
+         <h2>Setting a bit to one and leaving all other bits unchanged</h2>
+         <code>x = x | mask;
+            <br>
+            (or x |= mask;) </code>
+      <p>
+         Bits that are set to 1 in the mask will be set to one in x.
+         <br>
+         Bits that are set to 0 in the mask will be unchanged in x.
+         <pre>
+OR truth table
+0 | 0 = 0
+1 | 0 = 1
+0 | 1 = 1
+1 | 1 = 1
+</pre>
+         <h2>Common Flag Values</h2>
+      <p>
+      I prefer to use the hexadecimal representation in my code.
+      <p>
+         <table class="bitops">
+            <tr>
+               <th>
+                  Binary<br>
+                  (base2)</th>
+               <th>
+                  Hexadecimal<br>
+                  (base16)</th>
+               <th>
+                  Decimal<br>
+                  (base10)</th>
+            </tr>
+            <tr>
+               <td>0000 0000</td>
+               <td>0x00</td>
+               <td>0</td>
+            </tr>
+            <tr>
+               <td>0000 0001</td>
+               <td>0x01</td>
+               <td>1</td>
+            </tr>
+            <tr>
+               <td>0000 0010</td>
+               <td>0x02</td>
+               <td>2</td>
+            </tr>
+            <tr>
+               <td>0000 0100</td>
+               <td>0x04</td>
+               <td>4</td>
+            </tr>
+            <tr>
+               <td>0000 1000</td>
+               <td>0x08</td>
+               <td>8</td>
+            </tr>
+            <tr>
+               <td>0001 0000</td>
+               <td>0x10</td>
+               <td>16</td>
+            </tr>
+            <tr>
+               <td>0010 0000</td>
+               <td>0x20</td>
+               <td>32</td>
+            </tr>
+            <tr>
+               <td>0100 0000</td>
+               <td>0x40</td>
+               <td>64</td>
+            </tr>
+            <tr>
+               <td>1000 0000</td>
+               <td>0x80</td>
+               <td>128</td>
+            </tr>
+         </table>
+         <h2>Example Macros</h2>
+      <p>Imagine there are two flags in the program that are independent of each other. 
+         We might implement macros to manipulate them as shown in the code sample below. 
+         It would probably be wise to put the macros in a header file.
+         <pre>
+<code class="comment">// the flag definitions</code>
+#define CAR_LOCKED    0x01  <code class="comment">// 0000 0001</code>
+#define CAR_PARKED    0x02  <code class="comment">// 0000 0010</code>
+#define CAR_RESET     0x00  <code class="comment">// 0000 0000</code>
+
+<code class="comment">// macros to manipulate the flags</code>
+#define RESET_CAR(x)     (x = CAR_RESET)
+
+#define SET_LOCKED(x)    (x |= CAR_LOCKED)
+#define SET_PARKED(x)    (x |= CAR_PARKED)
+
+#define UNSET_LOCKED(x)  (x &amp;= (~CAR_LOCKED))
+#define UNSET_PARKED(x)  (x &amp;= (~CAR_PARKED))
+
+#define TOGGLE_LOCKED(x)  (x ^= CAR_LOCKED)
+#define TOGGLE_PARKED(x)  (x ^= CAR_PARKED)
+
+<code class="comment">// these evaluate to non-zero if the flag is set</code>
+#define IS_LOCKED(x)      (x &amp; CAR_LOCKED)
+#define IS_PARKED(x)      (x &amp; CAR_PARKED)
+
+<code class="comment">// a short program that demonstrates how to use the macros</code>
+int
+main(void)
+{
+	unsigned char fMercedes, fCivic;
+
+	RESET_CAR(fMercedes);
+	RESET_CAR(fCivic);
+
+	SET_LOCKED(fMercedes);
+
+	if( IS_LOCKED(fMercedes) != 0 )
+	{
+		UNSET_PARKED(fCivic);
+	}
+
+	TOGGLE_LOCKED(fMercedes);
+
+	return 0;
+}
+</pre>
+      <p>These C programming notes were written January 10, 2003.
+         <div style="MARGIN-TOP:1em;TEXT-ALIGN:left" class="noprint">Link to this page: 
+            &lt;a href="http://www.somacon.com/p125.php"&gt;Binary Logic Bit Operations In 
+            C and C++&lt;/a&gt;</div>
+         <span class="noprint"></span><div style="MARGIN-TOP:0.3em"><i><small>Created 
+               2004-12-16, Last Modified 2005-06-05, © Shailesh N. Humbad</i><br>
+            Disclaimer: This content is provided as-is. The information may be 
+            incorrect.</SMALL></div>
+   </body>
+</html>

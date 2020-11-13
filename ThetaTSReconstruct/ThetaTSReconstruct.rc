@@ -1,0 +1,489 @@
+//Microsoft Developer Studio generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// English (U.S.) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
+#pragma code_page(1252)
+#endif //_WIN32
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// REGISTRY
+//
+
+IDR_TSRECON             REGISTRY DISCARDABLE    "ThetaTSRecon.rgs"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDI_ICON64              ICON    DISCARDABLE     "icon1.ico"
+IDI_ICON32              ICON    DISCARDABLE     "ico00001.ico"
+IDI_RED                 ICON    DISCARDABLE     "red.ico"
+IDI_BLUE                ICON    DISCARDABLE     "blue.ico"
+IDI_GREEN               ICON    DISCARDABLE     "green.ico"
+IDI_YELLOW              ICON    DISCARDABLE     "yellow.ico"
+IDI_CYAN                ICON    DISCARDABLE     "cyan.ico"
+IDI_MAGENTA             ICON    DISCARDABLE     "magenta.ico"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_MAINSWITCH DIALOG DISCARDABLE  0, 0, 211, 43
+STYLE DS_MODALFRAME | WS_MINIMIZEBOX | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Total Scan Reconstruction - Main Switch"
+FONT 8, "MS Sans Serif"
+BEGIN
+    PUSHBUTTON      "&Interactive Reconstruction",IDC_MS_INTERACTIVE,7,7,98,
+                    14
+    PUSHBUTTON      "&Batch Processing",IDC_MS_BATCH,106,7,98,14
+    PUSHBUTTON      "E&xit",IDCANCEL,106,22,98,14
+    PUSHBUTTON      "&About this module",IDC_MS_ABOUT,7,22,98,14
+END
+
+IDD_ABOUT DIALOG DISCARDABLE  0, 0, 223, 64
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "About this module"
+FONT 8, "MS Sans Serif"
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,7,43,209,14
+    ICON            IDI_ICON64,IDC_STATIC,7,7,20,20
+    CTEXT           "Total Scan Reconstruction",IDC_STATIC,35,7,181,10
+    CTEXT           "2000 by Cristiano Bozza - Salerno Emulsion Group",
+                    IDC_STATIC,35,19,181,13
+END
+
+IDD_EDIT_CONFIG DIALOG DISCARDABLE  0, 0, 428, 319
+STYLE DS_MODALFRAME | WS_MINIMIZEBOX | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Edit Config"
+FONT 8, "MS Sans Serif"
+BEGIN
+    GROUPBOX        "Segment Remeasure Handling",IDC_STATIC,7,7,162,122
+    LTEXT           "Max Measures in Segment",IDC_STATIC,14,20,84,9
+    EDITTEXT        IDC_EC_MAXREMEASURESINSEG,139,18,21,13,ES_AUTOHSCROLL
+    LTEXT           "In-field Slope Tolerance",IDC_STATIC,14,37,82,9
+    EDITTEXT        IDC_EC_INFIELDDSLOPE,139,35,21,13,ES_AUTOHSCROLL
+    LTEXT           "In-field Position Tolerance",IDC_STATIC,14,51,84,9
+    EDITTEXT        IDC_EC_INFIELDDPOS,139,49,21,13,ES_AUTOHSCROLL
+    LTEXT           "Off-field Slope Tolerance",IDC_STATIC,14,65,82,9
+    EDITTEXT        IDC_EC_OFFFIELDDSLOPE,139,63,21,13,ES_AUTOHSCROLL
+    LTEXT           "Off-field Position Tolerance",IDC_STATIC,14,79,84,9
+    EDITTEXT        IDC_EC_OFFFIELDDPOS,139,77,21,13,ES_AUTOHSCROLL
+    CONTROL         "&Merge",IDC_EC_MERGE,"Button",BS_AUTORADIOBUTTON,14,91,
+                    33,10
+    CONTROL         "Discard &Shorter (fewer points)",IDC_EC_DISCARDSHORTER,
+                    "Button",BS_AUTORADIOBUTTON,14,101,99,10
+    CONTROL         "Discard &Worse (higher sigma)",IDC_EC_DISCARDWORSE,
+                    "Button",BS_AUTORADIOBUTTON,14,111,100,10
+    GROUPBOX        "Tracks",IDC_STATIC,175,7,246,160
+    LTEXT           "Min. Number of  Segments",IDC_STATIC,182,19,82,9
+    EDITTEXT        IDC_EC_MINSEGS,273,17,21,13,ES_AUTOHSCROLL
+    LTEXT           "Max. Missing  Segments",IDC_STATIC,182,35,82,9
+    EDITTEXT        IDC_EC_MAXMISSINGSEGS,273,33,21,13,ES_AUTOHSCROLL
+    LTEXT           "Min. Segments for Recovery",IDC_STATIC,182,51,88,9
+    EDITTEXT        IDC_EC_MINSEGSRECOVERY,273,49,21,13,ES_AUTOHSCROLL
+    CONTROL         "Align on linked segments only",IDC_EC_ALIGNONLINKED,
+                    "Button",BS_AUTOCHECKBOX | WS_TABSTOP,183,67,111,12
+    LTEXT           "Alignment Beam X Slope",IDC_STATIC,182,84,82,9
+    EDITTEXT        IDC_EC_ALIGNX,273,82,21,13,ES_AUTOHSCROLL
+    LTEXT           "Alignment Beam Y Slope",IDC_STATIC,182,100,82,9
+    EDITTEXT        IDC_EC_ALIGNY,273,98,21,13,ES_AUTOHSCROLL
+    LTEXT           "Alignment Beam Width",IDC_STATIC,182,116,88,9
+    EDITTEXT        IDC_EC_ALIGNWIDTH,273,114,21,13,ES_AUTOHSCROLL
+    CONTROL         "&No Prescan",IDC_EC_PRESCAN_NONE,"Button",
+                    BS_AUTORADIOBUTTON,181,127,84,10
+    CONTROL         "&Translation Prescan",IDC_EC_PRESCAN_TRANSLATION,"Button",
+                    BS_AUTORADIOBUTTON,181,137,99,10
+    CONTROL         "&Affine Deformation Prescan",IDC_EC_PRESCAN_AFFINE,
+                    "Button",BS_AUTORADIOBUTTON,181,147,100,10
+    LTEXT           "Prescan Zone Width",IDC_STATIC,302,20,82,9
+    EDITTEXT        IDC_EC_PRESCANZONEWIDTH,393,18,21,13,ES_AUTOHSCROLL
+    LTEXT           "Prescan Extents",IDC_STATIC,302,36,82,9
+    EDITTEXT        IDC_EC_PRESCANEXTENTS,393,34,21,13,ES_AUTOHSCROLL
+    LTEXT           "Prescan Lever Arm",IDC_STATIC,302,52,82,9
+    EDITTEXT        IDC_EC_PRESCANLEVERARM,393,50,21,13,ES_AUTOHSCROLL
+    LTEXT           "Locality Cell Size",IDC_STATIC,302,68,82,9
+    EDITTEXT        IDC_EC_LOCALITYCELLSIZE,393,66,21,13,ES_AUTOHSCROLL
+    LTEXT           "Max. Iterations",IDC_STATIC,302,84,82,9
+    EDITTEXT        IDC_EC_MAXITERS,393,82,21,13,ES_AUTOHSCROLL
+    LTEXT           "Position Tolerance",IDC_STATIC,302,100,87,9
+    EDITTEXT        IDC_EC_DPOS,393,98,21,13,ES_AUTOHSCROLL
+    LTEXT           "Slope Tolerance",IDC_STATIC,302,116,82,9
+    EDITTEXT        IDC_EC_DSLOPE,393,114,21,13,ES_AUTOHSCROLL
+    LTEXT           "Gross Position Tolerance",IDC_STATIC,302,132,84,9
+    EDITTEXT        IDC_EC_GROSSDPOS,393,130,21,13,ES_AUTOHSCROLL
+    LTEXT           "Gross Slope Tolerance",IDC_STATIC,302,148,84,9
+    EDITTEXT        IDC_EC_GROSSDSLOPE,393,146,21,13,ES_AUTOHSCROLL
+    GROUPBOX        "Passing-Through",IDC_STATIC,7,131,162,65
+    LTEXT           "Correlation Radius",IDC_STATIC,14,146,65,9
+    EDITTEXT        IDC_EC_PASSTHRU_RADIUS,139,144,21,13,ES_AUTOHSCROLL
+    LTEXT           "Correlation Angle",IDC_STATIC,14,162,65,9
+    EDITTEXT        IDC_EC_PASSTHRU_ANGLE,139,160,21,13,ES_AUTOHSCROLL
+    LTEXT           "Out-of-Bounds Extrapolation Length",IDC_STATIC,14,178,
+                    118,12
+    EDITTEXT        IDC_EC_PASSTHRU_OUTLENGTH,139,176,21,13,ES_AUTOHSCROLL
+    GROUPBOX        "Vertex Reconstruction",IDC_STATIC,7,198,162,89
+    LTEXT           "Min. X-Y Tol.",IDC_STATIC,15,214,41,9
+    EDITTEXT        IDC_EC_VERTEX_XYTOL,60,212,21,13,ES_AUTOHSCROLL
+    LTEXT           "X-Y Tol. Incr.",IDC_STATIC,15,230,43,9
+    EDITTEXT        IDC_EC_VERTEX_XYTOLINCREASE,60,228,21,13,ES_AUTOHSCROLL
+    LTEXT           "Lowest Z",IDC_STATIC,14,246,34,11
+    EDITTEXT        IDC_EC_VERTEX_LOWESTZ,60,244,21,13,ES_AUTOHSCROLL
+    LTEXT           "Overlength",IDC_STATIC,15,262,38,11
+    EDITTEXT        IDC_EC_VERTEX_OVERLENGTH,60,260,21,13,ES_AUTOHSCROLL
+    LTEXT           "Z Extrapolation",IDC_STATIC,84,214,53,11
+    EDITTEXT        IDC_EC_VERTEX_EXTRAPOLATION,139,212,21,13,ES_AUTOHSCROLL
+    LTEXT           "X-Y Merging Tolerance",IDC_STATIC,85,230,51,16
+    EDITTEXT        IDC_EC_VERTEX_MERGEXYTOL,139,228,21,13,ES_AUTOHSCROLL
+    LTEXT           "Z Merging Tolerance",IDC_STATIC,85,246,51,16
+    EDITTEXT        IDC_EC_VERTEX_MERGEZTOL,139,244,21,13,ES_AUTOHSCROLL
+    LTEXT           "Z Recovery Extrapolation",IDC_STATIC,85,262,51,18
+    EDITTEXT        IDC_EC_VERTEX_REC_EXTRAPOLATION,139,260,21,13,
+                    ES_AUTOHSCROLL
+    GROUPBOX        "Final Alignment",IDC_STATIC,175,170,246,117
+    CONTROL         "Enable",IDC_EC_FINALALIGNMENTENABLE,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,181,183,46,12
+    LTEXT           "Max. Iterations",IDC_STATIC,182,197,106,9
+    EDITTEXT        IDC_EC_FINALITERATIONS,392,195,21,13,ES_AUTOHSCROLL
+    LTEXT           "Segments to Estimate Local Slope",IDC_STATIC,182,211,
+                    129,9
+    EDITTEXT        IDC_EC_FINALSLOPEMEASURES,392,209,21,13,ES_AUTOHSCROLL
+    LTEXT           "Max. Extent Slope Difference (Slope Agreement RMS units)",
+                    IDC_STATIC,182,225,196,9
+    EDITTEXT        IDC_EC_FINALMAXDIFF,392,223,21,13,ES_AUTOHSCROLL
+    LTEXT           "Min. Extent Slope Difference (Slope Agreement RMS units)",
+                    IDC_STATIC,182,239,196,9
+    EDITTEXT        IDC_EC_FINALMINDIFF,392,237,21,13,ES_AUTOHSCROLL
+    LTEXT           "Min. Number of Entries per Plane",IDC_STATIC,182,253,
+                    196,9
+    EDITTEXT        IDC_EC_FINALMINENTRIES,392,251,21,13,ES_AUTOHSCROLL
+    LTEXT           "Max. Accepted Value of Slope Agreement RMS",IDC_STATIC,
+                    182,267,196,9
+    EDITTEXT        IDC_EC_FINALMAXACCRMS,392,265,21,13,ES_AUTOHSCROLL
+    DEFPUSHBUTTON   "OK",IDOK,7,297,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,371,297,50,14
+END
+
+IDD_INTERACTIVE DIALOGEX 0, 0, 488, 292
+STYLE DS_MODALFRAME | WS_MINIMIZEBOX | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION 
+"Interactive Total Scan Reconstruction - by Cristiano Bozza - Salerno Emulsion Group"
+
+FONT 8, "MS Sans Serif"
+BEGIN
+    LTEXT           "Id:",IDC_STATIC,332,6,14,12
+    EDITTEXT        IDC_IR_ID,351,5,130,14,ES_AUTOHSCROLL | ES_READONLY
+    GROUPBOX        "Data Management",IDC_STATIC,329,22,152,49
+    PUSHBUTTON   "&Alignment Data",IDC_IR_SEL_ALIGNMENTDATA,334,35,61,14
+    EDITTEXT        IDC_IR_EALIGNMENTDATA,400,35,76,14,ES_AUTOHSCROLL
+    PUSHBUTTON   "L&ist File",IDC_IR_SEL_LISTFILE,334,52,61,14
+    EDITTEXT        IDC_IR_ELISTFILE,400,52,76,14,ES_AUTOHSCROLL
+    GROUPBOX        "View Controls",IDC_STATIC,329,74,72,69,WS_GROUP
+    LTEXT           "Zoom",IDC_STATIC,336,86,56,8
+    CONTROL         "Slider1",IDC_IR_ZOOM,"msctls_trackbar32",TBS_BOTH | 
+                    TBS_NOTICKS | WS_TABSTOP,336,97,56,10
+    PUSHBUTTON   "&Default View",IDC_IR_DEFAULTVIEW,334,121,61,14
+    GROUPBOX        "Track Display",IDC_STATIC,329,146,72,80,WS_GROUP
+    CONTROL         "&Raw Data",IDC_IR_SHOWRAW,"Button",BS_AUTORADIOBUTTON,
+                    333,157,60,11
+    CONTROL         "&Segments",IDC_IR_SHOWSEGMENTS,"Button",
+                    BS_AUTORADIOBUTTON,333,168,60,11
+    CONTROL         "Track Se&gments",IDC_IR_SHOWTRACKSEGS,"Button",
+                    BS_AUTORADIOBUTTON,333,179,63,11
+    CONTROL         "&Tracks",IDC_IR_SHOWTRACKS,"Button",BS_AUTORADIOBUTTON,
+                    333,190,60,11
+    CONTROL         "From &Vertex",IDC_IR_FROMVERTEX,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,334,201,61,10
+    CONTROL         "&Passing-Through",IDC_IR_PASSINGTHROUGH,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,334,211,64,10
+    GROUPBOX        "Actions",IDC_STATIC,404,74,77,152
+    PUSHBUTTON		"&Load",IDC_IR_LOAD,409,86,67,14
+    PUSHBUTTON		"Load Rec&onstruction",IDC_IR_LOAD_RECONSTRUCTION,409,
+                    102,67,14
+    PUSHBUTTON		"&Reconstruct",IDC_IR_RECONSTRUCT,409,119,67,14
+    PUSHBUTTON		"&Topology",IDC_IR_TOPOLOGY,409,136,67,14
+    PUSHBUTTON		"&Edit Config",IDC_IR_EDITCONFIG,409,153,67,14
+    PUSHBUTTON		"Sa&ve Config",IDC_IR_SAVECONFIG,409,170,67,14
+    DEFPUSHBUTTON   "&Save Reconstruction",IDC_IR_SAVE,409,189,67,14
+    PUSHBUTTON		"&Match Prediction",IDC_IR_MATCHPRED,409,206,67,14
+    LTEXT           "Action: <Idle>",IDC_IR_ACTION,330,231,151,10
+    CONTROL         "Progress1",IDC_IR_ACTIONPROGRESS,"msctls_progress32",
+                    PBS_SMOOTH | WS_BORDER,329,242,152,7,WS_EX_CLIENTEDGE
+    CONTROL         "",IDC_IR_SCREEN,"Static",SS_BLACKFRAME,7,5,318,280,
+                    WS_EX_CLIENTEDGE
+    LTEXT           "Notes",IDC_STATIC,331,255,25,12
+    EDITTEXT        IDC_IR_NOTES,362,254,118,31,ES_MULTILINE | 
+                    ES_AUTOVSCROLL | ES_AUTOHSCROLL | ES_READONLY
+END
+
+IDD_SELECT_EVENT DIALOGEX 0, 0, 187, 160
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Select event data to load"
+FONT 8, "MS Sans Serif", 0, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,7,139,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,130,139,50,14
+    CONTROL         "List1",IDC_SE_LIST,"SysListView32",LVS_REPORT | 
+                    LVS_SINGLESEL | LVS_SORTASCENDING | WS_BORDER | 
+                    WS_TABSTOP,7,7,173,124,WS_EX_CLIENTEDGE
+END
+
+IDD_BATCH DIALOGEX 0, 0, 305, 237
+STYLE DS_MODALFRAME | DS_CENTER | WS_MINIMIZEBOX | WS_POPUP | WS_CAPTION | 
+    WS_SYSMENU
+CAPTION "Batch Processing - by Cristiano Bozza - Salerno Emulsion Group"
+FONT 8, "MS Sans Serif", 0, 0, 0x1
+BEGIN
+    GROUPBOX        "Batch Selection",IDC_STATIC,7,3,291,89
+    PUSHBUTTON      "&Alignment Data",IDC_BP_ALIGNMENTDATA,13,15,86,13
+    EDITTEXT        IDC_BP_EALIGNMENTDATA,105,15,187,14,ES_AUTOHSCROLL | 
+                    ES_READONLY
+    PUSHBUTTON      "&List File",IDC_BP_LISTFILE,13,32,86,13
+    EDITTEXT        IDC_BP_ELISTFILE,105,32,187,14,ES_AUTOHSCROLL | 
+                    ES_READONLY
+    CONTROL         "Start from Raw &Data",IDC_BP_RAWDATA,"Button",
+                    BS_AUTORADIOBUTTON,13,51,75,11
+    CONTROL         "&Fully Reprocess Reconstructions",IDC_BP_FULLREPROCESS,
+                    "Button",BS_AUTORADIOBUTTON,13,63,117,11
+    CONTROL         "&Partially Reprocess Reconstructions (Topology only)",
+                    IDC_BP_PARTIALREPROCESS,"Button",BS_AUTORADIOBUTTON,13,
+                    75,175,11
+    GROUPBOX        "Batch Progress",IDC_STATIC,7,94,291,136
+    LTEXT           "Status:",IDC_STATIC,13,110,28,10
+    LTEXT           "Idle",IDC_BP_STATUS,48,110,56,10
+    LTEXT           "File:",IDC_STATIC,13,121,28,10
+    LTEXT           "0/0 0%",IDC_BP_PERCENT,48,121,56,10
+    CONTROL         "Progress2",IDC_BP_PROGRESS,"msctls_progress32",
+                    PBS_SMOOTH | WS_BORDER,13,135,97,6,WS_EX_CLIENTEDGE
+    LTEXT           "Elapsed Time:",IDC_STATIC,13,146,52,10
+    RTEXT           "0:00:00",IDC_BP_ELAPSEDTIME,77,146,32,10
+    LTEXT           "Time to Completion:",IDC_STATIC,13,161,62,10
+    RTEXT           "0:00:00",IDC_BP_TIMETOCOMPLETION,77,161,32,10
+    LTEXT           "Errors:",IDC_STATIC,14,176,29,10
+    RTEXT           "0",IDC_BP_ERRORCOUNT,48,176,61,10
+    GROUPBOX        "Message Log",IDC_STATIC,119,103,173,99,BS_CENTER
+    EDITTEXT        IDC_BP_MSGLOG,124,114,163,82,ES_MULTILINE | 
+                    ES_AUTOVSCROLL | ES_AUTOHSCROLL | ES_READONLY,
+                    WS_EX_CLIENTEDGE
+    PUSHBUTTON      "&Start",IDC_BP_START,14,207,50,14
+    PUSHBUTTON      "Sto&p",IDC_BP_STOP,65,207,50,14
+    PUSHBUTTON      "&Clear log",IDC_BP_CLEARLOG,119,207,50,14
+    PUSHBUTTON      "E&xit",IDCANCEL,242,207,50,14
+END
+
+IDD_MATCH_PREDICTION DIALOGEX 0, 0, 314, 136
+STYLE DS_MODALFRAME | WS_MINIMIZEBOX | WS_POPUP | WS_VISIBLE | WS_CAPTION | 
+    WS_SYSMENU
+CAPTION "Match Predictions"
+FONT 8, "MS Sans Serif", 0, 0, 0x1
+BEGIN
+    CONTROL         "List1",IDC_MP_LIST,"SysListView32",LVS_REPORT | 
+                    LVS_SHAREIMAGELISTS | WS_BORDER | WS_TABSTOP,7,7,300,84,
+                    WS_EX_CLIENTEDGE
+    LTEXT           "Match Slope &X with",IDC_STATIC,7,100,64,9
+    COMBOBOX        IDC_MP_SLOPEXCOMBO,72,99,54,36,CBS_DROPDOWNLIST | 
+                    WS_VSCROLL | WS_TABSTOP
+    LTEXT           "Match Slope &Y with",IDC_STATIC,7,117,64,9
+    COMBOBOX        IDC_MP_SLOPEYCOMBO,72,117,54,36,CBS_DROPDOWNLIST | 
+                    WS_VSCROLL | WS_TABSTOP
+    LTEXT           "Slope matching tolerance",IDC_STATIC,173,100,82,11
+    EDITTEXT        IDC_MP_SLOPETOL,285,98,22,13,ES_AUTOHSCROLL
+    PUSHBUTTON      "&Match",IDC_MP_MATCH,130,115,50,14
+    PUSHBUTTON      "&Shuffle Colors",IDC_MP_SHUFFLE,182,115,50,14
+    PUSHBUTTON      "E&xit",IDCANCEL,257,115,50,14
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO DISCARDABLE 
+BEGIN
+    IDD_MAINSWITCH, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 204
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 36
+    END
+
+    IDD_ABOUT, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 216
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 57
+    END
+
+    IDD_EDIT_CONFIG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 421
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 311
+    END
+
+    IDD_INTERACTIVE, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 481
+        TOPMARGIN, 5
+        BOTTOMMARGIN, 285
+    END
+
+    IDD_SELECT_EVENT, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 180
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 153
+    END
+
+    IDD_BATCH, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 298
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 230
+    END
+
+    IDD_MATCH_PREDICTION, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 307
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 129
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_PROJNAME            "ThetaTSReconstruct"
+END
+
+#endif    // English (U.S.) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+/////////////////////////////////////////////////////////////////////////////
+// Italian (Italy) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ITA)
+#ifdef _WIN32
+LANGUAGE LANG_ITALIAN, SUBLANG_ITALIAN
+#pragma code_page(1252)
+#endif //_WIN32
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+#ifndef _MAC
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION 1,0,0,1
+ PRODUCTVERSION 1,0,0,1
+ FILEFLAGSMASK 0x3fL
+#ifdef _DEBUG
+ FILEFLAGS 0x1L
+#else
+ FILEFLAGS 0x0L
+#endif
+ FILEOS 0x4L
+ FILETYPE 0x2L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "040904B0"
+        BEGIN
+            VALUE "CompanyName", "\0"
+            VALUE "FileDescription", "TSReconstruct Module\0"
+            VALUE "FileVersion", "1, 0, 0, 1\0"
+            VALUE "InternalName", "TSReconstruct\0"
+            VALUE "LegalCopyright", "Copyright 2000\0"
+            VALUE "OriginalFilename", "TSReconstruct.DLL\0"
+            VALUE "ProductName", "TSReconstruct Module\0"
+            VALUE "ProductVersion", "1, 0, 0, 1\0"
+            VALUE "OLESelfRegister", "\0"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x409, 1200
+    END
+END
+
+#endif    // !_MAC
+
+#endif    // Italian (Italy) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+

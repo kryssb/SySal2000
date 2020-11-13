@@ -1,0 +1,25 @@
+HKCR
+{
+	StageTest.StageTest.1 = s 'StageTest Class'
+	{
+		CLSID = s '{D654A077-EB78-4B30-B394-EBF6A24101BB}'
+	}
+	StageTest.StageTest = s 'StageTest Class'
+	{
+		CLSID = s '{D654A077-EB78-4B30-B394-EBF6A24101BB}'
+		CurVer = s 'StageTest.StageTest.1'
+	}
+	NoRemove CLSID
+	{
+		ForceRemove {D654A077-EB78-4B30-B394-EBF6A24101BB} = s 'StageTest Class'
+		{
+			ProgID = s 'StageTest.StageTest.1'
+			VersionIndependentProgID = s 'StageTest.StageTest'
+			InprocServer32 = s '%MODULE%'
+			{
+				val ThreadingModel = s 'Free'
+			}
+			'TypeLib' = s '{3B56F8C6-4E1C-47B4-865E-9505127A27E1}'
+		}
+	}
+}

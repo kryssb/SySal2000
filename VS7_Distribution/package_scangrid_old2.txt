@@ -1,0 +1,36 @@
+$PACKAGE=SySal-ScanGrid
+$MAJOR_VERSION=0
+$MINOR_VERSION=4
+$EDITION=20090311
+$COMMAND_NUMBER=1
+
+$DIRECTORY=.
+$COMMAND_TEXT=$TITLE
+ScanGrid (Chrysalis Momentum Edition)
+
+$COMMAND_TEXT=$INSTALL
+
+$DIRECTORY=.
+$LOCALDIR=\\tsclient\d\sysal2\VS7_Distribution\Exe\Server
+DAQSystem.dll
+FogDll.dll
+Imaging.dll
+OperaDB.dll
+OperaDbLoginTools.dll
+QuickMapper.dll
+Scanning.dll
+SmartFitter2.dll
+SmartTracker8.6.dll
+SmartTracker8.dll
+SySalCore.dll
+Tracking.dll
+VertigoScan6Server_Win.exe
+VertigoScan7.dll
+VolumeTracks.dll
+
+$COMMAND_NUMBER=2
+$COMMAND_TEXT=regsvr32 @ /s
+SmartFitter2.dll
+SmartTracker8.dll
+SmartTracker8.6.dll
+VertigoScan7.dll

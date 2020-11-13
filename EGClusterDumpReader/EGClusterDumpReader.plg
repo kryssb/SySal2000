@@ -1,0 +1,59 @@
+<html>
+<body>
+<pre>
+<h1>Build Log</h1>
+<h3>
+--------------------Configuration: EGClusterDumpReader - Win32 Release MinSize--------------------
+</h3>
+<h3>Command Lines</h3>
+Creating temporary file "C:\DOCUME~1\kryss\LOCALS~1\Temp\RSP2.tmp" with contents
+[
+/nologo /MD /W3 /GX /O1 /D "WIN32" /D "NDEBUG" /D "_WINDOWS" /D "_WINDLL" /D "_AFXDLL" /D "_MBCS" /D "_USRDLL" /D "_ATL_DLL" /Fp"ReleaseMinSize/EGClusterDumpReader.pch" /Yu"stdafx.h" /Fo"ReleaseMinSize/" /Fd"ReleaseMinSize/" /FD /c 
+"K:\SySal2\EGClusterDumpReader\CEGClusterDumpReader.cpp"
+"K:\SySal2\EGClusterDumpReader\EGClusterDumpReader.cpp"
+]
+Creating command line "cl.exe @C:\DOCUME~1\kryss\LOCALS~1\Temp\RSP2.tmp" 
+Creating temporary file "C:\DOCUME~1\kryss\LOCALS~1\Temp\RSP3.tmp" with contents
+[
+/nologo /MD /W3 /GX /O1 /D "WIN32" /D "NDEBUG" /D "_WINDOWS" /D "_WINDLL" /D "_AFXDLL" /D "_MBCS" /D "_USRDLL" /D "_ATL_DLL" /Fp"ReleaseMinSize/EGClusterDumpReader.pch" /Yc"stdafx.h" /Fo"ReleaseMinSize/" /Fd"ReleaseMinSize/" /FD /c 
+"K:\SySal2\EGClusterDumpReader\StdAfx.cpp"
+]
+Creating command line "cl.exe @C:\DOCUME~1\kryss\LOCALS~1\Temp\RSP3.tmp" 
+Creating temporary file "C:\DOCUME~1\kryss\LOCALS~1\Temp\RSP4.tmp" with contents
+[
+/nologo /subsystem:windows /dll /incremental:no /pdb:"ReleaseMinSize/EGClusterDumpReader.pdb" /machine:I386 /def:".\EGClusterDumpReader.def" /out:"ReleaseMinSize/EGClusterDumpReader.dll" /implib:"ReleaseMinSize/EGClusterDumpReader.lib" 
+.\ReleaseMinSize\CEGClusterDumpReader.obj
+.\ReleaseMinSize\EGClusterDumpReader.obj
+.\ReleaseMinSize\StdAfx.obj
+.\ReleaseMinSize\SySalDataIO_i.obj
+.\ReleaseMinSize\EGClusterDumpReader.res
+]
+Creating command line "link.exe @C:\DOCUME~1\kryss\LOCALS~1\Temp\RSP4.tmp"
+Creating temporary file "C:\DOCUME~1\kryss\LOCALS~1\Temp\RSP5.bat" with contents
+[
+@echo off
+regsvr32 /s /c ".\ReleaseMinSize\EGClusterDumpReader.dll"
+echo regsvr32 exec. time > ".\ReleaseMinSize\regsvr32.trg"
+]
+Creating command line "C:\DOCUME~1\kryss\LOCALS~1\Temp\RSP5.bat"
+Compiling...
+StdAfx.cpp
+Compiling...
+CEGClusterDumpReader.cpp
+K:\SySal2\EGClusterDumpReader\CEGClusterDumpReader.cpp(362) : warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+K:\SySal2\EGClusterDumpReader\CEGClusterDumpReader.cpp(374) : warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+K:\SySal2\EGClusterDumpReader\CEGClusterDumpReader.cpp(386) : warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+EGClusterDumpReader.cpp
+Generating Code...
+Linking...
+   Creating library ReleaseMinSize/EGClusterDumpReader.lib and object ReleaseMinSize/EGClusterDumpReader.exp
+<h3>Output Window</h3>
+Performing registration
+
+
+
+<h3>Results</h3>
+EGClusterDumpReader.dll - 0 error(s), 3 warning(s)
+</pre>
+</body>
+</html>

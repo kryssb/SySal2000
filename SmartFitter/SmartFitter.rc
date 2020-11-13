@@ -1,0 +1,208 @@
+//Microsoft Developer Studio generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// English (U.S.) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
+#pragma code_page(1252)
+#endif //_WIN32
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDI_ICON64              ICON    DISCARDABLE     "icon64.ico"
+IDI_ICON32              ICON    DISCARDABLE     "icon32.ico"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_EDIT_CONFIG DIALOG DISCARDABLE  0, 0, 286, 145
+STYLE DS_MODALFRAME | DS_CENTER | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Smart Fitter Setup"
+FONT 8, "MS Sans Serif"
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,7,124,60,14
+    PUSHBUTTON      "Cancel",IDCANCEL,219,124,60,14
+    GROUPBOX        "General",IDC_STATIC,7,7,272,55
+    CONTROL         "&Keep All Points",IDC_EC_KEEPALL,"Button",
+                    BS_AUTORADIOBUTTON,14,17,66,9
+    CONTROL         "Discard Points &Once",IDC_EC_DISCARDONCE,"Button",
+                    BS_AUTORADIOBUTTON,14,30,83,9
+    CONTROL         "&Iterate Discarding",IDC_EC_ITERATEDISCARDING,"Button",
+                    BS_AUTORADIOBUTTON,14,42,75,9
+    LTEXT           "&Minimum Number of Points after Discarding",IDC_STATIC,
+                    102,17,137,9
+    EDITTEXT        IDC_EC_MINPOINTS,246,15,27,12,ES_AUTOHSCROLL
+    LTEXT           "Maximum &Sigma of Linear Fit",IDC_STATIC,102,30,97,9
+    EDITTEXT        IDC_EC_MAXSIGMA,246,28,27,12,ES_AUTOHSCROLL
+    LTEXT           "&Maximum &Deviation from Fit",IDC_STATIC,102,43,137,9
+    EDITTEXT        IDC_EC_MAXPOINTDELTA,246,41,27,12,ES_AUTOHSCROLL
+    GROUPBOX        "Track Recovery",IDC_STATIC,7,65,272,52
+    CONTROL         "Enable Track &Recovery",IDC_EC_ENABLERECOVERY,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,14,77,87,8
+    LTEXT           "Max. Difference of &Extrapolated Position",IDC_STATIC,
+                    13,88,121,9
+    EDITTEXT        IDC_EC_DELTAPOS,139,86,27,12,ES_AUTOHSCROLL
+    LTEXT           "Max. &Slope Difference",IDC_STATIC,172,88,69,9
+    EDITTEXT        IDC_EC_DELTASLOPE,246,86,27,12,ES_AUTOHSCROLL
+    LTEXT           "Max &Memory Occupancy (KB)",IDC_STATIC,13,101,123,9
+    EDITTEXT        IDC_EC_MAXMEM,139,99,27,12,ES_AUTOHSCROLL
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO DISCARDABLE 
+BEGIN
+    IDD_EDIT_CONFIG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 279
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 138
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_PROJNAME            "SmartFitter"
+END
+
+#endif    // English (U.S.) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+/////////////////////////////////////////////////////////////////////////////
+// Italian (Italy) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ITA)
+#ifdef _WIN32
+LANGUAGE LANG_ITALIAN, SUBLANG_ITALIAN
+#pragma code_page(1252)
+#endif //_WIN32
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "1 TYPELIB ""SmartFitter.tlb""\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+#ifndef _MAC
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION 1,0,0,1
+ PRODUCTVERSION 1,0,0,1
+ FILEFLAGSMASK 0x3fL
+#ifdef _DEBUG
+ FILEFLAGS 0x1L
+#else
+ FILEFLAGS 0x0L
+#endif
+ FILEOS 0x4L
+ FILETYPE 0x2L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "040904b0"
+        BEGIN
+            VALUE "Comments", "\0"
+            VALUE "CompanyName", "\0"
+            VALUE "FileDescription", "SmartFitter Module\0"
+            VALUE "FileVersion", "2, 0, 0, 1\0"
+            VALUE "InternalName", "SmartFitter\0"
+            VALUE "LegalCopyright", "Copyright Salerno Emulsion Group 2003\0"
+            VALUE "LegalTrademarks", "\0"
+            VALUE "OLESelfRegister", "\0"
+            VALUE "OriginalFilename", "SmartFitter.DLL\0"
+            VALUE "PrivateBuild", "\0"
+            VALUE "ProductName", "SmartFitter Module\0"
+            VALUE "ProductVersion", "2, 0, 0, 1\0"
+            VALUE "SpecialBuild", "\0"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x409, 1200
+    END
+END
+
+#endif    // !_MAC
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// REGISTRY
+//
+
+IDR_SMARTFITTER         REGISTRY DISCARDABLE    "SmartFitterClass.rgs"
+#endif    // Italian (Italy) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+1 TYPELIB "SmartFitter.tlb"
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+

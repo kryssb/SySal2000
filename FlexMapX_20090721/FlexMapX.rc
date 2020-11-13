@@ -1,0 +1,339 @@
+// Microsoft Visual C++ generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// English (U.S.) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
+#pragma code_page(1252)
+#endif //_WIN32
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE 
+BEGIN
+    "\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION 1,0,0,1
+ PRODUCTVERSION 1,0,0,1
+ FILEFLAGSMASK 0x3fL
+#ifdef _DEBUG
+ FILEFLAGS 0x1L
+#else
+ FILEFLAGS 0x0L
+#endif
+ FILEOS 0x4L
+ FILETYPE 0x2L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "040904B0"
+        BEGIN
+            VALUE "FileDescription", "FlexMap Module"
+            VALUE "FileVersion", "1, 0, 0, 1"
+            VALUE "InternalName", "FlexMap"
+            VALUE "LegalCopyright", "Copyright 2000"
+            VALUE "OriginalFilename", "FlexMap.DLL"
+            VALUE "ProductName", "FlexMap Module"
+            VALUE "ProductVersion", "1, 0, 0, 1"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x409, 1200
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// REGISTRY
+//
+
+IDR_FLEXIBLEMAP         REGISTRY                "FlexibleMap.rgs"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDI_ICON32              ICON                    "images\\ico00001.ico"
+IDI_ICON64              ICON                    "images\\icon1.ico"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_EDIT_CONFIG DIALOGEX 0, 0, 292, 358
+STYLE DS_SETFONT | DS_MODALFRAME | DS_CENTER | WS_MINIMIZEBOX | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Edit Config"
+FONT 8, "MS Sans Serif", 0, 0, 0x0
+BEGIN
+    GROUPBOX        "Strip Recognition (mapX:)",IDC_STATIC,5,9,283,81
+    LTEXT           "Strip Width",IDC_STATIC,12,22,78,8
+    EDITTEXT        IDC_EC_STRIPWIDTH,91,20,23,12,ES_AUTOHSCROLL
+    LTEXT           "Scan Transverse Toler.",IDC_STATIC,12,34,78,8
+    EDITTEXT        IDC_EC_SCANTRANSVTOL,91,32,23,12,ES_AUTOHSCROLL
+    LTEXT           "Strip Sampling Distance",IDC_STATIC,12,47,76,8
+    EDITTEXT        IDC_EC_STRIPSAMPLINGDISTANCE,91,44,23,12,ES_AUTOHSCROLL
+    LTEXT           "Max Strip Candidates",IDC_STATIC,12,59,78,8
+    EDITTEXT        IDC_EC_MAXSTRIPCANDIDATES,91,56,23,12,ES_AUTOHSCROLL
+    LTEXT           "&Binning Size",IDC_STATIC,151,20,60,8
+    EDITTEXT        IDC_EC_BINSIZE,242,20,23,12,ES_AUTOHSCROLL
+    LTEXT           "Sample Grey Fraction",IDC_STATIC,151,34,76,8
+    EDITTEXT        IDC_EC_GREYSAMPLE,242,33,23,12,ES_AUTOHSCROLL
+    LTEXT           "Strip &Peak Threshold",IDC_STATIC,151,47,78,8
+    EDITTEXT        IDC_EC_PEAKTHRESHOLD,242,45,23,12,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EC_FIRSTRING,165,57,117,12,ES_AUTOHSCROLL
+    LTEXT           "&FIR ",IDC_STATIC,152,60,12,8
+    GROUPBOX        "Spot  Recognition (mapext:)",IDC_STATIC,6,96,282,90
+    LTEXT           "Diameter",IDC_STATIC,151,108,29,8
+    EDITTEXT        IDC_EC_DIAMETER,223,108,42,12,ES_AUTOHSCROLL
+    LTEXT           "Diameter Toler.",IDC_STATIC,151,120,48,8
+    EDITTEXT        IDC_EC_DIAMETERTOL,223,121,42,12,ES_AUTOHSCROLL
+    LTEXT           "MaxEllipticity",IDC_STATIC,151,132,56,8
+    EDITTEXT        IDC_EC_ECCENTRICITY,223,132,42,12,ES_AUTOHSCROLL
+    LTEXT           "Max Clusters",IDC_STATIC,151,168,57,8
+    EDITTEXT        IDC_EC_MAXCLUSTERS,223,168,42,12,ES_AUTOHSCROLL
+    LTEXT           "Center Toler.",IDC_STATIC,151,144,60,8
+    EDITTEXT        IDC_EC_CENTERTOL,223,144,42,12,ES_AUTOHSCROLL
+    LTEXT           "Vertical Path Length",IDC_STATIC,12,112,66,8
+    EDITTEXT        IDC_EC_FOCUSPATHLENGTH,92,109,30,12,ES_AUTOHSCROLL
+    LTEXT           "Vertical Speed",IDC_STATIC,12,123,66,8
+    EDITTEXT        IDC_EC_FOCUSSPEED,92,120,30,12,ES_AUTOHSCROLL
+    LTEXT           "Vision Processor Program",IDC_STATIC,151,156,80,8
+    EDITTEXT        IDC_EC_VPPROGRAM,235,156,30,12,ES_AUTOHSCROLL
+    GROUPBOX        "Stage Control",IDC_STATIC,6,192,282,80
+    LTEXT           "&Z Set Speed",IDC_STATIC,16,206,60,8
+    EDITTEXT        IDC_EC_ZSETSPEED,82,205,31,12,ES_AUTOHSCROLL
+    LTEXT           "&Horz. Tolerance",IDC_STATIC,16,219,60,8
+    EDITTEXT        IDC_EC_HORZTOL,82,218,31,12,ES_AUTOHSCROLL
+    LTEXT           "&Vert. Tolerance",IDC_STATIC,16,232,60,8
+    EDITTEXT        IDC_EC_VERTTOL,82,231,31,12,ES_AUTOHSCROLL
+    LTEXT           "Settling &Time",IDC_STATIC,16,246,60,8
+    EDITTEXT        IDC_EC_SETTLINGTIME,82,244,31,12,ES_AUTOHSCROLL
+    LTEXT           "Time O&ut",IDC_STATIC,16,258,60,8
+    EDITTEXT        IDC_EC_TIMEOUT,82,257,31,12,ES_AUTOHSCROLL
+    LTEXT           "&Long Dist. Speed",IDC_STATIC,151,206,60,8
+    EDITTEXT        IDC_EC_LONGDISTSPEED,223,205,32,12,ES_AUTOHSCROLL
+    LTEXT           "Long Dist. &Accel.",IDC_STATIC,151,219,60,8
+    EDITTEXT        IDC_EC_LONGDISTACC,223,218,32,12,ES_AUTOHSCROLL
+    LTEXT           "S&hort Dist. Speed",IDC_STATIC,151,232,60,8
+    EDITTEXT        IDC_EC_SHORTDISTSPEED,223,231,32,12,ES_AUTOHSCROLL
+    LTEXT           "Sho&rt Dist. Accel.",IDC_STATIC,151,245,60,8
+    EDITTEXT        IDC_EC_SHORTDISTACC,223,244,32,12,ES_AUTOHSCROLL
+    LTEXT           "&Vert. Accel.",IDC_STATIC,151,258,60,8
+    EDITTEXT        IDC_EC_VERTACC,223,257,32,12,ES_AUTOHSCROLL
+    CONTROL         "Search &First Mark",IDC_EC_SEARCHFIRSTMARK,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,6,282,93,8
+    CONTROL         "Sheet is rotated by &180°",IDC_EC_SHEETROTATEDBY180,
+                    "Button",BS_AUTOCHECKBOX | WS_DISABLED | WS_TABSTOP,166,294,96,10
+    LTEXT           "Total Thickness",IDC_STATIC,166,282,54,12
+    EDITTEXT        IDC_EC_TOTALTHICKNESS,234,282,30,12,ES_AUTOHSCROLL
+    LTEXT           "Acq. Frame Rate",IDC_STATIC,12,134,66,8
+    EDITTEXT        IDC_EC_FRAMERATE,92,132,30,12,ES_AUTOHSCROLL
+    PUSHBUTTON      "&Recovery File",IDC_EC_SELRECOVERYFILE,7,322,64,12
+    EDITTEXT        IDC_EC_RECOVERYFILE,80,322,172,12,ES_AUTOHSCROLL
+    DEFPUSHBUTTON   "OK",IDOK,6,341,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,202,341,50,14
+    CONTROL         "ForceLateralMark (with mapext:)",IDC_EC_FORCELATERALMARKFINDING,
+                    "Button",BS_AUTOCHECKBOX | WS_TABSTOP,6,294,114,10
+    CONTROL         "Pause if 'clone' is not found",IDC_EC_PAUSENOTFOUNDCLONE,
+                    "Button",BS_AUTOCHECKBOX | WS_DISABLED | WS_TABSTOP,12,72,102,10
+    LTEXT           "Image Processing is not double buffered. Acq. Frame Rate MUST be lower than the real camera rate\r\nNlayers=Length*FrameRate/Speed",IDC_STATIC,12,146,114,36
+    LTEXT           "µm",IDC_STATIC,119,22,13,8
+    LTEXT           "µm",IDC_STATIC,119,34,13,8
+    LTEXT           "µm",IDC_STATIC,119,46,13,8
+    LTEXT           "µm",IDC_STATIC,125,111,13,8
+    LTEXT           "µm/s",IDC_STATIC,125,123,19,8
+    LTEXT           "fps",IDC_STATIC,125,135,13,8
+    LTEXT           "µm",IDC_STATIC,267,110,13,8
+    LTEXT           "µm",IDC_STATIC,267,122,13,8
+    LTEXT           "µm",IDC_STATIC,267,145,13,8
+    LTEXT           "µm/s",IDC_STATIC,118,206,22,8
+    LTEXT           "µm",IDC_STATIC,118,219,13,8
+    LTEXT           "µm",IDC_STATIC,118,232,13,8
+    LTEXT           "ms",IDC_STATIC,118,245,13,8
+    LTEXT           "ms",IDC_STATIC,118,258,13,8
+    LTEXT           "µm/s",IDC_STATIC,259,206,23,8
+    LTEXT           "µm/s²",IDC_STATIC,259,219,23,8
+    LTEXT           "µm/s",IDC_STATIC,259,232,23,8
+    LTEXT           "µm/s²",IDC_STATIC,259,245,23,8
+    LTEXT           "µm/s²",IDC_STATIC,259,258,23,8
+    LTEXT           "µm",IDC_STATIC,266,283,13,8
+END
+
+IDD_INIT_MAP DIALOGEX 0, 0, 178, 198
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION
+CAPTION "Map Initialization"
+FONT 8, "MS Sans Serif", 0, 0, 0x1
+BEGIN
+    EDITTEXT        IDC_IM_ACTION,7,7,164,68,ES_CENTER | ES_MULTILINE | ES_AUTOHSCROLL | ES_READONLY,WS_EX_DLGMODALFRAME
+    LTEXT           "ID",IDC_STATIC,8,100,30,11
+    EDITTEXT        IDC_IM_NEXTMARKID,50,98,21,13,ES_RIGHT | ES_AUTOHSCROLL | ES_READONLY
+    LTEXT           "Type",IDC_STATIC,8,114,37,11
+    EDITTEXT        IDC_IM_NEXTMARKTYPE,50,113,21,13,ES_RIGHT | ES_AUTOHSCROLL | ES_READONLY
+    LTEXT           "Side",IDC_STATIC,8,129,37,11
+    EDITTEXT        IDC_IM_NEXTMARKSIDE,50,127,21,13,ES_RIGHT | ES_AUTOHSCROLL | ES_READONLY
+    LTEXT           "Status",IDC_STATIC,8,145,27,11
+    EDITTEXT        IDC_IM_NEXTMARKSTATUS,37,144,78,13,ES_RIGHT | ES_AUTOHSCROLL | ES_READONLY
+    RTEXT           "Mapped X",IDC_STATIC,76,85,54,11
+    EDITTEXT        IDC_IM_MAPPEDX,134,83,37,13,ES_RIGHT | ES_AUTOHSCROLL | ES_READONLY
+    RTEXT           "Mapped Y",IDC_STATIC,76,100,54,11
+    EDITTEXT        IDC_IM_MAPPEDY,134,98,37,13,ES_RIGHT | ES_AUTOHSCROLL | ES_READONLY
+    RTEXT           "Stage X",IDC_IM_STATICX,76,115,54,11
+    EDITTEXT        IDC_IM_STAGEX,134,113,37,13,ES_RIGHT | ES_AUTOHSCROLL | ES_READONLY
+    RTEXT           "Stage Y",IDC_IM_STATICY,76,129,54,11
+    EDITTEXT        IDC_IM_STAGEY,134,128,37,13,ES_RIGHT | ES_AUTOHSCROLL | ES_READONLY
+    PUSHBUTTON      "Pre&vious",IDC_IM_PREV,91,179,38,12,WS_DISABLED
+    PUSHBUTTON      "&Next",IDC_IM_NEXT,133,179,38,12,WS_DISABLED
+    PUSHBUTTON      "Set &Z",IDC_IM_SETZ,91,164,38,12,WS_DISABLED
+    PUSHBUTTON      "&Pause",IDC_IM_PAUSE,7,179,38,12,WS_DISABLED
+    PUSHBUTTON      "Set &Found",IDC_IM_SETFOUND,117,144,54,12,WS_DISABLED
+    PUSHBUTTON      "E&xit",IDC_IM_EXIT,133,164,38,12,WS_DISABLED
+    PUSHBUTTON      "Set &X   |  ",IDC_IM_SETX,7,164,38,12,WS_DISABLED
+    PUSHBUTTON      "Set &Y  --- ",IDC_IM_SETY,49,164,38,12,WS_DISABLED
+END
+
+IDD_MAPMONITOR DIALOGEX 0, 0, 274, 228
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_VISIBLE | WS_CAPTION
+EXSTYLE WS_EX_TOOLWINDOW
+CAPTION "FlexMapX Monitor"
+FONT 8, "MS Sans Serif", 0, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "&Hide",IDC_MN_HIDE,224,211,42,12
+    DEFPUSHBUTTON   "&Save image",IDC_MN_BTN_SAVEIMAGE,122,211,48,12
+    EDITTEXT        IDC_MN_BEST_TRANSFORM,122,124,145,50,ES_MULTILINE | ES_AUTOVSCROLL | ES_READONLY | ES_WANTRETURN
+    LTEXT           "Stage -> Nominal",IDC_STATIC,122,114,90,9
+    EDITTEXT        IDC_MN_REPORT,122,15,145,75,ES_MULTILINE | ES_AUTOVSCROLL | ES_AUTOHSCROLL | ES_READONLY | ES_WANTRETURN
+    LTEXT           "Mark Finding Report",IDC_STATIC,122,6,96,8
+    PUSHBUTTON      "Save Map",IDC_MN_BTN_SAVEMAP,122,91,48,12
+    CONTROL         "",IDC_MN_IMAGE,"Static",SS_ETCHEDFRAME | NOT WS_VISIBLE,5,5,102,208
+    SCROLLBAR       IDC_MN_SCROLLBAR_HOR,5,213,102,10
+    SCROLLBAR       IDC_MN_SCROLLBAR_VER,106,5,12,208,SBS_VERT
+END
+
+IDD_MAIN DIALOGEX 0, 0, 243, 170
+STYLE DS_SETFONT | DS_MODALFRAME | WS_CAPTION
+CAPTION "Map Initialization"
+FONT 8, "MS Sans Serif", 0, 0, 0x0
+BEGIN
+    GROUPBOX        "Default Patterns",IDC_STATIC,6,7,108,87
+    CONTROL         "Identical Transformation",IDC_MAIN_RADIO1,"Button",BS_AUTORADIOBUTTON,12,30,88,10
+    CONTROL         "X-Rays CS Brick",IDC_MAIN_RADIO2,"Button",BS_AUTORADIOBUTTON,12,42,65,10
+    CONTROL         "Optical Pattern",IDC_MAIN_RADIO3,"Button",BS_AUTORADIOBUTTON,12,54,60,10
+    CONTROL         "X-Rays Lateral Marks 2",IDC_MAIN_RADIO4,"Button",BS_AUTORADIOBUTTON,12,66,102,10
+    LTEXT           "Initialization String",IDC_STATIC,5,96,84,8
+    DEFPUSHBUTTON   "&Load File",IDC_MAIN_SELPATH,165,84,68,14
+    DEFPUSHBUTTON   "OK",IDOK,6,148,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,183,148,50,14
+    CONTROL         "Automatic Search &First Mark",IDC_MAIN_SEARCHFIRSTMARK,
+                    "Button",BS_AUTOCHECKBOX | WS_TABSTOP,126,24,107,8
+    CONTROL         "Sheet is rotated by &180°",IDC_MAIN_SHEETROTATEDBY180,
+                    "Button",BS_AUTOCHECKBOX | WS_DISABLED | WS_TABSTOP,126,37,107,10
+    CONTROL         "Force_Lateral _Mark_Finding",IDC_MAIN_FORCELATERAL,
+                    "Button",BS_AUTOCHECKBOX | WS_TABSTOP,126,53,107,10
+    PUSHBUTTON      "Edit Config",IDC_MAIN_EDITCONFIG,174,6,50,14,WS_DISABLED
+    CONTROL         "Corners ",IDC_MAIN_RADIO0,"Button",BS_AUTORADIOBUTTON | WS_GROUP,12,18,88,10
+    EDITTEXT        IDC_MAIN_INITSTRING,6,106,227,39,ES_MULTILINE | ES_AUTOVSCROLL
+    CONTROL         "X-Rays Lateral Marks 4",IDC_MAIN_RADIO5,"Button",BS_AUTORADIOBUTTON,12,78,88,10
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO 
+BEGIN
+    IDD_EDIT_CONFIG, DIALOG
+    BEGIN
+        LEFTMARGIN, 5
+        RIGHTMARGIN, 285
+        TOPMARGIN, 6
+        BOTTOMMARGIN, 349
+    END
+
+    IDD_MAPMONITOR, DIALOG
+    BEGIN
+        RIGHTMARGIN, 268
+    END
+
+    IDD_MAIN, DIALOG
+    BEGIN
+        RIGHTMARGIN, 233
+        BOTTOMMARGIN, 162
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE 
+BEGIN
+    IDS_PROJNAME            "FlexMap2"
+END
+
+#endif    // English (U.S.) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+

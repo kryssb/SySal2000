@@ -1,0 +1,333 @@
+//Microsoft Developer Studio generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// Neutral (Default) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_NEUD)
+#ifdef _WIN32
+LANGUAGE LANG_NEUTRAL, SUBLANG_DEFAULT
+#pragma code_page(1252)
+#endif //_WIN32
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// REGISTRY
+//
+
+IDR_METEORII            REGISTRY DISCARDABLE    "MeteorII.rgs"
+#endif    // Neutral (Default) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+/////////////////////////////////////////////////////////////////////////////
+// English (U.S.) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
+#pragma code_page(1252)
+#endif //_WIN32
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDI_ICON64              ICON    DISCARDABLE     "icon64.ico"
+IDI_ICON32              ICON    DISCARDABLE     "icon32.ico"
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+3 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_EDIT_CONFIG DIALOG DISCARDABLE  0, 0, 404, 202
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Edit Configuration for MeteorII"
+FONT 8, "MS Sans Serif"
+BEGIN
+    CONTROL         "Tab2",IDC_PROG_TAB,"SysTabControl32",0x0,13,17,156,129
+    GROUPBOX        "Programs",IDC_STATIC,7,7,168,164
+    GROUPBOX        "Kernel",IDC_STATIC,19,36,142,60
+    LTEXT           "Width",IDC_STATIC,25,47,31,10
+    COMBOBOX        IDC_PROG_KWIDTH,61,45,20,96,CBS_DROPDOWNLIST | CBS_SORT | 
+                    WS_VSCROLL | WS_TABSTOP
+    LTEXT           "Height",IDC_STATIC,25,58,31,10
+    COMBOBOX        IDC_PROG_KHEIGHT,61,57,20,96,CBS_DROPDOWNLIST | CBS_SORT | 
+                    WS_VSCROLL | WS_TABSTOP
+    EDITTEXT        IDC_PROG_K00,86,45,17,12,ES_AUTOHSCROLL
+    EDITTEXT        IDC_PROG_K01,104,45,17,12,ES_AUTOHSCROLL
+    EDITTEXT        IDC_PROG_K02,121,45,17,12,ES_AUTOHSCROLL
+    EDITTEXT        IDC_PROG_K03,139,45,17,12,ES_AUTOHSCROLL
+    EDITTEXT        IDC_PROG_K10,86,57,17,12,ES_AUTOHSCROLL
+    EDITTEXT        IDC_PROG_K11,104,57,17,12,ES_AUTOHSCROLL
+    EDITTEXT        IDC_PROG_K12,121,57,17,12,ES_AUTOHSCROLL
+    EDITTEXT        IDC_PROG_K13,139,57,17,12,ES_AUTOHSCROLL
+    EDITTEXT        IDC_PROG_K20,86,69,17,12,ES_AUTOHSCROLL
+    EDITTEXT        IDC_PROG_K21,104,69,17,12,ES_AUTOHSCROLL
+    EDITTEXT        IDC_PROG_K22,121,69,17,12,ES_AUTOHSCROLL
+    EDITTEXT        IDC_PROG_K23,139,69,17,12,ES_AUTOHSCROLL
+    EDITTEXT        IDC_PROG_K30,86,81,17,12,ES_AUTOHSCROLL
+    EDITTEXT        IDC_PROG_K31,104,81,17,12,ES_AUTOHSCROLL
+    EDITTEXT        IDC_PROG_K32,121,81,17,12,ES_AUTOHSCROLL
+    EDITTEXT        IDC_PROG_K33,139,81,17,12,ES_AUTOHSCROLL
+    LTEXT           "Cutoff",IDC_STATIC,20,100,25,10
+    EDITTEXT        IDC_PROG_CUTOFF,55,99,25,12,ES_AUTOHSCROLL
+    LTEXT           "Max Processors",IDC_STATIC,83,100,51,10
+    EDITTEXT        IDC_PROG_MAXPROCESSORS,143,99,17,12,ES_AUTOHSCROLL
+    LTEXT           "X Offset",IDC_STATIC,20,115,29,10
+    EDITTEXT        IDC_PROG_OFFX,55,114,25,12,ES_AUTOHSCROLL
+    LTEXT           "Window Width",IDC_STATIC,84,115,45,10
+    EDITTEXT        IDC_PROG_WINWIDTH,135,114,25,12,ES_AUTOHSCROLL
+    LTEXT           "Y Offset",IDC_STATIC,20,127,29,10
+    EDITTEXT        IDC_PROG_OFFY,55,126,25,12,ES_AUTOHSCROLL
+    LTEXT           "Window Height",IDC_STATIC,84,127,50,10
+    EDITTEXT        IDC_PROG_WINHEIGHT,135,126,25,12,ES_AUTOHSCROLL
+    PUSHBUTTON      "&New",IDC_PROGRAM_NEW,13,151,33,13
+    PUSHBUTTON      "&Remove",IDC_PROGRAM_REMOVE,49,151,33,13
+    GROUPBOX        "Extended Operations",IDC_STATIC,180,7,217,164
+    LTEXT           "Image Region Copy",IDC_XOP_COPY_TITLE,189,20,69,11
+    DEFPUSHBUTTON   "OK",IDOK,7,181,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,347,181,50,14
+    CONTROL         "List1",IDC_XOP_COPY_LIST,"SysListView32",LVS_REPORT | 
+                    LVS_SINGLESEL | WS_BORDER | WS_TABSTOP,190,36,197,80
+    LTEXT           "Source (L, T, W, H)",IDC_XOP_COPY_SRC,190,122,66,10
+    EDITTEXT        IDC_XOP_COPY_SRC_L,265,121,29,12,ES_AUTOHSCROLL
+    EDITTEXT        IDC_XOP_COPY_SRC_T,296,121,29,12,ES_AUTOHSCROLL
+    EDITTEXT        IDC_XOP_COPY_SRC_W,327,121,29,12,ES_AUTOHSCROLL
+    EDITTEXT        IDC_XOP_COPY_SRC_H,358,121,29,12,ES_AUTOHSCROLL
+    LTEXT           "Dest (L, T, W, H)",IDC_XOP_COPY_DEST,190,136,66,10
+    EDITTEXT        IDC_XOP_COPY_DEST_L,265,135,29,12,ES_AUTOHSCROLL
+    EDITTEXT        IDC_XOP_COPY_DEST_T,296,135,29,12,ES_AUTOHSCROLL
+    EDITTEXT        IDC_XOP_COPY_DEST_W,327,135,29,12,ES_AUTOHSCROLL
+    EDITTEXT        IDC_XOP_COPY_DEST_H,358,135,29,12,ES_AUTOHSCROLL
+    PUSHBUTTON      "&Add",IDC_XOP_COPY_ADD,248,152,33,13
+    PUSHBUTTON      "&Set",IDC_XOP_COPY_SET,284,152,33,13
+    PUSHBUTTON      "&Copy",IDC_XOP_COPY_COPY,319,152,33,13
+    PUSHBUTTON      "&Delete",IDC_XOP_COPY_DEL,354,152,33,13
+    DEFPUSHBUTTON   "&Test",IDC_EC_TEST,60,181,50,14
+END
+
+IDD_TEST_CONFIG DIALOG DISCARDABLE  0, 0, 262, 97
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Test MeteorII Configuration"
+FONT 8, "MS Sans Serif"
+BEGIN
+    PUSHBUTTON      "E&xit",IDCANCEL,205,76,50,14
+    LTEXT           "Active Program",IDC_STATIC,7,7,62,10
+    COMBOBOX        IDC_TS_ACTIVEPROGRAM,75,7,30,83,CBS_DROPDOWN | 
+                    WS_VSCROLL | WS_TABSTOP
+    PUSHBUTTON      "&Find Clusters",IDC_TS_FINDCLUSTERS,7,24,52,13
+    PUSHBUTTON      "Dump &Clusters",IDC_TS_DUMPCLUSTERS,7,40,52,13
+    PUSHBUTTON      "...",IDC_TS_SELCLUSTERFILE,242,40,13,13
+    EDITTEXT        IDC_TS_CLUSTERFILE,63,40,176,13,ES_AUTOHSCROLL
+    LTEXT           "Found 0 Clusters",IDC_TS_FOUND,64,26,84,11
+    PUSHBUTTON      "Dump &Image",IDC_TS_DUMPIMAGE,7,56,52,13
+    PUSHBUTTON      "...",IDC_TS_SELIMAGEFILE,242,56,13,13
+    EDITTEXT        IDC_TS_IMAGEFILE,63,56,176,13,ES_AUTOHSCROLL
+    LTEXT           "Max Clusters",IDC_STATIC,151,26,50,12
+    EDITTEXT        IDC_TS_MAXCLUSTERS,204,24,35,13,ES_AUTOHSCROLL
+    CONTROL         "&Show Clusters",IDC_TS_SHOWCLUSTERS,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,7,78,87,12
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO DISCARDABLE 
+BEGIN
+    IDD_EDIT_CONFIG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 397
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 195
+    END
+
+    IDD_TEST_CONFIG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 255
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 90
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog Info
+//
+
+IDD_EDIT_CONFIG DLGINIT
+BEGIN
+    IDC_PROG_KWIDTH, 0x403, 2, 0
+0x0031, 
+    IDC_PROG_KWIDTH, 0x403, 2, 0
+0x0032, 
+    IDC_PROG_KWIDTH, 0x403, 2, 0
+0x0033, 
+    IDC_PROG_KWIDTH, 0x403, 2, 0
+0x0034, 
+    IDC_PROG_KWIDTH, 0x403, 2, 0
+0x0035, 
+    IDC_PROG_KWIDTH, 0x403, 2, 0
+0x0036, 
+    IDC_PROG_KWIDTH, 0x403, 2, 0
+0x0037, 
+    IDC_PROG_KWIDTH, 0x403, 2, 0
+0x0038, 
+    IDC_PROG_KHEIGHT, 0x403, 2, 0
+0x0031, 
+    IDC_PROG_KHEIGHT, 0x403, 2, 0
+0x0032, 
+    IDC_PROG_KHEIGHT, 0x403, 2, 0
+0x0033, 
+    IDC_PROG_KHEIGHT, 0x403, 2, 0
+0x0034, 
+    IDC_PROG_KHEIGHT, 0x403, 2, 0
+0x0035, 
+    IDC_PROG_KHEIGHT, 0x403, 2, 0
+0x0036, 
+    IDC_PROG_KHEIGHT, 0x403, 2, 0
+0x0037, 
+    IDC_PROG_KHEIGHT, 0x403, 2, 0
+0x0038, 
+    0
+END
+
+#endif    // English (U.S.) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+/////////////////////////////////////////////////////////////////////////////
+// Italian (Italy) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ITA)
+#ifdef _WIN32
+LANGUAGE LANG_ITALIAN, SUBLANG_ITALIAN
+#pragma code_page(1252)
+#endif //_WIN32
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+#ifndef _MAC
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION 1,0,0,1
+ PRODUCTVERSION 1,0,0,1
+ FILEFLAGSMASK 0x3fL
+#ifdef _DEBUG
+ FILEFLAGS 0x1L
+#else
+ FILEFLAGS 0x0L
+#endif
+ FILEOS 0x4L
+ FILETYPE 0x2L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "040904B0"
+        BEGIN
+            VALUE "CompanyName", "\0"
+            VALUE "FileDescription", "MeteorII Module\0"
+            VALUE "FileVersion", "1, 0, 0, 1\0"
+            VALUE "InternalName", "MeteorII\0"
+            VALUE "LegalCopyright", "Copyright 2002\0"
+            VALUE "OriginalFilename", "MeteorII.dll\0"
+            VALUE "ProductName", "MeteorII Module\0"
+            VALUE "ProductVersion", "1, 0, 0, 1\0"
+            VALUE "OLESelfRegister", "\0"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x409, 1200
+    END
+END
+
+#endif    // !_MAC
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_PROJNAME            "MeteorII"
+END
+
+#endif    // Italian (Italy) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+

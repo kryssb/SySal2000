@@ -1,0 +1,25 @@
+HKCR
+{
+	SySalObj.SySalObject.1 = s 'SySalObject Class'
+	{
+		CLSID = s '{C022EEAE-748A-11D3-A47B-E89C0BCE9720}'
+	}
+	SySalObj.SySalObject = s 'SySalObject Class'
+	{
+		CLSID = s '{C022EEAE-748A-11D3-A47B-E89C0BCE9720}'
+		CurVer = s 'SySalObj.SySalObject.1'
+	}
+	NoRemove CLSID
+	{
+		ForceRemove {C022EEAE-748A-11D3-A47B-E89C0BCE9720} = s 'SySalObject Class'
+		{
+			ProgID = s 'SySalObj.SySalObject.1'
+			VersionIndependentProgID = s 'SySalObj.SySalObject'
+			InprocServer32 = s '%MODULE%'
+			{
+				val ThreadingModel = s 'Free'
+			}
+			'TypeLib' = s '{C022EEA2-748A-11D3-A47B-E89C0BCE9720}'
+		}
+	}
+}

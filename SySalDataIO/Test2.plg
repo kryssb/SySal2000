@@ -1,0 +1,43 @@
+<html>
+<body>
+<pre>
+<h1>Build Log</h1>
+<h3>
+--------------------Configuration: Test2 - Win32 Debug--------------------
+</h3>
+<h3>Command Lines</h3>
+Creating temporary file "C:\DOCUME~1\Kryss\LOCALS~1\Temp\RSP51.tmp" with contents
+[
+/nologo /MDd /W3 /Gm /GX /ZI /Od /I "..\..\Common" /D "WIN32" /D "_DEBUG" /D "_WINDOWS" /D "_AFXDLL" /D "_MBCS" /Fp"Debug/Test2.pch" /Yu"stdafx.h" /Fo"Debug/" /Fd"Debug/" /FD /GZ /c 
+"D:\SySal2\SySalDataIO\Test2\Test2Dlg.cpp"
+]
+Creating command line "cl.exe @C:\DOCUME~1\Kryss\LOCALS~1\Temp\RSP51.tmp" 
+Creating command line "link.exe /nologo /subsystem:windows /incremental:yes /pdb:"Debug/Test2.pdb" /debug /machine:I386 /out:"Debug/Test2.exe" /pdbtype:sept  .\Debug\StdAfx.obj .\Debug\SySalDataIO_i.obj .\Debug\Test2.obj .\Debug\Test2Dlg.obj .\Debug\Test2.res "
+<h3>Output Window</h3>
+Compiling...
+Test2Dlg.cpp
+D:\SySal2\SySalDataIO\Test2\Test2Dlg.cpp(220) : warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+D:\SySal2\SySalDataIO\Test2\Test2Dlg.cpp(221) : warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+D:\SySal2\SySalDataIO\Test2\Test2Dlg.cpp(315) : warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+D:\SySal2\SySalDataIO\Test2\Test2Dlg.cpp(316) : warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+D:\SySal2\SySalDataIO\Test2\Test2Dlg.cpp(347) : warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+D:\SySal2\SySalDataIO\Test2\Test2Dlg.cpp(351) : warning C4018: '<' : signed/unsigned mismatch
+D:\SySal2\SySalDataIO\Test2\Test2Dlg.cpp(353) : warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+D:\SySal2\SySalDataIO\Test2\Test2Dlg.cpp(354) : warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+D:\SySal2\SySalDataIO\Test2\Test2Dlg.cpp(471) : warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+D:\SySal2\SySalDataIO\Test2\Test2Dlg.cpp(472) : warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+D:\SySal2\SySalDataIO\Test2\Test2Dlg.cpp(566) : warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+D:\SySal2\SySalDataIO\Test2\Test2Dlg.cpp(567) : warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+D:\SySal2\SySalDataIO\Test2\Test2Dlg.cpp(596) : warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+D:\SySal2\SySalDataIO\Test2\Test2Dlg.cpp(600) : warning C4018: '<' : signed/unsigned mismatch
+D:\SySal2\SySalDataIO\Test2\Test2Dlg.cpp(604) : warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+D:\SySal2\SySalDataIO\Test2\Test2Dlg.cpp(605) : warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+Linking...
+
+
+
+<h3>Results</h3>
+Test2.exe - 0 error(s), 16 warning(s)
+</pre>
+</body>
+</html>

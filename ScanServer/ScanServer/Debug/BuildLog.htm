@@ -1,0 +1,79 @@
+<html>
+<head>
+<META HTTP-EQUIV="Content-Type" content="text/html; charset=Windows-1252">
+</head>
+<body>
+<pre>
+<table width=100% bgcolor=#CFCFE5><tr> <td> <font face=arial size=+3>
+Build Log
+</font></table><table width=* cellspacing=0 cellpadding=0><tr><td width=0 bgcolor=#EDEDF5>&nbsp;</td><td width=0 bgcolor=#FFFFFF>&nbsp;</td><td width=*><pre>
+<h3>------- Build started: Project: ScanServer, Configuration: Debug|Win32 -------
+</h3>
+</pre></table><table width=100% bgcolor=#DFDFE5><tr><td><font face=arial size=+2>
+Command Lines
+</font></table><table width=* cellspacing=0 cellpadding=0><tr><td width=0 bgcolor=#EDEDF5>&nbsp;</td><td width=0 bgcolor=#FFFFFF>&nbsp;</td><td width=*><pre>Creating temporary file "d:\SySal2\ScanServer\ScanServer\Debug\RSP000009.rsp" with contents
+[
+/Od /I "..\..\Common" /I "..\\" /AI "\\micsysrv2.scanning2.sa.infn.it\sysalnet$\\" /AI "Debug" /D "USE_MIDL_INCOMPATIBLE_STRUCTS" /D "_AFXDLL" /D "_MBCS" /FD /EHsc /MDd /GS /Zc:wchar_t /Yu"stdafx.h" /Fp"Debug/ScanServer.pch" /Fo"Debug/" /Fd"Debug/vc70.pdb" /W3 /c /Wp64 /Z7 /clr /TP
+.\ScanServerNET.cpp
+.\ScanServerDlg.cpp
+.\ScanServer.cpp
+]
+Creating command line "cl.exe @d:\SySal2\ScanServer\ScanServer\Debug\RSP000009.rsp /nologo"
+Creating temporary file "d:\SySal2\ScanServer\ScanServer\Debug\RSP00000A.rsp" with contents
+[
+/Od /I "..\..\Common" /I "..\\" /AI "\\micsysrv2.scanning2.sa.infn.it\sysalnet$\\" /AI "Debug" /D "USE_MIDL_INCOMPATIBLE_STRUCTS" /D "_AFXDLL" /D "_MBCS" /FD /EHsc /MDd /GS /Zc:wchar_t /Yc"stdafx.h" /Fp"Debug/ScanServer.pch" /Fo"Debug/" /Fd"Debug/vc70.pdb" /W3 /c /Wp64 /Z7 /clr /TP
+.\stdafx.cpp
+]
+Creating command line "cl.exe @d:\SySal2\ScanServer\ScanServer\Debug\RSP00000A.rsp /nologo"
+Creating command line "rc.exe /d "_DEBUG" /d "_AFXDLL" /l 0x409 /I "Debug" /fo"Debug/ScanServer.res" .\ScanServer.rc"
+Creating temporary file "d:\SySal2\ScanServer\ScanServer\Debug\RSP00000B.rsp" with contents
+[
+/OUT:"Debug/ScanServer.exe" /NOLOGO /DEBUG /PDB:"Debug/ScanServer.pdb" /SUBSYSTEM:WINDOWS /MACHINE:X86 /FIXED:No
+.\Debug\ScanServer.obj
+.\Debug\ScanServerDlg.obj
+.\Debug\ScanServerNET.obj
+.\Debug\stdafx.obj
+.\Debug\ScanServer.res
+]
+Creating command line "link.exe @d:\SySal2\ScanServer\ScanServer\Debug\RSP00000B.rsp"
+</pre></table><table width=100% bgcolor=#DFDFE5><tr><td><font face=arial size=+2>
+Output Window
+</font></table><table width=* cellspacing=0 cellpadding=0><tr><td width=0 bgcolor=#EDEDF5>&nbsp;</td><td width=0 bgcolor=#FFFFFF>&nbsp;</td><td width=*><pre>Compiling...
+stdafx.cpp
+Compiling...
+ScanServerNET.cpp
+ScanServerNET.cpp(53) : warning C4311: 'type cast' : pointer truncation from 'HANDLE' to 'HSySalHANDLE'
+ScanServerNET.cpp(74) : warning C4312: 'type cast' : conversion from 'HSySalHANDLE' to 'HANDLE' of greater size
+ScanServerNET.cpp(94) : warning C4312: 'type cast' : conversion from 'HSySalHANDLE' to 'HANDLE' of greater size
+ScanServerNET.cpp(96) : warning C4312: 'type cast' : conversion from 'HSySalHANDLE' to 'HANDLE' of greater size
+ScanServerNET.cpp(143) : warning C4244: '=' : conversion from '__int64' to 'DWORD', possible loss of data
+ScanServerNET.cpp(161) : warning C4244: '=' : conversion from 'wchar_t' to 'char', possible loss of data
+ScanServerNET.cpp(205) : warning C4244: '=' : conversion from '__int64' to 'DWORD', possible loss of data
+ScanServerNET.cpp(223) : warning C4244: '=' : conversion from 'wchar_t' to 'char', possible loss of data
+ScanServerNET.cpp(269) : warning C4244: '=' : conversion from '__int64' to 'DWORD', possible loss of data
+ScanServerNET.cpp(270) : warning C4244: '=' : conversion from '__int64' to 'DWORD', possible loss of data
+ScanServerNET.cpp(281) : warning C4244: '=' : conversion from 'wchar_t' to 'char', possible loss of data
+ScanServerNET.cpp(284) : warning C4244: '=' : conversion from 'wchar_t' to 'char', possible loss of data
+ScanServerNET.cpp(438) : warning C4244: '=' : conversion from 'wchar_t' to 'char', possible loss of data
+ScanServerNET.cpp(441) : warning C4244: '=' : conversion from 'wchar_t' to 'char', possible loss of data
+ScanServerNET.cpp(444) : warning C4244: '=' : conversion from 'wchar_t' to 'char', possible loss of data
+ScanServerNET.cpp(483) : warning C4244: '=' : conversion from 'wchar_t' to 'char', possible loss of data
+ScanServerNET.cpp(486) : warning C4244: '=' : conversion from 'wchar_t' to 'char', possible loss of data
+ScanServerNET.cpp(518) : warning C4312: 'type cast' : conversion from 'HSySalHANDLE' to 'HANDLE' of greater size
+ScanServerNET.cpp(520) : warning C4312: 'type cast' : conversion from 'HSySalHANDLE' to 'HANDLE' of greater size
+ScanServerNET.cpp(561) : warning C4390: ';' : empty controlled statement found; is this the intent?
+ScanServerNET.cpp(758) : warning C4312: 'type cast' : conversion from 'HSySalHANDLE' to 'HANDLE' of greater size
+ScanServerNET.cpp(761) : warning C4312: 'type cast' : conversion from 'HSySalHANDLE' to 'HANDLE' of greater size
+ScanServerNET.cpp(855) : warning C4244: '=' : conversion from 'wchar_t' to 'char', possible loss of data
+ScanServerDlg.cpp
+ScanServerDlg.cpp(276) : warning C4018: '>' : signed/unsigned mismatch
+ScanServer.cpp
+Generating Code...
+Compiling resources...
+Linking...
+</pre></table><table width=100% bgcolor=#DFDFE5><tr><td><font face=arial size=+2>
+Results
+</font></table><table width=* cellspacing=0 cellpadding=0><tr><td width=0 bgcolor=#EDEDF5>&nbsp;</td><td width=0 bgcolor=#FFFFFF>&nbsp;</td><td width=*><pre>
+Build log was saved at "file://d:\SySal2\ScanServer\ScanServer\Debug\BuildLog.htm"
+ScanServer - 0 error(s), 24 warning(s)</pre></table><table   width=100% height=20 bgcolor=#CFCFE5><tr><td><font face=arial size=+2>
+</font></table></body></html>

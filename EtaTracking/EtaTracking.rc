@@ -1,0 +1,301 @@
+//Microsoft Developer Studio generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// English (U.S.) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
+#pragma code_page(1252)
+#endif //_WIN32
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "1 TYPELIB ""EtaTracking.tlb""\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+#ifndef _MAC
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION 1,0,0,1
+ PRODUCTVERSION 1,0,0,1
+ FILEFLAGSMASK 0x3fL
+#ifdef _DEBUG
+ FILEFLAGS 0x1L
+#else
+ FILEFLAGS 0x0L
+#endif
+ FILEOS 0x4L
+ FILETYPE 0x2L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "040904B0"
+        BEGIN
+            VALUE "CompanyName", "\0"
+            VALUE "FileDescription", "EtaTracking Module\0"
+            VALUE "FileVersion", "1, 0, 0, 1\0"
+            VALUE "InternalName", "EtaTracking\0"
+            VALUE "LegalCopyright", "Copyright 2000\0"
+            VALUE "OriginalFilename", "EtaTracking.DLL\0"
+            VALUE "ProductName", "EtaTracking Module\0"
+            VALUE "ProductVersion", "1, 0, 0, 1\0"
+            VALUE "OLESelfRegister", "\0"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x409, 1200
+    END
+END
+
+#endif    // !_MAC
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDI_ICON64              ICON    DISCARDABLE     "icon1.ico"
+IDI_ICON32              ICON    DISCARDABLE     "ico00001.ico"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// REGISTRY
+//
+
+IDR_CETATRACKING        REGISTRY DISCARDABLE    "CEtaTracking.rgs"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_MAINSWITCH DIALOG DISCARDABLE  0, 0, 218, 45
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION
+CAPTION "Main Switch"
+FONT 8, "MS Sans Serif"
+BEGIN
+    PUSHBUTTON      "Build &Index",IDC_BUILDINDEX,7,7,66,14
+    PUSHBUTTON      "About this module",IDC_ABOUT,7,24,66,14
+    PUSHBUTTON      "&Add Kinks",IDC_ADDKINKS,76,7,66,14
+    PUSHBUTTON      "E&xit",IDCANCEL,145,24,66,14
+    PUSHBUTTON      "&Check Kinks",IDC_CHECKKINKS,145,7,66,14
+END
+
+IDD_ABOUT DIALOG DISCARDABLE  0, 0, 223, 64
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "About this module"
+FONT 8, "MS Sans Serif"
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,7,43,209,14
+    ICON            IDI_ICON64,IDC_STATIC,7,7,20,20
+    CTEXT           "Eta Tracking",IDC_STATIC,35,7,181,10
+    CTEXT           "2000 by Cristiano Bozza - Salerno Emulsion Group",
+                    IDC_STATIC,35,19,181,13
+END
+
+IDD_INDEXBUILDER DIALOG DISCARDABLE  0, 0, 236, 140
+STYLE DS_MODALFRAME | WS_MINIMIZEBOX | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Index Builder"
+FONT 8, "MS Sans Serif"
+BEGIN
+    PUSHBUTTON      "E&xit",IDCANCEL,179,119,50,14
+    PUSHBUTTON      "&List File",IDC_IB_SELLISTFILE,7,7,55,14
+    EDITTEXT        IDC_IB_LISTFILE,67,7,162,15,ES_AUTOHSCROLL
+    PUSHBUTTON      "&Index File",IDC_IB_SELINDEXFILE,7,24,55,14
+    EDITTEXT        IDC_IB_INDEXFILE,67,24,162,15,ES_AUTOHSCROLL
+    PUSHBUTTON      "&Start",IDC_IB_START,7,119,50,14
+    PUSHBUTTON      "Sto&p",IDC_IB_STOP,60,119,50,14
+    PUSHBUTTON      "&Clear",IDC_IB_CLEARLOG,112,119,50,14
+    GROUPBOX        "Message Log",IDC_STATIC,67,42,162,71,BS_CENTER
+    EDITTEXT        IDC_IB_MESSAGELOG,72,54,151,53,ES_MULTILINE | 
+                    ES_AUTOVSCROLL | ES_AUTOHSCROLL | ES_READONLY
+    LTEXT           "Shrinkage",IDC_STATIC,7,49,36,11
+    EDITTEXT        IDC_IB_SHRINKAGE,47,48,15,12,ES_AUTOHSCROLL
+    LTEXT           "XY Tol",IDC_STATIC,7,62,36,11
+    EDITTEXT        IDC_IB_XYTOL,47,61,15,12,ES_AUTOHSCROLL
+    LTEXT           "Z Tol",IDC_STATIC,7,75,36,11
+    EDITTEXT        IDC_IB_ZTOL,47,74,15,12,ES_AUTOHSCROLL
+    LTEXT           "Files: 0",IDC_FILES,7,92,55,10
+END
+
+IDD_ADDKINKS DIALOG DISCARDABLE  0, 0, 236, 216
+STYLE DS_MODALFRAME | WS_MINIMIZEBOX | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Add Kinks"
+FONT 8, "MS Sans Serif"
+BEGIN
+    PUSHBUTTON      "E&xit",IDCANCEL,179,195,50,14
+    PUSHBUTTON      "&Cluster Batch",IDC_AK_SELCLUSTERBATCH,7,25,55,14
+    EDITTEXT        IDC_AK_CLUSTERBATCH,67,25,162,15,ES_AUTOHSCROLL
+    PUSHBUTTON      "&Index File",IDC_AK_SELINDEXFILE,7,43,55,14
+    EDITTEXT        IDC_AK_INDEXFILE,67,43,162,15,ES_AUTOHSCROLL
+    PUSHBUTTON      "&Start",IDC_AK_START,7,195,50,14
+    PUSHBUTTON      "Sto&p",IDC_AK_STOP,60,195,50,14
+    PUSHBUTTON      "&Clear",IDC_AK_CLEARLOG,112,195,50,14
+    GROUPBOX        "Message Log",IDC_STATIC,66,118,163,72,BS_CENTER
+    EDITTEXT        IDC_AK_MESSAGELOG,72,129,151,54,ES_MULTILINE | 
+                    ES_AUTOVSCROLL | ES_AUTOHSCROLL | ES_READONLY
+    LTEXT           "Shrinkage",IDC_STATIC,7,123,36,11
+    EDITTEXT        IDC_AK_SHRINKAGE,47,122,15,12,ES_AUTOHSCROLL
+    LTEXT           "Files: 0",IDC_AK_FILES,7,136,55,10
+    PUSHBUTTON      "&Kink File",IDC_AK_SELKINKFILE,7,7,55,14
+    EDITTEXT        IDC_AK_KINKFILE,67,7,162,15,ES_AUTOHSCROLL
+    GROUPBOX        "Track Selection Criteria",IDC_STATIC,7,59,222,59
+    CONTROL         "Slope &Neighborhood",IDC_AK_SC_SLOPENEIGHBORHOOD,"Button",
+                    BS_AUTORADIOBUTTON,13,71,80,13
+    CONTROL         "Similar &Angles",IDC_AK_SC_ANGLE,"Button",
+                    BS_AUTORADIOBUTTON,13,83,80,13
+    LTEXT           "Angular acceptance",IDC_STATIC,116,73,69,11
+    EDITTEXT        IDC_AK_SC_ANGULARACCEPTANCE,195,72,26,12,ES_AUTOHSCROLL
+    LTEXT           "Min. points",IDC_STATIC,161,87,41,11
+    EDITTEXT        IDC_AK_SC_MINPOINTS,204,86,17,12,ES_AUTOHSCROLL
+    LTEXT           "Min. length",IDC_STATIC,161,101,41,11
+    EDITTEXT        IDC_AK_SC_MINLENGTH,204,100,17,12,ES_AUTOHSCROLL
+END
+
+IDD_CHECKKINKS DIALOG DISCARDABLE  0, 0, 236, 163
+STYLE DS_MODALFRAME | WS_MINIMIZEBOX | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Check Kinks"
+FONT 8, "MS Sans Serif"
+BEGIN
+    PUSHBUTTON      "&Kink File",IDC_CK_SELKINKFILE,7,7,55,14
+    EDITTEXT        IDC_CK_KINKFILE,67,7,162,15,ES_AUTOHSCROLL
+    PUSHBUTTON      "&TLG Batch",IDC_CK_SELTLGBATCH,7,25,55,14
+    EDITTEXT        IDC_CK_TLGBATCH,67,25,162,15,ES_AUTOHSCROLL
+    PUSHBUTTON      "&Report File",IDC_CK_SELREPORTFILE,7,43,55,14
+    EDITTEXT        IDC_CK_REPORTFILE,67,43,162,15,ES_AUTOHSCROLL
+    LTEXT           "Pos. Tol.",IDC_STATIC,7,67,32,11
+    EDITTEXT        IDC_CK_POSTOL,43,66,21,12,ES_AUTOHSCROLL
+    LTEXT           "Slope Tol.",IDC_STATIC,7,82,32,11
+    EDITTEXT        IDC_CK_SLOPETOL,43,81,21,12,ES_AUTOHSCROLL
+    LTEXT           "Depth Tol.",IDC_STATIC,7,97,32,11
+    EDITTEXT        IDC_CK_DEPTHTOL,43,96,21,12,ES_AUTOHSCROLL
+    LTEXT           "Files: 0",IDC_CK_FILES,7,112,55,10
+    PUSHBUTTON      "&Start",IDC_CK_START,7,142,50,14
+    PUSHBUTTON      "Sto&p",IDC_CK_STOP,60,142,50,14
+    PUSHBUTTON      "&Clear",IDC_CK_CLEARLOG,112,142,50,14
+    PUSHBUTTON      "E&xit",IDCANCEL,179,142,50,14
+    GROUPBOX        "Message Log",IDC_STATIC,66,62,163,72,BS_CENTER
+    EDITTEXT        IDC_CK_MESSAGELOG,72,73,151,54,ES_MULTILINE | 
+                    ES_AUTOVSCROLL | ES_AUTOHSCROLL | ES_READONLY
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO DISCARDABLE 
+BEGIN
+    IDD_MAINSWITCH, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 211
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 38
+    END
+
+    IDD_ABOUT, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 216
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 57
+    END
+
+    IDD_INDEXBUILDER, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 229
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 133
+    END
+
+    IDD_ADDKINKS, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 229
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 209
+    END
+
+    IDD_CHECKKINKS, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 229
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 156
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_PROJNAME            "EtaTracking"
+END
+
+#endif    // English (U.S.) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+1 TYPELIB "EtaTracking.tlb"
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+

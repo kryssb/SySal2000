@@ -1,0 +1,25 @@
+HKCR
+{
+	RemoteStage.RemoteStage.1 = s 'RemoteStage Class'
+	{
+		CLSID = s '{075E1B0E-C472-11D3-A47E-DC1318A51E33}'
+	}
+	RemoteStage.RemoteStage = s 'RemoteStage Class'
+	{
+		CLSID = s '{075E1B0E-C472-11D3-A47E-DC1318A51E33}'
+		CurVer = s 'RemoteStage.RemoteStage.1'
+	}
+	NoRemove CLSID
+	{
+		ForceRemove {075E1B0E-C472-11D3-A47E-DC1318A51E33} = s 'RemoteStage Class'
+		{
+			ProgID = s 'RemoteStage.RemoteStage.1'
+			VersionIndependentProgID = s 'RemoteStage.RemoteStage'
+			InprocServer32 = s '%MODULE%'
+			{
+				val ThreadingModel = s 'Free'
+			}
+			'TypeLib' = s '{075E1B00-C472-11D3-A47E-DC1318A51E33}'
+		}
+	}
+}

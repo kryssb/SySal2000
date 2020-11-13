@@ -1,0 +1,78 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" >
+<HTML>
+	<HEAD>
+		<TITLE>Overview</TITLE>
+		<META content="Microsoft Visual Studio 7.0" name="GENERATOR">
+	</HEAD>
+	<BODY>
+		<P><FONT face="Arial" color="#000066" size="5"><EM>SmartTracker Overview</EM></FONT></P>
+		<FONT face="Arial"><EM><FONT size="4">
+					<HR width="100%" SIZE="2">
+					<P align="justify">
+				</FONT></EM><FONT size="2">SmartTracker is the latest evolution of the SySal 
+				tracking algorithm. It includes all the improvements that have been suggested 
+				along the years by many users.</FONT></P>
+			<P align="justify"><FONT size="2">The basic concept is still to recognize tracks by 
+					means of the quality of alignment. Random associations of grains should be 
+					poorly aligned, whereas good tracks should be regular paths of well aligned 
+					grains. However, since the Z axis (focal axis) is sampled in coarse granularity 
+					(2 µm usually), the uncertainty in the depth position of each grain is much 
+					larger than the <IMG alt="" src="HelpTracking.gif" align="left">transverse 
+					errors (usually of the order of&nbsp;0.3 µm). For almost "vertical" track, a 
+					single alignment tolerance is enough, but as the track becomes more and more 
+					skewed, the uncertainty in Z has dramatic effects on alignment along the 
+					direction of the horizontal projection of the slope; in the transverse 
+					direction, the alignment is still quite good. In the picture, the blue marks 
+					show how much the projected position of a grain can vary as it moves along a 
+					track (grey line) with the sampling layers marked in red. In general, when 
+					searching for grains that are aligned with a track with slope <STRONG>(S<SUB>x</SUB>, 
+						S<SUB>y</SUB>)</STRONG>, and an alignment tolerance as large as <STRONG>a</STRONG>, 
+					and a sampling step between layers as large as <STRONG>d<SUB>z</SUB></STRONG>, 
+					the&nbsp;acceptance area is an ellipse&nbsp;with the&nbsp;major axis oriented 
+					as the projection of the slope, as large as <IMG src="HelpAcceptance.gif" align="absMiddle" Set>, 
+					and the minor axis as large as <STRONG>a</STRONG>.</FONT></P>
+			<P align="justify"><FONT size="2">Testing all possible track slopes would be very slow. 
+					In order to speed up tracking, SmartTracker uses <EM>triggers</EM>. It picks 
+					two grains in different layers, and checks whether there is an aligned grain 
+					within; if so, this is assumed as a sign that the three grains are possibly 
+					part of a track, and then SmartTrack starts looking for other grains in other 
+					layers, by using the initial slope and position suggested by the two grains; 
+					after appending grains, slope and position are properly updated.&nbsp;</FONT><FONT size="2">A 
+					trigger is defined as&nbsp;(L<SUB>u</SUB>, L<SUB>d</SUB>, L<SUB>l</SUB>) where 
+					L<SUB>u</SUB> and L<SUB>d</SUB> are respectively the upper and lower layer 
+					numbers where to pick grains for guessing the initial position and slope, and L<SUB>l</SUB>
+					is a list of layer numbers enclosed within L<SUB>u</SUB> and L<SUB>d</SUB> where 
+					at list one aligned grain must be found in order to start up with track 
+					formation. For example,&nbsp;</FONT><FONT size="2">let's suppose that the user 
+					has set two triggers, which we call T<SUB>1</SUB> and T<SUB>2</SUB>, defined as 
+					follows:</FONT></P>
+			<P align="justify"><FONT size="2">T<SUB>1 </SUB>= (2, 14, (5, 7, 9) )</FONT></P>
+			<P align="justify"><FONT size="2">T<SUB>2 </SUB>= (3, 13, (6, 10) )</FONT></P>
+			<P align="justify"><FONT size="2">Then SmartTracker will begin with T<SUB>1</SUB>, 
+					combine the grains in layers 2 and 14, and for each pair it will look for an 
+					aligned grain in layers 5, 7, and 9; if any of these layers "fires" with an 
+					aligned grain, then SmartTrack will start looking for aligned grains in all 
+					other layers; after examining the layers suggested by T<SUB>1</SUB>, 
+					SmartTracker will use the hint provided by T<SUB>2</SUB>, and repeat the 
+					procedure thoroughly, using layers 3 and 13, and looking for aligned grains in 
+					layers 6 and 10.</FONT></P>
+			<P align="justify"><FONT size="2">When a track hint is found, SmartTracker searches for 
+					aligned grains in all layers, even if for several layers it finds nothing. Only 
+					when all layers for a track have been examined, SmartTracker decides whether to 
+					keep or to reject the track, according to the number of grains it has 
+					collected. We expect vertical tracks to have more grains than wide angle 
+					tracks, because of the shadow effect of grains piling up. The minimum number of 
+					grains depends on the track slope, and it has to be = <STRONG>n<SUB>min</SUB>(S)</STRONG>, 
+					where <STRONG>S</STRONG> is the track slope, and <STRONG>n<SUB>min</SUB></STRONG>
+					is defined by the formula &nbsp;<IMG alt="" src="HelpMinPtsFormula.gif" align="middle">.&nbsp;The 
+					three <STRONG>n</STRONG>s in the formula are three parameters, that can be 
+					fixed by requiring that the curve passes through three points. </FONT>
+			</P>
+			<P align="justify"><FONT size="2">After a track has been formed, and after it has also 
+					passed the test on the minimum number of grains, there is still another filter 
+					to reduce background and fake tracks. Each grain can belong only to one track; 
+					so, if the new track shares some grain with another track, the track with the 
+					smaller number of grains is deleted.</FONT>
+		</FONT></P>
+	</BODY>
+</HTML>

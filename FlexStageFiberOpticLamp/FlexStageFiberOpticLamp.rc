@@ -1,0 +1,295 @@
+//Microsoft Developer Studio generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// English (U.S.) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
+#pragma code_page(1252)
+#endif //_WIN32
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDI_ICON64              ICON    DISCARDABLE     "icon1.ico"
+IDI_ICON32              ICON    DISCARDABLE     "icon32.ico"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_MONITOR DIALOGEX 0, 0, 218, 94
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION
+EXSTYLE WS_EX_TOOLWINDOW
+CAPTION "Stage Monitor"
+FONT 8, "MS Sans Serif", 0, 0, 0x1
+BEGIN
+    LTEXT           "X",IDC_STATIC,7,7,9,11
+    EDITTEXT        IDC_M_XPOS,16,7,33,12,ES_RIGHT | ES_AUTOHSCROLL | 
+                    ES_READONLY
+    LTEXT           "Y",IDC_STATIC,7,20,9,11
+    EDITTEXT        IDC_M_YPOS,16,20,33,12,ES_RIGHT | ES_AUTOHSCROLL | 
+                    ES_READONLY
+    LTEXT           "Z",IDC_STATIC,7,33,9,11
+    EDITTEXT        IDC_M_ZPOS,16,33,33,12,ES_RIGHT | ES_AUTOHSCROLL | 
+                    ES_READONLY
+    CONTROL         "",IDC_M_XRED,"Button",BS_OWNERDRAW | BS_FLAT | 
+                    WS_TABSTOP,53,8,11,10,WS_EX_CLIENTEDGE
+    CONTROL         "",IDC_M_XGREEN,"Button",BS_OWNERDRAW | BS_FLAT | 
+                    WS_TABSTOP,63,8,11,10,WS_EX_CLIENTEDGE
+    CONTROL         "",IDC_M_YRED,"Button",BS_OWNERDRAW | BS_FLAT | 
+                    WS_TABSTOP,53,21,11,10,WS_EX_CLIENTEDGE
+    CONTROL         "",IDC_M_YGREEN,"Button",BS_OWNERDRAW | BS_FLAT | 
+                    WS_TABSTOP,63,21,11,10,WS_EX_CLIENTEDGE
+    CONTROL         "",IDC_M_ZRED,"Button",BS_OWNERDRAW | BS_FLAT | 
+                    WS_TABSTOP,53,34,11,10,WS_EX_CLIENTEDGE
+    CONTROL         "",IDC_M_ZGREEN,"Button",BS_OWNERDRAW | BS_FLAT | 
+                    WS_TABSTOP,63,34,11,10,WS_EX_CLIENTEDGE
+    PUSHBUTTON      "&Hide",IDC_M_HIDE,7,60,67,10
+    PUSHBUTTON      "&Toggle Manual/Auto",IDC_M_TOGGLEMANUAL,7,48,67,10
+    PUSHBUTTON      "&Reset",IDC_M_RESET,7,77,27,10
+    CONTROL         "",IDC_M_XYSPEED,"Button",BS_OWNERDRAW | BS_FLAT | 
+                    WS_DISABLED,79,7,80,80,WS_EX_CLIENTEDGE
+    CONTROL         "",IDC_M_ZSPEED,"Button",BS_OWNERDRAW | BS_FLAT | 
+                    WS_DISABLED,167,7,16,80,WS_EX_CLIENTEDGE
+    CONTROL         "Slider1",IDC_M_LIGHT,"msctls_trackbar32",TBS_VERT | 
+                    TBS_BOTH | WS_DISABLED | WS_TABSTOP,189,7,20,65
+    EDITTEXT        IDC_M_LIGHTLEVEL,187,75,24,12,ES_RIGHT | ES_AUTOHSCROLL | 
+                    ES_READONLY
+    PUSHBUTTON      "1&0x",IDC_M_10,36,77,19,10
+    PUSHBUTTON      "&1x",IDC_M_1,55,77,19,10
+END
+
+IDD_EDIT_CONFIG DIALOG DISCARDABLE  0, 0, 257, 297
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Edit Stage Configuration"
+FONT 8, "MS Sans Serif"
+BEGIN
+    GROUPBOX        "General",IDC_STATIC,7,7,243,74
+    LTEXT           "Board Id",IDC_STATIC,15,21,37,12,SS_CENTERIMAGE
+    EDITTEXT        IDC_EC_BOARDID,58,21,18,13,ES_AUTOHSCROLL
+    CONTROL         "Step / &Direction",IDC_EC_STEPDIR,"Button",
+                    BS_AUTORADIOBUTTON,15,38,61,12
+    CONTROL         "C&W / CCW",IDC_EC_CWCCW,"Button",BS_AUTORADIOBUTTON,15,
+                    52,62,12
+    CONTROL         "Invert Limiters",IDC_EC_INVLIMPOL,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,15,66,64,11
+    LTEXT           "Acceleration Factor",IDC_STATIC,105,21,62,12,
+                    SS_CENTERIMAGE
+    EDITTEXT        IDC_EC_ACCELFACT,208,21,36,13,ES_AUTOHSCROLL
+    LTEXT           "Constant Speed Acceleration",IDC_STATIC,105,37,97,12,
+                    SS_CENTERIMAGE
+    EDITTEXT        IDC_EC_CONSTSPEEDACCEL,208,37,36,13,ES_AUTOHSCROLL
+    LTEXT           "Light Limit",IDC_STATIC,105,53,45,12,SS_CENTERIMAGE
+    EDITTEXT        IDC_EC_LIGHTLIMIT,208,53,36,13,ES_AUTOHSCROLL
+    GROUPBOX        "X-Y",IDC_STATIC,7,83,243,95
+    LTEXT           "Micron/Line",IDC_STATIC,15,94,63,12,SS_CENTERIMAGE
+    EDITTEXT        IDC_EC_XY_ENC2MICRON,85,94,36,13,ES_AUTOHSCROLL
+    LTEXT           "Steps/Revolution",IDC_STATIC,15,110,63,12,
+                    SS_CENTERIMAGE
+    EDITTEXT        IDC_EC_XY_STEPSREV,85,110,36,13,ES_AUTOHSCROLL
+    LTEXT           "Lines/Revolution",IDC_STATIC,15,126,63,12,
+                    SS_CENTERIMAGE
+    EDITTEXT        IDC_EC_XY_LINESREV,85,126,36,13,ES_AUTOHSCROLL
+    LTEXT           "Acceleration",IDC_STATIC,15,142,63,12,SS_CENTERIMAGE
+    EDITTEXT        IDC_EC_XY_ACCEL,85,142,36,13,ES_AUTOHSCROLL
+    LTEXT           "Max Speed",IDC_STATIC,125,94,68,12,SS_CENTERIMAGE
+    EDITTEXT        IDC_EC_XY_MAXSPEED,208,94,36,13,ES_AUTOHSCROLL
+    LTEXT           "Man. Speed Multiplier",IDC_STATIC,125,110,68,12,
+                    SS_CENTERIMAGE
+    EDITTEXT        IDC_EC_XY_MANSPEEDMULT,208,110,36,13,ES_AUTOHSCROLL
+    LTEXT           "Man. Max Speed",IDC_STATIC,125,126,63,12,SS_CENTERIMAGE
+    EDITTEXT        IDC_EC_XY_MANMAXSPEED,208,126,36,13,ES_AUTOHSCROLL
+    LTEXT           "Man. Max Speed Change",IDC_STATIC,125,142,80,12,
+                    SS_CENTERIMAGE
+    EDITTEXT        IDC_EC_XY_MANMAXSPEEDCHANGE,208,142,36,13,ES_AUTOHSCROLL
+    CONTROL         "Invert X",IDC_EC_INVERTX,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,15,159,106,12
+    CONTROL         "Invert Y",IDC_EC_INVERTY,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,126,159,106,12
+    GROUPBOX        "Z",IDC_STATIC,7,180,243,94
+    LTEXT           "Micron/Line",IDC_STATIC,15,191,63,12,SS_CENTERIMAGE
+    EDITTEXT        IDC_EC_Z_ENC2MICRON,85,191,36,13,ES_AUTOHSCROLL
+    LTEXT           "Steps/Revolution",IDC_STATIC,15,207,63,12,
+                    SS_CENTERIMAGE
+    EDITTEXT        IDC_EC_Z_STEPSREV,85,207,36,13,ES_AUTOHSCROLL
+    LTEXT           "Lines/Revolution",IDC_STATIC,15,223,63,12,
+                    SS_CENTERIMAGE
+    EDITTEXT        IDC_EC_Z_LINESREV,85,223,36,13,ES_AUTOHSCROLL
+    LTEXT           "Acceleration",IDC_STATIC,15,239,63,12,SS_CENTERIMAGE
+    EDITTEXT        IDC_EC_Z_ACCEL,85,239,36,13,ES_AUTOHSCROLL
+    LTEXT           "Max Speed",IDC_STATIC,125,191,68,12,SS_CENTERIMAGE
+    EDITTEXT        IDC_EC_Z_MAXSPEED,208,191,36,13,ES_AUTOHSCROLL
+    LTEXT           "Man. Speed Multiplier",IDC_STATIC,125,207,68,12,
+                    SS_CENTERIMAGE
+    EDITTEXT        IDC_EC_Z_MANSPEEDMULT,208,207,36,13,ES_AUTOHSCROLL
+    LTEXT           "Man. Max Speed",IDC_STATIC,125,223,63,12,SS_CENTERIMAGE
+    EDITTEXT        IDC_EC_Z_MANMAXSPEED,208,223,36,13,ES_AUTOHSCROLL
+    LTEXT           "Man. Max Speed Change",IDC_STATIC,125,239,80,12,
+                    SS_CENTERIMAGE
+    EDITTEXT        IDC_EC_Z_MANMAXSPEEDCHANGE,208,239,36,13,ES_AUTOHSCROLL
+    CONTROL         "Invert Z",IDC_EC_INVERTZ,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,15,257,106,12
+    DEFPUSHBUTTON   "OK",IDOK,7,276,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,200,276,50,14
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO DISCARDABLE 
+BEGIN
+    IDD_MONITOR, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 211
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 87
+    END
+
+    IDD_EDIT_CONFIG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 250
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 290
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+#endif    // English (U.S.) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+/////////////////////////////////////////////////////////////////////////////
+// Italian (Italy) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ITA)
+#ifdef _WIN32
+LANGUAGE LANG_ITALIAN, SUBLANG_ITALIAN
+#pragma code_page(1252)
+#endif //_WIN32
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+#ifndef _MAC
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION 1,0,0,1
+ PRODUCTVERSION 1,0,0,1
+ FILEFLAGSMASK 0x3fL
+#ifdef _DEBUG
+ FILEFLAGS 0x1L
+#else
+ FILEFLAGS 0x0L
+#endif
+ FILEOS 0x4L
+ FILETYPE 0x2L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "040904B0"
+        BEGIN
+            VALUE "CompanyName", "\0"
+            VALUE "FileDescription", "FlexStageFiberOpticLamp Module\0"
+            VALUE "FileVersion", "1, 0, 0, 1\0"
+            VALUE "InternalName", "FlexStageFiberOpticLamp\0"
+            VALUE "LegalCopyright", "Copyright 2000\0"
+            VALUE "OriginalFilename", "FlexStageFiberOpticLamp.DLL\0"
+            VALUE "ProductName", "FlexStageFiberOpticLamp Module\0"
+            VALUE "ProductVersion", "1, 0, 0, 1\0"
+            VALUE "OLESelfRegister", "\0"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x409, 1200
+    END
+END
+
+#endif    // !_MAC
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// REGISTRY
+//
+
+IDR_FLEXSTAGE           REGISTRY DISCARDABLE    "FlexStageFiberOpticLamp.rgs"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_PROJNAME            "FlexStageFiberOpticLamp"
+END
+
+#endif    // Italian (Italy) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+

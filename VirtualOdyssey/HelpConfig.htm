@@ -1,0 +1,111 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" >
+<HTML>
+	<HEAD>
+		<TITLE></TITLE>
+		<META NAME="GENERATOR" Content="Microsoft Visual Studio 7.0">
+	</HEAD>
+	<BODY>
+		<P><FONT face="Arial" color="#000066" size="5"><EM> Odyssey&nbsp;Configuration</EM></FONT></P>
+		<FONT face="Arial"><EM><FONT size="4">
+					<HR width="100%" SIZE="2">
+					<P align="justify">
+				</FONT></EM><FONT size="2">Odyssey&nbsp;has several parameters you can change 
+				to control the various stages of&nbsp;image processing, with very typical (not 
+				necessarily optimal) settings.</FONT></P>
+			<P align="justify"><IMG alt="" src="HelpConfig.gif"></P>
+			<P align="justify"></P>
+			<UL>
+				<LI>
+					<DIV align="justify"><FONT size="2"><FONT color="#ff0033"><FONT size="2"><FONT color="#ff0033">Program 
+										tab control</FONT><FONT color="black">: here you select the processing program 
+										you want to modify. At the beginning, with an empty configuration, the tab is 
+										empty also. You must click on &lt;New&gt; to create a new program (see below)</FONT></FONT></FONT></FONT></DIV>
+					<DIV align="justify"></DIV>
+				<LI>
+					<FONT face="Arial" size="2"><FONT face="Arial" size="2"><FONT size="2"><FONT face="Arial"><FONT size="2">
+										<FONT face="Arial"><FONT color="#ff0033">Kernel Width / Kernel Height</FONT>: the 
+											size of the filter kernel for each program; these numbers range from 1 to 8.</FONT></FONT></FONT></FONT></FONT></FONT>
+					<DIV></DIV>
+				<LI>
+					<DIV align="justify"><FONT size="2"><FONT color="#ff0033"><FONT size="2"><FONT color="#ff0033"><FONT size="2"><FONT color="black"><FONT color="#ff0033">
+													Kernel coefficients</FONT>:&nbsp;the coefficients in the kernel matrix; 
+												since it is assumed to be symmetric on both axes, only the&nbsp;upper-left 
+												corner needs to&nbsp;be specified. In case of odd width(height),&nbsp;the 
+												central column(row) must be specified too. For high-pass filters, the sum of 
+												all the coefficients in the matrix must be 0; for gray level thresholding, the 
+												kernel must be 1x1, coefficient = -1.</FONT></FONT></FONT></FONT></FONT></FONT></DIV>
+				<LI>
+					<DIV align="justify"><FONT size="2">
+							<DIV align="justify"><FONT size="2"><FONT color="#ff0033"><FONT size="2"><FONT color="black"><FONT color="#ff0033">
+													Cutoff</FONT>: filter threshold that discriminates interesting pixels from 
+												background pixels. Positive for high-pass filters, negative for gray level 
+												thresholding.</FONT></FONT></FONT></FONT></DIV>
+						</FONT>
+					</DIV>
+				<LI>
+					<DIV align="justify"><FONT size="2">
+							<DIV align="justify">
+						</FONT><FONT size="2"><FONT size="2"><FONT color="#ff0033"><FONT size="2"><FONT color="#ff0033">X 
+											offset</FONT><FONT color="black">: X coordinate of the left edge&nbsp;of the 
+											clustering window. For correct operation of the clustering module, must be a 
+											multiple of 8.</FONT></FONT></FONT></FONT></DIV>
+					</DIV></LI>
+		</FONT>
+		<LI>
+			<DIV align="justify"><FONT size="2"><FONT color="#ff0033">Max Grains</FONT><FONT color="black">: 
+						the maximum number of grains computed over all layers.</FONT></FONT></DIV>
+		<LI>
+			<DIV align="justify"><FONT size="2"><FONT color="#ff0033"><FONT size="2"><FONT color="#ff0033">Max 
+								Layers</FONT><FONT color="black">: the maximum number of layers that can be 
+								feeded to the tracker; should be at least equal to the number of layers 
+								sampled.</FONT></FONT></FONT></FONT></DIV>
+			<DIV align="justify"></DIV>
+		<LI>
+			<FONT size="2"><FONT color="#ff0033">Max Pixels</FONT>: grains formed by&nbsp;more 
+				pixels than MinArea are not considered for tracking.</FONT>
+		<LI>
+			<DIV align="justify"><FONT size="2"><FONT face="Arial"><FONT color="#ff0033">Max Slope</FONT>: 
+						the maximum slope being searched for. The tracking time increases quadratically 
+						with this parameter.</FONT></FONT></DIV>
+		<LI>
+			</FONT><FONT size="2"><FONT color="#ff0033"><FONT size="2"><FONT color="#ff0033">Min Pixels</FONT><FONT color="black">: 
+							grains formed by fewer pixels than MinArea are not considered for tracking.</FONT></FONT></FONT></FONT>
+			<DIV></DIV>
+		<LI>
+			</FONT></FONT><FONT size="2"><FONT face="Arial"><FONT color="#ff0033">Min Slope</FONT>: 
+					the minimum slope being searched for. In order to avoid that dirt on the camera 
+					sensor generates perfectly vertical fake tracks, one can set this parameter to 
+					a small number, such as 0.001.</FONT></FONT>
+		<LI>
+			<FONT face="Arial" size="2"><FONT face="Arial" size="2"><FONT size="2"><FONT face="Arial"><FONT color="#ff0033">
+								Min Grains&nbsp;at Slope = 0.1</FONT>: the minimum number of grains for a 
+							track with slope = 0.1. This parameter helps to define the curve&nbsp;<STRONG>n<SUB>min</SUB>(S)</STRONG>
+							(see <A href="HelpOverview.htm">Overview</A>).</FONT></FONT></FONT></FONT>
+		<LI>
+			<FONT size="2"><FONT face="Arial"><FONT color="#ff0033">Min Grains for Horizontal Tracks</FONT>: 
+					the asymptotic minimum number of grains for very wide angle tracks. This 
+					parameter helps to define the curve <STRONG>n<SUB>min</SUB>(S)</STRONG> (see <A href="HelpOverview.htm">
+						Overview</A>).</FONT></FONT>
+		<LI>
+			<FONT face="Arial" size="2"><FONT size="2"><FONT face="Arial"><FONT color="#ff0033">Min Grains 
+							for Vertical Tracks</FONT>: the minimum number of grains a perfectly 
+						vertical track must have. This parameter helps to define the curve <STRONG>n<SUB>min</SUB>(S)</STRONG>
+						(see <A href="HelpOverview.htm">Overview</A>).</FONT></FONT></FONT>
+		<LI>
+			<FONT face="Arial" size="2"><FONT face="Arial" size="2"><FONT size="2"><FONT face="Arial"><FONT size="2">
+								<FONT face="Arial"><FONT color="#ff0033">Top Layer</FONT>: the&nbsp;upper layer of 
+									the trigger that is about to be inserted by using the Add button (see <A href="HelpOverview.htm">
+										Overview</A>).</FONT></FONT></FONT></FONT></FONT></FONT>
+		<LI>
+			<FONT face="Arial" size="2"><FONT face="Arial" size="2"><FONT face="Arial" size="2"><FONT size="2">
+							<FONT face="Arial"><FONT size="2"><FONT face="Arial"><FONT color="#ff0033">Trigger&nbsp;Layers</FONT>: 
+										list of the trigger layers for the trigger that is about to be inserted by 
+										using the Add button. These are the layers on which the track position and 
+										slope guessed from grains on Top Layer and Bottom Layer will be tested (see <A href="HelpOverview.htm">
+											Overview</A>).</FONT></FONT></FONT></FONT></FONT></FONT></FONT></LI></UL>
+		<P><FONT face="Arial" size="2">Triggers are inserted only after the Add button is 
+				pressed and they appear in the list. In order to delete a trigger, select it on 
+				the list and press the Del button.</FONT></P>
+		</FONT>
+	</BODY>
+</HTML>

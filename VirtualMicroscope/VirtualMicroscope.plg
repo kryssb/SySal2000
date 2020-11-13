@@ -1,0 +1,149 @@
+<html>
+<body>
+<pre>
+<h1>Build Log</h1>
+<h3>
+--------------------Configuration: VirtualMicroscope - Win32 Debug--------------------
+</h3>
+<h3>Command Lines</h3>
+Creating command line "midl.exe /tlb ".\VirtualMicroscope.tlb" /h "VirtualMicroscope.h" /iid "VirtualMicroscope_i.c" /Oicf "D:\sysal2\VirtualMicroscope\VirtualMicroscope.idl""
+Creating command line "rc.exe /l 0x410 /fo"Debug/VirtualMicroscope.res" /d "_DEBUG" /d "_AFXDLL" "D:\sysal2\VirtualMicroscope\VirtualMicroscope.rc"" 
+Creating temporary file "C:\DOCUME~1\Kryss\LOCALS~1\Temp\RSP1F7.tmp" with contents
+[
+/nologo /MDd /W3 /Gm /GX /ZI /Od /I "..\Common" /D "WIN32" /D "_DEBUG" /D "_WINDOWS" /D "_WINDLL" /D "_AFXDLL" /D "_MBCS" /D "_USRDLL" /Fp"Debug/VirtualMicroscope.pch" /Yu"stdafx.h" /Fo"Debug/" /Fd"Debug/" /FD /GZ /c 
+"D:\sysal2\VirtualMicroscope\EditConfig.cpp"
+"D:\sysal2\VirtualMicroscope\Monitor.cpp"
+"D:\sysal2\VirtualMicroscope\StageEngine.cpp"
+"D:\sysal2\VirtualMicroscope\VirtualMicroscope.cpp"
+"D:\sysal2\VirtualMicroscope\VirtualMicroscopeClass.cpp"
+"D:\sysal2\VirtualMicroscope\XYSpeed.cpp"
+"D:\sysal2\VirtualMicroscope\ZSpeed.cpp"
+]
+Creating command line "cl.exe @C:\DOCUME~1\Kryss\LOCALS~1\Temp\RSP1F7.tmp" 
+Creating temporary file "C:\DOCUME~1\Kryss\LOCALS~1\Temp\RSP1F8.tmp" with contents
+[
+/nologo /MDd /W3 /Gm /GX /ZI /Od /I "..\Common" /D "WIN32" /D "_DEBUG" /D "_WINDOWS" /D "_WINDLL" /D "_AFXDLL" /D "_MBCS" /D "_USRDLL" /Fp"Debug/VirtualMicroscope.pch" /Yc"stdafx.h" /Fo"Debug/" /Fd"Debug/" /FD /GZ /c 
+"D:\sysal2\VirtualMicroscope\StdAfx.cpp"
+]
+Creating command line "cl.exe @C:\DOCUME~1\Kryss\LOCALS~1\Temp\RSP1F8.tmp" 
+Creating temporary file "C:\DOCUME~1\Kryss\LOCALS~1\Temp\RSP1F9.tmp" with contents
+[
+/nologo /subsystem:windows /dll /incremental:yes /pdb:"Debug/VirtualMicroscope.pdb" /debug /machine:I386 /def:".\VirtualMicroscope.def" /out:"Debug/VirtualMicroscope.dll" /implib:"Debug/VirtualMicroscope.lib" /pdbtype:sept 
+.\Debug\EditConfig.obj
+.\Debug\Monitor.obj
+.\Debug\StageEngine.obj
+.\Debug\StdAfx.obj
+.\Debug\VirtualMicroscope.obj
+.\Debug\VirtualMicroscopeClass.obj
+.\Debug\XYSpeed.obj
+.\Debug\ZSpeed.obj
+.\Debug\VirtualMicroscope.res
+]
+Creating command line "link.exe @C:\DOCUME~1\Kryss\LOCALS~1\Temp\RSP1F9.tmp"
+Creating temporary file "C:\DOCUME~1\Kryss\LOCALS~1\Temp\RSP1FA.bat" with contents
+[
+@echo off
+regsvr32 /s /c ".\Debug\VirtualMicroscope.dll"
+echo regsvr32 exec. time > ".\Debug\regsvr32.trg"
+]
+Creating command line "C:\DOCUME~1\Kryss\LOCALS~1\Temp\RSP1FA.bat"
+Creating Type Library...
+Microsoft (R) MIDL Compiler Version 5.01.0164  
+Copyright (c) Microsoft Corp 1991-1997. All rights reserved.
+Processing D:\sysal2\VirtualMicroscope\VirtualMicroscope.idl
+VirtualMicroscope.idl
+Processing D:\Program Files\Microsoft Visual Studio\VC98\INCLUDE\oaidl.idl
+oaidl.idl
+Processing D:\Program Files\Microsoft Visual Studio\VC98\INCLUDE\objidl.idl
+objidl.idl
+Processing D:\Program Files\Microsoft Visual Studio\VC98\INCLUDE\unknwn.idl
+unknwn.idl
+Processing D:\Program Files\Microsoft Visual Studio\VC98\INCLUDE\wtypes.idl
+wtypes.idl
+Processing D:\Program Files\Microsoft Visual Studio\VC98\INCLUDE\ocidl.idl
+ocidl.idl
+Processing D:\Program Files\Microsoft Visual Studio\VC98\INCLUDE\oleidl.idl
+oleidl.idl
+Processing D:\Program Files\Microsoft Visual Studio\VC98\INCLUDE\servprov.idl
+servprov.idl
+Processing D:\Program Files\Microsoft Visual Studio\VC98\INCLUDE\urlmon.idl
+urlmon.idl
+Processing D:\Program Files\Microsoft Visual Studio\VC98\INCLUDE\msxml.idl
+msxml.idl
+Processing ..\Common\Connection.h
+Connection.h
+Processing ..\Common\Config.h
+Config.h
+Processing ..\Common\GUIdefs.h
+GUIdefs.h
+Processing ..\Common\Cluster.h
+Cluster.h
+Processing ..\Common\FrameGrabberDefs.h
+FrameGrabberDefs.h
+Processing ..\Common\CameraSpec.h
+CameraSpec.h
+Compiling resources...
+Compiling...
+StdAfx.cpp
+Compiling...
+EditConfig.cpp
+Monitor.cpp
+D:\sysal2\VirtualMicroscope\Monitor.cpp(137) : warning C4800: 'int' : forcing value to bool 'true' or 'false' (performance warning)
+D:\sysal2\VirtualMicroscope\Monitor.cpp(178) : warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+D:\sysal2\VirtualMicroscope\Monitor.cpp(182) : warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+D:\sysal2\VirtualMicroscope\Monitor.cpp(186) : warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+StageEngine.cpp
+D:\sysal2\VirtualMicroscope\StageEngine.cpp(32) : warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+D:\sysal2\VirtualMicroscope\StageEngine.cpp(48) : warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+D:\sysal2\VirtualMicroscope\StageEngine.cpp(49) : warning C4244: '=' : conversion from 'double' to 'unsigned int', possible loss of data
+VirtualMicroscope.cpp
+VirtualMicroscopeClass.cpp
+D:\sysal2\VirtualMicroscope\VirtualMicroscopeClass.cpp(161) : warning C4244: '=' : conversion from 'float' to 'unsigned int', possible loss of data
+D:\sysal2\VirtualMicroscope\VirtualMicroscopeClass.cpp(162) : warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+D:\sysal2\VirtualMicroscope\VirtualMicroscopeClass.cpp(163) : warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+D:\sysal2\VirtualMicroscope\VirtualMicroscopeClass.cpp(484) : warning C4800: 'unsigned char' : forcing value to bool 'true' or 'false' (performance warning)
+D:\sysal2\VirtualMicroscope\VirtualMicroscopeClass.cpp(946) : warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+D:\sysal2\VirtualMicroscope\VirtualMicroscopeClass.cpp(956) : warning C4244: '=' : conversion from 'float' to 'int', possible loss of data
+D:\sysal2\VirtualMicroscope\VirtualMicroscopeClass.cpp(957) : warning C4244: '=' : conversion from 'float' to 'int', possible loss of data
+D:\sysal2\VirtualMicroscope\VirtualMicroscopeClass.cpp(961) : warning C4244: '=' : conversion from 'float' to 'int', possible loss of data
+D:\sysal2\VirtualMicroscope\VirtualMicroscopeClass.cpp(962) : warning C4244: '=' : conversion from 'float' to 'int', possible loss of data
+D:\sysal2\VirtualMicroscope\VirtualMicroscopeClass.cpp(966) : warning C4018: '>=' : signed/unsigned mismatch
+D:\sysal2\VirtualMicroscope\VirtualMicroscopeClass.cpp(972) : warning C4244: 'initializing' : conversion from 'double' to 'int', possible loss of data
+D:\sysal2\VirtualMicroscope\VirtualMicroscopeClass.cpp(975) : warning C4244: '=' : conversion from 'float' to 'int', possible loss of data
+D:\sysal2\VirtualMicroscope\VirtualMicroscopeClass.cpp(976) : warning C4244: '=' : conversion from 'float' to 'int', possible loss of data
+D:\sysal2\VirtualMicroscope\VirtualMicroscopeClass.cpp(980) : warning C4244: '=' : conversion from 'float' to 'int', possible loss of data
+D:\sysal2\VirtualMicroscope\VirtualMicroscopeClass.cpp(981) : warning C4244: '=' : conversion from 'float' to 'int', possible loss of data
+D:\sysal2\VirtualMicroscope\VirtualMicroscopeClass.cpp(984) : warning C4018: '>=' : signed/unsigned mismatch
+D:\sysal2\VirtualMicroscope\VirtualMicroscopeClass.cpp(942) : warning C4101: 'j' : unreferenced local variable
+D:\sysal2\VirtualMicroscope\VirtualMicroscopeClass.cpp(1135) : warning C4018: '<' : signed/unsigned mismatch
+D:\sysal2\VirtualMicroscope\VirtualMicroscopeClass.cpp(1138) : warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+D:\sysal2\VirtualMicroscope\VirtualMicroscopeClass.cpp(1147) : warning C4244: '=' : conversion from 'double' to 'int', possible loss of data
+D:\sysal2\VirtualMicroscope\VirtualMicroscopeClass.cpp(1170) : warning C4244: '=' : conversion from 'float' to 'int', possible loss of data
+D:\sysal2\VirtualMicroscope\VirtualMicroscopeClass.cpp(1177) : warning C4244: '=' : conversion from 'float' to 'int', possible loss of data
+D:\sysal2\VirtualMicroscope\VirtualMicroscopeClass.cpp(1179) : warning C4018: '>' : signed/unsigned mismatch
+D:\sysal2\VirtualMicroscope\VirtualMicroscopeClass.cpp(1186) : warning C4244: '=' : conversion from 'float' to 'int', possible loss of data
+D:\sysal2\VirtualMicroscope\VirtualMicroscopeClass.cpp(1218) : warning C4018: '<' : signed/unsigned mismatch
+D:\sysal2\VirtualMicroscope\VirtualMicroscopeClass.cpp(1233) : warning C4018: '<' : signed/unsigned mismatch
+D:\sysal2\VirtualMicroscope\VirtualMicroscopeClass.cpp(1251) : warning C4018: '<' : signed/unsigned mismatch
+D:\sysal2\VirtualMicroscope\VirtualMicroscopeClass.cpp(1253) : warning C4018: '<' : signed/unsigned mismatch
+XYSpeed.cpp
+D:\sysal2\VirtualMicroscope\XYSpeed.cpp(63) : warning C4244: 'argument' : conversion from 'float' to 'int', possible loss of data
+D:\sysal2\VirtualMicroscope\XYSpeed.cpp(65) : warning C4244: 'argument' : conversion from 'float' to 'int', possible loss of data
+D:\sysal2\VirtualMicroscope\XYSpeed.cpp(81) : warning C4244: 'argument' : conversion from 'float' to 'int', possible loss of data
+D:\sysal2\VirtualMicroscope\XYSpeed.cpp(83) : warning C4244: 'argument' : conversion from 'float' to 'int', possible loss of data
+ZSpeed.cpp
+D:\sysal2\VirtualMicroscope\ZSpeed.cpp(61) : warning C4244: 'argument' : conversion from 'float' to 'int', possible loss of data
+D:\sysal2\VirtualMicroscope\ZSpeed.cpp(86) : warning C4244: 'argument' : conversion from 'float' to 'int', possible loss of data
+Generating Code...
+Linking...
+   Creating library Debug/VirtualMicroscope.lib and object Debug/VirtualMicroscope.exp
+<h3>Output Window</h3>
+Performing registration
+
+
+
+<h3>Results</h3>
+VirtualMicroscope.dll - 0 error(s), 41 warning(s)
+</pre>
+</body>
+</html>

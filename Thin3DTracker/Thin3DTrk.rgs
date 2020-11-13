@@ -1,0 +1,25 @@
+HKCR
+{
+	Thin3DTracker.Thin3DTrk.1 = s 'Thin3DTracker Class'
+	{
+		CLSID = s '{27d4a7c9-05e8-4691-bb60-cbbc0c397dec}'
+	}
+	Thin3DTracker.Thin3DTrk = s 'Thin3DTracker Class'
+	{
+		CLSID = s '{27d4a7c9-05e8-4691-bb60-cbbc0c397dec}'
+		CurVer = s 'Thin3DTracker.Thin3DTrk.1'
+	}
+	NoRemove CLSID
+	{
+		ForceRemove {27d4a7c9-05e8-4691-bb60-cbbc0c397dec} = s 'Thin3DTracker Class'
+		{
+			ProgID = s 'Thin3DTracker.Thin3DTrk.1'
+			VersionIndependentProgID = s 'Thin3DTracker.Thin3DTrk'
+			InprocServer32 = s '%MODULE%'
+			{
+				val ThreadingModel = s 'Free'
+			}
+			'TypeLib' = s '{976b9330-745c-4315-9101-e3fef680add1}'
+		}
+	}
+}

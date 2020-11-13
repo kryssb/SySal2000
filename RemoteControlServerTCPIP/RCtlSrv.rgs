@@ -1,0 +1,25 @@
+HKCR
+{
+	RemoteControlServerTCPIP.RemoteControlServer.1 = s 'RemoteControlServerTCPIP Class'
+	{
+		CLSID = s '{7D8FCEFA-E081-4559-B6D6-F8AC7AB09500}'
+	}
+	RemoteControlServerTCPIP.RemoteControlServer = s 'RemoteControlServerTCPIP Class'
+	{
+		CLSID = s '{7D8FCEFA-E081-4559-B6D6-F8AC7AB09500}'
+		CurVer = s 'RemoteControlServerTCPIP.RemoteControlServer.1'
+	}
+	NoRemove CLSID
+	{
+		ForceRemove {7D8FCEFA-E081-4559-B6D6-F8AC7AB09500} = s 'RemoteControlServerTCPIP Class'
+		{
+			ProgID = s 'RemoteControlServerTCPIP.RemoteControlServer.1'
+			VersionIndependentProgID = s 'RemoteControlServerTCPIP.RemoteControlServer'
+			InprocServer32 = s '%MODULE%'
+			{
+				val ThreadingModel = s 'Both'
+			}
+			'TypeLib' = s '{1B11D019-4F75-43EB-BDDD-0110BA572B5C}'
+		}
+	}
+}

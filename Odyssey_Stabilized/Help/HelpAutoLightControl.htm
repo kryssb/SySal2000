@@ -1,0 +1,50 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" >
+<HTML>
+	<HEAD>
+		<TITLE>Automatic Light Control</TITLE>
+		<META content="Microsoft Visual Studio 7.0" name="GENERATOR">
+	</HEAD>
+	<BODY>
+		<P><FONT face="Arial" color="#000066" size="5"><EM> Odyssey&nbsp;-&nbsp;Automatic Light 
+					Control</EM></FONT>&nbsp; <EM><FONT size="4"><FONT face="Arial">
+						<HR width="100%" SIZE="2">
+					</FONT>
+					<P></P>
+					<P align="justify">
+				</FONT></EM><FONT face="Arial" size="2">When a <STRONG>Stage</STRONG> module is 
+				connected to the <STRONG>Lamp Controller</STRONG> slot of the Odyssey 
+				module&nbsp;in a SySal layout, it is possible to automatically adjust the 
+				light.</FONT>
+		</P>
+		<P align="justify"><FONT face="Arial" size="2">The relationship between the light 
+				control signal and the light output is assumed to be monotonically increasing 
+				(low ripple). Each time the automatic light control function changes the light, 
+				it waits enough for the light output to stabilize. The length of this wait 
+				depends on&nbsp;how much the light control value changes; Odyssey assumes 
+				the&nbsp;dynamic response of the lamp is&nbsp;an exponential relaxation, with a 
+				time constant&nbsp;that can be&nbsp;adjusted by the user.</FONT></P>
+		<P align="justify"><FONT face="Arial" size="2">During light control, all the image 
+				processing functions are disabled. Neither synchronous nor asynchronous Vision 
+				Processor functions run.</FONT></P>
+		<P align="justify"><FONT face="Arial" size="2">Automatic light control can work using 
+				two criteria.</FONT></P>
+		<UL>
+			<LI>
+				<DIV align="justify"><FONT face="Arial" size="2"><FONT size="2"><FONT size="2"><FONT color="#ff0033"><FONT size="2"><FONT face="Arial"><FONT color="#ff0033">Average 
+												Gray Level Control</FONT><FONT color="black">: the light is changed so that the 
+												average gray level matches the user-defined gray level as closely as possible.</FONT></FONT></FONT></FONT></FONT></FONT></FONT></DIV>
+			</LI>
+			<LI>
+				<DIV align="justify"><FONT face="Arial" size="2"><FONT size="2"><FONT size="2"><FONT color="#ff0033"><FONT size="2"><FONT face="Arial"><FONT color="#ff0033">Saturation 
+												Control</FONT><FONT color="black">: the light is changed so that the fraction 
+												of saturated pixels matches the user-defined saturation fraction as closely as 
+												possible. <STRONG>PRESENTLY THIS ALGORITHM IS NOT IMPLEMENTED</STRONG>, though 
+												the saturation fraction is always estimated.</FONT></FONT></FONT></FONT></FONT></FONT></FONT><FONT face="Arial" size="2"></DIV>
+			</LI>
+		</UL>
+		<DIV align="justify"><FONT face="Arial" size="2">Saturated pixels </FONT></FONT><FONT face="Arial" size="2">are 
+				defined as those pixels whose gray level is&nbsp;greater or equal to&nbsp;a 
+				saturation threshold; this accounts for the fact that not necessarily all 
+				pixels for a sensor cover the whole range of their ADCs.</FONT></DIV>
+	</BODY>
+</HTML>

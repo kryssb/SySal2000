@@ -1,0 +1,20 @@
+Comparing files resource.h and D:\SYSAL2\FLEXMAP3\RESOURCE.H
+***** resource.h
+#define IDC_IM_RESCAN                   240
+#define IDC_EDITLABEL                   242
+
+***** D:\SYSAL2\FLEXMAP3\RESOURCE.H
+#define IDC_IM_RESCAN                   240
+
+*****
+
+***** resource.h
+#define _APS_NEXT_COMMAND_VALUE         32768
+#define _APS_NEXT_CONTROL_VALUE         243
+#define _APS_NEXT_SYMED_VALUE           103
+***** D:\SYSAL2\FLEXMAP3\RESOURCE.H
+#define _APS_NEXT_COMMAND_VALUE         32768
+#define _APS_NEXT_CONTROL_VALUE         236
+#define _APS_NEXT_SYMED_VALUE           103
+*****
+

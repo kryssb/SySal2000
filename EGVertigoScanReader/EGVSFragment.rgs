@@ -1,0 +1,26 @@
+HKCR
+{
+	EGVertigoScanReader.EGVSFragment.1 = s 'EGVSFragment Class'
+	{
+		CLSID = s '{6898CEEA-FB49-4C31-B945-86D91F2981A6}'
+	}
+	EGVertigoScanReader.EGVSFragment = s 'EGVSFragment Class'
+	{
+		CLSID = s '{6898CEEA-FB49-4C31-B945-86D91F2981A6}'
+		CurVer = s 'EGVertigoScanReader.EGVSFragment.1'
+	}
+	NoRemove CLSID
+	{
+		ForceRemove {6898CEEA-FB49-4C31-B945-86D91F2981A6} = s 'EGVSFragment Class'
+		{
+			ProgID = s 'EGVertigoScanReader.EGVSFragment.1'
+			VersionIndependentProgID = s 'EGVertigoScanReader.EGVSFragment'
+			ForceRemove 'Programmable'
+			InprocServer32 = s '%MODULE%'
+			{
+				val ThreadingModel = s 'Apartment'
+			}
+			'TypeLib' = s '{B6AF5F56-9B24-4885-A28D-3360305B4DE4}'
+		}
+	}
+}

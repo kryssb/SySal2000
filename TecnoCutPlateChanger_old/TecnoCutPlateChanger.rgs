@@ -1,0 +1,25 @@
+HKCR
+{
+	TecnoCutPlateChanger.TecnoCutPlateChanger.1 = s 'TecnoCutPlateChanger Class'
+	{
+		CLSID = s '{a188396f-5919-4687-a71d-95ee34f15649}'
+	}
+	TecnoCutPlateChanger.TecnoCutPlateChanger = s 'TecnoCutPlateChanger Class'
+	{
+		CLSID = s '{a188396f-5919-4687-a71d-95ee34f15649}'
+		CurVer = s 'TecnoCutPlateChanger.TecnoCutPlateChanger.1'
+	}
+	NoRemove CLSID
+	{
+		ForceRemove {a188396f-5919-4687-a71d-95ee34f15649} = s 'TecnoCutPlateChanger Class'
+		{
+			ProgID = s 'TecnoCutPlateChanger.TecnoCutPlateChanger.1'
+			VersionIndependentProgID = s 'TecnoCutPlateChanger.TecnoCutPlateChanger'
+			InprocServer32 = s '%MODULE%'
+			{
+				val ThreadingModel = s 'Free'
+			}
+			'TypeLib' = s '{2c4cb907-e8b4-44ff-b6b3-9a524fa485a6}'
+		}
+	}
+}

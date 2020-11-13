@@ -1,0 +1,25 @@
+HKCR
+{
+	Thick3DTracker.Thick3DTrk.1 = s 'Thick3DTracker Class'
+	{
+		CLSID = s '{E416C46E-7F68-11D3-A47C-FA1E4AFA2721}'
+	}
+	Thick3DTracker.Thick3DTrk = s 'Thick3DTracker Class'
+	{
+		CLSID = s '{E416C46E-7F68-11D3-A47C-FA1E4AFA2721}'
+		CurVer = s 'Thick3DTracker.Thick3DTrk.1'
+	}
+	NoRemove CLSID
+	{
+		ForceRemove {E416C46E-7F68-11D3-A47C-FA1E4AFA2721} = s 'Thick3DTracker Class'
+		{
+			ProgID = s 'Thick3DTracker.Thick3DTrk.1'
+			VersionIndependentProgID = s 'Thick3DTracker.Thick3DTrk'
+			InprocServer32 = s '%MODULE%'
+			{
+				val ThreadingModel = s 'Free'
+			}
+			'TypeLib' = s '{E416C460-7F68-11D3-A47C-FA1E4AFA2721}'
+		}
+	}
+}

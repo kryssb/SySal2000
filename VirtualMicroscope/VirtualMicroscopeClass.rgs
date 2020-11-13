@@ -1,0 +1,25 @@
+HKCR
+{
+	VirtualMicroscope.VirtualMicroscope.1 = s 'VirtualMicroscope Class'
+	{
+		CLSID = s '{C49FD806-2D9C-4A6C-8F52-A9516A0AB6D2}'
+	}
+	VirtualMicroscope.VirtualMicroscope = s 'VirtualMicroscope Class'
+	{
+		CLSID = s '{C49FD806-2D9C-4A6C-8F52-A9516A0AB6D2}'
+		CurVer = s 'VirtualMicroscope.VirtualMicroscope.1'
+	}
+	NoRemove CLSID
+	{
+		ForceRemove {C49FD806-2D9C-4A6C-8F52-A9516A0AB6D2} = s 'VirtualMicroscope Class'
+		{
+			ProgID = s 'VirtualMicroscope.VirtualMicroscope.1'
+			VersionIndependentProgID = s 'VirtualMicroscope.VirtualMicroscope'
+			InprocServer32 = s '%MODULE%'
+			{
+				val ThreadingModel = s 'Free'
+			}
+			'TypeLib' = s '{2819AD16-E742-4353-9D48-A4FBE7F202D0}'
+		}
+	}
+}

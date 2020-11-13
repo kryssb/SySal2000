@@ -1,0 +1,287 @@
+//Microsoft Developer Studio generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// English (U.S.) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
+#pragma code_page(1252)
+#endif //_WIN32
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDI_ICON32              ICON    DISCARDABLE     "icon32.ico"
+IDI_ICON64              ICON    DISCARDABLE     "icon64.ico"
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+3 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+#ifndef _MAC
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION 1,0,0,1
+ PRODUCTVERSION 1,0,0,1
+ FILEFLAGSMASK 0x3fL
+#ifdef _DEBUG
+ FILEFLAGS 0x1L
+#else
+ FILEFLAGS 0x0L
+#endif
+ FILEOS 0x4L
+ FILETYPE 0x2L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "040904B0"
+        BEGIN
+            VALUE "CompanyName", "\0"
+            VALUE "FileDescription", "SmartTracker 5 Module\0"
+            VALUE "FileVersion", "5, 0, 0, 1\0"
+            VALUE "InternalName", "SmartTracker\0"
+            VALUE "LegalCopyright", "Copyright 2003\0"
+            VALUE "OriginalFilename", "SmartTracker5.dll\0"
+            VALUE "ProductName", "SmartTracker 5 Module\0"
+            VALUE "ProductVersion", "5, 0, 0, 1\0"
+            VALUE "OLESelfRegister", "\0"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x409, 1200
+    END
+END
+
+#endif    // !_MAC
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// REGISTRY
+//
+
+IDR_SMARTTRACKER        REGISTRY DISCARDABLE    "SmartTracker5.rgs"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_EDIT_CONFIG DIALOGEX 0, 0, 300, 356
+STYLE DS_MODALFRAME | DS_CENTER | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Edit Tracking Parameters"
+FONT 8, "MS Sans Serif"
+BEGIN
+    GROUPBOX        "Memory Management",IDC_STATIC,7,7,180,61
+    LTEXT           "Max &Grains",IDC_STATIC,14,20,44,10
+    EDITTEXT        IDC_EC_MAXGRAINS,62,19,34,12,ES_RIGHT | ES_AUTOHSCROLL
+    LTEXT           "Max &Layers",IDC_STATIC,14,35,44,10
+    EDITTEXT        IDC_EC_MAXLAYERS,62,34,34,12,ES_RIGHT | ES_AUTOHSCROLL
+    LTEXT           "Cells Along &X",IDC_STATIC,104,20,44,10
+    EDITTEXT        IDC_EC_CELLSX,152,19,26,12,ES_RIGHT | ES_AUTOHSCROLL
+    LTEXT           "Cells Along &Y",IDC_STATIC,104,35,44,10
+    EDITTEXT        IDC_EC_CELLSY,152,34,26,12,ES_RIGHT | ES_AUTOHSCROLL
+    LTEXT           "Cell Ove&rflow",IDC_STATIC,104,50,44,10
+    EDITTEXT        IDC_EC_CELLOVERFLOW,152,49,26,12,ES_RIGHT | 
+                    ES_AUTOHSCROLL
+    GROUPBOX        "Grains",IDC_STATIC,192,7,101,61
+    LTEXT           "&Min Pixels",IDC_STATIC,213,20,32,10
+    EDITTEXT        IDC_EC_MINPIXELS,252,19,22,12,ES_RIGHT | ES_AUTOHSCROLL
+    LTEXT           "M&ax Pixels",IDC_STATIC,213,34,34,10
+    EDITTEXT        IDC_EC_MAXPIXELS,252,33,22,12,ES_RIGHT | ES_AUTOHSCROLL
+    GROUPBOX        "Replica Alignment",IDC_STATIC,7,67,286,44
+    LTEXT           "Correlation &Radius (µm)",IDC_STATIC,13,81,90,10
+    EDITTEXT        IDC_EC_REPLICARADIUS,108,80,34,12,ES_RIGHT | 
+                    ES_AUTOHSCROLL
+    LTEXT           "Sample one cluster e&very",IDC_STATIC,13,96,88,10
+    EDITTEXT        IDC_EC_REPLICASAMPLEDIVIDER,108,94,34,12,ES_RIGHT | 
+                    ES_AUTOHSCROLL
+    LTEXT           "Min Number of Replic&as",IDC_STATIC,157,81,83,10
+    EDITTEXT        IDC_EC_MINREPLICAS,249,80,26,12,ES_RIGHT | 
+                    ES_AUTOHSCROLL
+    LTEXT           "Max Replica S&pread",IDC_STATIC,157,96,87,10
+    EDITTEXT        IDC_EC_MAXREPLICASPREAD,249,94,26,12,ES_RIGHT | 
+                    ES_AUTOHSCROLL
+    GROUPBOX        "Alignment",IDC_STATIC,7,113,286,179
+    LTEXT           "&Alignment Tolerance (µm)",IDC_STATIC,14,127,84,10
+    EDITTEXT        IDC_EC_ALIGNTOL,107,126,22,12,ES_RIGHT | ES_AUTOHSCROLL
+    GROUPBOX        "Alignment Trials",IDC_STATIC,13,138,273,93
+    LTEXT           "&Top Layer",IDC_STATIC,20,151,60,10
+    EDITTEXT        IDC_EC_TOPLAYER,107,150,22,12,ES_RIGHT | ES_AUTOHSCROLL
+    LTEXT           "&Bottom Layer",IDC_STATIC,19,165,60,10
+    EDITTEXT        IDC_EC_BOTTOMLAYER,107,165,22,12,ES_RIGHT | 
+                    ES_AUTOHSCROLL
+    LTEXT           "Triggers (comma separated)",IDC_STATIC,19,180,110,10
+    EDITTEXT        IDC_EC_TRIGGERCOUNT,20,193,109,12,ES_RIGHT | 
+                    ES_AUTOHSCROLL
+    PUSHBUTTON      "&Add",IDC_EC_ADD,20,208,35,15
+    PUSHBUTTON      "&Del",IDC_EC_DEL,95,208,35,15
+    CONTROL         "List1",IDC_EC_TRIALLIST,"SysListView32",LVS_REPORT | 
+                    LVS_SINGLESEL | LVS_SHOWSELALWAYS | WS_TABSTOP,138,150,
+                    139,73,WS_EX_CLIENTEDGE
+    LTEXT           "Min Sl&ope",IDC_STATIC,191,241,53,10
+    EDITTEXT        IDC_EC_MINSLOPE,246,239,26,12,ES_RIGHT | ES_AUTOHSCROLL
+    LTEXT           "Max Slo&pe ",IDC_STATIC,191,256,53,10
+    EDITTEXT        IDC_EC_MAXSLOPE,246,254,26,12,ES_RIGHT | ES_AUTOHSCROLL
+    LTEXT           "Min Grains for Vertical Tracks",IDC_STATIC,19,241,114,
+                    10
+    EDITTEXT        IDC_EC_NPTMINV,140,239,26,12,ES_RIGHT | ES_AUTOHSCROLL
+    PUSHBUTTON      "OK",IDOK,7,335,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,243,335,50,14
+    LTEXT           "Min Grains for Horizontal Tracks",IDC_STATIC,20,256,114,
+                    10
+    EDITTEXT        IDC_EC_NPTMINH,140,255,26,12,ES_RIGHT | ES_AUTOHSCROLL
+    LTEXT           "Min Grains at Slope = 0.1",IDC_STATIC,20,271,114,10
+    EDITTEXT        IDC_EC_NPTMIN01,140,270,26,12,ES_RIGHT | ES_AUTOHSCROLL
+    LTEXT           "Processors to use",IDC_STATIC,20,301,114,10
+    EDITTEXT        IDC_EC_PROCESSORS,140,299,26,12,ES_RIGHT | 
+                    ES_AUTOHSCROLL
+    DEFPUSHBUTTON   "&Test",IDC_EC_TEST,243,299,50,14
+    PUSHBUTTON      "&Help",IDC_EC_HELP,186,335,50,14
+    LTEXT           "Max tracking time (ms)",IDC_STATIC,20,317,114,10
+    EDITTEXT        IDC_EC_MAXTRACKINGTIME,140,315,26,12,ES_RIGHT | 
+                    ES_AUTOHSCROLL
+END
+
+IDD_TEST DIALOG DISCARDABLE  0, 0, 305, 79
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Test SmartTracker Configuration"
+FONT 8, "MS Sans Serif"
+BEGIN
+    PUSHBUTTON      "E&xit",IDCANCEL,248,58,50,14
+    PUSHBUTTON      "Load data",IDC_TS_LOAD,7,7,50,14
+    EDITTEXT        IDC_TS_DATAFILE,63,7,214,14,ES_AUTOHSCROLL
+    PUSHBUTTON      "...",IDC_TS_SELFILE,281,7,17,14
+    DEFPUSHBUTTON   "Test",IDC_TS_TEST,7,58,50,14
+    LTEXT           "Cycles",IDC_STATIC,63,25,46,13,SS_CENTERIMAGE
+    EDITTEXT        IDC_TS_CYCLES,116,24,33,14,ES_RIGHT | ES_AUTOHSCROLL
+    LTEXT           "Max tracks",IDC_STATIC,63,40,46,13,SS_CENTERIMAGE
+    EDITTEXT        IDC_TS_MAXTRACKS,116,40,33,14,ES_RIGHT | ES_AUTOHSCROLL
+    LTEXT           "Time (ms)",IDC_STATIC,156,25,46,13,SS_CENTERIMAGE
+    EDITTEXT        IDC_TS_TIME,208,24,33,14,ES_RIGHT | ES_AUTOHSCROLL | 
+                    ES_READONLY
+    LTEXT           "Tracks found",IDC_STATIC,156,40,50,13,SS_CENTERIMAGE
+    EDITTEXT        IDC_TS_TRACKSFOUND,208,40,33,14,ES_RIGHT | 
+                    ES_AUTOHSCROLL | ES_READONLY
+    PUSHBUTTON      "&Help",IDC_TS_HELP,62,58,50,14
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO DISCARDABLE 
+BEGIN
+    IDD_EDIT_CONFIG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 293
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 349
+    END
+
+    IDD_TEST, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 298
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 72
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_PROJNAME            "SmartTracker"
+END
+
+#endif    // English (U.S.) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+/////////////////////////////////////////////////////////////////////////////
+// Italian (Italy) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ITA)
+#ifdef _WIN32
+LANGUAGE LANG_ITALIAN, SUBLANG_ITALIAN
+#pragma code_page(1252)
+#endif //_WIN32
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+#endif    // Italian (Italy) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+

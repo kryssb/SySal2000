@@ -1,0 +1,25 @@
+HKCR
+{
+	FlexMapX.FlexibleMapX.1 = s 'FlexibleMapX Class'
+	{
+		CLSID = s '{20907edd-f7ff-46ed-864f-a1139ae7e6c4}'
+	}
+	FlexMapX.FlexibleMapX = s 'FlexibleMapX Class'
+	{
+		CLSID = s '{20907edd-f7ff-46ed-864f-a1139ae7e6c4}'
+		CurVer = s 'FlexMapX.FlexibleMapX.1'
+	}
+	NoRemove CLSID
+	{
+		ForceRemove {20907edd-f7ff-46ed-864f-a1139ae7e6c4} = s 'FlexibleMapX Class'
+		{
+			ProgID = s 'FlexMapX.FlexibleMapX.1'
+			VersionIndependentProgID = s 'FlexMapX.FlexibleMapX'
+			InprocServer32 = s '%MODULE%'
+			{
+				val ThreadingModel = s 'Free'
+			}
+			'TypeLib' = s '{92fa5986-0196-4917-bb22-f67f5c78eb67}'
+		}
+	}
+}

@@ -1,0 +1,24 @@
+HKCR
+{
+	ScanServer.SySalScanServer.1 = s 'SySalScanServer Class'
+	{
+		CLSID = s '{A03AA408-1260-4A63-87C5-12949BF07C7E}'
+	}
+	ScanServer.SySalScanServer = s 'SySalScanServer Class'
+	{
+		CLSID = s '{A03AA408-1260-4A63-87C5-12949BF07C7E}'
+		CurVer = s 'SySalScanServer.SySalScanServer.1'
+	}
+	NoRemove CLSID
+	{
+		ForceRemove {A03AA408-1260-4A63-87C5-12949BF07C7E} = s 'SySalScanServer Class'
+		{
+			ProgID = s 'SySalScanServer.SySalScanServer.1'
+			VersionIndependentProgID = s 'SySalScanServer.SySalScanServer'
+			ForceRemove 'Programmable'
+			LocalServer32 = s '%MODULE%'
+			val AppID = s '%APPID%'
+			'TypeLib' = s '{62B20409-94B8-41A5-9445-AE463EF2960A}'
+		}
+	}
+}

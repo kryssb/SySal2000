@@ -1,0 +1,25 @@
+HKCR
+{
+	ScanServerMessageRouter.MessageRouter.1 = s 'ScanServerMessageRouter Class'
+	{
+		CLSID = s '{117CB81A-6E7D-40A5-8F6B-D0A82FD05D38}'
+	}
+	ScanServerMessageRouter.MessageRouter = s 'ScanServerMessageRouter Class'
+	{
+		CLSID = s '{117CB81A-6E7D-40A5-8F6B-D0A82FD05D38}'
+		CurVer = s 'ScanServerMessageRouter.ScanServerMessageRouter.1'
+	}
+	NoRemove CLSID
+	{
+		ForceRemove {117CB81A-6E7D-40A5-8F6B-D0A82FD05D38} = s 'ScanServerMessageRouter Class'
+		{
+			ProgID = s 'ScanServerMessageRouter.MessageRouter.1'
+			VersionIndependentProgID = s 'ScanServerMessageRouter.MessageRouter'
+			InprocServer32 = s '%MODULE%'
+			{
+				val ThreadingModel = s 'Both'
+			}
+			'TypeLib' = s '{6A5AF626-ADB1-474E-89AE-AD13B337EFFD}'
+		}
+	}
+}

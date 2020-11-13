@@ -1,0 +1,45 @@
+<html>
+<body>
+<pre>
+<h1>Build Log</h1>
+<h3>
+--------------------Configuration: EGTotalScanWriter - Win32 Release MinSize--------------------
+</h3>
+<h3>Command Lines</h3>
+Creating temporary file "C:\DOCUME~1\kryss\LOCALS~1\Temp\RSP5F.tmp" with contents
+[
+/nologo /MD /W3 /GX /O1 /D "WIN32" /D "NDEBUG" /D "_WINDOWS" /D "_WINDLL" /D "_AFXDLL" /D "_MBCS" /D "_USRDLL" /D "_ATL_DLL" /Fp"ReleaseMinSize/EGTotalScanWriter.pch" /Yu"stdafx.h" /Fo"ReleaseMinSize/" /Fd"ReleaseMinSize/" /FD /c 
+"K:\SySal2\EGTotalScanWriter\EGTSWriter.cpp"
+]
+Creating command line "cl.exe @C:\DOCUME~1\kryss\LOCALS~1\Temp\RSP5F.tmp" 
+Creating temporary file "C:\DOCUME~1\kryss\LOCALS~1\Temp\RSP60.tmp" with contents
+[
+/nologo /subsystem:windows /dll /incremental:no /pdb:"ReleaseMinSize/EGTotalScanWriter.pdb" /machine:I386 /def:".\EGTotalScanWriter.def" /out:"ReleaseMinSize/EGTotalScanWriter.dll" /implib:"ReleaseMinSize/EGTotalScanWriter.lib" 
+.\ReleaseMinSize\EGTotalScanWriter.obj
+.\ReleaseMinSize\EGTSWriter.obj
+.\ReleaseMinSize\StdAfx.obj
+.\ReleaseMinSize\SySalDataIO_i.obj
+.\ReleaseMinSize\EGTotalScanWriter.res
+]
+Creating command line "link.exe @C:\DOCUME~1\kryss\LOCALS~1\Temp\RSP60.tmp"
+Creating temporary file "C:\DOCUME~1\kryss\LOCALS~1\Temp\RSP61.bat" with contents
+[
+@echo off
+regsvr32 /s /c ".\ReleaseMinSize\EGTotalScanWriter.dll"
+echo regsvr32 exec. time > ".\ReleaseMinSize\regsvr32.trg"
+]
+Creating command line "C:\DOCUME~1\kryss\LOCALS~1\Temp\RSP61.bat"
+Compiling...
+EGTSWriter.cpp
+Linking...
+   Creating library ReleaseMinSize/EGTotalScanWriter.lib and object ReleaseMinSize/EGTotalScanWriter.exp
+<h3>Output Window</h3>
+Performing registration
+
+
+
+<h3>Results</h3>
+EGTotalScanWriter.dll - 0 error(s), 0 warning(s)
+</pre>
+</body>
+</html>

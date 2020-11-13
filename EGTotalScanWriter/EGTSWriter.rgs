@@ -1,0 +1,26 @@
+HKCR
+{
+	EGTotalScanWriter.EGTSWriter.1 = s 'EGTotalScanWriter Class'
+	{
+		CLSID = s '{39372219-D1FB-47E1-A6F9-78608BAD2625}'
+	}
+	EGTotalScanWriter.EGTSWriter = s 'EGTotalScanWriter Class'
+	{
+		CLSID = s '{39372219-D1FB-47E1-A6F9-78608BAD2625}'
+		CurVer = s 'EGTotalScanWriter.EGTSWriter.1'
+	}
+	NoRemove CLSID
+	{
+		ForceRemove {39372219-D1FB-47E1-A6F9-78608BAD2625} = s 'EGTotalScanWriter Class'
+		{
+			ProgID = s 'EGTotalScanWriter.EGTSWriter.1'
+			VersionIndependentProgID = s 'EGTotalScanWriter.EGTSWriter'
+			ForceRemove 'Programmable'
+			InprocServer32 = s '%MODULE%'
+			{
+				val ThreadingModel = s 'Both'
+			}
+			'TypeLib' = s '{DA9084C2-D1CE-417F-B45E-CBE765930F93}'
+		}
+	}
+}

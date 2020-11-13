@@ -1,0 +1,77 @@
+// RemoteControlServerTCPIP.idl : IDL source for RemoteControlServerTCPIP.dll
+//
+
+// This file will be processed by the MIDL tool to
+// produce the type library (RemoteControlServerTCPIP.tlb) and marshalling code.
+
+import "oaidl.idl";
+import "ocidl.idl";
+import "..\Common\Connection.h";
+import "..\Common\Config.h";
+import "..\Common\GUIdefs.h";
+import "..\Common\RemoteControl.h";
+	[
+		object,
+		uuid(C022EEAD-748A-11D3-A47B-E89C0BCE9720),
+	
+		helpstring("ISySalObject Interface"),
+		pointer_default(unique)
+	]
+	interface ISySalObject : IUnknown
+	{
+		[helpstring("method SetName")] HRESULT SetName(ConnectionName name);
+		[helpstring("method GetName")] HRESULT GetName(ConnectionName name);
+		[helpstring("method SetConfig")] HRESULT SetConfig(SySalConfig *pConfig);
+		[helpstring("method GetConfig")] HRESULT GetConfig(SySalConfig *pConfig);
+		[helpstring("method EditConfig")] HRESULT EditConfig(SySalConfig *pConfig, HSySalHANDLE hWnd);
+		[helpstring("method EnableMonitor")] HRESULT EnableMonitor(boolean bEnable);
+		[helpstring("method GetNumberOfConnections")] HRESULT GetNumberOfConnections(int *pNumber);
+		[helpstring("method SetConnection")] HRESULT SetConnection(int n, SySalConnection connection);
+		[helpstring("method GetConnection")] HRESULT GetConnection(int n, SySalConnection *pConnection);
+		[helpstring("method GetIcon")] HRESULT GetIcon(int n, HSySalHICON *pHICON);
+		[helpstring("method GetClassName")] HRESULT GetClassName(ConnectionName name);
+		[helpstring("method SyncExec")] HRESULT SyncExec();
+		[helpstring("method AsyncExec")] HRESULT AsyncExec(HSySalHANDLE HNotifyStatusChangeEvent);
+		[helpstring("method AsyncCheckStatus")] HRESULT AsyncCheckStatus(long *pStatus);
+		[helpstring("method AsyncWait")] HRESULT AsyncWait();
+		[helpstring("method AsyncPause")] HRESULT AsyncPause();
+		[helpstring("method AsyncStop")] HRESULT AsyncStop();
+		[helpstring("method AsyncResume")] HRESULT AsyncResume();
+		[helpstring("method IsReady")] HRESULT IsReady(long *pWrongConn, long *pRetCode);
+	};
+
+	[
+		object,
+		uuid(09AFBFFE-BBA9-4A5A-9166-352A73CFCA32),
+	
+		helpstring("IRemoteControlServer Interface"),
+		pointer_default(unique)
+	]
+	interface IRemoteControlServer : IUnknown
+	{
+		[helpstring("method Connect")] HRESULT Connect(RemoteControlInterface *pRCI);
+		[helpstring("method Disconnect")] HRESULT Disconnect();
+		[helpstring("method IsConnected")] HRESULT IsConnected();
+		[helpstring("method SendMessage")] HRESULT SendMessage(UCHAR *pMsg);
+	};
+
+[
+	uuid(1B11D019-4F75-43EB-BDDD-0110BA572B5C),
+	version(1.0),
+	helpstring("RemoteControlServerTCPIP 1.0 Type Library")
+]
+library REMOTECONTROLSERVERTCPIPLib
+{
+	importlib("stdole32.tlb");
+	importlib("stdole2.tlb");
+
+	[
+		uuid(7D8FCEFA-E081-4559-B6D6-F8AC7AB09500),
+		helpstring("RemoteControlServerTCPIP Class")
+	]
+	coclass RemoteControlServerTCPIP
+	{
+		[default] interface ISySalObject;
+		interface IRemoteControlServer;
+	};
+};

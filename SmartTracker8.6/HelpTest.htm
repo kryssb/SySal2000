@@ -1,0 +1,70 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" >
+<HTML>
+	<HEAD>
+		<TITLE></TITLE>
+		<META NAME="GENERATOR" Content="Microsoft Visual Studio 7.0">
+	</HEAD>
+	<BODY>
+		<P><FONT face="Arial" color="#000066" size="5"><EM>SmartTracker4 Testing mode</EM></FONT>
+			<EM><FONT size="4"><FONT face="Arial">
+						<HR width="100%" SIZE="2">
+					</FONT>
+		</P>
+		<P align="justify"></FONT></EM><FONT size="2" face="Arial">SmartTracker4 has a simple 
+				tuning utility that can be used to check its performances without keeping a 
+				microscope busy. However, it must be clear that the actual&nbsp;tracking times 
+				depend critically on the machine used (CPU, RAM bus, motherboard, L2 cache 
+				speed and so on). The results obtained are reliable to define scaling factors 
+				for the tracking time rather than absolute values.</FONT></P>
+		<P align="justify"><FONT face="Arial"><IMG alt="" src="HelpTest.gif"></FONT></P>
+		<P align="justify"><FONT face="Arial" size="2">In order to use this testing utility, 
+				the user must supply an ASCII file containing a set of grains. The expected 
+				format resembles the grain dump format of VertigoScan / VertigoScan2 / 
+				VertigoScan3, but there is one important difference: since the tracking module 
+				needs to know the pixel conversion factors and the tracking area, usually the 
+				program that is using the module provides this information; in the testing 
+				mode, the grain dump file should contain a first row with this data. Thus, the 
+				file format is the following:</FONT></P>
+		<P align="justify"><FONT face="Arial" size="2"><STRONG>First row</STRONG>: &lt;image 
+				width&gt; &lt;image height&gt; &lt;left edge&gt; &lt;top edge&gt; &lt;window 
+				width&gt; &lt;window height&gt; &lt;pixel to micron X&gt; &lt;pixel to micron 
+				Y&gt;<BR>
+				<EM>Example: 1024 1024 8 8 1008 1008 -0.36 0.36</EM><BR>
+				The meaning of image width and image height is obvious. SmartTracker4 can work 
+				in a subwindow of this area, whose edges are defined by specifying in pixels 
+				the coordinate of the left and top edge, and the size of the window. The last 
+				two parameters are the pixel/micron conversion factors.</FONT></P>
+		<P align="justify"><FONT face="Arial" size="2"><STRONG>All other rows</STRONG>: 
+				&lt;field number&gt; &lt;is_top&gt; &lt;layer&gt; &lt;Z&gt; &lt;total 
+				clusters&nbsp;in layer&gt; &lt;cluster id&gt; &lt;X&gt; &lt;Y&gt; &lt;area&gt;<BR>
+				<EM>Example: 7 1 11 -18.447456 679 222 693.361267 735.290771 2</EM><BR>
+				The testing utility always uses the first tomography, i.e. the first side of 
+				the first field of view it encounters in the file. However, the field and side 
+				information must be supplied for format compatibility and for future upgrades. 
+				Is_top is 1 when the side is top and 0 when it is bottom. Z is in micron 
+				whereas X, Y and area are in pixels.</FONT></P>
+		<P align="justify"><FONT face="Arial" size="2">Grains must be appear in ascending order 
+				of layer and cluster id.</FONT></P>
+		<P align="justify"><FONT face="Arial" size="2">The file path can be written directly in 
+				the edit box or chosen interactively by clicking on the button on the right. 
+				The file is actually loaded when the Load&nbsp;data button is pressed. The 
+				number of cycles to use for the speed test can be chosen by the user. In order 
+				to obtain reliable estimates, this number should be chosen so that the test 
+				lasts at least one second. As all SySal tracking modules,&nbsp;SmartTracker4 
+				works using a memory area prepared to host tracks. If during the execution of 
+				the tracking algorithm the maximum number of tracks is exceeded, the track 
+				search stops, even if those tracks are going to be discarded, so it is wise to 
+				keep this memory area much larger than the number of physical tracks in an 
+				emulsion field of view. This suggestion remains true also when using 
+				SmartTracker4 from a scanning module.<BR>
+				The test is actually performed when the Test button is pressed. After execution 
+				of all cycles, the total time is displayed along with the number of tracks 
+				found. The results usually tend to underestimate slightly the real tracking 
+				times, because after the first cycle the processor&nbsp;caches&nbsp;are already 
+				loaded with all the memory areas used in the tracking, which is not realistic 
+				(the error should be less than 10% anyway);&nbsp;as explained above, this tool 
+				is useful to establish speed ratios and to give a rough idea of the tracking 
+				speed.</FONT></P>
+		</FONT>
+	</BODY>
+</HTML>

@@ -1,0 +1,42 @@
+// Playground.odl : type library source for Playground.exe
+
+// This file will be processed by the MIDL compiler to produce the
+// type library (Playground.tlb).
+
+[ uuid(4EBD0A23-7386-11D3-A47B-B3DA25ED5623), version(1.0) ]
+library Playground
+{
+	importlib("stdole32.tlb");
+	importlib("stdole2.tlb");
+
+
+	//  Primary dispatch interface for CPlaygroundDoc
+	
+	[ uuid(4EBD0A24-7386-11D3-A47B-B3DA25ED5623) ]
+	dispinterface IPlayground
+	{
+		properties:
+			// NOTE - ClassWizard will maintain property information here.
+			//    Use extreme caution when editing this section.
+			//{{AFX_ODL_PROP(CPlaygroundDoc)
+			//}}AFX_ODL_PROP
+			
+		methods:
+			// NOTE - ClassWizard will maintain method information here.
+			//    Use extreme caution when editing this section.
+			//{{AFX_ODL_METHOD(CPlaygroundDoc)
+			//}}AFX_ODL_METHOD
+
+	};
+
+	//  Class information for CPlaygroundDoc
+	
+	[ uuid(4EBD0A22-7386-11D3-A47B-B3DA25ED5623) ]
+	coclass Document
+	{
+		[default] dispinterface IPlayground;
+	};
+
+	//{{AFX_APPEND_ODL}}
+	//}}AFX_APPEND_ODL}}
+};

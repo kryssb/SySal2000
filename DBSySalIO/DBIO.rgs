@@ -1,0 +1,25 @@
+HKCR
+{
+	DBSySalIO.DBIO.1 = s 'DBSySalIO Class'
+	{
+		CLSID = s '{0FA1DF57-68A4-494E-B331-EF2A035B661C}'
+	}
+	DBSySalIO.DBIO = s 'DBSySalIO Class'
+	{
+		CLSID = s '{0FA1DF57-68A4-494E-B331-EF2A035B661C}'
+		CurVer = s 'DBSySalIO.DBIO.1'
+	}
+	NoRemove CLSID
+	{
+		ForceRemove {0FA1DF57-68A4-494E-B331-EF2A035B661C} = s 'DBSySalIO Class'
+		{
+			ProgID = s 'DBSySalIO.DBIO.1'
+			VersionIndependentProgID = s 'DBSySalIO.DBIO'
+			InprocServer32 = s '%MODULE%'
+			{
+				val ThreadingModel = s 'Both'
+			}
+			'TypeLib' = s '{8ABBFDCA-F81F-4636-ABCA-8D5693B26F05}'
+		}
+	}
+}

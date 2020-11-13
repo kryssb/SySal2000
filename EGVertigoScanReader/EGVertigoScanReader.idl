@@ -1,0 +1,124 @@
+// EGVertigoScanReader.idl : IDL source for EGVertigoScanReader.dll
+//
+
+// This file will be processed by the MIDL tool to
+// produce the type library (EGVertigoScanReader.tlb) and marshalling code.
+
+import "oaidl.idl";
+import "ocidl.idl";
+	[
+		object,
+		uuid(FFEB0997-2C45-4B3A-BFA6-F9651DBBF1EC),
+		dual,
+		helpstring("IEGVSCatalog Interface"),
+		pointer_default(unique)
+	]
+	interface IEGVSCatalog : IDispatch
+	{
+		[id(1), helpstring("method Load")] HRESULT Load(BSTR FileName);
+		[id(2), helpstring("method IsOk")] HRESULT IsOk();
+		[propget, id(3), helpstring("property hdrId1")] HRESULT hdrId1([out, retval] long *pVal);
+		[propget, id(4), helpstring("property hdrId2")] HRESULT hdrId2([out, retval] long *pVal);
+		[propget, id(5), helpstring("property hdrId3")] HRESULT hdrId3([out, retval] long *pVal);
+		[propget, id(6), helpstring("property hdrId4")] HRESULT hdrId4([out, retval] long *pVal);
+		[propget, id(7), helpstring("property areaFragments")] HRESULT areaFragments([out, retval] long *pVal);
+		[propget, id(8), helpstring("property areaXMax")] HRESULT areaXMax([out, retval] float *pVal);
+		[propget, id(9), helpstring("property areaXMin")] HRESULT areaXMin([out, retval] float *pVal);
+		[propget, id(10), helpstring("property areaXStep")] HRESULT areaXStep([out, retval] float *pVal);
+		[propget, id(11), helpstring("property areaXViews")] HRESULT areaXViews([out, retval] long *pVal);
+		[propget, id(12), helpstring("property areaYMax")] HRESULT areaYMax([out, retval] float *pVal);
+		[propget, id(13), helpstring("property areaYMin")] HRESULT areaYMin([out, retval] float *pVal);
+		[propget, id(14), helpstring("property areaYStep")] HRESULT areaYStep([out, retval] float *pVal);
+		[propget, id(15), helpstring("property areaYViews")] HRESULT areaYViews([out, retval] long *pVal);
+		[propget, id(16), helpstring("property areaFragmentIndexByView")] HRESULT areaFragmentIndexByView(long i, [out, retval] long *pVal);
+		[propget, id(17), helpstring("property areaFragmentIndexByXY")] HRESULT areaFragmentIndexByXY(long xn, long yn, [out, retval] long *pVal);
+		[propget, id(18), helpstring("property hdrCountOfConfigs")] HRESULT hdrCountOfConfigs([out, retval] int *pVal);
+		[propget, id(19), helpstring("property cfgClassName")] HRESULT cfgClassName(int i, [out, retval] BSTR *pVal);
+		[propget, id(20), helpstring("property cfgCountOfItems")] HRESULT cfgCountOfItems(int i, [out, retval] int *pVal);
+		[propget, id(21), helpstring("property cfgConfigName")] HRESULT cfgConfigName(int i, [out, retval] BSTR *pVal);
+		[propget, id(22), helpstring("property cfgItemName")] HRESULT cfgItemName(int i, int j, [out, retval] BSTR *pVal);
+		[propget, id(23), helpstring("property cfgItemValue")] HRESULT cfgItemValue(int i, int j, [out, retval] BSTR *pVal);
+	};
+	[
+		object,
+		uuid(A4EB4D71-D295-4933-8547-9036B8766D63),
+		dual,
+		helpstring("IEGVSFragment Interface"),
+		pointer_default(unique)
+	]
+	interface IEGVSFragment : IDispatch
+	{
+		[id(1), helpstring("method Load")] HRESULT Load(BSTR FileName);
+		[id(2), helpstring("method IsOk")] HRESULT IsOk();
+		[propget, id(3), helpstring("property hdrId1")] HRESULT hdrId1([out, retval] long *pVal);
+		[propget, id(4), helpstring("property hdrId2")] HRESULT hdrId2([out, retval] long *pVal);
+		[propget, id(5), helpstring("property hdrId3")] HRESULT hdrId3([out, retval] long *pVal);
+		[propget, id(6), helpstring("property hdrId4")] HRESULT hdrId4([out, retval] long *pVal);
+		[propget, id(7), helpstring("property fragCodingMode")] HRESULT fragCodingMode([out, retval] long *pVal);
+		[propget, id(8), helpstring("property fragIndex")] HRESULT fragIndex([out, retval] long *pVal);
+		[propget, id(9), helpstring("property fragCountOfViews")] HRESULT fragCountOfViews([out, retval] long *pVal);
+		[propget, id(10), helpstring("property fragFitCorrectionDataSize")] HRESULT fragFitCorrectionDataSize([out, retval] long *pVal);
+		[propget, id(11), helpstring("property fragStartView")] HRESULT fragStartView([out, retval] long *pVal);
+		[propget, id(12), helpstring("property vwTileX")] HRESULT vwTileX(long v, [out, retval] long *pVal);
+		[propget, id(13), helpstring("property vwTileY")] HRESULT vwTileY(long v, [out, retval] long *pVal);
+		[propget, id(14), helpstring("property vwX")] HRESULT vwX(long v, int s, [out, retval] float *pVal);
+		[propget, id(15), helpstring("property vwY")] HRESULT vwY(long v, int s, [out, retval] float *pVal);
+		[propget, id(16), helpstring("property vwMapX")] HRESULT vwMapX(long v, int s, [out, retval] float *pVal);
+		[propget, id(17), helpstring("property vwMapY")] HRESULT vwMapY(long v, int s, [out, retval] float *pVal);
+		[propget, id(18), helpstring("property vwTopExt")] HRESULT vwTopExt(long v, [out, retval] float *pVal);
+		[propget, id(19), helpstring("property vwTopInt")] HRESULT vwTopInt(long v, [out, retval] float *pVal);
+		[propget, id(20), helpstring("property vwBottomInt")] HRESULT vwBottomInt(long v, [out, retval] float *pVal);
+		[propget, id(21), helpstring("property vwBottomExt")] HRESULT vwBottomExt(long v, [out, retval] float *pVal);
+		[propget, id(22), helpstring("property vwImageMat")] HRESULT vwImageMat(long v, int s, int i, int j, [out, retval] float *pVal);
+		[propget, id(23), helpstring("property vwStatus")] HRESULT vwStatus(long v, int s, [out, retval] BYTE *pVal);
+		[propget, id(24), helpstring("property vwCountOfLayers")] HRESULT vwCountOfLayers(long v, int s, [out, retval] int *pVal);
+		[propget, id(25), helpstring("property vwZ")] HRESULT vwZ(long v, int s, int l, [out, retval] float *pVal);
+		[propget, id(26), helpstring("property vwCountOfTracks")] HRESULT vwCountOfTracks(long v, int s, [out, retval] long *pVal);
+		[propget, id(27), helpstring("property trkInterceptX")] HRESULT trkInterceptX(long v, int s, long l, [out, retval] float *pVal);
+		[propget, id(28), helpstring("property trkInterceptY")] HRESULT trkInterceptY(long v, int s, long l, [out, retval] float *pVal);
+		[propget, id(29), helpstring("property trkInterceptZ")] HRESULT trkInterceptZ(long v, int s, long l, [out, retval] float *pVal);
+		[propget, id(30), helpstring("property trkInterceptErrorsX")] HRESULT trkInterceptErrorsX(long v, int s, long l, [out, retval] float *pVal);
+		[propget, id(31), helpstring("property trkInterceptErrorsY")] HRESULT trkInterceptErrorsY(long v, int s, long l, [out, retval] float *pVal);
+		[propget, id(32), helpstring("property trkInterceptErrorsZ")] HRESULT trkInterceptErrorsZ(long v, int s, long l, [out, retval] float *pVal);
+		[propget, id(33), helpstring("property trkFirstZ")] HRESULT trkFirstZ(long v, int s, long l, [out, retval] float *pVal);
+		[propget, id(34), helpstring("property trkLastZ")] HRESULT trkLastZ(long v, int s, long l, [out, retval] float *pVal);
+		[propget, id(35), helpstring("property trkSlopeX")] HRESULT trkSlopeX(long v, int s, long l, [out, retval] float *pVal);
+		[propget, id(36), helpstring("property trkSlopeY")] HRESULT trkSlopeY(long v, int s, long l, [out, retval] float *pVal);
+		[propget, id(37), helpstring("property trkSlopeZ")] HRESULT trkSlopeZ(long v, int s, long l, [out, retval] float *pVal);
+		[propget, id(38), helpstring("property trkSlopeErrorsX")] HRESULT trkSlopeErrorsX(long v, int s, long l, [out, retval] float *pVal);
+		[propget, id(39), helpstring("property trkSlopeErrorsY")] HRESULT trkSlopeErrorsY(long v, int s, long l, [out, retval] float *pVal);
+		[propget, id(40), helpstring("property trkSlopeErrorsZ")] HRESULT trkSlopeErrorsZ(long v, int s, long l, [out, retval] float *pVal);
+		[propget, id(41), helpstring("property trkSigma")] HRESULT trkSigma(long v, int s, long l, [out, retval] float *pVal);
+		[propget, id(42), helpstring("property trkCountOfPoints")] HRESULT trkCountOfPoints(long v, int s, long l, [out, retval] int *pVal);
+		[propget, id(43), helpstring("property ptsX")] HRESULT ptsX(long v, int s, long l, int p, [out, retval] float *pVal);
+		[propget, id(44), helpstring("property ptsY")] HRESULT ptsY(long v, int s, long l, int p, [out, retval] float *pVal);
+		[propget, id(45), helpstring("property ptsZ")] HRESULT ptsZ(long v, int s, long l, int p, [out, retval] float *pVal);
+	};
+
+[
+	uuid(B6AF5F56-9B24-4885-A28D-3360305B4DE4),
+	version(1.0),
+	helpstring("EGVertigoScanReader 1.0 Type Library")
+]
+library EGVERTIGOSCANREADERLib
+{
+	importlib("stdole32.tlb");
+	importlib("stdole2.tlb");
+
+	[
+		uuid(AA3E984D-7CD0-4329-9267-7A2D5863B29D),
+		helpstring("EGVSCatalog Class")
+	]
+	coclass EGVSCatalog
+	{
+		[default] interface IEGVSCatalog;
+	};
+	[
+		uuid(6898CEEA-FB49-4C31-B945-86D91F2981A6),
+		helpstring("EGVSFragment Class")
+	]
+	coclass EGVSFragment
+	{
+		[default] interface IEGVSFragment;
+	};
+};

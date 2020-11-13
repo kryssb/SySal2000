@@ -1,0 +1,25 @@
+HKCR
+{
+	FlexStage2.FlexStage2.2 = s 'FlexStage2 Class'
+	{
+		CLSID = s '{ead9ce32-a109-4b0c-8586-da2fa48e413e}'
+	}
+	FlexStage2.FlexStage2 = s 'FlexStage2 Class'
+	{
+		CLSID = s '{ead9ce32-a109-4b0c-8586-da2fa48e413e}'
+		CurVer = s 'FlexStage.FlexStage.1'
+	}
+	NoRemove CLSID
+	{
+		ForceRemove {ead9ce32-a109-4b0c-8586-da2fa48e413e} = s 'FlexStage2 Class'
+		{
+			ProgID = s 'FlexStage2.FlexStage2.2'
+			VersionIndependentProgID = s 'FlexStage2.FlexStage2'
+			InprocServer32 = s '%MODULE%'
+			{
+				val ThreadingModel = s 'Free'
+			}
+			'TypeLib' = s '{936311f9-5ab5-4483-8c7a-3b264b147a09}'
+		}
+	}
+}

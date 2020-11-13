@@ -1,0 +1,79 @@
+<html>
+<body>
+<pre>
+<h1>Build Log</h1>
+<h3>
+--------------------Configuration: Odyssey1 - Win32 Debug--------------------
+</h3>
+<h3>Command Lines</h3>
+Creating temporary file "C:\DOCUME~1\Kryss\LOCALS~1\Temp\RSP9D.tmp" with contents
+[
+/nologo /MDd /W3 /Gm /GX /ZI /Od /I "Matrox\onl\src\headers\common" /I "Matrox\onl\src\headers\host" /I "..\Common" /I "Matrox\mil\include" /D "WIN32" /D "_DEBUG" /D "_WINDOWS" /D "_WINDLL" /D "_AFXDLL" /D "_MBCS" /D "_USRDLL" /Fp"Debug/Odyssey1.pch" /Yu"stdafx.h" /Fo"Debug/" /Fd"Debug/" /FD /GZ /c 
+"D:\SySal2\Odyssey\OptimizeProgramDlg.cpp"
+]
+Creating command line "cl.exe @C:\DOCUME~1\Kryss\LOCALS~1\Temp\RSP9D.tmp" 
+Creating temporary file "C:\DOCUME~1\Kryss\LOCALS~1\Temp\RSP9E.tmp" with contents
+[
+/nologo /subsystem:windows /dll /incremental:yes /pdb:"Debug/Odyssey1.pdb" /debug /machine:I386 /def:".\Odyssey1.def" /out:"Debug/Odyssey1.dll" /implib:"Debug/Odyssey1.lib" /pdbtype:sept 
+.\Debug\Clustering.obj
+.\Debug\EditConfig.obj
+.\Debug\Globals.obj
+.\Debug\MakeFilterEqualization.obj
+.\Debug\Odyssey1.obj
+.\Debug\OdysseyClass.obj
+.\Debug\OdysseyData.obj
+.\Debug\OptimizeProgramDlg.obj
+.\Debug\SelectGrabBuffer.obj
+.\Debug\StdAfx.obj
+.\Debug\TestConfig.obj
+.\Debug\WndDisplay.obj
+.\Debug\Odyssey1.res
+.\htmlhelp.lib
+.\Matrox\onl\lib\obj\nt\odclib.lib
+]
+Creating command line "link.exe @C:\DOCUME~1\Kryss\LOCALS~1\Temp\RSP9E.tmp"
+Creating temporary file "C:\DOCUME~1\Kryss\LOCALS~1\Temp\RSP9F.bat" with contents
+[
+@echo off
+regsvr32 /s /c ".\Debug\Odyssey1.dll"
+echo regsvr32 exec. time > ".\Debug\regsvr32.trg"
+]
+Creating command line "C:\DOCUME~1\Kryss\LOCALS~1\Temp\RSP9F.bat"
+Compiling...
+OptimizeProgramDlg.cpp
+D:\SySal2\Odyssey\OptimizeProgramDlg.cpp(118) : warning C4018: '>=' : signed/unsigned mismatch
+D:\SySal2\Odyssey\OptimizeProgramDlg.cpp(118) : warning C4018: '<=' : signed/unsigned mismatch
+D:\SySal2\Odyssey\OptimizeProgramDlg.cpp(149) : warning C4244: '=' : conversion from 'float' to 'long', possible loss of data
+D:\SySal2\Odyssey\OptimizeProgramDlg.cpp(150) : warning C4244: '=' : conversion from 'float' to 'long', possible loss of data
+D:\SySal2\Odyssey\OptimizeProgramDlg.cpp(153) : warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+D:\SySal2\Odyssey\OptimizeProgramDlg.cpp(154) : warning C4244: '=' : conversion from 'float' to 'int', possible loss of data
+D:\SySal2\Odyssey\OptimizeProgramDlg.cpp(156) : warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+D:\SySal2\Odyssey\OptimizeProgramDlg.cpp(158) : warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+D:\SySal2\Odyssey\OptimizeProgramDlg.cpp(159) : warning C4244: '=' : conversion from 'float' to 'int', possible loss of data
+D:\SySal2\Odyssey\OptimizeProgramDlg.cpp(161) : warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+D:\SySal2\Odyssey\OptimizeProgramDlg.cpp(194) : warning C4244: '=' : conversion from 'int' to 'float', possible loss of data
+D:\SySal2\Odyssey\OptimizeProgramDlg.cpp(194) : warning C4244: 'argument' : conversion from 'float' to 'int', possible loss of data
+D:\SySal2\Odyssey\OptimizeProgramDlg.cpp(194) : warning C4244: 'argument' : conversion from 'float' to 'int', possible loss of data
+D:\SySal2\Odyssey\OptimizeProgramDlg.cpp(195) : warning C4244: 'argument' : conversion from 'float' to 'int', possible loss of data
+D:\SySal2\Odyssey\OptimizeProgramDlg.cpp(195) : warning C4244: 'argument' : conversion from 'float' to 'int', possible loss of data
+D:\SySal2\Odyssey\OptimizeProgramDlg.cpp(198) : warning C4244: 'argument' : conversion from 'float' to 'int', possible loss of data
+D:\SySal2\Odyssey\OptimizeProgramDlg.cpp(198) : warning C4244: 'argument' : conversion from 'float' to 'int', possible loss of data
+D:\SySal2\Odyssey\OptimizeProgramDlg.cpp(204) : warning C4244: '=' : conversion from 'int' to 'float', possible loss of data
+D:\SySal2\Odyssey\OptimizeProgramDlg.cpp(205) : warning C4244: 'argument' : conversion from 'float' to 'int', possible loss of data
+D:\SySal2\Odyssey\OptimizeProgramDlg.cpp(205) : warning C4244: 'argument' : conversion from 'float' to 'int', possible loss of data
+D:\SySal2\Odyssey\OptimizeProgramDlg.cpp(206) : warning C4244: 'argument' : conversion from 'float' to 'int', possible loss of data
+D:\SySal2\Odyssey\OptimizeProgramDlg.cpp(206) : warning C4244: 'argument' : conversion from 'float' to 'int', possible loss of data
+D:\SySal2\Odyssey\OptimizeProgramDlg.cpp(209) : warning C4244: 'argument' : conversion from 'float' to 'int', possible loss of data
+D:\SySal2\Odyssey\OptimizeProgramDlg.cpp(209) : warning C4244: 'argument' : conversion from 'float' to 'int', possible loss of data
+Linking...
+   Creating library Debug/Odyssey1.lib and object Debug/Odyssey1.exp
+<h3>Output Window</h3>
+Performing registration
+
+
+
+<h3>Results</h3>
+Odyssey1.dll - 0 error(s), 24 warning(s)
+</pre>
+</body>
+</html>

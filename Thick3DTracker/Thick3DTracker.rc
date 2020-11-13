@@ -1,0 +1,253 @@
+//Microsoft Developer Studio generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// Neutral resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_NEU)
+#ifdef _WIN32
+LANGUAGE LANG_NEUTRAL, SUBLANG_NEUTRAL
+#pragma code_page(1252)
+#endif //_WIN32
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_EDIT_CONFIG DIALOG DISCARDABLE  0, 0, 335, 272
+STYLE DS_MODALFRAME | DS_CENTER | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Edit Tracking Parameters"
+FONT 8, "MS Sans Serif"
+BEGIN
+    GROUPBOX        "Memory Management",IDC_STATIC,7,7,178,61
+    LTEXT           "Max &Grains",IDC_STATIC,14,20,44,10
+    EDITTEXT        IDC_EC_MAXGRAINS,62,19,34,12,ES_AUTOHSCROLL
+    LTEXT           "Max &Flat Strips",IDC_STATIC,14,35,47,10
+    EDITTEXT        IDC_EC_MAXFLATSTRIPS,62,34,34,12,ES_AUTOHSCROLL
+    LTEXT           "Max &Layers",IDC_STATIC,14,50,44,10
+    EDITTEXT        IDC_EC_MAXLAYERS,62,49,34,12,ES_AUTOHSCROLL
+    LTEXT           "Cells Along &X",IDC_STATIC,104,20,44,10
+    EDITTEXT        IDC_EC_CELLSX,152,19,26,12,ES_AUTOHSCROLL
+    LTEXT           "Cells Along &Y",IDC_STATIC,104,35,44,10
+    EDITTEXT        IDC_EC_CELLSY,152,34,26,12,ES_AUTOHSCROLL
+    LTEXT           "Cell Ove&rflow",IDC_STATIC,104,50,44,10
+    EDITTEXT        IDC_EC_CELLOVERFLOW,152,49,26,12,ES_AUTOHSCROLL
+    GROUPBOX        "Grains",IDC_STATIC,188,7,68,61
+    LTEXT           "&Min Pixels",IDC_STATIC,194,20,32,10
+    EDITTEXT        IDC_EC_MINPIXELS,233,19,18,12,ES_AUTOHSCROLL
+    LTEXT           "M&ax Pixels",IDC_STATIC,194,35,34,10
+    EDITTEXT        IDC_EC_MAXPIXELS,233,34,18,12,ES_AUTOHSCROLL
+    GROUPBOX        "Flat Strips",IDC_STATIC,260,7,68,61
+    LTEXT           "&Min Pixels",IDC_STATIC,265,20,32,10
+    EDITTEXT        IDC_EC_MINFSPIXELS,304,19,18,12,ES_AUTOHSCROLL
+    LTEXT           "M&ax Width / Length",IDC_STATIC,265,35,34,18
+    EDITTEXT        IDC_EC_MAXFSWIDTH2LENGTH,304,34,18,12,ES_AUTOHSCROLL
+    GROUPBOX        "Alignment",IDC_STATIC,7,71,321,100
+    LTEXT           "&Start Gap (Layers)",IDC_STATIC,13,83,56,10
+    EDITTEXT        IDC_EC_STARTGAP,78,82,22,12,ES_AUTOHSCROLL
+    LTEXT           "&Retry Gap (Layers)",IDC_STATIC,13,98,63,10
+    EDITTEXT        IDC_EC_RETRYGAP,78,97,22,12,ES_AUTOHSCROLL
+    LTEXT           "Max &Empty Layers",IDC_STATIC,13,113,57,10
+    EDITTEXT        IDC_EC_ATTLIM,78,112,22,12,ES_AUTOHSCROLL
+    LTEXT           "Startu&p Alignment &Tolerance (micron)",IDC_STATIC,177,
+                    83,118,10
+    EDITTEXT        IDC_EC_DHARD,300,82,22,12,ES_AUTOHSCROLL
+    LTEXT           "E&xtension Alignment Tolerance (micron)",IDC_STATIC,177,
+                    98,121,10
+    EDITTEXT        IDC_EC_DLOOSE,300,97,22,12,ES_AUTOHSCROLL
+    LTEXT           "&Opening Angle of Tracking Sector (°)",IDC_STATIC,13,
+                    132,114,10
+    EDITTEXT        IDC_EC_TKSECTOROPENINGANGLE,131,131,22,12,ES_AUTOHSCROLL
+    LTEXT           "Direction &Agreement (°)",IDC_STATIC,13,147,114,10
+    EDITTEXT        IDC_EC_FSDIRAGREEMENT,131,146,22,12,ES_AUTOHSCROLL
+    LTEXT           "Max &Plane Distance of Next Flat Strip (micron)",
+                    IDC_STATIC,159,132,139,10
+    EDITTEXT        IDC_EC_MAXPLANEDISTANCE,300,131,22,12,ES_AUTOHSCROLL
+    LTEXT           "Max Empty &Layers",IDC_STATIC,159,147,139,10
+    EDITTEXT        IDC_EC_MAXFSEMPTYLAYERS,300,146,22,12,ES_AUTOHSCROLL
+    GROUPBOX        "Track Quality",IDC_STATIC,7,173,321,68
+    LTEXT           "Min Sl&ope (rad)",IDC_STATIC,14,187,53,10
+    EDITTEXT        IDC_EC_MINSLOPE,74,186,26,12,ES_AUTOHSCROLL
+    LTEXT           "Max Slo&pe (rad)",IDC_STATIC,14,202,53,10
+    EDITTEXT        IDC_EC_MAXSLOPE,74,201,26,12,ES_AUTOHSCROLL
+    LTEXT           "Min Points at &0 Slope",IDC_STATIC,133,187,69,10
+    EDITTEXT        IDC_EC_MINPOINTS0,296,186,26,12,ES_AUTOHSCROLL
+    LTEXT           "Min Points &Falldo&wn Coefficient (1/rad)",IDC_STATIC,
+                    133,202,150,10
+    EDITTEXT        IDC_EC_MINPOINTSSLOPE,296,201,26,12,ES_AUTOHSCROLL
+    LTEXT           "Min Flat Strips",IDC_STATIC,14,222,57,10
+    EDITTEXT        IDC_EC_MINFLATSTRIPS,74,221,26,12,ES_AUTOHSCROLL
+    LTEXT           "Min Flat Track Length (micron)",IDC_STATIC,134,222,150,
+                    10
+    EDITTEXT        IDC_EC_MINFLATTRACKLENGTH,296,222,26,12,ES_AUTOHSCROLL
+    DEFPUSHBUTTON   "OK",IDOK,7,251,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,278,251,50,14
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO DISCARDABLE 
+BEGIN
+    IDD_EDIT_CONFIG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 328
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 265
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+#endif    // Neutral resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+/////////////////////////////////////////////////////////////////////////////
+// English (U.S.) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
+#pragma code_page(1252)
+#endif //_WIN32
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDI_ICON32              ICON    DISCARDABLE     "icon32.ico"
+IDI_ICON64              ICON    DISCARDABLE     "icon64.ico"
+#endif    // English (U.S.) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+/////////////////////////////////////////////////////////////////////////////
+// Italian (Italy) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ITA)
+#ifdef _WIN32
+LANGUAGE LANG_ITALIAN, SUBLANG_ITALIAN
+#pragma code_page(1252)
+#endif //_WIN32
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "1 TYPELIB ""Thick3DTracker.tlb""\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+#ifndef _MAC
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION 1,0,0,1
+ PRODUCTVERSION 1,0,0,1
+ FILEFLAGSMASK 0x3fL
+#ifdef _DEBUG
+ FILEFLAGS 0x1L
+#else
+ FILEFLAGS 0x0L
+#endif
+ FILEOS 0x4L
+ FILETYPE 0x2L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "040904B0"
+        BEGIN
+            VALUE "CompanyName", "\0"
+            VALUE "FileDescription", "Thick3DTracker Module\0"
+            VALUE "FileVersion", "1, 0, 0, 1\0"
+            VALUE "InternalName", "Thick3DTracker\0"
+            VALUE "LegalCopyright", "Copyright 1999\0"
+            VALUE "OriginalFilename", "Thick3DTracker.DLL\0"
+            VALUE "ProductName", "Thick3DTracker Module\0"
+            VALUE "ProductVersion", "1, 0, 0, 1\0"
+            VALUE "OLESelfRegister", "\0"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x409, 1200
+    END
+END
+
+#endif    // !_MAC
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// REGISTRY
+//
+
+IDR_THICK3DTRK          REGISTRY DISCARDABLE    "Thick3DTrk.rgs"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_PROJNAME            "Thick3DTracker"
+END
+
+#endif    // Italian (Italy) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+1 TYPELIB "Thick3DTracker.tlb"
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+

@@ -1,0 +1,1 @@
+copy d:\sysal.net\sysal_Net2.0\exerepository\*.dll .

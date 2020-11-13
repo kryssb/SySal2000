@@ -1,0 +1,60 @@
+Comparing files D:\SYSAL2\FLEXMAP3\FlexMap3.h and C:\DOCUMENTS AND SETTINGS\KRYSS\DESKTOP\FLEXMAP3\FLEXMAP3.H
+***** D:\SYSAL2\FLEXMAP3\FlexMap3.h
+/* File created by MIDL compiler version 5.01.0164 */
+/* at Mon Mar 21 12:16:07 2005
+ */
+/* Compiler settings for C:\sysal2000\FlexMap3\FlexMap3.idl:
+    Oicf (OptLev=i2), W1, Zp8, env=Win32, ms_ext, c_ext
+***** C:\DOCUMENTS AND SETTINGS\KRYSS\DESKTOP\FLEXMAP3\FLEXMAP3.H
+/* File created by MIDL compiler version 5.01.0164 */
+/* at Tue Jun 21 15:57:43 2005
+ */
+/* Compiler settings for C:\sysal\FlexMap3\FlexMap3.idl:
+    Oicf (OptLev=i2), W1, Zp8, env=Win32, ms_ext, c_ext
+*****
+
+***** D:\SYSAL2\FLEXMAP3\FlexMap3.h
+            HSySalHWND hWnd,
+            HSySalHANDLE hNotifyStatusChangeEvent) = 0;
+        
+***** C:\DOCUMENTS AND SETTINGS\KRYSS\DESKTOP\FLEXMAP3\FLEXMAP3.H
+            HSySalHWND hWnd,
+            HSySalHANDLE hNotifyStatusChangeEvent,
+            int __RPC_FAR *Label) = 0;
+        
+*****
+
+***** D:\SYSAL2\FLEXMAP3\FlexMap3.h
+            HSySalHWND hWnd,
+            HSySalHANDLE hNotifyStatusChangeEvent);
+        
+***** C:\DOCUMENTS AND SETTINGS\KRYSS\DESKTOP\FLEXMAP3\FLEXMAP3.H
+            HSySalHWND hWnd,
+            HSySalHANDLE hNotifyStatusChangeEvent,
+            int __RPC_FAR *Label);
+        
+*****
+
+***** D:\SYSAL2\FLEXMAP3\FlexMap3.h
+
+#define ISheetMap2_ReadLabels(This,pData,hWnd,hNotifyStatusChangeEvent) \
+    (This)->lpVtbl -> ReadLabels(This,pData,hWnd,hNotifyStatusChangeEvent)
+
+***** C:\DOCUMENTS AND SETTINGS\KRYSS\DESKTOP\FLEXMAP3\FLEXMAP3.H
+
+#define ISheetMap2_ReadLabels(This,pData,hWnd,hNotifyStatusChangeEvent,Label)   \
+    (This)->lpVtbl -> ReadLabels(This,pData,hWnd,hNotifyStatusChangeEvent,Label)
+
+*****
+
+***** D:\SYSAL2\FLEXMAP3\FlexMap3.h
+    HSySalHWND hWnd,
+    HSySalHANDLE hNotifyStatusChangeEvent);
+
+***** C:\DOCUMENTS AND SETTINGS\KRYSS\DESKTOP\FLEXMAP3\FLEXMAP3.H
+    HSySalHWND hWnd,
+    HSySalHANDLE hNotifyStatusChangeEvent,
+    int __RPC_FAR *Label);
+
+*****
+

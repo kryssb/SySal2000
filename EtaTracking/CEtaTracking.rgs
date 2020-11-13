@@ -1,0 +1,25 @@
+HKCR
+{
+	EtaTracking.CEtaTracking.1 = s 'EtaTracking Class'
+	{
+		CLSID = s '{3B651EC1-F4D8-11D3-BF85-002018B80960}'
+	}
+	EtaTracking.CEtaTracking = s 'EtaTracking Class'
+	{
+		CLSID = s '{3B651EC1-F4D8-11D3-BF85-002018B80960}'
+		CurVer = s 'EtaTracking.CEtaTracking.1'
+	}
+	NoRemove CLSID
+	{
+		ForceRemove {3B651EC1-F4D8-11D3-BF85-002018B80960} = s 'EtaTracking Class'
+		{
+			ProgID = s 'EtaTracking.CEtaTracking.1'
+			VersionIndependentProgID = s 'EtaTracking.CEtaTracking'
+			InprocServer32 = s '%MODULE%'
+			{
+				val ThreadingModel = s 'Free'
+			}
+			'TypeLib' = s '{3B651EB3-F4D8-11D3-BF85-002018B80960}'
+		}
+	}
+}

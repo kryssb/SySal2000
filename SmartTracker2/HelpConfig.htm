@@ -1,0 +1,110 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" >
+<HTML>
+	<HEAD>
+		<TITLE></TITLE>
+		<META NAME="GENERATOR" Content="Microsoft Visual Studio 7.0">
+	</HEAD>
+	<BODY>
+		<P><FONT face="Arial" color="#000066" size="5"><EM>SmartTracker Configuration</EM></FONT></P>
+		<FONT face="Arial"><EM><FONT size="4">
+					<HR width="100%" SIZE="2">
+					<P align="justify">
+				</FONT></EM><FONT size="2">SmartTracker has several parameters you can change 
+				to control the output, efficiency and tracking speed. Here is the configuration 
+				dialog, with very typical (not necessarily optimal) settings.</FONT></P>
+			<P align="justify"><IMG alt="" src="HelpConfig.gif"></P>
+			<P align="justify"></P>
+			<UL>
+				<LI>
+					<DIV align="justify"><FONT size="2"><FONT color="#ff0033"><FONT size="2"><FONT color="#ff0033">Alignment 
+										Tolerance</FONT><FONT color="black">: the transverse alignment tolerance in 
+										micron (see <A href="HelpOverview.htm">Overview</A>).</FONT></FONT></FONT></FONT></DIV>
+				</LI>
+				<DIV align="justify">
+					<LI>
+						<FONT face="Arial" size="2"><FONT face="Arial" size="2"><FONT size="2"><FONT face="Arial"><FONT size="2">
+											<FONT face="Arial"><FONT color="#ff0033">Bottom Layer</FONT>: the&nbsp;lower layer 
+												of the trigger that is about to be inserted by using the Add button (see <A href="HelpOverview.htm">
+													Overview</A>).</FONT></FONT></FONT></FONT></FONT></FONT></LI></DIV>
+				<LI>
+					<DIV align="justify"><FONT size="2"><FONT color="#ff0033"><FONT size="2"><FONT color="#ff0033"><FONT size="2"><FONT color="black"><FONT color="#ff0033">Cells 
+													Along X</FONT>: SmartTracker divides the volume in cells in order to speed 
+												up the search; in order not to&nbsp;decrease the efficiency, the cells should 
+												not be smaller than 20 µm, so their number along X must be set according to the 
+												size of the field of view.</FONT></FONT></FONT></FONT></FONT></FONT></DIV>
+				<LI>
+					<DIV align="justify"><FONT size="2">
+							<DIV align="justify"><FONT size="2"><FONT color="#ff0033"><FONT size="2"><FONT color="black"><FONT color="#ff0033">Cells 
+													Along Y</FONT>: SmartTracker divides the volume in cells in order to speed 
+												up the search; in order not to&nbsp;decrease the efficiency, the cells should 
+												not be smaller than 20 µm, so their number along&nbsp;Y must be set according 
+												to the size of the field of view.</FONT></FONT></FONT></FONT></DIV>
+						</FONT>
+					</DIV>
+				<LI>
+					<DIV align="justify"><FONT size="2">
+							<DIV align="justify">
+								<DIV align="justify"><FONT size="2"><FONT color="#ff0033"><FONT size="2"><FONT color="#ff0033">Cell 
+													Overflow</FONT><FONT color="black">: the maximum number of grains a cell can 
+													contain in each layer.</FONT></FONT></FONT></FONT></DIV>
+							</DIV>
+						</FONT>
+					</DIV>
+				<LI>
+					<DIV align="justify"><FONT size="2"><FONT color="#ff0033">Max Grains</FONT><FONT color="black">: 
+								the maximum number of grains computed over all layers.</FONT></FONT></DIV>
+				<LI>
+					<DIV align="justify"><FONT size="2"><FONT color="#ff0033"><FONT size="2"><FONT color="#ff0033">Max 
+										Layers</FONT><FONT color="black">: the maximum number of layers that can be 
+										feeded to the tracker; should be at least equal to the number of layers 
+										sampled.</FONT></FONT></FONT></FONT></DIV>
+				</LI>
+				<DIV align="justify">
+					<LI>
+						<FONT size="2"><FONT color="#ff0033">Max Pixels</FONT>: grains formed by&nbsp;more 
+							pixels than MinArea are not considered for tracking.</FONT>
+					<LI>
+						<DIV align="justify"><FONT size="2"><FONT face="Arial"><FONT color="#ff0033">Max Slope</FONT>: 
+									the maximum slope being searched for. The tracking time increases quadratically 
+									with this parameter.</FONT></FONT></DIV>
+					<LI>
+		</FONT><FONT size="2"><FONT color="#ff0033"><FONT size="2"><FONT color="#ff0033">Min Pixels</FONT><FONT color="black">: 
+						grains formed by fewer pixels than MinArea are not considered for tracking.</FONT></FONT></FONT></FONT></LI></DIV>
+		<LI>
+			</FONT></FONT><FONT size="2"><FONT face="Arial"><FONT color="#ff0033">Min Slope</FONT>: 
+					the minimum slope being searched for. In order to avoid that dirt on the camera 
+					sensor generates perfectly vertical fake tracks, one can set this parameter to 
+					a small number, such as 0.001.</FONT></FONT>
+		<LI>
+			<FONT face="Arial" size="2"><FONT face="Arial" size="2"><FONT size="2"><FONT face="Arial"><FONT color="#ff0033">
+								Min Grains&nbsp;at Slope = 0.1</FONT>: the minimum number of grains for a 
+							track with slope = 0.1. This parameter helps to define the curve&nbsp;<STRONG>n<SUB>min</SUB>(S)</STRONG>
+							(see <A href="HelpOverview.htm">Overview</A>).</FONT></FONT></FONT></FONT>
+		<LI>
+			<FONT size="2"><FONT face="Arial"><FONT color="#ff0033">Min Grains for Horizontal Tracks</FONT>: 
+					the asymptotic minimum number of grains for very wide angle tracks. This 
+					parameter helps to define the curve <STRONG>n<SUB>min</SUB>(S)</STRONG> (see <A href="HelpOverview.htm">
+						Overview</A>).</FONT></FONT>
+		<LI>
+			<FONT face="Arial" size="2"><FONT size="2"><FONT face="Arial"><FONT color="#ff0033">Min Grains 
+							for Vertical Tracks</FONT>: the minimum number of grains a perfectly 
+						vertical track must have. This parameter helps to define the curve <STRONG>n<SUB>min</SUB>(S)</STRONG>
+						(see <A href="HelpOverview.htm">Overview</A>).</FONT></FONT></FONT>
+		<LI>
+			<FONT face="Arial" size="2"><FONT face="Arial" size="2"><FONT size="2"><FONT face="Arial"><FONT size="2">
+								<FONT face="Arial"><FONT color="#ff0033">Top Layer</FONT>: the&nbsp;upper layer of 
+									the trigger that is about to be inserted by using the Add button (see <A href="HelpOverview.htm">
+										Overview</A>).</FONT></FONT></FONT></FONT></FONT></FONT>
+		<LI>
+			<FONT face="Arial" size="2"><FONT face="Arial" size="2"><FONT face="Arial" size="2"><FONT size="2">
+							<FONT face="Arial"><FONT size="2"><FONT face="Arial"><FONT color="#ff0033">Trigger&nbsp;Layers</FONT>: 
+										list of the trigger layers for the trigger that is about to be inserted by 
+										using the Add button. These are the layers on which the track position and 
+										slope guessed from grains on Top Layer and Bottom Layer will be tested (see <A href="HelpOverview.htm">
+											Overview</A>).</FONT></FONT></FONT></FONT></FONT></FONT></FONT></LI></UL>
+		<P><FONT face="Arial" size="2">Triggers are inserted only after the Add button is 
+				pressed and they appear in the list. In order to delete a trigger, select it on 
+				the list and press the Del button.</FONT></P>
+		</FONT>
+	</BODY>
+</HTML>

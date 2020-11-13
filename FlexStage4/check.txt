@@ -1,0 +1,57 @@
+Comparing files EditConfig.cpp and C:\USERS\KRYSS\DESKTOP\WORK\FLEXSTAGE4\EDITCONFIG.CPP
+***** EditConfig.cpp
+        DDX_Check(pDX, IDC_INTERACTIVEHOME, C.InteractiveHome);
+}
+***** C:\USERS\KRYSS\DESKTOP\WORK\FLEXSTAGE4\EDITCONFIG.CPP
+        DDX_Check(pDX, IDC_INTERACTIVEHOME, C.InteractiveHome);
+//      DDV_MinMaxInt(pDX, C.InteractiveHome, 0, 2);
+
+}
+*****
+
+Comparing files EditMachineDefaults.cpp and C:\USERS\KRYSS\DESKTOP\WORK\FLEXSTAGE4\EDITMACHINEDEFAULTS.CPP
+***** EditMachineDefaults.cpp
+        DDV_MinMaxFloat(pDX, C.ZHomingYPos, -300000.0f, 300000.0f);
+}
+***** C:\USERS\KRYSS\DESKTOP\WORK\FLEXSTAGE4\EDITMACHINEDEFAULTS.CPP
+        DDV_MinMaxFloat(pDX, C.ZHomingYPos, -300000.0f, 300000.0f);
+
+}
+*****
+
+Comparing files FindHomeDlg.cpp and C:\USERS\KRYSS\DESKTOP\WORK\FLEXSTAGE4\FINDHOMEDLG.CPP
+FC: no differences encountered
+
+Comparing files FlexStage4.cpp and C:\USERS\KRYSS\DESKTOP\WORK\FLEXSTAGE4\FLEXSTAGE4.CPP
+FC: no differences encountered
+
+Comparing files FlexStage4Class.cpp and C:\USERS\KRYSS\DESKTOP\WORK\FLEXSTAGE4\FLEXSTAGE4CLASS.CPP
+***** FlexStage4Class.cpp
+        {"ZBaseThickness",                      "%f",   STRUCT_OFFSET(ConfigData, ZBaseThickness),              "210.0"},
+        {"InteractiveHome",                     "%d",   STRUCT_OFFSET(ConfigData, InteractiveHome),             "1"}
+        };
+***** C:\USERS\KRYSS\DESKTOP\WORK\FLEXSTAGE4\FLEXSTAGE4CLASS.CPP
+        {"ZBaseThickness",                      "%f",   STRUCT_OFFSET(ConfigData, ZBaseThickness),              "210.0"},
+        {"InteractiveHome",                     "%d",   STRUCT_OFFSET(ConfigData, InteractiveHome),             "1"}    
+
+        };
+*****
+
+Comparing files Monitor.cpp and C:\USERS\KRYSS\DESKTOP\WORK\FLEXSTAGE4\MONITOR.CPP
+FC: no differences encountered
+
+Comparing files StdAfx.cpp and C:\USERS\KRYSS\DESKTOP\WORK\FLEXSTAGE4\STDAFX.CPP
+FC: no differences encountered
+
+Comparing files TestDlg.cpp and C:\USERS\KRYSS\DESKTOP\WORK\FLEXSTAGE4\TESTDLG.CPP
+FC: no differences encountered
+
+Comparing files version.cpp and C:\USERS\KRYSS\DESKTOP\WORK\FLEXSTAGE4\VERSION.CPP
+FC: no differences encountered
+
+Comparing files XYSpeed.cpp and C:\USERS\KRYSS\DESKTOP\WORK\FLEXSTAGE4\XYSPEED.CPP
+FC: no differences encountered
+
+Comparing files ZSpeed.cpp and C:\USERS\KRYSS\DESKTOP\WORK\FLEXSTAGE4\ZSPEED.CPP
+FC: no differences encountered
+

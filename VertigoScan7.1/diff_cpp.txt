@@ -1,0 +1,930 @@
+Comparing files client.cpp and D:\SYSAL2\VERTIGOSCAN7.0\CLIENT.CPP
+FC: no differences encountered
+
+Comparing files DBReferenceMap.cpp and D:\SYSAL2\VERTIGOSCAN7.0\DBREFERENCEMAP.CPP
+FC: no differences encountered
+
+Comparing files debug.cpp and D:\SYSAL2\VERTIGOSCAN7.0\DEBUG.CPP
+FC: no differences encountered
+
+Comparing files EditConfig.cpp and D:\SYSAL2\VERTIGOSCAN7.0\EDITCONFIG.CPP
+FC: no differences encountered
+
+Comparing files EditGridOptions.cpp and D:\SYSAL2\VERTIGOSCAN7.0\EDITGRIDOPTIONS.CPP
+FC: no differences encountered
+
+Comparing files Globals.cpp and D:\SYSAL2\VERTIGOSCAN7.0\GLOBALS.CPP
+***** Globals.cpp
+#include "AutomaticLightControl.h"
+#include "PlateChanger2.h"              //GS
+
+***** D:\SYSAL2\VERTIGOSCAN7.0\GLOBALS.CPP
+#include "AutomaticLightControl.h"
+#include "PlateChanger.h"
+
+*****
+
+***** Globals.cpp
+#include "AutomaticLightControl_i.c"
+#include "PlateChanger2_i.c"    //GS 
+#include <eh.h>
+***** D:\SYSAL2\VERTIGOSCAN7.0\GLOBALS.CPP
+#include "AutomaticLightControl_i.c"
+#include "PlateChanger_i.c"
+#include <eh.h>
+*****
+
+***** Globals.cpp
+{
+#if 1 //GS #ifndef _DEBUG // create exception if compiled with debug configuration 
+        return;
+//GS   #ifndef _DEBUG
+//GS    return;
+#else
+***** D:\SYSAL2\VERTIGOSCAN7.0\GLOBALS.CPP
+{
+        return;
+#ifndef _DEBUG
+        return;
+#else
+*****
+
+Comparing files MainSwitch.cpp and D:\SYSAL2\VERTIGOSCAN7.0\MAINSWITCH.CPP
+FC: no differences encountered
+
+Comparing files ManualChecks.cpp and D:\SYSAL2\VERTIGOSCAN7.0\MANUALCHECKS.CPP
+***** ManualChecks.cpp
+
+#include "moviemaker.h" 
+
+#ifdef _DEBUG
+***** D:\SYSAL2\VERTIGOSCAN7.0\MANUALCHECKS.CPP
+
+#ifdef _DEBUG
+*****
+
+***** ManualChecks.cpp
+        m_MapMaxOffset = 100;
+}
+***** D:\SYSAL2\VERTIGOSCAN7.0\MANUALCHECKS.CPP
+        m_MapMaxOffset = 100;
+
+        InitJoystick();
+}
+*****
+
+***** ManualChecks.cpp
+        m_MapMaxOffset = 100;
+}
+***** D:\SYSAL2\VERTIGOSCAN7.0\MANUALCHECKS.CPP
+        m_MapMaxOffset = 100;
+
+        InitJoystick();
+}
+*****
+
+***** ManualChecks.cpp
+
+CManualChecks::~CManualChecks()
+{
+        
+}
+***** D:\SYSAL2\VERTIGOSCAN7.0\MANUALCHECKS.CPP
+
+void CManualChecks::InitJoystick()
+{
+        if (joyGetNumDevs() >= 1)
+        {
+                for (JoystickN = 15; JoystickN >= 0; JoystickN--)
+                {
+                        JOYINFO jinfo;                  
+                        if (joyGetPos(JoystickN, &jinfo) == JOYERR_NOERROR) break;
+                }                                               
+                joyGetDevCaps((unsigned)JoystickN, &caps, sizeof(caps));
+        }
+        LastSet1 = 0;
+        LastSet2 = 0;
+        LastToggleFound = 0;
+        LastSwitchEmuLayer = 0;
+        LastGo = 0;
+}
+*****
+
+***** ManualChecks.cpp
+
+void CManualChecks::DoDataExchange(CDataExchange* pDX)
+***** D:\SYSAL2\VERTIGOSCAN7.0\MANUALCHECKS.CPP
+
+CManualChecks::~CManualChecks()
+{
+        
+}
+
+void CManualChecks::DoDataExchange(CDataExchange* pDX)
+*****
+
+***** ManualChecks.cpp
+        ON_BN_CLICKED(IDC_MC_RESETOFFSETS, &CManualChecks::OnResetOffsets)
+        ON_BN_CLICKED(IDC_MC_MAKEMOVIE3060, &CManualChecks::OnBnClickedMcMakemovie3060)
+END_MESSAGE_MAP()
+***** D:\SYSAL2\VERTIGOSCAN7.0\MANUALCHECKS.CPP
+        ON_BN_CLICKED(IDC_MC_RESETOFFSETS, &CManualChecks::OnResetOffsets)
+        ON_WM_TIMER()
+END_MESSAGE_MAP()
+*****
+
+***** ManualChecks.cpp
+                };
+        iSt->PosMove(0, StageX, C.HSpeed, C.HAcc);
+***** D:\SYSAL2\VERTIGOSCAN7.0\MANUALCHECKS.CPP
+                };
+        iSt->EnableManualControl(false);
+        iSt->Stop(0);
+        iSt->Stop(1);
+        iSt->Stop(2);   
+        iSt->PosMove(0, StageX, C.HSpeed, C.HAcc);
+*****
+
+***** ManualChecks.cpp
+{
+        CDialog::OnInitDialog();
+        
+        *phWnd = m_hWnd;
+***** D:\SYSAL2\VERTIGOSCAN7.0\MANUALCHECKS.CPP
+{
+        CDialog::OnInitDialog();        
+        *phWnd = m_hWnd;
+*****
+
+***** ManualChecks.cpp
+                m_CheckList.ShowWindow(SW_HIDE);
+        };      
+***** D:\SYSAL2\VERTIGOSCAN7.0\MANUALCHECKS.CPP
+                m_CheckList.ShowWindow(SW_HIDE);
+                UpdateData(FALSE);
+        };      
+*****
+
+***** ManualChecks.cpp
+        m_MouseTrap.X = VIS.Width / 2;
+        m_MouseTrap.Y = VIS.Height / 2;
+        if (m_Auto) OnGo();
+        return TRUE;  // return TRUE unless you set the focus to a control
+***** D:\SYSAL2\VERTIGOSCAN7.0\MANUALCHECKS.CPP
+        m_MouseTrap.X = VIS.Width / 2;
+        m_MouseTrap.Y = VIS.Height / 2; 
+        if (m_Auto) OnGo();
+        if (JoystickN >= 0) 
+        {
+                CString str = "";
+                if (C.AxXAxis != -1 && C.AxYAxis != -1) str += "Use joystick lever to move pointer on display.";
+                else str += "Use joystick to move pointer on display.";
+                if (C.DigSet1 != -1 && C.DigSet2 != -1) str += "\r\nUse joystick buttons to define top and bottom point of trac
+s.";
+                if (C.DigSwitchEmuLayer != -1) str += "\r\nUse joystick button to quickly switch between emulsion layers.";
+                if (C.DigToggleFound != -1) str += "\r\nUse joystick button to mark track as found/not found.";
+                if (C.DigGo != -1) str += "\r\nUse joystick button to return to expected track position.";
+                GetDlgItem(IDC_MC_ACTIVATEMOUSE)->SetWindowText(str);
+                GetDlgItem(IDC_MC_ACTIVATEMOUSE)->EnableWindow(FALSE);
+                StartTimer();
+        }
+        NotifyMove(this, m_MouseTrap.X, m_MouseTrap.Y);
+        return TRUE;  // return TRUE unless you set the focus to a control
+*****
+
+***** ManualChecks.cpp
+
+LRESULT CManualChecks::OnStatusChange(WPARAM wParam, LPARAM lParam)
+{
+        switch (wParam) 
+        {
+                case SYSAL_ASYNC_STATUS_IDLE:   EndDialog(UM_CHANGE_STATUS + SYSAL_ASYNC_STATUS_IDLE);
+                                                                                break;
+                };
+        return 0;
+}
+***** D:\SYSAL2\VERTIGOSCAN7.0\MANUALCHECKS.CPP
+
+void CManualChecks::StartTimer()
+{
+        SetTimer(55, 50, 0);
+}
+*****
+
+***** ManualChecks.cpp
+
+void CManualChecks::ShowTrack(float CurrX, float CurrY, bool bShow)
+***** D:\SYSAL2\VERTIGOSCAN7.0\MANUALCHECKS.CPP
+
+void CManualChecks::StopTimer()
+{
+        KillTimer(55);
+}
+
+LRESULT CManualChecks::OnStatusChange(WPARAM wParam, LPARAM lParam)
+{
+        switch (wParam) 
+        {
+                case SYSAL_ASYNC_STATUS_IDLE:   EndDialog(UM_CHANGE_STATUS + SYSAL_ASYNC_STATUS_IDLE);
+                                                                                break;
+                };
+        return 0;
+}
+
+void CManualChecks::ShowTrack(float CurrX, float CurrY, bool bShow)
+*****
+
+***** ManualChecks.cpp
+{
+        iFG->DeleteCursor();
+***** D:\SYSAL2\VERTIGOSCAN7.0\MANUALCHECKS.CPP
+{
+        if (JoystickN >= 0) StopTimer();
+        iFG->DeleteCursor();
+*****
+
+***** ManualChecks.cpp
+                        iStOb->EnableMonitor(false);                    
+                        CScan Scan(nullptr, phWnd, iSelf, iIO, iSt, iOb, iFG, iVP, iTk1, iFt1, iTk2, iFt2, iSM, 
+                                0 ,     //GS
+                                C, 0, autozreset, true);                        
+                        TrackCollector = gcnew System::Collections::ArrayList();
+***** D:\SYSAL2\VERTIGOSCAN7.0\MANUALCHECKS.CPP
+                        iStOb->EnableMonitor(false);                    
+                        CScan Scan(nullptr, phWnd, iSelf, iIO, iSt, iOb, iFG, iVP, iTk1, iFt1, iTk2, iFt2, iSM, C, 0, autozrese
+, true);                        
+                        TrackCollector = gcnew System::Collections::ArrayList();
+*****
+
+***** ManualChecks.cpp
+
+void CManualChecks::OnBnClickedMcMakemovie3060()
+{
+        if (AfxMessageBox("Put the microscope on the lower surface of the emulsion layer.\n\rPress OK to continue (wait 30 s)."
+MB_OKCANCEL )==IDOK )
+        {
+                MovieMaker(iSt, iFG, iOb, 30, 2) ;
+                AfxMessageBox("images stored in c:\\images");
+        }
+***** D:\SYSAL2\VERTIGOSCAN7.0\MANUALCHECKS.CPP
+
+#define JXY_FAST 8.0f
+#define JXY_SLOW 0.25f
+
+void CManualChecks::OnTimer(UINT_PTR nIDEvent)
+{
+        // TODO: Add your message handler code here and/or call default
+
+        //CDialog::OnTimer(nIDEvent);
+        if (JoystickN >= 0)
+        {
+                JOYINFOEX jinfo;
+                jinfo.dwSize = sizeof(jinfo);
+                jinfo.dwFlags = JOY_RETURNALL;
+                if (joyGetPosEx(JoystickN, &jinfo) == JOYERR_NOERROR)
+                {
+                        unsigned MaskXDec = (C.DigXDec >= 0) ? (1 << C.DigXDec) : 0;
+                        unsigned MaskXInc = (C.DigXInc >= 0) ? (1 << C.DigXInc) : 0;
+                        unsigned MaskYDec = (C.DigYDec >= 0) ? (1 << C.DigYDec) : 0;
+                        unsigned MaskYInc = (C.DigYInc >= 0) ? (1 << C.DigYInc) : 0;
+                        unsigned MaskSet1 = (C.DigSet1 >= 0) ? (1 << C.DigSet1) : 0;
+                        unsigned MaskSet2 = (C.DigSet2 >= 0) ? (1 << C.DigSet2) : 0;
+                        unsigned MaskToggleFound = (C.DigToggleFound >= 0) ? (1 << C.DigToggleFound) : 0;
+                        unsigned MaskSwitchEmuLayer = (C.DigSwitchEmuLayer >= 0) ? (1 << C.DigSwitchEmuLayer) : 0;
+                        unsigned MaskGo = (C.DigGo >= 0) ? (1 << C.DigGo) : 0;
+
+                        float xy[2] = { 0.0f, 0.0f };
+                        int AxisMap[2] = { C.AxXAxis, C.AxYAxis };
+                        float AxisInvRange[2] = { 0, 0 };
+                        int AxisCenter[2] = { 0, 0 };
+                        int i;
+                        long v;
+                        for (i = 0; i < 2; i++)
+                        {
+                                int amin, amax;
+                                switch (AxisMap[i])
+                                {
+                                case 0: v = jinfo.dwXpos; amin = caps.wXmin; amax = caps.wXmax; break;
+                                case 1: v = jinfo.dwYpos; amin = caps.wYmin; amax = caps.wYmax; break;
+                                case 2: v = jinfo.dwZpos; amin = caps.wZmin; amax = caps.wZmax; break;
+                                case 3: v = jinfo.dwRpos; amin = caps.wRmin; amax = caps.wRmax; break;
+                                case 4: v = jinfo.dwUpos; amin = caps.wUmin; amax = caps.wUmax; break;
+                                case 5: v = jinfo.dwVpos; amin = caps.wVmin; amax = caps.wVmax; break;
+                                default: xy[i] = 0; continue;
+                                }
+                                AxisCenter[i] = (amin + amax) / 2;
+                                AxisInvRange[i] = (amax > amin) ? (2.0f / (amax - amin)) : 0.0f;
+                                xy[i] = (abs(v - AxisCenter[i]) < 4) ? 0 : ((v - AxisCenter[i]) * AxisInvRange[i]);
+                        }
+                        if (xy[0] != 0.0f)
+                        {
+                                if (fabs(xy[0]) > 0.9f) xy[0] = xy[0] / fabs(xy[0]) * JXY_FAST;
+                                else xy[0] = xy[0] / fabs(xy[0]) * JXY_SLOW;
+                        }
+                        if (xy[1] != 0.0f)
+                        {
+                                if (fabs(xy[1]) > 0.9f) xy[1] = xy[1] / fabs(xy[1]) * JXY_FAST;
+                                else xy[1] = xy[1] / fabs(xy[1]) * JXY_SLOW;
+                        }
+                        if (MaskXDec & jinfo.dwButtons) xy[0] = -1.0f;
+                        if (MaskXInc & jinfo.dwButtons) xy[0] =  1.0f;
+                        if (MaskYDec & jinfo.dwButtons) xy[1] =  1.0f;
+                        if (MaskYInc & jinfo.dwButtons) xy[1] = -1.0f;
+                        if ((MaskSet1 & jinfo.dwButtons) == 0 && (LastSet1 != 0)) NotifyKeyDown(this, '1');
+                        LastSet1 = (MaskSet1 & jinfo.dwButtons);
+                        if ((MaskSet2 & jinfo.dwButtons) == 0 && (LastSet2 != 0)) NotifyKeyDown(this, '2');
+                        LastSet2 = (MaskSet2 & jinfo.dwButtons);
+                        if ((MaskToggleFound & jinfo.dwButtons) == 0 && (LastToggleFound != 0)) 
+                        {
+                                StopTimer();
+                                SendDlgItemMessage(IDC_MC_FOUND, BM_CLICK);
+                                StartTimer();
+                        }
+                        LastToggleFound = (MaskToggleFound & jinfo.dwButtons);
+                        if ((MaskSwitchEmuLayer & jinfo.dwButtons) == 0 && (LastSwitchEmuLayer != 0)) 
+                        {
+                                StopTimer();
+                                SwitchEmuLayer();
+                                StartTimer();
+                        }
+                        LastSwitchEmuLayer = (MaskSwitchEmuLayer & jinfo.dwButtons);
+                        if ((MaskGo & jinfo.dwButtons) == 0 && (LastGo != 0)) 
+                        {       
+                                StopTimer();
+                                OnGo();
+                                StartTimer();
+                        }
+                        LastGo = (MaskGo & jinfo.dwButtons);                    
+                        m_MouseTrap.X += xy[0];
+                        m_MouseTrap.Y += xy[1];
+                        if (m_MouseTrap.X < 0) m_MouseTrap.X = 0; else if (m_MouseTrap.X >= VIS.Width) m_MouseTrap.X = VIS.Widt
+;
+                        if (m_MouseTrap.Y < 0) m_MouseTrap.Y = 0; else if (m_MouseTrap.Y >= VIS.Height) m_MouseTrap.Y = VIS.Hei
+ht;
+                        NotifyMove(this, m_MouseTrap.X, m_MouseTrap.Y);
+                }
+        }
+*****
+
+***** ManualChecks.cpp
+***** D:\SYSAL2\VERTIGOSCAN7.0\MANUALCHECKS.CPP
+
+void CManualChecks::SwitchEmuLayer()
+{
+        float ZHalf = 0.0f;
+        IStage3 *iSt3 = 0;
+        if (iSt->QueryInterface(IID_IStage3, (void **)&iSt3) != S_OK)
+        {
+                MessageBox("IStage3 interface not supported by current Stage.\r\nCannot provide \"SwitchEmuLayer\" feature.", "
+rror", MB_ICONERROR | MB_OK);
+                if (iSt3) iSt3->Release();
+                return;
+        }
+        if (iSt3->IsHomeKnown() != S_OK)
+        {
+                if (MessageBox("The \"SwitchEmuLayer\" feature requires stage homing, but the current Stage has no home referen
+e.\r\nHoming can be performed now, but it will disrupt coordinate mapping.\r\nProceed (if no, \"SwitchEmuLayer\" will be ignore
+)?", "Warning", MB_ICONWARNING | MB_YESNO | MB_DEFBUTTON2 | MB_SETFOREGROUND) != IDYES)
+                {
+                        iSt3->Release();
+                        return;
+                }
+        }
+        if (iSt3->GetZRef((BYTE *)"Glass", &ZHalf) != S_OK)
+        {
+                MessageBox("\"Glass\" reference position not present in Stage.\r\nCannot provide \"SwitchEmuLayer\" feature.", 
+Error", MB_ICONERROR | MB_OK);
+                iSt3->Release();
+                return;
+        }
+        ZHalf += C.VStep(false, false) + C.BaseThickness * 0.5f;
+        float z = 0.0f;
+        iSt3->EnableManualControl(false);
+        iSt3->Stop(0);
+        iSt3->Stop(1);
+        iSt3->Stop(2);
+        iSt3->GetPos(2, &z);
+        iSt3->PosMove(2, ZHalf + ((z > ZHalf) ? -0.5f : 0.5f) * C.BaseThickness, C.VBaseSpeed, C.VAcc);
+        iSt3->Release();
+}
+*****
+
+Comparing files MapInitString.cpp and D:\SYSAL2\VERTIGOSCAN7.0\MAPINITSTRING.CPP
+FC: no differences encountered
+
+Comparing files MouseControl.cpp and D:\SYSAL2\VERTIGOSCAN7.0\MOUSECONTROL.CPP
+FC: no differences encountered
+
+Comparing files moviemaker.cpp and D:\SYSAL2\VERTIGOSCAN7.0\MOVIEMAKER.CPP
+Comparing files PlateQualityDlg.cpp and D:\SYSAL2\VERTIGOSCAN7.0\PLATEQUALITYDLG.CPP
+FC: no differences encountered
+
+Comparing files PlateQualityInitDlg.cpp and D:\SYSAL2\VERTIGOSCAN7.0\PLATEQUALITYINITDLG.CPP
+FC: no differences encountered
+
+Comparing files RemoteScan.cpp and D:\SYSAL2\VERTIGOSCAN7.0\REMOTESCAN.CPP
+FC: no differences encountered
+
+Comparing files Scan.cpp and D:\SYSAL2\VERTIGOSCAN7.0\SCAN.CPP
+***** Scan.cpp
+        ITracker3 *itk1, ITrackFitter3 *ift1, ITracker3 *itk2, ITrackFitter3 *ift2, ISheetMap *ism, 
+        IPlateChanger2 *ipc2,   //GS
+        ConfigData &c, Identifier id, float minx, float maxx, float miny, float maxy, 
+***** D:\SYSAL2\VERTIGOSCAN7.0\SCAN.CPP
+        ITracker3 *itk1, ITrackFitter3 *ift1, ITracker3 *itk2, ITrackFitter3 *ift2, ISheetMap *ism, 
+        ConfigData &c, Identifier id, float minx, float maxx, float miny, float maxy, 
+*****
+
+***** Scan.cpp
+        : CDialog(CScan::IDD, pParent), phWnd(phwnd), CVertigoScanner(iself, iio, ist, iob, 
+                ifg, ivp, itk1, ift1, itk2, ift2, ism, 
+                ipc2, //GS
+                c), Terminate(false), 
+                ForcedName(forcedname), RemoteScan(remotescan), AutoZReset(autozreset), TrustZ(trustz), pDataConsumer(0), pData
+***** D:\SYSAL2\VERTIGOSCAN7.0\SCAN.CPP
+        : CDialog(CScan::IDD, pParent), phWnd(phwnd), CVertigoScanner(iself, iio, ist, iob, 
+                ifg, ivp, itk1, ift1, itk2, ift2, ism, c), Terminate(false), 
+                ForcedName(forcedname), RemoteScan(remotescan), AutoZReset(autozreset), TrustZ(trustz), pDataConsumer(0), pData
+*****
+
+***** Scan.cpp
+        ITracker3 *itk1, ITrackFitter3 *ift1, ITracker3 *itk2, ITrackFitter3 *ift2, ISheetMap *ism, 
+        IPlateChanger2 *ipc2,   //GS
+        ConfigData &c, CWnd* pParent, float autozreset, bool trustz)
+***** D:\SYSAL2\VERTIGOSCAN7.0\SCAN.CPP
+        ITracker3 *itk1, ITrackFitter3 *ift1, ITracker3 *itk2, ITrackFitter3 *ift2, ISheetMap *ism, 
+        ConfigData &c, CWnd* pParent, float autozreset, bool trustz)
+*****
+
+***** Scan.cpp
+        : CDialog(CScan::IDD, pParent), phWnd(phwnd), CVertigoScanner(iself, iio, ist, iob, 
+                ifg, ivp, itk1, ift1, itk2, ift2, ism, 
+                ipc2,  //GS
+                c), Terminate(false), 
+                ForcedName(0), RemoteScan(true), AutoZReset(autozreset), TrustZ(trustz), pDataConsumer(0), pDataConsumerContext
+***** D:\SYSAL2\VERTIGOSCAN7.0\SCAN.CPP
+        : CDialog(CScan::IDD, pParent), phWnd(phwnd), CVertigoScanner(iself, iio, ist, iob, 
+                ifg, ivp, itk1, ift1, itk2, ift2, ism, c), Terminate(false), 
+                ForcedName(0), RemoteScan(true), AutoZReset(autozreset), TrustZ(trustz), pDataConsumer(0), pDataConsumerContext
+*****
+
+***** Scan.cpp
+        }
+
+        if (RemoteScan)                                                                                                        
+                //GS
+                if(iPC2) {                                                                                                     
+                        //GS
+                        double map_minX, map_minY, map_maxX, map_maxY ;                                                 //GS
+                        if(   iSM->DirMapPoint(minx, miny, &map_minX, &map_minY) == S_OK                //GS
+                                && iSM->DirMapPoint(maxx, maxy, &map_maxX, &map_maxY) == S_OK )         //GS
+                                          iPC2->DispenseOil( map_minX, map_minY, map_maxX, map_maxY );  //GS
+                }                                                                                                              
+                                //GS
+
+        return DoModal();
+***** D:\SYSAL2\VERTIGOSCAN7.0\SCAN.CPP
+        }
+        return DoModal();
+*****
+
+***** Scan.cpp
+        iStOb->EnableMonitor(false);
+        if (iPC2)                                                                                                              
+/GS
+        {                                                                                                                      
+//GS
+                ISySalObject *iPcOb = 0;                                                                        //GS
+                iPC2->QueryInterface(IID_ISySalObject, (void **)&iPcOb);        //GS
+                iPcOb->EnableMonitor(false);                                                            //GS
+                iPcOb->Release();                                                                                       //GS
+        }                                                                                                                      
+//GS
+
+        DUMPTIME(5);
+***** D:\SYSAL2\VERTIGOSCAN7.0\SCAN.CPP
+        iStOb->EnableMonitor(false);
+        DUMPTIME(5);
+*****
+
+Comparing files ScanMapDetails.cpp and D:\SYSAL2\VERTIGOSCAN7.0\SCANMAPDETAILS.CPP
+FC: no differences encountered
+
+Comparing files ScanSrv.cpp and D:\SYSAL2\VERTIGOSCAN7.0\SCANSRV.CPP
+FC: no differences encountered
+
+Comparing files ScanStart.cpp and D:\SYSAL2\VERTIGOSCAN7.0\SCANSTART.CPP
+FC: no differences encountered
+
+Comparing files SelectField.cpp and D:\SYSAL2\VERTIGOSCAN7.0\SELECTFIELD.CPP
+FC: no differences encountered
+
+Comparing files Server.cpp and D:\SYSAL2\VERTIGOSCAN7.0\SERVER.CPP
+FC: no differences encountered
+
+Comparing files StdAfx.cpp and D:\SYSAL2\VERTIGOSCAN7.0\STDAFX.CPP
+FC: no differences encountered
+
+Comparing files TestAndConfig.cpp and D:\SYSAL2\VERTIGOSCAN7.0\TESTANDCONFIG.CPP
+***** TestAndConfig.cpp
+        IObjective *iob, IFrameGrabber *ifg, IVisionProcessor3 *ivp, ITracker3 *itk1, ITrackFitter3 *ift1, 
+        ITracker3 *itk2, ITrackFitter3 *ift2, ISheetMap *ism, 
+        IPlateChanger2 *ipc2, //GS
+        ConfigManagerInterface *pcmi, 
+        ConfigData &c, CWnd* pParent /*=NULL*/)
+***** D:\SYSAL2\VERTIGOSCAN7.0\TESTANDCONFIG.CPP
+        IObjective *iob, IFrameGrabber *ifg, IVisionProcessor3 *ivp, ITracker3 *itk1, ITrackFitter3 *ift1, 
+        ITracker3 *itk2, ITrackFitter3 *ift2, ISheetMap *ism, ConfigManagerInterface *pcmi, 
+        ConfigData &c, CWnd* pParent /*=NULL*/)
+*****
+
+***** TestAndConfig.cpp
+        : CDialog(CTestAndConfig::IDD, pParent), phWnd(phwnd), CVertigoScanner(iself, iio, ist, iob, 
+                ifg, ivp, itk1, ift1, itk2, ift2, ism, ipc2, c), pCMI(pcmi)   //GS
+{
+***** D:\SYSAL2\VERTIGOSCAN7.0\TESTANDCONFIG.CPP
+        : CDialog(CTestAndConfig::IDD, pParent), phWnd(phwnd), CVertigoScanner(iself, iio, ist, iob, 
+                ifg, ivp, itk1, ift1, itk2, ift2, ism, c), pCMI(pcmi)
+{
+*****
+
+***** TestAndConfig.cpp
+        iSt->FlushAsyncMotions();
+
+        if (iPC2)                                                                                                              
+/GS
+        {                                                                                                                      
+//GS
+                ISySalObject *iPcOb = 0;                                                                        //GS
+                iPC2->QueryInterface(IID_ISySalObject, (void **)&iPcOb);        //GS
+                iPcOb->EnableMonitor(false);                                                            //GS
+                iPcOb->Release();                                                                                       //GS
+        }                                                                                                                      
+//GS
+
+        pThread = AfxBeginThread((AFX_THREADPROC)ThreadHook, this, THREAD_PRIORITY_NORMAL, 65536, 0, NULL);
+***** D:\SYSAL2\VERTIGOSCAN7.0\TESTANDCONFIG.CPP
+        iSt->FlushAsyncMotions();
+        pThread = AfxBeginThread((AFX_THREADPROC)ThreadHook, this, THREAD_PRIORITY_NORMAL, 65536, 0, NULL);
+*****
+
+Comparing files VertigoScan7.cpp and D:\SYSAL2\VERTIGOSCAN7.0\VERTIGOSCAN7.CPP
+FC: no differences encountered
+
+Comparing files VertigoScan7Class.cpp and D:\SYSAL2\VERTIGOSCAN7.0\VERTIGOSCAN7CLASS.CPP
+***** VertigoScan7Class.cpp
+#include "IScanServer.h"
+#include "PlateChanger2.h"      //GS
+#include "PlateQualityDlg.h"
+***** D:\SYSAL2\VERTIGOSCAN7.0\VERTIGOSCAN7CLASS.CPP
+#include "IScanServer.h"
+#include "PlateChanger.h"
+#include "PlateQualityDlg.h"
+*****
+
+***** VertigoScan7Class.cpp
+#include "PlateQualityInitDlg.h"
+
+***** D:\SYSAL2\VERTIGOSCAN7.0\VERTIGOSCAN7CLASS.CPP
+#include "PlateQualityInitDlg.h"
+#include "EditMachineDefaults.h"
+
+*****
+
+***** VertigoScan7Class.cpp
+
+/////////////////////////////////////////////////////////////////////////////
+***** D:\SYSAL2\VERTIGOSCAN7.0\VERTIGOSCAN7CLASS.CPP
+
+const int MachineConfigDataN = 11;
+
+QueryDataInfo MachineConfigDataName[MachineConfigDataN] =
+{
+        {"DigXDec",                                     "%d",   STRUCT_OFFSET(ConfigData, DigXDec),                            
+-1"},
+        {"DigXInc",                                     "%d",   STRUCT_OFFSET(ConfigData, DigXInc),                            
+-1"},
+        {"DigYDec",                                     "%d",   STRUCT_OFFSET(ConfigData, DigYDec),                            
+-1"},
+        {"DigYInc",                                     "%d",   STRUCT_OFFSET(ConfigData, DigYInc),                            
+-1"},
+        {"DigSet1",                                     "%d",   STRUCT_OFFSET(ConfigData, DigSet1),                            
+-1"},
+        {"DigSet2",                                     "%d",   STRUCT_OFFSET(ConfigData, DigSet2),                            
+-1"},
+        {"DigToggleFound",                      "%d",   STRUCT_OFFSET(ConfigData, DigToggleFound),              "-1"},
+        {"DigSwitchEmuLayer",           "%d",   STRUCT_OFFSET(ConfigData, DigSwitchEmuLayer),   "-1"},
+        {"DigGo",                                       "%d",   STRUCT_OFFSET(ConfigData, DigGo),                              
+-1"},
+        {"AxXAxis",                                     "%d",   STRUCT_OFFSET(ConfigData, AxXAxis),                            
+-1"},
+        {"AxYAxis",                                     "%d",   STRUCT_OFFSET(ConfigData, AxYAxis),                            
+-1"}
+};
+
+/////////////////////////////////////////////////////////////////////////////
+*****
+
+***** VertigoScan7Class.cpp
+                        GetData(ConfigDataName[i], &C, VoidConfig.pItems, VoidConfig.CountOfItems);
+                };
+***** D:\SYSAL2\VERTIGOSCAN7.0\VERTIGOSCAN7CLASS.CPP
+                        GetData(ConfigDataName[i], &C, VoidConfig.pItems, VoidConfig.CountOfItems);
+                for (i = 0; i < MachineConfigDataN; i++)
+                        GetData(MachineConfigDataName[i], &C, VoidConfig.pItems, VoidConfig.CountOfItems);
+                };
+*****
+
+***** VertigoScan7Class.cpp
+        
+        strncpy(name, "Vertigo Scan 6.2", SYSAL_MAX_CONN_NAME_LEN);
+        return S_OK;
+***** D:\SYSAL2\VERTIGOSCAN7.0\VERTIGOSCAN7CLASS.CPP
+        
+        strncpy(name, "Vertigo Scan 7.0", SYSAL_MAX_CONN_NAME_LEN);
+        return S_OK;
+*****
+
+***** VertigoScan7Class.cpp
+    IPlateChanger *iPC = 0;
+        IPlateChanger2 *iPC2 = 0; //GS
+
+***** D:\SYSAL2\VERTIGOSCAN7.0\VERTIGOSCAN7CLASS.CPP
+    IPlateChanger *iPC = 0;
+
+*****
+
+***** VertigoScan7Class.cpp
+        if (Slots[9].pUnknown) Slots[9].pUnknown->QueryInterface(IID_IPlateChanger, (void **)&iPC);
+        if (iPC) if (iPC->QueryInterface(IID_IPlateChanger2, (void **)&iPC2) != S_OK) iPC2 = 0; //GS
+
+***** D:\SYSAL2\VERTIGOSCAN7.0\VERTIGOSCAN7CLASS.CPP
+        if (Slots[9].pUnknown) Slots[9].pUnknown->QueryInterface(IID_IPlateChanger, (void **)&iPC);
+
+*****
+
+***** VertigoScan7Class.cpp
+#endif                          
+                        &m_hDefWnd, (ISySalObject *)this, iIO, iSt, iOb, iFG, iVP, iTk1, iFt1, iTk2, iFt2, iSM, 
+                                iPC2, //GS
+                        C, 0, AutoZReset, TrustZ);
+
+***** D:\SYSAL2\VERTIGOSCAN7.0\VERTIGOSCAN7CLASS.CPP
+#endif                          
+                        &m_hDefWnd, (ISySalObject *)this, iIO, iSt, iOb, iFG, iVP, iTk1, iFt1, iTk2, iFt2, iSM, C, 0, AutoZRese
+, TrustZ);
+
+*****
+
+***** VertigoScan7Class.cpp
+                                                                &m_hDefWnd, (ISySalObject *)this, iIO, iSt, iOb, iFG, iVP, iTk1
+ iFt1, iTk2, iFt2, iSM, 
+                                                                iPC2, //GS
+                                                                C, 
+                                                                Id, ScanStart.m_MinX, ScanStart.m_MaxX, ScanStart.m_MinY, ScanS
+***** D:\SYSAL2\VERTIGOSCAN7.0\VERTIGOSCAN7CLASS.CPP
+                                                                &m_hDefWnd, (ISySalObject *)this, iIO, iSt, iOb, iFG, iVP, iTk1
+ iFt1, iTk2, iFt2, iSM, C, 
+                                                                Id, ScanStart.m_MinX, ScanStart.m_MaxX, ScanStart.m_MinY, ScanS
+*****
+
+***** VertigoScan7Class.cpp
+                                        CTestAndConfig TestAndConfig(&m_hDefWnd, (ISySalObject *)this, iIO, iSt, iOb, iFG, iVP,
+iTk1, iFt1, iTk2, iFt2, iSM, 
+                                                iPC2, //GS
+                                                &CMI, C);
+                                        if (TestAndConfig.DoModal() == 
+***** D:\SYSAL2\VERTIGOSCAN7.0\VERTIGOSCAN7CLASS.CPP
+                                        CTestAndConfig TestAndConfig(&m_hDefWnd, (ISySalObject *)this, iIO, iSt, iOb, iFG, iVP,
+iTk1, iFt1, iTk2, iFt2, iSM, &CMI, C);
+                                        if (TestAndConfig.DoModal() == 
+*****
+
+***** VertigoScan7Class.cpp
+        System::AppDomain::CurrentDomain->SetData("$_SSIEv_$", nullptr);
+        
+        if (iPC2) iPC2->Release();      //GS
+        if (iPC) iPC->Release();        //GS
+        if (iSM) iSM->Release();
+***** D:\SYSAL2\VERTIGOSCAN7.0\VERTIGOSCAN7CLASS.CPP
+        System::AppDomain::CurrentDomain->SetData("$_SSIEv_$", nullptr);
+        if (iSM) iSM->Release();
+*****
+
+***** VertigoScan7Class.cpp
+                LDres=iPc->LoadPlate(id,(BYTE*)textid);
+                //if(!LDres) return false;                                                              //GS   commented by GS:
+non standard return value
+                if( LDres != S_OK  ) return false;                                      //GS     S_OK, S_FALSE are the standard
+return value
+                Ret=IDOK;
+***** D:\SYSAL2\VERTIGOSCAN7.0\VERTIGOSCAN7CLASS.CPP
+                LDres=iPc->LoadPlate(id,(BYTE*)textid);
+                if(!LDres) return false;
+                Ret=IDOK;
+*****
+
+***** VertigoScan7Class.cpp
+        UINT Ret;
+    if(iPc) Ret = ( iPc->UnloadPlate() == S_OK ); //GS CHANGE OF THE PREVIOUS STANDARD ==> if(iPc) iPc->UnloadPlate();
+        else
+***** D:\SYSAL2\VERTIGOSCAN7.0\VERTIGOSCAN7CLASS.CPP
+        UINT Ret;
+    if(iPc) iPc->UnloadPlate();
+        else
+*****
+
+***** VertigoScan7Class.cpp
+***** D:\SYSAL2\VERTIGOSCAN7.0\VERTIGOSCAN7CLASS.CPP
+
+
+//ISySalObjectMachineDefaults
+
+STDMETHODIMP CVertigoScan7Class::SetMachineDefaults(SySalConfig *pConfig)
+{       
+        // TODO: Add your implementation code here
+        int i;
+        for (i = 0; i < MachineConfigDataN; i++) GetData(MachineConfigDataName[i], &C, pConfig->pItems, pConfig->CountOfItems);
+
+        if (i < MachineConfigDataN) return S_FALSE;
+        return S_OK;
+}
+
+STDMETHODIMP CVertigoScan7Class::GetMachineDefaults(SySalConfig *pConfig)
+{       
+        // TODO: Add your implementation code here
+        if (pConfig->pItems) CoTaskMemFree(pConfig->pItems);
+        pConfig->pItems = 0;
+        pConfig->CountOfItems = 0;
+        int i;
+        if (!(pConfig->pItems = (char *)CoTaskMemAlloc(MachineConfigDataN * 
+                (SYSAL_MAXCONFIG_ENTRY_NAME_LEN + SYSAL_MAXCONFIG_ENTRY_VALUE_LEN))))
+                        return S_FALSE;
+        pConfig->CountOfItems = MachineConfigDataN;
+        for (i = 0; i < MachineConfigDataN; i++)
+        {
+                strncpy(pConfig->pItems + i * (SYSAL_MAXCONFIG_ENTRY_NAME_LEN + SYSAL_MAXCONFIG_ENTRY_VALUE_LEN), 
+                        MachineConfigDataName[i].Name, SYSAL_MAXCONFIG_ENTRY_NAME_LEN);
+                if (!strcmp(MachineConfigDataName[i].Format, "%d"))
+                        sprintf(pConfig->pItems + i * (SYSAL_MAXCONFIG_ENTRY_NAME_LEN + SYSAL_MAXCONFIG_ENTRY_VALUE_LEN) + 
+                                SYSAL_MAXCONFIG_ENTRY_NAME_LEN, MachineConfigDataName[i].Format, *(int *)((char *)&C + MachineC
+nfigDataName[i].Position));
+                else
+                        sprintf(pConfig->pItems + i * (SYSAL_MAXCONFIG_ENTRY_NAME_LEN + SYSAL_MAXCONFIG_ENTRY_VALUE_LEN) + 
+                                SYSAL_MAXCONFIG_ENTRY_NAME_LEN, MachineConfigDataName[i].Format, *(float *)((char *)&C + Machin
+ConfigDataName[i].Position));
+                };
+        return S_OK;
+}
+
+STDMETHODIMP CVertigoScan7Class::EditMachineDefaults(SySalConfig *pConfig, HSySalHANDLE hWnd)
+{       
+        // TODO: Add your implementation code here
+        AFX_MANAGE_STATE(AfxGetStaticModuleState())
+
+        ConfigData TempC;
+        int i, n;       
+        for (i = 0; i < MachineConfigDataN; i++) 
+                GetData(MachineConfigDataName[i], &TempC, pConfig->pItems, pConfig->CountOfItems);
+
+        CWnd Owner;
+        Owner.Attach((HWND)hWnd);
+        CEditMachineDefaults MyDlg(&Owner);
+        MyDlg.C = TempC; 
+
+        if (MyDlg.DoModal() == IDOK)
+        {
+                TempC = MyDlg.C;
+                if (pConfig->pItems) CoTaskMemFree(pConfig->pItems);
+                pConfig->pItems = 0;
+                pConfig->CountOfItems = 0;      
+                if (!(pConfig->pItems = (char *)CoTaskMemAlloc(n * 
+                        (SYSAL_MAXCONFIG_ENTRY_NAME_LEN + SYSAL_MAXCONFIG_ENTRY_VALUE_LEN))))
+                {
+                        Owner.Detach();
+                        return S_FALSE;
+                        }
+                pConfig->CountOfItems = MachineConfigDataN;             
+                for (i = 0; i < MachineConfigDataN; i++)
+                {
+                        strncpy(pConfig->pItems + i * (SYSAL_MAXCONFIG_ENTRY_NAME_LEN + SYSAL_MAXCONFIG_ENTRY_VALUE_LEN), 
+                                MachineConfigDataName[i].Name, SYSAL_MAXCONFIG_ENTRY_NAME_LEN);
+                        if (!strcmp(MachineConfigDataName[i].Format, "%d"))
+                                sprintf(pConfig->pItems + i * (SYSAL_MAXCONFIG_ENTRY_NAME_LEN + SYSAL_MAXCONFIG_ENTRY_VALUE_LEN
+ + 
+                                        SYSAL_MAXCONFIG_ENTRY_NAME_LEN, MachineConfigDataName[i].Format, *(int *)((char *)&Temp
+ + MachineConfigDataName[i].Position));
+                        else
+                                sprintf(pConfig->pItems + i * (SYSAL_MAXCONFIG_ENTRY_NAME_LEN + SYSAL_MAXCONFIG_ENTRY_VALUE_LEN
+ + 
+                                        SYSAL_MAXCONFIG_ENTRY_NAME_LEN, MachineConfigDataName[i].Format, *(float *)((char *)&Te
+pC + MachineConfigDataName[i].Position));
+                        };
+                Owner.Detach();
+                return S_OK;
+                };
+        Owner.Detach();
+        return S_FALSE;
+}
+
+*****
+
+Comparing files VertigoScanner.cpp and D:\SYSAL2\VERTIGOSCAN7.0\VERTIGOSCANNER.CPP
+***** VertigoScanner.cpp
+        IObjective *iob, IFrameGrabber *ifg, IVisionProcessor3 *ivp, ITracker3 *itk1, ITrackFitter3 *ift1, 
+        ITracker3 *itk2, ITrackFitter3 *ift2, ISheetMap *ism, 
+        IPlateChanger2 *ipc2, //GS
+        ConfigData &c)
+        : iIO(iio), iSt(ist), iOb(iob), iFG(ifg), iVP(ivp), iSM(ism), 
+        iPC2(ipc2), //GS
+        C(c), iSelf(iself), LightSet(false)
+{
+***** D:\SYSAL2\VERTIGOSCAN7.0\VERTIGOSCANNER.CPP
+        IObjective *iob, IFrameGrabber *ifg, IVisionProcessor3 *ivp, ITracker3 *itk1, ITrackFitter3 *ift1, 
+        ITracker3 *itk2, ITrackFitter3 *ift2, ISheetMap *ism, ConfigData &c)
+        : iIO(iio), iSt(ist), iOb(iob), iFG(ifg), iVP(ivp), iSM(ism), C(c), iSelf(iself), LightSet(false)
+{
+*****
+
+***** VertigoScanner.cpp
+*/
+        double xmin(startx), xmax(startx), ymin(starty), ymax(starty) ; //GS
+
+        for (i = 0; i < (C.XFields() * C.YFields()); i++)
+***** D:\SYSAL2\VERTIGOSCAN7.0\VERTIGOSCANNER.CPP
+*/
+        for (i = 0; i < (C.XFields() * C.YFields()); i++)
+*****
+
+***** VertigoScanner.cpp
+pViews[i].TileY;
+                
+                xmin = min( xmin , Frag.Fragment.pViews[i].X[0] );      //GS
+                xmax = max( xmax , Frag.Fragment.pViews[i].X[0] );      //GS
+                ymin = min( ymin , Frag.Fragment.pViews[i].Y[0] );      //GS
+                ymax = max( ymax , Frag.Fragment.pViews[i].Y[0] );      //GS
+        };
+        Milestone = 2;
+***** D:\SYSAL2\VERTIGOSCAN7.0\VERTIGOSCANNER.CPP
+pViews[i].TileY;
+                };
+        Milestone = 2;
+*****
+
+***** VertigoScanner.cpp
+
+        //if (iPC2)  iPC2->DispenseOil( xmin, ymin, xmax, ymax );  //GS
+        ProcessVariables.TCount[0] = ProcessVariables.TCount[1] = 0;
+***** D:\SYSAL2\VERTIGOSCAN7.0\VERTIGOSCANNER.CPP
+
+        ProcessVariables.TCount[0] = ProcessVariables.TCount[1] = 0;
+*****
+
+***** VertigoScanner.cpp
+        iStOb->EnableMonitor(false);
+   
+        if (iPC2)                                                                                                              
+/GS
+        {                                                                                                                      
+//GS
+                ISySalObject *iPcOb = 0;                                                                        //GS
+                iPC2->QueryInterface(IID_ISySalObject, (void **)&iPcOb);        //GS
+                iPcOb->EnableMonitor(false);                                                            //GS
+                iPcOb->Release();                                                                                       //GS
+        }                                                                                                                      
+//GS
+
+***** D:\SYSAL2\VERTIGOSCAN7.0\VERTIGOSCANNER.CPP
+        iStOb->EnableMonitor(false);
+
+*****
+
+***** VertigoScanner.cpp
+
+        // if (iPC2) iPC2->DispenseOil( startx, starty, startx, starty ); //GS
+
+        ProcessVariables.StartX = startx;
+***** D:\SYSAL2\VERTIGOSCAN7.0\VERTIGOSCANNER.CPP
+
+        ProcessVariables.StartX = startx;
+*****
+
+***** VertigoScanner.cpp
+
+        if (iPC2)                                                                                                              
+/GS
+        {                                                                                                                      
+//GS
+                ISySalObject *iPcOb = 0;                                                                        //GS
+                iPC2->QueryInterface(IID_ISySalObject, (void **)&iPcOb);        //GS
+                iPcOb->EnableMonitor(false);                                                            //GS
+                iPcOb->Release();                                                                                       //GS
+        }                                                                                                                      
+//GS
+
+        if (!LightSet)
+***** D:\SYSAL2\VERTIGOSCAN7.0\VERTIGOSCANNER.CPP
+
+        if (!LightSet)
+*****
+

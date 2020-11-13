@@ -1,0 +1,29 @@
+Undo: Select
+Undo: Extrude
+Undo: Extrude
+Undo: Extrude
+Undo: Select
+Undo: Subdivide Selection
+Undo: Subdivide Selection
+Undo: Smooth All
+Create Face: no vertex selected, aborted!
+
+Undo: Select
+Undo: Select
+Undo: Select
+Undo: Smooth All
+Undo: Subdivide Selection
+Undo: Subdivide Selection
+Undo: DirectX Mesh Tools...
+Preparing group: "Triangles"...
+0 triangles, 0 vertices, 0 normals
+
+Preparing group: "Cylinder01"...
+0 triangles, 0 vertices, 0 normals
+
+Preparing group: "Cylinder02"...
+0 triangles, 0 vertices, 0 normals
+
+Preparing group: "GeoSphere02"...
+5120 triangles, 2562 vertices, 2562 normals
+

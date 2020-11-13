@@ -1,0 +1,49 @@
+# Microsoft Developer Studio Generated Dependency File, included by VertigoScan.mak
+
+.\MainSwitch.cpp : \
+	".\MainSwitch.h"\
+	
+
+.\StdAfx.cpp : \
+	".\StdAfx.h"\
+	"c:\program files\microsoft visual studio\vc98\include\basetsd.h"\
+	
+
+.\VertigoScan.cpp : \
+	"..\common\config.h"\
+	"..\common\connection.h"\
+	"..\common\guidefs.h"\
+	"..\common\sheetmap.h"\
+	".\VertigoScan.h"\
+	".\VertigoScan_i.c"\
+	".\VertigoScanClass.h"\
+	
+
+.\VertigoScan.rc : \
+	".\icon32.ico"\
+	".\icon64.ico"\
+	".\VertigoScan.rgs"\
+	".\VSWelcome256.bmp"\
+	
+
+.\VertigoScanClass.cpp : \
+	"..\common\cameraspec.h"\
+	"..\common\cluster.h"\
+	"..\common\config.h"\
+	"..\common\connection.h"\
+	"..\common\fitter.h"\
+	"..\common\flattrack.h"\
+	"..\common\framegrabber.h"\
+	"..\common\framegrabberdefs.h"\
+	"..\common\guidefs.h"\
+	"..\common\objective.h"\
+	"..\common\sheetmap.h"\
+	"..\common\stage.h"\
+	"..\common\track.h"\
+	"..\common\tracker.h"\
+	"..\common\tvectors.h"\
+	"..\common\visionprocessor.h"\
+	".\ums.h"\
+	".\VertigoScan.h"\
+	".\VertigoScanClass.h"\
+	

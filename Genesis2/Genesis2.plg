@@ -1,0 +1,581 @@
+<html>
+<body>
+<pre>
+<h1>Build Log</h1>
+<h3>
+--------------------Configuration: Genesis2 - Win32 Release MinSize--------------------
+</h3>
+<h3>Command Lines</h3>
+Creating temporary file "C:\DOCUME~1\kryss\LOCALS~1\Temp\RSP50.tmp" with contents
+[
+/nologo /MD /W3 /GX /O1 /I "..\Common" /I "Matrox\mil\include" /I "Matrox\gnl\src\headers\common" /I "Matrox\gnl\src\headers\host" /D "WIN32" /D "NDEBUG" /D "_WINDOWS" /D "_WINDLL" /D "_AFXDLL" /D "_MBCS" /D "_USRDLL" /D "_ATL_DLL" /Fp"ReleaseMinSize/Genesis2.pch" /Yu"stdafx.h" /Fo"ReleaseMinSize/" /Fd"ReleaseMinSize/" /FD /c 
+"K:\SySal2\Genesis2\Clustering.cpp"
+"K:\SySal2\Genesis2\EditConfig.cpp"
+"K:\SySal2\Genesis2\Genesis2.cpp"
+"K:\SySal2\Genesis2\GenesisClass2.cpp"
+"K:\SySal2\Genesis2\GenesisData.cpp"
+"K:\SySal2\Genesis2\Globals.cpp"
+]
+Creating command line "cl.exe @C:\DOCUME~1\kryss\LOCALS~1\Temp\RSP50.tmp" 
+Creating temporary file "C:\DOCUME~1\kryss\LOCALS~1\Temp\RSP51.tmp" with contents
+[
+/nologo /MD /W3 /GX /O1 /I "..\Common" /I "Matrox\mil\include" /I "Matrox\gnl\src\headers\common" /I "Matrox\gnl\src\headers\host" /D "WIN32" /D "NDEBUG" /D "_WINDOWS" /D "_WINDLL" /D "_AFXDLL" /D "_MBCS" /D "_USRDLL" /D "_ATL_DLL" /Fp"ReleaseMinSize/Genesis2.pch" /Yc"stdafx.h" /Fo"ReleaseMinSize/" /Fd"ReleaseMinSize/" /FD /c 
+"K:\SySal2\Genesis2\StdAfx.cpp"
+]
+Creating command line "cl.exe @C:\DOCUME~1\kryss\LOCALS~1\Temp\RSP51.tmp" 
+Creating temporary file "C:\DOCUME~1\kryss\LOCALS~1\Temp\RSP52.tmp" with contents
+[
+/nologo /subsystem:windows /dll /incremental:no /pdb:"ReleaseMinSize/Genesis2.pdb" /machine:I386 /def:".\Genesis2.def" /out:"ReleaseMinSize/Genesis2.dll" /implib:"ReleaseMinSize/Genesis2.lib" 
+.\ReleaseMinSize\Clustering.obj
+.\ReleaseMinSize\EditConfig.obj
+.\ReleaseMinSize\Genesis2.obj
+.\ReleaseMinSize\GenesisClass2.obj
+.\ReleaseMinSize\GenesisData.obj
+.\ReleaseMinSize\Globals.obj
+.\ReleaseMinSize\StdAfx.obj
+.\ReleaseMinSize\Genesis2.res
+.\Matrox\gnl\lib\obj\nt\genlib.lib
+.\Matrox\mil\library\winnt\msc\dll\milvga.lib
+.\Matrox\mil\library\winnt\msc\dll\milgen.lib
+.\Matrox\mil\library\winnt\msc\dll\mil.lib
+]
+Creating command line "link.exe @C:\DOCUME~1\kryss\LOCALS~1\Temp\RSP52.tmp"
+Creating temporary file "C:\DOCUME~1\kryss\LOCALS~1\Temp\RSP53.bat" with contents
+[
+@echo off
+regsvr32 /s /c ".\ReleaseMinSize\Genesis2.dll"
+echo regsvr32 exec. time > ".\ReleaseMinSize\regsvr32.trg"
+]
+Creating command line "C:\DOCUME~1\kryss\LOCALS~1\Temp\RSP53.bat"
+Compiling...
+StdAfx.cpp
+Compiling...
+Clustering.cpp
+K:\SySal2\Genesis2\Clustering.cpp(316) : warning C4244: '=' : conversion from 'int' to 'float', possible loss of data
+EditConfig.cpp
+Genesis2.cpp
+GenesisClass2.cpp
+K:\SySal2\Genesis2\GenesisClass2.cpp(41) : warning C4305: 'initializing' : truncation from 'const int' to 'char'
+K:\SySal2\Genesis2\GenesisClass2.cpp(41) : warning C4309: 'initializing' : truncation of constant value
+K:\SySal2\Genesis2\GenesisClass2.cpp(42) : warning C4305: 'initializing' : truncation from 'const int' to 'char'
+K:\SySal2\Genesis2\GenesisClass2.cpp(42) : warning C4309: 'initializing' : truncation of constant value
+K:\SySal2\Genesis2\GenesisClass2.cpp(43) : warning C4305: 'initializing' : truncation from 'const int' to 'char'
+K:\SySal2\Genesis2\GenesisClass2.cpp(43) : warning C4309: 'initializing' : truncation of constant value
+K:\SySal2\Genesis2\GenesisClass2.cpp(44) : warning C4305: 'initializing' : truncation from 'const int' to 'char'
+K:\SySal2\Genesis2\GenesisClass2.cpp(44) : warning C4309: 'initializing' : truncation of constant value
+K:\SySal2\Genesis2\GenesisClass2.cpp(45) : warning C4305: 'initializing' : truncation from 'const int' to 'char'
+K:\SySal2\Genesis2\GenesisClass2.cpp(45) : warning C4309: 'initializing' : truncation of constant value
+K:\SySal2\Genesis2\GenesisClass2.cpp(45) : warning C4305: 'initializing' : truncation from 'const int' to 'char'
+K:\SySal2\Genesis2\GenesisClass2.cpp(45) : warning C4309: 'initializing' : truncation of constant value
+K:\SySal2\Genesis2\GenesisClass2.cpp(45) : warning C4305: 'initializing' : truncation from 'const int' to 'char'
+K:\SySal2\Genesis2\GenesisClass2.cpp(45) : warning C4309: 'initializing' : truncation of constant value
+K:\SySal2\Genesis2\GenesisClass2.cpp(45) : warning C4305: 'initializing' : truncation from 'const int' to 'char'
+K:\SySal2\Genesis2\GenesisClass2.cpp(45) : warning C4309: 'initializing' : truncation of constant value
+K:\SySal2\Genesis2\GenesisClass2.cpp(45) : warning C4305: 'initializing' : truncation from 'const int' to 'char'
+K:\SySal2\Genesis2\GenesisClass2.cpp(45) : warning C4309: 'initializing' : truncation of constant value
+K:\SySal2\Genesis2\GenesisClass2.cpp(45) : warning C4305: 'initializing' : truncation from 'const int' to 'char'
+K:\SySal2\Genesis2\GenesisClass2.cpp(45) : warning C4309: 'initializing' : truncation of constant value
+K:\SySal2\Genesis2\GenesisClass2.cpp(45) : warning C4305: 'initializing' : truncation from 'const int' to 'char'
+K:\SySal2\Genesis2\GenesisClass2.cpp(45) : warning C4309: 'initializing' : truncation of constant value
+K:\SySal2\Genesis2\GenesisClass2.cpp(45) : warning C4305: 'initializing' : truncation from 'const int' to 'char'
+K:\SySal2\Genesis2\GenesisClass2.cpp(45) : warning C4309: 'initializing' : truncation of constant value
+K:\SySal2\Genesis2\GenesisClass2.cpp(45) : warning C4305: 'initializing' : truncation from 'const int' to 'char'
+K:\SySal2\Genesis2\GenesisClass2.cpp(45) : warning C4309: 'initializing' : truncation of constant value
+K:\SySal2\Genesis2\GenesisClass2.cpp(46) : warning C4305: 'initializing' : truncation from 'const int' to 'char'
+K:\SySal2\Genesis2\GenesisClass2.cpp(46) : warning C4309: 'initializing' : truncation of constant value
+K:\SySal2\Genesis2\GenesisClass2.cpp(47) : warning C4305: 'initializing' : truncation from 'const int' to 'char'
+K:\SySal2\Genesis2\GenesisClass2.cpp(47) : warning C4309: 'initializing' : truncation of constant value
+K:\SySal2\Genesis2\GenesisClass2.cpp(48) : warning C4305: 'initializing' : truncation from 'const int' to 'char'
+K:\SySal2\Genesis2\GenesisClass2.cpp(48) : warning C4309: 'initializing' : truncation of constant value
+K:\SySal2\Genesis2\GenesisClass2.cpp(49) : warning C4305: 'initializing' : truncation from 'const int' to 'char'
+K:\SySal2\Genesis2\GenesisClass2.cpp(49) : warning C4309: 'initializing' : truncation of constant value
+K:\SySal2\Genesis2\GenesisClass2.cpp(57) : warning C4305: 'initializing' : truncation from 'const int' to 'char'
+K:\SySal2\Genesis2\GenesisClass2.cpp(57) : warning C4309: 'initializing' : truncation of constant value
+K:\SySal2\Genesis2\GenesisClass2.cpp(57) : warning C4305: 'initializing' : truncation from 'const int' to 'char'
+K:\SySal2\Genesis2\GenesisClass2.cpp(57) : warning C4309: 'initializing' : truncation of constant value
+K:\SySal2\Genesis2\GenesisClass2.cpp(57) : warning C4305: 'initializing' : truncation from 'const int' to 'char'
+K:\SySal2\Genesis2\GenesisClass2.cpp(57) : warning C4309: 'initializing' : truncation of constant value
+K:\SySal2\Genesis2\GenesisClass2.cpp(57) : warning C4305: 'initializing' : truncation from 'const int' to 'char'
+K:\SySal2\Genesis2\GenesisClass2.cpp(57) : warning C4309: 'initializing' : truncation of constant value
+K:\SySal2\Genesis2\GenesisClass2.cpp(57) : warning C4305: 'initializing' : truncation from 'const int' to 'char'
+K:\SySal2\Genesis2\GenesisClass2.cpp(57) : warning C4309: 'initializing' : truncation of constant value
+K:\SySal2\Genesis2\GenesisClass2.cpp(57) : warning C4305: 'initializing' : truncation from 'const int' to 'char'
+K:\SySal2\Genesis2\GenesisClass2.cpp(57) : warning C4309: 'initializing' : truncation of constant value
+K:\SySal2\Genesis2\GenesisClass2.cpp(57) : warning C4305: 'initializing' : truncation from 'const int' to 'char'
+K:\SySal2\Genesis2\GenesisClass2.cpp(57) : warning C4309: 'initializing' : truncation of constant value
+K:\SySal2\Genesis2\GenesisClass2.cpp(58) : warning C4305: 'initializing' : truncation from 'const int' to 'char'
+K:\SySal2\Genesis2\GenesisClass2.cpp(58) : warning C4309: 'initializing' : truncation of constant value
+K:\SySal2\Genesis2\GenesisClass2.cpp(58) : warning C4305: 'initializing' : truncation from 'const int' to 'char'
+K:\SySal2\Genesis2\GenesisClass2.cpp(58) : warning C4309: 'initializing' : truncation of constant value
+K:\SySal2\Genesis2\GenesisClass2.cpp(59) : warning C4305: 'initializing' : truncation from 'const int' to 'char'
+K:\SySal2\Genesis2\GenesisClass2.cpp(59) : warning C4309: 'initializing' : truncation of constant value
+K:\SySal2\Genesis2\GenesisClass2.cpp(59) : warning C4305: 'initializing' : truncation from 'const int' to 'char'
+K:\SySal2\Genesis2\GenesisClass2.cpp(59) : warning C4309: 'initializing' : truncation of constant value
+K:\SySal2\Genesis2\GenesisClass2.cpp(60) : warning C4305: 'initializing' : truncation from 'const int' to 'char'
+K:\SySal2\Genesis2\GenesisClass2.cpp(60) : warning C4309: 'initializing' : truncation of constant value
+K:\SySal2\Genesis2\GenesisClass2.cpp(60) : warning C4305: 'initializing' : truncation from 'const int' to 'char'
+K:\SySal2\Genesis2\GenesisClass2.cpp(60) : warning C4309: 'initializing' : truncation of constant value
+K:\SySal2\Genesis2\GenesisClass2.cpp(61) : warning C4305: 'initializing' : truncation from 'const int' to 'char'
+K:\SySal2\Genesis2\GenesisClass2.cpp(61) : warning C4309: 'initializing' : truncation of constant value
+K:\SySal2\Genesis2\GenesisClass2.cpp(61) : warning C4305: 'initializing' : truncation from 'const int' to 'char'
+K:\SySal2\Genesis2\GenesisClass2.cpp(61) : warning C4309: 'initializing' : truncation of constant value
+K:\SySal2\Genesis2\GenesisClass2.cpp(62) : warning C4305: 'initializing' : truncation from 'const int' to 'char'
+K:\SySal2\Genesis2\GenesisClass2.cpp(62) : warning C4309: 'initializing' : truncation of constant value
+K:\SySal2\Genesis2\GenesisClass2.cpp(62) : warning C4305: 'initializing' : truncation from 'const int' to 'char'
+K:\SySal2\Genesis2\GenesisClass2.cpp(62) : warning C4309: 'initializing' : truncation of constant value
+K:\SySal2\Genesis2\GenesisClass2.cpp(63) : warning C4305: 'initializing' : truncation from 'const int' to 'char'
+K:\SySal2\Genesis2\GenesisClass2.cpp(63) : warning C4309: 'initializing' : truncation of constant value
+K:\SySal2\Genesis2\GenesisClass2.cpp(63) : warning C4305: 'initializing' : truncation from 'const int' to 'char'
+K:\SySal2\Genesis2\GenesisClass2.cpp(63) : warning C4309: 'initializing' : truncation of constant value
+K:\SySal2\Genesis2\GenesisClass2.cpp(63) : warning C4305: 'initializing' : truncation from 'const int' to 'char'
+K:\SySal2\Genesis2\GenesisClass2.cpp(63) : warning C4309: 'initializing' : truncation of constant value
+K:\SySal2\Genesis2\GenesisClass2.cpp(63) : warning C4305: 'initializing' : truncation from 'const int' to 'char'
+K:\SySal2\Genesis2\GenesisClass2.cpp(63) : warning C4309: 'initializing' : truncation of constant value
+K:\SySal2\Genesis2\GenesisClass2.cpp(63) : warning C4305: 'initializing' : truncation from 'const int' to 'char'
+K:\SySal2\Genesis2\GenesisClass2.cpp(63) : warning C4309: 'initializing' : truncation of constant value
+K:\SySal2\Genesis2\GenesisClass2.cpp(63) : warning C4305: 'initializing' : truncation from 'const int' to 'char'
+K:\SySal2\Genesis2\GenesisClass2.cpp(63) : warning C4309: 'initializing' : truncation of constant value
+K:\SySal2\Genesis2\GenesisClass2.cpp(64) : warning C4305: 'initializing' : truncation from 'const int' to 'char'
+K:\SySal2\Genesis2\GenesisClass2.cpp(64) : warning C4309: 'initializing' : truncation of constant value
+K:\SySal2\Genesis2\GenesisClass2.cpp(71) : warning C4305: 'initializing' : truncation from 'const int' to 'char'
+K:\SySal2\Genesis2\GenesisClass2.cpp(71) : warning C4309: 'initializing' : truncation of constant value
+K:\SySal2\Genesis2\GenesisClass2.cpp(71) : warning C4305: 'initializing' : truncation from 'const int' to 'char'
+K:\SySal2\Genesis2\GenesisClass2.cpp(71) : warning C4309: 'initializing' : truncation of constant value
+K:\SySal2\Genesis2\GenesisClass2.cpp(71) : warning C4305: 'initializing' : truncation from 'const int' to 'char'
+K:\SySal2\Genesis2\GenesisClass2.cpp(71) : warning C4309: 'initializing' : truncation of constant value
+K:\SySal2\Genesis2\GenesisClass2.cpp(71) : warning C4305: 'initializing' : truncation from 'const int' to 'char'
+K:\SySal2\Genesis2\GenesisClass2.cpp(71) : warning C4309: 'initializing' : truncation of constant value
+K:\SySal2\Genesis2\GenesisClass2.cpp(71) : warning C4305: 'initializing' : truncation from 'const int' to 'char'
+K:\SySal2\Genesis2\GenesisClass2.cpp(71) : warning C4309: 'initializing' : truncation of constant value
+K:\SySal2\Genesis2\GenesisClass2.cpp(71) : warning C4305: 'initializing' : truncation from 'const int' to 'char'
+K:\SySal2\Genesis2\GenesisClass2.cpp(71) : warning C4309: 'initializing' : truncation of constant value
+K:\SySal2\Genesis2\GenesisClass2.cpp(71) : warning C4305: 'initializing' : truncation from 'const int' to 'char'
+K:\SySal2\Genesis2\GenesisClass2.cpp(71) : warning C4309: 'initializing' : truncation of constant value
+K:\SySal2\Genesis2\GenesisClass2.cpp(71) : warning C4305: 'initializing' : truncation from 'const int' to 'char'
+K:\SySal2\Genesis2\GenesisClass2.cpp(71) : warning C4309: 'initializing' : truncation of constant value
+K:\SySal2\Genesis2\GenesisClass2.cpp(71) : warning C4305: 'initializing' : truncation from 'const int' to 'char'
+K:\SySal2\Genesis2\GenesisClass2.cpp(71) : warning C4309: 'initializing' : truncation of constant value
+K:\SySal2\Genesis2\GenesisClass2.cpp(71) : warning C4305: 'initializing' : truncation from 'const int' to 'char'
+K:\SySal2\Genesis2\GenesisClass2.cpp(71) : warning C4309: 'initializing' : truncation of constant value
+K:\SySal2\Genesis2\GenesisClass2.cpp(71) : warning C4305: 'initializing' : truncation from 'const int' to 'char'
+K:\SySal2\Genesis2\GenesisClass2.cpp(71) : warning C4309: 'initializing' : truncation of constant value
+K:\SySal2\Genesis2\GenesisClass2.cpp(72) : warning C4305: 'initializing' : truncation from 'const int' to 'char'
+K:\SySal2\Genesis2\GenesisClass2.cpp(72) : warning C4309: 'initializing' : truncation of constant value
+K:\SySal2\Genesis2\GenesisClass2.cpp(72) : warning C4305: 'initializing' : truncation from 'const int' to 'char'
+K:\SySal2\Genesis2\GenesisClass2.cpp(72) : warning C4309: 'initializing' : truncation of constant value
+K:\SySal2\Genesis2\GenesisClass2.cpp(73) : warning C4305: 'initializing' : truncation from 'const int' to 'char'
+K:\SySal2\Genesis2\GenesisClass2.cpp(73) : warning C4309: 'initializing' : truncation of constant value
+K:\SySal2\Genesis2\GenesisClass2.cpp(73) : warning C4305: 'initializing' : truncation from 'const int' to 'char'
+K:\SySal2\Genesis2\GenesisClass2.cpp(73) : warning C4309: 'initializing' : truncation of constant value
+K:\SySal2\Genesis2\GenesisClass2.cpp(74) : warning C4305: 'initializing' : truncation from 'const int' to 'char'
+K:\SySal2\Genesis2\GenesisClass2.cpp(74) : warning C4309: 'initializing' : truncation of constant value
+K:\SySal2\Genesis2\GenesisClass2.cpp(74) : warning C4305: 'initializing' : truncation from 'const int' to 'char'
+K:\SySal2\Genesis2\GenesisClass2.cpp(74) : warning C4309: 'initializing' : truncation of constant value
+K:\SySal2\Genesis2\GenesisClass2.cpp(75) : warning C4305: 'initializing' : truncation from 'const int' to 'char'
+K:\SySal2\Genesis2\GenesisClass2.cpp(75) : warning C4309: 'initializing' : truncation of constant value
+K:\SySal2\Genesis2\GenesisClass2.cpp(75) : warning C4305: 'initializing' : truncation from 'const int' to 'char'
+K:\SySal2\Genesis2\GenesisClass2.cpp(75) : warning C4309: 'initializing' : truncation of constant value
+K:\SySal2\Genesis2\GenesisClass2.cpp(76) : warning C4305: 'initializing' : truncation from 'const int' to 'char'
+K:\SySal2\Genesis2\GenesisClass2.cpp(76) : warning C4309: 'initializing' : truncation of constant value
+K:\SySal2\Genesis2\GenesisClass2.cpp(76) : warning C4305: 'initializing' : truncation from 'const int' to 'char'
+K:\SySal2\Genesis2\GenesisClass2.cpp(76) : warning C4309: 'initializing' : truncation of constant value
+K:\SySal2\Genesis2\GenesisClass2.cpp(77) : warning C4305: 'initializing' : truncation from 'const int' to 'char'
+K:\SySal2\Genesis2\GenesisClass2.cpp(77) : warning C4309: 'initializing' : truncation of constant value
+K:\SySal2\Genesis2\GenesisClass2.cpp(77) : warning C4305: 'initializing' : truncation from 'const int' to 'char'
+K:\SySal2\Genesis2\GenesisClass2.cpp(77) : warning C4309: 'initializing' : truncation of constant value
+K:\SySal2\Genesis2\GenesisClass2.cpp(78) : warning C4305: 'initializing' : truncation from 'const int' to 'char'
+K:\SySal2\Genesis2\GenesisClass2.cpp(78) : warning C4309: 'initializing' : truncation of constant value
+K:\SySal2\Genesis2\GenesisClass2.cpp(78) : warning C4305: 'initializing' : truncation from 'const int' to 'char'
+K:\SySal2\Genesis2\GenesisClass2.cpp(78) : warning C4309: 'initializing' : truncation of constant value
+K:\SySal2\Genesis2\GenesisClass2.cpp(79) : warning C4305: 'initializing' : truncation from 'const int' to 'char'
+K:\SySal2\Genesis2\GenesisClass2.cpp(79) : warning C4309: 'initializing' : truncation of constant value
+K:\SySal2\Genesis2\GenesisClass2.cpp(79) : warning C4305: 'initializing' : truncation from 'const int' to 'char'
+K:\SySal2\Genesis2\GenesisClass2.cpp(79) : warning C4309: 'initializing' : truncation of constant value
+K:\SySal2\Genesis2\GenesisClass2.cpp(80) : warning C4305: 'initializing' : truncation from 'const int' to 'char'
+K:\SySal2\Genesis2\GenesisClass2.cpp(80) : warning C4309: 'initializing' : truncation of constant value
+K:\SySal2\Genesis2\GenesisClass2.cpp(80) : warning C4305: 'initializing' : truncation from 'const int' to 'char'
+K:\SySal2\Genesis2\GenesisClass2.cpp(80) : warning C4309: 'initializing' : truncation of constant value
+K:\SySal2\Genesis2\GenesisClass2.cpp(81) : warning C4305: 'initializing' : truncation from 'const int' to 'char'
+K:\SySal2\Genesis2\GenesisClass2.cpp(81) : warning C4309: 'initializing' : truncation of constant value
+K:\SySal2\Genesis2\GenesisClass2.cpp(81) : warning C4305: 'initializing' : truncation from 'const int' to 'char'
+K:\SySal2\Genesis2\GenesisClass2.cpp(81) : warning C4309: 'initializing' : truncation of constant value
+K:\SySal2\Genesis2\GenesisClass2.cpp(81) : warning C4305: 'initializing' : truncation from 'const int' to 'char'
+K:\SySal2\Genesis2\GenesisClass2.cpp(81) : warning C4309: 'initializing' : truncation of constant value
+K:\SySal2\Genesis2\GenesisClass2.cpp(81) : warning C4305: 'initializing' : truncation from 'const int' to 'char'
+K:\SySal2\Genesis2\GenesisClass2.cpp(81) : warning C4309: 'initializing' : truncation of constant value
+K:\SySal2\Genesis2\GenesisClass2.cpp(81) : warning C4305: 'initializing' : truncation from 'const int' to 'char'
+K:\SySal2\Genesis2\GenesisClass2.cpp(81) : warning C4309: 'initializing' : truncation of constant value
+K:\SySal2\Genesis2\GenesisClass2.cpp(81) : warning C4305: 'initializing' : truncation from 'const int' to 'char'
+K:\SySal2\Genesis2\GenesisClass2.cpp(81) : warning C4309: 'initializing' : truncation of constant value
+K:\SySal2\Genesis2\GenesisClass2.cpp(81) : warning C4305: 'initializing' : truncation from 'const int' to 'char'
+K:\SySal2\Genesis2\GenesisClass2.cpp(81) : warning C4309: 'initializing' : truncation of constant value
+K:\SySal2\Genesis2\GenesisClass2.cpp(81) : warning C4305: 'initializing' : truncation from 'const int' to 'char'
+K:\SySal2\Genesis2\GenesisClass2.cpp(81) : warning C4309: 'initializing' : truncation of constant value
+K:\SySal2\Genesis2\GenesisClass2.cpp(81) : warning C4305: 'initializing' : truncation from 'const int' to 'char'
+K:\SySal2\Genesis2\GenesisClass2.cpp(81) : warning C4309: 'initializing' : truncation of constant value
+K:\SySal2\Genesis2\GenesisClass2.cpp(81) : warning C4305: 'initializing' : truncation from 'const int' to 'char'
+K:\SySal2\Genesis2\GenesisClass2.cpp(81) : warning C4309: 'initializing' : truncation of constant value
+K:\SySal2\Genesis2\GenesisClass2.cpp(82) : warning C4305: 'initializing' : truncation from 'const int' to 'char'
+K:\SySal2\Genesis2\GenesisClass2.cpp(82) : warning C4309: 'initializing' : truncation of constant value
+K:\SySal2\Genesis2\GenesisClass2.cpp(89) : warning C4305: 'initializing' : truncation from 'const int' to 'char'
+K:\SySal2\Genesis2\GenesisClass2.cpp(89) : warning C4309: 'initializing' : truncation of constant value
+K:\SySal2\Genesis2\GenesisClass2.cpp(89) : warning C4305: 'initializing' : truncation from 'const int' to 'char'
+K:\SySal2\Genesis2\GenesisClass2.cpp(89) : warning C4309: 'initializing' : truncation of constant value
+K:\SySal2\Genesis2\GenesisClass2.cpp(89) : warning C4305: 'initializing' : truncation from 'const int' to 'char'
+K:\SySal2\Genesis2\GenesisClass2.cpp(89) : warning C4309: 'initializing' : truncation of constant value
+K:\SySal2\Genesis2\GenesisClass2.cpp(89) : warning C4305: 'initializing' : truncation from 'const int' to 'char'
+K:\SySal2\Genesis2\GenesisClass2.cpp(89) : warning C4309: 'initializing' : truncation of constant value
+K:\SySal2\Genesis2\GenesisClass2.cpp(89) : warning C4305: 'initializing' : truncation from 'const int' to 'char'
+K:\SySal2\Genesis2\GenesisClass2.cpp(89) : warning C4309: 'initializing' : truncation of constant value
+K:\SySal2\Genesis2\GenesisClass2.cpp(89) : warning C4305: 'initializing' : truncation from 'const int' to 'char'
+K:\SySal2\Genesis2\GenesisClass2.cpp(89) : warning C4309: 'initializing' : truncation of constant value
+K:\SySal2\Genesis2\GenesisClass2.cpp(89) : warning C4305: 'initializing' : truncation from 'const int' to 'char'
+K:\SySal2\Genesis2\GenesisClass2.cpp(89) : warning C4309: 'initializing' : truncation of constant value
+K:\SySal2\Genesis2\GenesisClass2.cpp(89) : warning C4305: 'initializing' : truncation from 'const int' to 'char'
+K:\SySal2\Genesis2\GenesisClass2.cpp(89) : warning C4309: 'initializing' : truncation of constant value
+K:\SySal2\Genesis2\GenesisClass2.cpp(89) : warning C4305: 'initializing' : truncation from 'const int' to 'char'
+K:\SySal2\Genesis2\GenesisClass2.cpp(89) : warning C4309: 'initializing' : truncation of constant value
+K:\SySal2\Genesis2\GenesisClass2.cpp(89) : warning C4305: 'initializing' : truncation from 'const int' to 'char'
+K:\SySal2\Genesis2\GenesisClass2.cpp(89) : warning C4309: 'initializing' : truncation of constant value
+K:\SySal2\Genesis2\GenesisClass2.cpp(89) : warning C4305: 'initializing' : truncation from 'const int' to 'char'
+K:\SySal2\Genesis2\GenesisClass2.cpp(89) : warning C4309: 'initializing' : truncation of constant value
+K:\SySal2\Genesis2\GenesisClass2.cpp(89) : warning C4305: 'initializing' : truncation from 'const int' to 'char'
+K:\SySal2\Genesis2\GenesisClass2.cpp(89) : warning C4309: 'initializing' : truncation of constant value
+K:\SySal2\Genesis2\GenesisClass2.cpp(89) : warning C4305: 'initializing' : truncation from 'const int' to 'char'
+K:\SySal2\Genesis2\GenesisClass2.cpp(89) : warning C4309: 'initializing' : truncation of constant value
+K:\SySal2\Genesis2\GenesisClass2.cpp(89) : warning C4305: 'initializing' : truncation from 'const int' to 'char'
+K:\SySal2\Genesis2\GenesisClass2.cpp(89) : warning C4309: 'initializing' : truncation of constant value
+K:\SySal2\Genesis2\GenesisClass2.cpp(89) : warning C4305: 'initializing' : truncation from 'const int' to 'char'
+K:\SySal2\Genesis2\GenesisClass2.cpp(89) : warning C4309: 'initializing' : truncation of constant value
+K:\SySal2\Genesis2\GenesisClass2.cpp(89) : warning C4305: 'initializing' : truncation from 'const int' to 'char'
+K:\SySal2\Genesis2\GenesisClass2.cpp(89) : warning C4309: 'initializing' : truncation of constant value
+K:\SySal2\Genesis2\GenesisClass2.cpp(89) : warning C4305: 'initializing' : truncation from 'const int' to 'char'
+K:\SySal2\Genesis2\GenesisClass2.cpp(89) : warning C4309: 'initializing' : truncation of constant value
+K:\SySal2\Genesis2\GenesisClass2.cpp(89) : warning C4305: 'initializing' : truncation from 'const int' to 'char'
+K:\SySal2\Genesis2\GenesisClass2.cpp(89) : warning C4309: 'initializing' : truncation of constant value
+K:\SySal2\Genesis2\GenesisClass2.cpp(90) : warning C4305: 'initializing' : truncation from 'const int' to 'char'
+K:\SySal2\Genesis2\GenesisClass2.cpp(90) : warning C4309: 'initializing' : truncation of constant value
+K:\SySal2\Genesis2\GenesisClass2.cpp(90) : warning C4305: 'initializing' : truncation from 'const int' to 'char'
+K:\SySal2\Genesis2\GenesisClass2.cpp(90) : warning C4309: 'initializing' : truncation of constant value
+K:\SySal2\Genesis2\GenesisClass2.cpp(91) : warning C4305: 'initializing' : truncation from 'const int' to 'char'
+K:\SySal2\Genesis2\GenesisClass2.cpp(91) : warning C4309: 'initializing' : truncation of constant value
+K:\SySal2\Genesis2\GenesisClass2.cpp(91) : warning C4305: 'initializing' : truncation from 'const int' to 'char'
+K:\SySal2\Genesis2\GenesisClass2.cpp(91) : warning C4309: 'initializing' : truncation of constant value
+K:\SySal2\Genesis2\GenesisClass2.cpp(92) : warning C4305: 'initializing' : truncation from 'const int' to 'char'
+K:\SySal2\Genesis2\GenesisClass2.cpp(92) : warning C4309: 'initializing' : truncation of constant value
+K:\SySal2\Genesis2\GenesisClass2.cpp(92) : warning C4305: 'initializing' : truncation from 'const int' to 'char'
+K:\SySal2\Genesis2\GenesisClass2.cpp(92) : warning C4309: 'initializing' : truncation of constant value
+K:\SySal2\Genesis2\GenesisClass2.cpp(93) : warning C4305: 'initializing' : truncation from 'const int' to 'char'
+K:\SySal2\Genesis2\GenesisClass2.cpp(93) : warning C4309: 'initializing' : truncation of constant value
+K:\SySal2\Genesis2\GenesisClass2.cpp(93) : warning C4305: 'initializing' : truncation from 'const int' to 'char'
+K:\SySal2\Genesis2\GenesisClass2.cpp(93) : warning C4309: 'initializing' : truncation of constant value
+K:\SySal2\Genesis2\GenesisClass2.cpp(94) : warning C4305: 'initializing' : truncation from 'const int' to 'char'
+K:\SySal2\Genesis2\GenesisClass2.cpp(94) : warning C4309: 'initializing' : truncation of constant value
+K:\SySal2\Genesis2\GenesisClass2.cpp(94) : warning C4305: 'initializing' : truncation from 'const int' to 'char'
+K:\SySal2\Genesis2\GenesisClass2.cpp(94) : warning C4309: 'initializing' : truncation of constant value
+K:\SySal2\Genesis2\GenesisClass2.cpp(95) : warning C4305: 'initializing' : truncation from 'const int' to 'char'
+K:\SySal2\Genesis2\GenesisClass2.cpp(95) : warning C4309: 'initializing' : truncation of constant value
+K:\SySal2\Genesis2\GenesisClass2.cpp(95) : warning C4305: 'initializing' : truncation from 'const int' to 'char'
+K:\SySal2\Genesis2\GenesisClass2.cpp(95) : warning C4309: 'initializing' : truncation of constant value
+K:\SySal2\Genesis2\GenesisClass2.cpp(96) : warning C4305: 'initializing' : truncation from 'const int' to 'char'
+K:\SySal2\Genesis2\GenesisClass2.cpp(96) : warning C4309: 'initializing' : truncation of constant value
+K:\SySal2\Genesis2\GenesisClass2.cpp(96) : warning C4305: 'initializing' : truncation from 'const int' to 'char'
+K:\SySal2\Genesis2\GenesisClass2.cpp(96) : warning C4309: 'initializing' : truncation of constant value
+K:\SySal2\Genesis2\GenesisClass2.cpp(97) : warning C4305: 'initializing' : truncation from 'const int' to 'char'
+K:\SySal2\Genesis2\GenesisClass2.cpp(97) : warning C4309: 'initializing' : truncation of constant value
+K:\SySal2\Genesis2\GenesisClass2.cpp(97) : warning C4305: 'initializing' : truncation from 'const int' to 'char'
+K:\SySal2\Genesis2\GenesisClass2.cpp(97) : warning C4309: 'initializing' : truncation of constant value
+K:\SySal2\Genesis2\GenesisClass2.cpp(98) : warning C4305: 'initializing' : truncation from 'const int' to 'char'
+K:\SySal2\Genesis2\GenesisClass2.cpp(98) : warning C4309: 'initializing' : truncation of constant value
+K:\SySal2\Genesis2\GenesisClass2.cpp(98) : warning C4305: 'initializing' : truncation from 'const int' to 'char'
+K:\SySal2\Genesis2\GenesisClass2.cpp(98) : warning C4309: 'initializing' : truncation of constant value
+K:\SySal2\Genesis2\GenesisClass2.cpp(99) : warning C4305: 'initializing' : truncation from 'const int' to 'char'
+K:\SySal2\Genesis2\GenesisClass2.cpp(99) : warning C4309: 'initializing' : truncation of constant value
+K:\SySal2\Genesis2\GenesisClass2.cpp(99) : warning C4305: 'initializing' : truncation from 'const int' to 'char'
+K:\SySal2\Genesis2\GenesisClass2.cpp(99) : warning C4309: 'initializing' : truncation of constant value
+K:\SySal2\Genesis2\GenesisClass2.cpp(100) : warning C4305: 'initializing' : truncation from 'const int' to 'char'
+K:\SySal2\Genesis2\GenesisClass2.cpp(100) : warning C4309: 'initializing' : truncation of constant value
+K:\SySal2\Genesis2\GenesisClass2.cpp(100) : warning C4305: 'initializing' : truncation from 'const int' to 'char'
+K:\SySal2\Genesis2\GenesisClass2.cpp(100) : warning C4309: 'initializing' : truncation of constant value
+K:\SySal2\Genesis2\GenesisClass2.cpp(101) : warning C4305: 'initializing' : truncation from 'const int' to 'char'
+K:\SySal2\Genesis2\GenesisClass2.cpp(101) : warning C4309: 'initializing' : truncation of constant value
+K:\SySal2\Genesis2\GenesisClass2.cpp(101) : warning C4305: 'initializing' : truncation from 'const int' to 'char'
+K:\SySal2\Genesis2\GenesisClass2.cpp(101) : warning C4309: 'initializing' : truncation of constant value
+K:\SySal2\Genesis2\GenesisClass2.cpp(102) : warning C4305: 'initializing' : truncation from 'const int' to 'char'
+K:\SySal2\Genesis2\GenesisClass2.cpp(102) : warning C4309: 'initializing' : truncation of constant value
+K:\SySal2\Genesis2\GenesisClass2.cpp(102) : warning C4305: 'initializing' : truncation from 'const int' to 'char'
+K:\SySal2\Genesis2\GenesisClass2.cpp(102) : warning C4309: 'initializing' : truncation of constant value
+K:\SySal2\Genesis2\GenesisClass2.cpp(103) : warning C4305: 'initializing' : truncation from 'const int' to 'char'
+K:\SySal2\Genesis2\GenesisClass2.cpp(103) : warning C4309: 'initializing' : truncation of constant value
+K:\SySal2\Genesis2\GenesisClass2.cpp(103) : warning C4305: 'initializing' : truncation from 'const int' to 'char'
+K:\SySal2\Genesis2\GenesisClass2.cpp(103) : warning C4309: 'initializing' : truncation of constant value
+K:\SySal2\Genesis2\GenesisClass2.cpp(104) : warning C4305: 'initializing' : truncation from 'const int' to 'char'
+K:\SySal2\Genesis2\GenesisClass2.cpp(104) : warning C4309: 'initializing' : truncation of constant value
+K:\SySal2\Genesis2\GenesisClass2.cpp(104) : warning C4305: 'initializing' : truncation from 'const int' to 'char'
+K:\SySal2\Genesis2\GenesisClass2.cpp(104) : warning C4309: 'initializing' : truncation of constant value
+K:\SySal2\Genesis2\GenesisClass2.cpp(105) : warning C4305: 'initializing' : truncation from 'const int' to 'char'
+K:\SySal2\Genesis2\GenesisClass2.cpp(105) : warning C4309: 'initializing' : truncation of constant value
+K:\SySal2\Genesis2\GenesisClass2.cpp(105) : warning C4305: 'initializing' : truncation from 'const int' to 'char'
+K:\SySal2\Genesis2\GenesisClass2.cpp(105) : warning C4309: 'initializing' : truncation of constant value
+K:\SySal2\Genesis2\GenesisClass2.cpp(106) : warning C4305: 'initializing' : truncation from 'const int' to 'char'
+K:\SySal2\Genesis2\GenesisClass2.cpp(106) : warning C4309: 'initializing' : truncation of constant value
+K:\SySal2\Genesis2\GenesisClass2.cpp(106) : warning C4305: 'initializing' : truncation from 'const int' to 'char'
+K:\SySal2\Genesis2\GenesisClass2.cpp(106) : warning C4309: 'initializing' : truncation of constant value
+K:\SySal2\Genesis2\GenesisClass2.cpp(106) : warning C4305: 'initializing' : truncation from 'const int' to 'char'
+K:\SySal2\Genesis2\GenesisClass2.cpp(106) : warning C4309: 'initializing' : truncation of constant value
+K:\SySal2\Genesis2\GenesisClass2.cpp(106) : warning C4305: 'initializing' : truncation from 'const int' to 'char'
+K:\SySal2\Genesis2\GenesisClass2.cpp(106) : warning C4309: 'initializing' : truncation of constant value
+K:\SySal2\Genesis2\GenesisClass2.cpp(106) : warning C4305: 'initializing' : truncation from 'const int' to 'char'
+K:\SySal2\Genesis2\GenesisClass2.cpp(106) : warning C4309: 'initializing' : truncation of constant value
+K:\SySal2\Genesis2\GenesisClass2.cpp(106) : warning C4305: 'initializing' : truncation from 'const int' to 'char'
+K:\SySal2\Genesis2\GenesisClass2.cpp(106) : warning C4309: 'initializing' : truncation of constant value
+K:\SySal2\Genesis2\GenesisClass2.cpp(106) : warning C4305: 'initializing' : truncation from 'const int' to 'char'
+K:\SySal2\Genesis2\GenesisClass2.cpp(106) : warning C4309: 'initializing' : truncation of constant value
+K:\SySal2\Genesis2\GenesisClass2.cpp(106) : warning C4305: 'initializing' : truncation from 'const int' to 'char'
+K:\SySal2\Genesis2\GenesisClass2.cpp(106) : warning C4309: 'initializing' : truncation of constant value
+K:\SySal2\Genesis2\GenesisClass2.cpp(106) : warning C4305: 'initializing' : truncation from 'const int' to 'char'
+K:\SySal2\Genesis2\GenesisClass2.cpp(106) : warning C4309: 'initializing' : truncation of constant value
+K:\SySal2\Genesis2\GenesisClass2.cpp(106) : warning C4305: 'initializing' : truncation from 'const int' to 'char'
+K:\SySal2\Genesis2\GenesisClass2.cpp(106) : warning C4309: 'initializing' : truncation of constant value
+K:\SySal2\Genesis2\GenesisClass2.cpp(106) : warning C4305: 'initializing' : truncation from 'const int' to 'char'
+K:\SySal2\Genesis2\GenesisClass2.cpp(106) : warning C4309: 'initializing' : truncation of constant value
+K:\SySal2\Genesis2\GenesisClass2.cpp(106) : warning C4305: 'initializing' : truncation from 'const int' to 'char'
+K:\SySal2\Genesis2\GenesisClass2.cpp(106) : warning C4309: 'initializing' : truncation of constant value
+K:\SySal2\Genesis2\GenesisClass2.cpp(106) : warning C4305: 'initializing' : truncation from 'const int' to 'char'
+K:\SySal2\Genesis2\GenesisClass2.cpp(106) : warning C4309: 'initializing' : truncation of constant value
+K:\SySal2\Genesis2\GenesisClass2.cpp(106) : warning C4305: 'initializing' : truncation from 'const int' to 'char'
+K:\SySal2\Genesis2\GenesisClass2.cpp(106) : warning C4309: 'initializing' : truncation of constant value
+K:\SySal2\Genesis2\GenesisClass2.cpp(106) : warning C4305: 'initializing' : truncation from 'const int' to 'char'
+K:\SySal2\Genesis2\GenesisClass2.cpp(106) : warning C4309: 'initializing' : truncation of constant value
+K:\SySal2\Genesis2\GenesisClass2.cpp(106) : warning C4305: 'initializing' : truncation from 'const int' to 'char'
+K:\SySal2\Genesis2\GenesisClass2.cpp(106) : warning C4309: 'initializing' : truncation of constant value
+K:\SySal2\Genesis2\GenesisClass2.cpp(106) : warning C4305: 'initializing' : truncation from 'const int' to 'char'
+K:\SySal2\Genesis2\GenesisClass2.cpp(106) : warning C4309: 'initializing' : truncation of constant value
+K:\SySal2\Genesis2\GenesisClass2.cpp(107) : warning C4305: 'initializing' : truncation from 'const int' to 'char'
+K:\SySal2\Genesis2\GenesisClass2.cpp(107) : warning C4309: 'initializing' : truncation of constant value
+K:\SySal2\Genesis2\GenesisClass2.cpp(114) : warning C4305: 'initializing' : truncation from 'const int' to 'char'
+K:\SySal2\Genesis2\GenesisClass2.cpp(114) : warning C4309: 'initializing' : truncation of constant value
+K:\SySal2\Genesis2\GenesisClass2.cpp(114) : warning C4305: 'initializing' : truncation from 'const int' to 'char'
+K:\SySal2\Genesis2\GenesisClass2.cpp(114) : warning C4309: 'initializing' : truncation of constant value
+K:\SySal2\Genesis2\GenesisClass2.cpp(114) : warning C4305: 'initializing' : truncation from 'const int' to 'char'
+K:\SySal2\Genesis2\GenesisClass2.cpp(114) : warning C4309: 'initializing' : truncation of constant value
+K:\SySal2\Genesis2\GenesisClass2.cpp(114) : warning C4305: 'initializing' : truncation from 'const int' to 'char'
+K:\SySal2\Genesis2\GenesisClass2.cpp(114) : warning C4309: 'initializing' : truncation of constant value
+K:\SySal2\Genesis2\GenesisClass2.cpp(114) : warning C4305: 'initializing' : truncation from 'const int' to 'char'
+K:\SySal2\Genesis2\GenesisClass2.cpp(114) : warning C4309: 'initializing' : truncation of constant value
+K:\SySal2\Genesis2\GenesisClass2.cpp(114) : warning C4305: 'initializing' : truncation from 'const int' to 'char'
+K:\SySal2\Genesis2\GenesisClass2.cpp(114) : warning C4309: 'initializing' : truncation of constant value
+K:\SySal2\Genesis2\GenesisClass2.cpp(114) : warning C4305: 'initializing' : truncation from 'const int' to 'char'
+K:\SySal2\Genesis2\GenesisClass2.cpp(114) : warning C4309: 'initializing' : truncation of constant value
+K:\SySal2\Genesis2\GenesisClass2.cpp(114) : warning C4305: 'initializing' : truncation from 'const int' to 'char'
+K:\SySal2\Genesis2\GenesisClass2.cpp(114) : warning C4309: 'initializing' : truncation of constant value
+K:\SySal2\Genesis2\GenesisClass2.cpp(114) : warning C4305: 'initializing' : truncation from 'const int' to 'char'
+K:\SySal2\Genesis2\GenesisClass2.cpp(114) : warning C4309: 'initializing' : truncation of constant value
+K:\SySal2\Genesis2\GenesisClass2.cpp(114) : warning C4305: 'initializing' : truncation from 'const int' to 'char'
+K:\SySal2\Genesis2\GenesisClass2.cpp(114) : warning C4309: 'initializing' : truncation of constant value
+K:\SySal2\Genesis2\GenesisClass2.cpp(114) : warning C4305: 'initializing' : truncation from 'const int' to 'char'
+K:\SySal2\Genesis2\GenesisClass2.cpp(114) : warning C4309: 'initializing' : truncation of constant value
+K:\SySal2\Genesis2\GenesisClass2.cpp(114) : warning C4305: 'initializing' : truncation from 'const int' to 'char'
+K:\SySal2\Genesis2\GenesisClass2.cpp(114) : warning C4309: 'initializing' : truncation of constant value
+K:\SySal2\Genesis2\GenesisClass2.cpp(114) : warning C4305: 'initializing' : truncation from 'const int' to 'char'
+K:\SySal2\Genesis2\GenesisClass2.cpp(114) : warning C4309: 'initializing' : truncation of constant value
+K:\SySal2\Genesis2\GenesisClass2.cpp(114) : warning C4305: 'initializing' : truncation from 'const int' to 'char'
+K:\SySal2\Genesis2\GenesisClass2.cpp(114) : warning C4309: 'initializing' : truncation of constant value
+K:\SySal2\Genesis2\GenesisClass2.cpp(114) : warning C4305: 'initializing' : truncation from 'const int' to 'char'
+K:\SySal2\Genesis2\GenesisClass2.cpp(114) : warning C4309: 'initializing' : truncation of constant value
+K:\SySal2\Genesis2\GenesisClass2.cpp(114) : warning C4305: 'initializing' : truncation from 'const int' to 'char'
+K:\SySal2\Genesis2\GenesisClass2.cpp(114) : warning C4309: 'initializing' : truncation of constant value
+K:\SySal2\Genesis2\GenesisClass2.cpp(114) : warning C4305: 'initializing' : truncation from 'const int' to 'char'
+K:\SySal2\Genesis2\GenesisClass2.cpp(114) : warning C4309: 'initializing' : truncation of constant value
+K:\SySal2\Genesis2\GenesisClass2.cpp(114) : warning C4305: 'initializing' : truncation from 'const int' to 'char'
+K:\SySal2\Genesis2\GenesisClass2.cpp(114) : warning C4309: 'initializing' : truncation of constant value
+K:\SySal2\Genesis2\GenesisClass2.cpp(114) : warning C4305: 'initializing' : truncation from 'const int' to 'char'
+K:\SySal2\Genesis2\GenesisClass2.cpp(114) : warning C4309: 'initializing' : truncation of constant value
+K:\SySal2\Genesis2\GenesisClass2.cpp(114) : warning C4305: 'initializing' : truncation from 'const int' to 'char'
+K:\SySal2\Genesis2\GenesisClass2.cpp(114) : warning C4309: 'initializing' : truncation of constant value
+K:\SySal2\Genesis2\GenesisClass2.cpp(114) : warning C4305: 'initializing' : truncation from 'const int' to 'char'
+K:\SySal2\Genesis2\GenesisClass2.cpp(114) : warning C4309: 'initializing' : truncation of constant value
+K:\SySal2\Genesis2\GenesisClass2.cpp(114) : warning C4305: 'initializing' : truncation from 'const int' to 'char'
+K:\SySal2\Genesis2\GenesisClass2.cpp(114) : warning C4309: 'initializing' : truncation of constant value
+K:\SySal2\Genesis2\GenesisClass2.cpp(114) : warning C4305: 'initializing' : truncation from 'const int' to 'char'
+K:\SySal2\Genesis2\GenesisClass2.cpp(114) : warning C4309: 'initializing' : truncation of constant value
+K:\SySal2\Genesis2\GenesisClass2.cpp(114) : warning C4305: 'initializing' : truncation from 'const int' to 'char'
+K:\SySal2\Genesis2\GenesisClass2.cpp(114) : warning C4309: 'initializing' : truncation of constant value
+K:\SySal2\Genesis2\GenesisClass2.cpp(114) : warning C4305: 'initializing' : truncation from 'const int' to 'char'
+K:\SySal2\Genesis2\GenesisClass2.cpp(114) : warning C4309: 'initializing' : truncation of constant value
+K:\SySal2\Genesis2\GenesisClass2.cpp(114) : warning C4305: 'initializing' : truncation from 'const int' to 'char'
+K:\SySal2\Genesis2\GenesisClass2.cpp(114) : warning C4309: 'initializing' : truncation of constant value
+K:\SySal2\Genesis2\GenesisClass2.cpp(114) : warning C4305: 'initializing' : truncation from 'const int' to 'char'
+K:\SySal2\Genesis2\GenesisClass2.cpp(114) : warning C4309: 'initializing' : truncation of constant value
+K:\SySal2\Genesis2\GenesisClass2.cpp(115) : warning C4305: 'initializing' : truncation from 'const int' to 'char'
+K:\SySal2\Genesis2\GenesisClass2.cpp(115) : warning C4309: 'initializing' : truncation of constant value
+K:\SySal2\Genesis2\GenesisClass2.cpp(115) : warning C4305: 'initializing' : truncation from 'const int' to 'char'
+K:\SySal2\Genesis2\GenesisClass2.cpp(115) : warning C4309: 'initializing' : truncation of constant value
+K:\SySal2\Genesis2\GenesisClass2.cpp(116) : warning C4305: 'initializing' : truncation from 'const int' to 'char'
+K:\SySal2\Genesis2\GenesisClass2.cpp(116) : warning C4309: 'initializing' : truncation of constant value
+K:\SySal2\Genesis2\GenesisClass2.cpp(116) : warning C4305: 'initializing' : truncation from 'const int' to 'char'
+K:\SySal2\Genesis2\GenesisClass2.cpp(116) : warning C4309: 'initializing' : truncation of constant value
+K:\SySal2\Genesis2\GenesisClass2.cpp(117) : warning C4305: 'initializing' : truncation from 'const int' to 'char'
+K:\SySal2\Genesis2\GenesisClass2.cpp(117) : warning C4309: 'initializing' : truncation of constant value
+K:\SySal2\Genesis2\GenesisClass2.cpp(117) : warning C4305: 'initializing' : truncation from 'const int' to 'char'
+K:\SySal2\Genesis2\GenesisClass2.cpp(117) : warning C4309: 'initializing' : truncation of constant value
+K:\SySal2\Genesis2\GenesisClass2.cpp(118) : warning C4305: 'initializing' : truncation from 'const int' to 'char'
+K:\SySal2\Genesis2\GenesisClass2.cpp(118) : warning C4309: 'initializing' : truncation of constant value
+K:\SySal2\Genesis2\GenesisClass2.cpp(118) : warning C4305: 'initializing' : truncation from 'const int' to 'char'
+K:\SySal2\Genesis2\GenesisClass2.cpp(118) : warning C4309: 'initializing' : truncation of constant value
+K:\SySal2\Genesis2\GenesisClass2.cpp(119) : warning C4305: 'initializing' : truncation from 'const int' to 'char'
+K:\SySal2\Genesis2\GenesisClass2.cpp(119) : warning C4309: 'initializing' : truncation of constant value
+K:\SySal2\Genesis2\GenesisClass2.cpp(119) : warning C4305: 'initializing' : truncation from 'const int' to 'char'
+K:\SySal2\Genesis2\GenesisClass2.cpp(119) : warning C4309: 'initializing' : truncation of constant value
+K:\SySal2\Genesis2\GenesisClass2.cpp(120) : warning C4305: 'initializing' : truncation from 'const int' to 'char'
+K:\SySal2\Genesis2\GenesisClass2.cpp(120) : warning C4309: 'initializing' : truncation of constant value
+K:\SySal2\Genesis2\GenesisClass2.cpp(120) : warning C4305: 'initializing' : truncation from 'const int' to 'char'
+K:\SySal2\Genesis2\GenesisClass2.cpp(120) : warning C4309: 'initializing' : truncation of constant value
+K:\SySal2\Genesis2\GenesisClass2.cpp(121) : warning C4305: 'initializing' : truncation from 'const int' to 'char'
+K:\SySal2\Genesis2\GenesisClass2.cpp(121) : warning C4309: 'initializing' : truncation of constant value
+K:\SySal2\Genesis2\GenesisClass2.cpp(121) : warning C4305: 'initializing' : truncation from 'const int' to 'char'
+K:\SySal2\Genesis2\GenesisClass2.cpp(121) : warning C4309: 'initializing' : truncation of constant value
+K:\SySal2\Genesis2\GenesisClass2.cpp(122) : warning C4305: 'initializing' : truncation from 'const int' to 'char'
+K:\SySal2\Genesis2\GenesisClass2.cpp(122) : warning C4309: 'initializing' : truncation of constant value
+K:\SySal2\Genesis2\GenesisClass2.cpp(122) : warning C4305: 'initializing' : truncation from 'const int' to 'char'
+K:\SySal2\Genesis2\GenesisClass2.cpp(122) : warning C4309: 'initializing' : truncation of constant value
+K:\SySal2\Genesis2\GenesisClass2.cpp(123) : warning C4305: 'initializing' : truncation from 'const int' to 'char'
+K:\SySal2\Genesis2\GenesisClass2.cpp(123) : warning C4309: 'initializing' : truncation of constant value
+K:\SySal2\Genesis2\GenesisClass2.cpp(123) : warning C4305: 'initializing' : truncation from 'const int' to 'char'
+K:\SySal2\Genesis2\GenesisClass2.cpp(123) : warning C4309: 'initializing' : truncation of constant value
+K:\SySal2\Genesis2\GenesisClass2.cpp(124) : warning C4305: 'initializing' : truncation from 'const int' to 'char'
+K:\SySal2\Genesis2\GenesisClass2.cpp(124) : warning C4309: 'initializing' : truncation of constant value
+K:\SySal2\Genesis2\GenesisClass2.cpp(124) : warning C4305: 'initializing' : truncation from 'const int' to 'char'
+K:\SySal2\Genesis2\GenesisClass2.cpp(124) : warning C4309: 'initializing' : truncation of constant value
+K:\SySal2\Genesis2\GenesisClass2.cpp(125) : warning C4305: 'initializing' : truncation from 'const int' to 'char'
+K:\SySal2\Genesis2\GenesisClass2.cpp(125) : warning C4309: 'initializing' : truncation of constant value
+K:\SySal2\Genesis2\GenesisClass2.cpp(125) : warning C4305: 'initializing' : truncation from 'const int' to 'char'
+K:\SySal2\Genesis2\GenesisClass2.cpp(125) : warning C4309: 'initializing' : truncation of constant value
+K:\SySal2\Genesis2\GenesisClass2.cpp(126) : warning C4305: 'initializing' : truncation from 'const int' to 'char'
+K:\SySal2\Genesis2\GenesisClass2.cpp(126) : warning C4309: 'initializing' : truncation of constant value
+K:\SySal2\Genesis2\GenesisClass2.cpp(126) : warning C4305: 'initializing' : truncation from 'const int' to 'char'
+K:\SySal2\Genesis2\GenesisClass2.cpp(126) : warning C4309: 'initializing' : truncation of constant value
+K:\SySal2\Genesis2\GenesisClass2.cpp(127) : warning C4305: 'initializing' : truncation from 'const int' to 'char'
+K:\SySal2\Genesis2\GenesisClass2.cpp(127) : warning C4309: 'initializing' : truncation of constant value
+K:\SySal2\Genesis2\GenesisClass2.cpp(127) : warning C4305: 'initializing' : truncation from 'const int' to 'char'
+K:\SySal2\Genesis2\GenesisClass2.cpp(127) : warning C4309: 'initializing' : truncation of constant value
+K:\SySal2\Genesis2\GenesisClass2.cpp(128) : warning C4305: 'initializing' : truncation from 'const int' to 'char'
+K:\SySal2\Genesis2\GenesisClass2.cpp(128) : warning C4309: 'initializing' : truncation of constant value
+K:\SySal2\Genesis2\GenesisClass2.cpp(128) : warning C4305: 'initializing' : truncation from 'const int' to 'char'
+K:\SySal2\Genesis2\GenesisClass2.cpp(128) : warning C4309: 'initializing' : truncation of constant value
+K:\SySal2\Genesis2\GenesisClass2.cpp(129) : warning C4305: 'initializing' : truncation from 'const int' to 'char'
+K:\SySal2\Genesis2\GenesisClass2.cpp(129) : warning C4309: 'initializing' : truncation of constant value
+K:\SySal2\Genesis2\GenesisClass2.cpp(129) : warning C4305: 'initializing' : truncation from 'const int' to 'char'
+K:\SySal2\Genesis2\GenesisClass2.cpp(129) : warning C4309: 'initializing' : truncation of constant value
+K:\SySal2\Genesis2\GenesisClass2.cpp(130) : warning C4305: 'initializing' : truncation from 'const int' to 'char'
+K:\SySal2\Genesis2\GenesisClass2.cpp(130) : warning C4309: 'initializing' : truncation of constant value
+K:\SySal2\Genesis2\GenesisClass2.cpp(130) : warning C4305: 'initializing' : truncation from 'const int' to 'char'
+K:\SySal2\Genesis2\GenesisClass2.cpp(130) : warning C4309: 'initializing' : truncation of constant value
+K:\SySal2\Genesis2\GenesisClass2.cpp(131) : warning C4305: 'initializing' : truncation from 'const int' to 'char'
+K:\SySal2\Genesis2\GenesisClass2.cpp(131) : warning C4309: 'initializing' : truncation of constant value
+K:\SySal2\Genesis2\GenesisClass2.cpp(131) : warning C4305: 'initializing' : truncation from 'const int' to 'char'
+K:\SySal2\Genesis2\GenesisClass2.cpp(131) : warning C4309: 'initializing' : truncation of constant value
+K:\SySal2\Genesis2\GenesisClass2.cpp(132) : warning C4305: 'initializing' : truncation from 'const int' to 'char'
+K:\SySal2\Genesis2\GenesisClass2.cpp(132) : warning C4309: 'initializing' : truncation of constant value
+K:\SySal2\Genesis2\GenesisClass2.cpp(132) : warning C4305: 'initializing' : truncation from 'const int' to 'char'
+K:\SySal2\Genesis2\GenesisClass2.cpp(132) : warning C4309: 'initializing' : truncation of constant value
+K:\SySal2\Genesis2\GenesisClass2.cpp(133) : warning C4305: 'initializing' : truncation from 'const int' to 'char'
+K:\SySal2\Genesis2\GenesisClass2.cpp(133) : warning C4309: 'initializing' : truncation of constant value
+K:\SySal2\Genesis2\GenesisClass2.cpp(133) : warning C4305: 'initializing' : truncation from 'const int' to 'char'
+K:\SySal2\Genesis2\GenesisClass2.cpp(133) : warning C4309: 'initializing' : truncation of constant value
+K:\SySal2\Genesis2\GenesisClass2.cpp(134) : warning C4305: 'initializing' : truncation from 'const int' to 'char'
+K:\SySal2\Genesis2\GenesisClass2.cpp(134) : warning C4309: 'initializing' : truncation of constant value
+K:\SySal2\Genesis2\GenesisClass2.cpp(134) : warning C4305: 'initializing' : truncation from 'const int' to 'char'
+K:\SySal2\Genesis2\GenesisClass2.cpp(134) : warning C4309: 'initializing' : truncation of constant value
+K:\SySal2\Genesis2\GenesisClass2.cpp(135) : warning C4305: 'initializing' : truncation from 'const int' to 'char'
+K:\SySal2\Genesis2\GenesisClass2.cpp(135) : warning C4309: 'initializing' : truncation of constant value
+K:\SySal2\Genesis2\GenesisClass2.cpp(135) : warning C4305: 'initializing' : truncation from 'const int' to 'char'
+K:\SySal2\Genesis2\GenesisClass2.cpp(135) : warning C4309: 'initializing' : truncation of constant value
+K:\SySal2\Genesis2\GenesisClass2.cpp(136) : warning C4305: 'initializing' : truncation from 'const int' to 'char'
+K:\SySal2\Genesis2\GenesisClass2.cpp(136) : warning C4309: 'initializing' : truncation of constant value
+K:\SySal2\Genesis2\GenesisClass2.cpp(136) : warning C4305: 'initializing' : truncation from 'const int' to 'char'
+K:\SySal2\Genesis2\GenesisClass2.cpp(136) : warning C4309: 'initializing' : truncation of constant value
+K:\SySal2\Genesis2\GenesisClass2.cpp(137) : warning C4305: 'initializing' : truncation from 'const int' to 'char'
+K:\SySal2\Genesis2\GenesisClass2.cpp(137) : warning C4309: 'initializing' : truncation of constant value
+K:\SySal2\Genesis2\GenesisClass2.cpp(137) : warning C4305: 'initializing' : truncation from 'const int' to 'char'
+K:\SySal2\Genesis2\GenesisClass2.cpp(137) : warning C4309: 'initializing' : truncation of constant value
+K:\SySal2\Genesis2\GenesisClass2.cpp(138) : warning C4305: 'initializing' : truncation from 'const int' to 'char'
+K:\SySal2\Genesis2\GenesisClass2.cpp(138) : warning C4309: 'initializing' : truncation of constant value
+K:\SySal2\Genesis2\GenesisClass2.cpp(138) : warning C4305: 'initializing' : truncation from 'const int' to 'char'
+K:\SySal2\Genesis2\GenesisClass2.cpp(138) : warning C4309: 'initializing' : truncation of constant value
+K:\SySal2\Genesis2\GenesisClass2.cpp(139) : warning C4305: 'initializing' : truncation from 'const int' to 'char'
+K:\SySal2\Genesis2\GenesisClass2.cpp(139) : warning C4309: 'initializing' : truncation of constant value
+K:\SySal2\Genesis2\GenesisClass2.cpp(139) : warning C4305: 'initializing' : truncation from 'const int' to 'char'
+K:\SySal2\Genesis2\GenesisClass2.cpp(139) : warning C4309: 'initializing' : truncation of constant value
+K:\SySal2\Genesis2\GenesisClass2.cpp(140) : warning C4305: 'initializing' : truncation from 'const int' to 'char'
+K:\SySal2\Genesis2\GenesisClass2.cpp(140) : warning C4309: 'initializing' : truncation of constant value
+K:\SySal2\Genesis2\GenesisClass2.cpp(140) : warning C4305: 'initializing' : truncation from 'const int' to 'char'
+K:\SySal2\Genesis2\GenesisClass2.cpp(140) : warning C4309: 'initializing' : truncation of constant value
+K:\SySal2\Genesis2\GenesisClass2.cpp(140) : warning C4305: 'initializing' : truncation from 'const int' to 'char'
+K:\SySal2\Genesis2\GenesisClass2.cpp(140) : warning C4309: 'initializing' : truncation of constant value
+K:\SySal2\Genesis2\GenesisClass2.cpp(140) : warning C4305: 'initializing' : truncation from 'const int' to 'char'
+K:\SySal2\Genesis2\GenesisClass2.cpp(140) : warning C4309: 'initializing' : truncation of constant value
+K:\SySal2\Genesis2\GenesisClass2.cpp(140) : warning C4305: 'initializing' : truncation from 'const int' to 'char'
+K:\SySal2\Genesis2\GenesisClass2.cpp(140) : warning C4309: 'initializing' : truncation of constant value
+K:\SySal2\Genesis2\GenesisClass2.cpp(140) : warning C4305: 'initializing' : truncation from 'const int' to 'char'
+K:\SySal2\Genesis2\GenesisClass2.cpp(140) : warning C4309: 'initializing' : truncation of constant value
+K:\SySal2\Genesis2\GenesisClass2.cpp(140) : warning C4305: 'initializing' : truncation from 'const int' to 'char'
+K:\SySal2\Genesis2\GenesisClass2.cpp(140) : warning C4309: 'initializing' : truncation of constant value
+K:\SySal2\Genesis2\GenesisClass2.cpp(140) : warning C4305: 'initializing' : truncation from 'const int' to 'char'
+K:\SySal2\Genesis2\GenesisClass2.cpp(140) : warning C4309: 'initializing' : truncation of constant value
+K:\SySal2\Genesis2\GenesisClass2.cpp(140) : warning C4305: 'initializing' : truncation from 'const int' to 'char'
+K:\SySal2\Genesis2\GenesisClass2.cpp(140) : warning C4309: 'initializing' : truncation of constant value
+K:\SySal2\Genesis2\GenesisClass2.cpp(140) : warning C4305: 'initializing' : truncation from 'const int' to 'char'
+K:\SySal2\Genesis2\GenesisClass2.cpp(140) : warning C4309: 'initializing' : truncation of constant value
+K:\SySal2\Genesis2\GenesisClass2.cpp(140) : warning C4305: 'initializing' : truncation from 'const int' to 'char'
+K:\SySal2\Genesis2\GenesisClass2.cpp(140) : warning C4309: 'initializing' : truncation of constant value
+K:\SySal2\Genesis2\GenesisClass2.cpp(140) : warning C4305: 'initializing' : truncation from 'const int' to 'char'
+K:\SySal2\Genesis2\GenesisClass2.cpp(140) : warning C4309: 'initializing' : truncation of constant value
+K:\SySal2\Genesis2\GenesisClass2.cpp(140) : warning C4305: 'initializing' : truncation from 'const int' to 'char'
+K:\SySal2\Genesis2\GenesisClass2.cpp(140) : warning C4309: 'initializing' : truncation of constant value
+K:\SySal2\Genesis2\GenesisClass2.cpp(140) : warning C4305: 'initializing' : truncation from 'const int' to 'char'
+K:\SySal2\Genesis2\GenesisClass2.cpp(140) : warning C4309: 'initializing' : truncation of constant value
+K:\SySal2\Genesis2\GenesisClass2.cpp(140) : warning C4305: 'initializing' : truncation from 'const int' to 'char'
+K:\SySal2\Genesis2\GenesisClass2.cpp(140) : warning C4309: 'initializing' : truncation of constant value
+K:\SySal2\Genesis2\GenesisClass2.cpp(140) : warning C4305: 'initializing' : truncation from 'const int' to 'char'
+K:\SySal2\Genesis2\GenesisClass2.cpp(140) : warning C4309: 'initializing' : truncation of constant value
+K:\SySal2\Genesis2\GenesisClass2.cpp(140) : warning C4305: 'initializing' : truncation from 'const int' to 'char'
+K:\SySal2\Genesis2\GenesisClass2.cpp(140) : warning C4309: 'initializing' : truncation of constant value
+K:\SySal2\Genesis2\GenesisClass2.cpp(140) : warning C4305: 'initializing' : truncation from 'const int' to 'char'
+K:\SySal2\Genesis2\GenesisClass2.cpp(140) : warning C4309: 'initializing' : truncation of constant value
+K:\SySal2\Genesis2\GenesisClass2.cpp(140) : warning C4305: 'initializing' : truncation from 'const int' to 'char'
+K:\SySal2\Genesis2\GenesisClass2.cpp(140) : warning C4309: 'initializing' : truncation of constant value
+K:\SySal2\Genesis2\GenesisClass2.cpp(140) : warning C4305: 'initializing' : truncation from 'const int' to 'char'
+K:\SySal2\Genesis2\GenesisClass2.cpp(140) : warning C4309: 'initializing' : truncation of constant value
+K:\SySal2\Genesis2\GenesisClass2.cpp(140) : warning C4305: 'initializing' : truncation from 'const int' to 'char'
+K:\SySal2\Genesis2\GenesisClass2.cpp(140) : warning C4309: 'initializing' : truncation of constant value
+K:\SySal2\Genesis2\GenesisClass2.cpp(140) : warning C4305: 'initializing' : truncation from 'const int' to 'char'
+K:\SySal2\Genesis2\GenesisClass2.cpp(140) : warning C4309: 'initializing' : truncation of constant value
+K:\SySal2\Genesis2\GenesisClass2.cpp(140) : warning C4305: 'initializing' : truncation from 'const int' to 'char'
+K:\SySal2\Genesis2\GenesisClass2.cpp(140) : warning C4309: 'initializing' : truncation of constant value
+K:\SySal2\Genesis2\GenesisClass2.cpp(140) : warning C4305: 'initializing' : truncation from 'const int' to 'char'
+K:\SySal2\Genesis2\GenesisClass2.cpp(140) : warning C4309: 'initializing' : truncation of constant value
+K:\SySal2\Genesis2\GenesisClass2.cpp(140) : warning C4305: 'initializing' : truncation from 'const int' to 'char'
+K:\SySal2\Genesis2\GenesisClass2.cpp(140) : warning C4309: 'initializing' : truncation of constant value
+K:\SySal2\Genesis2\GenesisClass2.cpp(140) : warning C4305: 'initializing' : truncation from 'const int' to 'char'
+K:\SySal2\Genesis2\GenesisClass2.cpp(140) : warning C4309: 'initializing' : truncation of constant value
+K:\SySal2\Genesis2\GenesisClass2.cpp(141) : warning C4305: 'initializing' : truncation from 'const int' to 'char'
+K:\SySal2\Genesis2\GenesisClass2.cpp(141) : warning C4309: 'initializing' : truncation of constant value
+K:\SySal2\Genesis2\GenesisClass2.cpp(459) : warning C4018: '<' : signed/unsigned mismatch
+K:\SySal2\Genesis2\GenesisClass2.cpp(1152) : warning C4018: '>=' : signed/unsigned mismatch
+GenesisData.cpp
+Globals.cpp
+Generating Code...
+Linking...
+   Creating library ReleaseMinSize/Genesis2.lib and object ReleaseMinSize/Genesis2.exp
+LINK : warning LNK4089: all references to "OLEAUT32.dll" discarded by /OPT:REF
+<h3>Output Window</h3>
+Performing registration
+
+
+
+<h3>Results</h3>
+Genesis2.dll - 0 error(s), 510 warning(s)
+</pre>
+</body>
+</html>

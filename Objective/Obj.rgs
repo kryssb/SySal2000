@@ -1,0 +1,25 @@
+HKCR
+{
+	Objective.Obj.1 = s 'Obj Class'
+	{
+		CLSID = s '{E056524E-7CFD-11D3-A47C-AC71B6A41C20}'
+	}
+	Objective.Obj = s 'Obj Class'
+	{
+		CLSID = s '{E056524E-7CFD-11D3-A47C-AC71B6A41C20}'
+		CurVer = s 'Objective.Obj.1'
+	}
+	NoRemove CLSID
+	{
+		ForceRemove {E056524E-7CFD-11D3-A47C-AC71B6A41C20} = s 'Obj Class'
+		{
+			ProgID = s 'Objective.Obj.1'
+			VersionIndependentProgID = s 'Objective.Obj'
+			InprocServer32 = s '%MODULE%'
+			{
+				val ThreadingModel = s 'Free'
+			}
+			'TypeLib' = s '{E0565240-7CFD-11D3-A47C-AC71B6A41C20}'
+		}
+	}
+}

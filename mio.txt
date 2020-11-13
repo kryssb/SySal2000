@@ -1,0 +1,600 @@
+Comparing files SMARTTRACKER5\SmartTrackerClass.cpp and SMARTTRACKER6\SMARTTRACKERCLASS.CPP
+***** SMARTTRACKER5\SmartTrackerClass.cpp
+#include "stdafx.h"
+#include "SmartTracker5.h"
+#include "SmartTrackerClass.h"
+***** SMARTTRACKER6\SMARTTRACKERCLASS.CPP
+#include "stdafx.h"
+#include "SmartTracker6.h"
+#include "SmartTrackerClass.h"
+*****
+
+***** SMARTTRACKER5\SmartTrackerClass.cpp
+
+const int ConfigDataN = 20 + (3 + MAX_TRIGGERS) * MAX_TRIALS;
+
+***** SMARTTRACKER6\SMARTTRACKERCLASS.CPP
+
+const int ConfigDataN = 21 + (3 + MAX_TRIGGERS) * MAX_TRIALS;
+
+*****
+
+***** SMARTTRACKER5\SmartTrackerClass.cpp
+        {"MaxReplicaSpread",            ST_FLOAT,       STRUCT_OFFSET(TrackerData, MaxReplicaSpread),           "1"},
+
+***** SMARTTRACKER6\SMARTTRACKERCLASS.CPP
+        {"MaxReplicaSpread",            ST_FLOAT,       STRUCT_OFFSET(TrackerData, MaxReplicaSpread),           "1"},
+        
+        {"DiscardShadowSigma",          ST_FLOAT,       STRUCT_OFFSET(TrackerData, DiscardShadowSigma),         "2"},   
+
+*****
+
+***** SMARTTRACKER5\SmartTrackerClass.cpp
+        
+        strncpy(name, "Smart Tracker 5", SYSAL_MAX_CONN_NAME_LEN);
+        return S_OK;
+***** SMARTTRACKER6\SMARTTRACKERCLASS.CPP
+        
+        strncpy(name, "Smart Tracker 6", SYSAL_MAX_CONN_NAME_LEN);
+        return S_OK;
+*****
+
+***** SMARTTRACKER5\SmartTrackerClass.cpp
+        T.DispX = T.DispY = 0.0f;
+        return S_OK;
+***** SMARTTRACKER6\SMARTTRACKERCLASS.CPP
+        T.DispX = T.DispY = 0.0f;
+        T.ShadowSigmaMeasures = 0;
+        T.ShadowSigmaXAccumulator = T.ShadowSigmaYAccumulator = 0.0f;
+        return S_OK;
+*****
+
+***** SMARTTRACKER5\SmartTrackerClass.cpp
+                                };
+                        };              
+                if (ReplicaCount >= T.MinReplicas)
+***** SMARTTRACKER6\SMARTTRACKERCLASS.CPP
+                                };
+                        };
+                if (ReplicaCount >= T.MinReplicas)
+*****
+
+***** SMARTTRACKER5\SmartTrackerClass.cpp
+                                T.DispY = (DispY += CurrDispY / ReplicaCount);
+                                }
+***** SMARTTRACKER6\SMARTTRACKERCLASS.CPP
+                                T.DispY = (DispY += CurrDispY / ReplicaCount);
+                                T.ShadowSigmaMeasures++;
+                                T.ShadowSigmaXAccumulator += CurrDispSigmaX;
+                                T.ShadowSigmaYAccumulator += CurrDispSigmaY;
+                                }
+*****
+
+***** SMARTTRACKER5\SmartTrackerClass.cpp
+
+IntGrain *CSmartTrackerClass::FindGrain(float expx, float expy, Cell *pCellLayer, float dirx, float diry, float dirtol)
+{
+***** SMARTTRACKER6\SMARTTRACKERCLASS.CPP
+
+IntGrain *CSmartTrackerClass::FindGrain(float expx, float expy, Cell *pCellLayer, float dirx, float diry, float dirtol, IntGrai
+ *pTopShadow, IntGrain *pBottomShadow, float xshadowtol, float yshadowtol)
+{
+*****
+
+***** SMARTTRACKER5\SmartTrackerClass.cpp
+        {
+                IntGrain *pNew = pCellLayer[eiy * T.CellNumX + eix].FindGrain(expx, expy, dirx, diry, dirtol, T.AlignTol);
+                if (pNew) return pNew;
+***** SMARTTRACKER6\SMARTTRACKERCLASS.CPP
+        {
+                IntGrain *pNew = pCellLayer[eiy * T.CellNumX + eix].FindGrainNoShadow(expx, expy, dirx, diry, dirtol, T.AlignTo
+, pTopShadow, pBottomShadow, xshadowtol, yshadowtol);
+                if (pNew) return pNew;
+*****
+
+***** SMARTTRACKER5\SmartTrackerClass.cpp
+                        if (fix < 0.0f && eix > 0)
+                                return pCellLayer[eiy * T.CellNumX + eix - 1].FindGrain(expx, expy, dirx, diry, dirtol, T.Align
+ol);
+                        else if (fix > 0.0f && eix < (T.CellNumX - 1))
+                                return pCellLayer[eiy * T.CellNumX + eix + 1].FindGrain(expx, expy, dirx, diry, dirtol, T.Align
+ol);
+                        }
+***** SMARTTRACKER6\SMARTTRACKERCLASS.CPP
+                        if (fix < 0.0f && eix > 0)
+                                return pCellLayer[eiy * T.CellNumX + eix - 1].FindGrainNoShadow(expx, expy, dirx, diry, dirtol,
+T.AlignTol, pTopShadow, pBottomShadow, xshadowtol, yshadowtol);
+                        else if (fix > 0.0f && eix < (T.CellNumX - 1))
+                                return pCellLayer[eiy * T.CellNumX + eix + 1].FindGrainNoShadow(expx, expy, dirx, diry, dirtol,
+T.AlignTol, pTopShadow, pBottomShadow, xshadowtol, yshadowtol);
+                        }
+*****
+
+***** SMARTTRACKER5\SmartTrackerClass.cpp
+                        if (fiy < 0.0f && eiy > 0)
+                                return pCellLayer[(eiy - 1) * T.CellNumX + eix].FindGrain(expx, expy, dirx, diry, dirtol, T.Ali
+nTol);
+                        else if (fiy > 0.0f && eiy < (T.CellNumX - 1))
+                                return pCellLayer[(eiy + 1) * T.CellNumX + eix].FindGrain(expx, expy, dirx, diry, dirtol, T.Ali
+nTol);
+                        }
+***** SMARTTRACKER6\SMARTTRACKERCLASS.CPP
+                        if (fiy < 0.0f && eiy > 0)
+                                return pCellLayer[(eiy - 1) * T.CellNumX + eix].FindGrainNoShadow(expx, expy, dirx, diry, dirto
+, T.AlignTol, pTopShadow, pBottomShadow, xshadowtol, yshadowtol);
+                        else if (fiy > 0.0f && eiy < (T.CellNumX - 1))
+                                return pCellLayer[(eiy + 1) * T.CellNumX + eix].FindGrainNoShadow(expx, expy, dirx, diry, dirto
+, T.AlignTol, pTopShadow, pBottomShadow, xshadowtol, yshadowtol);
+                        }
+*****
+
+***** SMARTTRACKER5\SmartTrackerClass.cpp
+        float SlopeX, SlopeY, ExpX, ExpY, DirX, DirY;
+        float avgds2;
+***** SMARTTRACKER6\SMARTTRACKERCLASS.CPP
+        float SlopeX, SlopeY, ExpX, ExpY, DirX, DirY;
+        float ShadowXTol, ShadowYTol;
+        float CurrDeltaX, CurrDeltaY;
+        float avgds2;
+*****
+
+***** SMARTTRACKER5\SmartTrackerClass.cpp
+
+        bx = T.CellNumX / T.Processors * AR.ThreadIndex;
+***** SMARTTRACKER6\SMARTTRACKERCLASS.CPP
+
+        ShadowXTol = T.DiscardShadowSigma * T.ShadowSigmaX;
+        ShadowYTol = T.DiscardShadowSigma * T.ShadowSigmaY;
+
+        bx = T.CellNumX / T.Processors * AR.ThreadIndex;
+*****
+
+***** SMARTTRACKER5\SmartTrackerClass.cpp
+MinH;
+
+***** SMARTTRACKER6\SMARTTRACKERCLASS.CPP
+MinH;
+                                                                                        bool DiscardShadows;
+
+*****
+
+***** SMARTTRACKER5\SmartTrackerClass.cpp
+
+                                                                                        for (lay = tr.TopLayer + 1; lay < Trigg
+rLayer; lay++)
+                                                                                        {
+                                                                                                dz = ZLayer[lay] - tz;
+                                                                                                ExpX = dz * SlopeX + gt.Xcm;
+                                                                                                ExpY = dz * SlopeY + gt.Ycm;
+                                                                                                if (pTempGrains[lay] = FindGrai
+(ExpX, ExpY, CellSpace + lay * T.CellsInLayer, DirX, DirY, dirtol)) seqlength++;
+                                                                                                else if (--availablevoids <= 0)
+break;
+                                                                                                };
+                                                                                        if (availablevoids <= 0) continue;
+                                                                                        for (lay = TriggerLayer + 1; lay < tr.B
+ttomLayer; lay++)
+                                                                                        {
+                                                                                                dz = ZLayer[lay] - tz;
+                                                                                                ExpX = dz * SlopeX + gt.Xcm;
+                                                                                                ExpY = dz * SlopeY + gt.Ycm;
+                                                                                                if (pTempGrains[lay] = FindGrai
+(ExpX, ExpY, CellSpace + lay * T.CellsInLayer, DirX, DirY, dirtol)) seqlength++;
+                                                                                                else if (--availablevoids <= 0)
+break;
+                                                                                                };
+                                                                                        if (availablevoids <= 0) continue;
+                                                                                        Vector topv, bottomv;
+***** SMARTTRACKER6\SMARTTRACKERCLASS.CPP
+
+                                                                                        CurrDeltaX = fabs(avgdz * SlopeX);
+                                                                                        CurrDeltaY = fabs(avgdz * SlopeY);
+                                                                                        if (DiscardShadows = true/*(CurrDeltaX 
+= ShadowXTol || CurrDeltaY >= ShadowYTol)*/)
+                                                                                        {
+                                                                                                for (lay = tr.TopLayer + 1; lay
+< TriggerLayer; lay++)
+                                                                                                {
+                                                                                                        dz = ZLayer[lay] - tz;
+                                                                                                        ExpX = dz * SlopeX + gt
+Xcm;
+                                                                                                        ExpY = dz * SlopeY + gt
+Ycm;
+                                                                                                        if (pTempGrains[lay] = 
+indGrain(ExpX, ExpY, CellSpace + lay * T.CellsInLayer, DirX, DirY, dirtol, pTempGrains[lay - 1], pTempGrains[lay + 1], ShadowXT
+l, ShadowYTol)) seqlength++;
+                                                                                                        else if (--availablevoi
+s <= 0) break;
+                                                                                                        };
+                                                                                                if (availablevoids <= 0) contin
+e;
+                                                                                                for (lay = TriggerLayer + 1; la
+ < tr.BottomLayer; lay++)
+                                                                                                {
+                                                                                                        dz = ZLayer[lay] - tz;
+                                                                                                        ExpX = dz * SlopeX + gt
+Xcm;
+                                                                                                        ExpY = dz * SlopeY + gt
+Ycm;
+                                                                                                        if (pTempGrains[lay] = 
+indGrain(ExpX, ExpY, CellSpace + lay * T.CellsInLayer, DirX, DirY, dirtol, pTempGrains[lay - 1], pTempGrains[lay + 1], ShadowXT
+l, ShadowYTol)) seqlength++;
+                                                                                                        else if (--availablevoi
+s <= 0) break;
+                                                                                                        };
+                                                                                                if (availablevoids <= 0) contin
+e;
+                                                                                                }
+                                                                                        else
+                                                                                        {
+                                                                                                for (lay = tr.TopLayer + 1; lay
+< TriggerLayer; lay++)
+                                                                                                {
+                                                                                                        dz = ZLayer[lay] - tz;
+                                                                                                        ExpX = dz * SlopeX + gt
+Xcm;
+                                                                                                        ExpY = dz * SlopeY + gt
+Ycm;
+                                                                                                        if (pTempGrains[lay] = 
+indGrain(ExpX, ExpY, CellSpace + lay * T.CellsInLayer, DirX, DirY, dirtol)) seqlength++;
+                                                                                                        else if (--availablevoi
+s <= 0) break;
+                                                                                                        };
+                                                                                                if (availablevoids <= 0) contin
+e;
+                                                                                                for (lay = TriggerLayer + 1; la
+ < tr.BottomLayer; lay++)
+                                                                                                {
+                                                                                                        dz = ZLayer[lay] - tz;
+                                                                                                        ExpX = dz * SlopeX + gt
+Xcm;
+                                                                                                        ExpY = dz * SlopeY + gt
+Ycm;
+                                                                                                        if (pTempGrains[lay] = 
+indGrain(ExpX, ExpY, CellSpace + lay * T.CellsInLayer, DirX, DirY, dirtol)) seqlength++;
+                                                                                                        else if (--availablevoi
+s <= 0) break;
+                                                                                                        };
+                                                                                                if (availablevoids <= 0) contin
+e;
+                                                                                                }
+                                                                                        Vector topv, bottomv;
+*****
+
+***** SMARTTRACKER5\SmartTrackerClass.cpp
+                                                                                                float diz = 1.0f / dz;
+                                                                                                SlopeX = (bottomv.X - topv.X) *
+***** SMARTTRACKER6\SMARTTRACKERCLASS.CPP
+                                                                                                float diz = 1.0f / dz;
+/*
+                                                                                                SlopeX = (bottomv.X - topv.X) *
+*****
+
+***** SMARTTRACKER5\SmartTrackerClass.cpp
+vgdz, &DirX, &DirY, &dirtol);
+                                                                                                dz = ZLayer[lay] - topv.Z;
+                                                                                                ExpX = dz * SlopeX + topv.X;
+***** SMARTTRACKER6\SMARTTRACKERCLASS.CPP
+vgdz, &DirX, &DirY, &dirtol);
+*/                                                                                              dz = ZLayer[lay] - topv.Z;
+                                                                                                ExpX = dz * SlopeX + topv.X;
+*****
+
+***** SMARTTRACKER5\SmartTrackerClass.cpp
+                                                                                                if (pTempGrains[lay] = FindGrai
+(ExpX, ExpY, CellSpace + lay * T.CellsInLayer, DirX, DirY, dirtol))
+                                                                                                {
+                                                                                                        topv.X = pTempGrains[la
+]->Xcm;
+***** SMARTTRACKER6\SMARTTRACKERCLASS.CPP
+                                                                                                if (pTempGrains[lay] = FindGrai
+(ExpX, ExpY, CellSpace + lay * T.CellsInLayer, DirX, DirY, dirtol, 0, DiscardShadows ? pTempGrains[lay + 1] : 0, ShadowXTol, Sh
+dowYTol))
+                                                                                                {
+/*                                                                                                      topv.X = pTempGrains[la
+]->Xcm;
+*****
+
+***** SMARTTRACKER5\SmartTrackerClass.cpp
+                                                                                                        topv.Z = ZLayer[lay];
+                                                                                                        seqlength++;
+                                                                                                        }
+***** SMARTTRACKER6\SMARTTRACKERCLASS.CPP
+                                                                                                        topv.Z = ZLayer[lay];
+*/                                                                                                      seqlength++;
+                                                                                                        }
+*****
+
+***** SMARTTRACKER5\SmartTrackerClass.cpp
+                                                                                                float diz = 1.0f / dz;
+                                                                                                SlopeX = (bottomv.X - topv.X) *
+***** SMARTTRACKER6\SMARTTRACKERCLASS.CPP
+                                                                                                float diz = 1.0f / dz;
+/*
+                                                                                                SlopeX = (bottomv.X - topv.X) *
+*****
+
+***** SMARTTRACKER5\SmartTrackerClass.cpp
+vgdz, &DirX, &DirY, &dirtol);
+                                                                                                dz = ZLayer[lay] - topv.Z;
+                                                                                                ExpX = dz * SlopeX + topv.X;
+***** SMARTTRACKER6\SMARTTRACKERCLASS.CPP
+vgdz, &DirX, &DirY, &dirtol);
+*/                                                                                              dz = ZLayer[lay] - topv.Z;
+                                                                                                ExpX = dz * SlopeX + topv.X;
+*****
+
+***** SMARTTRACKER5\SmartTrackerClass.cpp
+                                                                                                if (pTempGrains[lay] = FindGrai
+(ExpX, ExpY, CellSpace + lay * T.CellsInLayer, DirX, DirY, dirtol))
+                                                                                                {
+                                                                                                        bottomv.X = pTempGrains
+lay]->Xcm;
+***** SMARTTRACKER6\SMARTTRACKERCLASS.CPP
+                                                                                                if (pTempGrains[lay] = FindGrai
+(ExpX, ExpY, CellSpace + lay * T.CellsInLayer, DirX, DirY, dirtol, DiscardShadows ? pTempGrains[lay - 1] : 0, 0, ShadowXTol, Sh
+dowYTol))
+                                                                                                {
+/*                                                                                                      bottomv.X = pTempGrains
+lay]->Xcm;
+*****
+
+***** SMARTTRACKER5\SmartTrackerClass.cpp
+
+                                                                                                        seqlength++;
+                                                                                                        }
+***** SMARTTRACKER6\SMARTTRACKERCLASS.CPP
+
+*/                                                                                                      seqlength++;
+                                                                                                        }
+*****
+
+***** SMARTTRACKER5\SmartTrackerClass.cpp
+                                                                                        {
+                                                                                                if (AR.Found < AR.MaxTracks)
+***** SMARTTRACKER6\SMARTTRACKERCLASS.CPP
+                                                                                        {
+
+#define USE_FILLCOUNT
+
+#ifdef USE_FILLCOUNT
+
+                                                                                                int fillcount;
+                                                                                                float ndirtol = sqrt(avgds2/* *
+0.25*/ + aligntol2);
+                                                                                                for (lay = fillcount = 0; lay <
+ EndLayer; lay++)
+                                                                                                        if (pTempGrains[lay])
+                                                                                                        {
+                                                                                                                dz = ZLayer[lay
+ - topv.Z;
+                                                                                                                float dx = dz *
+SlopeX + topv.X - pTempGrains[lay]->Xcm;
+                                                                                                                float dy = dz *
+SlopeY + topv.Y - pTempGrains[lay]->Ycm;
+                                                                                                                if (fabs(dx * D
+rX + dy * DirY) < ndirtol/* &&
+                                                                                                                        fabs(dx
+* DirY - dy * DirX) < T.AlignTol*/)
+                                                                                                                        fillcou
+t++;
+                                                                                                                }
+                                                                                                if ((float)fillcount > (tinf + 
+d / (1.0f + tsl * SlopeS)))
+                                                                                                {
+
+
+
+#endif
+
+
+                                                                                                if (AR.Found < AR.MaxTracks)
+*****
+
+***** SMARTTRACKER5\SmartTrackerClass.cpp
+                                                                                                }
+                                                                                        }
+***** SMARTTRACKER6\SMARTTRACKERCLASS.CPP
+                                                                                                }
+#ifdef USE_FILLCOUNT
+                                                                                                }
+#endif
+                                                                                        }
+*****
+
+***** SMARTTRACKER5\SmartTrackerClass.cpp
+        int TempF, TempG;
+        int TimeLimit = GetTickCount() + T.MaxTrackingTime;
+***** SMARTTRACKER6\SMARTTRACKERCLASS.CPP
+        int TempF, TempG;
+        bool TempV;
+
+        if (T.ShadowSigmaMeasures > 0)
+        {
+                T.ShadowSigmaX = T.ShadowSigmaXAccumulator / T.ShadowSigmaMeasures;
+                T.ShadowSigmaY = T.ShadowSigmaYAccumulator / T.ShadowSigmaMeasures;
+                }
+        else    
+                T.ShadowSigmaX = T.ShadowSigmaY = 0.0f;
+        
+        int TimeLimit = GetTickCount() + T.MaxTrackingTime;
+*****
+
+***** SMARTTRACKER5\SmartTrackerClass.cpp
+
+        found = ThreadInfo[0].Found;
+        for (p = 1; p < T.Processors; p++)
+                for (i = 0; i < ThreadInfo[p].Found; i++)
+***** SMARTTRACKER6\SMARTTRACKERCLASS.CPP
+
+        for (p = 0; p < T.Processors; p++)
+                for (i = 0; i < ThreadInfo[p].Found; i++)
+*****
+
+***** SMARTTRACKER5\SmartTrackerClass.cpp
+                {
+                        TempF = ThreadInfo[p].pSpace[i].Field;
+                        TempG = ThreadInfo[p].pSpace[i].Grains;
+                        pTemp = ThreadInfo[p].pSpace[i].pGrains;
+                        for (j = 0; (j < found) && (pSpace[j].Field < ThreadInfo[p].pSpace[i].Field); j++);
+                        for (k = found; k > j; k--)
+                        {
+                                pSpace[k].Field = pSpace[k - 1].Field;
+                                pSpace[k].Grains = pSpace[k - 1].Grains;
+                                pTemp = pSpace[k].pGrains;
+                                pSpace[k].pGrains = pSpace[k - 1].pGrains;
+                                pSpace[k - 1].pGrains = pTemp;
+                                }
+                        pSpace[j].Field = TempF;
+                        pSpace[j].Grains = TempG;
+                        pSpace[j].pGrains = pTemp;
+                        found++;
+                        }
+***** SMARTTRACKER6\SMARTTRACKERCLASS.CPP
+                {
+                        Track2 &K = ThreadInfo[p].pSpace[i];
+                        seqlength = K.Grains;
+                        for (j = 0; (j < seqlength) && ((IntTrackGrain *)K.pGrains)[j].T.pG->TrackLength < seqlength; j++);
+        
+                        if (j < seqlength) 
+                        {
+                                K.Valid = false;
+                                K.Grains = 0;
+                                continue;
+                                }
+                        for (j = 0; j < seqlength; j++)
+                        {
+                                IntTrackGrain *pIG = ((IntTrackGrain *)K.pGrains) + j;
+                                if (pIG->T.pG->pTrack2)
+                                {
+                                        Track2 &N = *pIG->T.pG->pTrack2;
+                                        for (k = 0; k < N.Grains; k++)
+                                        {
+                                                IntTrackGrain *pIJ = ((IntTrackGrain *)N.pGrains) + k;
+                                                pIJ->T.pG->pTrack2 = 0;
+                                                pIJ->T.pG->TrackLength = 0;
+                                                }
+                                        N.Valid = false;
+                                        N.Grains = 0;
+                                        }
+                                }
+
+                        for (j = 0; j < seqlength; j++)
+                        {
+                                IntTrackGrain *pIG = ((IntTrackGrain *)K.pGrains) + j;
+                                pIG->T.pG->pTrack2 = &K;
+                                pIG->T.pG->TrackLength = seqlength;
+                                }
+                        K.Valid = true;
+                        }
+*****
+
+***** SMARTTRACKER5\SmartTrackerClass.cpp
+
+        *pMaxNumber = found;
+***** SMARTTRACKER6\SMARTTRACKERCLASS.CPP
+
+        found = ThreadInfo[0].Found;
+        pTemp = (Grain *)malloc(sizeof(Grain) * T.LayerNum);
+        for (p = 1; p < T.Processors; p++)
+                for (i = 0; i < ThreadInfo[p].Found; i++)
+                {
+                        TempF = ThreadInfo[p].pSpace[i].Field;
+                        TempG = ThreadInfo[p].pSpace[i].Grains;
+                        //if (TempV = ThreadInfo[p].pSpace[i].Valid)
+                        TempV = ThreadInfo[p].pSpace[i].Valid;
+                        memcpy(pTemp, ThreadInfo[p].pSpace[i].pGrains, sizeof(Grain) * TempG);
+                        for (j = 0; (j < found) && (pSpace[j].Field < TempF); j++);
+                        for (k = found; k > j; k--)
+                        {
+                                pSpace[k].Field = pSpace[k - 1].Field;
+                                pSpace[k].Grains = pSpace[k - 1].Grains;
+                                //if (pSpace[k].Valid = pSpace[k - 1].Valid)
+                                pSpace[k].Valid = pSpace[k - 1].Valid;
+                                memcpy(pSpace[k].pGrains, pSpace[k - 1].pGrains, sizeof(Grain) * pSpace[k].Grains);
+                                }
+                        pSpace[j].Field = TempF;
+                        pSpace[j].Grains = TempG;
+                        //if (pSpace[j].Valid = TempV)
+                        pSpace[j].Valid = TempV;
+                        memcpy(pSpace[j].pGrains, pTemp, sizeof(Grain) * TempG);
+                        found++;
+                        }
+        free(pTemp);
+
+
+/*
+        found = ThreadInfo[0].Found;
+        pTemp = (Grain *)malloc(sizeof(Grain) * T.LayerNum);
+        for (p = 1; p < T.Processors; p++)
+                for (i = 0; i < ThreadInfo[p].Found; i++)
+                {
+                        TempF = ThreadInfo[p].pSpace[i].Field;
+                        TempG = ThreadInfo[p].pSpace[i].Grains;
+                        memcpy(pTemp, ThreadInfo[p].pSpace[i].pGrains, sizeof(Grain) * T.LayerNum);
+                        for (j = 0; (j < found) && (pSpace[j].Field < ThreadInfo[p].pSpace[i].Field); j++);
+                        for (k = found; k > j; k--)
+                        {
+                                pSpace[k].Field = pSpace[k - 1].Field;
+                                pSpace[k].Grains = pSpace[k - 1].Grains;
+                                //pTemp = pSpace[k].pGrains;
+                                memcpy(pSpace[k].pGrains, pSpace[k - 1].pGrains, sizeof(Grain) * T.LayerNum);
+                                //pSpace[k - 1].pGrains = pTemp;
+                                }
+                        pSpace[j].Field = TempF;
+                        pSpace[j].Grains = TempG;
+                        memcpy(pSpace[j].pGrains, pTemp, sizeof(Grain) * T.LayerNum);
+                        found++;
+                        }
+        free(pTemp);
+
+        *pMaxNumber = found;
+*****
+
+***** SMARTTRACKER5\SmartTrackerClass.cpp
+                }
+
+        *pMaxNumber = FinalizeTracks(found, pSpace);
+***** SMARTTRACKER6\SMARTTRACKERCLASS.CPP
+                }
+*/
+        *pMaxNumber = FinalizeTracks(found, pSpace);
+*****
+
+***** SMARTTRACKER5\SmartTrackerClass.cpp
+
+void CSmartTrackerClass::InsertNewTrack(IntGrain **pTempGrains, int Layers, int SequenceLength, Track *pTracks, int &NTracks)
+***** SMARTTRACKER6\SMARTTRACKERCLASS.CPP
+
+IntGrain *Cell::FindGrainNoShadow(float x, float y, float dirx, float diry, float dirtol, float normtol, IntGrain *pTopShadow, 
+ntGrain *pBottomShadow, float xshadowtol, float yshadowtol)
+{
+        IntGrain *pBest = 0;
+        int i;
+        float bestnormdist = normtol, normdist;
+        float dx, dy;
+        IntGrain *pStart = FirstG;
+        IntGrain *pEnd = FirstG + Free;
+        float reddirtol = dirtol * 1.5f;
+        for (IntGrain *pScan = pStart; pScan < pEnd; pScan++)
+                if (fabs(dx = (pScan->Xcm - x)) <= reddirtol)
+                        if (fabs(dy = (pScan->Ycm - y)) <= reddirtol)
+                                if ((normdist = fabs(dy * dirx - dx * diry)) < bestnormdist)
+                                {
+                                        if (pTopShadow && fabs(pTopShadow->Xcm - pScan->Xcm) < xshadowtol && fabs(pTopShadow->Y
+m - pScan->Ycm) < yshadowtol) continue;
+                                        if (pBottomShadow && fabs(pBottomShadow->Xcm - pScan->Xcm) < xshadowtol && fabs(pBottom
+hadow->Ycm - pScan->Ycm) < yshadowtol) continue;
+                                        if (normdist < bestnormdist)
+                                                if (fabs(dx * dirx + dy * diry) < dirtol)
+                                                {
+                                                        bestnormdist = normdist;
+                                                        pBest = pScan;
+                                                        };
+                                        }
+        return pBest;
+        };
+
+void CSmartTrackerClass::InsertNewTrack(IntGrain **pTempGrains, int Layers, int SequenceLength, Track *pTracks, int &NTracks)
+*****
+

@@ -1,0 +1,25 @@
+HKCR
+{
+	DispatcherIO.CDspIO.1 = s 'CDspIO Class'
+	{
+		CLSID = s '{035A57AB-A361-413D-972E-69ADDF1EABF5}'
+	}
+	DispatcherIO.CDspIO = s 'CDspIO Class'
+	{
+		CLSID = s '{035A57AB-A361-413D-972E-69ADDF1EABF5}'
+		CurVer = s 'DispatcherIO.CDspIO.1'
+	}
+	NoRemove CLSID
+	{
+		ForceRemove {035A57AB-A361-413D-972E-69ADDF1EABF5} = s 'CDspIO Class'
+		{
+			ProgID = s 'DispatcherIO.CDspIO.1'
+			VersionIndependentProgID = s 'DispatcherIO.CDspIO'
+			InprocServer32 = s '%MODULE%'
+			{
+				val ThreadingModel = s 'Free'
+			}
+			'TypeLib' = s '{CB8D11B0-B532-449C-B3A9-50B1C5700A72}'
+		}
+	}
+}

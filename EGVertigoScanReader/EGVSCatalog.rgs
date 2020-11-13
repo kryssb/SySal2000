@@ -1,0 +1,26 @@
+HKCR
+{
+	EGVertigoScanReader.EGVSCatalog.1 = s 'EGVSCatalog Class'
+	{
+		CLSID = s '{AA3E984D-7CD0-4329-9267-7A2D5863B29D}'
+	}
+	EGVertigoScanReader.EGVSCatalog = s 'EGVSCatalog Class'
+	{
+		CLSID = s '{AA3E984D-7CD0-4329-9267-7A2D5863B29D}'
+		CurVer = s 'EGVertigoScanReader.EGVSCatalog.1'
+	}
+	NoRemove CLSID
+	{
+		ForceRemove {AA3E984D-7CD0-4329-9267-7A2D5863B29D} = s 'EGVSCatalog Class'
+		{
+			ProgID = s 'EGVertigoScanReader.EGVSCatalog.1'
+			VersionIndependentProgID = s 'EGVertigoScanReader.EGVSCatalog'
+			ForceRemove 'Programmable'
+			InprocServer32 = s '%MODULE%'
+			{
+				val ThreadingModel = s 'Apartment'
+			}
+			'TypeLib' = s '{B6AF5F56-9B24-4885-A28D-3360305B4DE4}'
+		}
+	}
+}

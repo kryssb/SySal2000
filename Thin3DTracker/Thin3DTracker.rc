@@ -1,0 +1,228 @@
+//Microsoft Developer Studio generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// English (U.S.) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
+#pragma code_page(1252)
+#endif //_WIN32
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDI_ICON32              ICON    DISCARDABLE     "icon32.ico"
+IDI_ICON64              ICON    DISCARDABLE     "icon64.ico"
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+3 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+#ifndef _MAC
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION 1,0,0,1
+ PRODUCTVERSION 1,0,0,1
+ FILEFLAGSMASK 0x3fL
+#ifdef _DEBUG
+ FILEFLAGS 0x1L
+#else
+ FILEFLAGS 0x0L
+#endif
+ FILEOS 0x4L
+ FILETYPE 0x2L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "040904B0"
+        BEGIN
+            VALUE "CompanyName", "\0"
+            VALUE "FileDescription", "Thin3DTracker Module\0"
+            VALUE "FileVersion", "1, 0, 0, 1\0"
+            VALUE "InternalName", "Thin3DTracker\0"
+            VALUE "LegalCopyright", "Copyright 1999\0"
+            VALUE "OriginalFilename", "Thin3DTracker.DLL\0"
+            VALUE "ProductName", "Thin3DTracker Module\0"
+            VALUE "ProductVersion", "1, 0, 0, 1\0"
+            VALUE "OLESelfRegister", "\0"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x409, 1200
+    END
+END
+
+#endif    // !_MAC
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// REGISTRY
+//
+
+IDR_THIN3DTRK           REGISTRY DISCARDABLE    "Thin3DTrk.rgs"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_EDIT_CONFIG DIALOG DISCARDABLE  0, 0, 266, 235
+STYLE DS_MODALFRAME | DS_CENTER | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Edit Tracking Parameters"
+FONT 8, "MS Sans Serif"
+BEGIN
+    GROUPBOX        "Memory Management",IDC_STATIC,7,7,175,61
+    LTEXT           "Max &Grains",IDC_STATIC,14,20,44,10
+    EDITTEXT        IDC_EC_MAXGRAINS,62,19,34,12,ES_AUTOHSCROLL
+    LTEXT           "Max &Layers",IDC_STATIC,14,35,44,10
+    EDITTEXT        IDC_EC_MAXLAYERS,62,34,34,12,ES_AUTOHSCROLL
+    LTEXT           "Cells Along &X",IDC_STATIC,104,20,44,10
+    EDITTEXT        IDC_EC_CELLSX,152,19,26,12,ES_AUTOHSCROLL
+    LTEXT           "Cells Along &Y",IDC_STATIC,104,35,44,10
+    EDITTEXT        IDC_EC_CELLSY,152,34,26,12,ES_AUTOHSCROLL
+    LTEXT           "Cell Ove&rflow",IDC_STATIC,104,50,44,10
+    EDITTEXT        IDC_EC_CELLOVERFLOW,152,49,26,12,ES_AUTOHSCROLL
+    GROUPBOX        "Grains",IDC_STATIC,187,7,72,61
+    LTEXT           "&Min Pixels",IDC_STATIC,198,20,32,10
+    EDITTEXT        IDC_EC_MINPIXELS,237,19,18,12,ES_AUTOHSCROLL
+    LTEXT           "M&ax Pixels",IDC_STATIC,198,35,34,10
+    EDITTEXT        IDC_EC_MAXPIXELS,237,34,18,12,ES_AUTOHSCROLL
+    GROUPBOX        "Alignment",IDC_STATIC,7,71,252,64
+    LTEXT           "&Start Gap (Layers)",IDC_STATIC,13,83,56,10
+    EDITTEXT        IDC_EC_STARTGAP,78,82,22,12,ES_AUTOHSCROLL
+    LTEXT           "&Retry Gap (Layers)",IDC_STATIC,13,98,63,10
+    EDITTEXT        IDC_EC_RETRYGAP,78,97,22,12,ES_AUTOHSCROLL
+    LTEXT           "Max &Empty Layers",IDC_STATIC,13,113,57,10
+    EDITTEXT        IDC_EC_ATTLIM,78,112,22,12,ES_AUTOHSCROLL
+    LTEXT           "Startu&p Alignment &Tolerance (micron)",IDC_STATIC,110,
+                    84,118,10
+    EDITTEXT        IDC_EC_DHARD,233,83,22,12,ES_AUTOHSCROLL
+    LTEXT           "E&xtension Alignment Tolerance (micron)",IDC_STATIC,110,
+                    99,121,10
+    EDITTEXT        IDC_EC_DLOOSE,233,98,22,12,ES_AUTOHSCROLL
+    GROUPBOX        "Track Quality",IDC_STATIC,7,139,252,68
+    LTEXT           "Min Sl&ope (rad)",IDC_STATIC,14,153,53,10
+    EDITTEXT        IDC_EC_MINSLOPE,74,152,26,12,ES_AUTOHSCROLL
+    LTEXT           "Max Slo&pe (rad)",IDC_STATIC,14,168,53,10
+    EDITTEXT        IDC_EC_MAXSLOPE,74,167,26,12,ES_AUTOHSCROLL
+    LTEXT           "Min Points at &0 Slope",IDC_STATIC,110,153,69,10
+    EDITTEXT        IDC_EC_MINPOINTS0,229,152,26,12,ES_AUTOHSCROLL
+    LTEXT           "Min Points &Falldo&wn Coefficient (1/rad)",IDC_STATIC,
+                    110,168,114,10
+    EDITTEXT        IDC_EC_MINPOINTSSLOPE,229,167,26,12,ES_AUTOHSCROLL
+    DEFPUSHBUTTON   "OK",IDOK,7,214,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,209,214,50,14
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO DISCARDABLE 
+BEGIN
+    IDD_EDIT_CONFIG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 259
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 228
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_PROJNAME            "Thin3DTracker"
+END
+
+#endif    // English (U.S.) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+/////////////////////////////////////////////////////////////////////////////
+// Italian (Italy) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ITA)
+#ifdef _WIN32
+LANGUAGE LANG_ITALIAN, SUBLANG_ITALIAN
+#pragma code_page(1252)
+#endif //_WIN32
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+#endif    // Italian (Italy) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+

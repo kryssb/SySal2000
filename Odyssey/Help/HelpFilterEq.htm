@@ -1,0 +1,78 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" >
+<HTML>
+	<HEAD>
+		<TITLE>Filter Equalization</TITLE>
+		<META content="Microsoft Visual Studio 7.0" name="GENERATOR">
+	</HEAD>
+	<BODY>
+		<P><FONT face="Arial" color="#000066" size="5"><EM> Odyssey&nbsp;- Filter Equalization</EM></FONT>
+			<EM><FONT size="4"><FONT face="Arial">
+						<HR width="100%" SIZE="2">
+					</FONT>
+					<P></P>
+					<P align="justify">
+				</FONT></EM><FONT face="Arial" size="2">The filter response is sometimes found 
+				to depend on the position of an object in the field of view. This depends 
+				essentially on two factors: astygmatism in the optical system and lighting 
+				inhomogeneities.</FONT>
+		</P>
+		<P align="justify"><FONT face="Arial" size="2">Astygmatism is sometimes detectable by 
+				eye. A grain image in the center of the field of view looks much sharper than 
+				when it is far from the center. Of course, part of this effect depends on 
+				spherical aberration (so the focus varies from the center to the edges), but if 
+				spherical aberration were the only cause, a careful refocusing would yield a 
+				sharp grain image; indeed, grains far from the center can never yield sharp 
+				images, and this is called astygmatism: the image of a point is not a point, 
+				but a region with a shape that depends on the specific optical equipment of the 
+				microscope, and on the position in the field of view. In this conditions, the 
+				FIR filter response peak too has an height that depends on the position of the 
+				grain in the field of view.</FONT></P>
+		<P align="justify"><FONT face="Arial" size="2">Lighting inhomogeneities, when very 
+				strong, can severely affect the filter performances. Indeed, FIR filters are 
+				linear filters. This means that the dynamic range of the filter output is 
+				proportional to the dynamic range of the input signal. Of course, the 
+				information content of a well illuminated area is larger than what a poorly 
+				illuminated area can provide; the filter peaks will then be higher in the 
+				illuminated areas.</FONT></P>
+		<P align="justify"><FONT face="Arial" size="2">Since the filter output is to be 
+				binarized, for each pixel the&nbsp;interesting information is just whether the 
+				filter output&nbsp;reaches or not a certain level.&nbsp;Thus, adding a pedestal 
+				image&nbsp;to the filter output can help in most cases to recover the effects 
+				of astygmatism and incorrect lighting. The pedestal image varies very much, so 
+				Odyssey provides no predefined utility to make&nbsp;such images. External 
+				algorithms that provide these images should tailor them very carefully on the 
+				specific case.</FONT></P>
+		<P align="justify">
+			<TABLE id="Table1" cellSpacing="1" cellPadding="1" width="300" border="1">
+				<TR>
+					<TD><FONT face="Arial" size="2">Original Image</FONT><BR>
+						<IMG alt="" src="HelpFilterEqBase.jpg" border="1" height="384" width="384"></TD>
+					<TD></TD>
+				</TR>
+				<TR>
+					<TD>
+						<P><FONT face="Arial" size="2">Filtered Image<BR>
+							</FONT><IMG alt="" src="HelpFilterEqFilter.jpg" border="1" height="384" width="384"></P>
+					</TD>
+					<TD><FONT face="Arial" size="2">Equalization Image<BR>
+						</FONT><IMG height="384" alt="" src="HelpFilterEqImage.gif" width="384"></TD>
+				</TR>
+				<TR>
+					<TD></TD>
+					<TD><FONT face="Arial" size="2">Equalized Filtered Image<BR>
+						</FONT><IMG height="384" alt="" src="HelpFilterEqFilterCompens.jpg" width="384" border="1"></TD>
+				</TR>
+				<TR>
+					<TD><FONT face="Arial" size="2">Binarized Filtered Image<BR>
+						</FONT><IMG height="384" alt="" src="HelpFilterEqThreshBase.gif" width="384" border="1"></TD>
+					<TD><FONT face="Arial" size="2">Binarized Equalized Filtered&nbsp;Image<BR>
+						</FONT><IMG height="384" alt="" src="HelpFilterEqThreshGood.gif" width="384" border="1"></TD>
+				</TR>
+			</TABLE>
+		</P>
+		<P align="justify"><FONT face="Arial"><FONT size="2">As one can easily notice, the 
+					binarized image on the left has a nonuniform distribution of the clusters. The 
+					final image on the right shows how the filter equalization can make the 
+					distribution of binary clusters much more uniform in the scanning volume.</FONT></FONT></P>
+	</BODY>
+</HTML>

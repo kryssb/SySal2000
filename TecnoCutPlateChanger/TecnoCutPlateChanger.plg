@@ -1,0 +1,161 @@
+<html>
+<body>
+<pre>
+<h1>Build Log</h1>
+<h3>
+--------------------Configuration: TecnoCutPlateChanger - Win32 Debug--------------------
+</h3>
+<h3>Command Lines</h3>
+Creating command line "midl.exe /tlb ".\TecnoCutPlateChanger.tlb" /h "TecnoCutPlateChanger.h" /iid "TecnoCutPlateChanger_i.c" /Oicf "D:\SySal2\TecnoCutPlateChanger\TecnoCutPlateChanger.idl""
+Creating command line "rc.exe /l 0x410 /fo"Debug/TecnoCutPlateChanger.res" /d "_DEBUG" /d "_AFXDLL" "D:\SySal2\TecnoCutPlateChanger\TecnoCutPlateChanger.rc"" 
+Creating temporary file "C:\DOCUME~1\kryss\LOCALS~1\Temp\RSPC98.tmp" with contents
+[
+/nologo /MDd /W3 /Gm /GX /ZI /Od /I "..\Common" /I "." /D "WIN32" /D "_DEBUG" /D "_WINDOWS" /D "_WINDLL" /D "_AFXDLL" /D "_MBCS" /D "_USRDLL" /FR"Debug/" /Fp"Debug/TecnoCutPlateChanger.pch" /YX"stdafx.h" /Fo"Debug/" /Fd"Debug/" /FD /GZ /c 
+"D:\SySal2\TecnoCutPlateChanger\EditConfig.cpp"
+"D:\SySal2\TecnoCutPlateChanger\Monitor.cpp"
+"D:\SySal2\TecnoCutPlateChanger\TecnoCutPlateChanger.cpp"
+"D:\SySal2\TecnoCutPlateChanger\TecnoCutPlateChangerClass.cpp"
+]
+Creating command line "cl.exe @C:\DOCUME~1\kryss\LOCALS~1\Temp\RSPC98.tmp" 
+Creating temporary file "C:\DOCUME~1\kryss\LOCALS~1\Temp\RSPC99.tmp" with contents
+[
+/nologo /MDd /W3 /Gm /GX /ZI /Od /I "..\Common" /I "." /D "WIN32" /D "_DEBUG" /D "_WINDOWS" /D "_WINDLL" /D "_AFXDLL" /D "_MBCS" /D "_USRDLL" /FR"Debug/" /Fp"Debug/TecnoCutPlateChanger.pch" /Yc"stdafx.h" /Fo"Debug/" /Fd"Debug/" /FD /GZ /c 
+"D:\SySal2\TecnoCutPlateChanger\StdAfx.cpp"
+]
+Creating command line "cl.exe @C:\DOCUME~1\kryss\LOCALS~1\Temp\RSPC99.tmp" 
+Creating temporary file "C:\DOCUME~1\kryss\LOCALS~1\Temp\RSPC9A.tmp" with contents
+[
+/nologo /subsystem:windows /dll /incremental:yes /pdb:"Debug/TecnoCutPlateChanger.pdb" /debug /machine:I386 /nodefaultlib:"mfc42.lib mfcs42.lib MSVCRT.lib" /def:".\TecnoCutPlateChanger.def" /out:"Debug/TecnoCutPlateChanger.dll" /implib:"Debug/TecnoCutPlateChanger.lib" /pdbtype:sept /verbose:lib 
+.\Debug\EditConfig.obj
+.\Debug\Monitor.obj
+.\Debug\TecnoCutPlateChanger.obj
+.\Debug\TecnoCutPlateChangerClass.obj
+.\Debug\StdAfx.obj
+.\Debug\TecnoCutPlateChanger.res
+]
+Creating command line "link.exe @C:\DOCUME~1\kryss\LOCALS~1\Temp\RSPC9A.tmp"
+Creating temporary file "C:\DOCUME~1\kryss\LOCALS~1\Temp\RSPC9B.bat" with contents
+[
+@echo off
+regsvr32 /s /c ".\Debug\TecnoCutPlateChanger.dll"
+echo regsvr32 exec. time > ".\Debug\regsvr32.trg"
+]
+Creating command line "C:\DOCUME~1\kryss\LOCALS~1\Temp\RSPC9B.bat"
+Creating Type Library...
+Microsoft (R) MIDL Compiler Version 5.01.0164  
+Copyright (c) Microsoft Corp 1991-1997. All rights reserved.
+Processing D:\SySal2\TecnoCutPlateChanger\TecnoCutPlateChanger.idl
+TecnoCutPlateChanger.idl
+Processing C:\Program Files\Microsoft Visual Studio\VC98\INCLUDE\oaidl.idl
+oaidl.idl
+Processing C:\Program Files\Microsoft Visual Studio\VC98\INCLUDE\objidl.idl
+objidl.idl
+Processing C:\Program Files\Microsoft Visual Studio\VC98\INCLUDE\unknwn.idl
+unknwn.idl
+Processing C:\Program Files\Microsoft Visual Studio\VC98\INCLUDE\wtypes.idl
+wtypes.idl
+Processing C:\Program Files\Microsoft Visual Studio\VC98\INCLUDE\ocidl.idl
+ocidl.idl
+Processing C:\Program Files\Microsoft Visual Studio\VC98\INCLUDE\oleidl.idl
+oleidl.idl
+Processing C:\Program Files\Microsoft Visual Studio\VC98\INCLUDE\servprov.idl
+servprov.idl
+Processing C:\Program Files\Microsoft Visual Studio\VC98\INCLUDE\urlmon.idl
+urlmon.idl
+Processing C:\Program Files\Microsoft Visual Studio\VC98\INCLUDE\msxml.idl
+msxml.idl
+Processing ..\Common\Connection.h
+Connection.h
+Processing ..\Common\Config.h
+Config.h
+Processing ..\Common\GUIdefs.h
+GUIdefs.h
+Processing ..\Common\AsyncStageDefs.h
+AsyncStageDefs.h
+Processing ..\Common\id.h
+id.h
+Compiling resources...
+Compiling...
+StdAfx.cpp
+Compiling...
+EditConfig.cpp
+d:\sysal2\tecnocutplatechanger\editconfig.cpp(36) : warning C4305: 'argument' : truncation from 'const double' to 'float'
+d:\sysal2\tecnocutplatechanger\editconfig.cpp(36) : warning C4305: 'argument' : truncation from 'const double' to 'float'
+Monitor.cpp
+TecnoCutPlateChanger.cpp
+TecnoCutPlateChangerClass.cpp
+D:\SySal2\TecnoCutPlateChanger\TecnoCutPlateChangerClass.cpp(265) : warning C4800: 'unsigned char' : forcing value to bool 'true' or 'false' (performance warning)
+Linking...
+
+Searching Libraries
+    Searching C:\Program Files\Microsoft Visual Studio\VC98\MFC\LIB\mfc42d.lib:
+    Searching C:\Program Files\Microsoft Visual Studio\VC98\MFC\LIB\mfcs42d.lib:
+    Searching C:\Program Files\Microsoft Visual Studio\VC98\LIB\msvcrtd.lib:
+    Searching C:\Program Files\Microsoft Visual Studio\VC98\LIB\kernel32.lib:
+    Searching C:\Program Files\Microsoft Visual Studio\VC98\LIB\user32.lib:
+    Searching C:\Program Files\Microsoft Visual Studio\VC98\LIB\gdi32.lib:
+    Searching C:\Program Files\Microsoft Visual Studio\VC98\LIB\comdlg32.lib:
+    Searching C:\Program Files\Microsoft Visual Studio\VC98\LIB\winspool.lib:
+    Searching C:\Program Files\Microsoft Visual Studio\VC98\LIB\advapi32.lib:
+    Searching C:\Program Files\Microsoft Visual Studio\VC98\LIB\shell32.lib:
+    Searching C:\Program Files\Microsoft Visual Studio\VC98\LIB\comctl32.lib:
+    Searching C:\Program Files\Microsoft Visual Studio\VC98\LIB\uuid.lib:
+    Searching C:\Program Files\Microsoft Visual Studio\VC98\MFC\LIB\mfco42d.lib:
+    Searching C:\Program Files\Microsoft Visual Studio\VC98\LIB\oledlg.lib:
+    Searching C:\Program Files\Microsoft Visual Studio\VC98\LIB\ole32.lib:
+    Searching C:\Program Files\Microsoft Visual Studio\VC98\LIB\olepro32.lib:
+    Searching C:\Program Files\Microsoft Visual Studio\VC98\LIB\oleaut32.lib:
+    Searching C:\Program Files\Microsoft Visual Studio\VC98\LIB\urlmon.lib:
+    Searching C:\Program Files\Microsoft Visual Studio\VC98\LIB\OLDNAMES.lib:
+    Searching C:\Program Files\Microsoft Visual Studio\VC98\MFC\LIB\mfc42d.lib:
+    Searching C:\Program Files\Microsoft Visual Studio\VC98\MFC\LIB\mfcs42d.lib:
+    Searching C:\Program Files\Microsoft Visual Studio\VC98\LIB\msvcrtd.lib:
+    Searching C:\Program Files\Microsoft Visual Studio\VC98\LIB\kernel32.lib:
+    Searching C:\Program Files\Microsoft Visual Studio\VC98\LIB\user32.lib:
+    Searching C:\Program Files\Microsoft Visual Studio\VC98\LIB\gdi32.lib:
+    Searching C:\Program Files\Microsoft Visual Studio\VC98\LIB\comdlg32.lib:
+    Searching C:\Program Files\Microsoft Visual Studio\VC98\LIB\winspool.lib:
+    Searching C:\Program Files\Microsoft Visual Studio\VC98\LIB\advapi32.lib:
+    Searching C:\Program Files\Microsoft Visual Studio\VC98\LIB\shell32.lib:
+    Searching C:\Program Files\Microsoft Visual Studio\VC98\LIB\comctl32.lib:
+    Searching C:\Program Files\Microsoft Visual Studio\VC98\LIB\uuid.lib:
+    Searching C:\Program Files\Microsoft Visual Studio\VC98\MFC\LIB\mfco42d.lib:
+    Searching C:\Program Files\Microsoft Visual Studio\VC98\LIB\oledlg.lib:
+    Searching C:\Program Files\Microsoft Visual Studio\VC98\LIB\ole32.lib:
+    Searching C:\Program Files\Microsoft Visual Studio\VC98\LIB\olepro32.lib:
+
+Done Searching Libraries
+   Creating library Debug/TecnoCutPlateChanger.lib and object Debug/TecnoCutPlateChanger.exp
+
+Searching Libraries
+    Searching C:\Program Files\Microsoft Visual Studio\VC98\MFC\LIB\mfc42d.lib:
+    Searching C:\Program Files\Microsoft Visual Studio\VC98\MFC\LIB\mfcs42d.lib:
+    Searching C:\Program Files\Microsoft Visual Studio\VC98\LIB\msvcrtd.lib:
+    Searching C:\Program Files\Microsoft Visual Studio\VC98\LIB\kernel32.lib:
+    Searching C:\Program Files\Microsoft Visual Studio\VC98\LIB\user32.lib:
+    Searching C:\Program Files\Microsoft Visual Studio\VC98\LIB\gdi32.lib:
+    Searching C:\Program Files\Microsoft Visual Studio\VC98\LIB\comdlg32.lib:
+    Searching C:\Program Files\Microsoft Visual Studio\VC98\LIB\winspool.lib:
+    Searching C:\Program Files\Microsoft Visual Studio\VC98\LIB\advapi32.lib:
+    Searching C:\Program Files\Microsoft Visual Studio\VC98\LIB\shell32.lib:
+    Searching C:\Program Files\Microsoft Visual Studio\VC98\LIB\comctl32.lib:
+    Searching C:\Program Files\Microsoft Visual Studio\VC98\LIB\uuid.lib:
+    Searching C:\Program Files\Microsoft Visual Studio\VC98\MFC\LIB\mfco42d.lib:
+    Searching C:\Program Files\Microsoft Visual Studio\VC98\LIB\oledlg.lib:
+    Searching C:\Program Files\Microsoft Visual Studio\VC98\LIB\ole32.lib:
+    Searching C:\Program Files\Microsoft Visual Studio\VC98\LIB\olepro32.lib:
+    Searching C:\Program Files\Microsoft Visual Studio\VC98\LIB\oleaut32.lib:
+    Searching C:\Program Files\Microsoft Visual Studio\VC98\LIB\urlmon.lib:
+    Searching C:\Program Files\Microsoft Visual Studio\VC98\LIB\OLDNAMES.lib:
+
+Done Searching Libraries
+<h3>Output Window</h3>
+Performing registration
+
+
+
+<h3>Results</h3>
+TecnoCutPlateChanger.dll - 0 error(s), 3 warning(s)
+</pre>
+</body>
+</html>

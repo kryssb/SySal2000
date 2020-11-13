@@ -1,0 +1,61 @@
+<html>
+<body>
+<pre>
+<h1>Build Log</h1>
+<h3>
+--------------------Configuration: Genesis4 - Win32 Debug--------------------
+</h3>
+<h3>Command Lines</h3>
+Creating temporary file "C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\RSP18.tmp" with contents
+[
+/nologo /MDd /W3 /Gm /GX /ZI /Od /I "..\Common" /I "Matrox\mil\include" /I "Matrox\gnl\src\headers\common" /I "Matrox\gnl\src\headers\host" /D "WIN32" /D "_DEBUG" /D "_WINDOWS" /D "_WINDLL" /D "_AFXDLL" /D "_MBCS" /D "_USRDLL" /Fp"Debug/Genesis4.pch" /Yu"stdafx.h" /Fo"Debug/" /Fd"Debug/" /FD /GZ /c 
+"D:\SySal2\Genesis4\TestConfig.cpp"
+]
+Creating command line "cl.exe @C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\RSP18.tmp" 
+Creating temporary file "C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\RSP19.tmp" with contents
+[
+/nologo /subsystem:windows /dll /incremental:yes /pdb:"Debug/Genesis4.pdb" /debug /machine:I386 /def:".\Genesis4.def" /out:"Debug/Genesis4.dll" /implib:"Debug/Genesis4.lib" /pdbtype:sept 
+.\Debug\Clustering.obj
+.\Debug\EditConfig.obj
+.\Debug\Genesis4.obj
+.\Debug\GenesisClass4.obj
+.\Debug\GenesisData.obj
+.\Debug\GenesisData4.obj
+.\Debug\Globals.obj
+.\Debug\StdAfx.obj
+.\Debug\TestConfig.obj
+.\Debug\Genesis4.res
+.\Matrox\gnl\lib\obj\nt\genlib.lib
+.\Matrox\mil\library\winnt\msc\dll\milvga.lib
+.\Matrox\mil\library\winnt\msc\dll\milgen.lib
+.\Matrox\mil\library\winnt\msc\dll\mil.lib
+]
+Creating command line "link.exe @C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\RSP19.tmp"
+Creating temporary file "C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\RSP1A.bat" with contents
+[
+@echo off
+regsvr32 /s /c ".\Debug\Genesis4.dll"
+echo regsvr32 exec. time > ".\Debug\regsvr32.trg"
+]
+Creating command line "C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\RSP1A.bat"
+Compiling...
+TestConfig.cpp
+D:\SySal2\Genesis4\TestConfig.cpp(146) : warning C4018: '<' : signed/unsigned mismatch
+D:\SySal2\Genesis4\TestConfig.cpp(156) : warning C4018: '!=' : signed/unsigned mismatch
+D:\SySal2\Genesis4\TestConfig.cpp(205) : warning C4800: 'int' : forcing value to bool 'true' or 'false' (performance warning)
+D:\SySal2\Genesis4\TestConfig.cpp(274) : warning C4244: 'argument' : conversion from 'double' to 'unsigned int', possible loss of data
+D:\SySal2\Genesis4\TestConfig.cpp(274) : warning C4244: 'argument' : conversion from 'double' to 'unsigned int', possible loss of data
+D:\SySal2\Genesis4\TestConfig.cpp(274) : warning C4244: 'argument' : conversion from 'float' to 'unsigned int', possible loss of data
+D:\SySal2\Genesis4\TestConfig.cpp(274) : warning C4244: 'argument' : conversion from 'float' to 'unsigned int', possible loss of data
+D:\SySal2\Genesis4\TestConfig.cpp(281) : warning C4800: 'int' : forcing value to bool 'true' or 'false' (performance warning)
+Linking...
+<h3>Output Window</h3>
+Performing registration
+
+
+
+<h3>Results</h3>
+Genesis4.dll - 0 error(s), 8 warning(s)
+</pre>
+</body>
+</html>

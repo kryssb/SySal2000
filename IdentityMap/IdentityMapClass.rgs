@@ -1,0 +1,26 @@
+HKCR
+{
+	IdentityMap.IdentityMap.1 = s 'IdentityMap Class'
+	{
+		CLSID = s '{20AF3AA0-F048-4EF7-A627-5B3947DE6A62}'
+	}
+	IdentityMap.IdentityMap = s 'IdentityMap Class'
+	{
+		CLSID = s '{20AF3AA0-F048-4EF7-A627-5B3947DE6A62}'
+		CurVer = s 'IdentityMap.IdentityMap.1'
+	}
+	NoRemove CLSID
+	{
+		ForceRemove {20AF3AA0-F048-4EF7-A627-5B3947DE6A62} = s 'IdentityMap Class'
+		{
+			ProgID = s 'IdentityMap.IdentityMap.1'
+			VersionIndependentProgID = s 'IdentityMap.IdentityMap'
+			ForceRemove 'Programmable'
+			InprocServer32 = s '%MODULE%'
+			{
+				val ThreadingModel = s 'Both'
+			}
+			'TypeLib' = s '{17F3B4B3-35D0-450B-BC8A-294D7868CA56}'
+		}
+	}
+}

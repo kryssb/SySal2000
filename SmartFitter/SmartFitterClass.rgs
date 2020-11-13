@@ -1,0 +1,25 @@
+HKCR
+{
+	SmartFitter.SmartFitter.3 = s 'SmartFitter Class'
+	{
+		CLSID = s '{5f9f5c82-eae3-4c9e-ae63-ce42ab40c6cd}'
+	}
+	SmartFitter.SmartFitter = s 'SmartFitter Class'
+	{
+		CLSID = s '{5f9f5c82-eae3-4c9e-ae63-ce42ab40c6cd}'
+		CurVer = s 'SmartFitter.SmartFitter.3'
+	}
+	NoRemove CLSID
+	{
+		ForceRemove {5f9f5c82-eae3-4c9e-ae63-ce42ab40c6cd} = s 'SmartFitter Class'
+		{
+			ProgID = s 'SmartFitter.SmartFitter.3'
+			VersionIndependentProgID = s 'SmartFitter.SmartFitter'
+			InprocServer32 = s '%MODULE%'
+			{
+				val ThreadingModel = s 'Free'
+			}
+			'TypeLib' = s '{286ec822-a7c3-4191-b463-34c3cd8c22a0}'
+		}
+	}
+}

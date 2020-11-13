@@ -1,0 +1,152 @@
+// Genesis.idl : IDL source for Genesis.dll
+//
+
+// This file will be processed by the MIDL tool to
+// produce the type library (Genesis.tlb) and marshalling code.
+
+import "oaidl.idl";
+import "ocidl.idl";
+import "..\Common\Connection.h";
+import "..\Common\Config.h";
+import "..\Common\GUIdefs.h";
+import "..\Common\Cluster.h";
+import "..\Common\FrameGrabberDefs.h";
+	[
+		object,
+		uuid(C022EEAD-748A-11D3-A47B-E89C0BCE9720),
+	
+		helpstring("ISySalObject Interface"),
+		pointer_default(unique)
+	]
+	interface ISySalObject : IUnknown
+	{
+		[helpstring("method SetName")] HRESULT SetName(ConnectionName name);
+		[helpstring("method GetName")] HRESULT GetName(ConnectionName name);
+		[helpstring("method SetConfig")] HRESULT SetConfig(SySalConfig *pConfig);
+		[helpstring("method GetConfig")] HRESULT GetConfig(SySalConfig *pConfig);
+		[helpstring("method EditConfig")] HRESULT EditConfig(SySalConfig *pConfig, HSySalHANDLE hWnd);
+		[helpstring("method EnableMonitor")] HRESULT EnableMonitor(boolean bEnable);
+		[helpstring("method GetNumberOfConnections")] HRESULT GetNumberOfConnections(int *pNumber);
+		[helpstring("method SetConnection")] HRESULT SetConnection(int n, SySalConnection connection);
+		[helpstring("method GetConnection")] HRESULT GetConnection(int n, SySalConnection *pConnection);
+		[helpstring("method GetIcon")] HRESULT GetIcon(int n, HSySalHICON *pHICON);
+		[helpstring("method GetClassName")] HRESULT GetClassName(ConnectionName name);
+		[helpstring("method SyncExec")] HRESULT SyncExec();
+		[helpstring("method AsyncExec")] HRESULT AsyncExec(HSySalHANDLE HNotifyStatusChangeEvent);
+		[helpstring("method AsyncCheckStatus")] HRESULT AsyncCheckStatus(long *pStatus);
+		[helpstring("method AsyncWait")] HRESULT AsyncWait();
+		[helpstring("method AsyncPause")] HRESULT AsyncPause();
+		[helpstring("method AsyncStop")] HRESULT AsyncStop();
+		[helpstring("method AsyncResume")] HRESULT AsyncResume();
+		[helpstring("method IsReady")] HRESULT IsReady(long *pWrongConn, long *pRetCode);
+	};
+	[
+		object,
+		uuid(DFFC86AE-7C46-11D3-A47C-C0B889FF7C20),
+	
+		helpstring("IFrameGrabber Interface"),
+		pointer_default(unique)
+	]
+	interface IFrameGrabber : IUnknown
+	{
+		[helpstring("method VideoInfo")] HRESULT VideoInfo(VIDEOINFOSTRUCT *VIS);
+		[helpstring("method GrabInfo")] HRESULT GrabInfo(GRABBERINFOSTRUCT *GIS);
+
+		[helpstring("method GetPalette")] HRESULT GetPalette(PALETTESTRUCT *PS);
+		[helpstring("method SetPalette")] HRESULT SetPalette(PALETTESTRUCT *PS);
+		[helpstring("method SetDefaultPalette")] HRESULT SetDefaultPalette();
+		[helpstring("method GetColorCode")] HRESULT GetColorCode(int Color, int *pCode);
+
+		[helpstring("method Dot")] HRESULT Dot(unsigned int X, unsigned int Y, DWORD C);
+		[helpstring("method Fill")] HRESULT Fill(unsigned int X, unsigned int Y, DWORD C);
+		[helpstring("method Arc")] HRESULT Arc(unsigned int XC, unsigned int YC, unsigned int XR,
+			unsigned int YR, double SA, double EA, DWORD C);
+		[helpstring("method ArcFill")] HRESULT ArcFill(unsigned int XC, unsigned int YC, unsigned int XR,
+			unsigned int YR, double SA, double EA, DWORD C);
+		[helpstring("method Rect")] HRESULT Rect(unsigned int XS, unsigned int YS, unsigned int XE,
+			unsigned int YE, DWORD C);
+		[helpstring("method RectFill")] HRESULT RectFill(unsigned int XS, unsigned int YS, unsigned int XE,
+			unsigned int YE, DWORD C);
+		[helpstring("method Line")] HRESULT Line(unsigned int XS, unsigned int YS, unsigned int XE,
+			unsigned int YE, DWORD C);
+		[helpstring("method Text")] HRESULT Text(unsigned int XS, unsigned int YS, char *S, DWORD C);
+		[helpstring("method TextFont")] HRESULT TextFont(unsigned int F);
+		[helpstring("method TextScale")] HRESULT TextScale(double XS, double YS);
+		[helpstring("method Clear")] HRESULT Clear(unsigned int C);
+		[helpstring("method SetZoom")] HRESULT SetZoom(int ZX, int ZY);
+		[helpstring("method SetOffset")] HRESULT SetOffset(int X, int Y);
+
+		[helpstring("method LoadCursor")] HRESULT LoadCursor(char *CursorFile);
+		[helpstring("method DeleteCursor")] HRESULT DeleteCursor();
+		[helpstring("method HideCursor")] HRESULT HideCursor();
+		[helpstring("method ShowCursor")] HRESULT ShowCursor();
+		[helpstring("method SetCursorPos")] HRESULT SetCursorPos(int X, int Y);
+		[helpstring("method GetCursorPos")] HRESULT GetCursorPos(int *X, int *Y);
+
+		[helpstring("method SetNoGrab")] HRESULT SetNoGrab();
+		[helpstring("method SetLiveGrab")] HRESULT SetLiveGrab();
+		[helpstring("method ShowLive")] HRESULT ShowLive();
+		[helpstring("method ShowFrozen")] HRESULT ShowFrozen();
+		[helpstring("method FreezeFrame")] HRESULT FreezeFrame(BYTE **ppImage);
+		[helpstring("method ClearFrozen")] HRESULT ClearFrozen();
+		[helpstring("method SetSingleFrameGrab")] HRESULT SetSingleFrameGrab();
+		[helpstring("method HoldFrame")] HRESULT HoldFrame(BYTE **ppImage);
+		[helpstring("method ShowHeldFrame")] HRESULT ShowHeldFrame();
+		[helpstring("method ReleaseFrame")] HRESULT ReleaseFrame();
+
+		[helpstring("method GetCurrentFrameGrabDelay")] HRESULT GetCurrentFrameGrabDelay(UINT *pDelay);
+		[helpstring("method FlushGrabBackBuffers")] HRESULT FlushGrabBackBuffers();
+		[helpstring("method GrabCycleLockable")] HRESULT IsGrabCycleLockable(boolean *pAnswer);
+		[helpstring("method IsGrabCycleLocked")] HRESULT IsGrabCycleLocked(boolean *pAnswer);
+		[helpstring("method LoadStockCursor")] HRESULT LoadStockCursor(int StockCursorId);
+	};
+	[
+		object,
+		uuid(DFFC86AD-7C46-11D3-A47C-C0B889FF7C20),
+	
+		helpstring("IGenesis Interface"),
+		pointer_default(unique)
+	]
+	interface IGenesis : IUnknown
+	{
+		[helpstring("method LockInternalData")] HRESULT LockInternalData(BYTE **pData);
+		[helpstring("method UnlockInternalData")] HRESULT UnlockInternalData(BYTE *pData);
+	};
+	[
+		object,
+		uuid(C1C2E8BC-C241-423F-B0D7-242B07024F7E),
+	
+		helpstring("IVisionProcessor Interface"),
+		pointer_default(unique)
+	]
+	interface IVisionProcessor : IUnknown
+	{
+		[helpstring("method VPLock")] HRESULT VPLock(UINT Threshold, UINT Width, UINT Height, UINT OffX, UINT OffY, UINT WinWidth, UINT WinHeight, DWORD PresetFrames, DWORD pfnFrameStartCallBack, DWORD Context);
+		[helpstring("method VPUnlock")] HRESULT VPUnlock();
+		[helpstring("method VPStart")] HRESULT VPStart();
+		[helpstring("method VPIterate")] HRESULT VPIterate(Cluster *pSpace, UINT *pMaxClusters);
+		[helpstring("method VPFlush")] HRESULT VPFlush(Cluster *pSpace, UINT *pMaxClusters);
+		[helpstring("method VPGetFrameDelay")] HRESULT VPGetFrameDelay(UINT *pDelay);
+	};
+[
+	uuid(a0262202-f3c1-4101-b82a-a25413f9bbed),
+	version(1.0),
+	helpstring("Genesis 2.0 Type Library")
+]
+library GENESISLib
+{
+	importlib("stdole32.tlb");
+	importlib("stdole2.tlb");
+
+	[
+		uuid(06D29AE9-2C50-45BE-8FEA-ECCC068EC89C),
+		helpstring("Genesis 2 Class")
+	]
+	coclass Genesis2
+	{
+		[default] interface ISySalObject;
+		interface IFrameGrabber;
+		interface IGenesis;
+		interface IVisionProcessor;
+	};
+};

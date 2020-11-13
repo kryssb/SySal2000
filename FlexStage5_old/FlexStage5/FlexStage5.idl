@@ -1,0 +1,152 @@
+// FlexStage5.idl : IDL source for FlexStage.dll
+//
+
+// This file will be processed by the MIDL tool to
+// produce the type library (FlexStage.tlb) and marshalling code.
+
+import "oaidl.idl";
+import "ocidl.idl";
+import "..\Common\Connection.h";
+import "..\Common\Config.h";
+import "..\Common\GUIdefs.h";
+import "..\Common\AsyncStageDefs.h";
+	[
+		object,
+		uuid(C022EEAD-748A-11D3-A47B-E89C0BCE9720),
+	
+		helpstring("ISySalObject Interface"),
+		pointer_default(unique)
+	]
+	interface ISySalObject : IUnknown
+	{
+		[helpstring("method SetName")] HRESULT SetName(ConnectionName name);
+		[helpstring("method GetName")] HRESULT GetName(ConnectionName name);
+		[helpstring("method SetConfig")] HRESULT SetConfig(SySalConfig *pConfig);
+		[helpstring("method GetConfig")] HRESULT GetConfig(SySalConfig *pConfig);
+		[helpstring("method EditConfig")] HRESULT EditConfig(SySalConfig *pConfig, HSySalHANDLE hWnd);
+		[helpstring("method EnableMonitor")] HRESULT EnableMonitor(boolean bEnable);
+		[helpstring("method GetNumberOfConnections")] HRESULT GetNumberOfConnections(int *pNumber);
+		[helpstring("method SetConnection")] HRESULT SetConnection(int n, SySalConnection connection);
+		[helpstring("method GetConnection")] HRESULT GetConnection(int n, SySalConnection *pConnection);
+		[helpstring("method GetIcon")] HRESULT GetIcon(int n, HSySalHICON *pHICON);
+		[helpstring("method GetClassName")] HRESULT GetClassName(ConnectionName name);
+		[helpstring("method SyncExec")] HRESULT SyncExec();
+		[helpstring("method AsyncExec")] HRESULT AsyncExec(HSySalHANDLE HNotifyStatusChangeEvent);
+		[helpstring("method AsyncCheckStatus")] HRESULT AsyncCheckStatus(long *pStatus);
+		[helpstring("method AsyncWait")] HRESULT AsyncWait();
+		[helpstring("method AsyncPause")] HRESULT AsyncPause();
+		[helpstring("method AsyncStop")] HRESULT AsyncStop();
+		[helpstring("method AsyncResume")] HRESULT AsyncResume();
+		[helpstring("method IsReady")] HRESULT IsReady(long *pWrongConn, long *pRetCode);
+	};
+	[
+		object,
+		uuid(455b5e46-0c34-443e-879b-53941a71026f),
+	
+		helpstring("ISySalObjectMachineDefaults Interface"),
+		pointer_default(unique)
+	]
+	interface ISySalObjectMachineDefaults : IUnknown
+	{
+		[helpstring("method SetMachineDefaults")] HRESULT SetMachineDefaults(SySalConfig *pConfig);
+		[helpstring("method GetMachineDefaults")] HRESULT GetMachineDefaults(SySalConfig *pConfig);
+		[helpstring("method EditMachineDefaults")] HRESULT EditMachineDefaults(SySalConfig *pConfig, HSySalHANDLE hWnd);
+	};
+	[
+		object,
+		uuid(075E1B0D-C472-11D3-A47E-DC1318A51E33),
+	
+		helpstring("IStage Interface"),
+		pointer_default(unique)
+	]
+	interface IStage : IUnknown
+	{
+		[helpstring("method PosMove")] HRESULT PosMove(int Axis, float Pos, float Speed, float Acc);
+		[helpstring("method SpeedMove")] HRESULT SpeedMove(int Axis, float Speed, float Acc);
+		[helpstring("method Stop")] HRESULT Stop(int Axis);
+		[helpstring("method GetPos")] HRESULT GetPos(int Axis, float *pPos);
+		[helpstring("method GetLimiter")] HRESULT GetLimiter(int Axis, int *pLim);
+		[helpstring("method EnableManualControl")] HRESULT EnableManualControl(boolean Enable);
+		[helpstring("method IsManualControlEnabled")] HRESULT IsManualControlEnabled(boolean *pReturn);
+		[helpstring("method Reset")] HRESULT Reset(int Axis);
+		[helpstring("method GetLight")] HRESULT GetLight(int *pLightLevel);
+		[helpstring("method SetLight")] HRESULT SetLight(int LightLevel);
+	};
+	[
+		object,
+		uuid(3cf5ffa6-7919-4fd4-8bd8-43aaaa4de9da),
+	
+		helpstring("IStage2 Interface"),
+		pointer_default(unique)
+	]
+	interface IStage2 : IStage
+	{
+		[helpstring("method GetMaxZScanZSamples")] HRESULT GetMaxZScanZSamples(int *pMaxZSamples);
+		[helpstring("method PrepareAsyncGoTo3DMotion")] HRESULT PrepareAsyncGoTo3DMotion(AsyncGoTo3DTrajectory *pAGT);
+		[helpstring("method PrepareAsyncZScanMotion")] HRESULT PrepareAsyncZScanMotion(AsyncZScanTrajectory *pAST);
+		[helpstring("method StartAsyncMotion")] HRESULT StartAsyncMotion();
+		[helpstring("method WaitForAsyncZScanZComplete")] HRESULT WaitForAsyncZScanZComplete(DWORD pfnAbortCallback, DWORD Context);
+		[helpstring("method WaitForAsyncMotionComplete")] HRESULT WaitForAsyncMotionComplete(DWORD pfnAbortCallback, DWORD Context);
+		[helpstring("method FlushAsyncMotions")] HRESULT FlushAsyncMotions();
+	};
+	[
+		object,
+		uuid(29ca8106-dc50-4908-b396-4cb84b49255e),
+	
+		helpstring("IStage3 Interface"),
+		pointer_default(unique)
+	]
+	interface IStage3 : IStage2
+	{
+		[helpstring("method FindHome")] HRESULT FindHome();
+		[helpstring("method IsHomeKnown")] HRESULT IsHomeKnown();
+		[helpstring("method SetXYRef")] HRESULT SetXYRef(BYTE *name, float x, float y);
+		[helpstring("method GetXYRef")] HRESULT GetXYRef(BYTE *name, float *px, float *py);
+		[helpstring("method GoToXYRef")] HRESULT GoToXYRef(BYTE *name);
+		[helpstring("method SetZRef")] HRESULT SetZRef(BYTE *name, float z);
+		[helpstring("method GetZRef")] HRESULT GetZRef(BYTE *name, float *pz);
+		[helpstring("method GoToZRef")] HRESULT GoToZRef(BYTE *name);
+	};
+	[
+		object,
+		uuid(4d37a06b-db4d-4e6f-b53c-3e95f1c81fd3),
+	
+		helpstring("IDigitalIO Interface"),
+		pointer_default(unique)
+	]
+	interface IDigitalIO : IUnknown
+	{
+		[helpstring("method DigitalIOReset")] HRESULT DigitalIOReset();
+		[helpstring("method GetDigitalIOPortCount")] HRESULT GetDigitalIOPortCount(int *pnumberofports);
+		[helpstring("method SetDigitalPortPolarity")] HRESULT SetDigitalPortPolarity(int port, boolean polarity);
+		[helpstring("method SetDigitalPortDirection")] HRESULT SetDigitalPortDirection(int port, int input_bit_mask);
+		[helpstring("method DigitalOut")] HRESULT DigitalOut(int port, int mask_on, int mask_off);
+		[helpstring("method DigitalIn")] HRESULT DigitalIn(int port, int *pconfiguration);
+	};
+
+
+[
+	uuid(8194075d-71d9-46a2-93a8-0b43f7732b50),
+	version(2.0),
+	helpstring("FlexStage 5.0 Type Library")
+]
+library FLEXSTAGELib
+{
+	importlib("stdole32.tlb");
+	importlib("stdole2.tlb");
+
+	[
+		uuid(16cba222-432c-406d-9743-625eacb82a2d),
+		helpstring("FlexStage5 Class")
+	]
+	coclass FlexStage5
+	{
+		[default] interface ISySalObject;
+		interface ISySalObjectMachineDefaults;
+		interface IStage;
+		interface IStage2;
+		interface IStage3;
+		interface IDigitalIO;
+	};
+};
+

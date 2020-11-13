@@ -1,0 +1,25 @@
+HKCR
+{
+	TSReconstruct.TSRecon.1 = s 'TSReconstruct Class'
+	{
+		CLSID = s '{86AC0EA2-DFA9-4844-A77F-AFB9BA0B9C77}'
+	}
+	TSReconstruct.TSRecon = s 'TSReconstruct Class'
+	{
+		CLSID = s '{86AC0EA2-DFA9-4844-A77F-AFB9BA0B9C77}'
+		CurVer = s 'TSReconstruct.TSRecon.1'
+	}
+	NoRemove CLSID
+	{
+		ForceRemove {86AC0EA2-DFA9-4844-A77F-AFB9BA0B9C77} = s 'TSReconstruct Class'
+		{
+			ProgID = s 'TSReconstruct.TSRecon.1'
+			VersionIndependentProgID = s 'TSReconstruct.TSRecon'
+			InprocServer32 = s '%MODULE%'
+			{
+				val ThreadingModel = s 'Both'
+			}
+			'TypeLib' = s '{5E500E03-2669-437C-89BC-25C3D3775069}'
+		}
+	}
+}

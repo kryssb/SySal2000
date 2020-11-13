@@ -1,0 +1,32 @@
+Microsoft Visual Studio Solution File, Format Version 7.00
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "ScanServer", "ScanServer\ScanServer.vcproj", "{86EF19CD-6B0D-4311-9E55-F81595E22E4F}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "ScanServerMessageRouter", "ScanServerMessageRouter\ScanServerMessageRouter.vcproj", "{CF61C74D-2BC6-41C5-ADE9-0B97D205E4A2}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "ScanServerMessageRouterPS", "ScanServerMessageRouter\ScanServerMessageRouterPS.vcproj", "{A687D3FF-C995-469E-8E6D-0634A90F2EDB}"
+EndProject
+Global
+	GlobalSection(SolutionConfiguration) = preSolution
+		ConfigName.0 = Debug
+		ConfigName.1 = Release
+	EndGlobalSection
+	GlobalSection(ProjectDependencies) = postSolution
+		{A687D3FF-C995-469E-8E6D-0634A90F2EDB}.0 = {CF61C74D-2BC6-41C5-ADE9-0B97D205E4A2}
+	EndGlobalSection
+	GlobalSection(ProjectConfiguration) = postSolution
+		{86EF19CD-6B0D-4311-9E55-F81595E22E4F}.Debug.ActiveCfg = Debug|Win32
+		{86EF19CD-6B0D-4311-9E55-F81595E22E4F}.Debug.Build.0 = Debug|Win32
+		{86EF19CD-6B0D-4311-9E55-F81595E22E4F}.Release.ActiveCfg = Release|Win32
+		{86EF19CD-6B0D-4311-9E55-F81595E22E4F}.Release.Build.0 = Release|Win32
+		{CF61C74D-2BC6-41C5-ADE9-0B97D205E4A2}.Debug.ActiveCfg = Debug|Win32
+		{CF61C74D-2BC6-41C5-ADE9-0B97D205E4A2}.Debug.Build.0 = Debug|Win32
+		{CF61C74D-2BC6-41C5-ADE9-0B97D205E4A2}.Release.ActiveCfg = Release|Win32
+		{CF61C74D-2BC6-41C5-ADE9-0B97D205E4A2}.Release.Build.0 = Release|Win32
+		{A687D3FF-C995-469E-8E6D-0634A90F2EDB}.Debug.ActiveCfg = Debug|Win32
+		{A687D3FF-C995-469E-8E6D-0634A90F2EDB}.Release.ActiveCfg = Release|Win32
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+	EndGlobalSection
+	GlobalSection(ExtensibilityAddIns) = postSolution
+	EndGlobalSection
+EndGlobal

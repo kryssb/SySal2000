@@ -1,0 +1,25 @@
+HKCR
+{
+	BetaBrain.BBrain.1 = s 'BetaBrain Class'
+	{
+		CLSID = s '{BA1EBBCC-2B91-4D1F-ADAA-2943AD5C9F7E}'
+	}
+	BetaBrain.BBrain = s 'BetaBrain Class'
+	{
+		CLSID = s '{BA1EBBCC-2B91-4D1F-ADAA-2943AD5C9F7E}'
+		CurVer = s 'BetaBrain.BBrain.1'
+	}
+	NoRemove CLSID
+	{
+		ForceRemove {BA1EBBCC-2B91-4D1F-ADAA-2943AD5C9F7E} = s 'BetaBrain Class'
+		{
+			ProgID = s 'BetaBrain.BBrain.1'
+			VersionIndependentProgID = s 'BetaBrain.BBrain'
+			InprocServer32 = s '%MODULE%'
+			{
+				val ThreadingModel = s 'Free'
+			}
+			'TypeLib' = s '{4EFD4EF2-010A-4770-AABF-8AC2FE560BCD}'
+		}
+	}
+}

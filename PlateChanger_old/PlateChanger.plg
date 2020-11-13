@@ -1,0 +1,39 @@
+<html>
+<body>
+<pre>
+<h1>Build Log</h1>
+<h3>
+--------------------Configuration: PlateChanger - Win32 Debug--------------------
+</h3>
+<h3>Command Lines</h3>
+Creating command line "rc.exe /l 0x410 /fo"Debug/PlateChanger.res" /d "_DEBUG" /d "_AFXDLL" "D:\SySal2\PlateChanger\PlateChanger.rc"" 
+Creating temporary file "C:\DOCUME~1\Kryss\LOCALS~1\Temp\RSP177.tmp" with contents
+[
+/nologo /subsystem:windows /dll /incremental:yes /pdb:"Debug/PlateChanger.pdb" /debug /machine:I386 /def:".\PlateChanger.def" /out:"Debug/PlateChanger.dll" /implib:"Debug/PlateChanger.lib" /pdbtype:sept 
+.\Debug\EditConfig.obj
+.\Debug\Monitor.obj
+.\Debug\PlateChanger.obj
+.\Debug\PlateChangerClass.obj
+.\Debug\StdAfx.obj
+.\Debug\PlateChanger.res
+]
+Creating command line "link.exe @C:\DOCUME~1\Kryss\LOCALS~1\Temp\RSP177.tmp"
+Creating temporary file "C:\DOCUME~1\Kryss\LOCALS~1\Temp\RSP178.bat" with contents
+[
+@echo off
+regsvr32 /s /c ".\Debug\PlateChanger.dll"
+echo regsvr32 exec. time > ".\Debug\regsvr32.trg"
+]
+Creating command line "C:\DOCUME~1\Kryss\LOCALS~1\Temp\RSP178.bat"
+Compiling resources...
+Linking...
+<h3>Output Window</h3>
+Performing registration
+
+
+
+<h3>Results</h3>
+PlateChanger.dll - 0 error(s), 0 warning(s)
+</pre>
+</body>
+</html>

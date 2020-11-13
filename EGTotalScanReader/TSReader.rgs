@@ -1,0 +1,26 @@
+HKCR
+{
+	EGTotalScanReader.TSReader.1 = s 'TotalScanReader Class'
+	{
+		CLSID = s '{A3FF8D06-9C71-41F9-8755-352D41F068EA}'
+	}
+	EGTotalScanReader.TSReader = s 'TotalScanReader Class'
+	{
+		CLSID = s '{A3FF8D06-9C71-41F9-8755-352D41F068EA}'
+		CurVer = s 'EGTotalScanReader.TSReader.1'
+	}
+	NoRemove CLSID
+	{
+		ForceRemove {A3FF8D06-9C71-41F9-8755-352D41F068EA} = s 'TotalScanReader Class'
+		{
+			ProgID = s 'EGTotalScanReader.TSReader.1'
+			VersionIndependentProgID = s 'EGTotalScanReader.TSReader'
+			ForceRemove 'Programmable'
+			InprocServer32 = s '%MODULE%'
+			{
+				val ThreadingModel = s 'Both'
+			}
+			'TypeLib' = s '{57530DB5-D2B2-4351-A188-E2B8046A2DCA}'
+		}
+	}
+}

@@ -1,0 +1,92 @@
+// EGTotalScanWriter.idl : IDL source for EGTotalScanWriter.dll
+//
+
+// This file will be processed by the MIDL tool to
+// produce the type library (EGTotalScanWriter.tlb) and marshalling code.
+
+import "oaidl.idl";
+import "ocidl.idl";
+	[
+		object,
+		uuid(F2F81CC6-DB70-4BC4-9F49-919572E92BFC),
+		dual,
+		helpstring("ITotalScanWriter Interface"),
+		pointer_default(unique)
+	]
+	interface ITotalScanWriter : IDispatch
+	{
+		[propget, id(1), helpstring("property hdrId1")] HRESULT hdrId1([out, retval] long *pVal);
+		[propput, id(1), helpstring("property hdrId1")] HRESULT hdrId1([in] long newVal);
+		[propget, id(2), helpstring("property hdrId2")] HRESULT hdrId2([out, retval] long *pVal);
+		[propput, id(2), helpstring("property hdrId2")] HRESULT hdrId2([in] long newVal);
+		[propget, id(3), helpstring("property hdrId3")] HRESULT hdrId3([out, retval] long *pVal);
+		[propput, id(3), helpstring("property hdrId3")] HRESULT hdrId3([in] long newVal);
+		[propget, id(4), helpstring("property hdrId4")] HRESULT hdrId4([out, retval] long *pVal);
+		[propput, id(4), helpstring("property hdrId4")] HRESULT hdrId4([in] long newVal);
+		[propget, id(5), helpstring("property hdrPosX")] HRESULT hdrPosX([out, retval] float *pVal);
+		[propput, id(5), helpstring("property hdrPosX")] HRESULT hdrPosX([in] float newVal);
+		[propget, id(6), helpstring("property hdrPosY")] HRESULT hdrPosY([out, retval] float *pVal);
+		[propput, id(6), helpstring("property hdrPosY")] HRESULT hdrPosY([in] float newVal);
+		[propget, id(7), helpstring("property hdrPosZ")] HRESULT hdrPosZ([out, retval] float *pVal);
+		[propput, id(7), helpstring("property hdrPosZ")] HRESULT hdrPosZ([in] float newVal);
+		[propget, id(8), helpstring("property hdrTopSheet")] HRESULT hdrTopSheet([out, retval] long *pVal);
+		[propput, id(8), helpstring("property hdrTopSheet")] HRESULT hdrTopSheet([in] long newVal);
+		[propget, id(9), helpstring("property hdrCountOfSheets")] HRESULT hdrCountOfSheets([out, retval] long *pVal);
+		[propput, id(9), helpstring("property hdrCountOfSheets")] HRESULT hdrCountOfSheets([in] long newVal);
+		[propget, id(10), helpstring("property lyrSheetId")] HRESULT lyrSheetId(short i, [out, retval] int *pVal);
+		[propput, id(10), helpstring("property lyrSheetId")] HRESULT lyrSheetId(short i, [in] int newVal);
+		[propget, id(11), helpstring("property lyrTopExt")] HRESULT lyrTopExt(short i, [out, retval] float *pVal);
+		[propput, id(11), helpstring("property lyrTopExt")] HRESULT lyrTopExt(short i, [in] float newVal);
+		[propget, id(12), helpstring("property lyrTopInt")] HRESULT lyrTopInt(short i, [out, retval] float *pVal);
+		[propput, id(12), helpstring("property lyrTopInt")] HRESULT lyrTopInt(short i, [in] float newVal);
+		[propget, id(13), helpstring("property lyrBottomInt")] HRESULT lyrBottomInt(short i, [out, retval] float *pVal);
+		[propput, id(13), helpstring("property lyrBottomInt")] HRESULT lyrBottomInt(short i, [in] float newVal);
+		[propget, id(14), helpstring("property lyrBottomExt")] HRESULT lyrBottomExt(short i, [out, retval] float *pVal);
+		[propput, id(14), helpstring("property lyrBottomExt")] HRESULT lyrBottomExt(short i, [in] float newVal);
+		[propget, id(15), helpstring("property lyrRefDepth")] HRESULT lyrRefDepth(short i, [out, retval] float *pVal);
+		[propput, id(15), helpstring("property lyrRefDepth")] HRESULT lyrRefDepth(short i, [in] float newVal);
+		[propget, id(16), helpstring("property lyrRawDataCount")] HRESULT lyrRawDataCount(short i, short side, [out, retval] int *pVal);
+		[propput, id(16), helpstring("property lyrRawDataCount")] HRESULT lyrRawDataCount(short i, short side, [in] int newVal);
+		[propget, id(17), helpstring("property rawInterceptX")] HRESULT rawInterceptX([out, retval] float *pVal);
+		[propput, id(17), helpstring("property rawInterceptX")] HRESULT rawInterceptX([in] float newVal);
+		[propget, id(18), helpstring("property rawInterceptY")] HRESULT rawInterceptY([out, retval] float *pVal);
+		[propput, id(18), helpstring("property rawInterceptY")] HRESULT rawInterceptY([in] float newVal);
+		[propget, id(19), helpstring("property rawInterceptZ")] HRESULT rawInterceptZ([out, retval] float *pVal);
+		[propput, id(19), helpstring("property rawInterceptZ")] HRESULT rawInterceptZ([in] float newVal);
+		[propget, id(20), helpstring("property rawSlopeX")] HRESULT rawSlopeX([out, retval] float *pVal);
+		[propput, id(20), helpstring("property rawSlopeX")] HRESULT rawSlopeX([in] float newVal);
+		[propget, id(21), helpstring("property rawSlopeY")] HRESULT rawSlopeY([out, retval] float *pVal);
+		[propput, id(21), helpstring("property rawSlopeY")] HRESULT rawSlopeY([in] float newVal);
+		[propget, id(22), helpstring("property rawSlopeZ")] HRESULT rawSlopeZ([out, retval] float *pVal);
+		[propput, id(22), helpstring("property rawSlopeZ")] HRESULT rawSlopeZ([in] float newVal);
+		[propget, id(23), helpstring("property rawFirstZ")] HRESULT rawFirstZ([out, retval] float *pVal);
+		[propput, id(23), helpstring("property rawFirstZ")] HRESULT rawFirstZ([in] float newVal);
+		[propget, id(24), helpstring("property rawLastZ")] HRESULT rawLastZ([out, retval] float *pVal);
+		[propput, id(24), helpstring("property rawLastZ")] HRESULT rawLastZ([in] float newVal);
+		[propget, id(25), helpstring("property rawSigma")] HRESULT rawSigma([out, retval] float *pVal);
+		[propput, id(25), helpstring("property rawSigma")] HRESULT rawSigma([in] float newVal);
+		[propget, id(26), helpstring("property rawSigma")] HRESULT rawField([out, retval] long *pVal);
+		[propput, id(26), helpstring("property rawSigma")] HRESULT rawField([in] long newVal);
+		[id(27), helpstring("method rawSetFocus")] HRESULT rawSetFocus(short i, long j);
+		[id(28), helpstring("method Write")] HRESULT Write(BSTR FileName);
+	};
+
+[
+	uuid(DA9084C2-D1CE-417F-B45E-CBE765930F93),
+	version(1.0),
+	helpstring("EGTotalScanWriter 1.0 Type Library")
+]
+library EGTOTALSCANWRITERLib
+{
+	importlib("stdole32.tlb");
+	importlib("stdole2.tlb");
+
+	[
+		uuid(39372219-D1FB-47E1-A6F9-78608BAD2625),
+		helpstring("EGTotalScanWriter Class")
+	]
+	coclass EGTotalScanWriter
+	{
+		[default] interface ITotalScanWriter;
+	};
+};

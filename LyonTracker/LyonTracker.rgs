@@ -1,0 +1,25 @@
+HKCR
+{
+	LyonTracker.LyonTracker.1 = s 'LyonTracker Class'
+	{
+		CLSID = s '{881967fc-5843-4d94-b364-6340c9ba7f76}'
+	}
+	LyonTracker.LyonTracker = s 'LyonTracker Class'
+	{
+		CLSID = s '{881967fc-5843-4d94-b364-6340c9ba7f76}'
+		CurVer = s 'LyonTracker.LyonTracker.1'
+	}
+	NoRemove CLSID
+	{
+		ForceRemove {881967fc-5843-4d94-b364-6340c9ba7f76} = s 'LyonTracker Class'
+		{
+			ProgID = s 'LyonTracker.LyonTracker.1'
+			VersionIndependentProgID = s 'LyonTracker.LyonTracker'
+			InprocServer32 = s '%MODULE%'
+			{
+				val ThreadingModel = s 'Free'
+			}
+			'TypeLib' = s '{f25a7a10-a0ee-49ff-b18e-da618f2fce10}'
+		}
+	}
+}

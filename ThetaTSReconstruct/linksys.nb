@@ -1,0 +1,200 @@
+(***********************************************************************
+
+                    Mathematica-Compatible Notebook
+
+This notebook can be used on any computer system with Mathematica 3.0,
+MathReader 3.0, or any compatible application. The data for the notebook 
+starts with the line of stars above.
+
+To get the notebook into a Mathematica-compatible application, do one of 
+the following:
+
+* Save the data starting with the line of stars above into a file
+  with a name ending in .nb, then open the file inside the application;
+
+* Copy the data starting with the line of stars above to the
+  clipboard, then use the Paste menu command inside the application.
+
+Data for notebooks contains only printable 7-bit ASCII and can be
+sent directly in email or through ftp in text mode.  Newlines can be
+CR, LF or CRLF (Unix, Macintosh or MS-DOS style).
+
+NOTE: If you modify the data for this notebook not in a Mathematica-
+compatible application, you must delete the line below containing the 
+word CacheID, otherwise Mathematica-compatible applications may try to 
+use invalid cache data.
+
+For more information on notebooks and Mathematica-compatible 
+applications, contact Wolfram Research:
+  web: http://www.wolfram.com
+  email: info@wolfram.com
+  phone: +1-217-398-0700 (U.S.)
+
+Notebook reader applications are available free of charge from 
+Wolfram Research.
+***********************************************************************)
+
+(*CacheID: 232*)
+
+
+(*NotebookFileLineBreakTest
+NotebookFileLineBreakTest*)
+(*NotebookOptionsPosition[      4455,        135]*)
+(*NotebookOutlinePosition[      5104,        158]*)
+(*  CellTagsIndexPosition[      5060,        154]*)
+(*WindowFrame->Normal*)
+
+
+
+Notebook[{
+
+Cell[CellGroupData[{
+Cell[BoxData[
+    \(d\  = 
+      \ {fx, fy} - {{mxx, mxy}, {myx, myy}}.{px, py} - {dx, dy} - 
+        dz\ {sx, sy}\)], "Input"],
+
+Cell[BoxData[
+    \({\(-dx\) + fx - mxx\ px - mxy\ py - dz\ sx, 
+      \(-dy\) + fy - myx\ px - myy\ py - dz\ sy}\)], "Output"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+    \(F = d.d\)], "Input"],
+
+Cell[BoxData[
+    \(\((\(-dx\) + fx - mxx\ px - mxy\ py - dz\ sx)\)\^2 + 
+      \((\(-dy\) + fy - myx\ px - myy\ py - dz\ sy)\)\^2\)], "Output"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+    \(Eqs = 
+      Map[ExpandAll[1/2\ D[F, #]\  == \ 0]&, {mxx, mxy, myx, myy, dx, dy, dz}]
+        \)], "Input"],
+
+Cell[BoxData[
+    \({dx\ px - fx\ px + mxx\ px\^2 + mxy\ px\ py + dz\ px\ sx == 0, 
+      dx\ py - fx\ py + mxx\ px\ py + mxy\ py\^2 + dz\ py\ sx == 0, 
+      dy\ px - fy\ px + myx\ px\^2 + myy\ px\ py + dz\ px\ sy == 0, 
+      dy\ py - fy\ py + myx\ px\ py + myy\ py\^2 + dz\ py\ sy == 0, 
+      dx - fx + mxx\ px + mxy\ py + dz\ sx == 0, 
+      dy - fy + myx\ px + myy\ py + dz\ sy == 0, 
+      dx\ sx - fx\ sx + mxx\ px\ sx + mxy\ py\ sx + dz\ sx\^2 + dy\ sy - 
+          fy\ sy + myx\ px\ sy + myy\ py\ sy + dz\ sy\^2 == 0}\)], "Output"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+    \(CoeffMat = 
+      Table[Map[D[Eqs[\([i, 1]\)], #]&, {mxx, mxy, myx, myy, dx, dy, dz}], {
+          i, 7}]\)], "Input"],
+
+Cell[BoxData[
+    \({{px\^2, px\ py, 0, 0, px, 0, px\ sx}, {px\ py, py\^2, 0, 0, py, 0, 
+        py\ sx}, {0, 0, px\^2, px\ py, 0, px, px\ sy}, {0, 0, px\ py, py\^2, 
+        0, py, py\ sy}, {px, py, 0, 0, 1, 0, sx}, {0, 0, px, py, 0, 1, sy}, {
+        px\ sx, py\ sx, px\ sy, py\ sy, sx, sy, sx\^2 + sy\^2}}\)], "Output"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+    \(MatrixForm[CoeffMat]\)], "Input"],
+
+Cell[BoxData[
+    TagBox[
+      RowBox[{"(", GridBox[{
+            {\(px\^2\), \(px\ py\), "0", "0", "px", "0", \(px\ sx\)},
+            {\(px\ py\), \(py\^2\), "0", "0", "py", "0", \(py\ sx\)},
+            {"0", "0", \(px\^2\), \(px\ py\), "0", "px", \(px\ sy\)},
+            {"0", "0", \(px\ py\), \(py\^2\), "0", "py", \(py\ sy\)},
+            {"px", "py", "0", "0", "1", "0", "sx"},
+            {"0", "0", "px", "py", "0", "1", "sy"},
+           
+             {\(px\ sx\), \(py\ sx\), \(px\ sy\), \(py\ sy\), "sx", "sy", 
+              \(sx\^2 + sy\^2\)}
+            }], ")"}],
+      (MatrixForm[ #]&)]], "Output"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+    \(SolVect = 
+      Table[\((\(-Eqs[\([i, 1]\)]\) /. {mxx -> 0, mxy -> 0, myx -> 0, 
+              myy -> 0, dx -> 0, dy -> 0, dz -> 0})\), {i, 7}]\)], "Input"],
+
+Cell[BoxData[
+    \({fx\ px, fx\ py, fy\ px, fy\ py, fx, fy, fx\ sx + fy\ sy}\)], "Output"]
+}, Open  ]]
+},
+FrontEndVersion->"Microsoft Windows 3.0",
+ScreenRectangle->{{0, 1024}, {0, 702}},
+WindowSize->{846, 548},
+WindowMargins->{{0, Automatic}, {Automatic, 5}}
+]
+
+
+(***********************************************************************
+Cached data follows.  If you edit this Notebook file directly, not using
+Mathematica, you must remove the line containing CacheID at the top of 
+the file.  The cache data will then be recreated when you save this file 
+from within Mathematica.
+***********************************************************************)
+
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+
+(*NotebookFileOutline
+Notebook[{
+
+Cell[CellGroupData[{
+Cell[1731, 51, 127, 3, 30, "Input"],
+Cell[1861, 56, 127, 2, 29, "Output"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+Cell[2025, 63, 40, 1, 30, "Input"],
+Cell[2068, 66, 144, 2, 29, "Output"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+Cell[2249, 73, 127, 3, 30, "Input"],
+Cell[2379, 78, 541, 8, 86, "Output"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+Cell[2957, 91, 138, 3, 30, "Input"],
+Cell[3098, 96, 322, 4, 67, "Output"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+Cell[3457, 105, 53, 1, 30, "Input"],
+Cell[3513, 108, 618, 13, 149, "Output"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+Cell[4168, 126, 177, 3, 30, "Input"],
+Cell[4348, 131, 91, 1, 29, "Output"]
+}, Open  ]]
+}
+]
+*)
+
+
+
+
+(***********************************************************************
+End of Mathematica Notebook file.
+***********************************************************************)
+

@@ -1,0 +1,99 @@
+// FlexMap.idl : IDL source for FlexMap.dll
+//
+
+// This file will be processed by the MIDL tool to
+// produce the type library (FlexMap.tlb) and marshalling code.
+
+import "oaidl.idl";
+import "ocidl.idl";
+import "..\Common\Connection.h";
+import "..\Common\Config.h";
+import "..\Common\GUIdefs.h";
+import "..\Common\Cluster.h";
+import "..\Common\CameraSpec.h";
+import "..\Common\id.h";
+	[
+		object,
+		uuid(C022EEAD-748A-11D3-A47B-E89C0BCE9720),
+	
+		helpstring("ISySalObject Interface"),
+		pointer_default(unique)
+	]
+	interface ISySalObject : IUnknown
+	{
+		[helpstring("method SetName")] HRESULT SetName(ConnectionName name);
+		[helpstring("method GetName")] HRESULT GetName(ConnectionName name);
+		[helpstring("method SetConfig")] HRESULT SetConfig(SySalConfig *pConfig);
+		[helpstring("method GetConfig")] HRESULT GetConfig(SySalConfig *pConfig);
+		[helpstring("method EditConfig")] HRESULT EditConfig(SySalConfig *pConfig, HSySalHANDLE hWnd);
+		[helpstring("method EnableMonitor")] HRESULT EnableMonitor(boolean bEnable);
+		[helpstring("method GetNumberOfConnections")] HRESULT GetNumberOfConnections(int *pNumber);
+		[helpstring("method SetConnection")] HRESULT SetConnection(int n, SySalConnection connection);
+		[helpstring("method GetConnection")] HRESULT GetConnection(int n, SySalConnection *pConnection);
+		[helpstring("method GetIcon")] HRESULT GetIcon(int n, HSySalHICON *pHICON);
+		[helpstring("method GetClassName")] HRESULT GetClassName(ConnectionName name);
+		[helpstring("method SyncExec")] HRESULT SyncExec();
+		[helpstring("method AsyncExec")] HRESULT AsyncExec(HSySalHANDLE HNotifyStatusChangeEvent);
+		[helpstring("method AsyncCheckStatus")] HRESULT AsyncCheckStatus(long *pStatus);
+		[helpstring("method AsyncWait")] HRESULT AsyncWait();
+		[helpstring("method AsyncPause")] HRESULT AsyncPause();
+		[helpstring("method AsyncStop")] HRESULT AsyncStop();
+		[helpstring("method AsyncResume")] HRESULT AsyncResume();
+		[helpstring("method IsReady")] HRESULT IsReady(long *pWrongConn, long *pRetCode);
+	};
+
+	[
+		object,
+		uuid(D0FEF450-B910-4D5D-908C-9E1E64EA7FA1),
+	
+		helpstring("ISheetMap Interface"),
+		pointer_default(unique)
+	]
+	interface ISheetMap : IUnknown
+	{
+		[helpstring("method Init")] HRESULT Init(BYTE *pData, HSySalHWND hWnd, HSySalHANDLE hNotifyStatusChangeEvent);
+		[helpstring("method Dump")] HRESULT Dump(BYTE **ppData);
+		[helpstring("method DirFixPoint")] HRESULT DirFixPoint(double X, double Y);
+		[helpstring("method InvFixPoint")] HRESULT InvFixPoint(double X, double Y);
+		[helpstring("method GetDirFixPoint")] HRESULT GetDirFixPoint(double *pX, double *pY);
+		[helpstring("method GetInvFixPoint")] HRESULT GetInvFixPoint(double *pX, double *pY);
+		[helpstring("method DirMapPoint")] HRESULT DirMapPoint(double X, double Y, double *pX, double *pY);
+		[helpstring("method DirMapVector")] HRESULT DirMapVector(double X, double Y, double *pX, double *pY);
+		[helpstring("method InvMapPoint")] HRESULT InvMapPoint(double X, double Y, double *pX, double *pY);
+		[helpstring("method InvMapVector")] HRESULT InvMapVector(double X, double Y, double *pX, double *pY);
+		[helpstring("method IsValid")] HRESULT IsValid(BOOL *pValid);
+	};
+
+	[
+		object,
+		uuid(6bc68332-752b-489c-ae7d-a45db623b733),
+	
+		helpstring("ISheetMap2 Interface"),
+		pointer_default(unique)
+	]
+	interface ISheetMap2 : ISheetMap
+	{
+		[helpstring("method ReadLabels")] HRESULT ReadLabels(BYTE *pData, HSySalHWND hWnd, HSySalHANDLE hNotifyStatusChangeEvent, int* Label);
+	};	
+
+[
+	uuid(b6029934-a40f-44a0-ac39-213abcd4e630),
+	version(1.0),
+	helpstring("FlexMap 3.0 Type Library")
+]
+library FLEXMAPLib
+{
+	importlib("stdole32.tlb");
+	importlib("stdole2.tlb");
+
+	[
+		uuid(21f86780-9e04-4b5a-8ab0-be55324534d3),
+		helpstring("FlexibleMap3 Class")
+	]
+	coclass FlexibleMap
+	{
+		[default] interface ISySalObject;
+		interface ISheetMap;
+		interface ISheetMap2;
+	};
+};

@@ -1,0 +1,25 @@
+HKCR
+{
+	SmartTracker.SmartTracker.8 = s 'SmartTracker Class'
+	{
+		CLSID = s '{90226ba0-41a0-4ce2-9f88-8c4cdb88452a}'
+	}
+	SmartTracker.SmartTracker = s 'SmartTracker Class'
+	{
+		CLSID = s '{90226ba0-41a0-4ce2-9f88-8c4cdb88452a}'
+		CurVer = s 'SmartTracker.SmartTracker.8'
+	}
+	NoRemove CLSID
+	{
+		ForceRemove {90226ba0-41a0-4ce2-9f88-8c4cdb88452a} = s 'SmartTracker8 Class'
+		{
+			ProgID = s 'SmartTracker.SmartTracker.8'
+			VersionIndependentProgID = s 'SmartTracker.SmartTracker'
+			InprocServer32 = s '%MODULE%'
+			{
+				val ThreadingModel = s 'Free'
+			}
+			'TypeLib' = s '{2bcf8a00-92da-462c-a75d-571995a7a331}'
+		}
+	}
+}

@@ -1,0 +1,501 @@
+//Microsoft Developer Studio generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// English (U.S.) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
+#pragma code_page(1252)
+#endif //_WIN32
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDI_ICON64              ICON    DISCARDABLE     "icon1.ico"
+IDI_ICON32              ICON    DISCARDABLE     "ico00001.ico"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_MAINSWITCH DIALOG DISCARDABLE  0, 0, 225, 45
+STYLE DS_MODALFRAME | DS_CENTER | WS_POPUP | WS_CAPTION
+CAPTION "Video Image Scanner - Main Switch"
+FONT 8, "MS Sans Serif"
+BEGIN
+    DEFPUSHBUTTON   "&Cluster Analysis",IDC_MS_CLUSTERANALYSIS,7,7,69,14
+    PUSHBUTTON      "&Interactive Tracking",IDC_MS_INTERACTIVETRACKING,78,7,
+                    69,14
+    PUSHBUTTON      "&Batch Processing",IDC_MS_BATCHPROCESSING,149,7,69,14
+    PUSHBUTTON      "E&xit",IDC_MS_EXIT,149,24,69,14
+    PUSHBUTTON      "&About this module...",IDC_MS_ABOUT,7,24,69,14
+    PUSHBUTTON      "&Help",IDC_MS_HELP,78,24,69,14
+END
+
+IDD_ABOUT DIALOG DISCARDABLE  0, 0, 217, 67
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION
+CAPTION "About Video Image Scanner"
+FONT 8, "MS Sans Serif"
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,7,46,203,14
+    ICON            IDI_ICON64,IDC_STATIC,7,7,20,20
+    CTEXT           "Video Image Scanner\n1999 by Cristiano Bozza - Salerno Emulsion Group",
+                    IDC_STATIC,57,7,153,21
+END
+
+IDD_CLUSTER_ANALYSIS DIALOGEX 0, 0, 206, 263
+STYLE DS_MODALFRAME | WS_MINIMIZEBOX | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Cluster Analysis"
+FONT 8, "MS Sans Serif", 0, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "E&xit and go back to Main Switch",IDCANCEL,97,242,102,
+                    14
+    PUSHBUTTON      "&Load Image from File",IDC_CA_LOADIMAGE,17,17,85,13
+    PUSHBUTTON      "&Save Processed Image",IDC_CA_SAVEIMAGE,17,45,85,13
+    GROUPBOX        "Load/Save",IDC_STATIC,7,7,192,58
+    GROUPBOX        "Image Display",IDC_STATIC,7,67,192,82
+    PUSHBUTTON      "&Grayscale Primary",IDC_CA_GRAYSCALE,17,81,85,13
+    PUSHBUTTON      "&Inverse Grayscale Primary",IDC_CA_INVGRAYSCALE,17,95,
+                    85,13
+    PUSHBUTTON      "&Custom Colors Primary",IDC_CA_CUSTOMCOLORS,17,109,85,
+                    13
+    CONTROL         "",IDC_CA_WHITECOLOR,"Button",BS_OWNERDRAW | BS_FLAT | 
+                    WS_TABSTOP,17,124,21,13,WS_EX_CLIENTEDGE
+    CONTROL         "",IDC_CA_BLACKCOLOR,"Button",BS_OWNERDRAW | BS_FLAT | 
+                    WS_TABSTOP,81,124,21,13,WS_EX_CLIENTEDGE
+    PUSHBUTTON      "&Dump Clusters",IDC_CA_DUMPCLUSTERS,105,17,85,13
+    PUSHBUTTON      "&Black && White Secondary",IDC_CA_BLACKWHITE,105,81,85,
+                    13
+    PUSHBUTTON      "&White && Black Secondary",IDC_CA_WHITEBLACK,105,95,85,
+                    13
+    PUSHBUTTON      "Dump Gray Histogra&m",IDC_CA_DUMPHISTOGRAM,105,31,85,13,
+                    WS_DISABLED
+    GROUPBOX        "Operations",IDC_STATIC,7,152,192,75
+    LTEXT           "&Threshold",IDC_STATIC,18,180,39,11
+    EDITTEXT        IDC_CA_THRESHOLD,63,178,26,12,ES_AUTOHSCROLL
+    CONTROL         "E&qualization",IDC_CA_TOGGLEEQ,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,19,165,70,11
+    LTEXT           "I&terations",IDC_STATIC,18,194,39,11
+    EDITTEXT        IDC_CA_ITERATIONS,63,192,26,12,ES_AUTOHSCROLL
+    PUSHBUTTON      "&Find Clusters",IDC_CA_FINDCLUSTERS,105,164,54,13
+    CONTROL         "Sh&ow",IDC_CA_SHOWCLUSTERS,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,162,165,28,11,WS_EX_RIGHT
+    LTEXT           "Average Time(ms)",IDC_STATIC,106,180,57,11
+    EDITTEXT        IDC_CA_AVGTIME,165,178,26,12,ES_AUTOHSCROLL | 
+                    ES_READONLY
+    EDITTEXT        IDC_CA_MINSIZE,126,192,26,12,ES_AUTOHSCROLL
+    EDITTEXT        IDC_CA_MAXSIZE,165,192,26,12,ES_AUTOHSCROLL
+    LTEXT           "Si&ze",IDC_STATIC,106,194,18,11
+    LTEXT           "To",IDC_STATIC,155,194,9,11
+    LTEXT           "Total Clusters",IDC_STATIC,18,208,42,11
+    EDITTEXT        IDC_CA_TOTAL,63,206,26,12,ES_AUTOHSCROLL | ES_READONLY
+    LTEXT           "Clusters in Range",IDC_STATIC,106,208,55,11
+    EDITTEXT        IDC_CA_INRANGE,165,206,26,12,ES_AUTOHSCROLL | 
+                    ES_READONLY
+    DEFPUSHBUTTON   "&Help",IDHELP,7,242,86,14
+    CTEXT           "White/Black",IDC_STATIC,40,125,39,11
+    LTEXT           "Zoom",IDC_STATIC,107,124,25,12
+    EDITTEXT        IDC_CA_ZOOM,134,124,23,12,ES_AUTOHSCROLL | ES_READONLY
+    PUSHBUTTON      "+",IDC_CA_ZOOMIN,163,124,13,12
+    PUSHBUTTON      "-",IDC_CA_ZOOMOUT,177,124,13,12
+    PUSHBUTTON      "&Load Image from I/O",IDC_CA_LOADIMAGEIO,17,31,85,13
+END
+
+IDD_RAW_SPECIFICATIONS DIALOG DISCARDABLE  0, 0, 162, 45
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "RAW File Specifications"
+FONT 8, "MS Sans Serif"
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,105,7,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,105,24,50,14
+    LTEXT           "&Width (pixels)",IDC_STATIC,7,7,40,10
+    EDITTEXT        IDC_RS_WIDTH,50,7,41,12,ES_AUTOHSCROLL
+    LTEXT           "&Height (pixels)",IDC_STATIC,7,22,40,10
+    EDITTEXT        IDC_RS_HEIGHT,50,22,41,12,ES_AUTOHSCROLL
+END
+
+IDD_SELECT_PHS_IMAGE DIALOGEX 0, 0, 155, 95
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Select Image in Photo Sequence"
+FONT 8, "MS Sans Serif", 0, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,98,7,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,98,24,50,14
+    EDITTEXT        IDC_SP_IMAGE,99,42,28,13,ES_AUTOHSCROLL | ES_READONLY
+    CONTROL         "Spin2",IDC_SP_IMAGESPIN,"msctls_updown32",
+                    UDS_SETBUDDYINT | UDS_ALIGNRIGHT | UDS_AUTOBUDDY | 
+                    UDS_ARROWKEYS,118,42,8,12
+    EDITTEXT        IDC_SP_TOTAL,131,42,17,13,ES_AUTOHSCROLL | ES_READONLY
+    CONTROL         "",IDC_SP_PREVIEW,"Button",BS_OWNERDRAW | BS_FLAT | 
+                    WS_TABSTOP,7,7,82,82,WS_EX_CLIENTEDGE
+END
+
+IDD_INTERACTIVE_TRACKING DIALOGEX 0, 0, 366, 275
+STYLE DS_MODALFRAME | WS_MINIMIZEBOX | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Interactive Tracking"
+FONT 8, "MS Sans Serif"
+BEGIN
+    PUSHBUTTON      "&Load",IDC_IT_LOAD,279,7,80,14
+    PUSHBUTTON      "&Save",IDC_IT_SAVE,279,23,80,14
+    LTEXT           "Shrin&kage",IDC_STATIC,279,49,33,11
+    EDITTEXT        IDC_IT_SHRINKAGE,342,48,17,13,ES_AUTOHSCROLL
+    LTEXT           "&Threshold",IDC_STATIC,279,66,33,11
+    EDITTEXT        IDC_IT_THRESHOLD0,323,65,17,13,ES_AUTOHSCROLL
+    EDITTEXT        IDC_IT_THRESHOLD1,342,65,17,13,ES_AUTOHSCROLL
+    CONTROL         "&Relative Threshold",IDC_IT_RELTHRESHOLD,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,281,81,78,12
+    CONTROL         "&Equalization",IDC_IT_EQUALIZATION,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,281,93,54,12
+    LTEXT           "Max &Grains",IDC_STATIC,279,110,34,11
+    EDITTEXT        IDC_IT_MAXGRAINS,338,109,21,13,ES_AUTOHSCROLL
+    LTEXT           "&Layers",IDC_STATIC,279,125,33,11
+    EDITTEXT        IDC_IT_LAYERS0,314,124,21,13,ES_AUTOHSCROLL | 
+                    ES_READONLY
+    EDITTEXT        IDC_IT_LAYERS1,338,124,21,13,ES_AUTOHSCROLL | 
+                    ES_READONLY
+    LTEXT           "&Start Layer",IDC_STATIC,279,140,33,11
+    EDITTEXT        IDC_IT_STARTLAYER0,314,139,21,13,ES_AUTOHSCROLL
+    EDITTEXT        IDC_IT_STARTLAYER1,338,139,21,13,ES_AUTOHSCROLL
+    LTEXT           "&End Layer",IDC_STATIC,279,155,33,11
+    EDITTEXT        IDC_IT_ENDLAYER0,314,154,21,13,ES_AUTOHSCROLL
+    EDITTEXT        IDC_IT_ENDLAYER1,338,154,21,13,ES_AUTOHSCROLL
+    LTEXT           "Max &Tracks",IDC_STATIC,279,172,36,11
+    EDITTEXT        IDC_IT_MAXTRACKS,338,171,21,13,ES_AUTOHSCROLL
+    LTEXT           "Max &Flat Tracks",IDC_STATIC,279,189,55,11
+    EDITTEXT        IDC_IT_MAXFLATTRACKS,338,188,22,13,ES_AUTOHSCROLL
+    LTEXT           "Max Flat &Strips in Track",IDC_STATIC,279,205,49,20
+    EDITTEXT        IDC_IT_MAXFLATSTRIPSINTRACK,338,204,22,13,ES_AUTOHSCROLL
+    LTEXT           "&Iterations",IDC_STATIC,279,225,33,11
+    EDITTEXT        IDC_IT_ITERATIONS,338,224,21,13,ES_AUTOHSCROLL
+    PUSHBUTTON      "&Edit Config",IDC_IT_EDITCONFIG,7,236,56,14
+    PUSHBUTTON      "Save &Config",IDC_IT_SAVECONFIG,66,236,56,14
+    PUSHBUTTON      "&Track",IDC_IT_TRACK,125,236,56,14
+    CONTROL         "Progress1",IDC_IT_CLUSTERPROGRESS,"msctls_progress32",
+                    PBS_SMOOTH,280,240,79,6
+    DEFPUSHBUTTON   "E&xit and Return to Main Switch",IDCANCEL,7,254,134,14
+    DEFPUSHBUTTON   "&Help",IDHELP,144,254,94,14
+    LTEXT           "&Avg. Time",IDC_STATIC,280,257,33,11
+    EDITTEXT        IDC_IT_AVGTIME,333,255,26,13,ES_AUTOHSCROLL | 
+                    ES_READONLY
+    CONTROL         "",IDC_IT_SCREEN,"Button",BS_OWNERDRAW | BS_FLAT | 
+                    WS_DISABLED,7,7,265,222,WS_EX_CLIENTEDGE
+END
+
+IDD_SELNAME DIALOG DISCARDABLE  0, 0, 134, 49
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Select Config Name"
+FONT 8, "MS Sans Serif"
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,7,28,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,77,28,50,14
+    EDITTEXT        IDC_NAME,7,7,119,14,ES_AUTOHSCROLL
+END
+
+IDD_SELOBJECT DIALOGEX 0, 0, 187, 108
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Select Object"
+FONT 8, "MS Sans Serif", 0, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,7,87,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,130,87,50,14
+    CONTROL         "List1",IDC_SLOTLIST,"SysListView32",LVS_REPORT | 
+                    WS_BORDER | WS_TABSTOP,7,7,173,75,WS_EX_CLIENTEDGE
+END
+
+IDD_BATCH_PROCESSING DIALOGEX 0, 0, 305, 200
+STYLE DS_MODALFRAME | DS_CENTER | WS_MINIMIZEBOX | WS_POPUP | WS_CAPTION | 
+    WS_SYSMENU
+CAPTION "Batch Processing"
+FONT 8, "MS Sans Serif", 0, 0, 0x1
+BEGIN
+    PUSHBUTTON      "E&xit",IDCANCEL,242,174,50,14
+    GROUPBOX        "Batch Progress",IDC_STATIC,7,63,291,130
+    LTEXT           "Status:",IDC_STATIC,13,77,28,10
+    LTEXT           "Idle",IDC_BP_STATUS,48,77,56,10
+    LTEXT           "File:",IDC_STATIC,13,88,28,10
+    LTEXT           "0/0 0%",IDC_BP_PERCENT,48,88,56,10
+    CONTROL         "Progress2",IDC_BP_PROGRESS,"msctls_progress32",
+                    PBS_SMOOTH | WS_BORDER,13,102,97,6,WS_EX_CLIENTEDGE
+    LTEXT           "Tracks Found",IDC_STATIC,13,138,49,10
+    EDITTEXT        IDC_BP_TOPTKS,66,136,21,12,ES_AUTOHSCROLL | ES_READONLY
+    EDITTEXT        IDC_BP_BOTTKS,88,136,21,12,ES_AUTOHSCROLL | ES_READONLY
+    LTEXT           "Elapsed Time:",IDC_STATIC,13,113,52,10
+    RTEXT           "0:00:00",IDC_BP_ELAPSEDTIME,77,113,32,10
+    PUSHBUTTON      "Edit Config",IDC_BP_EDITCONFIG,91,35,47,13
+    LTEXT           "Time to Completion:",IDC_STATIC,13,125,62,10
+    RTEXT           "0:00:00",IDC_BP_TIMETOCOMPLETION,77,125,32,10
+    LTEXT           "Errors",IDC_STATIC,14,153,33,10
+    EDITTEXT        IDC_BP_ERRORCOUNT,88,151,21,12,ES_AUTOHSCROLL | 
+                    ES_READONLY
+    GROUPBOX        "Message Log",IDC_STATIC,119,70,173,99,BS_CENTER
+    EDITTEXT        IDC_BP_MSGLOG,124,81,163,82,ES_MULTILINE | 
+                    ES_AUTOVSCROLL | ES_AUTOHSCROLL | ES_READONLY,
+                    WS_EX_CLIENTEDGE
+    PUSHBUTTON      "&Start",IDC_BP_START,14,174,50,14
+    PUSHBUTTON      "Sto&p",IDC_BP_STOP,65,174,50,14
+    GROUPBOX        "Batch Selection",IDC_STATIC,7,9,291,48
+    CONTROL         "&List File",IDC_BP_LISTFILE,"Button",BS_AUTORADIOBUTTON,
+                    15,22,41,11
+    CONTROL         "&Prediction File",IDC_BP_PREDFILE,"Button",
+                    BS_AUTORADIOBUTTON,15,35,63,11
+    PUSHBUTTON      "Select File(s)",IDC_BP_SELFILES,91,20,47,13
+    EDITTEXT        IDC_BP_ESELFILE,142,20,150,14,ES_AUTOHSCROLL | 
+                    ES_READONLY
+    PUSHBUTTON      "&Clear log",IDC_BP_CLEARLOG,119,174,50,14
+END
+
+IDD_EDIT_CONFIG DIALOG DISCARDABLE  0, 0, 123, 198
+STYLE DS_MODALFRAME | WS_MINIMIZEBOX | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Edit Config"
+FONT 8, "MS Sans Serif"
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,7,177,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,66,177,50,14
+    LTEXT           "Shrin&kage",IDC_STATIC,15,16,33,11
+    EDITTEXT        IDC_EC_SHRINKAGE,91,15,17,13,ES_AUTOHSCROLL
+    LTEXT           "&Threshold",IDC_STATIC,15,31,33,11
+    EDITTEXT        IDC_EC_THRESHOLD0,73,30,17,13,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EC_THRESHOLD1,91,30,17,13,ES_AUTOHSCROLL
+    CONTROL         "&Relative Threshold",IDC_EC_RELTHRESHOLD,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,16,48,78,12
+    CONTROL         "&Equalization",IDC_EC_EQUALIZATION,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,16,60,54,12
+    LTEXT           "Max &Clusters",IDC_STATIC,15,77,46,11
+    EDITTEXT        IDC_EC_MAXGRAINS,79,77,28,12,ES_AUTOHSCROLL
+    LTEXT           "&Start Layer",IDC_STATIC,15,93,33,11
+    EDITTEXT        IDC_EC_STARTLAYER0,63,92,21,13,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EC_STARTLAYER1,86,92,21,13,ES_AUTOHSCROLL
+    LTEXT           "&End Layer",IDC_STATIC,15,108,33,11
+    EDITTEXT        IDC_EC_ENDLAYER0,63,107,21,13,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EC_ENDLAYER1,86,107,21,13,ES_AUTOHSCROLL
+    LTEXT           "Max &Tracks",IDC_STATIC,15,123,57,11
+    EDITTEXT        IDC_EC_MAXTRACKS,79,122,28,13,ES_AUTOHSCROLL
+    LTEXT           "Max &Flat Tracks",IDC_STATIC,15,139,60,11
+    EDITTEXT        IDC_EC_MAXFLATTRACKS,79,138,28,13,ES_AUTOHSCROLL
+    LTEXT           "Max Flat &Strips in Track",IDC_STATIC,15,155,60,20
+    EDITTEXT        IDC_EC_MAXFLATSTRIPSINTRACK,79,154,28,13,ES_AUTOHSCROLL
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO DISCARDABLE 
+BEGIN
+    IDD_MAINSWITCH, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 218
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 38
+    END
+
+    IDD_ABOUT, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 210
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 60
+    END
+
+    IDD_CLUSTER_ANALYSIS, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 199
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 256
+    END
+
+    IDD_RAW_SPECIFICATIONS, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 155
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 38
+    END
+
+    IDD_SELECT_PHS_IMAGE, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 148
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 88
+    END
+
+    IDD_INTERACTIVE_TRACKING, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 359
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 268
+    END
+
+    IDD_SELNAME, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 127
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 42
+    END
+
+    IDD_SELOBJECT, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 180
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 101
+    END
+
+    IDD_BATCH_PROCESSING, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 298
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 193
+    END
+
+    IDD_EDIT_CONFIG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 116
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 191
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+#endif    // English (U.S.) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+/////////////////////////////////////////////////////////////////////////////
+// Italian (Italy) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ITA)
+#ifdef _WIN32
+LANGUAGE LANG_ITALIAN, SUBLANG_ITALIAN
+#pragma code_page(1252)
+#endif //_WIN32
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "1 TYPELIB ""VideoImageScanner.tlb""\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+#ifndef _MAC
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION 1,0,0,1
+ PRODUCTVERSION 1,0,0,1
+ FILEFLAGSMASK 0x3fL
+#ifdef _DEBUG
+ FILEFLAGS 0x1L
+#else
+ FILEFLAGS 0x0L
+#endif
+ FILEOS 0x4L
+ FILETYPE 0x2L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "040904B0"
+        BEGIN
+            VALUE "CompanyName", "\0"
+            VALUE "FileDescription", "VideoImageScanner Module\0"
+            VALUE "FileVersion", "1, 0, 0, 1\0"
+            VALUE "InternalName", "VideoImageScanner\0"
+            VALUE "LegalCopyright", "Copyright 1999\0"
+            VALUE "OriginalFilename", "VideoImageScanner.DLL\0"
+            VALUE "ProductName", "VideoImageScanner Module\0"
+            VALUE "ProductVersion", "1, 0, 0, 1\0"
+            VALUE "OLESelfRegister", "\0"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x409, 1200
+    END
+END
+
+#endif    // !_MAC
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// REGISTRY
+//
+
+IDR_VIDIMGSCANNER       REGISTRY DISCARDABLE    "VidImgScanner.rgs"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_PROJNAME            "VideoImageScanner"
+END
+
+#endif    // Italian (Italy) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+1 TYPELIB "VideoImageScanner.tlb"
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+

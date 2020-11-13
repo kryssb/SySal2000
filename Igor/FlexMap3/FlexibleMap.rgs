@@ -1,0 +1,25 @@
+HKCR
+{
+	FlexMap3.FlexibleMap3.1 = s 'FlexibleMap3 Class'
+	{
+		CLSID = s '{21f86780-9e04-4b5a-8ab0-be55324534d3}'
+	}
+	FlexMap3.FlexibleMap3 = s 'FlexibleMap3 Class'
+	{
+		CLSID = s '{21f86780-9e04-4b5a-8ab0-be55324534d3}'
+		CurVer = s 'FlexMap3.FlexibleMap3.1'
+	}
+	NoRemove CLSID
+	{
+		ForceRemove {21f86780-9e04-4b5a-8ab0-be55324534d3} = s 'FlexibleMap3 Class'
+		{
+			ProgID = s 'FlexMap3.FlexibleMap3.1'
+			VersionIndependentProgID = s 'FlexMap3.FlexibleMap3'
+			InprocServer32 = s '%MODULE%'
+			{
+				val ThreadingModel = s 'Free'
+			}
+			'TypeLib' = s '{b6029934-a40f-44a0-ac39-213abcd4e630}'
+		}
+	}
+}

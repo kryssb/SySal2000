@@ -1,0 +1,25 @@
+HKCR
+{
+	Genesis.Genesis.1 = s 'Genesis Class'
+	{
+		CLSID = s '{DFFC86AF-7C46-11D3-A47C-C0B889FF7C20}'
+	}
+	Genesis.Genesis = s 'Genesis Class'
+	{
+		CLSID = s '{DFFC86AF-7C46-11D3-A47C-C0B889FF7C20}'
+		CurVer = s 'Genesis.Genesis.1'
+	}
+	NoRemove CLSID
+	{
+		ForceRemove {DFFC86AF-7C46-11D3-A47C-C0B889FF7C20} = s 'Genesis Class'
+		{
+			ProgID = s 'Genesis.Genesis.1'
+			VersionIndependentProgID = s 'Genesis.Genesis'
+			InprocServer32 = s '%MODULE%'
+			{
+				val ThreadingModel = s 'Free'
+			}
+			'TypeLib' = s '{DFFC86A1-7C46-11D3-A47C-C0B889FF7C20}'
+		}
+	}
+}

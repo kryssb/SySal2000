@@ -1,0 +1,54 @@
+<html>
+<body>
+<pre>
+<h1>Build Log</h1>
+<h3>
+--------------------Configuration: FlexMap2 - Win32 Debug--------------------
+</h3>
+<h3>Command Lines</h3>
+Creating temporary file "C:\DOCUME~1\Kryss\LOCALS~1\Temp\RSPA7.tmp" with contents
+[
+/nologo /MDd /W3 /Gm /GX /ZI /Od /I "..\Common" /D "WIN32" /D "_DEBUG" /D "_WINDOWS" /D "_WINDLL" /D "_AFXDLL" /D "_MBCS" /D "_USRDLL" /Fp"Debug/FlexMap2.pch" /Yu"stdafx.h" /Fo"Debug/" /Fd"Debug/" /FD /GZ /c 
+"D:\SySal2\FlexMap2\FlexibleMap.cpp"
+]
+Creating command line "cl.exe @C:\DOCUME~1\Kryss\LOCALS~1\Temp\RSPA7.tmp" 
+Creating temporary file "C:\DOCUME~1\Kryss\LOCALS~1\Temp\RSPA8.tmp" with contents
+[
+/nologo /subsystem:windows /dll /incremental:yes /pdb:"Debug/FlexMap2.pdb" /debug /machine:I386 /def:".\FlexMap2.def" /out:"Debug/FlexMap2.dll" /implib:"Debug/FlexMap2.lib" /pdbtype:sept 
+.\Debug\AffineTransf.obj
+.\Debug\EditConfig.obj
+.\Debug\FieldMap.obj
+.\Debug\FlexibleMap.obj
+.\Debug\FlexMap2.obj
+.\Debug\FrameGrabber_i.obj
+.\Debug\InitMap.obj
+.\Debug\IO_i.obj
+.\Debug\Objective_i.obj
+.\Debug\ReusePolicy.obj
+.\Debug\Stage_i.obj
+.\Debug\StdAfx.obj
+.\Debug\VisionProcessor2_i.obj
+.\Debug\FlexMap2.res
+]
+Creating command line "link.exe @C:\DOCUME~1\Kryss\LOCALS~1\Temp\RSPA8.tmp"
+Creating temporary file "C:\DOCUME~1\Kryss\LOCALS~1\Temp\RSPA9.bat" with contents
+[
+@echo off
+regsvr32 /s /c ".\Debug\FlexMap2.dll"
+echo regsvr32 exec. time > ".\Debug\regsvr32.trg"
+]
+Creating command line "C:\DOCUME~1\Kryss\LOCALS~1\Temp\RSPA9.bat"
+Compiling...
+FlexibleMap.cpp
+d:\sysal2\flexmap2\affinetransf.h(17) : warning C4290: C++ Exception Specification ignored
+Linking...
+<h3>Output Window</h3>
+Performing registration
+
+
+
+<h3>Results</h3>
+FlexMap2.dll - 0 error(s), 1 warning(s)
+</pre>
+</body>
+</html>

@@ -1,0 +1,125 @@
+// EGTotalScanReader.idl : IDL source for EGTotalScanReader.dll
+//
+
+// This file will be processed by the MIDL tool to
+// produce the type library (EGTotalScanReader.tlb) and marshalling code.
+
+import "oaidl.idl";
+import "ocidl.idl";
+	[
+		object,
+		uuid(4FFCE093-A083-4E0A-B266-C7660081C3F3),
+		dual,
+		helpstring("ITotalScanReader Interface"),
+		pointer_default(unique)
+	]
+	interface ITotalScanReader : IDispatch
+	{
+		[id(1), helpstring("Loads a Total Scan Reconstruction from file")] HRESULT Load(BSTR FileName);		
+		[id(2), helpstring("Checks whether the object has been successfully constructed")] HRESULT IsOk();
+		[propget, id(3), helpstring("property hdrId1")] HRESULT hdrId1([out, retval] long *pVal);
+		[propget, id(4), helpstring("property hdrId2")] HRESULT hdrId2([out, retval] long *pVal);
+		[propget, id(5), helpstring("property hdrId3")] HRESULT hdrId3([out, retval] long *pVal);
+		[propget, id(6), helpstring("property hdrId4")] HRESULT hdrId4([out, retval] long *pVal);
+		[propget, id(7), helpstring("property hdrPosX")] HRESULT hdrPosX([out, retval] float *pVal);
+		[propget, id(8), helpstring("property hdrPosY")] HRESULT hdrPosY([out, retval] float *pVal);
+		[propget, id(9), helpstring("property hdrPosZ")] HRESULT hdrPosZ([out, retval] float *pVal);
+		[propget, id(10), helpstring("property hdrTopSheet")] HRESULT hdrTopSheet([out, retval] long *pVal);
+		[propget, id(11), helpstring("property hdrCountOfSheets")] HRESULT hdrCountOfSheets([out, retval] long *pVal);
+		[propget, id(12), helpstring("property hdrCountOfTracks")] HRESULT hdrCountOfTracks([out, retval] long *pVal);
+		[propget, id(13), helpstring("property hdrCountOfVertices")] HRESULT hdrCountOfVertices([out, retval] long *pVal);
+		[propget, id(14), helpstring("property tstrkCount")] HRESULT tstrkCount(long i, [out, retval] long *pVal);
+		[propget, id(15), helpstring("property tstrkInterceptX")] HRESULT tstrkInterceptX(long i, [out, retval] float *pVal);
+		[propget, id(16), helpstring("property tstrkInterceptY")] HRESULT tstrkInterceptY(long i, [out, retval] float *pVal);		
+		[propget, id(17), helpstring("property tstrkInterceptZ")] HRESULT tstrkInterceptZ(long i, [out, retval] float *pVal);
+		[propget, id(18), helpstring("property tstrkSlopeX")] HRESULT tstrkSlopeX(long i, [out, retval] float *pVal);
+		[propget, id(19), helpstring("property tstrkSlopeY")] HRESULT tstrkSlopeY(long i, [out, retval] float *pVal);		
+		[propget, id(20), helpstring("property tstrkSlopeZ")] HRESULT tstrkSlopeZ(long i, [out, retval] float *pVal);
+		[propget, id(21), helpstring("property tstrkFirstZ")] HRESULT tstrkFirstZ(long i, [out, retval] float *pVal);
+		[propget, id(22), helpstring("property tstrkLastZ")] HRESULT tstrkLastZ(long i, [out, retval] float *pVal);		
+		[propget, id(23), helpstring("property tstrkSigma")] HRESULT tstrkSigma(long i, [out, retval] float *pVal);
+		[propget, id(24), helpstring("property TopVertex")] HRESULT tstrkTopVertex(long i, [out, retval] long *pVal);
+		[propget, id(25), helpstring("property BottomVertex")] HRESULT tstrkBottomVertex(long i, [out, retval] long *pVal);
+		[propget, id(26), helpstring("property tstrkFlags")] HRESULT tstrkFlags(long i, [out, retval] long *pVal);
+		[propget, id(27), helpstring("property vtxCount")] HRESULT vtxCount(long i, [out, retval] long *pVal);
+		[propget, id(28), helpstring("property vtxPosX")] HRESULT vtxPosX(long i, [out, retval] float *pVal);
+		[propget, id(29), helpstring("property vtxPosY")] HRESULT vtxPosY(long i, [out, retval] float *pVal);
+		[propget, id(30), helpstring("property vtxPosZ")] HRESULT vtxPosZ(long i, [out, retval] float *pVal);
+		[propget, id(31), helpstring("property vtxAvgDistance")] HRESULT vtxAvgDistance(long i, [out, retval] float *pVal);
+		[propget, id(32), helpstring("property vtxtrkTrack")] HRESULT vtxtrkTrack(long i, long j, [out, retval] long *pVal);
+		[propget, id(33), helpstring("property vtxtrkIsDownstream")] HRESULT vtxtrkIsDownstream(long i, long j, [out, retval] BOOL *pVal);
+		[propget, id(34), helpstring("property tstrkBottomSegment")] HRESULT tstrkBottomSegment(long i, [out, retval] long *pVal);
+		[propget, id(35), helpstring("property tstrkTopSegment")] HRESULT tstrkTopSegment(long i, [out, retval] long *pVal);
+		[propget, id(36), helpstring("property segCount")] HRESULT segCount(long i, [out, retval] long *pVal);
+		[propget, id(37), helpstring("property segInterceptX")] HRESULT segInterceptX(long i, [out, retval] float *pVal);
+		[propget, id(38), helpstring("property segInterceptY")] HRESULT segInterceptY(long i, [out, retval] float *pVal);		
+		[propget, id(39), helpstring("property segInterceptZ")] HRESULT segInterceptZ(long i, [out, retval] float *pVal);
+		[propget, id(40), helpstring("property segSlopeX")] HRESULT segSlopeX(long i, [out, retval] float *pVal);
+		[propget, id(41), helpstring("property segSlopeY")] HRESULT segSlopeY(long i, [out, retval] float *pVal);		
+		[propget, id(42), helpstring("property segSlopeZ")] HRESULT segSlopeZ(long i, [out, retval] float *pVal);
+		[propget, id(43), helpstring("property segFirstZ")] HRESULT segFirstZ(long i, [out, retval] float *pVal);
+		[propget, id(44), helpstring("property segLastZ")] HRESULT segLastZ(long i, [out, retval] float *pVal);		
+		[propget, id(45), helpstring("property segSigma")] HRESULT segSigma(long i, [out, retval] float *pVal);
+		[propget, id(46), helpstring("property segHalfLayer")] HRESULT segHalfLayer(long i, [out, retval] short *pVal);
+		[propget, id(47), helpstring("property rawField")] HRESULT rawField(long i, [out, retval] long *pVal);
+		[propget, id(48), helpstring("property rawCount")] HRESULT rawCount(long i, [out, retval] long *pVal);
+		[propget, id(49), helpstring("property rawInterceptX")] HRESULT rawInterceptX(long i, [out, retval] float *pVal);
+		[propget, id(50), helpstring("property rawInterceptY")] HRESULT rawInterceptY(long i, [out, retval] float *pVal);		
+		[propget, id(51), helpstring("property rawInterceptZ")] HRESULT rawInterceptZ(long i, [out, retval] float *pVal);
+		[propget, id(52), helpstring("property rawSlopeX")] HRESULT rawSlopeX(long i, [out, retval] float *pVal);
+		[propget, id(53), helpstring("property rawSlopeY")] HRESULT rawSlopeY(long i, [out, retval] float *pVal);		
+		[propget, id(54), helpstring("property rawSlopeZ")] HRESULT rawSlopeZ(long i, [out, retval] float *pVal);
+		[propget, id(55), helpstring("property rawFirstZ")] HRESULT rawFirstZ(long i, [out, retval] float *pVal);
+		[propget, id(56), helpstring("property rawLastZ")] HRESULT rawLastZ(long i, [out, retval] float *pVal);		
+		[propget, id(57), helpstring("property rawSigma")] HRESULT rawSigma(long i, [out, retval] float *pVal);
+		[propget, id(58), helpstring("property rawHalfLayer")] HRESULT rawHalfLayer(long i, [out, retval] short *pVal);
+		[propget, id(59), helpstring("property lyrSheetId")] HRESULT lyrSheetId(short i, [out, retval] int *pVal);
+		[propget, id(60), helpstring("property lyrTopExt")] HRESULT lyrTopExt(short i, [out, retval] float *pVal);
+		[propget, id(61), helpstring("property lyrTopInt")] HRESULT lyrTopInt(short i, [out, retval] float *pVal);
+		[propget, id(62), helpstring("property lyrBottomInt")] HRESULT lyrBottomInt(short i, [out, retval] float *pVal);
+		[propget, id(63), helpstring("property lyrBottomExt")] HRESULT lyrBottomExt(short i, [out, retval] float *pVal);
+		[propget, id(64), helpstring("property lyrRefDepth")] HRESULT lyrRefDepth(short i, [out, retval] float *pVal);
+		[propget, id(65), helpstring("property lyrRawDataCount")] HRESULT lyrRawDataCount(short i, short side, [out, retval] int *pVal);
+		[propget, id(66), helpstring("property lyrSegCount")] HRESULT lyrSegCount(short i, short side, [out, retval] int *pVal);
+		[propget, id(67), helpstring("property lyrGlobalSideAlign")] HRESULT lyrGlobalSideAlign(short i, short side, short j, [out, retval] double *pVal);
+		[propget, id(68), helpstring("property lyrLocalSideAlign")] HRESULT lyrLocalSideAlign(short i, short side, short j, [out, retval] double *pVal);
+		[propget, id(69), helpstring("property segBottomLink")] HRESULT segBottomLink(long i, [out, retval] long *pVal);
+		[propget, id(70), helpstring("property segTopLink")] HRESULT segTopLink(long i, [out, retval] long *pVal);
+		[propget, id(71), helpstring("property segRawIndex")] HRESULT segRawIndex(long i, long j, [out, retval] long *pVal);
+		[propget, id(72), helpstring("property hdrMaxTracksInSegment")] HRESULT hdrMaxTracksInSegment([out, retval] long *pVal);
+		[propget, id(73), helpstring("property hdrRefCenterX")] HRESULT hdrRefCenterX([out, retval] float *pVal);
+		[propget, id(74), helpstring("property hdrRefCenterY")] HRESULT hdrRefCenterY([out, retval] float *pVal);
+		[propget, id(75), helpstring("property hdrRefCenterZ")] HRESULT hdrRefCenterZ([out, retval] float *pVal);
+		[propget, id(76), helpstring("property tstrkTopInterceptX")] HRESULT tstrkTopInterceptX(long i, [out, retval] float *pVal);
+		[propget, id(77), helpstring("property tstrkTopInterceptY")] HRESULT tstrkTopInterceptY(long i, [out, retval] float *pVal);
+		[propget, id(78), helpstring("property tstrkTopInterceptZ")] HRESULT tstrkTopInterceptZ(long i, [out, retval] float *pVal);
+		[propget, id(79), helpstring("property tstrkTopSlopeX")] HRESULT tstrkTopSlopeX(long i, [out, retval] float *pVal);
+		[propget, id(80), helpstring("property tstrkTopSlopeY")] HRESULT tstrkTopSlopeY(long i, [out, retval] float *pVal);
+		[propget, id(81), helpstring("property tstrkTopSlopeZ")] HRESULT tstrkTopSlopeZ(long i, [out, retval] float *pVal);
+		[propget, id(82), helpstring("property tstrkBottomInterceptX")] HRESULT tstrkBottomInterceptX(long i, [out, retval] float *pVal);
+		[propget, id(83), helpstring("property tstrkBottomInterceptY")] HRESULT tstrkBottomInterceptY(long i, [out, retval] float *pVal);
+		[propget, id(84), helpstring("property tstrkBottomInterceptZ")] HRESULT tstrkBottomInterceptZ(long i, [out, retval] float *pVal);
+		[propget, id(85), helpstring("property tstrkBottomSlopeX")] HRESULT tstrkBottomSlopeX(long i, [out, retval] float *pVal);
+		[propget, id(86), helpstring("property tstrkBottomSlopeY")] HRESULT tstrkBottomSlopeY(long i, [out, retval] float *pVal);
+		[propget, id(87), helpstring("property tstrkBottomSlopeZ")] HRESULT tstrkBottomSlopeZ(long i, [out, retval] float *pVal);
+	};
+
+[
+	uuid(57530DB5-D2B2-4351-A188-E2B8046A2DCA),
+	version(1.0),
+	helpstring("EGTotalScanReader 1.0 Type Library")
+]
+library EGTOTALSCANREADERLib
+{
+	importlib("stdole32.tlb");
+	importlib("stdole2.tlb");
+
+	[
+		uuid(A3FF8D06-9C71-41F9-8755-352D41F068EA),
+		helpstring("TotalScanReader Class")
+	]
+	coclass EGTotalScanReader
+	{
+		[default] interface ITotalScanReader;
+	};
+};

@@ -1,0 +1,499 @@
+(***********************************************************************
+
+                    Mathematica-Compatible Notebook
+
+This notebook can be used on any computer system with Mathematica 4.0,
+MathReader 4.0, or any compatible application. The data for the notebook 
+starts with the line containing stars above.
+
+To get the notebook into a Mathematica-compatible application, do one of 
+the following:
+
+* Save the data starting with the line of stars above into a file
+  with a name ending in .nb, then open the file inside the application;
+
+* Copy the data starting with the line of stars above to the
+  clipboard, then use the Paste menu command inside the application.
+
+Data for notebooks contains only printable 7-bit ASCII and can be
+sent directly in email or through ftp in text mode.  Newlines can be
+CR, LF or CRLF (Unix, Macintosh or MS-DOS style).
+
+NOTE: If you modify the data for this notebook not in a Mathematica-
+compatible application, you must delete the line below containing the 
+word CacheID, otherwise Mathematica-compatible applications may try to 
+use invalid cache data.
+
+For more information on notebooks and Mathematica-compatible 
+applications, contact Wolfram Research:
+  web: http://www.wolfram.com
+  email: info@wolfram.com
+  phone: +1-217-398-0700 (U.S.)
+
+Notebook reader applications are available free of charge from 
+Wolfram Research.
+***********************************************************************)
+
+(*CacheID: 232*)
+
+
+(*NotebookFileLineBreakTest
+NotebookFileLineBreakTest*)
+(*NotebookOptionsPosition[     12828,        370]*)
+(*NotebookOutlinePosition[     13483,        393]*)
+(*  CellTagsIndexPosition[     13439,        389]*)
+(*WindowFrame->Normal*)
+
+
+
+Notebook[{
+Cell[BoxData[
+    \(Transf[u_] := {{a, \(-b\)}, {b, a}} . u + {dx, dy}\)], "Input"],
+
+Cell[BoxData[{
+    \(u[1] = {X1 + \[Lambda]1, y1}; \ 
+    v[1] = {X1, Y1};\), "\[IndentingNewLine]", 
+    \(u[2] = {x2, Y2 + \[Lambda]2}; \ 
+    v[2] = {X2, Y2};\), "\[IndentingNewLine]", 
+    \(u[3] = {x3, Y3 + \[Lambda]3}; \ 
+    v[3] = {X3, Y3};\), "\[IndentingNewLine]", 
+    \(\(\(u[4] = {X4 + \[Lambda]4, y4}\) \); \ \(\(v[4] = {X4, 
+          Y4}\) \); \ \[IndentingNewLine]\)}], "Input"],
+
+Cell[BoxData[{
+    \(\(r[1] = {\[Lambda]1, 5000};\)\), "\[IndentingNewLine]", 
+    \(\(r[2] = {5000, \[Lambda]2};\)\), "\[IndentingNewLine]", 
+    \(\(r[3] = {115000, \[Lambda]3};\)\), "\[IndentingNewLine]", 
+    \(\(r[4] = {\[Lambda]4, 5000};\)\)}], "Input"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+    \(T1 = {a \[Rule] 1.0005\ Cos[0.008], b \[Rule] 1.0005\ Sin[0.008], 
+        dx \[Rule] 300, \ dy \[Rule] \(-150\)}\)], "Input"],
+
+Cell[BoxData[
+    \({a \[Rule] 1.0004679841707516`, b \[Rule] 0.008003914624273202`, 
+      dx \[Rule] 300, dy \[Rule] \(-150\)}\)], "Output"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+    \(Transf[r[1]] /. T1\)], "Input"],
+
+Cell[BoxData[
+    \({\(\(259.980426878634`\)\(\[InvisibleSpace]\)\) + 
+        1.0004679841707516`\ \[Lambda]1, \(\(4852.339920853758`\)\(\
+\[InvisibleSpace]\)\) + 0.008003914624273202`\ \[Lambda]1}\)], "Output"]
+}, Open  ]],
+
+Cell[BoxData[{
+    \(\(t[1] = Transf[r[1]] /. T1;\)\), "\[IndentingNewLine]", 
+    \(\(t[2] = Transf[r[2]] /. T1;\)\), "\[IndentingNewLine]", 
+    \(\(t[3] = Transf[r[3]] /. T1;\)\), "\[IndentingNewLine]", 
+    \(\(t[4] = Transf[r[4]] /. T1;\)\)}], "Input"],
+
+Cell[BoxData[{
+    \(\(m[1] = 
+        t[1] /. \(Solve[\(t[1]\)[\([1]\)] \[Equal] 
+                1000, \[Lambda]1]\)[\([1]\)];\)\), "\[IndentingNewLine]", 
+    \(\(m[2] = 
+        t[2] /. \(Solve[\(t[2]\)[\([2]\)] \[Equal] 
+                1000, \[Lambda]2]\)[\([1]\)];\)\), "\[IndentingNewLine]", 
+    \(\(m[3] = 
+        t[3] /. \(Solve[\(t[3]\)[\([2]\)] \[Equal] 
+                1000, \[Lambda]3]\)[\([1]\)];\)\), "\[IndentingNewLine]", 
+    \(\(m[4] = 
+        t[4] /. \(Solve[\(t[4]\)[\([1]\)] \[Equal] 
+                119000, \[Lambda]4]\)[\([1]\)];\)\)}], "Input"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+    \(Eqs = Table[Transf[u[i]] \[Equal] v[i], {i, 4}]\)], "Input"],
+
+Cell[BoxData[
+    \({{dx + {{a, \(-b\)}, {b, a}} . u[1], 
+          dy + {{a, \(-b\)}, {b, a}} . u[1]} == 
+        v[1], {dx + {{a, \(-b\)}, {b, a}} . u[2], 
+          dy + {{a, \(-b\)}, {b, a}} . u[2]} == 
+        v[2], {dx + {{a, \(-b\)}, {b, a}} . u[3], 
+          dy + {{a, \(-b\)}, {b, a}} . u[3]} == 
+        v[3], {dx + {{a, \(-b\)}, {b, a}} . u[4], 
+          dy + {{a, \(-b\)}, {b, a}} . u[4]} == v[4]}\)], "Output"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+    \(EqsM = {\((Transf[r[1]] - m[1])\)[\([2]\)] \[Equal] 
+          0, \((Transf[r[2]] - m[2])\)[\([1]\)] \[Equal] 
+          0, \((Transf[r[3]] - m[3])\)[\([1]\)] \[Equal] 
+          0, \((Transf[r[4]] - m[4])\)[\([2]\)] \[Equal] 0}\)], "Input"],
+
+Cell[BoxData[
+    \(General::"spell1" \(\(:\)\(\ \)\) 
+      "Possible spelling error: new symbol name \"\!\(EqsM\)\" is similar to \
+existing symbol \"\!\(Eqs\)\"."\)], "Message"],
+
+Cell[BoxData[
+    \({\(-4858.260203738636`\) + 5000\ a + dy + b\ \[Lambda]1 == 
+        0, \(-5293.459887997219`\) + 5000\ a + dx - b\ \[Lambda]2 == 
+        0, \(-115351.98174191325`\) + 115000\ a + dx - b\ \[Lambda]3 == 
+        0, \(-5802.280342920865`\) + 5000\ a + dy + b\ \[Lambda]4 == 
+        0}\)], "Output"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+    \(EqsL = {\((Transf[r[1]] - m[1])\)[\([1]\)] \[Equal] 
+          0, \((Transf[r[2]] - m[2])\)[\([2]\)] \[Equal] 
+          0, \((Transf[r[3]] - m[3])\)[\([2]\)] \[Equal] 
+          0, \((Transf[r[4]] - m[4])\)[\([1]\)] \[Equal] 0}\)], "Input"],
+
+Cell[BoxData[
+    \(General::"spell" \(\(:\)\(\ \)\) 
+      "Possible spelling error: new symbol name \"\!\(EqsL\)\" is similar to \
+existing symbols \!\({Eqs, EqsM}\)."\)], "Message"],
+
+Cell[BoxData[
+    \({\(-1000.`\) - 5000\ b + dx + a\ \[Lambda]1 == 
+        0, \(-1000.`\) + 5000\ b + dy + a\ \[Lambda]2 == 
+        0, \(-1000.`\) + 115000\ b + dy + a\ \[Lambda]3 == 
+        0, \(-119000.`\) - 5000\ b + dx + a\ \[Lambda]4 == 0}\)], "Output"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[{
+    \(\(\[Lambda] = {1000, 1000, 1000, 119000};\)\), "\[IndentingNewLine]", 
+    \(Sol = \(Solve[
+          EqsM /. {\[Lambda]1 \[Rule] \[Lambda][\([1]\)], \[Lambda]2 \[Rule] \
+\[Lambda][\([2]\)], \[Lambda]3 \[Rule] \[Lambda][\([3]\)], \[Lambda]4 \[Rule] \
+\[Lambda][\([4]\)]}, {a, b, dx, dy}]\)[\([1]\)]\)}], "Input"],
+
+Cell[BoxData[
+    \({a \[Rule] 1.000532016853782`, b \[Rule] 0.008000170671035842`, 
+      dx \[Rule] 298.7999743993453`, 
+      dy \[Rule] \(-152.40005120130962`\)}\)], "Output"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+    \(LRule = \(Solve[
+          EqsL /. Sol, {\[Lambda]1, \[Lambda]2, \[Lambda]3, \
+\[Lambda]4}]\)[\([1]\)]\)], "Input"],
+
+Cell[BoxData[
+    \({\[Lambda]1 \[Rule] 740.8067572755679`, \[Lambda]2 \[Rule] 
+        1111.8076974129424`, \[Lambda]3 \[Rule] 
+        232.25685946854398`, \[Lambda]4 \[Rule] 
+        118678.06214971801`}\)], "Output"]
+}, Open  ]],
+
+Cell[BoxData[
+    \(Do[Sol = \(Solve[EqsM /. LRule, {a, b, dx, dy}]\)[\([1]\)]; 
+      LRule\  = \ \(Solve[
+            EqsL /. Sol, {\[Lambda]1, \[Lambda]2, \[Lambda]3, \[Lambda]4}]\)[\
+\([1]\)];, {i, 100}]\)], "Input"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+    \(Sol\)], "Input"],
+
+Cell[BoxData[
+    \({a \[Rule] 1.0004679841707513`, b \[Rule] 0.008003914624273195`, 
+      dx \[Rule] 300.00000000000057`, 
+      dy \[Rule] \(-149.99999999999883`\)}\)], "Output"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+    \(LRule\)], "Input"],
+
+Cell[BoxData[
+    \({\[Lambda]1 \[Rule] 739.6734176703701`, \[Lambda]2 \[Rule] 
+        1109.4612165912056`, \[Lambda]3 \[Rule] 
+        229.44244277726312`, \[Lambda]4 \[Rule] 
+        118684.47711651694`}\)], "Output"]
+}, Open  ]],
+
+Cell[BoxData[{
+    \(u[0] = {XS[0] + \[Lambda]0, YS[0]}; \ 
+    v[0] = {XD[0], YD[0]};\), "\[IndentingNewLine]", 
+    \(u[1] = {XS[1], YS[1] + \[Lambda]1}; \ 
+    v[1] = {XD[1], YD[1]};\), "\[IndentingNewLine]", 
+    \(u[2] = {XS[2], YS[2] + \[Lambda]2}; \ 
+    v[2] = {XD[2], YD[2]};\), "\[IndentingNewLine]", 
+    \(\(\(u[3] = {XS[3] + \[Lambda]3, YS[3]}\)\(;\)\(\ \)\(v[3] = {XD[3], 
+        YD[3]}\)\(;\)\(\ \)\(\[IndentingNewLine]\)\)\)}], "Input"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+    \(EqsM = {\((Transf[u[0]] - v[0])\)[\([2]\)], \((Transf[u[1]] - 
+              v[1])\)[\([1]\)], \((Transf[u[2]] - 
+              v[2])\)[\([1]\)], \((Transf[u[3]] - 
+              v[3])\)[\([2]\)]}\)], "Input"],
+
+Cell[BoxData[
+    \({dy + b\ \((\[Lambda]0 + XS[0])\) - YD[0] + a\ YS[0], 
+      dx - XD[1] + a\ XS[1] - b\ \((\[Lambda]1 + YS[1])\), 
+      dx - XD[2] + a\ XS[2] - b\ \((\[Lambda]2 + YS[2])\), 
+      dy + b\ \((\[Lambda]3 + XS[3])\) - YD[3] + a\ YS[3]}\)], "Output"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+    \(MatM\  = \ 
+      MatrixForm[
+        Map[{Coefficient[#, a], Coefficient[#, b], Coefficient[#, dx], 
+              Coefficient[#, 
+                dy], # /. {a \[Rule] 0, b \[Rule] 0, dx \[Rule] 0, 
+                  dy \[Rule] 0}} &, EqsM]]\)], "Input"],
+
+Cell[BoxData[
+    TagBox[
+      RowBox[{"(", "\[NoBreak]", GridBox[{
+            {\(YS[0]\), \(\[Lambda]0 + XS[0]\), "0", "1", \(-YD[0]\)},
+            {\(XS[1]\), \(\(-\[Lambda]1\) - YS[1]\), "1", "0", \(-XD[1]\)},
+            {\(XS[2]\), \(\(-\[Lambda]2\) - YS[2]\), "1", "0", \(-XD[2]\)},
+            {\(YS[3]\), \(\[Lambda]3 + XS[3]\), "0", "1", \(-YD[3]\)}
+            }], "\[NoBreak]", ")"}],
+      (MatrixForm[ #]&)]], "Output"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+    \(EqsL = {\((Transf[u[0]] - v[0])\)[\([1]\)], \((Transf[u[1]] - 
+              v[1])\)[\([2]\)], \((Transf[u[2]] - 
+              v[2])\)[\([2]\)], \((Transf[u[3]] - 
+              v[3])\)[\([1]\)]}\)], "Input"],
+
+Cell[BoxData[
+    \({dx - XD[0] + a\ \((\[Lambda]0 + XS[0])\) - b\ YS[0], 
+      dy + b\ XS[1] - YD[1] + a\ \((\[Lambda]1 + YS[1])\), 
+      dy + b\ XS[2] - YD[2] + a\ \((\[Lambda]2 + YS[2])\), 
+      dx - XD[3] + a\ \((\[Lambda]3 + XS[3])\) - b\ YS[3]}\)], "Output"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+    \(MatL\  = \ 
+      MatrixForm[
+        Map[{Coefficient[#, \[Lambda]0], Coefficient[#, \[Lambda]1], 
+              Coefficient[#, \[Lambda]2], 
+              Coefficient[#, \[Lambda]3], # /. {\[Lambda]0 \[Rule] 
+                    0, \[Lambda]1 \[Rule] 0, \[Lambda]2 \[Rule] 
+                    0, \[Lambda]3 \[Rule] 0}} &, EqsL]]\)], "Input"],
+
+Cell[BoxData[
+    TagBox[
+      RowBox[{"(", "\[NoBreak]", GridBox[{
+            {"a", "0", "0", "0", \(dx - XD[0] + a\ XS[0] - b\ YS[0]\)},
+            {"0", "a", "0", "0", \(dy + b\ XS[1] - YD[1] + a\ YS[1]\)},
+            {"0", "0", "a", "0", \(dy + b\ XS[2] - YD[2] + a\ YS[2]\)},
+            {"0", "0", "0", "a", \(dx - XD[3] + a\ XS[3] - b\ YS[3]\)}
+            }], "\[NoBreak]", ")"}],
+      (MatrixForm[ #]&)]], "Output"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+    \(MatrixForm[{MatM[\([1, 1]\)] - MatM[\([1, 4]\)], 
+        MatM[\([1, 2]\)] - MatM[\([1, 3]\)]}]\)], "Input"],
+
+Cell[BoxData[
+    TagBox[
+      RowBox[{"(", "\[NoBreak]", GridBox[{
+            {\(YS[0] - YS[3]\), \(\[Lambda]0 - \[Lambda]3 + XS[0] - XS[3]\), 
+              "0", "0", \(\(-YD[0]\) + YD[3]\)},
+            {\(XS[1] - XS[2]\), \(\(-\[Lambda]1\) + \[Lambda]2 - YS[1] + 
+                YS[2]\), "0", "0", \(\(-XD[1]\) + XD[2]\)}
+            }], "\[NoBreak]", ")"}],
+      (MatrixForm[ #]&)]], "Output"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+    \(Solve[{{Eq2MXX, Eq2MXY}, {Eq2MYX, Eq2MYY}} . {a, b} \[Equal] {Eq2MX, 
+          Eq2MY}, {a, b}]\)], "Input"],
+
+Cell[BoxData[
+    \({{a \[Rule] \(-\(\(Eq2MXY\ Eq2MY - 
+                  Eq2MX\ Eq2MYY\)\/\(\(-Eq2MXY\)\ Eq2MYX + 
+                  Eq2MXX\ Eq2MYY\)\)\), 
+        b \[Rule] \(-\(\(\(-Eq2MXX\)\ Eq2MY + 
+                  Eq2MX\ Eq2MYX\)\/\(\(-Eq2MXY\)\ Eq2MYX + 
+                  Eq2MXX\ Eq2MYY\)\)\)}}\)], "Output"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+    \(MatrixForm[{MatL[\([1, 1]\)] - MatL[\([1, 4]\)], 
+        MatL[\([1, 2]\)] - MatL[\([1, 3]\)]}]\)], "Input"],
+
+Cell[BoxData[
+    TagBox[
+      RowBox[{"(", "\[NoBreak]", GridBox[{
+            {\(xs[0] - xs[3]\), \(\(-ys[0]\) + ys[3]\), "0", 
+              "0", \(\(-xd[0]\) + xd[3]\)},
+            {\(ys[1] - ys[2]\), \(xs[1] - xs[2]\), "0", 
+              "0", \(\(-yd[1]\) + yd[2]\)}
+            }], "\[NoBreak]", ")"}],
+      (MatrixForm[ #]&)]], "Output"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+    \(Solve[{{a, \(-b\)}, {b, a}} . {x, y}\  + \ {dx, dy} \[Equal] {xp, 
+          yp}, {x, y}]\)], "Input"],
+
+Cell[BoxData[
+    \({{x \[Rule] \(-\(\(a\ dx + b\ dy - a\ xp - b\ yp\)\/\(a\^2 + 
+                  b\^2\)\)\), 
+        y \[Rule] \(-\(\(\(-b\)\ dx + a\ dy + b\ xp - a\ yp\)\/\(a\^2 + 
+                  b\^2\)\)\)}}\)], "Output"]
+}, Open  ]]
+},
+FrontEndVersion->"4.0 for Microsoft Windows",
+ScreenRectangle->{{0, 1024}, {0, 685}},
+WindowSize->{588, 561},
+WindowMargins->{{83, Automatic}, {Automatic, 10}}
+]
+
+
+(***********************************************************************
+Cached data follows.  If you edit this Notebook file directly, not using
+Mathematica, you must remove the line containing CacheID at the top of 
+the file.  The cache data will then be recreated when you save this file 
+from within Mathematica.
+***********************************************************************)
+
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+
+(*NotebookFileOutline
+Notebook[{
+Cell[1717, 49, 83, 1, 30, "Input"],
+Cell[1803, 52, 395, 8, 110, "Input"],
+Cell[2201, 62, 259, 4, 90, "Input"],
+
+Cell[CellGroupData[{
+Cell[2485, 70, 146, 2, 30, "Input"],
+Cell[2634, 74, 142, 2, 29, "Output"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+Cell[2813, 81, 51, 1, 30, "Input"],
+Cell[2867, 84, 212, 3, 29, "Output"]
+}, Open  ]],
+Cell[3094, 90, 257, 4, 90, "Input"],
+Cell[3354, 96, 575, 12, 90, "Input"],
+
+Cell[CellGroupData[{
+Cell[3954, 112, 80, 1, 30, "Input"],
+Cell[4037, 115, 425, 8, 86, "Output"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+Cell[4499, 128, 261, 4, 50, "Input"],
+Cell[4763, 134, 180, 3, 42, "Message"],
+Cell[4946, 139, 317, 5, 48, "Output"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+Cell[5300, 149, 261, 4, 50, "Input"],
+Cell[5564, 155, 184, 3, 42, "Message"],
+Cell[5751, 160, 261, 4, 48, "Output"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+Cell[6049, 169, 333, 5, 70, "Input"],
+Cell[6385, 176, 179, 3, 29, "Output"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+Cell[6601, 184, 135, 3, 30, "Input"],
+Cell[6739, 189, 220, 4, 29, "Output"]
+}, Open  ]],
+Cell[6974, 196, 220, 4, 50, "Input"],
+
+Cell[CellGroupData[{
+Cell[7219, 204, 36, 1, 30, "Input"],
+Cell[7258, 207, 181, 3, 29, "Output"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+Cell[7476, 215, 38, 1, 30, "Input"],
+Cell[7517, 218, 220, 4, 29, "Output"]
+}, Open  ]],
+Cell[7752, 225, 453, 8, 110, "Input"],
+
+Cell[CellGroupData[{
+Cell[8230, 237, 229, 4, 50, "Input"],
+Cell[8462, 243, 267, 4, 48, "Output"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+Cell[8766, 252, 275, 6, 90, "Input"],
+Cell[9044, 260, 435, 8, 87, "Output"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+Cell[9516, 273, 229, 4, 50, "Input"],
+Cell[9748, 279, 267, 4, 48, "Output"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+Cell[10052, 288, 364, 7, 90, "Input"],
+Cell[10419, 297, 429, 8, 87, "Output"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+Cell[10885, 310, 128, 2, 30, "Input"],
+Cell[11016, 314, 402, 8, 55, "Output"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+Cell[11455, 327, 128, 2, 50, "Input"],
+Cell[11586, 331, 318, 6, 80, "Output"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+Cell[11941, 342, 128, 2, 30, "Input"],
+Cell[12072, 346, 348, 8, 55, "Output"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+Cell[12457, 359, 122, 2, 30, "Input"],
+Cell[12582, 363, 230, 4, 42, "Output"]
+}, Open  ]]
+}
+]
+*)
+
+
+
+
+(***********************************************************************
+End of Mathematica Notebook file.
+***********************************************************************)
+

@@ -1,0 +1,1 @@
+*.cpp *.h *.rc *.dsp *.dsw *.idl *.ico *.odl *.bmp *.rc2 *.def *.c *.rgs

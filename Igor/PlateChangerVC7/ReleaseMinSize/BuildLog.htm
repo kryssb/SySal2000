@@ -1,0 +1,116 @@
+<html>
+<head>
+<META HTTP-EQUIV="Content-Type" content="text/html; charset=Windows-1252">
+</head>
+<body>
+<pre>
+<table width=100% bgcolor=#CFCFE5><tr> <td> <font face=arial size=+3>
+Build Log
+</font></table><table width=* cellspacing=0 cellpadding=0><tr><td width=0 bgcolor=#EDEDF5>&nbsp;</td><td width=0 bgcolor=#FFFFFF>&nbsp;</td><td width=*><pre>
+<h3>------- Build started: Project: PlateChanger, Configuration: Release MinSize|Win32 -------
+</h3>
+</pre></table><table width=100% bgcolor=#DFDFE5><tr><td><font face=arial size=+2>
+Command Lines
+</font></table><table width=* cellspacing=0 cellpadding=0><tr><td width=0 bgcolor=#EDEDF5>&nbsp;</td><td width=0 bgcolor=#FFFFFF>&nbsp;</td><td width=*><pre>Creating temporary file "c:\sysal\PlateChangerVC7\ReleaseMinSize\RSP00000F.rsp" with contents
+[
+/O1 /I "..\Common" /I "." /D "WIN32" /D "NDEBUG" /D "_WINDOWS" /D "_USRDLL" /D "_WINDLL" /D "_AFXDLL" /D "_MBCS" /D "_ATL_DLL" /FD /EHsc /MD /Yc"stdafx.h" /Fp".\ReleaseMinSize/PlateChanger.pch" /Fo".\ReleaseMinSize/" /Fd".\ReleaseMinSize/" /FR".\ReleaseMinSize/" /W3 /c
+.\StdAfx.cpp
+]
+Creating command line "cl.exe @c:\sysal\PlateChangerVC7\ReleaseMinSize\RSP00000F.rsp /nologo"
+Creating temporary file "c:\sysal\PlateChangerVC7\ReleaseMinSize\RSP000010.rsp" with contents
+[
+/O1 /I "..\Common" /I "." /D "WIN32" /D "NDEBUG" /D "_WINDOWS" /D "_USRDLL" /D "_WINDLL" /D "_AFXDLL" /D "_MBCS" /D "_ATL_DLL" /FD /EHsc /MD /YX"stdafx.h" /Fp".\ReleaseMinSize/PlateChanger.pch" /Fo".\ReleaseMinSize/" /Fd".\ReleaseMinSize/" /FR".\ReleaseMinSize/" /W3 /c
+\sysal\Common\Stage3_i.c
+.\serialport.cpp
+.\PlateChangerClass.cpp
+.\PlateChanger.cpp
+.\Monitor.cpp
+\sysal\Common\FrameGrabber_i.c
+\sysal\Common\FlexMap3_i.c
+.\EditConfig.cpp
+\sysal\Common\AutomaticLightControl_i.c
+]
+Creating command line "cl.exe @c:\sysal\PlateChangerVC7\ReleaseMinSize\RSP000010.rsp /nologo"
+Creating command line "rc.exe /d "NDEBUG" /d "_AFXDLL" /l 0x410 /I ".\ReleaseMinSize" /fo".\ReleaseMinSize/PlateChanger.res" .\PlateChanger.rc"
+Creating temporary file "c:\sysal\PlateChangerVC7\ReleaseMinSize\RSP000011.rsp" with contents
+[
+/OUT:".\ReleaseMinSize/PlateChanger.dll" /INCREMENTAL:NO /NOLOGO /DLL /NODEFAULTLIB:"mfc71.lib mfcs71.lib MSVCRT.lib" /DEF:".\PlateChanger.def" /PDB:".\ReleaseMinSize/PlateChanger.pdb" /SUBSYSTEM:WINDOWS /IMPLIB:".\ReleaseMinSize/PlateChanger.lib" /MACHINE:X86 mfc71.lib mfcs71.lib MSVCRT.lib
+.\ReleaseMinSize\AutomaticLightControl_i.obj
+.\ReleaseMinSize\EditConfig.obj
+.\ReleaseMinSize\FlexMap3_i.obj
+.\ReleaseMinSize\FrameGrabber_i.obj
+.\ReleaseMinSize\Monitor.obj
+.\ReleaseMinSize\PlateChanger.obj
+.\ReleaseMinSize\PlateChanger.res
+.\ReleaseMinSize\PlateChangerClass.obj
+.\ReleaseMinSize\serialport.obj
+.\ReleaseMinSize\Stage3_i.obj
+.\ReleaseMinSize\StdAfx.obj
+]
+Creating command line "link.exe @c:\sysal\PlateChangerVC7\ReleaseMinSize\RSP000011.rsp"
+Creating temporary file "c:\sysal\PlateChangerVC7\ReleaseMinSize\BAT000012.bat" with contents
+[
+@echo off
+regsvr32 /s /c "c:\sysal\PlateChangerVC7\ReleaseMinSize\PlateChanger.dll"
+echo regsvr32 exec. time > ".\ReleaseMinSize\regsvr32.trg"
+
+if errorlevel 1 goto VCReportError
+goto VCEnd
+:VCReportError
+echo Project : error PRJ0019: A tool returned an error code from "Performing registration"
+exit 1
+:VCEnd
+]
+Creating command line "c:\sysal\PlateChangerVC7\ReleaseMinSize\BAT000012.bat"
+</pre></table><table width=100% bgcolor=#DFDFE5><tr><td><font face=arial size=+2>
+Output Window
+</font></table><table width=* cellspacing=0 cellpadding=0><tr><td width=0 bgcolor=#EDEDF5>&nbsp;</td><td width=0 bgcolor=#FFFFFF>&nbsp;</td><td width=*><pre>Compiling...
+StdAfx.cpp
+atlimpl.cpp is obsolete. Please remove it from your project.
+Compiling...
+Stage3_i.c
+serialport.cpp
+PlateChangerClass.cpp
+PlateChangerClass.cpp(399) : warning C4800: 'boolean' : forcing value to bool 'true' or 'false' (performance warning)
+PlateChanger.cpp
+PlateChanger.cpp(103) : warning C4996: 'ATL::CRegKey::SetValue' was declared deprecated
+        C:\Program Files\Microsoft Visual Studio .NET 2003\Vc7\atlmfc\include\atlbase.h(4730) : see declaration of 'ATL::CRegKey::SetValue'
+Monitor.cpp
+Monitor.cpp(802) : warning C4800: 'int' : forcing value to bool 'true' or 'false' (performance warning)
+Monitor.cpp(1380) : warning C4244: 'argument' : conversion from 'double' to 'float', possible loss of data
+Monitor.cpp(1399) : warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+Monitor.cpp(1400) : warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+Monitor.cpp(1401) : warning C4244: 'argument' : conversion from 'double' to 'float', possible loss of data
+Monitor.cpp(1401) : warning C4244: 'argument' : conversion from 'double' to 'float', possible loss of data
+Monitor.cpp(1405) : warning C4244: 'argument' : conversion from 'double' to 'float', possible loss of data
+Monitor.cpp(1405) : warning C4244: 'argument' : conversion from 'double' to 'float', possible loss of data
+Monitor.cpp(1413) : warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+Monitor.cpp(1414) : warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+Monitor.cpp(1415) : warning C4244: 'argument' : conversion from 'double' to 'float', possible loss of data
+Monitor.cpp(1418) : warning C4244: 'argument' : conversion from 'double' to 'float', possible loss of data
+Monitor.cpp(1449) : warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+Monitor.cpp(1450) : warning C4244: 'argument' : conversion from 'double' to 'float', possible loss of data
+Monitor.cpp(1450) : warning C4244: 'argument' : conversion from 'double' to 'float', possible loss of data
+Monitor.cpp(1454) : warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+Monitor.cpp(1455) : warning C4244: 'argument' : conversion from 'double' to 'float', possible loss of data
+Monitor.cpp(1495) : warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+Monitor.cpp(1619) : warning C4101: 'result' : unreferenced local variable
+FrameGrabber_i.c
+FlexMap3_i.c
+EditConfig.cpp
+AutomaticLightControl_i.c
+Compiling resources...
+Linking...
+.\PlateChanger.def : warning LNK4222: exported symbol 'DllCanUnloadNow' should not be assigned an ordinal
+.\PlateChanger.def : warning LNK4222: exported symbol 'DllGetClassObject' should not be assigned an ordinal
+.\PlateChanger.def : warning LNK4222: exported symbol 'DllRegisterServer' should not be assigned an ordinal
+.\PlateChanger.def : warning LNK4222: exported symbol 'DllUnregisterServer' should not be assigned an ordinal
+   Creating library .\ReleaseMinSize/PlateChanger.lib and object .\ReleaseMinSize/PlateChanger.exp
+LINK : warning LNK4089: all references to 'OLEAUT32.dll' discarded by /OPT:REF
+Performing registration
+</pre></table><table width=100% bgcolor=#DFDFE5><tr><td><font face=arial size=+2>
+Results
+</font></table><table width=* cellspacing=0 cellpadding=0><tr><td width=0 bgcolor=#EDEDF5>&nbsp;</td><td width=0 bgcolor=#FFFFFF>&nbsp;</td><td width=*><pre>
+Build log was saved at "file://c:\sysal\PlateChangerVC7\ReleaseMinSize\BuildLog.htm"
+PlateChanger - 0 error(s), 26 warning(s)</pre></table><table   width=100% height=20 bgcolor=#CFCFE5><tr><td><font face=arial size=+2>
+</font></table></body></html>

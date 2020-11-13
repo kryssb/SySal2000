@@ -1,0 +1,86 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" >
+<HTML>
+	<HEAD>
+		<TITLE>Overview</TITLE>
+		<META content="Microsoft Visual Studio 7.0" name="GENERATOR">
+	</HEAD>
+	<BODY>
+		<P><FONT face="Arial" color="#000066" size="5"><EM> Odyssey&nbsp;- 2d Filtering</EM></FONT>
+			<EM><FONT size="4"><FONT face="Arial">
+						<HR width="100%" SIZE="2">
+					</FONT>
+		</P>
+		<P align="justify"></FONT></EM><FONT face="Arial" size="2"> Real-life 
+				images&nbsp;usually show&nbsp;long-range lighting 
+				variations&nbsp;and&nbsp;shadows; stopping electrons produce crowds of black 
+				spots. Grains usually have a very tight&nbsp;acceptable size range. These are 
+				all good reasons not to use a simple gray level threshold to select the dark 
+				pixels that belong to grains.</FONT></P>
+		<P align="justify"><FONT face="Arial" size="2">2d FIR (Finite Impulse Response) digital 
+				filters can help very much. They can enhance the grain images and suppress the 
+				background. A 2d FIR filter is simply obtained by convolving a fixed matrix 
+				(called <EM>kernel</EM>) with the image gray level.&nbsp;Odyssey conventions 
+				require that meaningful pixels&nbsp;be high and background pixels be low. The 
+				image is then binarized by setting a threshold (<EM>cutoff</EM>) on the filter 
+				output rather than on the gray level.<BR>
+				When detecting large objects such as calibration marks, filters are almost 
+				useless. In that case, the simple gray level threshold behaviour must be 
+				restored. This is simply obtained by setting up a 1x1 filter, with a single 
+				coefficient = -1. In that case, the cutoff must be set = -(desired gray 
+				threshold).</FONT></P>
+		<P align="justify">
+			<TABLE id="Table1" cellSpacing="1" cellPadding="1" width="300" border="1">
+				<TR>
+					<TD noWrap colSpan="1" rowSpan="1"><FONT face="Arial" size="2">Original image</FONT></TD>
+					<TD><IMG alt="" src="HelpNoNoise.gif" border="1"></TD>
+				</TR>
+				<TR>
+					<TD>
+						<P align="justify"><FONT face="Arial"><FONT size="2">Filtered image<BR>
+									Kernel: </FONT></FONT>
+						</P>
+						<P align="justify">
+							<TABLE id="Table2" cellSpacing="1" cellPadding="1" width="60%" align="center" border="0">
+								<TR>
+									<TD width="33%">
+										<P align="right"><FONT face="Arial" size="2"><STRONG>0</STRONG></FONT></P>
+									</TD>
+									<TD width="33%">
+										<P align="right"><FONT face="Arial" size="2"><STRONG>1</STRONG></FONT></P>
+									</TD>
+									<TD width="33%">
+										<P align="right"><FONT face="Arial" size="2"><STRONG>0</STRONG></FONT></P>
+									</TD>
+								</TR>
+								<TR>
+									<TD width="33%">
+										<P align="right"><FONT face="Arial" size="2"><STRONG>1</STRONG></FONT></P>
+									</TD>
+									<TD width="33%">
+										<P align="right"><FONT face="Arial" size="2"><STRONG>-4</STRONG></FONT></P>
+									</TD>
+									<TD width="33%">
+										<P align="right"><FONT face="Arial" size="2"><STRONG>1</STRONG></FONT></P>
+									</TD>
+								</TR>
+								<TR>
+									<TD width="33%">
+										<P align="right"><FONT face="Arial" size="2"><STRONG>0</STRONG></FONT></P>
+									</TD>
+									<TD width="33%">
+										<P align="right"><FONT face="Arial" size="2"><STRONG>1</STRONG></FONT></P>
+									</TD>
+									<TD width="33%">
+										<P align="right"><FONT face="Arial" size="2"><STRONG>0</STRONG></FONT></P>
+									</TD>
+								</TR>
+							</TABLE>
+							&nbsp;</P>
+					</TD>
+					<TD><IMG alt="" src="HelpFilter.gif" border="1"></TD>
+				</TR>
+			</TABLE>
+		</P>
+		<P align="justify"><FONT face="Arial"><FONT size="2"></FONT></FONT>&nbsp;</P>
+	</BODY>
+</HTML>

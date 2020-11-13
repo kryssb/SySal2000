@@ -1,0 +1,292 @@
+//Microsoft Developer Studio generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// English (U.S.) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
+#pragma code_page(1252)
+#endif //_WIN32
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDI_ICON32              ICON    DISCARDABLE     "icon32.ico"
+IDI_ICON64              ICON    DISCARDABLE     "icon64.ico"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// REGISTRY
+//
+
+IDR_VIRTUALMICROSCOPECLASS REGISTRY DISCARDABLE    "VirtualMicroscopeClass.rgs"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_EDIT_CONFIG DIALOG DISCARDABLE  0, 0, 250, 271
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Edit Configuration"
+FONT 8, "MS Sans Serif"
+BEGIN
+    GROUPBOX        "Stage",IDC_STATIC,7,7,236,44
+    LTEXT           "Horizontal Resolution",IDC_STATIC,14,20,67,9
+    EDITTEXT        IDC_XY_RES,88,19,20,12,ES_AUTOHSCROLL
+    LTEXT           "Vertical Resolution",IDC_STATIC,14,33,67,9
+    EDITTEXT        IDC_Z_RES,88,32,20,12,ES_AUTOHSCROLL
+    LTEXT           "XY Manual Speed Multiplier",IDC_STATIC,118,20,86,9
+    EDITTEXT        IDC_XY_MANMULT,211,19,20,12,ES_AUTOHSCROLL
+    LTEXT           "Z Manual Speed Multiplier",IDC_STATIC,118,33,86,9
+    EDITTEXT        IDC_Z_MANMULT,211,32,20,12,ES_AUTOHSCROLL
+    GROUPBOX        "Vision Processor",IDC_STATIC,7,54,236,31
+    LTEXT           "Frame Delay",IDC_STATIC,14,67,67,9
+    EDITTEXT        IDC_VP_FRAMEDELAY,88,66,20,12,ES_AUTOHSCROLL
+    LTEXT           "Frames Per Second",IDC_STATIC,118,67,86,9
+    EDITTEXT        IDC_FRAMESPERSECOND,211,66,20,12,ES_AUTOHSCROLL
+    GROUPBOX        "Image",IDC_STATIC,7,88,236,156
+    LTEXT           "Min Grain Size",IDC_STATIC,14,102,67,9
+    EDITTEXT        IDC_MINGRAINSIZE,88,101,20,12,ES_AUTOHSCROLL
+    LTEXT           "Max Grain Size",IDC_STATIC,14,116,67,9
+    EDITTEXT        IDC_MAXGRAINSIZE,88,115,20,12,ES_AUTOHSCROLL
+    LTEXT           "Min Grains",IDC_STATIC,117,103,67,9
+    EDITTEXT        IDC_MINGRAINS,211,102,20,12,ES_AUTOHSCROLL
+    LTEXT           "Max Grains",IDC_STATIC,117,117,67,9
+    EDITTEXT        IDC_MAXGRAINS,211,116,20,12,ES_AUTOHSCROLL
+    LTEXT           "Emulsion Thickness",IDC_STATIC,14,138,67,9
+    EDITTEXT        IDC_EMUTHICK,88,137,20,12,ES_AUTOHSCROLL
+    LTEXT           "Base Thickness",IDC_STATIC,14,152,67,9
+    EDITTEXT        IDC_BASETHICK,88,151,20,12,ES_AUTOHSCROLL
+    LTEXT           "Mark Visibility Range",IDC_STATIC,118,139,86,9
+    EDITTEXT        IDC_MARKZRANGE,211,138,20,12,ES_AUTOHSCROLL
+    PUSHBUTTON      "Mark File",IDC_SELMARKFILE,14,170,45,12
+    EDITTEXT        IDC_MARKFILE,66,170,165,12,ES_AUTOHSCROLL
+    DEFPUSHBUTTON   "OK",IDOK,7,250,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,193,250,50,14
+    LTEXT           "Tracks per Field",IDC_STATIC,14,190,67,9
+    EDITTEXT        IDC_TRACKS_PER_FIELD,88,189,20,12,ES_AUTOHSCROLL
+    LTEXT           "Max Slope",IDC_STATIC,118,190,86,9
+    EDITTEXT        IDC_TRACKS_MAXSLOPE,211,189,20,12,ES_AUTOHSCROLL
+    LTEXT           "X-Y Grain Noise",IDC_STATIC,14,205,67,9
+    EDITTEXT        IDC_TRACKS_XY_NOISE,88,204,20,12,ES_AUTOHSCROLL
+    LTEXT           "Grain Presence Probability",IDC_STATIC,118,205,86,9
+    EDITTEXT        IDC_TRACKS_GRAIN_PROB,211,204,20,12,ES_AUTOHSCROLL
+    PUSHBUTTON      "Track File",IDC_SELTKSFILE,14,224,45,12
+    EDITTEXT        IDC_TKSFILE,66,224,165,12,ES_AUTOHSCROLL
+END
+
+IDD_MONITOR DIALOGEX 0, 0, 224, 160
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Stage Monitor"
+FONT 8, "MS Sans Serif"
+BEGIN
+    LTEXT           "X",IDC_STATIC,7,7,9,11
+    EDITTEXT        IDC_M_XPOS,16,7,33,12,ES_RIGHT | ES_AUTOHSCROLL | 
+                    ES_READONLY
+    LTEXT           "Y",IDC_STATIC,7,20,9,11
+    EDITTEXT        IDC_M_YPOS,16,20,33,12,ES_RIGHT | ES_AUTOHSCROLL | 
+                    ES_READONLY
+    LTEXT           "Z",IDC_STATIC,7,33,9,11
+    EDITTEXT        IDC_M_ZPOS,16,33,33,12,ES_RIGHT | ES_AUTOHSCROLL | 
+                    ES_READONLY
+    PUSHBUTTON      "&Hide",IDC_M_HIDE,7,60,67,10
+    PUSHBUTTON      "&Toggle Manual/Auto",IDC_M_TOGGLEMANUAL,7,48,67,10
+    PUSHBUTTON      "&Reset",IDC_M_RESET,7,75,27,10
+    PUSHBUTTON      "",IDC_M_XYSPEED,79,7,80,78,BS_FLAT | NOT WS_TABSTOP,
+                    WS_EX_CLIENTEDGE
+    PUSHBUTTON      "",IDC_M_ZSPEED,167,7,16,78,BS_FLAT | NOT WS_TABSTOP,
+                    WS_EX_CLIENTEDGE
+    CONTROL         "Slider1",IDC_M_LIGHT,"msctls_trackbar32",TBS_VERT | 
+                    TBS_BOTH | WS_DISABLED | WS_TABSTOP,194,7,20,65
+    EDITTEXT        IDC_M_LIGHTLEVEL,193,73,24,12,ES_RIGHT | ES_AUTOHSCROLL | 
+                    ES_READONLY
+    PUSHBUTTON      "1&0x",IDC_M_10,36,75,19,10
+    PUSHBUTTON      "&1x",IDC_M_1,55,75,19,10
+    CONTROL         "Mark Mode",IDC_M_MARKMODE,"Button",BS_AUTORADIOBUTTON,7,
+                    135,210,10,WS_EX_STATICEDGE
+    CONTROL         "Grain Mode",IDC_M_GRAINMODE,"Button",BS_AUTORADIOBUTTON,
+                    7,145,210,10,WS_EX_STATICEDGE
+    LTEXT           "X",IDC_STATIC,7,93,9,11
+    EDITTEXT        IDC_M_XTARGETPOS,95,92,33,12,ES_RIGHT | ES_AUTOHSCROLL | 
+                    ES_READONLY
+    LTEXT           "Y",IDC_STATIC,7,105,9,11
+    EDITTEXT        IDC_M_YTARGETPOS,95,105,33,12,ES_RIGHT | ES_AUTOHSCROLL | 
+                    ES_READONLY
+    LTEXT           "Z",IDC_STATIC,7,118,9,11
+    EDITTEXT        IDC_M_ZTARGETPOS,95,118,33,12,ES_RIGHT | ES_AUTOHSCROLL | 
+                    ES_READONLY
+    CONTROL         "",IDC_M_ISXSPEED,"Button",BS_AUTOCHECKBOX | WS_DISABLED | 
+                    WS_TABSTOP,16,92,10,10
+    CONTROL         "",IDC_M_ISYSPEED,"Button",BS_AUTOCHECKBOX | WS_DISABLED | 
+                    WS_TABSTOP,16,105,10,10
+    CONTROL         "",IDC_M_ISZSPEED,"Button",BS_AUTOCHECKBOX | WS_DISABLED | 
+                    WS_TABSTOP,16,118,9,10
+    EDITTEXT        IDC_M_XTARGETSPEED,184,92,33,12,ES_RIGHT | 
+                    ES_AUTOHSCROLL | ES_READONLY
+    EDITTEXT        IDC_M_YTARGETSPEED,184,105,33,12,ES_RIGHT | 
+                    ES_AUTOHSCROLL | ES_READONLY
+    EDITTEXT        IDC_M_ZTARGETSPEED,184,118,33,12,ES_RIGHT | 
+                    ES_AUTOHSCROLL | ES_READONLY
+    LTEXT           "Target Pos",IDC_STATIC,50,93,43,11
+    LTEXT           "Target Pos",IDC_STATIC,50,106,42,11
+    LTEXT           "Target Pos",IDC_STATIC,50,119,42,11
+    LTEXT           "Target Speed",IDC_STATIC,131,93,50,11
+    LTEXT           "Target Speed",IDC_STATIC,131,106,50,11
+    LTEXT           "Target Speed",IDC_STATIC,131,119,51,11
+    LTEXT           "Sp",IDC_STATIC,27,93,22,11
+    LTEXT           "Sp",IDC_STATIC,27,106,22,11
+    LTEXT           "Sp",IDC_STATIC,27,119,20,11
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO DISCARDABLE 
+BEGIN
+    IDD_EDIT_CONFIG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 243
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 264
+    END
+
+    IDD_MONITOR, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 217
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 155
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+#endif    // English (U.S.) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+/////////////////////////////////////////////////////////////////////////////
+// Italian (Italy) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ITA)
+#ifdef _WIN32
+LANGUAGE LANG_ITALIAN, SUBLANG_ITALIAN
+#pragma code_page(1252)
+#endif //_WIN32
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+#ifndef _MAC
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION 1,0,0,1
+ PRODUCTVERSION 1,0,0,1
+ FILEFLAGSMASK 0x3fL
+#ifdef _DEBUG
+ FILEFLAGS 0x1L
+#else
+ FILEFLAGS 0x0L
+#endif
+ FILEOS 0x4L
+ FILETYPE 0x2L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "040904B0"
+        BEGIN
+            VALUE "CompanyName", "\0"
+            VALUE "FileDescription", "VirtualMicroscope Module\0"
+            VALUE "FileVersion", "1, 0, 0, 1\0"
+            VALUE "InternalName", "VirtualMicroscope\0"
+            VALUE "LegalCopyright", "Copyright 2001\0"
+            VALUE "OriginalFilename", "VirtualMicroscope.DLL\0"
+            VALUE "ProductName", "VirtualMicroscope Module\0"
+            VALUE "ProductVersion", "1, 0, 0, 1\0"
+            VALUE "OLESelfRegister", "\0"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x409, 1200
+    END
+END
+
+#endif    // !_MAC
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_PROJNAME            "VirtualMicroscope"
+END
+
+#endif    // Italian (Italy) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+

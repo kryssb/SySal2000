@@ -1,0 +1,60 @@
+// StageTest.idl : IDL source for StageTest.dll
+//
+
+// This file will be processed by the MIDL tool to
+// produce the type library (StageTest.tlb) and marshalling code.
+
+import "oaidl.idl";
+import "ocidl.idl";
+import "..\Common\Connection.h";
+import "..\Common\Config.h";
+import "..\Common\GUIdefs.h";
+	[
+		object,
+		uuid(C022EEAD-748A-11D3-A47B-E89C0BCE9720),
+	
+		helpstring("ISySalObject Interface"),
+		pointer_default(unique)
+	]
+	interface ISySalObject : IUnknown
+	{
+		[helpstring("method SetName")] HRESULT SetName(ConnectionName name);
+		[helpstring("method GetName")] HRESULT GetName(ConnectionName name);
+		[helpstring("method SetConfig")] HRESULT SetConfig(SySalConfig *pConfig);
+		[helpstring("method GetConfig")] HRESULT GetConfig(SySalConfig *pConfig);
+		[helpstring("method EditConfig")] HRESULT EditConfig(SySalConfig *pConfig, HSySalHANDLE hWnd);
+		[helpstring("method EnableMonitor")] HRESULT EnableMonitor(boolean bEnable);
+		[helpstring("method GetNumberOfConnections")] HRESULT GetNumberOfConnections(int *pNumber);
+		[helpstring("method SetConnection")] HRESULT SetConnection(int n, SySalConnection connection);
+		[helpstring("method GetConnection")] HRESULT GetConnection(int n, SySalConnection *pConnection);
+		[helpstring("method GetIcon")] HRESULT GetIcon(int n, HSySalHICON *pHICON);
+		[helpstring("method GetClassName")] HRESULT GetClassName(ConnectionName name);
+		[helpstring("method SyncExec")] HRESULT SyncExec();
+		[helpstring("method AsyncExec")] HRESULT AsyncExec(HSySalHANDLE HNotifyStatusChangeEvent);
+		[helpstring("method AsyncCheckStatus")] HRESULT AsyncCheckStatus(long *pStatus);
+		[helpstring("method AsyncWait")] HRESULT AsyncWait();
+		[helpstring("method AsyncPause")] HRESULT AsyncPause();
+		[helpstring("method AsyncStop")] HRESULT AsyncStop();
+		[helpstring("method AsyncResume")] HRESULT AsyncResume();
+		[helpstring("method IsReady")] HRESULT IsReady(long *pWrongConn, long *pRetCode);
+	};
+
+[
+	uuid(24646D75-90E9-4303-89CE-ACB889501CB4),
+	version(1.0),
+	helpstring("StageTest 1.0 Type Library")
+]
+library STAGETESTLib
+{
+	importlib("stdole32.tlb");
+	importlib("stdole2.tlb");
+
+	[
+		uuid(CF858251-D5A2-4373-8A24-71960407B0BC),
+		helpstring("StageTest Class")
+	]
+	coclass StageTest
+	{
+		[default] interface ISySalObject;
+	};
+};

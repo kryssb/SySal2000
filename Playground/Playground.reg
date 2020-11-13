@@ -1,0 +1,13 @@
+REGEDIT
+; This .REG file may be used by your SETUP program.
+;   If a SETUP program is not available, the entries below will be
+;   registered in your InitInstance automatically with a call to
+;   CWinApp::RegisterShellFileTypes and COleObjectFactory::UpdateRegistryAll.
+
+
+HKEY_CLASSES_ROOT\Playground.Document = Playgr Document
+HKEY_CLASSES_ROOT\Playground.Document\CLSID = {4EBD0A22-7386-11D3-A47B-B3DA25ED5623}
+
+HKEY_CLASSES_ROOT\CLSID\{4EBD0A22-7386-11D3-A47B-B3DA25ED5623} = Playgr Document
+HKEY_CLASSES_ROOT\CLSID\{4EBD0A22-7386-11D3-A47B-B3DA25ED5623}\ProgId = Playground.Document
+HKEY_CLASSES_ROOT\CLSID\{4EBD0A22-7386-11D3-A47B-B3DA25ED5623}\LocalServer32 = PLAYGROUND.EXE

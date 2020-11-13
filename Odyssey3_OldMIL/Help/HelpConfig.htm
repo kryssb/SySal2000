@@ -1,0 +1,187 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" >
+<HTML>
+	<HEAD>
+		<TITLE>Configuration</TITLE>
+		<META NAME="GENERATOR" Content="Microsoft Visual Studio 7.0">
+	</HEAD>
+	<BODY>
+		<P><FONT face="Arial" color="#000066" size="5"><EM> Odyssey&nbsp;Configuration</EM></FONT></P>
+		<FONT face="Arial"><EM><FONT size="4">
+					<HR width="100%" SIZE="2">
+					<P align="justify">
+				</FONT></EM><FONT size="2">Odyssey&nbsp;has several parameters&nbsp;to control 
+				the various stages of&nbsp;image processing. Here below the configuration 
+				dialog box is shown&nbsp;with very typical (not necessarily best) settings.</FONT></P>
+			<P align="justify"><IMG alt="" src="HelpConfig.gif"></P>
+			<P align="justify"></P>
+			<UL>
+				<LI>
+					<DIV align="justify"><FONT size="2"><FONT color="#ff0033"><FONT size="2"><FONT color="#ff0033">Program 
+										tab control</FONT><FONT color="black">: here&nbsp;the user selects the 
+										processing program to modify. At the beginning, with an empty configuration, 
+										the tab is empty also.&nbsp;The user&nbsp;must click on &lt;New&gt; to create a 
+										new program (see below)</FONT></FONT></FONT></FONT></DIV>
+					<DIV align="justify"></DIV>
+				<LI>
+					<DIV align="justify">
+						<FONT face="Arial" size="2"><FONT face="Arial" size="2"><FONT size="2"><FONT face="Arial"><FONT size="2">
+											<FONT face="Arial"><FONT color="#ff0033">Kernel Width / Kernel Height</FONT>: the 
+												size of the filter kernel for each program; these numbers range from 1 to 8.</FONT></FONT></FONT></FONT></FONT></FONT>
+					</DIV>
+					<DIV align="justify"></DIV>
+				<LI>
+					<DIV align="justify"><FONT size="2"><FONT color="#ff0033"><FONT size="2"><FONT color="#ff0033"><FONT size="2"><FONT color="black"><FONT color="#ff0033">
+													Kernel coefficients</FONT>:&nbsp;the coefficients in the kernel matrix; 
+												since it is assumed to be symmetric on both axes, only the&nbsp;upper-left 
+												corner needs to&nbsp;be specified. In case of odd width(height),&nbsp;the 
+												central column(row) must be specified too. For high-pass filters, the sum of 
+												all the coefficients in the matrix must be 0; for gray level thresholding, the 
+												kernel must be 1x1, coefficient = -1.</FONT></FONT></FONT></FONT></FONT></FONT></DIV>
+				<LI>
+					<DIV align="justify"><FONT size="2">
+							<DIV align="justify"><FONT size="2"><FONT color="#ff0033"><FONT size="2"><FONT color="black"><FONT color="#ff0033">
+													Cutoff</FONT>: filter threshold that discriminates interesting pixels from 
+												background pixels. Positive for high-pass filters, negative for gray level 
+												thresholding.</FONT></FONT></FONT></FONT></DIV>
+						</FONT>
+					</DIV>
+				<LI>
+					<DIV align="justify"><FONT size="2">
+							<DIV align="justify">
+						</FONT><FONT size="2"><FONT size="2"><FONT color="#ff0033"><FONT size="2"><FONT color="#ff0033">X 
+											offset</FONT><FONT color="black">: X coordinate in pixels of the left 
+											edge&nbsp;of the clustering window. For correct operation of the clustering 
+											module, this must be a multiple of 8 (binarized pixels are mapped to bits and 
+											are therefore packed in groups of 8).</FONT></FONT></FONT></FONT></DIV>
+			</DIV> </FONT>
+		<LI>
+			<DIV align="justify"><FONT size="2"><FONT color="black"><FONT size="2"><FONT size="2"><FONT color="#ff0033"><FONT size="2"><FONT color="#ff0033">Y 
+											offset</FONT><FONT color="black">:&nbsp;Y coordinate in pixels of the&nbsp;top 
+											edge&nbsp;of the clustering window. </FONT></FONT></FONT></FONT>
+						</FONT></FONT></FONT>
+			</DIV>
+		<LI>
+			<DIV align="justify"><FONT size="2"><FONT color="#ff0033"><FONT size="2"><FONT color="#ff0033">Window 
+								Width</FONT><FONT color="black">: the width in pixels of the clustering window. 
+								For correct operation of the clustering module, this must be a multiple of 8 
+								(binarized pixels are mapped to bits and are therefore packed in groups of 8).</FONT></FONT></FONT></FONT></DIV>
+			<DIV align="justify"></DIV>
+		<LI>
+			<DIV align="justify">
+				<FONT size="2"><FONT color="#ff0033">Window Height</FONT> :&nbsp;the&nbsp;height in 
+					pixels of the clustering window.</FONT>&nbsp;
+			</DIV>
+		<LI>
+			<DIV align="justify"><FONT size="2"><FONT face="Arial"><FONT color="#ff0033">Flat Field</FONT>: 
+						full path of the file that contains the flat field image. This file is in <EM>.r8</EM>
+						format, i.e., the file contains only the signed&nbsp;gray levels of the pixels 
+						in the image without any header, and each pixel is in 8 bit format (1 byte per 
+						pixel). The user is responsible for supplying a file with the correct size and 
+						meaning.</FONT></FONT></DIV>
+		<LI>
+			<DIV align="justify"><FONT size="2"><FONT size="2"><FONT face="Arial"><FONT color="#ff0033">Flat 
+								Field button</FONT>: helps the user to select a valid file path by a 
+							standard file selection dialog.</FONT></FONT></FONT></DIV>
+		</FONT>
+		<LI>
+			<DIV align="justify"></FONT></FONT><FONT size="2"><FONT face="Arial"><FONT color="#ff0033">Filter 
+							Equalization</FONT>: full path of the file that contains the filter 
+						equalization&nbsp;image. This file is in <EM>.r16</EM> format, i.e., the file 
+						contains only the signed&nbsp;gray levels of the pixels in the image without 
+						any header, and each pixel is in 16 bit format (2 bytes per pixel). The user is 
+						responsible for supplying a file with the correct size and meaning.</FONT></FONT>
+			</DIV>
+		<LI>
+			<DIV align="justify">
+				<FONT size="2"><FONT size="2"><FONT face="Arial"><FONT color="#ff0033">Filter&nbsp;Equalization&nbsp;button</FONT>: 
+							helps the user to select a valid file path by a standard file selection dialog.</FONT></FONT></FONT>
+			</DIV>
+		<LI>
+			<DIV align="justify">
+				<FONT face="Arial" size="2"><FONT face="Arial" size="2"><FONT size="2"><FONT face="Arial"><FONT color="#ff0033">
+									Extended Operations List</FONT>: lists the programmed extended operations.</FONT></FONT></FONT></FONT><FONT face="Arial" size="2">
+				The labels S.T, S.L, S.W, S.H, D.T, D.L, D.W, D.H stand respectively for 
+				(Source; top, left, width, height and Dest; top, left, width, height) and 
+				define the source and destination buffers for each operation.
+			</DIV>
+		<LI>
+			<DIV align="justify">
+				<FONT face="Arial" size="2"><FONT face="Arial" size="2"><FONT size="2"><FONT face="Arial"><FONT color="#ff0033">
+									Add</FONT>: adds a new extended operation with the source and destination 
+								buffers specified in the edit boxes and with the currently selected type in the 
+								type combobox.</FONT></FONT></FONT></FONT></FONT>
+			</DIV>
+		<LI>
+			<DIV align="justify">
+				<FONT size="2"><FONT face="Arial"><FONT color="#ff0033">Set</FONT>: changes the 
+						currently selected extended operation to match the source and destination 
+						buffers specified in the edit boxes and the currently selected type in the type 
+						combobox.</FONT></FONT>
+			</DIV>
+		<LI>
+			<DIV align="justify">
+				<FONT size="2"><FONT face="Arial"><FONT color="#ff0033">Copy</FONT>: copies the 
+						currently selected extended operation to&nbsp;the source and destination 
+						buffers specified in the edit boxes and sets the currently selected type in the 
+						type combobox accordingly.</FONT></FONT>
+			</DIV>
+		<LI>
+			<DIV align="justify">
+				<FONT face="Arial" size="2"><FONT size="2"><FONT face="Arial"><FONT color="#ff0033">Delete</FONT>: 
+							deletes the currently selected extended operation.</FONT></FONT></FONT>
+			</DIV>
+		<LI>
+			<DIV align="justify">
+				<FONT face="Arial" size="2"><FONT size="2"><FONT face="Arial"><FONT color="#ff0033">Min Control 
+								Level</FONT>: the minimum light output (in lamp control units, whose range 
+							and meaning depend on the lamp controller).</FONT></FONT></FONT></DIV>
+		<LI>
+			<DIV align="justify"><FONT face="Arial" size="2"><FONT face="Arial" size="2"><FONT size="2"><FONT face="Arial"><FONT color="#ff0033">Max 
+									Control Level</FONT>: the maximum light output (in lamp control units, 
+								whose range and meaning depend on the lamp controller).</FONT></FONT></FONT></FONT></DIV>
+		<LI>
+			<DIV align="justify"><FONT face="Arial" size="2"><FONT face="Arial" size="2"><FONT face="Arial" size="2"><FONT size="2"><FONT face="Arial"><FONT color="#ff0033">Lamp 
+										Time Constant</FONT>: the time constant of the lamp in ms; since the lamp 
+									output depends on the lamp temperature, it is assumed that when the control 
+									signal is changed, the light output changes to the new value according to an 
+									exponential relaxation law.</FONT></FONT></FONT></FONT></FONT></DIV>
+		<LI>
+			<DIV align="justify">
+				<FONT face="Arial" size="2"><FONT face="Arial" size="2"><FONT size="2"><FONT face="Arial"><FONT size="2">
+									<FONT face="Arial"><FONT color="#ff0033">Target Gray Level</FONT>: the desired 
+										average gray level on the image.</FONT></FONT></FONT></FONT></FONT></FONT>
+			</DIV>
+		<LI>
+			<DIV align="justify"><FONT face="Arial" size="2"><FONT face="Arial" size="2"><FONT size="2"><FONT face="Arial"><FONT size="2"><FONT face="Arial"><FONT color="#ff0033">Saturation&nbsp;Gray 
+											Level</FONT>: the minimum gray level a pixel should have to be considered 
+										in saturation; this is not necessarily 255.</FONT></FONT></FONT></FONT></FONT></FONT></DIV>
+		<LI>
+			<DIV align="justify">
+				<FONT face="Arial" size="2"><FONT face="Arial" size="2"><FONT face="Arial" size="2"><FONT size="2">
+								<FONT face="Arial"><FONT size="2"><FONT face="Arial"><FONT color="#ff0033">Target Saturation 
+												Fraction</FONT>: when saturation occurs, the desired fraction of the image 
+											that should be saturated. Of course, this kind of control overrides the Target 
+											Gray Level; presently it is ignored, since this function is not implemented.</FONT></FONT></FONT></FONT></FONT></FONT></FONT></DIV>
+		<LI>
+			<DIV align="justify"><FONT face="Arial" size="2"><FONT face="Arial" size="2"><FONT face="Arial" size="2"><FONT size="2"><FONT face="Arial"><FONT size="2"><FONT face="Arial"><FONT color="#ff0033">Refresh 
+												Cycle Time</FONT>: the minimum amount of time between frames in a live 
+											display. Fast cameras output many more frames than a normal monitor can handle 
+											(usually no more than 60-85), so only some frames are picked up for display. </FONT>
+									</FONT></FONT></FONT></FONT></FONT></FONT>
+			</DIV>
+		<LI>
+			<DIV align="justify"><FONT face="Arial" size="2"><FONT face="Arial" size="2"><FONT size="2"><FONT face="Arial"><FONT size="2"><FONT face="Arial"><FONT color="#ff0033">Clustering 
+											Processors</FONT>: the number of processors to use for asynchronous 
+										clustering (synchronous clustering is always on 1 processor); if the machine 
+										does not have so many processors, the clustering threads are arranged to work 
+										on the available processors, but this turns out to be an unneeded overhead.</FONT></FONT></FONT></FONT></FONT></FONT></DIV>
+		<LI>
+			<DIV align="justify"><FONT face="Arial" size="2"><FONT face="Arial" size="2"><FONT face="Arial" size="2"><FONT face="Arial" size="2"><FONT size="2"><FONT face="Arial"><FONT size="2"><FONT face="Arial"><FONT color="#ff0033">Test 
+													button</FONT>: starts the <A href="HelpTest.htm">test mode</A>. The present 
+												Odyssey configuration is saved, the configuration in this dialog is applied for 
+												testing, and the test utility runs with this provisional configuration; upon 
+												exit, the saved Odyssey configuration is restored.</FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></DIV>
+		</LI>
+		</UL></FONT>
+	</BODY>
+</HTML>

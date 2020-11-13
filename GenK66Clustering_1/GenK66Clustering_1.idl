@@ -1,0 +1,109 @@
+// GenK66Clustering_1.idl : IDL source for GenK66Clustering_1.dll
+//
+
+// This file will be processed by the MIDL tool to
+// produce the type library (GenK66Clustering_1.tlb) and marshalling code.
+
+import "oaidl.idl";
+import "ocidl.idl";
+import "..\Common\Connection.h";
+import "..\Common\Config.h";
+import "..\Common\GUIdefs.h";
+import "..\Common\Cluster.h";
+import "..\Common\Cluster2.h";
+import "..\Common\CameraSpec.h";
+	[
+		object,
+		uuid(C022EEAD-748A-11D3-A47B-E89C0BCE9720),
+	
+		helpstring("ISySalObject Interface"),
+		pointer_default(unique)
+	]
+	interface ISySalObject : IUnknown
+	{
+		[helpstring("method SetName")] HRESULT SetName(ConnectionName name);
+		[helpstring("method GetName")] HRESULT GetName(ConnectionName name);
+		[helpstring("method SetConfig")] HRESULT SetConfig(SySalConfig *pConfig);
+		[helpstring("method GetConfig")] HRESULT GetConfig(SySalConfig *pConfig);
+		[helpstring("method EditConfig")] HRESULT EditConfig(SySalConfig *pConfig, HSySalHANDLE hWnd);
+		[helpstring("method EnableMonitor")] HRESULT EnableMonitor(boolean bEnable);
+		[helpstring("method GetNumberOfConnections")] HRESULT GetNumberOfConnections(int *pNumber);
+		[helpstring("method SetConnection")] HRESULT SetConnection(int n, SySalConnection connection);
+		[helpstring("method GetConnection")] HRESULT GetConnection(int n, SySalConnection *pConnection);
+		[helpstring("method GetIcon")] HRESULT GetIcon(int n, HSySalHICON *pHICON);
+		[helpstring("method GetClassName")] HRESULT GetClassName(ConnectionName name);
+		[helpstring("method SyncExec")] HRESULT SyncExec();
+		[helpstring("method AsyncExec")] HRESULT AsyncExec(HSySalHANDLE HNotifyStatusChangeEvent);
+		[helpstring("method AsyncCheckStatus")] HRESULT AsyncCheckStatus(long *pStatus);
+		[helpstring("method AsyncWait")] HRESULT AsyncWait();
+		[helpstring("method AsyncPause")] HRESULT AsyncPause();
+		[helpstring("method AsyncStop")] HRESULT AsyncStop();
+		[helpstring("method AsyncResume")] HRESULT AsyncResume();
+		[helpstring("method IsReady")] HRESULT IsReady(long *pWrongConn, long *pRetCode);
+	};
+	[
+		object,
+		uuid(9E060533-7AAA-11D3-A47C-BC68BC670E2B),
+	
+		helpstring("IClusterFinder Interface"),
+		pointer_default(unique)
+	]
+	interface IClusterFinder : IUnknown
+	{
+		[helpstring("method EnableImageEqualization")] HRESULT EnableImageEqualization(boolean bEnable);
+		[helpstring("method EnableShapeParameters")] HRESULT EnableShapeParameters(boolean bEnable);
+		[helpstring("method EnableGrayLevel")] HRESULT EnableGrayLevel(boolean bEnable);
+		[helpstring("method GetClusters")] HRESULT GetClusters(BYTE *pImage, Cluster *pSpace, int *pMaxNumber, BYTE Threshold, BYTE *pBinaryImage);
+		[helpstring("method GetGrayLevelStatus")] HRESULT GetGrayLevelStatus(boolean *pReturn);
+		[helpstring("method GetImageEqualizationStatus")] HRESULT GetImageEqualizationStatus(boolean *pReturn);
+		[helpstring("method GetShapeParametersStatus")] HRESULT GetShapeParametersStatus(boolean *pReturn);
+		[helpstring("method SetCameraSpec")] HRESULT SetCameraSpec(CameraSpec Spec);
+		[helpstring("method GetCameraSpec")] HRESULT GetCameraSpec(CameraSpec *pSpec);
+		[helpstring("method MakeEqualization")] HRESULT MakeEqualization(BYTE *pImage, BYTE *pRefLevel);
+	};
+	[
+		object,
+		uuid(9E060534-7AAA-11D3-A47C-BC68BC670E2B),
+	
+		helpstring("ILockUnlock Interface"),
+		pointer_default(unique)
+	]
+	interface ILockUnlock: IUnknown
+	{
+		[helpstring("method Lock")] HRESULT Lock();
+		[helpstring("method Unlock")] HRESULT Unlock();
+	};
+	[
+		object,
+		uuid(57FB9192-0F6A-4263-87E4-D14B392644F0),
+	
+		helpstring("IClusterFinder2 Interface"),
+		pointer_default(unique)
+	]
+	interface IBoundedClusterFinder: IUnknown
+	{
+		[helpstring("method GetBoundedClusters")] HRESULT GetBoundedClusters(BYTE *pImage, BoundedCluster *pSpace, int *pMaxNumber, BYTE Threshold, BYTE *pBinaryImage);
+	};
+
+[
+	uuid(4AD314C0-A033-11D3-A47D-A9A77D89893C),
+	version(1.0),
+	helpstring("GenK66Clustering_1 1.0 Type Library")
+]
+library GENK66CLUSTERING_1Lib
+{
+	importlib("stdole32.tlb");
+	importlib("stdole2.tlb");
+
+	[
+		uuid(4AD314CE-A033-11D3-A47D-A9A77D89893C),
+		helpstring("GenK66_1 Class")
+	]
+	coclass GenK66_1
+	{
+		[default] interface ISySalObject;
+		interface IClusterFinder;
+		interface IBoundedClusterFinder;
+		interface ILockUnlock;
+	};
+};

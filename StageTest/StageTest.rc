@@ -1,0 +1,258 @@
+//Microsoft Developer Studio generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// English (U.S.) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
+#pragma code_page(1252)
+#endif //_WIN32
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "1 TYPELIB ""StageTest.tlb""\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+#ifndef _MAC
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION 1,0,0,1
+ PRODUCTVERSION 1,0,0,1
+ FILEFLAGSMASK 0x3fL
+#ifdef _DEBUG
+ FILEFLAGS 0x1L
+#else
+ FILEFLAGS 0x0L
+#endif
+ FILEOS 0x4L
+ FILETYPE 0x2L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "040904B0"
+        BEGIN
+            VALUE "CompanyName", "\0"
+            VALUE "FileDescription", "StageTest Module\0"
+            VALUE "FileVersion", "1, 0, 0, 1\0"
+            VALUE "InternalName", "StageTest\0"
+            VALUE "LegalCopyright", "Copyright 2002\0"
+            VALUE "OriginalFilename", "StageTest.DLL\0"
+            VALUE "ProductName", "StageTest Module\0"
+            VALUE "ProductVersion", "1, 0, 0, 1\0"
+            VALUE "OLESelfRegister", "\0"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x409, 1200
+    END
+END
+
+#endif    // !_MAC
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// REGISTRY
+//
+
+IDR_CSTAGETEST          REGISTRY DISCARDABLE    "CStageTest.rgs"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_EDIT_CONFIG DIALOG DISCARDABLE  0, 0, 228, 351
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION
+CAPTION "Edit Configuration"
+FONT 8, "MS Sans Serif"
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,8,329,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,170,329,50,14
+    LTEXT           "X Step",IDC_STATIC,8,8,140,12
+    EDITTEXT        IDC_EC_XSTEP,160,8,60,13,ES_AUTOHSCROLL
+    LTEXT           "Y Step",IDC_STATIC,8,24,140,12
+    EDITTEXT        IDC_EC_YSTEP,160,24,60,13,ES_AUTOHSCROLL
+    LTEXT           "Z Step",IDC_STATIC,8,40,140,12
+    EDITTEXT        IDC_EC_ZSTEP,160,40,60,13,ES_AUTOHSCROLL
+    LTEXT           "X Acceleration",IDC_STATIC,8,56,140,12
+    EDITTEXT        IDC_EC_XACC,160,56,60,13,ES_AUTOHSCROLL
+    LTEXT           "Y Acceleration",IDC_STATIC,8,72,140,12
+    EDITTEXT        IDC_EC_YACC,160,72,60,13,ES_AUTOHSCROLL
+    LTEXT           "Z Acceleration",IDC_STATIC,8,87,140,12
+    EDITTEXT        IDC_EC_ZACC,160,87,60,13,ES_AUTOHSCROLL
+    LTEXT           "X Speed",IDC_STATIC,8,104,140,12
+    EDITTEXT        IDC_EC_XSPEED,160,104,60,13,ES_AUTOHSCROLL
+    LTEXT           "Y Speed",IDC_STATIC,8,120,140,12
+    EDITTEXT        IDC_EC_YSPEED,160,120,60,13,ES_AUTOHSCROLL
+    LTEXT           "Z Speed",IDC_STATIC,8,136,140,12
+    EDITTEXT        IDC_EC_ZSPEED,160,136,60,13,ES_AUTOHSCROLL
+    LTEXT           "X Stop Tolerance",IDC_STATIC,8,152,140,12
+    EDITTEXT        IDC_EC_XSTOPTOL,160,152,60,13,ES_AUTOHSCROLL
+    LTEXT           "Y Stop Tolerance",IDC_STATIC,8,168,140,12
+    EDITTEXT        IDC_EC_YSTOPTOL,160,168,60,13,ES_AUTOHSCROLL
+    LTEXT           "Z Stop Tolerance",IDC_STATIC,8,184,140,12
+    EDITTEXT        IDC_EC_ZSTOPTOL,160,184,60,13,ES_AUTOHSCROLL
+    LTEXT           "X Damping Tolerance",IDC_STATIC,8,200,140,12
+    EDITTEXT        IDC_EC_XDAMPTOL,160,200,60,13,ES_AUTOHSCROLL
+    LTEXT           "Y Damping Tolerance",IDC_STATIC,8,216,140,12
+    EDITTEXT        IDC_EC_YDAMPTOL,160,216,60,13,ES_AUTOHSCROLL
+    LTEXT           "Z Damping Tolerance",IDC_STATIC,8,232,140,12
+    EDITTEXT        IDC_EC_ZDAMPTOL,160,232,60,13,ES_AUTOHSCROLL
+    LTEXT           "Time/Position Samples",IDC_STATIC,8,248,140,12
+    EDITTEXT        IDC_EC_SAMPLES,160,248,60,13,ES_AUTOHSCROLL
+    LTEXT           "X Waiting Time (ms)",IDC_STATIC,8,264,140,12
+    EDITTEXT        IDC_EC_XWAIT,160,264,60,13,ES_AUTOHSCROLL
+    LTEXT           "Y Waiting Time (ms)",IDC_STATIC,8,280,140,12
+    EDITTEXT        IDC_EC_YWAIT,160,280,60,13,ES_AUTOHSCROLL
+    LTEXT           "Z Waiting Time (ms)",IDC_STATIC,8,296,140,12
+    EDITTEXT        IDC_EC_ZWAIT,160,296,60,13,ES_AUTOHSCROLL
+    CONTROL         "Use Stop Command",IDC_EC_USESTOP,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,8,312,140,12
+END
+
+IDD_TEST DIALOG DISCARDABLE  0, 0, 283, 179
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Stage Testing WorkBench"
+FONT 8, "MS Sans Serif"
+BEGIN
+    GROUPBOX        "Motion Control",IDC_STATIC,7,7,269,79
+    LTEXT           "Axis",IDC_STATIC,14,21,32,10
+    COMBOBOX        IDC_TM_AXIS,50,19,33,48,CBS_DROPDOWNLIST | CBS_SORT | 
+                    WS_VSCROLL | WS_TABSTOP
+    PUSHBUTTON      "&Go",IDC_TM_GO,89,19,68,12
+    PUSHBUTTON      "&Stop",IDC_TM_STOP,163,19,68,12
+    CONTROL         "&Cycle",IDC_TM_CYCLE,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,234,20,35,10
+    CONTROL         "Progress1",IDC_TM_PROGRESS,"msctls_progress32",
+                    PBS_SMOOTH | WS_BORDER,14,35,252,8
+    PUSHBUTTON      "&Dump Samples to:",IDC_TM_DUMPOUTFILE,14,50,68,12
+    EDITTEXT        IDC_TM_OUTFILE,89,50,161,12,ES_AUTOHSCROLL
+    PUSHBUTTON      "...",IDC_TM_SELOUTFILE,254,50,11,11
+    PUSHBUTTON      "Dump &Timings to:",IDC_TM_DUMPTIMINGFILE,14,67,68,12
+    EDITTEXT        IDC_TM_TIMINGFILE,89,67,161,12,ES_AUTOHSCROLL
+    PUSHBUTTON      "...",IDC_TM_SELTIMINGFILE,254,67,11,11
+    GROUPBOX        "Configuration Control",IDC_STATIC,7,95,269,57
+    PUSHBUTTON      "Edit Tester Configuration",IDC_TC_EDITTESTER,14,108,119,
+                    14
+    PUSHBUTTON      "Save Tester Configuration",IDC_TC_SAVETESTER,146,108,
+                    119,14
+    PUSHBUTTON      "Edit Stage Configuration",IDC_TC_EDITSTAGE,14,127,119,
+                    14
+    PUSHBUTTON      "Save Stage Configuration",IDC_TC_SAVESTAGE,146,127,119,
+                    14
+    PUSHBUTTON      "E&xit",IDCANCEL,226,159,50,14
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO DISCARDABLE 
+BEGIN
+    IDD_EDIT_CONFIG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 220
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 343
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDI_ICON32              ICON    DISCARDABLE     "icon32.ico"
+IDI_ICON64              ICON    DISCARDABLE     "icon64.ico"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog Info
+//
+
+IDD_TEST DLGINIT
+BEGIN
+    IDC_TM_AXIS, 0x403, 2, 0
+0x0058, 
+    IDC_TM_AXIS, 0x403, 2, 0
+0x0059, 
+    IDC_TM_AXIS, 0x403, 2, 0
+0x005a, 
+    0
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_PROJNAME            "StageTest"
+END
+
+#endif    // English (U.S.) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+1 TYPELIB "StageTest.tlb"
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+

@@ -1,0 +1,96 @@
+<html>
+<body>
+<pre>
+<h1>Build Log</h1>
+<h3>
+--------------------Configuration: VideoImageScanner - Win32 Debug--------------------
+</h3>
+<h3>Command Lines</h3>
+Creating temporary file "C:\DOCUME~1\kryss\LOCALS~1\Temp\RSP3F9.tmp" with contents
+[
+/nologo /MDd /W3 /Gm /GX /ZI /Od /D "WIN32" /D "_DEBUG" /D "_WINDOWS" /D "_WINDLL" /D "_AFXDLL" /D "_MBCS" /D "_USRDLL" /Fp"Debug/VideoImageScanner.pch" /Yu"stdafx.h" /Fo"Debug/" /Fd"Debug/" /FD /GZ /c 
+"K:\SySal2\VideoImageScanner\InteractiveTracking.cpp"
+"K:\SySal2\VideoImageScanner\VidImgScanner.cpp"
+]
+Creating command line "cl.exe @C:\DOCUME~1\kryss\LOCALS~1\Temp\RSP3F9.tmp" 
+Creating temporary file "C:\DOCUME~1\kryss\LOCALS~1\Temp\RSP3FA.tmp" with contents
+[
+/nologo /MDd /W3 /Gm /GX /ZI /Od /D "WIN32" /D "_DEBUG" /D "_WINDOWS" /D "_WINDLL" /D "_AFXDLL" /D "_MBCS" /D "_USRDLL" /Fo"Debug/" /Fd"Debug/" /FD /GZ /c 
+"K:\SySal2\Common\Tracker_i.c"
+"K:\SySal2\Common\Fitter_i.c"
+"K:\SySal2\Common\IO_i.c"
+"K:\SySal2\Common\Objective_i.c"
+"K:\SySal2\Common\ClusterFinder_i.c"
+]
+Creating command line "cl.exe @C:\DOCUME~1\kryss\LOCALS~1\Temp\RSP3FA.tmp" 
+Creating temporary file "C:\DOCUME~1\kryss\LOCALS~1\Temp\RSP3FB.tmp" with contents
+[
+/nologo /subsystem:windows /dll /incremental:yes /pdb:"Debug/VideoImageScanner.pdb" /debug /machine:I386 /def:".\VideoImageScanner.def" /out:"Debug/VideoImageScanner.dll" /implib:"Debug/VideoImageScanner.lib" /pdbtype:sept 
+.\Debug\BatchProcessing.obj
+.\Debug\ClusterAnalysis.obj
+.\Debug\EditConfigDlg.obj
+.\Debug\ImageWnd.obj
+.\Debug\InteractiveTracking.obj
+.\Debug\MainSwitch.obj
+.\Debug\RawSpecDlg.obj
+.\Debug\SelectNameDlg.obj
+.\Debug\SelectObjectDlg.obj
+.\Debug\SelectPHSImage.obj
+.\Debug\StdAfx.obj
+.\Debug\Tracker.obj
+.\Debug\VideoImageScanner.obj
+.\Debug\VidImgScanner.obj
+.\Debug\VideoImageScanner.res
+.\Debug\Tracker_i.obj
+.\Debug\Fitter_i.obj
+.\Debug\IO_i.obj
+.\Debug\Objective_i.obj
+.\Debug\ClusterFinder_i.obj
+]
+Creating command line "link.exe @C:\DOCUME~1\kryss\LOCALS~1\Temp\RSP3FB.tmp"
+Creating temporary file "C:\DOCUME~1\kryss\LOCALS~1\Temp\RSP3FC.bat" with contents
+[
+@echo off
+regsvr32 /s /c ".\Debug\VideoImageScanner.dll"
+echo regsvr32 exec. time > ".\Debug\regsvr32.trg"
+]
+Creating command line "C:\DOCUME~1\kryss\LOCALS~1\Temp\RSP3FC.bat"
+Compiling...
+InteractiveTracking.cpp
+K:\SySal2\VideoImageScanner\InteractiveTracking.cpp(461) : warning C4018: '<' : signed/unsigned mismatch
+K:\SySal2\VideoImageScanner\InteractiveTracking.cpp(474) : warning C4018: '<' : signed/unsigned mismatch
+K:\SySal2\VideoImageScanner\InteractiveTracking.cpp(537) : warning C4800: 'int' : forcing value to bool 'true' or 'false' (performance warning)
+K:\SySal2\VideoImageScanner\InteractiveTracking.cpp(537) : warning C4800: 'int' : forcing value to bool 'true' or 'false' (performance warning)
+K:\SySal2\VideoImageScanner\InteractiveTracking.cpp(600) : warning C4244: 'argument' : conversion from 'float' to 'int', possible loss of data
+K:\SySal2\VideoImageScanner\InteractiveTracking.cpp(600) : warning C4244: 'argument' : conversion from 'float' to 'int', possible loss of data
+K:\SySal2\VideoImageScanner\InteractiveTracking.cpp(613) : warning C4244: 'argument' : conversion from 'float' to 'int', possible loss of data
+K:\SySal2\VideoImageScanner\InteractiveTracking.cpp(613) : warning C4244: 'argument' : conversion from 'float' to 'int', possible loss of data
+K:\SySal2\VideoImageScanner\InteractiveTracking.cpp(629) : warning C4244: 'argument' : conversion from 'float' to 'int', possible loss of data
+K:\SySal2\VideoImageScanner\InteractiveTracking.cpp(629) : warning C4244: 'argument' : conversion from 'float' to 'int', possible loss of data
+K:\SySal2\VideoImageScanner\InteractiveTracking.cpp(642) : warning C4244: 'argument' : conversion from 'float' to 'int', possible loss of data
+K:\SySal2\VideoImageScanner\InteractiveTracking.cpp(642) : warning C4244: 'argument' : conversion from 'float' to 'int', possible loss of data
+Generating Code...
+Compiling...
+VidImgScanner.cpp
+K:\SySal2\VideoImageScanner\VidImgScanner.cpp(144) : warning C4800: 'int' : forcing value to bool 'true' or 'false' (performance warning)
+K:\SySal2\VideoImageScanner\VidImgScanner.cpp(145) : warning C4800: 'int' : forcing value to bool 'true' or 'false' (performance warning)
+Generating Code...
+Compiling...
+Tracker_i.c
+Fitter_i.c
+IO_i.c
+Objective_i.c
+ClusterFinder_i.c
+Generating Code...
+Linking...
+   Creating library Debug/VideoImageScanner.lib and object Debug/VideoImageScanner.exp
+<h3>Output Window</h3>
+Performing registration
+
+
+
+<h3>Results</h3>
+VideoImageScanner.dll - 0 error(s), 14 warning(s)
+</pre>
+</body>
+</html>

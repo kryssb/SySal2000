@@ -1,0 +1,94 @@
+<html>
+<body>
+<pre>
+<h1>Build Log</h1>
+<h3>
+--------------------Configuration: FlexMap3 - Win32 Debug--------------------
+</h3>
+<h3>Command Lines</h3>
+Creating temporary file "C:\DOCUME~1\scanner\LOCALS~1\Temp\RSP28D.tmp" with contents
+[
+/nologo /MDd /W3 /Gm /GX /ZI /Od /I "..\Common" /D "WIN32" /D "_DEBUG" /D "_WINDOWS" /D "_WINDLL" /D "_AFXDLL" /D "_MBCS" /D "_USRDLL" /Fp"Debug/FlexMap3.pch" /Yu"stdafx.h" /Fo"Debug/" /Fd"Debug/" /FD /GZ /c 
+"C:\sysal\FlexMap3\InitMap.cpp"
+]
+Creating command line "cl.exe @C:\DOCUME~1\scanner\LOCALS~1\Temp\RSP28D.tmp" 
+Creating temporary file "C:\DOCUME~1\scanner\LOCALS~1\Temp\RSP28E.tmp" with contents
+[
+/nologo /subsystem:windows /dll /incremental:yes /pdb:"Debug/FlexMap3.pdb" /debug /machine:I386 /def:".\FlexMap3.def" /out:"Debug/FlexMap3.dll" /implib:"Debug/FlexMap3.lib" /pdbtype:sept 
+.\Debug\AffineTransf.obj
+.\Debug\EditConfig.obj
+.\Debug\FieldMap.obj
+.\Debug\FlexibleMap.obj
+.\Debug\FlexMap3.obj
+.\Debug\FrameGrabber_i.obj
+.\Debug\InitMap.obj
+.\Debug\IO_i.obj
+.\Debug\Objective_i.obj
+.\Debug\ReusePolicy.obj
+.\Debug\StdAfx.obj
+.\Debug\VisionProcessor2_i.obj
+.\Debug\FlexMap3.res
+]
+Creating command line "link.exe @C:\DOCUME~1\scanner\LOCALS~1\Temp\RSP28E.tmp"
+Creating temporary file "C:\DOCUME~1\scanner\LOCALS~1\Temp\RSP28F.bat" with contents
+[
+@echo off
+regsvr32 /s /c ".\Debug\FlexMap3.dll"
+echo regsvr32 exec. time > ".\Debug\regsvr32.trg"
+]
+Creating command line "C:\DOCUME~1\scanner\LOCALS~1\Temp\RSP28F.bat"
+Compiling...
+InitMap.cpp
+c:\sysal\flexmap3\affinetransf.h(17) : warning C4290: C++ Exception Specification ignored
+C:\sysal\FlexMap3\InitMap.cpp(45) : warning C4018: '<' : signed/unsigned mismatch
+C:\sysal\FlexMap3\InitMap.cpp(66) : warning C4244: '=' : conversion from 'double' to 'unsigned int', possible loss of data
+C:\sysal\FlexMap3\InitMap.cpp(144) : warning C4018: '>=' : signed/unsigned mismatch
+C:\sysal\FlexMap3\InitMap.cpp(227) : warning C4018: '<' : signed/unsigned mismatch
+C:\sysal\FlexMap3\InitMap.cpp(230) : warning C4244: 'argument' : conversion from 'double' to 'int', possible loss of data
+C:\sysal\FlexMap3\InitMap.cpp(230) : warning C4244: 'argument' : conversion from 'double' to 'int', possible loss of data
+C:\sysal\FlexMap3\InitMap.cpp(436) : warning C4018: '<' : signed/unsigned mismatch
+C:\sysal\FlexMap3\InitMap.cpp(437) : warning C4018: '==' : signed/unsigned mismatch
+C:\sysal\FlexMap3\InitMap.cpp(617) : warning C4244: 'initializing' : conversion from 'double' to 'float', possible loss of data
+C:\sysal\FlexMap3\InitMap.cpp(619) : warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+C:\sysal\FlexMap3\InitMap.cpp(697) : warning C4244: 'argument' : conversion from 'double' to 'float', possible loss of data
+C:\sysal\FlexMap3\InitMap.cpp(697) : warning C4244: 'argument' : conversion from 'double' to 'float', possible loss of data
+C:\sysal\FlexMap3\InitMap.cpp(755) : warning C4018: '<' : signed/unsigned mismatch
+C:\sysal\FlexMap3\InitMap.cpp(759) : warning C4018: '==' : signed/unsigned mismatch
+C:\sysal\FlexMap3\InitMap.cpp(761) : warning C4018: '<' : signed/unsigned mismatch
+C:\sysal\FlexMap3\InitMap.cpp(791) : warning C4018: '<' : signed/unsigned mismatch
+C:\sysal\FlexMap3\InitMap.cpp(796) : warning C4018: '<' : signed/unsigned mismatch
+C:\sysal\FlexMap3\InitMap.cpp(426) : warning C4101: 'ExtErrInfo' : unreferenced local variable
+C:\sysal\FlexMap3\InitMap.cpp(813) : warning C4018: '<' : signed/unsigned mismatch
+C:\sysal\FlexMap3\InitMap.cpp(819) : warning C4018: '<' : signed/unsigned mismatch
+C:\sysal\FlexMap3\InitMap.cpp(854) : warning C4244: 'initializing' : conversion from 'double' to 'float', possible loss of data
+C:\sysal\FlexMap3\InitMap.cpp(855) : warning C4244: 'initializing' : conversion from 'double' to 'float', possible loss of data
+C:\sysal\FlexMap3\InitMap.cpp(860) : warning C4101: 'Partial' : unreferenced local variable
+C:\sysal\FlexMap3\InitMap.cpp(873) : warning C4244: 'initializing' : conversion from 'double' to 'float', possible loss of data
+C:\sysal\FlexMap3\InitMap.cpp(874) : warning C4244: 'return' : conversion from 'double' to 'float', possible loss of data
+C:\sysal\FlexMap3\InitMap.cpp(879) : warning C4244: 'initializing' : conversion from 'double' to 'float', possible loss of data
+C:\sysal\FlexMap3\InitMap.cpp(880) : warning C4244: 'initializing' : conversion from 'double' to 'float', possible loss of data
+C:\sysal\FlexMap3\InitMap.cpp(881) : warning C4244: 'initializing' : conversion from 'double' to 'float', possible loss of data
+C:\sysal\FlexMap3\InitMap.cpp(884) : warning C4244: 'initializing' : conversion from 'double' to 'float', possible loss of data
+C:\sysal\FlexMap3\InitMap.cpp(887) : warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+C:\sysal\FlexMap3\InitMap.cpp(888) : warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+C:\sysal\FlexMap3\InitMap.cpp(934) : warning C4018: '<' : signed/unsigned mismatch
+C:\sysal\FlexMap3\InitMap.cpp(937) : warning C4018: '>=' : signed/unsigned mismatch
+C:\sysal\FlexMap3\InitMap.cpp(943) : warning C4018: '>=' : signed/unsigned mismatch
+C:\sysal\FlexMap3\InitMap.cpp(1005) : warning C4018: '<=' : signed/unsigned mismatch
+C:\sysal\FlexMap3\InitMap.cpp(1028) : warning C4018: '<=' : signed/unsigned mismatch
+C:\sysal\FlexMap3\InitMap.cpp(1036) : warning C4244: 'argument' : conversion from 'float' to 'int', possible loss of data
+C:\sysal\FlexMap3\InitMap.cpp(1036) : warning C4244: 'argument' : conversion from 'float' to 'int', possible loss of data
+C:\sysal\FlexMap3\InitMap.cpp(1177) : warning C4018: '<' : signed/unsigned mismatch
+Linking...
+LINK : LNK6004: Debug/FlexMap3.dll not found or not built by the last incremental link; performing full link
+   Creating library Debug/FlexMap3.lib and object Debug/FlexMap3.exp
+<h3>Output Window</h3>
+Performing registration
+
+
+
+<h3>Results</h3>
+FlexMap3.dll - 0 error(s), 40 warning(s)
+</pre>
+</body>
+</html>

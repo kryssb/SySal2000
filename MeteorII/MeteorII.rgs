@@ -1,0 +1,25 @@
+HKCR
+{
+	MeteorII.MeteorII.1 = s 'MeteorII Class'
+	{
+		CLSID = s '{aa0216aa-6a82-4ac4-863b-27474709da0f}'
+	}
+	MeteorII.MeteorII = s 'MeteorII Class'
+	{
+		CLSID = s '{aa0216aa-6a82-4ac4-863b-27474709da0f}'
+		CurVer = s 'MeteorII.MeteorII.1'
+	}
+	NoRemove CLSID
+	{
+		ForceRemove {aa0216aa-6a82-4ac4-863b-27474709da0f} = s 'MeteorII Class'
+		{
+			ProgID = s 'MeteorII.MeteorII.1'
+			VersionIndependentProgID = s 'MeteorII.MeteorII'
+			InprocServer32 = s '%MODULE%'
+			{
+				val ThreadingModel = s 'Free'
+			}
+			'TypeLib' = s '{b136ff2f-da0a-4941-ab93-dc8ce1687902}'
+		}
+	}
+}

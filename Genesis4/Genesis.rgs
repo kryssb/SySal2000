@@ -1,0 +1,25 @@
+HKCR
+{
+	Genesis.Genesis.1 = s 'Genesis Class'
+	{
+		CLSID = s '{730e007e-c675-44b2-bec3-94885e3ae206}'
+	}
+	Genesis4.Genesis4 = s 'Genesis4 Class'
+	{
+		CLSID = s '{730e007e-c675-44b2-bec3-94885e3ae206}'
+		CurVer = s 'Genesis4.Genesis4.1'
+	}
+	NoRemove CLSID
+	{
+		ForceRemove {730e007e-c675-44b2-bec3-94885e3ae206} = s 'Genesis4 Class'
+		{
+			ProgID = s 'Genesis4.Genesis4.1'
+			VersionIndependentProgID = s 'Genesis4.Genesis4'
+			InprocServer32 = s '%MODULE%'
+			{
+				val ThreadingModel = s 'Free'
+			}
+			'TypeLib' = s '{aa47ee8f-973c-4f08-a8ca-33c98e3537c5}'
+		}
+	}
+}

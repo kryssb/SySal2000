@@ -1,0 +1,53 @@
+<html>
+<body>
+<pre>
+<h1>Build Log</h1>
+<h3>
+--------------------Configuration: SmartTracker7 - Win32 Release MinSize--------------------
+</h3>
+<h3>Command Lines</h3>
+Creating temporary file "C:\DOCUME~1\Kryss\LOCALS~1\Temp\RSP297.tmp" with contents
+[
+/nologo /MD /W3 /GX /O2 /Ob2 /I "..\Common" /D "WIN32" /D "NDEBUG" /D "_WINDOWS" /D "_WINDLL" /D "_AFXDLL" /D "_MBCS" /D "_USRDLL" /D "_ATL_DLL" /FAs /Fa"ReleaseMinSize/" /Fp"ReleaseMinSize/SmartTracker7.pch" /Yu"stdafx.h" /Fo"ReleaseMinSize/" /Fd"ReleaseMinSize/" /FD /c 
+"D:\SySal2\SmartTracker7\TestDlg.cpp"
+]
+Creating command line "cl.exe @C:\DOCUME~1\Kryss\LOCALS~1\Temp\RSP297.tmp" 
+Creating temporary file "C:\DOCUME~1\Kryss\LOCALS~1\Temp\RSP298.tmp" with contents
+[
+/nologo /subsystem:windows /dll /incremental:no /pdb:"ReleaseMinSize/SmartTracker7.pdb" /machine:I386 /def:".\SmartTracker7.def" /out:"ReleaseMinSize/SmartTracker7.dll" /implib:"ReleaseMinSize/SmartTracker7.lib" 
+.\ReleaseMinSize\EditConfig.obj
+.\ReleaseMinSize\SmartTracker7.obj
+.\ReleaseMinSize\SmartTrackerClass.obj
+.\ReleaseMinSize\StdAfx.obj
+.\ReleaseMinSize\TestDlg.obj
+.\ReleaseMinSize\SmartTracker7.res
+.\htmlhelp.lib
+]
+Creating command line "link.exe @C:\DOCUME~1\Kryss\LOCALS~1\Temp\RSP298.tmp"
+Creating temporary file "C:\DOCUME~1\Kryss\LOCALS~1\Temp\RSP299.bat" with contents
+[
+@echo off
+regsvr32 /s /c ".\ReleaseMinSize\SmartTracker7.dll"
+echo regsvr32 exec. time > ".\ReleaseMinSize\regsvr32.trg"
+]
+Creating command line "C:\DOCUME~1\Kryss\LOCALS~1\Temp\RSP299.bat"
+Compiling...
+TestDlg.cpp
+..\Common\Vectors.h(24) : warning C4244: 'return' : conversion from 'double' to 'float', possible loss of data
+D:\SySal2\SmartTracker7\TestDlg.cpp(144) : warning C4018: '<' : signed/unsigned mismatch
+D:\SySal2\SmartTracker7\TestDlg.cpp(147) : warning C4018: '<' : signed/unsigned mismatch
+D:\SySal2\SmartTracker7\TestDlg.cpp(203) : warning C4018: '<' : signed/unsigned mismatch
+D:\SySal2\SmartTracker7\TestDlg.cpp(271) : warning C4018: '<' : signed/unsigned mismatch
+Linking...
+   Creating library ReleaseMinSize/SmartTracker7.lib and object ReleaseMinSize/SmartTracker7.exp
+LINK : warning LNK4089: all references to "OLEAUT32.dll" discarded by /OPT:REF
+<h3>Output Window</h3>
+Performing registration
+
+
+
+<h3>Results</h3>
+SmartTracker7.dll - 0 error(s), 6 warning(s)
+</pre>
+</body>
+</html>

@@ -1,0 +1,25 @@
+HKCR
+{
+	TrackFitter2.TrackFitter.2 = s 'TrackFitter 2 Class'
+	{
+		CLSID = s '{75ecfda6-02bc-4a33-ad55-a27f89f05edc}'
+	}
+	TrackFitter2.TrackFitter = s 'TrackFitter 2 Class'
+	{
+		CLSID = s '{75ecfda6-02bc-4a33-ad55-a27f89f05edc}'
+		CurVer = s 'TrackFitter2.TrackFitter.2'
+	}
+	NoRemove CLSID
+	{
+		ForceRemove {75ecfda6-02bc-4a33-ad55-a27f89f05edc} = s 'TrackFitter 2 Class'
+		{
+			ProgID = s 'TrackFitter2.TrackFitter.2'
+			VersionIndependentProgID = s 'TrackFitter2.TrackFitter'
+			InprocServer32 = s '%MODULE%'
+			{
+				val ThreadingModel = s 'Free'
+			}
+			'TypeLib' = s '{e08292e9-0ace-4fdb-a37f-94bf57650fca}'
+		}
+	}
+}

@@ -1,0 +1,214 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
+<HTML>
+<HEAD>
+<meta name="GENERATOR" content="Microsoft&reg; HTML Help Workshop 4.1">
+<!-- Sitemap 1.0 -->
+</HEAD><BODY>
+<UL>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="2d filter">
+		<param name="Local" value="Help2DFilter.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="astygmatism">
+		<param name="Local" value="HelpFilterEq.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="asynchronous clustering">
+		<param name="Local" value="HelpClusterFinding.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="automatic light control">
+		<param name="Local" value="HelpAutoLightControl.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="cluster dump file format">
+		<param name="Local" value="HelpTest.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="cluster finding, procedure">
+		<param name="Local" value="HelpClusterFinding.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="coefficients">
+		<param name="Local" value="Help2DFilter.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="compensation">
+		<param name="Name" value="Flat Field Subtraction">
+		<param name="Local" value="HelpFlatField.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="configuration">
+		<param name="Local" value="HelpConfig.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="copying">
+		<param name="Local" value="HelpXop.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="cutoff">
+		<param name="Local" value="Help2DFilter.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="digital filter">
+		<param name="Name" value="2d FIR Filtering">
+		<param name="Local" value="Help2DFilter.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="equalization">
+		<param name="Local" value="HelpFilterEq.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="extended operations">
+		<param name="Local" value="HelpXop.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="file formats">
+		<param name="Local" value="HelpFilterEq.htm">
+		<param name="Local" value="HelpFlatField.htm">
+		<param name="Local" value="HelpTest.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="FIR filter">
+		<param name="Local" value="Help2DFilter.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="flat field">
+		<param name="Local" value="HelpFlatField.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="flipping">
+		<param name="Local" value="HelpXop.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="gray level threshold">
+		<param name="Local" value="Help2DFilter.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="high pass">
+		<param name="Local" value="Help2DFilter.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="illumination, automatic control">
+		<param name="Local" value="HelpAutoLightControl.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="illumination, inhomogeneities in">
+		<param name="Local" value="HelpFilterEq.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="image dump file format">
+		<param name="Local" value="HelpTest.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="interfaces">
+		<param name="Local" value="HelpOverview.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="kernel">
+		<param name="Local" value="Help2DFilter.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="lamp">
+		<param name="Local" value="HelpAutoLightControl.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Lamp Controller, slot">
+		<param name="Local" value="HelpAutoLightControl.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="measuring gray level">
+		<param name="Local" value="HelpTest.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="multiprocessor clustering">
+		<param name="Local" value="HelpClusterFinding.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="multithreaded clustering">
+		<param name="Local" value="HelpClusterFinding.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="noise">
+		<param name="Local" value="HelpFlatField.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="overview">
+		<param name="Local" value="HelpOverview.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="parallel processing, clustering">
+		<param name="Local" value="HelpClusterFinding.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="parameters">
+		<param name="Local" value="HelpConfig.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="pedestal">
+		<param name="Local" value="HelpFilterEq.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="r16 file format">
+		<param name="Local" value="HelpFilterEq.htm">
+		<param name="Name" value="Configuration">
+		<param name="Local" value="HelpConfig.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="r8 file format">
+		<param name="Local" value="HelpFlatField.htm">
+		<param name="Name" value="Configuration">
+		<param name="Local" value="HelpConfig.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="rotating">
+		<param name="Local" value="HelpXop.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="saturation">
+		<param name="Local" value="HelpAutoLightControl.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="setting gray level">
+		<param name="Local" value="HelpTest.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="setting kernel coefficients">
+		<param name="Local" value="HelpConfig.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="setup">
+		<param name="Local" value="HelpConfig.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="slots">
+		<param name="Local" value="HelpAutoLightControl.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="subtraction">
+		<param name="Name" value="Flat Field Compensation">
+		<param name="Local" value="HelpFlatField.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="synchronous clustering">
+		<param name="Local" value="HelpClusterFinding.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="test mode">
+		<param name="Local" value="HelpTest.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="testing">
+		<param name="Local" value="HelpTest.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="threshold">
+		<param name="Local" value="Help2DFilter.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="time constant">
+		<param name="Local" value="HelpAutoLightControl.htm">
+		</OBJECT>
+</UL>
+</BODY></HTML>

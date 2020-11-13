@@ -1,0 +1,254 @@
+//Microsoft Developer Studio generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// English (U.S.) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
+#pragma code_page(1252)
+#endif //_WIN32
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// REGISTRY
+//
+
+IDR_DBIO                REGISTRY DISCARDABLE    "DBIO.rgs"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDI_ICON64              ICON    DISCARDABLE     "icon64.ico"
+IDI_ICON32              ICON    DISCARDABLE     "icon32.ico"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_EDIT_CONFIG DIALOGEX 0, 0, 279, 190
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Edit Configuration"
+FONT 8, "MS Sans Serif"
+BEGIN
+    LTEXT           "Data Source &Name (DSN)",IDC_STATIC,7,8,84,10
+    EDITTEXT        IDC_EC_EDSN,94,7,112,12,ES_AUTOHSCROLL
+    LTEXT           "&User Name",IDC_STATIC,7,22,84,10
+    EDITTEXT        IDC_EC_EUSERNAME,94,21,112,12,ES_AUTOHSCROLL
+    LTEXT           "&Password",IDC_STATIC,7,36,84,10
+    EDITTEXT        IDC_EC_EPASSWORD,94,35,112,12,ES_PASSWORD | 
+                    ES_AUTOHSCROLL
+    CONTROL         "Enable &Input",IDC_EC_INPUTENABLE,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,208,7,64,12
+    CONTROL         "Enable &Output",IDC_EC_OUTPUTENABLE,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,208,21,64,12
+    LTEXT           "&Table Name",IDC_STATIC,17,74,44,12
+    EDITTEXT        IDC_EC_ETABLENAME,70,73,190,13,ES_AUTOHSCROLL
+    CONTROL         "Link Id&0 on",IDC_EC_CLINKID0,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,17,97,48,10
+    EDITTEXT        IDC_EC_ELINKID0,70,96,32,13,ES_AUTOHSCROLL
+    CONTROL         "Link Id&1 on",IDC_EC_CLINKID1,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,17,111,48,10
+    EDITTEXT        IDC_EC_ELINKID1,70,110,32,13,ES_AUTOHSCROLL
+    CONTROL         "Link Id&2 on",IDC_EC_CLINKID2,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,17,125,48,10
+    EDITTEXT        IDC_EC_ELINKID2,70,124,32,13,ES_AUTOHSCROLL
+    CONTROL         "Link Id&3 on",IDC_EC_CLINKID3,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,17,139,48,10
+    EDITTEXT        IDC_EC_ELINKID3,70,138,32,13,ES_AUTOHSCROLL
+    LTEXT           "Additional Fields",IDC_STATIC,112,96,103,9
+    DEFPUSHBUTTON   "OK",IDOK,7,170,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,65,170,50,14
+    CONTROL         "List1",IDC_EC_ADDITIONALFIELDS,"SysListView32",
+                    LVS_REPORT | LVS_SINGLESEL | WS_BORDER | WS_TABSTOP,111,
+                    110,150,42,WS_EX_CLIENTEDGE
+    PUSHBUTTON      "Edit Field",IDC_EC_EDITFIELD,219,96,41,10
+    CONTROL         "Tab3",IDC_EC_TAB,"SysTabControl32",0x0,7,52,265,113
+END
+
+IDD_EDIT_FIELD DIALOGEX 0, 0, 165, 43
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Edit Field Properties"
+FONT 8, "MS Sans Serif"
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,108,7,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,108,22,50,14
+    LTEXT           "Name",IDC_STATIC,7,9,31,9
+    EDITTEXT        IDC_EF_NAME,47,7,52,12,ES_AUTOHSCROLL
+    LTEXT           "Type",IDC_STATIC,7,24,31,9
+    COMBOBOX        IDC_EF_CTYPE,47,23,53,41,CBS_DROPDOWN | WS_VSCROLL | 
+                    WS_TABSTOP,WS_EX_CLIENTEDGE
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO DISCARDABLE 
+BEGIN
+    IDD_EDIT_CONFIG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 272
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 184
+    END
+
+    IDD_EDIT_FIELD, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 158
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 36
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog Info
+//
+
+IDD_EDIT_FIELD DLGINIT
+BEGIN
+    IDC_EF_CTYPE, 0x403, 4, 0
+0x6e49, 0x0074, 
+    IDC_EF_CTYPE, 0x403, 6, 0
+0x6853, 0x726f, 0x0074, 
+    IDC_EF_CTYPE, 0x403, 5, 0
+0x6843, 0x7261, "\000" 
+    IDC_EF_CTYPE, 0x403, 6, 0
+0x6c46, 0x616f, 0x0074, 
+    IDC_EF_CTYPE, 0x403, 7, 0
+0x6f44, 0x6275, 0x656c, "\000" 
+    0
+END
+
+#endif    // English (U.S.) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+/////////////////////////////////////////////////////////////////////////////
+// Italian (Italy) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ITA)
+#ifdef _WIN32
+LANGUAGE LANG_ITALIAN, SUBLANG_ITALIAN
+#pragma code_page(1252)
+#endif //_WIN32
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "1 TYPELIB ""DBSySalIO.tlb""\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+#ifndef _MAC
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION 1,0,0,1
+ PRODUCTVERSION 1,0,0,1
+ FILEFLAGSMASK 0x3fL
+#ifdef _DEBUG
+ FILEFLAGS 0x1L
+#else
+ FILEFLAGS 0x0L
+#endif
+ FILEOS 0x4L
+ FILETYPE 0x2L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "040904B0"
+        BEGIN
+            VALUE "CompanyName", "\0"
+            VALUE "FileDescription", "DBSySalIO Module\0"
+            VALUE "FileVersion", "1, 0, 0, 1\0"
+            VALUE "InternalName", "DBSySalIO\0"
+            VALUE "LegalCopyright", "Copyright 2000\0"
+            VALUE "OriginalFilename", "DBSySalIO.DLL\0"
+            VALUE "ProductName", "DBSySalIO Module\0"
+            VALUE "ProductVersion", "1, 0, 0, 1\0"
+            VALUE "OLESelfRegister", "\0"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x409, 1200
+    END
+END
+
+#endif    // !_MAC
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_PROJNAME            "DBSySalIO"
+END
+
+#endif    // Italian (Italy) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+1 TYPELIB "DBSySalIO.tlb"
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+

@@ -1,0 +1,25 @@
+HKCR
+{
+	FlexStageFiberOpticLamp.FlexStageFiberOpticLamp.1 = s 'FlexStageFiberOpticLamp Class'
+	{
+		CLSID = s '{13efec72-9442-434b-9fa4-910973bfc93f}'
+	}
+	FlexStageFiberOpticLamp.FlexStageFiberOpticLamp = s 'FlexStageFiberOpticLamp Class'
+	{
+		CLSID = s '{13efec72-9442-434b-9fa4-910973bfc93f}'
+		CurVer = s 'FlexStageFiberOpticLamp.FlexStageFiberOpticLamp.1'
+	}
+	NoRemove CLSID
+	{
+		ForceRemove {13efec72-9442-434b-9fa4-910973bfc93f} = s 'FlexStageFiberOpticLamp Class'
+		{
+			ProgID = s 'FlexStageFiberOpticLamp.FlexStageFiberOpticLamp.1'
+			VersionIndependentProgID = s 'FlexStageFiberOpticLamp.FlexStageFiberOpticLamp'
+			InprocServer32 = s '%MODULE%'
+			{
+				val ThreadingModel = s 'Free'
+			}
+			'TypeLib' = s '{04377cd3-366c-4904-bb2e-2e94aaa95f37}'
+		}
+	}
+}

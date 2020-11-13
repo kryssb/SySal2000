@@ -1,0 +1,25 @@
+HKCR
+{
+	FixedThresholdClustering.FixThrClustering.1 = s 'FixedThresholdClustering Class'
+	{
+		CLSID = s '{9E060534-7AAA-11D3-A47C-BC68BC670E2B}'
+	}
+	FixedThresholdClustering.FixThrClustering = s 'FixedThresholdClustering Class'
+	{
+		CLSID = s '{9E060534-7AAA-11D3-A47C-BC68BC670E2B}'
+		CurVer = s 'FixedThresholdClustering.FixThrClustering.1'
+	}
+	NoRemove CLSID
+	{
+		ForceRemove {9E060534-7AAA-11D3-A47C-BC68BC670E2B} = s 'FixedThresholdClustering Class'
+		{
+			ProgID = s 'FixedThresholdClustering.FixThrClustering.1'
+			VersionIndependentProgID = s 'FixedThresholdClustering.FixThrClustering'
+			InprocServer32 = s '%MODULE%'
+			{
+				val ThreadingModel = s 'Free'
+			}
+			'TypeLib' = s '{9E060526-7AAA-11D3-A47C-BC68BC670E2B}'
+		}
+	}
+}

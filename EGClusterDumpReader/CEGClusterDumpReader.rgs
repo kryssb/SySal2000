@@ -1,0 +1,26 @@
+HKCR
+{
+	EGClusterDumpReader.EGClusterDumpReader.1 = s 'EGClusterDumpReader Class'
+	{
+		CLSID = s '{E45649A5-108D-41CA-BAEA-7EA6C6E40BFE}'
+	}
+	EGClusterDumpReader.EGClusterDumpReader = s 'EGClusterDumpReader Class'
+	{
+		CLSID = s '{E45649A5-108D-41CA-BAEA-7EA6C6E40BFE}'
+		CurVer = s 'EGClusterDumpReader.EGClusterDumpReader.1'
+	}
+	NoRemove CLSID
+	{
+		ForceRemove {E45649A5-108D-41CA-BAEA-7EA6C6E40BFE} = s 'EGClusterDumpReader Class'
+		{
+			ProgID = s 'EGClusterDumpReader.EGClusterDumpReader.1'
+			VersionIndependentProgID = s 'EGClusterDumpReader.EGClusterDumpReader'
+			ForceRemove 'Programmable'
+			InprocServer32 = s '%MODULE%'
+			{
+				val ThreadingModel = s 'Apartment'
+			}
+			'TypeLib' = s '{F108D1D4-8E39-4B0F-8651-792C99E4E66A}'
+		}
+	}
+}

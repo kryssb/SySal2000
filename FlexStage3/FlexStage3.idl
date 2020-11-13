@@ -1,0 +1,101 @@
+// FlexStage3.idl : IDL source for FlexStage.dll
+//
+
+// This file will be processed by the MIDL tool to
+// produce the type library (FlexStage.tlb) and marshalling code.
+
+import "oaidl.idl";
+import "ocidl.idl";
+import "..\Common\Connection.h";
+import "..\Common\Config.h";
+import "..\Common\GUIdefs.h";
+import "..\Common\AsyncStageDefs.h";
+	[
+		object,
+		uuid(C022EEAD-748A-11D3-A47B-E89C0BCE9720),
+	
+		helpstring("ISySalObject Interface"),
+		pointer_default(unique)
+	]
+	interface ISySalObject : IUnknown
+	{
+		[helpstring("method SetName")] HRESULT SetName(ConnectionName name);
+		[helpstring("method GetName")] HRESULT GetName(ConnectionName name);
+		[helpstring("method SetConfig")] HRESULT SetConfig(SySalConfig *pConfig);
+		[helpstring("method GetConfig")] HRESULT GetConfig(SySalConfig *pConfig);
+		[helpstring("method EditConfig")] HRESULT EditConfig(SySalConfig *pConfig, HSySalHANDLE hWnd);
+		[helpstring("method EnableMonitor")] HRESULT EnableMonitor(boolean bEnable);
+		[helpstring("method GetNumberOfConnections")] HRESULT GetNumberOfConnections(int *pNumber);
+		[helpstring("method SetConnection")] HRESULT SetConnection(int n, SySalConnection connection);
+		[helpstring("method GetConnection")] HRESULT GetConnection(int n, SySalConnection *pConnection);
+		[helpstring("method GetIcon")] HRESULT GetIcon(int n, HSySalHICON *pHICON);
+		[helpstring("method GetClassName")] HRESULT GetClassName(ConnectionName name);
+		[helpstring("method SyncExec")] HRESULT SyncExec();
+		[helpstring("method AsyncExec")] HRESULT AsyncExec(HSySalHANDLE HNotifyStatusChangeEvent);
+		[helpstring("method AsyncCheckStatus")] HRESULT AsyncCheckStatus(long *pStatus);
+		[helpstring("method AsyncWait")] HRESULT AsyncWait();
+		[helpstring("method AsyncPause")] HRESULT AsyncPause();
+		[helpstring("method AsyncStop")] HRESULT AsyncStop();
+		[helpstring("method AsyncResume")] HRESULT AsyncResume();
+		[helpstring("method IsReady")] HRESULT IsReady(long *pWrongConn, long *pRetCode);
+	};
+	[
+		object,
+		uuid(075E1B0D-C472-11D3-A47E-DC1318A51E33),
+	
+		helpstring("IStage Interface"),
+		pointer_default(unique)
+	]
+	interface IStage : IUnknown
+	{
+		[helpstring("method PosMove")] HRESULT PosMove(int Axis, float Pos, float Speed, float Acc);
+		[helpstring("method SpeedMove")] HRESULT SpeedMove(int Axis, float Speed, float Acc);
+		[helpstring("method Stop")] HRESULT Stop(int Axis);
+		[helpstring("method GetPos")] HRESULT GetPos(int Axis, float *pPos);
+		[helpstring("method GetLimiter")] HRESULT GetLimiter(int Axis, int *pLim);
+		[helpstring("method EnableManualControl")] HRESULT EnableManualControl(boolean Enable);
+		[helpstring("method IsManualControlEnabled")] HRESULT IsManualControlEnabled(boolean *pReturn);
+		[helpstring("method Reset")] HRESULT Reset(int Axis);
+		[helpstring("method GetLight")] HRESULT GetLight(int *pLightLevel);
+		[helpstring("method SetLight")] HRESULT SetLight(int LightLevel);
+	};
+	[
+		object,
+		uuid(3cf5ffa6-7919-4fd4-8bd8-43aaaa4de9da),
+	
+		helpstring("IStage2 Interface"),
+		pointer_default(unique)
+	]
+	interface IStage2 : IStage
+	{
+		[helpstring("method GetMaxZScanZSamples")] HRESULT GetMaxZScanZSamples(int *pMaxZSamples);
+		[helpstring("method PrepareAsyncGoTo3DMotion")] HRESULT PrepareAsyncGoTo3DMotion(AsyncGoTo3DTrajectory *pAGT);
+		[helpstring("method PrepareAsyncZScanMotion")] HRESULT PrepareAsyncZScanMotion(AsyncZScanTrajectory *pAST);
+		[helpstring("method StartAsyncMotion")] HRESULT StartAsyncMotion();
+		[helpstring("method WaitForAsyncZScanZComplete")] HRESULT WaitForAsyncZScanZComplete(DWORD pfnAbortCallback, DWORD Context);
+		[helpstring("method WaitForAsyncMotionComplete")] HRESULT WaitForAsyncMotionComplete(DWORD pfnAbortCallback, DWORD Context);
+		[helpstring("method FlushAsyncMotions")] HRESULT FlushAsyncMotions();
+	};
+
+
+[
+	uuid(49a6994a-8cba-41f6-85b7-2d1ad08c5793),
+	version(2.0),
+	helpstring("FlexStage 3.0 Type Library")
+]
+library FLEXSTAGELib
+{
+	importlib("stdole32.tlb");
+	importlib("stdole2.tlb");
+
+	[
+		uuid(65f0bf0a-c417-40ca-9fa6-f15399b60bf2),
+		helpstring("FlexStage3 Class")
+	]
+	coclass FlexStage3
+	{
+		[default] interface ISySalObject;
+		interface IStage;
+	};
+};
+

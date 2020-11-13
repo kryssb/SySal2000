@@ -1,0 +1,206 @@
+//Microsoft Developer Studio generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// English (U.S.) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
+#pragma code_page(1252)
+#endif //_WIN32
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDI_ICON64              ICON    DISCARDABLE     "icon64.ico"
+IDI_ICON32              ICON    DISCARDABLE     "icon32.ico"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_EDIT_CONFIG DIALOGEX 0, 0, 320, 244
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Clustering Configuration Setup"
+FONT 8, "MS Sans Serif"
+BEGIN
+    GROUPBOX        "Threshold Buffers",IDC_STATIC,7,3,306,131
+    PUSHBUTTON      "Add",IDC_EC_ADD,13,19,35,14
+    RTEXT           "L",IDC_STATIC,57,18,12,15,SS_CENTERIMAGE
+    EDITTEXT        IDC_EC_L,75,19,25,14,ES_RIGHT | ES_AUTOHSCROLL
+    RTEXT           "T",IDC_STATIC,58,35,11,15,SS_CENTERIMAGE
+    EDITTEXT        IDC_EC_T,75,35,25,14,ES_RIGHT | ES_AUTOHSCROLL
+    RTEXT           "W",IDC_STATIC,50,50,18,15,SS_CENTERIMAGE
+    EDITTEXT        IDC_EC_W,75,51,25,14,ES_RIGHT | ES_AUTOHSCROLL
+    RTEXT           "H",IDC_STATIC,49,66,18,15,SS_CENTERIMAGE
+    EDITTEXT        IDC_EC_H,75,66,25,14,ES_RIGHT | ES_AUTOHSCROLL
+    RTEXT           "Equalization",IDC_STATIC,20,82,49,15,SS_CENTERIMAGE
+    EDITTEXT        IDC_EC_EQ,75,82,25,14,ES_RIGHT | ES_AUTOHSCROLL
+    PUSHBUTTON      "Del",IDC_EC_DEL,13,35,35,14
+    CONTROL         "List1",IDC_EC_BUFFLIST,"SysListView32",LVS_REPORT | 
+                    LVS_SINGLESEL | LVS_SHOWSELALWAYS | WS_BORDER | 
+                    WS_TABSTOP,109,18,193,106,WS_EX_CLIENTEDGE
+    GROUPBOX        "Cracking of Large Clusters",IDC_STATIC,7,140,306,77
+    CONTROL         "Enable",IDC_EC_ENABLECRACK,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,13,155,87,9
+    LTEXT           "Min Area (pixels)",IDC_STATIC,13,170,54,10
+    EDITTEXT        IDC_EC_MINAREA,143,169,30,12,ES_AUTOHSCROLL
+    LTEXT           "Squeezing Threshold",IDC_STATIC,13,185,104,10
+    EDITTEXT        IDC_EC_SQUEEZETHRESH,143,184,30,12,ES_AUTOHSCROLL
+    LTEXT           "Max Cracking Distance (microns)",IDC_STATIC,13,200,104,
+                    10
+    EDITTEXT        IDC_EC_CRACKDIST,143,199,30,12,ES_AUTOHSCROLL
+    DEFPUSHBUTTON   "OK",IDOK,7,223,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,263,223,50,14
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO DISCARDABLE 
+BEGIN
+    IDD_EDIT_CONFIG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 313
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 237
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+#endif    // English (U.S.) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+/////////////////////////////////////////////////////////////////////////////
+// Italian (Italy) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ITA)
+#ifdef _WIN32
+LANGUAGE LANG_ITALIAN, SUBLANG_ITALIAN
+#pragma code_page(1252)
+#endif //_WIN32
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "1 TYPELIB ""GenK66Clustering_1.tlb""\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+#ifndef _MAC
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION 1,0,0,1
+ PRODUCTVERSION 1,0,0,1
+ FILEFLAGSMASK 0x3fL
+#ifdef _DEBUG
+ FILEFLAGS 0x1L
+#else
+ FILEFLAGS 0x0L
+#endif
+ FILEOS 0x4L
+ FILETYPE 0x2L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "040904B0"
+        BEGIN
+            VALUE "CompanyName", "\0"
+            VALUE "FileDescription", "GenK66Clustering_1 Module\0"
+            VALUE "FileVersion", "1, 0, 0, 1\0"
+            VALUE "InternalName", "GenK66Clustering_1\0"
+            VALUE "LegalCopyright", "Copyright 1999\0"
+            VALUE "OriginalFilename", "GenK66Clustering_1.DLL\0"
+            VALUE "ProductName", "GenK66Clustering_1 Module\0"
+            VALUE "ProductVersion", "1, 0, 0, 1\0"
+            VALUE "OLESelfRegister", "\0"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x409, 1200
+    END
+END
+
+#endif    // !_MAC
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// REGISTRY
+//
+
+IDR_GENK66_1            REGISTRY DISCARDABLE    "GenK66_1.rgs"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_PROJNAME            "GenK66Clustering_1"
+END
+
+#endif    // Italian (Italy) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+1 TYPELIB "GenK66Clustering_1.tlb"
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+

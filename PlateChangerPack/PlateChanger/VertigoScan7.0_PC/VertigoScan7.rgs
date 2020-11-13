@@ -1,0 +1,25 @@
+HKCR
+{
+	VertigoScan7.VertigoScan7.1 = s 'VertigoScan7 Class'
+	{
+		CLSID = s '{b3b78a42-0c68-49ee-a2e6-b93b248eccd4}'
+	}
+	VertigoScan7.VertigoScan7 = s 'VertigoScan7 Class'
+	{
+		CLSID = s '{b3b78a42-0c68-49ee-a2e6-b93b248eccd4}'
+		CurVer = s 'VertigoScan7.VertigoScan7.0'
+	}
+	NoRemove CLSID
+	{
+		ForceRemove {b3b78a42-0c68-49ee-a2e6-b93b248eccd4} = s 'VertigoScan7 Class'
+		{
+			ProgID = s 'VertigoScan7.VertigoScan7.0'
+			VersionIndependentProgID = s 'VertigoScan7.VertigoScan7'
+			InprocServer32 = s '%MODULE%'
+			{
+				val ThreadingModel = s 'Free'
+			}
+			'TypeLib' = s '{a764e28d-4a33-49a6-b214-4e59f175154d}'
+		}
+	}
+}

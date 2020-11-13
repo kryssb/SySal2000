@@ -1,0 +1,25 @@
+HKCR
+{
+	VideoImageScanner.VidImgScanner.1 = s 'VidImgScanner Class'
+	{
+		CLSID = s '{21FE392E-7CDA-11D3-A47C-B84169807E35}'
+	}
+	VideoImageScanner.VidImgScanner = s 'VidImgScanner Class'
+	{
+		CLSID = s '{21FE392E-7CDA-11D3-A47C-B84169807E35}'
+		CurVer = s 'VideoImageScanner.VidImgScanner.1'
+	}
+	NoRemove CLSID
+	{
+		ForceRemove {21FE392E-7CDA-11D3-A47C-B84169807E35} = s 'VidImgScanner Class'
+		{
+			ProgID = s 'VideoImageScanner.VidImgScanner.1'
+			VersionIndependentProgID = s 'VideoImageScanner.VidImgScanner'
+			InprocServer32 = s '%MODULE%'
+			{
+				val ThreadingModel = s 'Free'
+			}
+			'TypeLib' = s '{21FE3920-7CDA-11D3-A47C-B84169807E35}'
+		}
+	}
+}

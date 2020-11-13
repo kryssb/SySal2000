@@ -1,0 +1,25 @@
+HKCR
+{
+	ThetaTSReconstruct.TSRecon.1 = s 'ThetaTSReconstruct Class'
+	{
+		CLSID = s '{27011D15-11A2-4FBE-8AD7-BD6F161042FA}'
+	}
+	ThetaTSReconstruct.TSRecon = s 'ThetaTSReconstruct Class'
+	{
+		CLSID = s '{27011D15-11A2-4FBE-8AD7-BD6F161042FA}'
+		CurVer = s 'ThetaTSReconstruct.TSRecon.1'
+	}
+	NoRemove CLSID
+	{
+		ForceRemove {27011D15-11A2-4FBE-8AD7-BD6F161042FA} = s 'ThetaTSReconstruct Class'
+		{
+			ProgID = s 'ThetaTSReconstruct.TSRecon.1'
+			VersionIndependentProgID = s 'ThetaTSReconstruct.TSRecon'
+			InprocServer32 = s '%MODULE%'
+			{
+				val ThreadingModel = s 'Both'
+			}
+			'TypeLib' = s '{46F18C4B-3E26-4687-B1C9-DC4188781790}'
+		}
+	}
+}

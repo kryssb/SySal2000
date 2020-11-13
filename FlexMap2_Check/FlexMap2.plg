@@ -1,0 +1,97 @@
+<html>
+<body>
+<pre>
+<h1>Build Log</h1>
+<h3>
+--------------------Configuration: FlexMap2 - Win32 Debug--------------------
+</h3>
+<h3>Command Lines</h3>
+Creating temporary file "C:\DOCUME~1\Kryss\LOCALS~1\Temp\RSP13.tmp" with contents
+[
+/nologo /MDd /W3 /Gm /GX /ZI /Od /I "..\Common" /D "WIN32" /D "_DEBUG" /D "_WINDOWS" /D "_WINDLL" /D "_AFXDLL" /D "_MBCS" /D "_USRDLL" /Fp"Debug/FlexMap2.pch" /Yu"stdafx.h" /Fo"Debug/" /Fd"Debug/" /FD /GZ /c 
+"D:\SySal2\FlexMap2_Check\InitMap.cpp"
+]
+Creating command line "cl.exe @C:\DOCUME~1\Kryss\LOCALS~1\Temp\RSP13.tmp" 
+Creating temporary file "C:\DOCUME~1\Kryss\LOCALS~1\Temp\RSP14.tmp" with contents
+[
+/nologo /subsystem:windows /dll /incremental:yes /pdb:"Debug/FlexMap2.pdb" /debug /machine:I386 /def:".\FlexMap2.def" /out:"Debug/FlexMap2.dll" /implib:"Debug/FlexMap2.lib" /pdbtype:sept 
+.\Debug\AffineTransf.obj
+.\Debug\EditConfig.obj
+.\Debug\FieldMap.obj
+.\Debug\FlexibleMap.obj
+.\Debug\FlexMap2.obj
+.\Debug\FrameGrabber_i.obj
+.\Debug\InitMap.obj
+.\Debug\IO_i.obj
+.\Debug\Objective_i.obj
+.\Debug\ReusePolicy.obj
+.\Debug\Stage_i.obj
+.\Debug\StdAfx.obj
+.\Debug\VisionProcessor2_i.obj
+.\Debug\FlexMap2.res
+]
+Creating command line "link.exe @C:\DOCUME~1\Kryss\LOCALS~1\Temp\RSP14.tmp"
+Creating temporary file "C:\DOCUME~1\Kryss\LOCALS~1\Temp\RSP15.bat" with contents
+[
+@echo off
+regsvr32 /s /c ".\Debug\FlexMap2.dll"
+echo regsvr32 exec. time > ".\Debug\regsvr32.trg"
+]
+Creating command line "C:\DOCUME~1\Kryss\LOCALS~1\Temp\RSP15.bat"
+Compiling...
+InitMap.cpp
+d:\sysal2\flexmap2_check\affinetransf.h(17) : warning C4290: C++ Exception Specification ignored
+D:\SySal2\FlexMap2_Check\InitMap.cpp(45) : warning C4018: '<' : signed/unsigned mismatch
+D:\SySal2\FlexMap2_Check\InitMap.cpp(66) : warning C4244: '=' : conversion from 'double' to 'unsigned int', possible loss of data
+D:\SySal2\FlexMap2_Check\InitMap.cpp(137) : warning C4018: '>=' : signed/unsigned mismatch
+D:\SySal2\FlexMap2_Check\InitMap.cpp(220) : warning C4018: '<' : signed/unsigned mismatch
+D:\SySal2\FlexMap2_Check\InitMap.cpp(223) : warning C4244: 'argument' : conversion from 'double' to 'int', possible loss of data
+D:\SySal2\FlexMap2_Check\InitMap.cpp(223) : warning C4244: 'argument' : conversion from 'double' to 'int', possible loss of data
+D:\SySal2\FlexMap2_Check\InitMap.cpp(425) : warning C4018: '<' : signed/unsigned mismatch
+D:\SySal2\FlexMap2_Check\InitMap.cpp(426) : warning C4018: '==' : signed/unsigned mismatch
+D:\SySal2\FlexMap2_Check\InitMap.cpp(520) : warning C4244: 'initializing' : conversion from 'double' to 'float', possible loss of data
+D:\SySal2\FlexMap2_Check\InitMap.cpp(522) : warning C4244: 'initializing' : conversion from 'double' to 'float', possible loss of data
+D:\SySal2\FlexMap2_Check\InitMap.cpp(523) : warning C4244: 'initializing' : conversion from 'double' to 'float', possible loss of data
+D:\SySal2\FlexMap2_Check\InitMap.cpp(523) : warning C4244: 'initializing' : conversion from 'double' to 'float', possible loss of data
+D:\SySal2\FlexMap2_Check\InitMap.cpp(541) : warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+D:\SySal2\FlexMap2_Check\InitMap.cpp(542) : warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+D:\SySal2\FlexMap2_Check\InitMap.cpp(552) : warning C4244: 'initializing' : conversion from 'double' to 'float', possible loss of data
+D:\SySal2\FlexMap2_Check\InitMap.cpp(554) : warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+D:\SySal2\FlexMap2_Check\InitMap.cpp(616) : warning C4244: 'argument' : conversion from 'double' to 'float', possible loss of data
+D:\SySal2\FlexMap2_Check\InitMap.cpp(616) : warning C4244: 'argument' : conversion from 'double' to 'float', possible loss of data
+D:\SySal2\FlexMap2_Check\InitMap.cpp(672) : warning C4018: '<' : signed/unsigned mismatch
+D:\SySal2\FlexMap2_Check\InitMap.cpp(676) : warning C4018: '==' : signed/unsigned mismatch
+D:\SySal2\FlexMap2_Check\InitMap.cpp(691) : warning C4018: '<' : signed/unsigned mismatch
+D:\SySal2\FlexMap2_Check\InitMap.cpp(419) : warning C4101: 'ExtErrInfo' : unreferenced local variable
+D:\SySal2\FlexMap2_Check\InitMap.cpp(710) : warning C4018: '<' : signed/unsigned mismatch
+D:\SySal2\FlexMap2_Check\InitMap.cpp(716) : warning C4018: '<' : signed/unsigned mismatch
+D:\SySal2\FlexMap2_Check\InitMap.cpp(751) : warning C4244: 'initializing' : conversion from 'double' to 'float', possible loss of data
+D:\SySal2\FlexMap2_Check\InitMap.cpp(752) : warning C4244: 'initializing' : conversion from 'double' to 'float', possible loss of data
+D:\SySal2\FlexMap2_Check\InitMap.cpp(757) : warning C4101: 'Partial' : unreferenced local variable
+D:\SySal2\FlexMap2_Check\InitMap.cpp(770) : warning C4244: 'initializing' : conversion from 'double' to 'float', possible loss of data
+D:\SySal2\FlexMap2_Check\InitMap.cpp(771) : warning C4244: 'return' : conversion from 'double' to 'float', possible loss of data
+D:\SySal2\FlexMap2_Check\InitMap.cpp(776) : warning C4244: 'initializing' : conversion from 'double' to 'float', possible loss of data
+D:\SySal2\FlexMap2_Check\InitMap.cpp(777) : warning C4244: 'initializing' : conversion from 'double' to 'float', possible loss of data
+D:\SySal2\FlexMap2_Check\InitMap.cpp(778) : warning C4244: 'initializing' : conversion from 'double' to 'float', possible loss of data
+D:\SySal2\FlexMap2_Check\InitMap.cpp(781) : warning C4244: 'initializing' : conversion from 'double' to 'float', possible loss of data
+D:\SySal2\FlexMap2_Check\InitMap.cpp(784) : warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+D:\SySal2\FlexMap2_Check\InitMap.cpp(785) : warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+D:\SySal2\FlexMap2_Check\InitMap.cpp(830) : warning C4018: '<' : signed/unsigned mismatch
+D:\SySal2\FlexMap2_Check\InitMap.cpp(833) : warning C4018: '>=' : signed/unsigned mismatch
+D:\SySal2\FlexMap2_Check\InitMap.cpp(839) : warning C4018: '>=' : signed/unsigned mismatch
+D:\SySal2\FlexMap2_Check\InitMap.cpp(894) : warning C4018: '<=' : signed/unsigned mismatch
+D:\SySal2\FlexMap2_Check\InitMap.cpp(919) : warning C4018: '<=' : signed/unsigned mismatch
+D:\SySal2\FlexMap2_Check\InitMap.cpp(928) : warning C4244: 'argument' : conversion from 'float' to 'int', possible loss of data
+D:\SySal2\FlexMap2_Check\InitMap.cpp(928) : warning C4244: 'argument' : conversion from 'float' to 'int', possible loss of data
+D:\SySal2\FlexMap2_Check\InitMap.cpp(1067) : warning C4018: '<' : signed/unsigned mismatch
+Linking...
+<h3>Output Window</h3>
+Performing registration
+
+
+
+<h3>Results</h3>
+FlexMap2.dll - 0 error(s), 44 warning(s)
+</pre>
+</body>
+</html>

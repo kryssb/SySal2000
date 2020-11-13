@@ -1,0 +1,122 @@
+// SmartFitter.idl : IDL source for SmartFitter.dll
+//
+
+// This file will be processed by the MIDL tool to
+// produce the type library (SmartFitter.tlb) and marshalling code.
+
+import "oaidl.idl";
+import "ocidl.idl";
+import "..\Common\Connection.h";
+import "..\Common\Config.h";
+import "..\Common\GUIdefs.h";
+import "..\Common\Track.h";
+import "..\Common\FlatTrack.h";
+import "..\Common\Track2.h";
+import "..\Common\SySalObject2Structs.h";
+	[
+		object,
+		uuid(C022EEAD-748A-11D3-A47B-E89C0BCE9720),
+	
+		helpstring("ISySalObject Interface"),
+		pointer_default(unique)
+	]
+	interface ISySalObject : IUnknown
+	{
+		[helpstring("method SetName")] HRESULT SetName(ConnectionName name);
+		[helpstring("method GetName")] HRESULT GetName(ConnectionName name);
+		[helpstring("method SetConfig")] HRESULT SetConfig(SySalConfig *pConfig);
+		[helpstring("method GetConfig")] HRESULT GetConfig(SySalConfig *pConfig);
+		[helpstring("method EditConfig")] HRESULT EditConfig(SySalConfig *pConfig, HSySalHANDLE hWnd);
+		[helpstring("method EnableMonitor")] HRESULT EnableMonitor(boolean bEnable);
+		[helpstring("method GetNumberOfConnections")] HRESULT GetNumberOfConnections(int *pNumber);
+		[helpstring("method SetConnection")] HRESULT SetConnection(int n, SySalConnection connection);
+		[helpstring("method GetConnection")] HRESULT GetConnection(int n, SySalConnection *pConnection);
+		[helpstring("method GetIcon")] HRESULT GetIcon(int n, HSySalHICON *pHICON);
+		[helpstring("method GetClassName")] HRESULT GetClassName(ConnectionName name);
+		[helpstring("method SyncExec")] HRESULT SyncExec();
+		[helpstring("method AsyncExec")] HRESULT AsyncExec(HSySalHANDLE HNotifyStatusChangeEvent);
+		[helpstring("method AsyncCheckStatus")] HRESULT AsyncCheckStatus(long *pStatus);
+		[helpstring("method AsyncWait")] HRESULT AsyncWait();
+		[helpstring("method AsyncPause")] HRESULT AsyncPause();
+		[helpstring("method AsyncStop")] HRESULT AsyncStop();
+		[helpstring("method AsyncResume")] HRESULT AsyncResume();
+		[helpstring("method IsReady")] HRESULT IsReady(long *pWrongConn, long *pRetCode);
+	};
+	[
+		object,
+		uuid(68659AF8-12E6-4EF9-9877-A7DD63BF1950),
+	
+		helpstring("ISySalObject2 Interface"),
+		pointer_default(unique)
+	]
+	interface ISySalObject2 : ISySalObject
+	{
+		[helpstring("method SetConfigManagerInterface")] HRESULT SetConfigManagerInterface(ConfigManagerInterface *pCMI);
+		[helpstring("method GetCLSID")] HRESULT GetCLSID(CLSID *pCLSID);
+	};
+
+	[
+		object,
+		uuid(9061992E-87FC-11D3-A47C-CBD9489C0920),
+	
+		helpstring("ITrackFitter Interface"),
+		pointer_default(unique)
+	]
+	interface ITrackFitter : IUnknown
+	{
+		[helpstring("method Fit")] HRESULT Fit(Track *pTracks, int *pMaxNumber, float ZBase, float Thickness);
+		[helpstring("method Correct")] HRESULT Correct(Track *pTrack);
+		[helpstring("method PresetSlope")] HRESULT PresetSlope(float SlopeX, float SlopeY, float TolX, float TolY);
+		[helpstring("method EnableSlopePresetting")] HRESULT EnableSlopePresetting(boolean SlPresEnable);
+		[helpstring("method GetSlopePresetStatus")] HRESULT GetSlopePresetStatus(boolean *pSlPresEnable);
+		[helpstring("method GetCorrectionDataSize")] HRESULT GetCorrectionDataSize(UINT *pSize);
+	};
+
+	[
+		object,
+		uuid(950c2406-d41e-47d1-9f84-a1bfc04029c5),
+	
+		helpstring("ITrackFitter2 Interface"),
+		pointer_default(unique)
+	]
+	interface ITrackFitter2 : ITrackFitter
+	{
+		[helpstring("method Fit2")] HRESULT Fit2(Track *pTracks, int *pMaxTracks, FlatTrack *pFlatTracks, int *pMaxFlatTracks, float ZBase, float Thickness);
+		[helpstring("method Correct2")] HRESULT Correct2(FlatTrack *pFlatTrack);
+	};
+
+	[
+		object,
+		uuid(855fe3ff-b30f-4ad2-9810-471edfc9f4b8),
+	
+		helpstring("ITrackFitter3 Interface"),
+		pointer_default(unique)
+	]
+	interface ITrackFitter3 : ITrackFitter2
+	{
+		[helpstring("method Fit3")] HRESULT Fit3(Track2 *pTracks, int *pMaxNumber, float ZBase, float Thickness);
+		[helpstring("method Correct3")] HRESULT Correct3(Track2 *pTrack);
+	};
+
+[
+	uuid(7e8de6c1-7710-48a5-a2c5-8213a1ae246f),
+	version(2.3),
+	helpstring("SmartFitter2.3 Type Library")
+]
+library SMARTFITTERLib
+{
+	importlib("stdole32.tlb");
+	importlib("stdole2.tlb");
+
+	[
+		uuid(0078daf5-9fd2-4e17-9ec8-845e8bbf7d0d),
+		helpstring("SmartFitter2 Class")
+	]
+	coclass SmartFitter2
+	{
+		[default] interface ISySalObject;
+		interface ITrackFitter;
+		interface ITrackFitter2;
+		interface ITrackFitter3;
+	};
+};

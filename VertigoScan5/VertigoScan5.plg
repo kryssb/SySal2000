@@ -1,0 +1,285 @@
+<html>
+<body>
+<pre>
+<h1>Build Log</h1>
+<h3>
+--------------------Configuration: VertigoScan5 - Win32 Release MinSize--------------------
+</h3>
+<h3>Command Lines</h3>
+Creating command line "midl.exe /tlb ".\VertigoScan5.tlb" /h "VertigoScan5.h" /iid "VertigoScan5_i.c" /Oicf "D:\SySal2\VertigoScan5\VertigoScan5.idl""
+Creating command line "rc.exe /l 0x410 /fo"ReleaseMinSize/VertigoScan5.res" /d "NDEBUG" /d "_AFXDLL" "D:\SySal2\VertigoScan5\VertigoScan5.rc"" 
+Creating temporary file "C:\DOCUME~1\kryss\LOCALS~1\Temp\RSPC0.tmp" with contents
+[
+/nologo /MD /W3 /GX /O2 /I "..\Common" /D "WIN32" /D "NDEBUG" /D "_WINDOWS" /D "_WINDLL" /D "_AFXDLL" /D "_MBCS" /D "_USRDLL" /D "_ATL_DLL" /Fp"ReleaseMinSize/VertigoScan5.pch" /YX"stdafx.h" /Fo"ReleaseMinSize/" /Fd"ReleaseMinSize/" /FD /c 
+"D:\SySal2\VertigoScan5\debug.cpp"
+"D:\SySal2\VertigoScan5\EditConfig.cpp"
+"D:\SySal2\VertigoScan5\EditGridOptions.cpp"
+"D:\SySal2\VertigoScan5\Globals.cpp"
+"D:\SySal2\VertigoScan5\MainSwitch.cpp"
+"D:\SySal2\VertigoScan5\ManualChecks.cpp"
+"D:\SySal2\VertigoScan5\MapInitString.cpp"
+"D:\SySal2\VertigoScan5\MouseControl.cpp"
+"D:\SySal2\VertigoScan5\RemoteScan.cpp"
+"D:\SySal2\VertigoScan5\Scan.cpp"
+"D:\SySal2\VertigoScan5\ScanStart.cpp"
+"D:\SySal2\VertigoScan5\SelectField.cpp"
+"D:\SySal2\VertigoScan5\StdAfx.cpp"
+"D:\SySal2\VertigoScan5\TestAndConfig.cpp"
+"D:\SySal2\VertigoScan5\VertigoScan5.cpp"
+"D:\SySal2\VertigoScan5\VertigoScan5Class.cpp"
+"D:\SySal2\VertigoScan5\VertigoScanner.cpp"
+]
+Creating command line "cl.exe @C:\DOCUME~1\kryss\LOCALS~1\Temp\RSPC0.tmp" 
+Creating temporary file "C:\DOCUME~1\kryss\LOCALS~1\Temp\RSPC1.tmp" with contents
+[
+/nologo /subsystem:windows /dll /incremental:no /pdb:"ReleaseMinSize/VertigoScan5.pdb" /machine:I386 /def:".\VertigoScan5.def" /out:"ReleaseMinSize/VertigoScan5.dll" /implib:"ReleaseMinSize/VertigoScan5.lib" 
+.\ReleaseMinSize\debug.obj
+.\ReleaseMinSize\EditConfig.obj
+.\ReleaseMinSize\EditGridOptions.obj
+.\ReleaseMinSize\Globals.obj
+.\ReleaseMinSize\MainSwitch.obj
+.\ReleaseMinSize\ManualChecks.obj
+.\ReleaseMinSize\MapInitString.obj
+.\ReleaseMinSize\MouseControl.obj
+.\ReleaseMinSize\RemoteScan.obj
+.\ReleaseMinSize\Scan.obj
+.\ReleaseMinSize\ScanStart.obj
+.\ReleaseMinSize\SelectField.obj
+.\ReleaseMinSize\StdAfx.obj
+.\ReleaseMinSize\TestAndConfig.obj
+.\ReleaseMinSize\VertigoScan5.obj
+.\ReleaseMinSize\VertigoScan5Class.obj
+.\ReleaseMinSize\VertigoScanner.obj
+.\ReleaseMinSize\VertigoScan5.res
+]
+Creating command line "link.exe @C:\DOCUME~1\kryss\LOCALS~1\Temp\RSPC1.tmp"
+Creating temporary file "C:\DOCUME~1\kryss\LOCALS~1\Temp\RSPC2.bat" with contents
+[
+@echo off
+regsvr32 /s /c ".\ReleaseMinSize\VertigoScan5.dll"
+echo regsvr32 exec. time > ".\ReleaseMinSize\regsvr32.trg"
+]
+Creating command line "C:\DOCUME~1\kryss\LOCALS~1\Temp\RSPC2.bat"
+Creating Type Library...
+Microsoft (R) MIDL Compiler Version 5.01.0164  
+Copyright (c) Microsoft Corp 1991-1997. All rights reserved.
+Processing D:\SySal2\VertigoScan5\VertigoScan5.idl
+VertigoScan5.idl
+Processing C:\Program Files\Microsoft Visual Studio\VC98\INCLUDE\oaidl.idl
+oaidl.idl
+Processing C:\Program Files\Microsoft Visual Studio\VC98\INCLUDE\objidl.idl
+objidl.idl
+Processing C:\Program Files\Microsoft Visual Studio\VC98\INCLUDE\unknwn.idl
+unknwn.idl
+Processing C:\Program Files\Microsoft Visual Studio\VC98\INCLUDE\wtypes.idl
+wtypes.idl
+Processing C:\Program Files\Microsoft Visual Studio\VC98\INCLUDE\ocidl.idl
+ocidl.idl
+Processing C:\Program Files\Microsoft Visual Studio\VC98\INCLUDE\oleidl.idl
+oleidl.idl
+Processing C:\Program Files\Microsoft Visual Studio\VC98\INCLUDE\servprov.idl
+servprov.idl
+Processing C:\Program Files\Microsoft Visual Studio\VC98\INCLUDE\urlmon.idl
+urlmon.idl
+Processing C:\Program Files\Microsoft Visual Studio\VC98\INCLUDE\msxml.idl
+msxml.idl
+Processing ..\Common\Connection.h
+Connection.h
+Processing ..\Common\Config.h
+Config.h
+Processing ..\Common\GUIdefs.h
+GUIdefs.h
+Processing ..\Common\SySalObject2Structs.h
+SySalObject2Structs.h
+Compiling resources...
+Compiling...
+debug.cpp
+EditConfig.cpp
+D:\SySal2\VertigoScan5\ConfigData.h(55) : warning C4244: 'return' : conversion from 'double' to 'int', possible loss of data
+D:\SySal2\VertigoScan5\ConfigData.h(60) : warning C4244: 'return' : conversion from 'double' to 'int', possible loss of data
+D:\SySal2\VertigoScan5\ConfigData.h(65) : warning C4244: 'return' : conversion from 'double' to 'int', possible loss of data
+D:\SySal2\VertigoScan5\ConfigData.h(70) : warning C4244: 'return' : conversion from 'double' to 'int', possible loss of data
+D:\SySal2\VertigoScan5\ConfigData.h(75) : warning C4244: 'return' : conversion from 'double' to 'int', possible loss of data
+D:\SySal2\VertigoScan5\ConfigData.h(80) : warning C4244: 'return' : conversion from 'double' to 'int', possible loss of data
+D:\SySal2\VertigoScan5\ConfigData.h(85) : warning C4244: 'return' : conversion from 'double' to 'int', possible loss of data
+D:\SySal2\VertigoScan5\EditConfig.cpp(58) : warning C4305: '=' : truncation from 'const double' to 'float'
+EditGridOptions.cpp
+Globals.cpp
+D:\SySal2\VertigoScan5\ConfigData.h(55) : warning C4244: 'return' : conversion from 'double' to 'int', possible loss of data
+D:\SySal2\VertigoScan5\ConfigData.h(60) : warning C4244: 'return' : conversion from 'double' to 'int', possible loss of data
+D:\SySal2\VertigoScan5\ConfigData.h(65) : warning C4244: 'return' : conversion from 'double' to 'int', possible loss of data
+D:\SySal2\VertigoScan5\ConfigData.h(70) : warning C4244: 'return' : conversion from 'double' to 'int', possible loss of data
+D:\SySal2\VertigoScan5\ConfigData.h(75) : warning C4244: 'return' : conversion from 'double' to 'int', possible loss of data
+D:\SySal2\VertigoScan5\ConfigData.h(80) : warning C4244: 'return' : conversion from 'double' to 'int', possible loss of data
+D:\SySal2\VertigoScan5\ConfigData.h(85) : warning C4244: 'return' : conversion from 'double' to 'int', possible loss of data
+MainSwitch.cpp
+ManualChecks.cpp
+D:\SySal2\VertigoScan5\ConfigData.h(55) : warning C4244: 'return' : conversion from 'double' to 'int', possible loss of data
+D:\SySal2\VertigoScan5\ConfigData.h(60) : warning C4244: 'return' : conversion from 'double' to 'int', possible loss of data
+D:\SySal2\VertigoScan5\ConfigData.h(65) : warning C4244: 'return' : conversion from 'double' to 'int', possible loss of data
+D:\SySal2\VertigoScan5\ConfigData.h(70) : warning C4244: 'return' : conversion from 'double' to 'int', possible loss of data
+D:\SySal2\VertigoScan5\ConfigData.h(75) : warning C4244: 'return' : conversion from 'double' to 'int', possible loss of data
+D:\SySal2\VertigoScan5\ConfigData.h(80) : warning C4244: 'return' : conversion from 'double' to 'int', possible loss of data
+D:\SySal2\VertigoScan5\ConfigData.h(85) : warning C4244: 'return' : conversion from 'double' to 'int', possible loss of data
+D:\SySal2\VertigoScan5\ManualChecks.cpp(100) : warning C4244: 'argument' : conversion from 'double' to 'float', possible loss of data
+D:\SySal2\VertigoScan5\ManualChecks.cpp(101) : warning C4244: 'argument' : conversion from 'double' to 'float', possible loss of data
+D:\SySal2\VertigoScan5\ManualChecks.cpp(102) : warning C4800: 'int' : forcing value to bool 'true' or 'false' (performance warning)
+D:\SySal2\VertigoScan5\ManualChecks.cpp(102) : warning C4244: 'argument' : conversion from 'double' to 'float', possible loss of data
+D:\SySal2\VertigoScan5\ManualChecks.cpp(102) : warning C4244: 'argument' : conversion from 'double' to 'float', possible loss of data
+D:\SySal2\VertigoScan5\ManualChecks.cpp(112) : warning C4800: 'int' : forcing value to bool 'true' or 'false' (performance warning)
+D:\SySal2\VertigoScan5\ManualChecks.cpp(136) : warning C4244: 'argument' : conversion from 'double' to 'int', possible loss of data
+D:\SySal2\VertigoScan5\ManualChecks.cpp(137) : warning C4244: 'argument' : conversion from 'double' to 'int', possible loss of data
+D:\SySal2\VertigoScan5\ManualChecks.cpp(138) : warning C4244: 'argument' : conversion from 'double' to 'int', possible loss of data
+D:\SySal2\VertigoScan5\ManualChecks.cpp(139) : warning C4244: 'argument' : conversion from 'double' to 'int', possible loss of data
+D:\SySal2\VertigoScan5\ManualChecks.cpp(140) : warning C4244: 'argument' : conversion from 'double' to 'int', possible loss of data
+D:\SySal2\VertigoScan5\ManualChecks.cpp(141) : warning C4244: 'argument' : conversion from 'double' to 'int', possible loss of data
+D:\SySal2\VertigoScan5\ManualChecks.cpp(186) : warning C4244: '=' : conversion from 'double' to 'long', possible loss of data
+D:\SySal2\VertigoScan5\ManualChecks.cpp(187) : warning C4244: '=' : conversion from 'double' to 'long', possible loss of data
+D:\SySal2\VertigoScan5\ManualChecks.cpp(188) : warning C4244: '=' : conversion from 'double' to 'long', possible loss of data
+D:\SySal2\VertigoScan5\ManualChecks.cpp(189) : warning C4244: '=' : conversion from 'double' to 'long', possible loss of data
+D:\SySal2\VertigoScan5\ManualChecks.cpp(190) : warning C4244: '=' : conversion from 'double' to 'long', possible loss of data
+D:\SySal2\VertigoScan5\ManualChecks.cpp(191) : warning C4244: '=' : conversion from 'double' to 'long', possible loss of data
+D:\SySal2\VertigoScan5\ManualChecks.cpp(192) : warning C4244: '=' : conversion from 'double' to 'long', possible loss of data
+D:\SySal2\VertigoScan5\ManualChecks.cpp(193) : warning C4244: '=' : conversion from 'double' to 'long', possible loss of data
+D:\SySal2\VertigoScan5\ManualChecks.cpp(326) : warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+D:\SySal2\VertigoScan5\ManualChecks.cpp(328) : warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+D:\SySal2\VertigoScan5\ManualChecks.cpp(330) : warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+D:\SySal2\VertigoScan5\ManualChecks.cpp(332) : warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+D:\SySal2\VertigoScan5\ManualChecks.cpp(409) : warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+D:\SySal2\VertigoScan5\ManualChecks.cpp(410) : warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+MapInitString.cpp
+MouseControl.cpp
+RemoteScan.cpp
+Scan.cpp
+D:\SySal2\VertigoScan5\ConfigData.h(55) : warning C4244: 'return' : conversion from 'double' to 'int', possible loss of data
+D:\SySal2\VertigoScan5\ConfigData.h(60) : warning C4244: 'return' : conversion from 'double' to 'int', possible loss of data
+D:\SySal2\VertigoScan5\ConfigData.h(65) : warning C4244: 'return' : conversion from 'double' to 'int', possible loss of data
+D:\SySal2\VertigoScan5\ConfigData.h(70) : warning C4244: 'return' : conversion from 'double' to 'int', possible loss of data
+D:\SySal2\VertigoScan5\ConfigData.h(75) : warning C4244: 'return' : conversion from 'double' to 'int', possible loss of data
+D:\SySal2\VertigoScan5\ConfigData.h(80) : warning C4244: 'return' : conversion from 'double' to 'int', possible loss of data
+D:\SySal2\VertigoScan5\ConfigData.h(85) : warning C4244: 'return' : conversion from 'double' to 'int', possible loss of data
+D:\SySal2\VertigoScan5\Scan.cpp(171) : warning C4244: 'argument' : conversion from 'double' to 'float', possible loss of data
+D:\SySal2\VertigoScan5\Scan.cpp(171) : warning C4244: 'argument' : conversion from 'double' to 'float', possible loss of data
+D:\SySal2\VertigoScan5\Scan.cpp(177) : warning C4244: 'argument' : conversion from 'double' to 'float', possible loss of data
+D:\SySal2\VertigoScan5\Scan.cpp(178) : warning C4244: 'argument' : conversion from 'double' to 'float', possible loss of data
+D:\SySal2\VertigoScan5\Scan.cpp(428) : warning C4244: '=' : conversion from 'double' to 'int', possible loss of data
+D:\SySal2\VertigoScan5\Scan.cpp(429) : warning C4244: '=' : conversion from 'double' to 'int', possible loss of data
+D:\SySal2\VertigoScan5\Scan.cpp(440) : warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+D:\SySal2\VertigoScan5\Scan.cpp(442) : warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+D:\SySal2\VertigoScan5\Scan.cpp(495) : warning C4018: '<' : signed/unsigned mismatch
+D:\SySal2\VertigoScan5\Scan.cpp(496) : warning C4018: '<' : signed/unsigned mismatch
+D:\SySal2\VertigoScan5\Scan.cpp(527) : warning C4018: '<' : signed/unsigned mismatch
+D:\SySal2\VertigoScan5\Scan.cpp(648) : warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+D:\SySal2\VertigoScan5\Scan.cpp(649) : warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+D:\SySal2\VertigoScan5\Scan.cpp(714) : warning C4244: 'argument' : conversion from 'double' to 'float', possible loss of data
+D:\SySal2\VertigoScan5\Scan.cpp(714) : warning C4244: 'argument' : conversion from 'double' to 'float', possible loss of data
+D:\SySal2\VertigoScan5\Scan.cpp(587) : warning C4101: 'ExtErrorInfo' : unreferenced local variable
+D:\SySal2\VertigoScan5\Scan.cpp(849) : warning C4244: 'argument' : conversion from 'double' to 'float', possible loss of data
+D:\SySal2\VertigoScan5\Scan.cpp(849) : warning C4244: 'argument' : conversion from 'double' to 'float', possible loss of data
+D:\SySal2\VertigoScan5\Scan.cpp(902) : warning C4244: 'initializing' : conversion from 'float' to 'unsigned int', possible loss of data
+ScanStart.cpp
+SelectField.cpp
+D:\SySal2\VertigoScan5\SelectField.cpp(63) : warning C4018: '<' : signed/unsigned mismatch
+D:\SySal2\VertigoScan5\SelectField.cpp(64) : warning C4018: '>=' : signed/unsigned mismatch
+D:\SySal2\VertigoScan5\SelectField.cpp(69) : warning C4800: 'int' : forcing value to bool 'true' or 'false' (performance warning)
+D:\SySal2\VertigoScan5\SelectField.cpp(85) : warning C4800: 'int' : forcing value to bool 'true' or 'false' (performance warning)
+StdAfx.cpp
+TestAndConfig.cpp
+D:\SySal2\VertigoScan5\ConfigData.h(55) : warning C4244: 'return' : conversion from 'double' to 'int', possible loss of data
+D:\SySal2\VertigoScan5\ConfigData.h(60) : warning C4244: 'return' : conversion from 'double' to 'int', possible loss of data
+D:\SySal2\VertigoScan5\ConfigData.h(65) : warning C4244: 'return' : conversion from 'double' to 'int', possible loss of data
+D:\SySal2\VertigoScan5\ConfigData.h(70) : warning C4244: 'return' : conversion from 'double' to 'int', possible loss of data
+D:\SySal2\VertigoScan5\ConfigData.h(75) : warning C4244: 'return' : conversion from 'double' to 'int', possible loss of data
+D:\SySal2\VertigoScan5\ConfigData.h(80) : warning C4244: 'return' : conversion from 'double' to 'int', possible loss of data
+D:\SySal2\VertigoScan5\ConfigData.h(85) : warning C4244: 'return' : conversion from 'double' to 'int', possible loss of data
+D:\SySal2\VertigoScan5\TestAndConfig.cpp(459) : warning C4244: '=' : conversion from 'int' to 'float', possible loss of data
+D:\SySal2\VertigoScan5\TestAndConfig.cpp(460) : warning C4244: '=' : conversion from 'int' to 'float', possible loss of data
+D:\SySal2\VertigoScan5\TestAndConfig.cpp(461) : warning C4244: '=' : conversion from 'int' to 'float', possible loss of data
+D:\SySal2\VertigoScan5\TestAndConfig.cpp(462) : warning C4244: '=' : conversion from 'int' to 'float', possible loss of data
+D:\SySal2\VertigoScan5\TestAndConfig.cpp(463) : warning C4244: '=' : conversion from 'int' to 'float', possible loss of data
+D:\SySal2\VertigoScan5\TestAndConfig.cpp(464) : warning C4244: '=' : conversion from 'int' to 'float', possible loss of data
+D:\SySal2\VertigoScan5\TestAndConfig.cpp(596) : warning C4244: 'initializing' : conversion from 'double' to 'float', possible loss of data
+D:\SySal2\VertigoScan5\TestAndConfig.cpp(814) : warning C4244: '=' : conversion from 'float' to 'int', possible loss of data
+D:\SySal2\VertigoScan5\TestAndConfig.cpp(815) : warning C4244: '=' : conversion from 'float' to 'int', possible loss of data
+D:\SySal2\VertigoScan5\TestAndConfig.cpp(816) : warning C4244: '=' : conversion from 'float' to 'int', possible loss of data
+D:\SySal2\VertigoScan5\TestAndConfig.cpp(817) : warning C4244: '=' : conversion from 'float' to 'int', possible loss of data
+D:\SySal2\VertigoScan5\TestAndConfig.cpp(826) : warning C4244: '=' : conversion from 'float' to 'int', possible loss of data
+D:\SySal2\VertigoScan5\TestAndConfig.cpp(827) : warning C4244: '=' : conversion from 'float' to 'int', possible loss of data
+D:\SySal2\VertigoScan5\TestAndConfig.cpp(828) : warning C4018: '<' : signed/unsigned mismatch
+D:\SySal2\VertigoScan5\TestAndConfig.cpp(830) : warning C4244: '=' : conversion from 'float' to 'int', possible loss of data
+D:\SySal2\VertigoScan5\TestAndConfig.cpp(831) : warning C4244: '=' : conversion from 'float' to 'int', possible loss of data
+D:\SySal2\VertigoScan5\TestAndConfig.cpp(854) : warning C4101: 'j' : unreferenced local variable
+D:\SySal2\VertigoScan5\TestAndConfig.cpp(1023) : warning C4018: '<' : signed/unsigned mismatch
+D:\SySal2\VertigoScan5\TestAndConfig.cpp(1091) : warning C4018: '<' : signed/unsigned mismatch
+D:\SySal2\VertigoScan5\TestAndConfig.cpp(1093) : warning C4018: '<' : signed/unsigned mismatch
+D:\SySal2\VertigoScan5\TestAndConfig.cpp(1157) : warning C4018: '<' : signed/unsigned mismatch
+D:\SySal2\VertigoScan5\TestAndConfig.cpp(1158) : warning C4244: 'argument' : conversion from 'float' to 'int', possible loss of data
+D:\SySal2\VertigoScan5\TestAndConfig.cpp(1158) : warning C4244: 'argument' : conversion from 'float' to 'int', possible loss of data
+VertigoScan5.cpp
+D:\SySal2\VertigoScan5\ConfigData.h(55) : warning C4244: 'return' : conversion from 'double' to 'int', possible loss of data
+D:\SySal2\VertigoScan5\ConfigData.h(60) : warning C4244: 'return' : conversion from 'double' to 'int', possible loss of data
+D:\SySal2\VertigoScan5\ConfigData.h(65) : warning C4244: 'return' : conversion from 'double' to 'int', possible loss of data
+D:\SySal2\VertigoScan5\ConfigData.h(70) : warning C4244: 'return' : conversion from 'double' to 'int', possible loss of data
+D:\SySal2\VertigoScan5\ConfigData.h(75) : warning C4244: 'return' : conversion from 'double' to 'int', possible loss of data
+D:\SySal2\VertigoScan5\ConfigData.h(80) : warning C4244: 'return' : conversion from 'double' to 'int', possible loss of data
+D:\SySal2\VertigoScan5\ConfigData.h(85) : warning C4244: 'return' : conversion from 'double' to 'int', possible loss of data
+VertigoScan5Class.cpp
+D:\SySal2\VertigoScan5\ConfigData.h(55) : warning C4244: 'return' : conversion from 'double' to 'int', possible loss of data
+D:\SySal2\VertigoScan5\ConfigData.h(60) : warning C4244: 'return' : conversion from 'double' to 'int', possible loss of data
+D:\SySal2\VertigoScan5\ConfigData.h(65) : warning C4244: 'return' : conversion from 'double' to 'int', possible loss of data
+D:\SySal2\VertigoScan5\ConfigData.h(70) : warning C4244: 'return' : conversion from 'double' to 'int', possible loss of data
+D:\SySal2\VertigoScan5\ConfigData.h(75) : warning C4244: 'return' : conversion from 'double' to 'int', possible loss of data
+D:\SySal2\VertigoScan5\ConfigData.h(80) : warning C4244: 'return' : conversion from 'double' to 'int', possible loss of data
+D:\SySal2\VertigoScan5\ConfigData.h(85) : warning C4244: 'return' : conversion from 'double' to 'int', possible loss of data
+D:\SySal2\VertigoScan5\VertigoScan5Class.cpp(574) : warning C4244: 'argument' : conversion from 'double' to 'float', possible loss of data
+D:\SySal2\VertigoScan5\VertigoScan5Class.cpp(574) : warning C4244: 'argument' : conversion from 'double' to 'float', possible loss of data
+D:\SySal2\VertigoScan5\VertigoScan5Class.cpp(574) : warning C4244: 'argument' : conversion from 'double' to 'float', possible loss of data
+D:\SySal2\VertigoScan5\VertigoScan5Class.cpp(574) : warning C4244: 'argument' : conversion from 'double' to 'float', possible loss of data
+D:\SySal2\VertigoScan5\VertigoScan5Class.cpp(659) : warning C4800: 'int' : forcing value to bool 'true' or 'false' (performance warning)
+D:\SySal2\VertigoScan5\VertigoScan5Class.cpp(880) : warning C4244: 'argument' : conversion from 'double' to 'float', possible loss of data
+D:\SySal2\VertigoScan5\VertigoScan5Class.cpp(880) : warning C4244: 'argument' : conversion from 'double' to 'float', possible loss of data
+D:\SySal2\VertigoScan5\VertigoScan5Class.cpp(880) : warning C4244: 'argument' : conversion from 'double' to 'float', possible loss of data
+D:\SySal2\VertigoScan5\VertigoScan5Class.cpp(880) : warning C4244: 'argument' : conversion from 'double' to 'float', possible loss of data
+VertigoScanner.cpp
+D:\SySal2\VertigoScan5\ConfigData.h(55) : warning C4244: 'return' : conversion from 'double' to 'int', possible loss of data
+D:\SySal2\VertigoScan5\ConfigData.h(60) : warning C4244: 'return' : conversion from 'double' to 'int', possible loss of data
+D:\SySal2\VertigoScan5\ConfigData.h(65) : warning C4244: 'return' : conversion from 'double' to 'int', possible loss of data
+D:\SySal2\VertigoScan5\ConfigData.h(70) : warning C4244: 'return' : conversion from 'double' to 'int', possible loss of data
+D:\SySal2\VertigoScan5\ConfigData.h(75) : warning C4244: 'return' : conversion from 'double' to 'int', possible loss of data
+D:\SySal2\VertigoScan5\ConfigData.h(80) : warning C4244: 'return' : conversion from 'double' to 'int', possible loss of data
+D:\SySal2\VertigoScan5\ConfigData.h(85) : warning C4244: 'return' : conversion from 'double' to 'int', possible loss of data
+D:\SySal2\VertigoScan5\VertigoScanner.cpp(140) : warning C4018: '>' : signed/unsigned mismatch
+D:\SySal2\VertigoScan5\VertigoScanner.cpp(164) : warning C4018: '<' : signed/unsigned mismatch
+D:\SySal2\VertigoScan5\VertigoScanner.cpp(290) : warning C4101: 'j' : unreferenced local variable
+D:\SySal2\VertigoScan5\VertigoScanner.cpp(749) : warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+D:\SySal2\VertigoScan5\VertigoScanner.cpp(750) : warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+D:\SySal2\VertigoScan5\VertigoScanner.cpp(752) : warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+D:\SySal2\VertigoScan5\VertigoScanner.cpp(753) : warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+D:\SySal2\VertigoScan5\VertigoScanner.cpp(755) : warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+D:\SySal2\VertigoScan5\VertigoScanner.cpp(756) : warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+D:\SySal2\VertigoScan5\VertigoScanner.cpp(990) : warning C4244: '=' : conversion from 'float' to 'int', possible loss of data
+D:\SySal2\VertigoScan5\VertigoScanner.cpp(1013) : warning C4244: 'argument' : conversion from 'int' to 'float', possible loss of data
+D:\SySal2\VertigoScan5\VertigoScanner.cpp(1021) : warning C4244: 'argument' : conversion from 'int' to 'float', possible loss of data
+D:\SySal2\VertigoScan5\VertigoScanner.cpp(1022) : warning C4244: 'argument' : conversion from 'int' to 'float', possible loss of data
+D:\SySal2\VertigoScan5\VertigoScanner.cpp(1028) : warning C4244: 'argument' : conversion from 'int' to 'float', possible loss of data
+D:\SySal2\VertigoScan5\VertigoScanner.cpp(1261) : warning C4244: 'return' : conversion from 'int' to 'float', possible loss of data
+D:\SySal2\VertigoScan5\VertigoScanner.cpp(1447) : warning C4244: '=' : conversion from 'double' to 'int', possible loss of data
+D:\SySal2\VertigoScan5\VertigoScanner.cpp(1783) : warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+D:\SySal2\VertigoScan5\VertigoScanner.cpp(1784) : warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+D:\SySal2\VertigoScan5\VertigoScanner.cpp(1786) : warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+D:\SySal2\VertigoScan5\VertigoScanner.cpp(1787) : warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+D:\SySal2\VertigoScan5\VertigoScanner.cpp(1789) : warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+D:\SySal2\VertigoScan5\VertigoScanner.cpp(1790) : warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+Linking...
+   Creating library ReleaseMinSize/VertigoScan5.lib and object ReleaseMinSize/VertigoScan5.exp
+LINK : warning LNK4089: all references to "OLEAUT32.dll" discarded by /OPT:REF
+<h3>Output Window</h3>
+Performing registration
+
+
+
+<h3>Results</h3>
+VertigoScan5.dll - 0 error(s), 161 warning(s)
+</pre>
+</body>
+</html>

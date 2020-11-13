@@ -1,0 +1,43 @@
+<html>
+<body>
+<pre>
+<h1>Build Log</h1>
+<h3>
+--------------------Configuration: EasyLink - Win32 Release--------------------
+</h3>
+<h3>Command Lines</h3>
+Creating temporary file "C:\DOCUME~1\kryss\LOCALS~1\Temp\RSP14.tmp" with contents
+[
+/nologo /MD /W3 /GX /O2 /I "..\..\Common" /D "WIN32" /D "NDEBUG" /D "_WINDOWS" /D "_AFXDLL" /D "_MBCS" /Fp"Release/EasyLink.pch" /Yu"stdafx.h" /Fo"Release/" /Fd"Release/" /FD /c 
+"K:\SySal2\FragmentLinker\EasyLink\EasyLinkDlg.cpp"
+]
+Creating command line "cl.exe @C:\DOCUME~1\kryss\LOCALS~1\Temp\RSP14.tmp" 
+Creating temporary file "C:\DOCUME~1\kryss\LOCALS~1\Temp\RSP15.tmp" with contents
+[
+/nologo /subsystem:windows /incremental:no /pdb:"Release/EasyLink.pdb" /machine:I386 /out:"Release/EasyLink.exe" 
+.\Release\EasyLink.obj
+.\Release\EasyLinkDlg.obj
+.\Release\FragmentLinker_i.obj
+.\Release\StdAfx.obj
+.\Release\SySalDataIO_i.obj
+.\Release\EasyLink.res
+]
+Creating command line "link.exe @C:\DOCUME~1\kryss\LOCALS~1\Temp\RSP15.tmp"
+<h3>Output Window</h3>
+Compiling...
+EasyLinkDlg.cpp
+K:\SySal2\FragmentLinker\EasyLink\EasyLinkDlg.cpp(337) : warning C4101: 'HRes' : unreferenced local variable
+K:\SySal2\FragmentLinker\EasyLink\EasyLinkDlg.cpp(372) : warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+K:\SySal2\FragmentLinker\EasyLink\EasyLinkDlg.cpp(373) : warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+K:\SySal2\FragmentLinker\EasyLink\EasyLinkDlg.cpp(379) : warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+K:\SySal2\FragmentLinker\EasyLink\EasyLinkDlg.cpp(380) : warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+K:\SySal2\FragmentLinker\EasyLink\EasyLinkDlg.cpp(411) : warning C4244: 'argument' : conversion from 'double' to 'int', possible loss of data
+Linking...
+
+
+
+<h3>Results</h3>
+EasyLink.exe - 0 error(s), 6 warning(s)
+</pre>
+</body>
+</html>

@@ -1,0 +1,110 @@
+// SmartTracker.idl : IDL source for SmartTracker.dll
+//
+
+// This file will be processed by the MIDL tool to
+// produce the type library (SmartTracker.tlb) and marshalling code.
+
+import "oaidl.idl";
+import "ocidl.idl";
+import "..\Common\Connection.h";
+import "..\Common\Config.h";
+import "..\Common\GUIdefs.h";
+import "..\Common\Cluster.h";
+import "..\Common\CameraSpec.h";
+import "..\Common\Track.h";
+import "..\Common\FlatTrack.h";
+import "..\Common\Track2.h";
+	[
+		object,
+		uuid(C022EEAD-748A-11D3-A47B-E89C0BCE9720),
+	
+		helpstring("ISySalObject Interface"),
+		pointer_default(unique)
+	]
+	interface ISySalObject : IUnknown
+	{
+		[helpstring("method SetName")] HRESULT SetName(ConnectionName name);
+		[helpstring("method GetName")] HRESULT GetName(ConnectionName name);
+		[helpstring("method SetConfig")] HRESULT SetConfig(SySalConfig *pConfig);
+		[helpstring("method GetConfig")] HRESULT GetConfig(SySalConfig *pConfig);
+		[helpstring("method EditConfig")] HRESULT EditConfig(SySalConfig *pConfig, HSySalHANDLE hWnd);
+		[helpstring("method EnableMonitor")] HRESULT EnableMonitor(boolean bEnable);
+		[helpstring("method GetNumberOfConnections")] HRESULT GetNumberOfConnections(int *pNumber);
+		[helpstring("method SetConnection")] HRESULT SetConnection(int n, SySalConnection connection);
+		[helpstring("method GetConnection")] HRESULT GetConnection(int n, SySalConnection *pConnection);
+		[helpstring("method GetIcon")] HRESULT GetIcon(int n, HSySalHICON *pHICON);
+		[helpstring("method GetClassName")] HRESULT GetClassName(ConnectionName name);
+		[helpstring("method SyncExec")] HRESULT SyncExec();
+		[helpstring("method AsyncExec")] HRESULT AsyncExec(HSySalHANDLE HNotifyStatusChangeEvent);
+		[helpstring("method AsyncCheckStatus")] HRESULT AsyncCheckStatus(long *pStatus);
+		[helpstring("method AsyncWait")] HRESULT AsyncWait();
+		[helpstring("method AsyncPause")] HRESULT AsyncPause();
+		[helpstring("method AsyncStop")] HRESULT AsyncStop();
+		[helpstring("method AsyncResume")] HRESULT AsyncResume();
+		[helpstring("method IsReady")] HRESULT IsReady(long *pWrongConn, long *pRetCode);
+	};
+	[
+		object,
+		uuid(E416C46D-7F68-11D3-A47C-FA1E4AFA2721),
+	
+		helpstring("ITracker Interface"),
+		pointer_default(unique)
+	]
+	interface ITracker : IUnknown
+	{
+		[helpstring("method StartFilling")] HRESULT StartFilling();
+		[helpstring("method SetCameraSpec")] HRESULT SetCameraSpec(CameraSpec Spec);
+		[helpstring("method GetCameraSpec")] HRESULT GetCameraSpec(CameraSpec *pSpec);
+		[helpstring("method PutClusters")] HRESULT PutClusters(Cluster *pClusters, int CountOfClusters, float Z);
+		[helpstring("method GetTracks")] HRESULT GetTracks(Track *pSpace, int *pMaxNumber, int StartLayer, int EndLayer);
+		[helpstring("method GetClusters")] HRESULT GetClusters(int Layer, Cluster *pSpace, int *pMaxNumber, float *pZ);
+		[helpstring("method PresetSlope")] HRESULT PresetSlope(float SX, float SY, float AccX, float AccY);
+		[helpstring("method EnableSlopePresetting")] HRESULT EnableSlopePresetting(boolean SlPresEnable);
+		[helpstring("method GetSlopePresetStatus")] HRESULT GetSlopePresetStatus(boolean *pSlPresEnable);
+	};
+	[
+		object,
+		uuid(67a71430-f2e4-42ae-8910-28279a7616d6),
+	
+		helpstring("ITracker Interface"),
+		pointer_default(unique)
+	]
+	interface ITracker2 : ITracker
+	{
+		[helpstring("method GetFlatTracks")] HRESULT GetFlatTracks(FlatTrack *pSpace, int *pMaxNumber, int MaxStripsInTrack, int StartLayer, int EndLayer);
+		[helpstring("method GetFlatStrips")] HRESULT GetFlatStrips(int Layer, FlatStrip *pSpace, int *pMaxNumber, float *pZ);
+	};
+	[
+		object,
+		uuid(7a9e779c-aa32-4565-8e69-5f1bc4e362b7),
+	
+		helpstring("ITracker Interface"),
+		pointer_default(unique)
+	]
+	interface ITracker3 : ITracker2
+	{
+		[helpstring("method GetTracks2")] HRESULT GetTracks2(Track2 *pSpace, int *pMaxNumber, int StartLayer, int EndLayer);
+	};
+
+[
+	uuid(cbb17c05-285c-423d-87e4-835f09747f2b),
+	version(5.0),
+	helpstring("SmartTracker 7.0 Type Library")
+]
+library SMARTTRACKERLib
+{
+	importlib("stdole32.tlb");
+	importlib("stdole2.tlb");
+
+	[
+		uuid(a6876062-a5c3-4971-8935-82dd016832d2),
+		helpstring("SmartTracker7 Class")
+	]
+	coclass SmartTracker7
+	{
+		[default] interface ISySalObject;
+		interface ITracker;
+		interface ITracker2;
+		interface ITracker3;
+	};
+};

@@ -1,0 +1,59 @@
+<html>
+<body>
+<pre>
+<h1>Build Log</h1>
+<h3>
+--------------------Configuration: EGVertigoScanReader - Win32 Release MinSize--------------------
+</h3>
+<h3>Command Lines</h3>
+Creating temporary file "C:\DOCUME~1\kryss\LOCALS~1\Temp\RSP94.tmp" with contents
+[
+/nologo /MD /W3 /GX /O1 /D "WIN32" /D "NDEBUG" /D "_WINDOWS" /D "_WINDLL" /D "_AFXDLL" /D "_MBCS" /D "_USRDLL" /D "_ATL_DLL" /Fp"ReleaseMinSize/EGVertigoScanReader.pch" /Yu"stdafx.h" /Fo"ReleaseMinSize/" /Fd"ReleaseMinSize/" /FD /c 
+"K:\SySal2\EGVertigoScanReader\EGVertigoScanReader.cpp"
+"K:\SySal2\EGVertigoScanReader\EGVSCatalog.cpp"
+"K:\SySal2\EGVertigoScanReader\EGVSFragment.cpp"
+]
+Creating command line "cl.exe @C:\DOCUME~1\kryss\LOCALS~1\Temp\RSP94.tmp" 
+Creating temporary file "C:\DOCUME~1\kryss\LOCALS~1\Temp\RSP95.tmp" with contents
+[
+/nologo /MD /W3 /GX /O1 /D "WIN32" /D "NDEBUG" /D "_WINDOWS" /D "_WINDLL" /D "_AFXDLL" /D "_MBCS" /D "_USRDLL" /D "_ATL_DLL" /Fp"ReleaseMinSize/EGVertigoScanReader.pch" /Yc"stdafx.h" /Fo"ReleaseMinSize/" /Fd"ReleaseMinSize/" /FD /c 
+"K:\SySal2\EGVertigoScanReader\StdAfx.cpp"
+]
+Creating command line "cl.exe @C:\DOCUME~1\kryss\LOCALS~1\Temp\RSP95.tmp" 
+Creating temporary file "C:\DOCUME~1\kryss\LOCALS~1\Temp\RSP96.tmp" with contents
+[
+/nologo /subsystem:windows /dll /incremental:no /pdb:"ReleaseMinSize/EGVertigoScanReader.pdb" /machine:I386 /def:".\EGVertigoScanReader.def" /out:"ReleaseMinSize/EGVertigoScanReader.dll" /implib:"ReleaseMinSize/EGVertigoScanReader.lib" 
+.\ReleaseMinSize\EGVertigoScanReader.obj
+.\ReleaseMinSize\EGVSCatalog.obj
+.\ReleaseMinSize\EGVSFragment.obj
+.\ReleaseMinSize\StdAfx.obj
+.\ReleaseMinSize\SySalDataIO_i.obj
+.\ReleaseMinSize\EGVertigoScanReader.res
+]
+Creating command line "link.exe @C:\DOCUME~1\kryss\LOCALS~1\Temp\RSP96.tmp"
+Creating temporary file "C:\DOCUME~1\kryss\LOCALS~1\Temp\RSP97.bat" with contents
+[
+@echo off
+regsvr32 /s /c ".\ReleaseMinSize\EGVertigoScanReader.dll"
+echo regsvr32 exec. time > ".\ReleaseMinSize\regsvr32.trg"
+]
+Creating command line "C:\DOCUME~1\kryss\LOCALS~1\Temp\RSP97.bat"
+Compiling...
+StdAfx.cpp
+Compiling...
+EGVertigoScanReader.cpp
+EGVSCatalog.cpp
+EGVSFragment.cpp
+Generating Code...
+Linking...
+   Creating library ReleaseMinSize/EGVertigoScanReader.lib and object ReleaseMinSize/EGVertigoScanReader.exp
+<h3>Output Window</h3>
+Performing registration
+
+
+
+<h3>Results</h3>
+EGVertigoScanReader.dll - 0 error(s), 0 warning(s)
+</pre>
+</body>
+</html>

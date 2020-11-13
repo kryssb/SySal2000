@@ -1,0 +1,105 @@
+// FlexStage.idl : IDL source for TecnoCutPlateChanger.dll
+//
+
+// This file will be processed by the MIDL tool to
+// produce the type library (FlexStage.tlb) and marshalling code.
+
+import "oaidl.idl";
+import "ocidl.idl";
+import "..\Common\Connection.h";
+import "..\Common\Config.h";
+import "..\Common\GUIdefs.h";
+import "..\Common\AsyncStageDefs.h";
+import "..\Common\id.h";
+	[
+		object,
+		uuid(C022EEAD-748A-11D3-A47B-E89C0BCE9720),
+	
+		helpstring("ISySalObject Interface"),
+		pointer_default(unique)
+	]
+	interface ISySalObject : IUnknown
+	{
+		[helpstring("method SetName")] HRESULT SetName(ConnectionName name);
+		[helpstring("method GetName")] HRESULT GetName(ConnectionName name);
+		[helpstring("method SetConfig")] HRESULT SetConfig(SySalConfig *pConfig);
+		[helpstring("method GetConfig")] HRESULT GetConfig(SySalConfig *pConfig);
+		[helpstring("method EditConfig")] HRESULT EditConfig(SySalConfig *pConfig, HSySalHANDLE hWnd);
+		[helpstring("method EnableMonitor")] HRESULT EnableMonitor(boolean bEnable);
+		[helpstring("method GetNumberOfConnections")] HRESULT GetNumberOfConnections(int *pNumber);
+		[helpstring("method SetConnection")] HRESULT SetConnection(int n, SySalConnection connection);
+		[helpstring("method GetConnection")] HRESULT GetConnection(int n, SySalConnection *pConnection);
+		[helpstring("method GetIcon")] HRESULT GetIcon(int n, HSySalHICON *pHICON);
+		[helpstring("method GetClassName")] HRESULT GetClassName(ConnectionName name);
+		[helpstring("method SyncExec")] HRESULT SyncExec();
+		[helpstring("method AsyncExec")] HRESULT AsyncExec(HSySalHANDLE HNotifyStatusChangeEvent);
+		[helpstring("method AsyncCheckStatus")] HRESULT AsyncCheckStatus(long *pStatus);
+		[helpstring("method AsyncWait")] HRESULT AsyncWait();
+		[helpstring("method AsyncPause")] HRESULT AsyncPause();
+		[helpstring("method AsyncStop")] HRESULT AsyncStop();
+		[helpstring("method AsyncResume")] HRESULT AsyncResume();
+		[helpstring("method IsReady")] HRESULT IsReady(long *pWrongConn, long *pRetCode);
+	};
+	[
+		object,
+		uuid(455b5e46-0c34-443e-879b-53941a71026f),
+	
+		helpstring("ISySalObjectMachineDefaults Interface"),
+		pointer_default(unique)
+	]
+	interface ISySalObjectMachineDefaults : IUnknown
+	{
+		[helpstring("method SetMachineDefaults")] HRESULT SetMachineDefaults(SySalConfig *pConfig);
+		[helpstring("method GetMachineDefaults")] HRESULT GetMachineDefaults(SySalConfig *pConfig);
+		[helpstring("method EditMachineDefaults")] HRESULT EditMachineDefaults(SySalConfig *pConfig, HSySalHANDLE hWnd);
+	};
+   [
+		object,
+		uuid(11c61d6e-34b8-4562-b7f5-d17ff64d856b),
+	
+		helpstring("IPlateChanger Interface"),
+		pointer_default(unique)
+	]
+	interface IPlateChanger : IUnknown
+	{
+		[helpstring("method LoadPlate")] HRESULT LoadPlate(Identifier id, BYTE* pData);
+		[helpstring("method UnloadPlate")] HRESULT UnloadPlate();
+		[helpstring("method EnableManualControl")] HRESULT EnableManualControl(boolean bEnable);
+		[helpstring("method IsManualControlEnabled")] HRESULT IsManualControlEnabled(boolean *pbEnable);
+	};
+	[
+		object,
+		uuid(3d632286-42a0-411f-b261-40bb7c7ca988),
+	
+		helpstring("IPlateChanger2 Interface"),
+		pointer_default(unique)
+	]
+	interface IPlateChanger2 : IPlateChanger
+	{
+		[helpstring("method DispenseOil")]   HRESULT DispenseOil(float AreaMinX, float AreaMinY, float AreaMaxX, float AreaMaxY);
+		[helpstring("method DispenseOil")]   HRESULT GetErrorLevel();
+	};
+
+// This must be changed for every new DLL
+[
+	uuid(2c4cb907-e8b4-44ff-b6b3-9a524fa485a6),
+	version(1.0),
+	helpstring("TecnoCutPlateChanger 1.0 Type Library")
+]
+library TECNOCUTPLATECHANGERLib
+{
+	importlib("stdole32.tlb");
+	importlib("stdole2.tlb");
+
+	// This must be changed for every new DLL
+	[
+		uuid(a188396f-5919-4687-a71d-95ee34f15649),
+		helpstring("TecnoCutPlateChanger Class")
+	]
+	coclass TecnoCutPlateChanger
+	{
+		[default] interface ISySalObject;
+		interface IPlateChanger;
+	};
+};
+

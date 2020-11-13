@@ -1,0 +1,101 @@
+// VertigoScan.idl : IDL source for VertigoScan.dll
+//
+
+// This file will be processed by the MIDL tool to
+// produce the type library (VertigoScan.tlb) and marshalling code.
+
+import "oaidl.idl";
+import "ocidl.idl";
+import "..\Common\Connection.h";
+import "..\Common\Config.h";
+import "..\Common\GUIdefs.h";
+import "..\Common\SySalObject2Structs.h";
+	[
+		object,
+		uuid(C022EEAD-748A-11D3-A47B-E89C0BCE9720),
+	
+		helpstring("ISySalObject Interface"),
+		pointer_default(unique)
+	]
+	interface ISySalObject : IUnknown
+	{
+		[helpstring("method SetName")] HRESULT SetName(ConnectionName name);
+		[helpstring("method GetName")] HRESULT GetName(ConnectionName name);
+		[helpstring("method SetConfig")] HRESULT SetConfig(SySalConfig *pConfig);
+		[helpstring("method GetConfig")] HRESULT GetConfig(SySalConfig *pConfig);
+		[helpstring("method EditConfig")] HRESULT EditConfig(SySalConfig *pConfig, HSySalHANDLE hWnd);
+		[helpstring("method EnableMonitor")] HRESULT EnableMonitor(boolean bEnable);
+		[helpstring("method GetNumberOfConnections")] HRESULT GetNumberOfConnections(int *pNumber);
+		[helpstring("method SetConnection")] HRESULT SetConnection(int n, SySalConnection connection);
+		[helpstring("method GetConnection")] HRESULT GetConnection(int n, SySalConnection *pConnection);
+		[helpstring("method GetIcon")] HRESULT GetIcon(int n, HSySalHICON *pHICON);
+		[helpstring("method GetClassName")] HRESULT GetClassName(ConnectionName name);
+		[helpstring("method SyncExec")] HRESULT SyncExec();
+		[helpstring("method AsyncExec")] HRESULT AsyncExec(HSySalHANDLE HNotifyStatusChangeEvent);
+		[helpstring("method AsyncCheckStatus")] HRESULT AsyncCheckStatus(long *pStatus);
+		[helpstring("method AsyncWait")] HRESULT AsyncWait();
+		[helpstring("method AsyncPause")] HRESULT AsyncPause();
+		[helpstring("method AsyncStop")] HRESULT AsyncStop();
+		[helpstring("method AsyncResume")] HRESULT AsyncResume();
+		[helpstring("method IsReady")] HRESULT IsReady(long *pWrongConn, long *pRetCode);
+	};
+	[
+		object,
+		uuid(455b5e46-0c34-443e-879b-53941a71026f),
+	
+		helpstring("ISySalObjectMachineDefaults Interface"),
+		pointer_default(unique)
+	]
+	interface ISySalObjectMachineDefaults : IUnknown
+	{
+		[helpstring("method SetMachineDefaults")] HRESULT SetMachineDefaults(SySalConfig *pConfig);
+		[helpstring("method GetMachineDefaults")] HRESULT GetMachineDefaults(SySalConfig *pConfig);
+		[helpstring("method EditMachineDefaults")] HRESULT EditMachineDefaults(SySalConfig *pConfig, HSySalHANDLE hWnd);
+	};
+	[
+		object,
+		uuid(68659AF8-12E6-4EF9-9877-A7DD63BF1950),
+	
+		helpstring("ISySalObject2 Interface"),
+		pointer_default(unique)
+	]
+	interface ISySalObject2 : ISySalObject
+	{
+		[helpstring("method SetConfigManagerInterface")] HRESULT SetConfigManagerInterface(ConfigManagerInterface *pCMI);
+		[helpstring("method GetCLSID")] HRESULT GetCLSID(CLSID *pCLSID);
+	};
+
+
+	[
+		object,
+		uuid(b1785d91-3ecf-403b-bbe9-3b14cb806617),
+	
+		helpstring("IDAQSynchronize Interface"),
+		pointer_default(unique)
+	]
+	interface IDAQSynchronize : IUnknown
+	{
+		[helpstring("method IsSyncEnabled")] HRESULT IsSyncEnabled(boolean *pbIsEnabled);
+	};
+
+[
+	uuid(a764e28d-4a33-49a6-b214-4e59f175154d),
+	version(7.0),
+	helpstring("VertigoScan 7.1 Type Library")
+]
+library VERTIGOSCAN7Lib
+{
+	importlib("stdole32.tlb");
+	importlib("stdole2.tlb");
+
+	[
+		uuid(b3b78a42-0c68-49ee-a2e6-b93b248eccd4),
+		helpstring("VertigoScan7 Class")
+	]
+	coclass VertigoScan7
+	{
+		[default] interface ISySalObject;
+		interface ISySalObject2;
+		interface IDAQSynchronize;
+	};
+};

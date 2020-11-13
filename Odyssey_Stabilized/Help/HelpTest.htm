@@ -1,0 +1,140 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" >
+<HTML>
+	<HEAD>
+		<TITLE>Test Mode</TITLE>
+		<META NAME="GENERATOR" Content="Microsoft Visual Studio 7.0">
+	</HEAD>
+	<BODY>
+		<P><FONT face="Arial" color="#000066" size="5"><EM> Odyssey&nbsp;Test Mode</EM></FONT></P>
+		<FONT face="Arial"><EM><FONT size="4">
+					<HR width="100%" SIZE="2">
+					<P align="justify">
+				</FONT></EM><FONT size="2">With this&nbsp;utility the user can test 
+				and&nbsp;tune the&nbsp;various features of Odyssey image processing 
+				functionalities.</FONT></P>
+			<P align="justify"><IMG alt="" src="HelpTest.gif"></P>
+			<P align="justify"></P>
+			<UL>
+				<LI>
+					<DIV align="justify"><FONT size="2"><FONT color="#ff0033"><FONT size="2"><FONT color="#ff0033"> Active&nbsp;Program</FONT><FONT color="black">: 
+										selects the image processing program to be used for the next tests.</FONT></FONT></FONT></FONT></DIV>
+					<DIV align="justify"></DIV>
+				<LI>
+					<DIV align="justify">
+						<FONT face="Arial" size="2"><FONT face="Arial" size="2"><FONT size="2"><FONT face="Arial"><FONT size="2">
+											<FONT face="Arial"><FONT color="#ff0033">Find Clusters button</FONT>:&nbsp;synchronously 
+												finds the clusters in the present image. The number of clusters found is shown 
+												in the row below.</FONT></FONT></FONT></FONT></FONT></FONT>
+					</DIV>
+					<DIV align="justify"></DIV>
+				<LI>
+					<DIV align="justify"><FONT size="2"><FONT color="#ff0033"><FONT size="2"><FONT color="#ff0033"><FONT size="2"><FONT color="black"><FONT color="#ff0033">
+													Max Clusters</FONT> :&nbsp;size of the memory space to be allocated for 
+												clusters; if clusters exceed this buffer, the cluster&nbsp;finding test fails 
+												with a return value of 0.</FONT></FONT></FONT></FONT></FONT></FONT></DIV>
+				<LI>
+					<DIV align="justify"><FONT size="2">
+							<DIV align="justify"><FONT size="2"><FONT color="#ff0033"><FONT size="2"><FONT color="black"><FONT color="#ff0033">
+													Compute Frame Rate</FONT>: if this check box is enabled, when Find Clusters 
+												is pressed, several cycles are executed, so the sustainable frame rate in 
+												synchronous mode is computed. This value depends on the camera clock, the image 
+												processing workload, the&nbsp;number of clusters in the image, and 
+												the&nbsp;Windows thread timeslice. For cameras faster than 60 fps, the output 
+												of this measurement is likely to be just a fraction of the camera frame rate, 
+												since frames are systematically missed (typically, the synchronous processing 
+												frame rate is 2/3 or 1/2 of the camera frame rate).</FONT></FONT></FONT></FONT></DIV>
+						</FONT>
+					</DIV>
+				<LI>
+					<DIV align="justify"><FONT size="2">
+							<DIV align="justify">
+						</FONT><FONT size="2"><FONT size="2"><FONT color="#ff0033"><FONT size="2"><FONT color="#ff0033">Dump 
+											Clusters</FONT><FONT color="black">: dumps the list of the clusters found in 
+											the last frame (synchronous mode) or the list of clusters in all frames 
+											(asynchronous mode). The file path is specified in the edit box on the right, 
+											or can be selected interactively by clicking the adjacent button. In order for 
+											this command to make sense, at least one clustering process must have been 
+											executed. The file formats are listed below:<BR>
+											<STRONG>Synchronous mode:</STRONG>&nbsp;<EM>0 Count&nbsp;0 ID X Y Area InertiaXX 
+												InertiaYY InertiaXY<BR>
+											</EM><STRONG>Asynchronous mode:</STRONG><EM> Image Count Time ID X Y Area InertiaXX 
+												InertiaYY InertiaXY<BR>
+											</EM>The asynchronous mode format is compatible with the synchronous mode 
+											format.</FONT></FONT></FONT></FONT></DIV>
+			</DIV> </FONT>
+		<LI>
+			<DIV align="justify"><FONT size="2"><FONT color="black"><FONT size="2"><FONT size="2"><FONT color="#ff0033"><FONT size="2"><FONT color="#ff0033">Dump 
+											Image</FONT><FONT color="black">:&nbsp;dumps the <STRONG>image taken in synchronous 
+												mode from which the&nbsp;last bunch of clusters&nbsp;has been produced</STRONG>. 
+											No image is dumped if&nbsp;the Find Clusters button has not been pressed 
+											previously. This&nbsp;function is intended&nbsp;for comparison studies with 
+											other image processing sequences; dumping the image along with its 
+											corresponding clusters allows one to check&nbsp;the performance&nbsp;of the 
+											whole image processing chain in offline mode. The image is dumped in&nbsp;8 bit 
+											Windows BMP format to the file specified in the edit box on the right. The user 
+											can select the file path interactively by clicking the adjacent button. </FONT>
+									</FONT></FONT></FONT></FONT></FONT></FONT>
+			</DIV>
+		<LI>
+			<DIV align="justify"><FONT size="2"><FONT color="#ff0033"><FONT size="2"><FONT color="#ff0033">Asynchronously 
+								find clusters</FONT><FONT color="black">: runs the asynchronous image 
+								processing chain for the specified program, and displays timing information. In 
+								this case, clusters cannot be shown and their count is not displayed, but they 
+								can be saved to file. In this working mode, the camera frame rate is always 
+								sustained (provided it is not too fast for the grabbing hardware). The timing 
+								information can be interesting to check the effect of splitting the clustering 
+								procedure over several processors, and to study how the clustering times vary 
+								with the number of grains in the images.</FONT></FONT></FONT></FONT></DIV>
+			<DIV align="justify"></DIV>
+		<LI>
+			<DIV align="justify">
+				<FONT size="2"><FONT color="#ff0033">Images</FONT>:&nbsp;the number of images to be 
+					taken in asynchronous mode.</FONT>&nbsp;
+			</DIV>
+		<LI>
+			<DIV align="justify"><FONT size="2"><FONT face="Arial"><FONT color="#ff0033">Show Clusters</FONT>: 
+						shows/hides the clusters found in synchronous mode on the secondary display. 
+						For each cluster, a circle is drawn with the center in the cluster center of 
+						gravity and with a radius increasing with increasing cluster area.</FONT></FONT></DIV>
+		<LI>
+			<DIV align="justify"><FONT size="2"><FONT size="2"><FONT face="Arial"><FONT color="#ff0033">Make 
+								Flat Field Image</FONT>: builds an .r8 file with a flat field compensation 
+							image by averaging several images. For best results, the images should be taken 
+							outside of the emulsion, exactly at the gray level that will be used in normal 
+							operation.</FONT></FONT></FONT></DIV>
+		</FONT>
+		<LI>
+			<DIV align="justify"></FONT></FONT><FONT size="2"><FONT face="Arial"><FONT color="#ff0033">Images 
+							to use</FONT> :&nbsp;the number of images to be averaged&nbsp;to estimate 
+						the flat field image.</FONT></FONT>&nbsp;
+			</DIV>
+		<LI>
+			<DIV align="justify">
+				<FONT size="2"><FONT size="2"><FONT face="Arial"><FONT color="#ff0033">Gray Level</FONT>: 
+							estimates the gray level and saturation on the present image.</FONT></FONT></FONT>
+			</DIV>
+		<LI>
+			<DIV align="justify">
+				<FONT face="Arial" size="2"><FONT face="Arial" size="2"><FONT size="2"><FONT face="Arial"><FONT color="#ff0033">
+									Test Automatic Light Control</FONT>: starts the automatic light control 
+								procedure</FONT></FONT></FONT></FONT><FONT face="Arial" size="2">
+				.&nbsp;This should&nbsp;be done&nbsp;once before optimizing the image 
+				processing parameters, to ensure that the real operating conditions are 
+				reproduced during setup.
+			</DIV>
+		<LI>
+			<DIV align="justify">
+				<FONT face="Arial" size="2"><FONT face="Arial" size="2"><FONT size="2"><FONT face="Arial"><FONT color="#ff0033">
+									Inquire</FONT>: inquires some hardware features. Presently the maximum 
+								number of asynchronous frames and the actual camera frame rate are returned. 
+								The first depends on the RAM configuration of the Matrox Odyssey and of the 
+								host PC; the second is measured by taking several images and averaging the 
+								cycle times.</FONT></FONT></FONT></FONT>
+			</DIV>
+		<LI>
+			<DIV align="justify"><FONT face="Arial" size="2"><FONT face="Arial" size="2"><FONT size="2"><FONT face="Arial"><FONT color="#ff0033">Exit</FONT>: 
+								exits and returns to the <A href="HelpConfig.htm">Edit Configuration</A> mode.</FONT></FONT></FONT></FONT></FONT></DIV>
+		</LI>
+		</UL></FONT>
+	</BODY>
+</HTML>

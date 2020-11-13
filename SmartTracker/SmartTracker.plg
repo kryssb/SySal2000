@@ -1,0 +1,75 @@
+<html>
+<body>
+<pre>
+<h1>Build Log</h1>
+<h3>
+--------------------Configuration: SmartTracker - Win32 Release MinSize--------------------
+</h3>
+<h3>Command Lines</h3>
+Creating temporary file "C:\DOCUME~1\kryss\LOCALS~1\Temp\RSP1C0.tmp" with contents
+[
+/nologo /MD /W3 /GX /O1 /I "..\Common" /D "WIN32" /D "NDEBUG" /D "_WINDOWS" /D "_WINDLL" /D "_AFXDLL" /D "_MBCS" /D "_USRDLL" /D "_ATL_DLL" /Fp"ReleaseMinSize/SmartTracker.pch" /Yu"stdafx.h" /Fo"ReleaseMinSize/" /Fd"ReleaseMinSize/" /FD /c 
+"K:\SySal2\SmartTracker\SmartTrackerClass.cpp"
+]
+Creating command line "cl.exe @C:\DOCUME~1\kryss\LOCALS~1\Temp\RSP1C0.tmp" 
+Creating temporary file "C:\DOCUME~1\kryss\LOCALS~1\Temp\RSP1C1.tmp" with contents
+[
+/nologo /subsystem:windows /dll /incremental:no /pdb:"ReleaseMinSize/SmartTracker.pdb" /machine:I386 /def:".\SmartTracker.def" /out:"ReleaseMinSize/SmartTracker.dll" /implib:"ReleaseMinSize/SmartTracker.lib" 
+.\ReleaseMinSize\EditConfig.obj
+.\ReleaseMinSize\SmartTracker.obj
+.\ReleaseMinSize\SmartTrackerClass.obj
+.\ReleaseMinSize\StdAfx.obj
+.\ReleaseMinSize\SmartTracker.res
+]
+Creating command line "link.exe @C:\DOCUME~1\kryss\LOCALS~1\Temp\RSP1C1.tmp"
+Creating temporary file "C:\DOCUME~1\kryss\LOCALS~1\Temp\RSP1C2.bat" with contents
+[
+@echo off
+regsvr32 /s /c ".\ReleaseMinSize\SmartTracker.dll"
+echo regsvr32 exec. time > ".\ReleaseMinSize\regsvr32.trg"
+]
+Creating command line "C:\DOCUME~1\kryss\LOCALS~1\Temp\RSP1C2.bat"
+Compiling...
+SmartTrackerClass.cpp
+K:\SySal2\SmartTracker\..\Common\Vectors.h(24) : warning C4244: 'return' : conversion from 'double' to 'float', possible loss of data
+K:\SySal2\SmartTracker\SmartTrackerClass.cpp(254) : warning C4244: '=' : conversion from 'unsigned int' to 'float', possible loss of data
+K:\SySal2\SmartTracker\SmartTrackerClass.cpp(255) : warning C4244: '=' : conversion from 'unsigned int' to 'float', possible loss of data
+K:\SySal2\SmartTracker\SmartTrackerClass.cpp(258) : warning C4244: '=' : conversion from 'unsigned int' to 'float', possible loss of data
+K:\SySal2\SmartTracker\SmartTrackerClass.cpp(259) : warning C4244: '=' : conversion from 'unsigned int' to 'float', possible loss of data
+K:\SySal2\SmartTracker\SmartTrackerClass.cpp(262) : warning C4244: '=' : conversion from 'unsigned int' to 'float', possible loss of data
+K:\SySal2\SmartTracker\SmartTrackerClass.cpp(263) : warning C4244: '=' : conversion from 'unsigned int' to 'float', possible loss of data
+K:\SySal2\SmartTracker\SmartTrackerClass.cpp(266) : warning C4244: '=' : conversion from 'unsigned int' to 'float', possible loss of data
+K:\SySal2\SmartTracker\SmartTrackerClass.cpp(267) : warning C4244: '=' : conversion from 'unsigned int' to 'float', possible loss of data
+K:\SySal2\SmartTracker\SmartTrackerClass.cpp(303) : warning C4244: 'initializing' : conversion from 'double' to 'float', possible loss of data
+K:\SySal2\SmartTracker\SmartTrackerClass.cpp(440) : warning C4244: '=' : conversion from 'double' to 'int', possible loss of data
+K:\SySal2\SmartTracker\SmartTrackerClass.cpp(441) : warning C4244: '=' : conversion from 'double' to 'int', possible loss of data
+K:\SySal2\SmartTracker\SmartTrackerClass.cpp(491) : warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+K:\SySal2\SmartTracker\SmartTrackerClass.cpp(492) : warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+K:\SySal2\SmartTracker\SmartTrackerClass.cpp(522) : warning C4244: 'argument' : conversion from 'int' to 'float', possible loss of data
+K:\SySal2\SmartTracker\SmartTrackerClass.cpp(523) : warning C4244: 'argument' : conversion from 'int' to 'float', possible loss of data
+K:\SySal2\SmartTracker\SmartTrackerClass.cpp(524) : warning C4244: 'argument' : conversion from 'int' to 'float', possible loss of data
+K:\SySal2\SmartTracker\SmartTrackerClass.cpp(524) : warning C4244: 'argument' : conversion from 'int' to 'float', possible loss of data
+K:\SySal2\SmartTracker\SmartTrackerClass.cpp(541) : warning C4244: 'argument' : conversion from 'int' to 'float', possible loss of data
+K:\SySal2\SmartTracker\SmartTrackerClass.cpp(542) : warning C4244: 'argument' : conversion from 'int' to 'float', possible loss of data
+K:\SySal2\SmartTracker\SmartTrackerClass.cpp(563) : warning C4244: 'argument' : conversion from 'int' to 'float', possible loss of data
+K:\SySal2\SmartTracker\SmartTrackerClass.cpp(564) : warning C4244: 'argument' : conversion from 'int' to 'float', possible loss of data
+K:\SySal2\SmartTracker\SmartTrackerClass.cpp(565) : warning C4244: 'argument' : conversion from 'int' to 'float', possible loss of data
+K:\SySal2\SmartTracker\SmartTrackerClass.cpp(565) : warning C4244: 'argument' : conversion from 'int' to 'float', possible loss of data
+K:\SySal2\SmartTracker\SmartTrackerClass.cpp(396) : warning C4101: 'SameLay' : unreferenced local variable
+K:\SySal2\SmartTracker\SmartTrackerClass.cpp(698) : warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+K:\SySal2\SmartTracker\SmartTrackerClass.cpp(703) : warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+K:\SySal2\SmartTracker\SmartTrackerClass.cpp(704) : warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+K:\SySal2\SmartTracker\SmartTrackerClass.cpp(771) : warning C4101: 'CellNum' : unreferenced local variable
+Linking...
+   Creating library ReleaseMinSize/SmartTracker.lib and object ReleaseMinSize/SmartTracker.exp
+LINK : warning LNK4089: all references to "OLEAUT32.dll" discarded by /OPT:REF
+<h3>Output Window</h3>
+Performing registration
+
+
+
+<h3>Results</h3>
+SmartTracker.dll - 0 error(s), 30 warning(s)
+</pre>
+</body>
+</html>

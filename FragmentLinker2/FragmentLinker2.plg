@@ -1,0 +1,95 @@
+<html>
+<body>
+<pre>
+<h1>Build Log</h1>
+<h3>
+--------------------Configuration: FragmentLinker2 - Win32 Release MinSize--------------------
+</h3>
+<h3>Command Lines</h3>
+Creating temporary file "C:\DOCUME~1\Kryss\LOCALS~1\Temp\RSP5E.tmp" with contents
+[
+/nologo /MD /W3 /GX /O2 /D "WIN32" /D "NDEBUG" /D "_WINDOWS" /D "_WINDLL" /D "_AFXDLL" /D "_MBCS" /D "_USRDLL" /D "_ATL_DLL" /Fp"ReleaseMinSize/FragmentLinker2.pch" /Yu"stdafx.h" /Fo"ReleaseMinSize/" /Fd"ReleaseMinSize/" /FD /c 
+"D:\SySal2\FragmentLinker2\FragmentLinker2.cpp"
+"D:\SySal2\FragmentLinker2\FragmentLinkerClass.cpp"
+]
+Creating command line "cl.exe @C:\DOCUME~1\Kryss\LOCALS~1\Temp\RSP5E.tmp" 
+Creating temporary file "C:\DOCUME~1\Kryss\LOCALS~1\Temp\RSP5F.tmp" with contents
+[
+/nologo /subsystem:windows /dll /incremental:no /pdb:"ReleaseMinSize/FragmentLinker2.pdb" /machine:I386 /def:".\FragmentLinker2.def" /out:"ReleaseMinSize/FragmentLinker2.dll" /implib:"ReleaseMinSize/FragmentLinker2.lib" 
+.\ReleaseMinSize\FragmentLinker2.obj
+.\ReleaseMinSize\FragmentLinkerClass.obj
+.\ReleaseMinSize\StdAfx.obj
+.\ReleaseMinSize\FragmentLinker2.res
+]
+Creating command line "link.exe @C:\DOCUME~1\Kryss\LOCALS~1\Temp\RSP5F.tmp"
+Creating temporary file "C:\DOCUME~1\Kryss\LOCALS~1\Temp\RSP60.bat" with contents
+[
+@echo off
+regsvr32 /s /c ".\ReleaseMinSize\FragmentLinker2.dll"
+echo regsvr32 exec. time > ".\ReleaseMinSize\regsvr32.trg"
+]
+Creating command line "C:\DOCUME~1\Kryss\LOCALS~1\Temp\RSP60.bat"
+Compiling...
+FragmentLinker2.cpp
+FragmentLinkerClass.cpp
+D:\SySal2\FragmentLinker2\FragmentLinkerClass.cpp(67) : warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+D:\SySal2\FragmentLinker2\FragmentLinkerClass.cpp(68) : warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+D:\SySal2\FragmentLinker2\FragmentLinkerClass.cpp(91) : warning C4018: '<' : signed/unsigned mismatch
+D:\SySal2\FragmentLinker2\FragmentLinkerClass.cpp(96) : warning C4018: '<' : signed/unsigned mismatch
+D:\SySal2\FragmentLinker2\FragmentLinkerClass.cpp(101) : warning C4018: '<=' : signed/unsigned mismatch
+D:\SySal2\FragmentLinker2\FragmentLinkerClass.cpp(105) : warning C4018: '<' : signed/unsigned mismatch
+D:\SySal2\FragmentLinker2\FragmentLinkerClass.cpp(105) : warning C4018: '!=' : signed/unsigned mismatch
+D:\SySal2\FragmentLinker2\FragmentLinkerClass.cpp(109) : warning C4018: '<' : signed/unsigned mismatch
+D:\SySal2\FragmentLinker2\FragmentLinkerClass.cpp(109) : warning C4018: '!=' : signed/unsigned mismatch
+D:\SySal2\FragmentLinker2\FragmentLinkerClass.cpp(118) : warning C4018: '<' : signed/unsigned mismatch
+D:\SySal2\FragmentLinker2\FragmentLinkerClass.cpp(123) : warning C4018: '<' : signed/unsigned mismatch
+D:\SySal2\FragmentLinker2\FragmentLinkerClass.cpp(130) : warning C4018: '<' : signed/unsigned mismatch
+D:\SySal2\FragmentLinker2\FragmentLinkerClass.cpp(161) : warning C4018: '<' : signed/unsigned mismatch
+D:\SySal2\FragmentLinker2\FragmentLinkerClass.cpp(212) : warning C4018: '<' : signed/unsigned mismatch
+D:\SySal2\FragmentLinker2\FragmentLinkerClass.cpp(216) : warning C4244: '=' : conversion from 'float' to 'int', possible loss of data
+D:\SySal2\FragmentLinker2\FragmentLinkerClass.cpp(217) : warning C4244: '=' : conversion from 'float' to 'int', possible loss of data
+D:\SySal2\FragmentLinker2\FragmentLinkerClass.cpp(224) : warning C4018: '<' : signed/unsigned mismatch
+D:\SySal2\FragmentLinker2\FragmentLinkerClass.cpp(253) : warning C4018: '<' : signed/unsigned mismatch
+D:\SySal2\FragmentLinker2\FragmentLinkerClass.cpp(260) : warning C4244: '=' : conversion from 'float' to 'int', possible loss of data
+D:\SySal2\FragmentLinker2\FragmentLinkerClass.cpp(261) : warning C4244: '=' : conversion from 'float' to 'int', possible loss of data
+D:\SySal2\FragmentLinker2\FragmentLinkerClass.cpp(268) : warning C4018: '<' : signed/unsigned mismatch
+D:\SySal2\FragmentLinker2\FragmentLinkerClass.cpp(273) : warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+D:\SySal2\FragmentLinker2\FragmentLinkerClass.cpp(283) : warning C4018: '<=' : signed/unsigned mismatch
+D:\SySal2\FragmentLinker2\FragmentLinkerClass.cpp(349) : warning C4018: '<' : signed/unsigned mismatch
+D:\SySal2\FragmentLinker2\FragmentLinkerClass.cpp(364) : warning C4018: '<' : signed/unsigned mismatch
+D:\SySal2\FragmentLinker2\FragmentLinkerClass.cpp(365) : warning C4018: '<' : signed/unsigned mismatch
+D:\SySal2\FragmentLinker2\FragmentLinkerClass.cpp(378) : warning C4018: '<' : signed/unsigned mismatch
+D:\SySal2\FragmentLinker2\FragmentLinkerClass.cpp(381) : warning C4018: '>=' : signed/unsigned mismatch
+D:\SySal2\FragmentLinker2\FragmentLinkerClass.cpp(402) : warning C4800: 'unsigned char' : forcing value to bool 'true' or 'false' (performance warning)
+D:\SySal2\FragmentLinker2\FragmentLinkerClass.cpp(422) : warning C4018: '<' : signed/unsigned mismatch
+D:\SySal2\FragmentLinker2\FragmentLinkerClass.cpp(431) : warning C4244: '=' : conversion from 'float' to 'int', possible loss of data
+D:\SySal2\FragmentLinker2\FragmentLinkerClass.cpp(432) : warning C4244: '=' : conversion from 'float' to 'int', possible loss of data
+D:\SySal2\FragmentLinker2\FragmentLinkerClass.cpp(447) : warning C4018: '<' : signed/unsigned mismatch
+D:\SySal2\FragmentLinker2\FragmentLinkerClass.cpp(456) : warning C4244: '=' : conversion from 'float' to 'int', possible loss of data
+D:\SySal2\FragmentLinker2\FragmentLinkerClass.cpp(457) : warning C4244: '=' : conversion from 'float' to 'int', possible loss of data
+D:\SySal2\FragmentLinker2\FragmentLinkerClass.cpp(430) : warning C4101: 'iix' : unreferenced local variable
+D:\SySal2\FragmentLinker2\FragmentLinkerClass.cpp(430) : warning C4101: 'iiy' : unreferenced local variable
+D:\SySal2\FragmentLinker2\FragmentLinkerClass.cpp(455) : warning C4101: 'iix' : unreferenced local variable
+D:\SySal2\FragmentLinker2\FragmentLinkerClass.cpp(455) : warning C4101: 'iiy' : unreferenced local variable
+D:\SySal2\FragmentLinker2\FragmentLinkerClass.cpp(523) : warning C4018: '<' : signed/unsigned mismatch
+D:\SySal2\FragmentLinker2\FragmentLinkerClass.cpp(543) : warning C4018: '<' : signed/unsigned mismatch
+D:\SySal2\FragmentLinker2\FragmentLinkerClass.cpp(569) : warning C4018: '<' : signed/unsigned mismatch
+D:\SySal2\FragmentLinker2\FragmentLinkerClass.cpp(578) : warning C4018: '<' : signed/unsigned mismatch
+D:\SySal2\FragmentLinker2\FragmentLinkerClass.cpp(618) : warning C4018: '<' : signed/unsigned mismatch
+D:\SySal2\FragmentLinker2\FragmentLinkerClass.cpp(627) : warning C4018: '<' : signed/unsigned mismatch
+D:\SySal2\FragmentLinker2\FragmentLinkerClass.cpp(654) : warning C4018: '<' : signed/unsigned mismatch
+D:\SySal2\FragmentLinker2\FragmentLinkerClass.cpp(698) : warning C4018: '<' : signed/unsigned mismatch
+Generating Code...
+Linking...
+   Creating library ReleaseMinSize/FragmentLinker2.lib and object ReleaseMinSize/FragmentLinker2.exp
+LINK : warning LNK4089: all references to "OLEAUT32.dll" discarded by /OPT:REF
+<h3>Output Window</h3>
+Performing registration
+
+
+
+<h3>Results</h3>
+FragmentLinker2.dll - 0 error(s), 48 warning(s)
+</pre>
+</body>
+</html>

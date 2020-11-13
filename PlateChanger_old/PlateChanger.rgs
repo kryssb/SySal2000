@@ -1,0 +1,25 @@
+HKCR
+{
+	PlateChanger.PlateChanger.1 = s 'PlateChanger Class'
+	{
+		CLSID = s '{25e7bc2b-b7a1-4a42-a687-5bb815a31adf}'
+	}
+	PlateChanger.PlateChanger = s 'PlateChanger Class'
+	{
+		CLSID = s '{25e7bc2b-b7a1-4a42-a687-5bb815a31adf}'
+		CurVer = s 'FlexStage.FlexStage.1'
+	}
+	NoRemove CLSID
+	{
+		ForceRemove {25e7bc2b-b7a1-4a42-a687-5bb815a31adf} = s 'PlateChanger Class'
+		{
+			ProgID = s 'PlateChanger.PlateChanger.1'
+			VersionIndependentProgID = s 'PlateChanger.PlateChanger'
+			InprocServer32 = s '%MODULE%'
+			{
+				val ThreadingModel = s 'Free'
+			}
+			'TypeLib' = s '{17db0e83-2ed1-4d98-b36d-b00ae02545fb}'
+		}
+	}
+}

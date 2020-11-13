@@ -1,0 +1,214 @@
+(***********************************************************************
+
+                    Mathematica-Compatible Notebook
+
+This notebook can be used on any computer system with Mathematica 3.0,
+MathReader 3.0, or any compatible application. The data for the notebook 
+starts with the line of stars above.
+
+To get the notebook into a Mathematica-compatible application, do one of 
+the following:
+
+* Save the data starting with the line of stars above into a file
+  with a name ending in .nb, then open the file inside the application;
+
+* Copy the data starting with the line of stars above to the
+  clipboard, then use the Paste menu command inside the application.
+
+Data for notebooks contains only printable 7-bit ASCII and can be
+sent directly in email or through ftp in text mode.  Newlines can be
+CR, LF or CRLF (Unix, Macintosh or MS-DOS style).
+
+NOTE: If you modify the data for this notebook not in a Mathematica-
+compatible application, you must delete the line below containing the 
+word CacheID, otherwise Mathematica-compatible applications may try to 
+use invalid cache data.
+
+For more information on notebooks and Mathematica-compatible 
+applications, contact Wolfram Research:
+  web: http://www.wolfram.com
+  email: info@wolfram.com
+  phone: +1-217-398-0700 (U.S.)
+
+Notebook reader applications are available free of charge from 
+Wolfram Research.
+***********************************************************************)
+
+(*CacheID: 232*)
+
+
+(*NotebookFileLineBreakTest
+NotebookFileLineBreakTest*)
+(*NotebookOptionsPosition[      4974,        149]*)
+(*NotebookOutlinePosition[      5623,        172]*)
+(*  CellTagsIndexPosition[      5579,        168]*)
+(*WindowFrame->Normal*)
+
+
+
+Notebook[{
+
+Cell[CellGroupData[{
+Cell[BoxData[
+    \(d\  = 
+      \ {fx, fy} - {{mxx, mxy}, {myx, myy}}.{px, py} - {dx, dy} - 
+        dz\ {ax\ sx, ay\ sy}\)], "Input"],
+
+Cell[BoxData[
+    \({\(-dx\) + fx - mxx\ px - mxy\ py - ax\ dz\ sx, 
+      \(-dy\) + fy - myx\ px - myy\ py - ay\ dz\ sy}\)], "Output"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+    \(F = d.d\)], "Input"],
+
+Cell[BoxData[
+    \(\((\(-dx\) + fx - mxx\ px - mxy\ py - ax\ dz\ sx)\)\^2 + 
+      \((\(-dy\) + fy - myx\ px - myy\ py - ay\ dz\ sy)\)\^2\)], "Output"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+    \(Eqs = 
+      Map[ExpandAll[1/2\ D[F, #]\  == \ 0]&, {mxx, mxy, myx, myy, dx, dy, ax, 
+          ay}]\)], "Input"],
+
+Cell[BoxData[
+    \({dx\ px - fx\ px + mxx\ px\^2 + mxy\ px\ py + ax\ dz\ px\ sx == 0, 
+      dx\ py - fx\ py + mxx\ px\ py + mxy\ py\^2 + ax\ dz\ py\ sx == 0, 
+      dy\ px - fy\ px + myx\ px\^2 + myy\ px\ py + ay\ dz\ px\ sy == 0, 
+      dy\ py - fy\ py + myx\ px\ py + myy\ py\^2 + ay\ dz\ py\ sy == 0, 
+      dx - fx + mxx\ px + mxy\ py + ax\ dz\ sx == 0, 
+      dy - fy + myx\ px + myy\ py + ay\ dz\ sy == 0, 
+      dx\ dz\ sx - dz\ fx\ sx + dz\ mxx\ px\ sx + dz\ mxy\ py\ sx + 
+          ax\ dz\^2\ sx\^2 == 0, 
+      dy\ dz\ sy - dz\ fy\ sy + dz\ myx\ px\ sy + dz\ myy\ py\ sy + 
+          ay\ dz\^2\ sy\^2 == 0}\)], "Output"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+    \(CoeffMat = 
+      Table[Map[
+          D[Eqs[\([i, 1]\)], #]&, {mxx, mxy, myx, myy, dx, dy, ax, ay}], {i, 
+          8}]\)], "Input"],
+
+Cell[BoxData[
+    \({{px\^2, px\ py, 0, 0, px, 0, dz\ px\ sx, 0}, {px\ py, py\^2, 0, 0, py, 
+        0, dz\ py\ sx, 0}, {0, 0, px\^2, px\ py, 0, px, 0, dz\ px\ sy}, {0, 
+        0, px\ py, py\^2, 0, py, 0, dz\ py\ sy}, {px, py, 0, 0, 1, 0, dz\ sx, 
+        0}, {0, 0, px, py, 0, 1, 0, dz\ sy}, {dz\ px\ sx, dz\ py\ sx, 0, 0, 
+        dz\ sx, 0, dz\^2\ sx\^2, 0}, {0, 0, dz\ px\ sy, dz\ py\ sy, 0, 
+        dz\ sy, 0, dz\^2\ sy\^2}}\)], "Output"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+    \(MatrixForm[CoeffMat]\)], "Input"],
+
+Cell[BoxData[
+    TagBox[
+      RowBox[{"(", GridBox[{
+            {\(px\^2\), \(px\ py\), "0", "0", "px", "0", \(dz\ px\ sx\), "0"},
+            
+            {\(px\ py\), \(py\^2\), "0", "0", "py", "0", \(dz\ py\ sx\), "0"},
+            
+            {"0", "0", \(px\^2\), \(px\ py\), "0", "px", "0", \(dz\ px\ sy\)},
+            
+            {"0", "0", \(px\ py\), \(py\^2\), "0", "py", "0", \(dz\ py\ sy\)},
+            
+            {"px", "py", "0", "0", "1", "0", \(dz\ sx\), "0"},
+            {"0", "0", "px", "py", "0", "1", "0", \(dz\ sy\)},
+           
+             {\(dz\ px\ sx\), \(dz\ py\ sx\), "0", "0", \(dz\ sx\), "0", 
+              \(dz\^2\ sx\^2\), "0"},
+           
+             {"0", "0", \(dz\ px\ sy\), \(dz\ py\ sy\), "0", \(dz\ sy\), "0", 
+              \(dz\^2\ sy\^2\)}
+            }], ")"}],
+      (MatrixForm[ #]&)]], "Output"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+    \(SolVect = 
+      Table[\((\(-Eqs[\([i, 1]\)]\) /. {mxx -> 0, mxy -> 0, myx -> 0, 
+              myy -> 0, dx -> 0, dy -> 0, ax -> 0, ay -> 0})\), {i, 8}]\)], 
+  "Input"],
+
+Cell[BoxData[
+    \({fx\ px, fx\ py, fy\ px, fy\ py, fx, fy, dz\ fx\ sx, dz\ fy\ sy}\)], 
+  "Output"]
+}, Open  ]]
+},
+FrontEndVersion->"Microsoft Windows 3.0",
+ScreenRectangle->{{0, 1024}, {0, 700}},
+WindowSize->{826, 528},
+WindowMargins->{{0, Automatic}, {Automatic, 5}}
+]
+
+
+(***********************************************************************
+Cached data follows.  If you edit this Notebook file directly, not using
+Mathematica, you must remove the line containing CacheID at the top of 
+the file.  The cache data will then be recreated when you save this file 
+from within Mathematica.
+***********************************************************************)
+
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+
+(*NotebookFileOutline
+Notebook[{
+
+Cell[CellGroupData[{
+Cell[1731, 51, 135, 3, 30, "Input"],
+Cell[1869, 56, 135, 2, 29, "Output"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+Cell[2041, 63, 40, 1, 30, "Input"],
+Cell[2084, 66, 152, 2, 29, "Output"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+Cell[2273, 73, 133, 3, 30, "Input"],
+Cell[2409, 78, 633, 10, 105, "Output"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+Cell[3079, 93, 153, 4, 30, "Input"],
+Cell[3235, 99, 445, 6, 67, "Output"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+Cell[3717, 110, 53, 1, 30, "Input"],
+Cell[3773, 113, 855, 20, 168, "Output"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+Cell[4665, 138, 189, 4, 30, "Input"],
+Cell[4857, 144, 101, 2, 29, "Output"]
+}, Open  ]]
+}
+]
+*)
+
+
+
+
+(***********************************************************************
+End of Mathematica Notebook file.
+***********************************************************************)
+

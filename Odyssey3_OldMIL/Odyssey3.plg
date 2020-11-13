@@ -1,0 +1,218 @@
+<html>
+<body>
+<pre>
+<h1>Build Log</h1>
+<h3>
+--------------------Configuration: Odyssey3 - Win32 Release MinSize--------------------
+</h3>
+<h3>Command Lines</h3>
+Creating command line "rc.exe /l 0x409 /fo"ReleaseMinSize/Odyssey3.res" /d "NDEBUG" /d "_AFXDLL" "C:\sysal2000\Odyssey3\Odyssey3.rc"" 
+Creating temporary file "C:\DOCUME~1\scanner\LOCALS~1\Temp\RSP1F3.tmp" with contents
+[
+/nologo /MD /W3 /GX /O2 /Ob2 /I "Matrox\gnl\src\headers\common" /I "Matrox\gnl\src\headers\host" /I "..\Common" /I "Matrox\mil\include" /I "Matrox\onl\src\headers\common" /I "Matrox\onl\src\headers\host" /D "WIN32" /D "NDEBUG" /D "_WINDOWS" /D "_WINDLL" /D "_AFXDLL" /D "_MBCS" /D "_USRDLL" /D "_ATL_DLL" /Fp"ReleaseMinSize/Odyssey3.pch" /Yu"stdafx.h" /Fo"ReleaseMinSize/" /Fd"ReleaseMinSize/" /FD /c 
+"C:\sysal2000\Odyssey3\Clustering.cpp"
+"C:\sysal2000\Odyssey3\EditConfig.cpp"
+"C:\sysal2000\Odyssey3\GainCompensationDlg.cpp"
+"C:\sysal2000\Odyssey3\Globals.cpp"
+"C:\sysal2000\Odyssey3\MakeFilterEqualization.cpp"
+"C:\sysal2000\Odyssey3\Odyssey3.cpp"
+"C:\sysal2000\Odyssey3\OdysseyClass.cpp"
+"C:\sysal2000\Odyssey3\OdysseyData.cpp"
+"C:\sysal2000\Odyssey3\OptimizeProgramDlg.cpp"
+"C:\sysal2000\Odyssey3\SelectGrabBuffer.cpp"
+"C:\sysal2000\Odyssey3\TestConfig.cpp"
+"C:\sysal2000\Odyssey3\ThresholdMapDlg.cpp"
+"C:\sysal2000\Odyssey3\WndDisplay.cpp"
+]
+Creating command line "cl.exe @C:\DOCUME~1\scanner\LOCALS~1\Temp\RSP1F3.tmp" 
+Creating temporary file "C:\DOCUME~1\scanner\LOCALS~1\Temp\RSP1F4.tmp" with contents
+[
+/nologo /MD /W3 /GX /O2 /Ob2 /I "Matrox\gnl\src\headers\common" /I "Matrox\gnl\src\headers\host" /I "..\Common" /I "Matrox\mil\include" /I "Matrox\onl\src\headers\common" /I "Matrox\onl\src\headers\host" /D "WIN32" /D "NDEBUG" /D "_WINDOWS" /D "_WINDLL" /D "_AFXDLL" /D "_MBCS" /D "_USRDLL" /D "_ATL_DLL" /Fp"ReleaseMinSize/Odyssey3.pch" /Yc"stdafx.h" /Fo"ReleaseMinSize/" /Fd"ReleaseMinSize/" /FD /c 
+"C:\sysal2000\Odyssey3\StdAfx.cpp"
+]
+Creating command line "cl.exe @C:\DOCUME~1\scanner\LOCALS~1\Temp\RSP1F4.tmp" 
+Creating temporary file "C:\DOCUME~1\scanner\LOCALS~1\Temp\RSP1F5.tmp" with contents
+[
+/nologo /subsystem:windows /dll /incremental:no /pdb:"ReleaseMinSize/Odyssey3.pdb" /machine:I386 /def:".\Odyssey3.def" /out:"ReleaseMinSize/Odyssey3.dll" /implib:"ReleaseMinSize/Odyssey3.lib" 
+.\ReleaseMinSize\Clustering.obj
+.\ReleaseMinSize\EditConfig.obj
+.\ReleaseMinSize\GainCompensationDlg.obj
+.\ReleaseMinSize\Globals.obj
+.\ReleaseMinSize\MakeFilterEqualization.obj
+.\ReleaseMinSize\Odyssey3.obj
+.\ReleaseMinSize\OdysseyClass.obj
+.\ReleaseMinSize\OdysseyData.obj
+.\ReleaseMinSize\OptimizeProgramDlg.obj
+.\ReleaseMinSize\SelectGrabBuffer.obj
+.\ReleaseMinSize\StdAfx.obj
+.\ReleaseMinSize\TestConfig.obj
+.\ReleaseMinSize\ThresholdMapDlg.obj
+.\ReleaseMinSize\WndDisplay.obj
+.\ReleaseMinSize\Odyssey3.res
+.\htmlhelp.lib
+.\Matrox\onl\lib\obj\nt\odclib.lib
+]
+Creating command line "link.exe @C:\DOCUME~1\scanner\LOCALS~1\Temp\RSP1F5.tmp"
+Creating temporary file "C:\DOCUME~1\scanner\LOCALS~1\Temp\RSP1F6.bat" with contents
+[
+@echo off
+regsvr32 /s /c ".\ReleaseMinSize\Odyssey3.dll"
+echo regsvr32 exec. time > ".\ReleaseMinSize\regsvr32.trg"
+]
+Creating command line "C:\DOCUME~1\scanner\LOCALS~1\Temp\RSP1F6.bat"
+Compiling resources...
+Compiling...
+StdAfx.cpp
+
+NOTE: WINVER has been defined as 0x0500 or greater which enables
+Windows NT 5.0 and Windows 98 features. When these headers were released,
+Windows NT 5.0 beta 1 and Windows 98 beta 2.1 were the current versions.
+
+For this release when WINVER is defined as 0x0500 or greater, you can only
+build beta or test applications.  To build a retail application,
+set WINVER to 0x0400 or visit http://www.microsoft.com/msdn/sdk
+to see if retail Windows NT 5.0 or Windows 98 headers are available.
+
+See the SDK release notes for more information.
+
+Compiling...
+Clustering.cpp
+C:\sysal2000\Odyssey3\Clustering.cpp(322) : warning C4244: '=' : conversion from 'int' to 'float', possible loss of data
+EditConfig.cpp
+C:\sysal2000\Odyssey3\EditConfig.cpp(148) : warning C4244: 'argument' : conversion from 'float' to 'unsigned int', possible loss of data
+C:\sysal2000\Odyssey3\EditConfig.cpp(222) : warning C4018: '==' : signed/unsigned mismatch
+C:\sysal2000\Odyssey3\EditConfig.cpp(292) : warning C4018: '<' : signed/unsigned mismatch
+C:\sysal2000\Odyssey3\EditConfig.cpp(514) : warning C4018: '<' : signed/unsigned mismatch
+GainCompensationDlg.cpp
+C:\sysal2000\Odyssey3\GainCompensationDlg.cpp(137) : warning C4018: '<' : signed/unsigned mismatch
+C:\sysal2000\Odyssey3\GainCompensationDlg.cpp(138) : warning C4018: '<' : signed/unsigned mismatch
+C:\sysal2000\Odyssey3\GainCompensationDlg.cpp(148) : warning C4018: '<' : signed/unsigned mismatch
+C:\sysal2000\Odyssey3\GainCompensationDlg.cpp(149) : warning C4018: '<' : signed/unsigned mismatch
+C:\sysal2000\Odyssey3\GainCompensationDlg.cpp(155) : warning C4018: '<' : signed/unsigned mismatch
+C:\sysal2000\Odyssey3\GainCompensationDlg.cpp(156) : warning C4244: '+=' : conversion from 'double' to 'float', possible loss of data
+C:\sysal2000\Odyssey3\GainCompensationDlg.cpp(168) : warning C4018: '<' : signed/unsigned mismatch
+C:\sysal2000\Odyssey3\GainCompensationDlg.cpp(169) : warning C4018: '<' : signed/unsigned mismatch
+C:\sysal2000\Odyssey3\GainCompensationDlg.cpp(171) : warning C4244: '+=' : conversion from 'double' to 'float', possible loss of data
+C:\sysal2000\Odyssey3\GainCompensationDlg.cpp(173) : warning C4244: '=' : conversion from 'float' to 'unsigned short', possible loss of data
+C:\sysal2000\Odyssey3\GainCompensationDlg.cpp(212) : warning C4244: '=' : conversion from 'double' to 'int', possible loss of data
+C:\sysal2000\Odyssey3\GainCompensationDlg.cpp(213) : warning C4244: '=' : conversion from 'double' to 'int', possible loss of data
+Globals.cpp
+MakeFilterEqualization.cpp
+Odyssey3.cpp
+OdysseyClass.cpp
+C:\sysal2000\Odyssey3\OdysseyClass.cpp(157) : warning C4091: 'static ' : ignored on left of 'struct t_DisplayChooser' when no variable is declared
+C:\sysal2000\Odyssey3\OdysseyClass.cpp(651) : warning C4018: '<' : signed/unsigned mismatch
+C:\sysal2000\Odyssey3\OdysseyClass.cpp(734) : warning C4244: '=' : conversion from 'float' to 'unsigned short', possible loss of data
+C:\sysal2000\Odyssey3\OdysseyClass.cpp(1795) : warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+C:\sysal2000\Odyssey3\OdysseyClass.cpp(1796) : warning C4244: '=' : conversion from 'float' to 'int', possible loss of data
+C:\sysal2000\Odyssey3\OdysseyClass.cpp(1799) : warning C4018: '<' : signed/unsigned mismatch
+C:\sysal2000\Odyssey3\OdysseyClass.cpp(1866) : warning C4244: 'initializing' : conversion from 'double' to 'float', possible loss of data
+C:\sysal2000\Odyssey3\OdysseyClass.cpp(1871) : warning C4244: 'initializing' : conversion from 'double' to 'float', possible loss of data
+C:\sysal2000\Odyssey3\OdysseyClass.cpp(1986) : warning C4244: '=' : conversion from 'double' to 'int', possible loss of data
+C:\sysal2000\Odyssey3\OdysseyClass.cpp(2020) : warning C4244: '=' : conversion from 'double' to 'int', possible loss of data
+C:\sysal2000\Odyssey3\OdysseyClass.cpp(2104) : warning C4244: 'initializing' : conversion from 'double' to 'float', possible loss of data
+C:\sysal2000\Odyssey3\OdysseyClass.cpp(2105) : warning C4244: 'initializing' : conversion from 'float' to 'int', possible loss of data
+C:\sysal2000\Odyssey3\OdysseyClass.cpp(2156) : warning C4244: 'initializing' : conversion from 'double' to 'float', possible loss of data
+C:\sysal2000\Odyssey3\OdysseyClass.cpp(2157) : warning C4244: 'initializing' : conversion from 'double' to 'float', possible loss of data
+C:\sysal2000\Odyssey3\OdysseyClass.cpp(2159) : warning C4244: 'initializing' : conversion from 'double' to 'float', possible loss of data
+C:\sysal2000\Odyssey3\OdysseyClass.cpp(2160) : warning C4244: 'initializing' : conversion from 'double' to 'float', possible loss of data
+C:\sysal2000\Odyssey3\OdysseyClass.cpp(2238) : warning C4018: '<' : signed/unsigned mismatch
+C:\sysal2000\Odyssey3\OdysseyClass.cpp(2255) : warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+C:\sysal2000\Odyssey3\OdysseyClass.cpp(2348) : warning C4244: '=' : conversion from 'float' to 'unsigned char', possible loss of data
+C:\sysal2000\Odyssey3\OdysseyClass.cpp(2332) : warning C4101: 'j' : unreferenced local variable
+C:\sysal2000\Odyssey3\OdysseyClass.cpp(2451) : warning C4018: '>' : signed/unsigned mismatch
+C:\sysal2000\Odyssey3\OdysseyClass.cpp(2498) : warning C4244: '=' : conversion from '__int64' to 'unsigned char', possible loss of data
+C:\sysal2000\Odyssey3\OdysseyClass.cpp(2504) : warning C4244: 'initializing' : conversion from 'double' to 'float', possible loss of data
+C:\sysal2000\Odyssey3\OdysseyClass.cpp(2513) : warning C4244: 'initializing' : conversion from 'double' to 'float', possible loss of data
+C:\sysal2000\Odyssey3\OdysseyClass.cpp(2644) : warning C4244: '=' : conversion from 'float' to 'int', possible loss of data
+C:\sysal2000\Odyssey3\OdysseyClass.cpp(2655) : warning C4244: '=' : conversion from 'double' to 'int', possible loss of data
+C:\sysal2000\Odyssey3\OdysseyClass.cpp(2659) : warning C4244: '=' : conversion from 'double' to 'int', possible loss of data
+OdysseyData.cpp
+C:\sysal2000\Odyssey3\OdysseyData.cpp(94) : warning C4018: '!=' : signed/unsigned mismatch
+C:\sysal2000\Odyssey3\OdysseyData.cpp(140) : warning C4018: '<' : signed/unsigned mismatch
+OptimizeProgramDlg.cpp
+C:\sysal2000\Odyssey3\OptimizeProgramDlg.cpp(119) : warning C4018: '>=' : signed/unsigned mismatch
+C:\sysal2000\Odyssey3\OptimizeProgramDlg.cpp(119) : warning C4018: '<=' : signed/unsigned mismatch
+C:\sysal2000\Odyssey3\OptimizeProgramDlg.cpp(150) : warning C4244: '=' : conversion from 'float' to 'long', possible loss of data
+C:\sysal2000\Odyssey3\OptimizeProgramDlg.cpp(151) : warning C4244: '=' : conversion from 'float' to 'long', possible loss of data
+C:\sysal2000\Odyssey3\OptimizeProgramDlg.cpp(156) : warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+C:\sysal2000\Odyssey3\OptimizeProgramDlg.cpp(157) : warning C4244: '=' : conversion from 'double' to 'int', possible loss of data
+C:\sysal2000\Odyssey3\OptimizeProgramDlg.cpp(159) : warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+C:\sysal2000\Odyssey3\OptimizeProgramDlg.cpp(161) : warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+C:\sysal2000\Odyssey3\OptimizeProgramDlg.cpp(162) : warning C4244: '=' : conversion from 'double' to 'int', possible loss of data
+C:\sysal2000\Odyssey3\OptimizeProgramDlg.cpp(164) : warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+C:\sysal2000\Odyssey3\OptimizeProgramDlg.cpp(198) : warning C4244: '=' : conversion from 'int' to 'float', possible loss of data
+C:\sysal2000\Odyssey3\OptimizeProgramDlg.cpp(198) : warning C4244: 'argument' : conversion from 'float' to 'int', possible loss of data
+C:\sysal2000\Odyssey3\OptimizeProgramDlg.cpp(198) : warning C4244: 'argument' : conversion from 'float' to 'int', possible loss of data
+C:\sysal2000\Odyssey3\OptimizeProgramDlg.cpp(201) : warning C4244: 'argument' : conversion from 'float' to 'int', possible loss of data
+C:\sysal2000\Odyssey3\OptimizeProgramDlg.cpp(201) : warning C4244: 'argument' : conversion from 'float' to 'int', possible loss of data
+C:\sysal2000\Odyssey3\OptimizeProgramDlg.cpp(204) : warning C4244: 'argument' : conversion from 'float' to 'int', possible loss of data
+C:\sysal2000\Odyssey3\OptimizeProgramDlg.cpp(204) : warning C4244: 'argument' : conversion from 'float' to 'int', possible loss of data
+C:\sysal2000\Odyssey3\OptimizeProgramDlg.cpp(211) : warning C4244: '=' : conversion from 'int' to 'float', possible loss of data
+C:\sysal2000\Odyssey3\OptimizeProgramDlg.cpp(212) : warning C4244: 'argument' : conversion from 'float' to 'int', possible loss of data
+C:\sysal2000\Odyssey3\OptimizeProgramDlg.cpp(212) : warning C4244: 'argument' : conversion from 'float' to 'int', possible loss of data
+C:\sysal2000\Odyssey3\OptimizeProgramDlg.cpp(215) : warning C4244: 'argument' : conversion from 'float' to 'int', possible loss of data
+C:\sysal2000\Odyssey3\OptimizeProgramDlg.cpp(215) : warning C4244: 'argument' : conversion from 'float' to 'int', possible loss of data
+C:\sysal2000\Odyssey3\OptimizeProgramDlg.cpp(218) : warning C4244: 'argument' : conversion from 'float' to 'int', possible loss of data
+C:\sysal2000\Odyssey3\OptimizeProgramDlg.cpp(218) : warning C4244: 'argument' : conversion from 'float' to 'int', possible loss of data
+SelectGrabBuffer.cpp
+TestConfig.cpp
+C:\sysal2000\Odyssey3\TestConfig.cpp(170) : warning C4018: '<' : signed/unsigned mismatch
+C:\sysal2000\Odyssey3\TestConfig.cpp(180) : warning C4018: '!=' : signed/unsigned mismatch
+C:\sysal2000\Odyssey3\TestConfig.cpp(231) : warning C4800: 'int' : forcing value to bool 'true' or 'false' (performance warning)
+C:\sysal2000\Odyssey3\TestConfig.cpp(308) : warning C4244: 'argument' : conversion from 'double' to 'unsigned int', possible loss of data
+C:\sysal2000\Odyssey3\TestConfig.cpp(308) : warning C4244: 'argument' : conversion from 'float' to 'unsigned int', possible loss of data
+C:\sysal2000\Odyssey3\TestConfig.cpp(308) : warning C4244: 'argument' : conversion from 'double' to 'unsigned int', possible loss of data
+C:\sysal2000\Odyssey3\TestConfig.cpp(308) : warning C4244: 'argument' : conversion from 'float' to 'unsigned int', possible loss of data
+C:\sysal2000\Odyssey3\TestConfig.cpp(309) : warning C4244: 'argument' : conversion from 'float' to 'unsigned int', possible loss of data
+C:\sysal2000\Odyssey3\TestConfig.cpp(309) : warning C4244: 'argument' : conversion from 'double' to 'unsigned int', possible loss of data
+C:\sysal2000\Odyssey3\TestConfig.cpp(309) : warning C4244: 'argument' : conversion from 'float' to 'unsigned int', possible loss of data
+C:\sysal2000\Odyssey3\TestConfig.cpp(309) : warning C4244: 'argument' : conversion from 'double' to 'unsigned int', possible loss of data
+C:\sysal2000\Odyssey3\TestConfig.cpp(311) : warning C4244: 'argument' : conversion from 'double' to 'unsigned int', possible loss of data
+C:\sysal2000\Odyssey3\TestConfig.cpp(311) : warning C4244: 'argument' : conversion from 'double' to 'unsigned int', possible loss of data
+C:\sysal2000\Odyssey3\TestConfig.cpp(311) : warning C4244: 'argument' : conversion from 'float' to 'unsigned int', possible loss of data
+C:\sysal2000\Odyssey3\TestConfig.cpp(311) : warning C4244: 'argument' : conversion from 'float' to 'unsigned int', possible loss of data
+C:\sysal2000\Odyssey3\TestConfig.cpp(318) : warning C4800: 'int' : forcing value to bool 'true' or 'false' (performance warning)
+ThresholdMapDlg.cpp
+C:\sysal2000\Odyssey3\ThresholdMapDlg.cpp(167) : warning C4244: '=' : conversion from 'double' to 'int', possible loss of data
+C:\sysal2000\Odyssey3\ThresholdMapDlg.cpp(170) : warning C4244: '=' : conversion from 'double' to 'int', possible loss of data
+C:\sysal2000\Odyssey3\ThresholdMapDlg.cpp(199) : warning C4244: '=' : conversion from 'double' to 'int', possible loss of data
+C:\sysal2000\Odyssey3\ThresholdMapDlg.cpp(200) : warning C4244: '=' : conversion from 'double' to 'int', possible loss of data
+C:\sysal2000\Odyssey3\ThresholdMapDlg.cpp(250) : warning C4244: 'initializing' : conversion from 'double' to 'float', possible loss of data
+C:\sysal2000\Odyssey3\ThresholdMapDlg.cpp(251) : warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+C:\sysal2000\Odyssey3\ThresholdMapDlg.cpp(252) : warning C4244: 'initializing' : conversion from 'double' to 'float', possible loss of data
+C:\sysal2000\Odyssey3\ThresholdMapDlg.cpp(253) : warning C4244: 'initializing' : conversion from 'double' to 'float', possible loss of data
+C:\sysal2000\Odyssey3\ThresholdMapDlg.cpp(258) : warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+C:\sysal2000\Odyssey3\ThresholdMapDlg.cpp(261) : warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+C:\sysal2000\Odyssey3\ThresholdMapDlg.cpp(283) : warning C4018: '<' : signed/unsigned mismatch
+C:\sysal2000\Odyssey3\ThresholdMapDlg.cpp(262) : warning C4101: 'code' : unreferenced local variable
+C:\sysal2000\Odyssey3\ThresholdMapDlg.cpp(326) : warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+C:\sysal2000\Odyssey3\ThresholdMapDlg.cpp(327) : warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+C:\sysal2000\Odyssey3\ThresholdMapDlg.cpp(332) : warning C4244: '=' : conversion from 'double' to 'int', possible loss of data
+C:\sysal2000\Odyssey3\ThresholdMapDlg.cpp(338) : warning C4018: '<' : signed/unsigned mismatch
+C:\sysal2000\Odyssey3\ThresholdMapDlg.cpp(339) : warning C4018: '==' : signed/unsigned mismatch
+C:\sysal2000\Odyssey3\ThresholdMapDlg.cpp(356) : warning C4018: '<' : signed/unsigned mismatch
+C:\sysal2000\Odyssey3\ThresholdMapDlg.cpp(357) : warning C4018: '<' : signed/unsigned mismatch
+C:\sysal2000\Odyssey3\ThresholdMapDlg.cpp(367) : warning C4018: '<' : signed/unsigned mismatch
+C:\sysal2000\Odyssey3\ThresholdMapDlg.cpp(368) : warning C4018: '<' : signed/unsigned mismatch
+C:\sysal2000\Odyssey3\ThresholdMapDlg.cpp(374) : warning C4244: '+=' : conversion from 'double' to 'float', possible loss of data
+C:\sysal2000\Odyssey3\ThresholdMapDlg.cpp(384) : warning C4018: '<' : signed/unsigned mismatch
+C:\sysal2000\Odyssey3\ThresholdMapDlg.cpp(385) : warning C4018: '<' : signed/unsigned mismatch
+C:\sysal2000\Odyssey3\ThresholdMapDlg.cpp(386) : warning C4244: '+=' : conversion from 'double' to 'float', possible loss of data
+C:\sysal2000\Odyssey3\ThresholdMapDlg.cpp(390) : warning C4244: '=' : conversion from 'float' to 'unsigned char', possible loss of data
+WndDisplay.cpp
+C:\sysal2000\Odyssey3\WndDisplay.cpp(276) : warning C4800: 'int' : forcing value to bool 'true' or 'false' (performance warning)
+Generating Code...
+Linking...
+   Creating library ReleaseMinSize/Odyssey3.lib and object ReleaseMinSize/Odyssey3.exp
+LINK : warning LNK4089: all references to "OLEAUT32.dll" discarded by /OPT:REF
+<h3>Output Window</h3>
+Performing registration
+
+
+
+<h3>Results</h3>
+Odyssey3.dll - 0 error(s), 114 warning(s)
+</pre>
+</body>
+</html>

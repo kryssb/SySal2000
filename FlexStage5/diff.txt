@@ -1,0 +1,788 @@
+Comparing files ..\FLEXSTAGE4\FlexStage4Class.cpp and FLEXSTAGE5CLASS.CPP
+***** ..\FLEXSTAGE4\FlexStage4Class.cpp
+// FlexStage4.cpp : Implementation of CFlexStage4
+#include "stdafx.h"
+#include "FlexStage4.h"
+#include "FlexStage4Class.h"
+#include "FindHomeDlg.h"
+***** FLEXSTAGE5CLASS.CPP
+// FlexStage5.cpp : Implementation of CFlexStage5
+#include "stdafx.h"
+#include "FlexStage5.h"
+#include "FlexStage5Class.h"
+#include "FindHomeDlg.h"
+*****
+
+***** ..\FLEXSTAGE4\FlexStage4Class.cpp
+
+CFlexStage4 *CFlexStage4::pSt = 0;
+
+***** FLEXSTAGE5CLASS.CPP
+
+#define MIN_PORT 1
+#define MAX_PORT 4
+
+CFlexStage5 *CFlexStage5::pSt = 0;
+
+*****
+
+***** ..\FLEXSTAGE4\FlexStage4Class.cpp
+/////////////////////////////////////////////////////////////////////////////
+// CFlexStage4
+#define STRUCT_OFFSET(t, x) (((int)&(((t *)1)->x))-1)
+***** FLEXSTAGE5CLASS.CPP
+/////////////////////////////////////////////////////////////////////////////
+// CFlexStage5
+#define STRUCT_OFFSET(t, x) (((int)&(((t *)1)->x))-1)
+*****
+
+***** ..\FLEXSTAGE4\FlexStage4Class.cpp
+
+CFlexStage4::CFlexStage4()
+{
+        AFX_MANAGE_STATE(AfxGetStaticModuleState())
+
+        Name[0] = 0;
+***** FLEXSTAGE5CLASS.CPP
+
+BOOL CALLBACK myenum(HWND hwnd, LPARAM lParam)
+{
+        static char checktext[1024];
+        ::GetWindowText(hwnd, checktext, 1023);
+        checktext[1023] = 0;
+        if (strstr(checktext, "SySal 2000"))
+        {
+                *(HWND *)lParam = hwnd;
+                return FALSE;
+        }
+        *(HWND *)lParam = 0;
+        return TRUE;
+}
+
+CFlexStage5::CFlexStage5()
+{
+        Name[0] = 0;
+*****
+
+***** ..\FLEXSTAGE4\FlexStage4Class.cpp
+        CWnd OwnerWnd;
+        OwnerWnd.Attach(::GetTopWindow(0));
+        pMonitor = new CMonitor(&ReqX.ManSpeed, &ReqY.ManSpeed, &ReqZ.ManSpeed, &LightLevel, &C, &HMonitorMutex, &HRun, this, E
+***** FLEXSTAGE5CLASS.CPP
+        CWnd OwnerWnd;
+        volatile HWND hTop = ::GetTopWindow(0);
+        ::EnumThreadWindows(::GetCurrentThreadId(), myenum, (LPARAM)&hTop);
+        AFX_MANAGE_STATE(AfxGetStaticModuleState())
+        int res = OwnerWnd.Attach(hTop/*::GetTopWindow(0)*/);
+        pMonitor = new CMonitor(&ReqX.ManSpeed, &ReqY.ManSpeed, &ReqZ.ManSpeed, &LightLevel, &C, &HMonitorMutex, &HRun, this, E
+*****
+
+***** ..\FLEXSTAGE4\FlexStage4Class.cpp
+
+CFlexStage4::~CFlexStage4()
+{
+***** FLEXSTAGE5CLASS.CPP
+
+CFlexStage5::~CFlexStage5()
+{
+*****
+
+***** ..\FLEXSTAGE4\FlexStage4Class.cpp
+
+void CFlexStage4::ResetLampTimeout(bool force)
+{
+***** FLEXSTAGE5CLASS.CPP
+
+void CFlexStage5::ResetLampTimeout(bool force)
+{
+*****
+
+***** ..\FLEXSTAGE4\FlexStage4Class.cpp
+
+void CFlexStage4::ResetLampTimeoutHook(void *pcontext, bool force) // hook for callback
+{
+        ((CFlexStage4 *)pcontext)->ResetLampTimeout(force);
+        }
+***** FLEXSTAGE5CLASS.CPP
+
+void CFlexStage5::ResetLampTimeoutHook(void *pcontext, bool force) // hook for callback
+{
+        ((CFlexStage5 *)pcontext)->ResetLampTimeout(force);
+        }
+*****
+
+***** ..\FLEXSTAGE4\FlexStage4Class.cpp
+
+STDMETHODIMP CFlexStage4::SetMachineDefaults(SySalConfig *pConfig)
+{
+***** FLEXSTAGE5CLASS.CPP
+
+STDMETHODIMP CFlexStage5::SetMachineDefaults(SySalConfig *pConfig)
+{
+*****
+
+***** ..\FLEXSTAGE4\FlexStage4Class.cpp
+
+STDMETHODIMP CFlexStage4::GetMachineDefaults(SySalConfig *pConfig)
+{
+***** FLEXSTAGE5CLASS.CPP
+
+STDMETHODIMP CFlexStage5::GetMachineDefaults(SySalConfig *pConfig)
+{
+*****
+
+***** ..\FLEXSTAGE4\FlexStage4Class.cpp
+
+STDMETHODIMP CFlexStage4::EditMachineDefaults(SySalConfig *pConfig, HSySalHANDLE hWnd)
+{
+***** FLEXSTAGE5CLASS.CPP
+
+STDMETHODIMP CFlexStage5::EditMachineDefaults(SySalConfig *pConfig, HSySalHANDLE hWnd)
+{
+*****
+
+***** ..\FLEXSTAGE4\FlexStage4Class.cpp
+
+STDMETHODIMP CFlexStage4::SetName(ConnectionName name)
+{
+***** FLEXSTAGE5CLASS.CPP
+
+STDMETHODIMP CFlexStage5::SetName(ConnectionName name)
+{
+*****
+
+***** ..\FLEXSTAGE4\FlexStage4Class.cpp
+
+STDMETHODIMP CFlexStage4::GetName(ConnectionName name)
+{
+***** FLEXSTAGE5CLASS.CPP
+
+STDMETHODIMP CFlexStage5::GetName(ConnectionName name)
+{
+*****
+
+***** ..\FLEXSTAGE4\FlexStage4Class.cpp
+
+STDMETHODIMP CFlexStage4::SetConfig(SySalConfig *pConfig)
+{
+***** FLEXSTAGE5CLASS.CPP
+
+STDMETHODIMP CFlexStage5::SetConfig(SySalConfig *pConfig)
+{
+*****
+
+***** ..\FLEXSTAGE4\FlexStage4Class.cpp
+
+STDMETHODIMP CFlexStage4::GetConfig(SySalConfig *pConfig)
+{
+***** FLEXSTAGE5CLASS.CPP
+
+STDMETHODIMP CFlexStage5::GetConfig(SySalConfig *pConfig)
+{
+*****
+
+***** ..\FLEXSTAGE4\FlexStage4Class.cpp
+
+STDMETHODIMP CFlexStage4::EditConfig(SySalConfig *pConfig, HSySalHANDLE hWnd)
+{
+***** FLEXSTAGE5CLASS.CPP
+
+STDMETHODIMP CFlexStage5::EditConfig(SySalConfig *pConfig, HSySalHANDLE hWnd)
+{
+*****
+
+***** ..\FLEXSTAGE4\FlexStage4Class.cpp
+
+STDMETHODIMP CFlexStage4::EnableMonitor(boolean bEnable)
+{
+***** FLEXSTAGE5CLASS.CPP
+
+STDMETHODIMP CFlexStage5::EnableMonitor(boolean bEnable)
+{
+*****
+
+***** ..\FLEXSTAGE4\FlexStage4Class.cpp
+
+STDMETHODIMP CFlexStage4::GetNumberOfConnections(int *pNumber)
+{
+***** FLEXSTAGE5CLASS.CPP
+
+STDMETHODIMP CFlexStage5::GetNumberOfConnections(int *pNumber)
+{
+*****
+
+***** ..\FLEXSTAGE4\FlexStage4Class.cpp
+
+STDMETHODIMP CFlexStage4::SetConnection(int n, SySalConnection connection)
+{
+***** FLEXSTAGE5CLASS.CPP
+
+STDMETHODIMP CFlexStage5::SetConnection(int n, SySalConnection connection)
+{
+*****
+
+***** ..\FLEXSTAGE4\FlexStage4Class.cpp
+
+STDMETHODIMP CFlexStage4::GetConnection(int n, SySalConnection *pConnection)
+{
+***** FLEXSTAGE5CLASS.CPP
+
+STDMETHODIMP CFlexStage5::GetConnection(int n, SySalConnection *pConnection)
+{
+*****
+
+***** ..\FLEXSTAGE4\FlexStage4Class.cpp
+
+STDMETHODIMP CFlexStage4::GetIcon(int n, HSySalHICON *pHICON)
+{
+***** FLEXSTAGE5CLASS.CPP
+
+STDMETHODIMP CFlexStage5::GetIcon(int n, HSySalHICON *pHICON)
+{
+*****
+
+***** ..\FLEXSTAGE4\FlexStage4Class.cpp
+
+STDMETHODIMP CFlexStage4::GetClassName(ConnectionName name)
+{
+***** FLEXSTAGE5CLASS.CPP
+
+STDMETHODIMP CFlexStage5::GetClassName(ConnectionName name)
+{
+*****
+
+***** ..\FLEXSTAGE4\FlexStage4Class.cpp
+
+STDMETHODIMP CFlexStage4::SyncExec()
+{
+***** FLEXSTAGE5CLASS.CPP
+
+STDMETHODIMP CFlexStage5::SyncExec()
+{
+*****
+
+***** ..\FLEXSTAGE4\FlexStage4Class.cpp
+
+STDMETHODIMP CFlexStage4::AsyncExec(HSySalHANDLE HNotifyStatusChangeEvent)
+{
+***** FLEXSTAGE5CLASS.CPP
+
+STDMETHODIMP CFlexStage5::AsyncExec(HSySalHANDLE HNotifyStatusChangeEvent)
+{
+*****
+
+***** ..\FLEXSTAGE4\FlexStage4Class.cpp
+
+STDMETHODIMP CFlexStage4::AsyncCheckStatus(long *pStatus)
+{
+***** FLEXSTAGE5CLASS.CPP
+
+STDMETHODIMP CFlexStage5::AsyncCheckStatus(long *pStatus)
+{
+*****
+
+***** ..\FLEXSTAGE4\FlexStage4Class.cpp
+
+STDMETHODIMP CFlexStage4::AsyncWait()
+{
+***** FLEXSTAGE5CLASS.CPP
+
+STDMETHODIMP CFlexStage5::AsyncWait()
+{
+*****
+
+***** ..\FLEXSTAGE4\FlexStage4Class.cpp
+
+STDMETHODIMP CFlexStage4::AsyncPause()
+{
+***** FLEXSTAGE5CLASS.CPP
+
+STDMETHODIMP CFlexStage5::AsyncPause()
+{
+*****
+
+***** ..\FLEXSTAGE4\FlexStage4Class.cpp
+
+STDMETHODIMP CFlexStage4::AsyncStop()
+{
+***** FLEXSTAGE5CLASS.CPP
+
+STDMETHODIMP CFlexStage5::AsyncStop()
+{
+*****
+
+***** ..\FLEXSTAGE4\FlexStage4Class.cpp
+
+STDMETHODIMP CFlexStage4::AsyncResume()
+{
+***** FLEXSTAGE5CLASS.CPP
+
+STDMETHODIMP CFlexStage5::AsyncResume()
+{
+*****
+
+***** ..\FLEXSTAGE4\FlexStage4Class.cpp
+
+STDMETHODIMP CFlexStage4::IsReady(long *pWrongConn, long *pRetCode)
+{
+***** FLEXSTAGE5CLASS.CPP
+
+STDMETHODIMP CFlexStage5::IsReady(long *pWrongConn, long *pRetCode)
+{
+*****
+
+***** ..\FLEXSTAGE4\FlexStage4Class.cpp
+
+STDMETHODIMP CFlexStage4::GetLight(int *pLightLevel)
+{
+***** FLEXSTAGE5CLASS.CPP
+
+STDMETHODIMP CFlexStage5::GetLight(int *pLightLevel)
+{
+*****
+
+***** ..\FLEXSTAGE4\FlexStage4Class.cpp
+
+STDMETHODIMP CFlexStage4::SetLight(int LightLevel)
+{
+***** FLEXSTAGE5CLASS.CPP
+
+STDMETHODIMP CFlexStage5::SetLight(int LightLevel)
+{
+*****
+
+***** ..\FLEXSTAGE4\FlexStage4Class.cpp
+
+STDMETHODIMP CFlexStage4::PosMove(int Axis, float Pos, float Speed, float Acc)
+{
+***** FLEXSTAGE5CLASS.CPP
+
+STDMETHODIMP CFlexStage5::PosMove(int Axis, float Pos, float Speed, float Acc)
+{
+*****
+
+***** ..\FLEXSTAGE4\FlexStage4Class.cpp
+
+STDMETHODIMP CFlexStage4::SpeedMove(int Axis, float Speed, float Acc)
+{
+***** FLEXSTAGE5CLASS.CPP
+
+STDMETHODIMP CFlexStage5::SpeedMove(int Axis, float Speed, float Acc)
+{
+*****
+
+***** ..\FLEXSTAGE4\FlexStage4Class.cpp
+
+STDMETHODIMP CFlexStage4::Stop(int Axis)
+{
+***** FLEXSTAGE5CLASS.CPP
+
+STDMETHODIMP CFlexStage5::Stop(int Axis)
+{
+*****
+
+***** ..\FLEXSTAGE4\FlexStage4Class.cpp
+
+STDMETHODIMP CFlexStage4::GetPos(int Axis, float *pPos)
+{
+***** FLEXSTAGE5CLASS.CPP
+
+STDMETHODIMP CFlexStage5::GetPos(int Axis, float *pPos)
+{
+*****
+
+***** ..\FLEXSTAGE4\FlexStage4Class.cpp
+
+STDMETHODIMP CFlexStage4::GetLimiter(int Axis, int *pLim)
+{
+***** FLEXSTAGE5CLASS.CPP
+
+STDMETHODIMP CFlexStage5::GetLimiter(int Axis, int *pLim)
+{
+*****
+
+***** ..\FLEXSTAGE4\FlexStage4Class.cpp
+
+STDMETHODIMP CFlexStage4::EnableManualControl(boolean bEnable)
+{
+***** FLEXSTAGE5CLASS.CPP
+
+STDMETHODIMP CFlexStage5::EnableManualControl(boolean bEnable)
+{
+*****
+
+***** ..\FLEXSTAGE4\FlexStage4Class.cpp
+
+STDMETHODIMP CFlexStage4::IsManualControlEnabled(boolean *pbEnable)
+{
+***** FLEXSTAGE5CLASS.CPP
+
+STDMETHODIMP CFlexStage5::IsManualControlEnabled(boolean *pbEnable)
+{
+*****
+
+***** ..\FLEXSTAGE4\FlexStage4Class.cpp
+
+STDMETHODIMP CFlexStage4::Reset(int Axis)
+{
+***** FLEXSTAGE5CLASS.CPP
+
+STDMETHODIMP CFlexStage5::Reset(int Axis)
+{
+*****
+
+***** ..\FLEXSTAGE4\FlexStage4Class.cpp
+
+UINT CFlexStage4::RefreshThreadHook(void *pOwner)
+{
+        return ((CFlexStage4 *)pOwner)->RefreshThread();
+}
+***** FLEXSTAGE5CLASS.CPP
+
+UINT CFlexStage5::RefreshThreadHook(void *pOwner)
+{
+        return ((CFlexStage5 *)pOwner)->RefreshThread();
+}
+*****
+
+***** ..\FLEXSTAGE4\FlexStage4Class.cpp
+/*
+UINT CFlexStage4::RefreshThread()
+{
+***** FLEXSTAGE5CLASS.CPP
+/*
+UINT CFlexStage5::RefreshThread()
+{
+*****
+
+***** ..\FLEXSTAGE4\FlexStage4Class.cpp
+
+UINT CFlexStage4::RefreshThread()
+{
+***** FLEXSTAGE5CLASS.CPP
+
+UINT CFlexStage5::RefreshThread()
+{
+*****
+
+***** ..\FLEXSTAGE4\FlexStage4Class.cpp
+
+void CFlexStage4::Enabler(void *pContext, bool bEnable)
+{
+        CFlexStage4 *This = (CFlexStage4 *)pContext;
+        WaitForSingleObject(This->HMonitorMutex, INFINITE);
+***** FLEXSTAGE5CLASS.CPP
+
+void CFlexStage5::Enabler(void *pContext, bool bEnable)
+{
+        CFlexStage5 *This = (CFlexStage5 *)pContext;
+        WaitForSingleObject(This->HMonitorMutex, INFINITE);
+*****
+
+***** ..\FLEXSTAGE4\FlexStage4Class.cpp
+
+bool CFlexStage4::SetBoard(bool InitLight)
+{
+***** FLEXSTAGE5CLASS.CPP
+
+bool CFlexStage5::SetBoard(bool InitLight)
+{
+*****
+
+***** ..\FLEXSTAGE4\FlexStage4Class.cpp
+
+int CFlexStage4::GetData(QueryDataInfo DataName, void *StartPosition, char *File, int N)
+{  
+***** FLEXSTAGE5CLASS.CPP
+
+int CFlexStage5::GetData(QueryDataInfo DataName, void *StartPosition, char *File, int N)
+{  
+*****
+
+***** ..\FLEXSTAGE4\FlexStage4Class.cpp
+
+STDMETHODIMP CFlexStage4::PrepareAsyncGoTo3DMotion(AsyncGoTo3DTrajectory *pAGT)
+{
+***** FLEXSTAGE5CLASS.CPP
+
+STDMETHODIMP CFlexStage5::PrepareAsyncGoTo3DMotion(AsyncGoTo3DTrajectory *pAGT)
+{
+*****
+
+***** ..\FLEXSTAGE4\FlexStage4Class.cpp
+
+STDMETHODIMP CFlexStage4::PrepareAsyncZScanMotion(AsyncZScanTrajectory *pAST)
+{
+***** FLEXSTAGE5CLASS.CPP
+
+STDMETHODIMP CFlexStage5::PrepareAsyncZScanMotion(AsyncZScanTrajectory *pAST)
+{
+*****
+
+***** ..\FLEXSTAGE4\FlexStage4Class.cpp
+
+STDMETHODIMP CFlexStage4::StartAsyncMotion()
+{
+***** FLEXSTAGE5CLASS.CPP
+
+STDMETHODIMP CFlexStage5::StartAsyncMotion()
+{
+*****
+
+***** ..\FLEXSTAGE4\FlexStage4Class.cpp
+
+STDMETHODIMP CFlexStage4::WaitForAsyncZScanZComplete(DWORD pfnAbortCallback, DWORD Context)
+{
+***** FLEXSTAGE5CLASS.CPP
+
+STDMETHODIMP CFlexStage5::WaitForAsyncZScanZComplete(DWORD pfnAbortCallback, DWORD Context)
+{
+*****
+
+***** ..\FLEXSTAGE4\FlexStage4Class.cpp
+
+STDMETHODIMP CFlexStage4::WaitForAsyncMotionComplete(DWORD pfnAbortCallback, DWORD Context)
+{
+***** FLEXSTAGE5CLASS.CPP
+
+STDMETHODIMP CFlexStage5::WaitForAsyncMotionComplete(DWORD pfnAbortCallback, DWORD Context)
+{
+*****
+
+***** ..\FLEXSTAGE4\FlexStage4Class.cpp
+
+STDMETHODIMP CFlexStage4::FlushAsyncMotions()
+{
+***** FLEXSTAGE5CLASS.CPP
+
+STDMETHODIMP CFlexStage5::FlushAsyncMotions()
+{
+*****
+
+***** ..\FLEXSTAGE4\FlexStage4Class.cpp
+
+STDMETHODIMP CFlexStage4::GetMaxZScanZSamples(int *pMaxZSamples)
+{
+***** FLEXSTAGE5CLASS.CPP
+
+STDMETHODIMP CFlexStage5::GetMaxZScanZSamples(int *pMaxZSamples)
+{
+*****
+
+***** ..\FLEXSTAGE4\FlexStage4Class.cpp
+
+void CFlexStage4::ExecTestProfile()
+{
+***** FLEXSTAGE5CLASS.CPP
+
+void CFlexStage5::ExecTestProfile()
+{
+*****
+
+***** ..\FLEXSTAGE4\FlexStage4Class.cpp
+
+bool CFlexStage4::AZSTest(DWORD Context, AsyncZScanTrajectory *pAZS, float *pSamples)
+{       
+***** FLEXSTAGE5CLASS.CPP
+
+bool CFlexStage5::AZSTest(DWORD Context, AsyncZScanTrajectory *pAZS, float *pSamples)
+{       
+*****
+
+***** ..\FLEXSTAGE4\FlexStage4Class.cpp
+        short Axis = (pAZS->NewPos.X != 0.0f) ? 2 : 4;
+        CFlexStage4 *This = (CFlexStage4 *)Context;
+        This->EnableMonitor(false);
+***** FLEXSTAGE5CLASS.CPP
+        short Axis = (pAZS->NewPos.X != 0.0f) ? 2 : 4;
+        CFlexStage5 *This = (CFlexStage5 *)Context;
+        This->EnableMonitor(false);
+*****
+
+***** ..\FLEXSTAGE4\FlexStage4Class.cpp
+
+void CFlexStage4::HomeHook(void *powner)
+{
+        ((CFlexStage4 *)powner)->FindHome();
+}
+***** FLEXSTAGE5CLASS.CPP
+
+void CFlexStage5::HomeHook(void *powner)
+{
+        ((CFlexStage5 *)powner)->FindHome();
+}
+*****
+
+***** ..\FLEXSTAGE4\FlexStage4Class.cpp
+
+STDMETHODIMP CFlexStage4::FindHome()
+{
+***** FLEXSTAGE5CLASS.CPP
+
+STDMETHODIMP CFlexStage5::FindHome()
+{
+*****
+
+***** ..\FLEXSTAGE4\FlexStage4Class.cpp
+
+STDMETHODIMP CFlexStage4::IsHomeKnown()
+{       
+***** FLEXSTAGE5CLASS.CPP
+
+STDMETHODIMP CFlexStage5::IsHomeKnown()
+{       
+*****
+
+***** ..\FLEXSTAGE4\FlexStage4Class.cpp
+
+STDMETHODIMP CFlexStage4::SetXYRef(BYTE *name, float x, float y)
+{
+***** FLEXSTAGE5CLASS.CPP
+
+STDMETHODIMP CFlexStage5::SetXYRef(BYTE *name, float x, float y)
+{
+*****
+
+***** ..\FLEXSTAGE4\FlexStage4Class.cpp
+
+STDMETHODIMP CFlexStage4::GetXYRef(BYTE *name, float *px, float *py)
+{
+***** FLEXSTAGE5CLASS.CPP
+
+STDMETHODIMP CFlexStage5::GetXYRef(BYTE *name, float *px, float *py)
+{
+*****
+
+***** ..\FLEXSTAGE4\FlexStage4Class.cpp
+
+STDMETHODIMP CFlexStage4::GoToXYRef(BYTE *name)
+{
+***** FLEXSTAGE5CLASS.CPP
+
+STDMETHODIMP CFlexStage5::GoToXYRef(BYTE *name)
+{
+*****
+
+***** ..\FLEXSTAGE4\FlexStage4Class.cpp
+
+STDMETHODIMP CFlexStage4::SetZRef(BYTE *name, float z)
+{
+***** FLEXSTAGE5CLASS.CPP
+
+STDMETHODIMP CFlexStage5::SetZRef(BYTE *name, float z)
+{
+*****
+
+***** ..\FLEXSTAGE4\FlexStage4Class.cpp
+
+STDMETHODIMP CFlexStage4::GetZRef(BYTE *name, float *pz)
+{
+***** FLEXSTAGE5CLASS.CPP
+
+STDMETHODIMP CFlexStage5::GetZRef(BYTE *name, float *pz)
+{
+*****
+
+***** ..\FLEXSTAGE4\FlexStage4Class.cpp
+
+STDMETHODIMP CFlexStage4::GoToZRef(BYTE *name)
+{
+***** FLEXSTAGE5CLASS.CPP
+
+STDMETHODIMP CFlexStage5::GoToZRef(BYTE *name)
+{
+*****
+
+***** ..\FLEXSTAGE4\FlexStage4Class.cpp
+
+void CFlexStage4::EmptyRefPosList()
+{
+***** FLEXSTAGE5CLASS.CPP
+
+void CFlexStage5::EmptyRefPosList()
+{
+*****
+
+***** ..\FLEXSTAGE4\FlexStage4Class.cpp
+
+void CFlexStage4::SetRefPos(RefPos &r)
+{
+***** FLEXSTAGE5CLASS.CPP
+
+void CFlexStage5::SetRefPos(RefPos &r)
+{
+*****
+
+***** ..\FLEXSTAGE4\FlexStage4Class.cpp
+
+bool CFlexStage4::GetRefPos(RefPos &r)
+{
+***** FLEXSTAGE5CLASS.CPP
+
+bool CFlexStage5::GetRefPos(RefPos &r)
+{
+*****
+
+***** ..\FLEXSTAGE4\FlexStage4Class.cpp
+
+void CFlexStage4::DelRefPos(char *name, bool isz)
+{
+***** FLEXSTAGE5CLASS.CPP
+
+void CFlexStage5::DelRefPos(char *name, bool isz)
+{
+*****
+
+***** ..\FLEXSTAGE4\FlexStage4Class.cpp
+***** FLEXSTAGE5CLASS.CPP
+
+
+//DigitalIO
+
+STDMETHODIMP CFlexStage5::DigitalIOReset()
+{
+        // TODO: Add your implementation code here
+        return S_OK;
+}
+
+STDMETHODIMP CFlexStage5::SetDigitalPortPolarity(int port, boolean polarity)
+{
+        if (port < 1 || port > MAX_PORT - MIN_PORT) return E_INVALIDARG;
+        flex_set_port_pol(C.BoardId, port - MIN_PORT + 1, polarity);
+        return S_OK;
+}
+
+STDMETHODIMP CFlexStage5::SetDigitalPortDirection(int port, int input_bit_mask)
+{
+        if (port < 1 || port > MAX_PORT - MIN_PORT) return E_INVALIDARG;
+        flex_set_port_direction(C.BoardId, port - MIN_PORT + 1, input_bit_mask);
+        return S_OK;
+}
+
+
+STDMETHODIMP CFlexStage5::GetDigitalIOPortCount(int *pnumberofports)
+{
+        // TODO: Add your implementation code here
+        *pnumberofports = MAX_PORT - MIN_PORT + 1;
+        return S_OK;
+}
+
+STDMETHODIMP CFlexStage5::DigitalOut(int port, int mask_on, int mask_off)
+{
+        // TODO: Add your implementation code here
+        if (port < 1 || port > MAX_PORT - MIN_PORT) return E_INVALIDARG;
+        flex_set_port_momo(C.BoardId, port - MIN_PORT + 1, mask_on, mask_off);
+        return E_NOTIMPL; //passare ad S_OK / metti E_INVALIDARG se il numero di porta non è supportato
+}
+
+STDMETHODIMP CFlexStage5::DigitalIn(int port, int *pconfiguration)
+{
+        // TODO: Add your implementation code here
+        if (port < 1 || port > MAX_PORT - MIN_PORT) return E_INVALIDARG;
+        unsigned short output;
+        flex_read_port_rtn(C.BoardId, port - MIN_PORT + 1, &output);
+        *pconfiguration = output;
+        return S_OK; //passare ad S_OK / metti E_INVALIDARG se il numero di porta non è supportato
+}
+*****
+

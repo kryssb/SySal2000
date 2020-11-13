@@ -1,0 +1,25 @@
+HKCR
+{
+	VSScanServerNET.VSScanServerNET.1 = s 'VSScanServerNET Class'
+	{
+		CLSID = s '{E8F1A43B-C0D3-4061-8E78-5C2A25C158F8}'
+	}
+	VSScanServerNET.RemoteControlServer = s 'VSScanServerNET Class'
+	{
+		CLSID = s '{E8F1A43B-C0D3-4061-8E78-5C2A25C158F8}'
+		CurVer = s 'VSScanServerNET.VSScanServerNET.1'
+	}
+	NoRemove CLSID
+	{
+		ForceRemove {E8F1A43B-C0D3-4061-8E78-5C2A25C158F8} = s 'VSScanServerNET Class'
+		{
+			ProgID = s 'VSScanServerNET.VSScanServerNET.1'
+			VersionIndependentProgID = s 'VSScanServerNET.VSScanServerNET'
+			InprocServer32 = s '%MODULE%'
+			{
+				val ThreadingModel = s 'Both'
+			}
+			'TypeLib' = s '{E451513E-8C80-44EF-AA75-B62DA45FDEAE}'
+		}
+	}
+}

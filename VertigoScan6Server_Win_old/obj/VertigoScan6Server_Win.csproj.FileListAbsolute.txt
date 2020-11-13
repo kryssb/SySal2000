@@ -1,0 +1,17 @@
+C:\SySal2\VertigoScan6Server_Win\bin\x86\Release\VertigoScan6Server_Win.exe
+C:\SySal2\VertigoScan6Server_Win\bin\x86\Release\VertigoScan6Server_Win.pdb
+C:\SySal2\VertigoScan6Server_Win\bin\x86\Release\DAQSystem.dll
+C:\SySal2\VertigoScan6Server_Win\bin\x86\Release\OperaDB.dll
+C:\SySal2\VertigoScan6Server_Win\bin\x86\Release\OperaDbLoginTools.dll
+C:\SySal2\VertigoScan6Server_Win\bin\x86\Release\VertigoScan7.dll
+C:\SySal2\VertigoScan6Server_Win\bin\x86\Release\SySalCore.dll
+C:\SySal2\VertigoScan6Server_Win\bin\x86\Release\Tracking.dll
+C:\SySal2\VertigoScan6Server_Win\bin\x86\Release\VolumeTracks.dll
+C:\SySal2\VertigoScan6Server_Win\bin\x86\Release\Scanning.dll
+C:\SySal2\VertigoScan6Server_Win\obj\x86\Release\ResolveAssemblyReference.cache
+C:\SySal2\VertigoScan6Server_Win\obj\x86\Release\SySal.Executables.VertigoScan6Server_Win.MainForm.resources
+C:\SySal2\VertigoScan6Server_Win\obj\x86\Release\VertigoScan6Server_Win.Properties.Resources.resources
+C:\SySal2\VertigoScan6Server_Win\obj\x86\Release\SySal.Executables.VertigoScan6Server_Win.TestForm.resources
+C:\SySal2\VertigoScan6Server_Win\obj\x86\Release\VertigoScan6Server_Win.csproj.GenerateResource.Cache
+C:\SySal2\VertigoScan6Server_Win\obj\x86\Release\VertigoScan6Server_Win.exe
+C:\SySal2\VertigoScan6Server_Win\obj\x86\Release\VertigoScan6Server_Win.pdb

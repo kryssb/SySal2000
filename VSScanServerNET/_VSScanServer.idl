@@ -1,0 +1,94 @@
+import "D:\Program Files\Microsoft Visual Studio .NET\Vc7\PlatformSDK\include\wtypes.idl";
+import "D:\Program Files\Microsoft Visual Studio .NET\Vc7\PlatformSDK\include\unknwn.idl";
+import "D:\Program Files\Microsoft Visual Studio .NET\Vc7\PlatformSDK\include\oaidl.idl";
+import "d:\program files\microsoft visual studio .net\vc7\platformsdk\include\objidl.idl";
+import "d:\program files\microsoft visual studio .net\vc7\platformsdk\include\unknwn.idl";
+import "D:\Program Files\Microsoft Visual Studio .NET\Vc7\PlatformSDK\include\oleidl.idl";
+import "D:\Program Files\Microsoft Visual Studio .NET\Vc7\PlatformSDK\include\urlmon.idl";
+import "d:\program files\microsoft visual studio .net\vc7\platformsdk\include\servprov.idl";
+import "d:\program files\microsoft visual studio .net\vc7\platformsdk\include\msxml.idl";
+import "D:\Program Files\Microsoft Visual Studio .NET\Vc7\PlatformSDK\include\propidl.idl";
+import "D:\Program Files\Microsoft Visual Studio .NET\Vc7\PlatformSDK\include\ocidl.idl";
+import "D:\Program Files\Microsoft Visual Studio .NET\Vc7\PlatformSDK\include\exdisp.idl";
+import "d:\program files\microsoft visual studio .net\vc7\platformsdk\include\docobj.idl";
+import "D:\Program Files\Microsoft Visual Studio .NET\Vc7\PlatformSDK\include\shldisp.idl";
+import "D:\Program Files\Microsoft Visual Studio .NET\Vc7\PlatformSDK\include\shtypes.idl";
+import "D:\Program Files\Microsoft Visual Studio .NET\Vc7\PlatformSDK\include\shobjidl.idl";
+import "d:\program files\microsoft visual studio .net\vc7\platformsdk\include\comcat.idl";
+import "d:\program files\microsoft visual studio .net\vc7\platformsdk\include\prsht.idl";
+import "D:\Program Files\Microsoft Visual Studio .NET\Vc7\PlatformSDK\include\prsht.idl";
+import "D:\Program Files\Microsoft Visual Studio .NET\Vc7\atlmfc\include\atliface.idl";
+import "D:\Program Files\Microsoft Visual Studio .NET\Vc7\PlatformSDK\include\oleacc.idl";
+import "D:\Program Files\Microsoft Visual Studio .NET\Vc7\PlatformSDK\include\mshtml.idl";
+import "d:\program files\microsoft visual studio .net\vc7\platformsdk\include\dimm.idl";
+import "D:\Program Files\Microsoft Visual Studio .NET\Vc7\PlatformSDK\include\mshtmhst.idl";
+import "D:\Program Files\Microsoft Visual Studio .NET\Vc7\PlatformSDK\include\objsafe.idl";
+import "d:\program files\microsoft visual studio .net\vc7\platformsdk\include\comadmin.idl";
+import "d:\program files\microsoft visual studio .net\vc7\platformsdk\include\transact.idl";
+
+[
+	object,
+	uuid(32E3C1FF-0C60-45B7-B66F-36DB816276DD),
+	helpstring("IVSScanServerNET Interface"),
+	pointer_default(unique)
+] 
+#line 18 "d:\\sysal2\\vsscanserver\\VSScanServerNET.h"
+interface IVSScanServerNET : IUnknown {
+#line 20 "d:\\sysal2\\vsscanserver\\VSScanServerNET.h"
+	[id(1),helpstring("method Connect")] HRESULT  Connect();
+	[id(2),helpstring("method Disconnect")] HRESULT  Disconnect();
+	[id(3),helpstring("method Send")] HRESULT  Send([in] BYTE *pMessage);
+	[id(4),helpstring("method Receive")] HRESULT  Receive([in] BYTE *pMessageSpace);
+};
+
+[
+	object,
+	uuid(C022EEAD-748A-11D3-A47B-E89C0BCE9720),
+	helpstring("ISySalObject Interface"),
+	pointer_default(unique)
+] 
+#line 33 "d:\\sysal2\\vsscanserver\\VSScanServerNET.h"
+interface ISySalObject : IUnknown {
+#line 35 "d:\\sysal2\\vsscanserver\\VSScanServerNET.h"
+	[helpstring("method SetName")] HRESULT  SetName([in]ConnectionName name);
+	[helpstring("method GetName")] HRESULT  GetName([in]ConnectionName name);
+	[helpstring("method SetConfig")] HRESULT  SetConfig([in]SySalConfig *pConfig);
+	[helpstring("method GetConfig")] HRESULT  GetConfig([in]SySalConfig *pConfig);
+	[helpstring("method EditConfig")] HRESULT  EditConfig([in]SySalConfig *pConfig, [in]HSySalHANDLE hWnd);
+	[helpstring("method EnableMonitor")] HRESULT  EnableMonitor([in]boolean bEnable);
+	[helpstring("method GetNumberOfConnections")] HRESULT  GetNumberOfConnections([in]int *pNumber);
+	[helpstring("method SetConnection")] HRESULT  SetConnection([in]int n, [in]SySalConnection connection);
+	[helpstring("method GetConnection")] HRESULT  GetConnection([in]int n, [in]SySalConnection *pConnection);
+	[helpstring("method GetIcon")] HRESULT  GetIcon([in]int n, [in]HSySalHICON *pHICON);
+	[helpstring("method GetClassName")] HRESULT  GetClassNameA([in]ConnectionName name);
+	[helpstring("method SyncExec")] HRESULT  SyncExec();
+	[helpstring("method AsyncExec")] HRESULT  AsyncExec([in]HSySalHANDLE HNotifyStatusChangeEvent);
+	[helpstring("method AsyncCheckStatus")] HRESULT  AsyncCheckStatus([in]long *pStatus);
+	[helpstring("method AsyncWait")] HRESULT  AsyncWait();
+	[helpstring("method AsyncPause")] HRESULT  AsyncPause();
+	[helpstring("method AsyncStop")] HRESULT  AsyncStop();
+	[helpstring("method AsyncResume")] HRESULT  AsyncResume();
+	[helpstring("method IsReady")] HRESULT  IsReady([in]long *pWrongConn, [in]long *pRetCode);
+};
+
+
+[ version(1.0), uuid(E451513E-8C80-44EF-AA75-B62DA45FDEAE), helpstring("VSScanServer 1.0 Type Library") ]
+library VSScanServer
+{
+	importlib("stdole2.tlb");
+	importlib("olepro32.dll");
+
+	[
+		aggregatable,
+		version(1.0),
+		uuid(E8F1A43B-C0D3-4061-8E78-5C2A25C158F8),
+		helpstring("VSScanServerNET Class")
+	] 
+#line 68 "d:\\sysal2\\vsscanserver\\VSScanServerNET.h"
+	coclass CVSScanServerNET {
+		interface IVSScanServerNET;
+		interface ISySalObject;
+	};
+
+}
+

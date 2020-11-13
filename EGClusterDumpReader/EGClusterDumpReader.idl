@@ -1,0 +1,69 @@
+// EGClusterDumpReader.idl : IDL source for EGClusterDumpReader.dll
+//
+
+// This file will be processed by the MIDL tool to
+// produce the type library (EGClusterDumpReader.tlb) and marshalling code.
+
+import "oaidl.idl";
+import "ocidl.idl";
+	[
+		object,
+		uuid(B707E25A-F9F3-4619-9CBB-DFAC5E4CB6B9),
+		dual,
+		helpstring("IEGClusterDumpReader Interface"),
+		pointer_default(unique)
+	]
+	interface IEGClusterDumpReader : IDispatch
+	{
+		[id(1), helpstring("method Load")] HRESULT Load(BSTR FileName);
+		[id(2), helpstring("method plSetFocus")] HRESULT plSetFocus(short i);
+		[id(3), helpstring("method clsSetFocus")] HRESULT clsSetFocus(long j);
+		[propget, id(4), helpstring("property hdrId1")] HRESULT hdrId1([out, retval] long *pVal);
+		[propget, id(5), helpstring("property hdrId2")] HRESULT hdrId2([out, retval] long *pVal);
+		[propget, id(6), helpstring("property hdrId3")] HRESULT hdrId3([out, retval] long *pVal);
+		[propget, id(7), helpstring("property hdrId4")] HRESULT hdrId4([out, retval] long *pVal);
+		[propget, id(8), helpstring("property IsValid")] HRESULT IsValid([out, retval] BOOL *pVal);
+		[propget, id(9), helpstring("property hdrFrames")] HRESULT hdrFrames([out, retval] short *pVal);
+		[propget, id(10), helpstring("property hdrMaxClusters")] HRESULT hdrMaxClusters([out, retval] long *pVal);
+		[propget, id(11), helpstring("property hdrTopExt")] HRESULT hdrTopExt([out, retval] float *pVal);
+		[propget, id(12), helpstring("property hdrTopInt")] HRESULT hdrTopInt([out, retval] float *pVal);
+		[propget, id(13), helpstring("property hdrBottomInt")] HRESULT hdrBottomInt([out, retval] float *pVal);
+		[propget, id(14), helpstring("property hdrIntBottomExt")] HRESULT hdrIntBottomExt([out, retval] float *pVal);
+		[propget, id(15), helpstring("property hdrImageMatXX")] HRESULT hdrImageMatXX([out, retval] float *pVal);
+		[propget, id(16), helpstring("property hdrImageMatXY")] HRESULT hdrImageMatXY([out, retval] float *pVal);
+		[propget, id(17), helpstring("property hdrImageMatYX")] HRESULT hdrImageMatYX([out, retval] float *pVal);
+		[propget, id(18), helpstring("property hdrImageMatYY")] HRESULT hdrImageMatYY([out, retval] float *pVal);
+		[propget, id(19), helpstring("property hdrYPos")] HRESULT hdrYPos([out, retval] float *pVal);
+		[propget, id(20), helpstring("property hdrZPos")] HRESULT hdrZPos([out, retval] float *pVal);
+		[propget, id(21), helpstring("property hdrYCenter")] HRESULT hdrYCenter([out, retval] float *pVal);
+		[propget, id(22), helpstring("property hdrZCenter")] HRESULT hdrZCenter([out, retval] float *pVal);
+		[propget, id(23), helpstring("property plCount")] HRESULT plCount([out, retval] long *pVal);
+		[propget, id(24), helpstring("property plZ")] HRESULT plZ([out, retval] float *pVal);
+		[propget, id(25), helpstring("property clsX")] HRESULT clsX([out, retval] float *pVal);
+		[propget, id(26), helpstring("property clsY")] HRESULT clsY([out, retval] float *pVal);
+		[propget, id(27), helpstring("property clsArea")] HRESULT clsArea([out, retval] long *pVal);
+		[propget, id(28), helpstring("property clsGrayLevel")] HRESULT clsGrayLevel([out, retval] float *pVal);
+		[propget, id(29), helpstring("property clsInertiaXX")] HRESULT clsInertiaXX([out, retval] float *pVal);
+		[propget, id(30), helpstring("property clsInertiaXY")] HRESULT clsInertiaXY([out, retval] float *pVal);
+		[propget, id(31), helpstring("property clsInertiaYY")] HRESULT clsInertiaYY([out, retval] float *pVal);
+	};
+
+[
+	uuid(F108D1D4-8E39-4B0F-8651-792C99E4E66A),
+	version(1.0),
+	helpstring("EGClusterDumpReader 1.0 Type Library")
+]
+library EGCLUSTERDUMPREADERLib
+{
+	importlib("stdole32.tlb");
+	importlib("stdole2.tlb");
+
+	[
+		uuid(E45649A5-108D-41CA-BAEA-7EA6C6E40BFE),
+		helpstring("EGClusterDumpReader Class")
+	]
+	coclass CEGClusterDumpReader
+	{
+		[default] interface IEGClusterDumpReader;
+	};
+};

@@ -1,0 +1,25 @@
+HKCR
+{
+	FragmentLinker.FragmentLinker.1 = s 'FragmentLinker Class'
+	{
+		CLSID = s '{CB1F845A-AE8C-433B-AEFD-25B826974FC9}'
+	}
+	FragmentLinker.FragmentLinker = s 'FragmentLinker Class'
+	{
+		CLSID = s '{CB1F845A-AE8C-433B-AEFD-25B826974FC9}'
+		CurVer = s 'FragmentLinker.FragmentLinker.1'
+	}
+	NoRemove CLSID
+	{
+		ForceRemove {CB1F845A-AE8C-433B-AEFD-25B826974FC9} = s 'FragmentLinker Class'
+		{
+			ProgID = s 'FragmentLinker.FragmentLinker.1'
+			VersionIndependentProgID = s 'FragmentLinker.FragmentLinker'
+			InprocServer32 = s '%MODULE%'
+			{
+				val ThreadingModel = s 'Both'
+			}
+			'TypeLib' = s '{599D722E-14AA-4138-B7A9-66642116C443}'
+		}
+	}
+}

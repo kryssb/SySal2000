@@ -1,0 +1,23 @@
+[OPTIONS]
+Compatibility=1.1 or later
+Compiled file=Odyssey1.chm
+Contents file=Odyssey1.hhc
+Default topic=HelpOverview.htm
+Display compile progress=No
+Index file=Odyssey1.hhk
+Language=0x409 English (United States)
+
+
+[FILES]
+HelpXop.htm
+Help2DFilter.htm
+HelpAutoLightControl.htm
+HelpClusterFinding.htm
+HelpConfig.htm
+HelpFilterEq.htm
+HelpFlatField.htm
+HelpOverview.htm
+HelpTest.htm
+
+[INFOTYPES]
+

@@ -1,0 +1,16 @@
+[OPTIONS]
+Compatibility=1.1 or later
+Compiled file=SmartTracker4.chm
+Contents file=SmartTracker4.hhc
+Default topic=HelpOverview.htm
+Display compile progress=No
+Index file=SmartTracker4.hhk
+Language=0x409 English (United States)
+
+
+[FILES]
+HelpOverview.htm
+HelpConfig.htm
+
+[INFOTYPES]
+

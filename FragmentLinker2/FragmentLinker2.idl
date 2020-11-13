@@ -1,0 +1,43 @@
+// FragmentLinker.idl : IDL source for FragmentLinker.dll
+//
+
+// This file will be processed by the MIDL tool to
+// produce the type library (FragmentLinker.tlb) and marshalling code.
+
+import "oaidl.idl";
+import "ocidl.idl";
+import "ConfigData.h";
+	[
+		object,
+		uuid(E898E034-C562-4CFA-8715-62FBEC72330A),
+	
+		helpstring("IFragmentLinker Interface"),
+		pointer_default(unique)
+	]
+	interface IFragmentLinker : IUnknown
+	{
+		[helpstring("method Link")] HRESULT Link(BYTE *pIO_VS_Catalog);
+		[helpstring("method SetCallbacks")] HRESULT SetCallbacks(BYTE *pContext, BYTE *pLoadCallback, BYTE *pSaveCallback, BYTE *pProgressCallback, BYTE *pStopCallback);
+		[helpstring("method GetConfig")] HRESULT GetConfig(FragmentLinkerConfigData *pConfig);
+		[helpstring("method SetConfig")] HRESULT SetConfig(FragmentLinkerConfigData *pConfig);
+	};
+
+[
+	uuid(599D722E-14AA-4138-B7A9-66642116C443),
+	version(1.0),
+	helpstring("FragmentLinker 2.0 Type Library")
+]
+library FRAGMENTLINKERLib
+{
+	importlib("stdole32.tlb");
+	importlib("stdole2.tlb");
+
+	[
+		uuid(CB1F845A-AE8C-433B-AEFD-25B826974FC9),
+		helpstring("FragmentLinker 2.0 Class")
+	]
+	coclass FragmentLinker
+	{
+		[default] interface IFragmentLinker;
+	};
+};

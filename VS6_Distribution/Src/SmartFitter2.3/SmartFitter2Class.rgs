@@ -1,0 +1,25 @@
+HKCR
+{
+	SmartFitter2.SmartFitter2.3 = s 'SmartFitter2 Class'
+	{
+		CLSID = s '{0078daf5-9fd2-4e17-9ec8-845e8bbf7d0d}'
+	}
+	SmartFitter2.SmartFitter2 = s 'SmartFitter2 Class'
+	{
+		CLSID = s '{0078daf5-9fd2-4e17-9ec8-845e8bbf7d0d}'
+		CurVer = s 'SmartFitter2.SmartFitter2.3'
+	}
+	NoRemove CLSID
+	{
+		ForceRemove {0078daf5-9fd2-4e17-9ec8-845e8bbf7d0d} = s 'SmartFitter2 Class'
+		{
+			ProgID = s 'SmartFitter2.SmartFitter2.3'
+			VersionIndependentProgID = s 'SmartFitter2.SmartFitter2'
+			InprocServer32 = s '%MODULE%'
+			{
+				val ThreadingModel = s 'Free'
+			}
+			'TypeLib' = s '{7e8de6c1-7710-48a5-a2c5-8213a1ae246f}'
+		}
+	}
+}

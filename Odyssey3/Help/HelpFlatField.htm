@@ -1,0 +1,52 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" >
+<HTML>
+	<HEAD>
+		<TITLE>Flat Field Subtraction</TITLE>
+		<META content="Microsoft Visual Studio 7.0" name="GENERATOR">
+	</HEAD>
+	<BODY>
+		<P><FONT face="Arial" color="#000066" size="5"><EM> Odyssey&nbsp;- Flat Field Subtraction</EM></FONT></P>
+		<EM><FONT size="4"><FONT face="Arial">
+					<HR width="100%" SIZE="2">
+				</FONT>
+				<P align="justify">
+			</FONT></EM><FONT face="Arial" size="2">Noise in camera images is of two 
+			different kinds. One is spatial noise, the other is temporal noise. The former 
+			depends on the inhomogeneities in pixel response, and is very well 
+			reproducible. The&nbsp;latter is completely unpredictable, and cannot be 
+			eliminated in images taken on-the-fly, but needs time averages.</FONT></P>
+		<P align="justify"><FONT face="Arial" size="2">Flat field subtraction consists in 
+				subtracting a compensation image from the data continuously sent by the camera. 
+				However, the only way to obtain this compensation image is to sample the camera 
+				output. In order to reduce the temporal noise, several images should be 
+				averaged. Here below the effect of noise subtraction is shown.</FONT></P>
+		<P align="justify">
+			<TABLE id="Table1" cellSpacing="1" cellPadding="1" width="300" border="1">
+				<TR>
+					<TD noWrap colSpan="1" rowSpan="1"><FONT face="Arial" size="2">Original&nbsp;image</FONT></TD>
+					<TD><IMG alt="" src="HelpNoisy.gif" border="1"></TD>
+				</TR>
+				<TR>
+					<TD>
+						<P align="justify"><FONT face="Arial"><FONT size="2">Compensation&nbsp;image<BR>
+									(the gray level is offset for ease of understanding)&nbsp; </FONT></FONT>
+						</P>
+					</TD>
+					<TD><IMG alt="" src="HelpNoiseImage.gif" border="1"></TD>
+				</TR>
+				<TR>
+					<TD>
+						<P align="justify"><FONT face="Arial"><FONT size="2">Final&nbsp;image </FONT></FONT>
+						</P>
+					</TD>
+					<TD><IMG alt="" src="HelpNoNoise.gif" border="1"></TD>
+				</TR>
+			</TABLE>
+		</P>
+		<P align="justify"><FONT face="Arial"><FONT size="2">The flat field compensation can also 
+					recover small lighting inhomogeneities.</FONT></FONT></P>
+		<P align="justify"><FONT face="Arial"><FONT size="2">The compensation image can be supplied 
+					by an external program, but the&nbsp;Odyssey module already contains a utility 
+					for this purpose.</FONT></FONT></P>
+	</BODY>
+</HTML>

@@ -1,0 +1,696 @@
+//Microsoft Developer Studio generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// Neutral (Default) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_NEUD)
+#ifdef _WIN32
+LANGUAGE LANG_NEUTRAL, SUBLANG_DEFAULT
+#pragma code_page(1252)
+#endif //_WIN32
+
+#ifndef _MAC
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION 1,0,0,1
+ PRODUCTVERSION 1,0,0,1
+ FILEFLAGSMASK 0x3fL
+#ifdef _DEBUG
+ FILEFLAGS 0x1L
+#else
+ FILEFLAGS 0x0L
+#endif
+ FILEOS 0x4L
+ FILETYPE 0x2L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "040904b0"
+        BEGIN
+            VALUE "Comments", "\0"
+            VALUE "CompanyName", "\0"
+            VALUE "FileDescription", "VertigoScan2 Module\0"
+            VALUE "FileVersion", "1, 0, 0, 1\0"
+            VALUE "InternalName", "VertigoScan2\0"
+            VALUE "LegalCopyright", "Copyright 2002\0"
+            VALUE "LegalTrademarks", "\0"
+            VALUE "OLESelfRegister", "\0"
+            VALUE "OriginalFilename", "VertigoScan2.DLL\0"
+            VALUE "PrivateBuild", "\0"
+            VALUE "ProductName", "VertigoScan2 Module\0"
+            VALUE "ProductVersion", "1, 0, 0, 1\0"
+            VALUE "SpecialBuild", "\0"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x409, 1200
+    END
+END
+
+#endif    // !_MAC
+
+#endif    // Neutral (Default) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+/////////////////////////////////////////////////////////////////////////////
+// English (U.S.) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
+#pragma code_page(1252)
+#endif //_WIN32
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// REGISTRY
+//
+
+IDR_VERTIGOSCAN2        REGISTRY DISCARDABLE    "VertigoScan2.rgs"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDI_ICON32              ICON    DISCARDABLE     "icon32.ico"
+IDI_ICON64              ICON    DISCARDABLE     "icon64.ico"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_MAINSWITCH DIALOGEX 0, 0, 312, 104
+STYLE DS_MODALFRAME | DS_3DLOOK | DS_CENTER | WS_MINIMIZEBOX | WS_CAPTION | 
+    WS_SYSMENU
+CAPTION "VertigoScan2 - Main Switch - 2001 by Cristiano Bozza"
+FONT 8, "MS Sans Serif", 0, 0, 0x1
+BEGIN
+    CONTROL         "VertigoScan2 Picture",IDC_MS_PICTURE,"Button",
+                    BS_OWNERDRAW | BS_FLAT | WS_TABSTOP,1,2,100,100,
+                    WS_EX_CLIENTEDGE
+    PUSHBUTTON      "&Init Sheet Map",IDC_MS_INITMAP,106,2,204,13
+    PUSHBUTTON      "&Test and Configure",IDC_MS_TESTCONFIG,106,18,204,13
+    PUSHBUTTON      "&Scan",IDC_MS_SCAN,106,34,204,13
+    PUSHBUTTON      "&Remotely Controlled Scanning Session",
+                    IDC_MS_REMOTESCAN,106,51,204,13
+    PUSHBUTTON      "&Manual Checks",IDC_MS_MANUALCHECKS,106,68,204,13
+    PUSHBUTTON      "E&xit",IDCANCEL,106,88,204,13
+END
+
+IDD_EDIT_CONFIG DIALOGEX 0, 0, 260, 334
+STYLE DS_MODALFRAME | DS_3DLOOK | DS_CENTER | WS_MINIMIZEBOX | WS_POPUP | 
+    WS_CAPTION | WS_SYSMENU
+EXSTYLE WS_EX_CLIENTEDGE
+CAPTION "Edit Config for VertigoScan2"
+FONT 8, "MS Sans Serif", 0, 0, 0x1
+BEGIN
+    LTEXT           "Frames/Second",IDC_STATIC,7,7,56,9,SS_CENTERIMAGE
+    EDITTEXT        IDC_EC_FPS,100,7,29,12,ES_RIGHT | ES_AUTOHSCROLL
+    LTEXT           "Top Clustering Parameter",IDC_STATIC,7,19,85,9,
+                    SS_CENTERIMAGE
+    EDITTEXT        IDC_EC_TOPCLCONTRAST,100,19,29,12,ES_RIGHT | 
+                    ES_AUTOHSCROLL
+    LTEXT           "Top Cluster Threshold",IDC_STATIC,7,31,79,9,
+                    SS_CENTERIMAGE
+    EDITTEXT        IDC_EC_TOPCLTHRESHOLD,100,31,29,12,ES_RIGHT | 
+                    ES_AUTOHSCROLL
+    LTEXT           "Bottom Clustering Parameter",IDC_STATIC,7,43,92,9,
+                    SS_CENTERIMAGE
+    EDITTEXT        IDC_EC_BOTTOMCLCONTRAST,100,43,29,12,ES_RIGHT | 
+                    ES_AUTOHSCROLL
+    LTEXT           "Bottom Cluster Threshold",IDC_STATIC,7,55,79,9,
+                    SS_CENTERIMAGE
+    EDITTEXT        IDC_EC_BOTTOMCLTHRESHOLD,100,55,29,12,ES_RIGHT | 
+                    ES_AUTOHSCROLL
+    LTEXT           "Light Level",IDC_STATIC,7,67,79,9,SS_CENTERIMAGE
+    EDITTEXT        IDC_EC_LIGHTLEVEL,100,67,29,12,ES_RIGHT | ES_AUTOHSCROLL
+    LTEXT           "Vertical Layers",IDC_STATIC,7,82,79,9,SS_CENTERIMAGE
+    EDITTEXT        IDC_EC_VLAYERS,100,82,29,12,ES_RIGHT | ES_AUTOHSCROLL
+    LTEXT           "Vertical Step",IDC_STATIC,7,94,79,9,SS_CENTERIMAGE
+    EDITTEXT        IDC_EC_VSTEP,100,94,29,12,ES_RIGHT | ES_AUTOHSCROLL
+    LTEXT           "Vertical Speed",IDC_STATIC,7,106,79,9,SS_CENTERIMAGE
+    EDITTEXT        IDC_EC_VSPEED,100,106,29,12,ES_RIGHT | ES_AUTOHSCROLL
+    LTEXT           "Vertical Acceleration",IDC_STATIC,7,118,79,9,
+                    SS_CENTERIMAGE
+    EDITTEXT        IDC_EC_VACC,100,118,29,12,ES_RIGHT | ES_AUTOHSCROLL
+    LTEXT           "Vertical Tolerance",IDC_STATIC,7,130,79,9,
+                    SS_CENTERIMAGE
+    EDITTEXT        IDC_EC_VTOL,100,130,29,12,ES_RIGHT | ES_AUTOHSCROLL
+    LTEXT           "X Step",IDC_STATIC,7,145,79,9,SS_CENTERIMAGE
+    EDITTEXT        IDC_EC_XSTEP,100,145,29,12,ES_RIGHT | ES_AUTOHSCROLL
+    LTEXT           "Y Step",IDC_STATIC,7,157,79,9,SS_CENTERIMAGE
+    EDITTEXT        IDC_EC_YSTEP,100,157,29,12,ES_RIGHT | ES_AUTOHSCROLL
+    LTEXT           "Horizontal Speed",IDC_STATIC,7,169,79,9,SS_CENTERIMAGE
+    EDITTEXT        IDC_EC_HSPEED,100,169,29,12,ES_RIGHT | ES_AUTOHSCROLL
+    LTEXT           "Horizontal Acceleration",IDC_STATIC,7,181,79,9,
+                    SS_CENTERIMAGE
+    EDITTEXT        IDC_EC_HACC,100,181,29,12,ES_RIGHT | ES_AUTOHSCROLL
+    LTEXT           "Horizontal Tolerance",IDC_STATIC,7,193,79,9,
+                    SS_CENTERIMAGE
+    EDITTEXT        IDC_EC_HTOL,100,193,29,12,ES_RIGHT | ES_AUTOHSCROLL
+    LTEXT           "Stage Delay (ms)",IDC_STATIC,7,208,79,9,SS_CENTERIMAGE
+    EDITTEXT        IDC_EC_STAGEDELAY,100,208,29,12,ES_RIGHT | 
+                    ES_AUTOHSCROLL
+    LTEXT           "Limiter Delay (ms)",IDC_STATIC,7,220,79,9,
+                    SS_CENTERIMAGE
+    EDITTEXT        IDC_EC_LIMITERDELAY,100,220,29,12,ES_RIGHT | 
+                    ES_AUTOHSCROLL
+    LTEXT           "X Fields",IDC_STATIC,7,233,79,9,SS_CENTERIMAGE
+    EDITTEXT        IDC_EC_XFIELDS,100,233,29,12,ES_RIGHT | ES_AUTOHSCROLL
+    LTEXT           "Y Fields",IDC_STATIC,7,245,79,9,SS_CENTERIMAGE
+    EDITTEXT        IDC_EC_YFIELDS,100,245,29,12,ES_RIGHT | ES_AUTOHSCROLL
+    LTEXT           "Refocusing distance (fields)",IDC_STATIC,7,257,86,9,
+                    SS_CENTERIMAGE
+    EDITTEXT        IDC_EC_REFOCUSFIELDS,100,257,29,12,ES_RIGHT | 
+                    ES_AUTOHSCROLL
+    LTEXT           "Min Vertical Valid Layers",IDC_STATIC,133,144,86,9,
+                    SS_CENTERIMAGE
+    EDITTEXT        IDC_EC_VMINLAYERS,224,144,29,12,ES_RIGHT | 
+                    ES_AUTOHSCROLL
+    LTEXT           "Base Crossing Speed",IDC_STATIC,133,159,87,9,
+                    SS_CENTERIMAGE
+    EDITTEXT        IDC_EC_VBASESPEED,224,159,29,12,ES_RIGHT | 
+                    ES_AUTOHSCROLL
+    LTEXT           "Base Thickness",IDC_STATIC,133,171,79,9,SS_CENTERIMAGE
+    EDITTEXT        IDC_EC_BASETHICKNESS,224,171,29,12,ES_RIGHT | 
+                    ES_AUTOHSCROLL
+    LTEXT           "Focus Tolerance",IDC_STATIC,133,183,79,9,SS_CENTERIMAGE
+    EDITTEXT        IDC_EC_FOCUSTOLERANCE,224,183,29,12,ES_RIGHT | 
+                    ES_AUTOHSCROLL
+    LTEXT           "Thickness Tolerance",IDC_STATIC,133,195,79,9,
+                    SS_CENTERIMAGE
+    EDITTEXT        IDC_EC_THICKNESSTOLERANCE,224,195,29,12,ES_RIGHT | 
+                    ES_AUTOHSCROLL
+    CONTROL         "Lock Focus on &Base",IDC_EC_LOCKONBASE,"Button",
+                    BS_AUTORADIOBUTTON | BS_LEFTTEXT,133,208,120,9,
+                    WS_EX_STATICEDGE
+    CONTROL         "Lock Focus on &Center Level",IDC_EC_LOCKONCENTER,"Button",
+                    BS_AUTORADIOBUTTON | BS_LEFTTEXT,133,218,120,9,
+                    WS_EX_STATICEDGE
+    LTEXT           "Max Clusters",IDC_STATIC,133,233,79,9,SS_CENTERIMAGE
+    EDITTEXT        IDC_EC_MAXCLUSTERS,217,233,36,12,ES_RIGHT | 
+                    ES_AUTOHSCROLL
+    LTEXT           "Max Tracks",IDC_STATIC,133,245,79,9,SS_CENTERIMAGE
+    EDITTEXT        IDC_EC_MAXTRACKS,217,245,36,12,ES_RIGHT | ES_AUTOHSCROLL
+    LTEXT           "Emulsion Shrinkage",IDC_STATIC,133,257,79,9,
+                    SS_CENTERIMAGE
+    EDITTEXT        IDC_EC_SHRINKAGE,224,257,29,12,ES_RIGHT | ES_AUTOHSCROLL
+    CONTROL         "Scan top side",IDC_EC_SCANTOP,"Button",
+                    BS_AUTORADIOBUTTON,7,271,246,9,WS_EX_STATICEDGE
+    CONTROL         "Scan bottom side",IDC_EC_SCANBOTTOM,"Button",
+                    BS_AUTORADIOBUTTON,7,281,246,9,WS_EX_STATICEDGE
+    CONTROL         "Scan both sides, all top views before all bottom views",
+                    IDC_EC_SCANBOTHTWOSIDES,"Button",BS_AUTORADIOBUTTON,7,
+                    291,246,9,WS_EX_STATICEDGE
+    CONTROL         "Scan both sides, each bottom view after each top view",
+                    IDC_EC_SCANBOTHINFIELD,"Button",BS_AUTORADIOBUTTON,7,301,
+                    246,9,WS_EX_STATICEDGE
+    DEFPUSHBUTTON   "OK",IDOK,7,313,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,203,313,50,14
+    CONTROL         "VertigoScan2 Picture",IDC_EC_PICTURE,"Button",
+                    BS_OWNERDRAW | BS_FLAT | WS_TABSTOP,132,7,120,120,
+                    WS_EX_CLIENTEDGE
+    LTEXT           "Focus Clustering Parameter",IDC_STATIC,133,131,86,9,
+                    SS_CENTERIMAGE
+    EDITTEXT        IDC_EC_FOCUSCLUSTERCONTRAST,224,131,29,12,ES_RIGHT | 
+                    ES_AUTOHSCROLL
+END
+
+IDD_TEST_CONFIG DIALOGEX 0, 0, 363, 297
+STYLE DS_MODALFRAME | WS_CAPTION | WS_SYSMENU
+CAPTION "VertigoScan2 - Test and Configure - 2001 by Cristiano Bozza"
+FONT 8, "MS Sans Serif", 0, 0, 0x1
+BEGIN
+    GROUPBOX        "Test Control",IDC_STATIC,7,7,349,65
+    PUSHBUTTON      "&Start",IDC_TC_START,15,21,51,14
+    PUSHBUTTON      "Sto&p",IDC_TC_STOP,71,21,51,14
+    PUSHBUTTON      "&Go To Field",IDC_TC_GOTOFIELD,127,21,51,14
+    PUSHBUTTON      "&Refresh",IDC_TC_REFRESH,183,21,51,14
+    PUSHBUTTON      "Stage &Monitor",IDC_TC_SHOWSTAGEMON,239,21,51,14
+    PUSHBUTTON      "Grid &Options",IDC_TC_GRIDOPTIONS,295,21,51,14
+    PUSHBUTTON      "Sa&ve Fragment",IDC_TC_SAVE,15,40,51,14
+    CONTROL         "&Auto Save on Finish",IDC_TC_AUTOSAVE,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,69,41,82,12
+    CONTROL         "Rem&ote Control",IDC_TC_ENABLEREMOTECONTROL,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,187,41,64,12
+    CONTROL         "Alignment Gr&id",IDC_TC_TOGGLEGRID,"Button",
+                    BS_AUTOCHECKBOX | BS_LEFTTEXT | WS_TABSTOP,284,41,62,12
+    LTEXT           "Field:",IDC_TC_FIELDN,16,57,49,11,SS_CENTERIMAGE
+    CONTROL         "Progress1",IDC_TC_TESTPROGRESS,"msctls_progress32",
+                    PBS_SMOOTH,69,60,277,6
+    GROUPBOX        "Statistics",IDC_STATIC,7,74,349,128
+    LTEXT           "Fields",IDC_STATIC,14,88,25,9
+    EDITTEXT        IDC_TC_XFIELDS,44,87,28,12,ES_RIGHT | ES_AUTOHSCROLL | 
+                    ES_READONLY
+    EDITTEXT        IDC_TC_YFIELDS,74,87,28,12,ES_RIGHT | ES_AUTOHSCROLL | 
+                    ES_READONLY
+    LTEXT           "Tracks",IDC_STATIC,14,101,27,9
+    EDITTEXT        IDC_TC_TOPTKS,44,100,28,12,ES_RIGHT | ES_AUTOHSCROLL | 
+                    ES_READONLY
+    EDITTEXT        IDC_TC_BOTTOMTKS,74,100,28,12,ES_RIGHT | ES_AUTOHSCROLL | 
+                    ES_READONLY
+    LTEXT           "Clusters",IDC_STATIC,14,113,27,9
+    EDITTEXT        IDC_TC_TOPAVGCLUSTERS,44,113,28,12,ES_RIGHT | 
+                    ES_AUTOHSCROLL | ES_READONLY
+    EDITTEXT        IDC_TC_BOTTOMAVGCLUSTERS,74,113,28,12,ES_RIGHT | 
+                    ES_AUTOHSCROLL | ES_READONLY
+    LTEXT           "Total Time (s)",IDC_STATIC,14,128,50,9
+    EDITTEXT        IDC_TC_TOTALTIME,74,128,28,12,ES_RIGHT | ES_AUTOHSCROLL | 
+                    ES_READONLY
+    LTEXT           "Cycle Time (ms)",IDC_STATIC,14,142,54,9
+    EDITTEXT        IDC_TC_CYCLETIME,74,141,28,12,ES_RIGHT | ES_AUTOHSCROLL | 
+                    ES_READONLY
+    LTEXT           "Speed (cm2/h)",IDC_STATIC,14,155,54,9
+    EDITTEXT        IDC_TC_SCANSPEED,74,154,28,12,ES_RIGHT | ES_AUTOHSCROLL | 
+                    ES_READONLY
+    LTEXT           "Grabbing",IDC_STATIC,113,88,46,11
+    RTEXT           "0",IDC_TC_TT_GRAB,169,88,17,9,SS_SUNKEN
+    CONTROL         "grabbing",IDC_TC_TS_GRAB,"Button",BS_OWNERDRAW | 
+                    WS_TABSTOP,196,87,151,14,WS_EX_STATICEDGE
+    LTEXT           "Img Processing",IDC_STATIC,113,101,50,11
+    RTEXT           "0",IDC_TC_TT_PROC,169,102,17,9,SS_SUNKEN
+    CONTROL         "processing",IDC_TC_TS_PROC,"Button",BS_OWNERDRAW | 
+                    WS_TABSTOP,196,100,151,14,WS_EX_STATICEDGE
+    LTEXT           "Tracking",IDC_STATIC,114,114,46,11
+    RTEXT           "0",IDC_TC_TT_TRACK,169,115,17,9,SS_SUNKEN
+    CONTROL         "tracking",IDC_TC_TS_TRACK,"Button",BS_OWNERDRAW | 
+                    WS_TABSTOP,196,113,151,14,WS_EX_STATICEDGE
+    RTEXT           "0",IDC_TC_TT_FIT,169,128,17,9,SS_SUNKEN
+    CONTROL         "fitting",IDC_TC_TS_FIT,"Button",BS_OWNERDRAW | 
+                    WS_TABSTOP,196,126,151,14,WS_EX_STATICEDGE
+    LTEXT           "Fitting",IDC_STATIC,114,128,42,12
+    RTEXT           "0",IDC_TC_TT_XY,169,141,17,9,SS_SUNKEN
+    LTEXT           "XY Motion",IDC_STATIC,115,141,54,11
+    CONTROL         "xy",IDC_TC_TS_XY,"Button",BS_OWNERDRAW | WS_TABSTOP,196,
+                    139,151,14,WS_EX_STATICEDGE
+    LTEXT           "Z Motion",IDC_STATIC,115,154,54,11
+    RTEXT           "0",IDC_TC_TT_Z,169,154,17,9,SS_SUNKEN
+    CONTROL         "z",IDC_TC_TS_Z,"Button",BS_OWNERDRAW | WS_TABSTOP,196,
+                    152,151,14,WS_EX_STATICEDGE
+    PUSHBUTTON      "Dump &Time Structure",IDC_TC_DUMPTIMESTRUCT,13,168,89,
+                    10
+    PUSHBUTTON      "Dump Gr&ab Structure",IDC_TC_DUMPGRABSTRUCT,13,178,89,
+                    10
+    PUSHBUTTON      "Dump &Focus Data",IDC_TC_DUMPFOCUSDATA,13,188,89,10
+    GROUPBOX        "Configure",IDC_STATIC,7,203,349,87
+    PUSHBUTTON      "&Edit Config",IDC_TC_EDITCONFIG,14,216,50,14
+    PUSHBUTTON      "Sa&ve Config",IDC_TC_SAVECONFIG,14,236,50,14
+    CONTROL         "List1",IDC_TC_OBJLIST,"SysListView32",LVS_REPORT | 
+                    LVS_SINGLESEL | LVS_SHOWSELALWAYS | WS_BORDER | 
+                    WS_TABSTOP,74,215,272,69,WS_EX_CLIENTEDGE
+    PUSHBUTTON      "E&xit",IDCANCEL,14,269,50,14
+    CONTROL         "Dump all Grains to ASCII File",
+                    IDC_TC_DUMPALLGRAINSTOASCII,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,115,170,109,9
+    EDITTEXT        IDC_TC_GRAINFILE,114,187,232,12,ES_AUTOHSCROLL
+END
+
+IDD_SELECT_FIELD DIALOGEX 0, 0, 208, 44
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION
+EXSTYLE WS_EX_TOOLWINDOW
+CAPTION "Select Field of View"
+FONT 8, "MS Sans Serif", 0, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "&Hide",IDC_SF_HIDE,162,23,39,14
+    LTEXT           "Field Number",IDC_STATIC,7,7,54,10,SS_CENTERIMAGE
+    EDITTEXT        IDC_SF_FIELD,68,7,23,12,ES_RIGHT | ES_AUTOHSCROLL
+    LTEXT           "Field Position",IDC_STATIC,104,7,49,10,SS_CENTERIMAGE
+    EDITTEXT        IDC_SF_XFIELD,157,7,22,12,ES_RIGHT | ES_AUTOHSCROLL
+    EDITTEXT        IDC_SF_YFIELD,179,7,22,12,ES_RIGHT | ES_AUTOHSCROLL
+    PUSHBUTTON      "&Apply Field #",IDC_SF_APPLYN,7,23,59,14
+    PUSHBUTTON      "Apply &Position",IDC_SF_APPLYPOS,69,23,59,14
+END
+
+IDD_EDIT_GRIDOPTS DIALOGEX 0, 0, 174, 45
+STYLE DS_MODALFRAME | DS_CENTER | WS_POPUP | WS_CAPTION
+EXSTYLE WS_EX_TOOLWINDOW
+CAPTION "Alignment Grid Options"
+FONT 8, "MS Sans Serif", 0, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,117,7,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,117,24,50,14
+    LTEXT           "X Grid Step (pixels)",IDC_STATIC,7,7,62,11,
+                    SS_CENTERIMAGE
+    EDITTEXT        IDC_EG_XSTEP,76,7,28,12,ES_AUTOHSCROLL
+    LTEXT           "Y Grid Step (pixels)",IDC_STATIC,7,26,62,11,
+                    SS_CENTERIMAGE
+    EDITTEXT        IDC_EG_YSTEP,76,26,28,12,ES_AUTOHSCROLL
+END
+
+IDD_INITMAP DIALOG DISCARDABLE  0, 0, 242, 121
+STYLE DS_MODALFRAME | WS_CAPTION
+CAPTION "Map Initialization"
+FONT 8, "MS Sans Serif"
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,7,100,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,185,100,50,14
+    DEFPUSHBUTTON   "&Select a File",IDC_IM_SELPATH,7,42,68,14
+    EDITTEXT        IDC_IM_INITSTRING,82,42,153,52,ES_MULTILINE | 
+                    ES_AUTOVSCROLL | ES_AUTOHSCROLL
+    LTEXT           "The content of the initialization string depends on the specific sheet map module and on its data I/O module. It may be a file path or an SQL query or something else. ",
+                    IDC_STATIC,7,7,228,29
+END
+
+IDD_SCAN DIALOGEX 0, 0, 268, 154
+STYLE DS_MODALFRAME | WS_CAPTION
+CAPTION "Vertigo Scan - Scanning Monitor - 2001 by Cristiano Bozza"
+FONT 8, "MS Sans Serif", 0, 0, 0x1
+BEGIN
+    LTEXT           "Batch ID",IDC_STATIC,7,7,28,11,SS_CENTERIMAGE
+    EDITTEXT        IDC_SM_ID1,42,7,29,12,ES_RIGHT | ES_AUTOHSCROLL | 
+                    ES_READONLY
+    EDITTEXT        IDC_SM_ID2,72,7,29,12,ES_RIGHT | ES_AUTOHSCROLL | 
+                    ES_READONLY
+    EDITTEXT        IDC_SM_ID3,102,7,29,12,ES_RIGHT | ES_AUTOHSCROLL | 
+                    ES_READONLY
+    EDITTEXT        IDC_SM_ID4,132,7,29,12,ES_RIGHT | ES_AUTOHSCROLL | 
+                    ES_READONLY
+    LTEXT           "Total Fragments",IDC_STATIC,7,22,60,11,SS_CENTERIMAGE
+    EDITTEXT        IDC_SM_TOTALFRAGMENTS,134,22,27,12,ES_RIGHT | 
+                    ES_AUTOHSCROLL | ES_READONLY
+    LTEXT           "Current Fragment",IDC_STATIC,7,35,60,11,SS_CENTERIMAGE
+    EDITTEXT        IDC_SM_CURRENTFRAGMENT,134,35,27,12,ES_RIGHT | 
+                    ES_AUTOHSCROLL | ES_READONLY
+    CONTROL         "Progress1",IDC_SM_FRAGPROGRESS,"msctls_progress32",
+                    PBS_SMOOTH | WS_BORDER,7,49,154,7
+    LTEXT           "Views",IDC_STATIC,9,61,36,11,SS_CENTERIMAGE
+    EDITTEXT        IDC_SM_TOTALVIEWS,134,61,27,12,ES_RIGHT | ES_AUTOHSCROLL | 
+                    ES_READONLY
+    LTEXT           "Current View",IDC_STATIC,9,74,46,11,SS_CENTERIMAGE
+    EDITTEXT        IDC_SM_CURRENTVIEW,134,74,27,12,ES_RIGHT | 
+                    ES_AUTOHSCROLL | ES_READONLY
+    CONTROL         "Progress1",IDC_SM_VIEWPROGRESS,"msctls_progress32",
+                    PBS_SMOOTH | WS_BORDER,7,88,154,7
+    LTEXT           "Elapsed Time",IDC_STATIC,9,101,51,11,SS_CENTERIMAGE
+    EDITTEXT        IDC_SM_TOTALTIME,134,101,27,12,ES_RIGHT | ES_AUTOHSCROLL | 
+                    ES_READONLY
+    LTEXT           "Time to Completion",IDC_STATIC,9,114,77,11,
+                    SS_CENTERIMAGE
+    EDITTEXT        IDC_SM_TIMETOCOMPL,134,114,27,12,ES_RIGHT | 
+                    ES_AUTOHSCROLL | ES_READONLY
+    PUSHBUTTON      "Set &Focus",IDC_SM_SETFOCUS,7,133,38,14
+    PUSHBUTTON      "&Start",IDC_SM_START,49,133,38,14
+    PUSHBUTTON      "&Pause",IDC_SM_PAUSE,91,133,38,14
+    PUSHBUTTON      "&Continue",IDC_SM_CONTINUE,133,133,38,14
+    PUSHBUTTON      "S&top",IDC_SM_STOP,223,133,38,14
+    CONTROL         "Top Valid Layers",IDC_SM_CNTRS_TOPVALIDLAYERS,"Button",
+                    BS_AUTOCHECKBOX | BS_PUSHLIKE | WS_TABSTOP,164,7,97,11,
+                    WS_EX_STATICEDGE
+    CONTROL         "Top Track Density",IDC_SM_CNTRS_TOPTRACKDENSITY,"Button",
+                    BS_AUTOCHECKBOX | BS_PUSHLIKE | WS_TABSTOP,164,18,97,11,
+                    WS_EX_STATICEDGE
+    CONTROL         "Top Average Grains",IDC_SM_CNTRS_TOPAVGGRAINS,"Button",
+                    BS_AUTOCHECKBOX | BS_PUSHLIKE | WS_TABSTOP,164,29,97,11,
+                    WS_EX_STATICEDGE
+    CONTROL         "Top Image Homogeneity",IDC_SM_CNTRS_TOPIMAGEHOM,"Button",
+                    BS_AUTOCHECKBOX | BS_PUSHLIKE | WS_TABSTOP,164,40,97,11,
+                    WS_EX_STATICEDGE
+    CONTROL         "Bottom Valid Layers",IDC_SM_CNTRS_BOTTOMVALIDLAYERS,
+                    "Button",BS_AUTOCHECKBOX | BS_PUSHLIKE | WS_TABSTOP,164,
+                    55,97,11,WS_EX_STATICEDGE
+    CONTROL         "Bottom Track Density",IDC_SM_CNTRS_BOTTOMTRACKDENSITY,
+                    "Button",BS_AUTOCHECKBOX | BS_PUSHLIKE | WS_TABSTOP,164,
+                    66,97,11,WS_EX_STATICEDGE
+    CONTROL         "Bottom Average Grains",IDC_SM_CNTRS_BOTTOMAVGGRAINS,
+                    "Button",BS_AUTOCHECKBOX | BS_PUSHLIKE | WS_TABSTOP,164,
+                    77,97,11,WS_EX_STATICEDGE
+    CONTROL         "Bottom Image Homogeneity",IDC_SM_CNTRS_BOTTOMIMAGEHOM,
+                    "Button",BS_AUTOCHECKBOX | BS_PUSHLIKE | WS_TABSTOP,164,
+                    88,97,11,WS_EX_STATICEDGE
+    CONTROL         "Focus Faults",IDC_SM_CNTRS_FOCUSFAULTS,"Button",
+                    BS_AUTOCHECKBOX | BS_PUSHLIKE | WS_TABSTOP,164,104,97,11,
+                    WS_EX_STATICEDGE
+    CONTROL         "Stage Faults",IDC_SM_CNTRS_STAGEFAULTS,"Button",
+                    BS_AUTOCHECKBOX | BS_PUSHLIKE | WS_TABSTOP,164,115,97,11,
+                    WS_EX_STATICEDGE
+    PUSHBUTTON      "E&xit",IDC_SM_EXIT,181,133,38,14
+END
+
+IDD_SCAN_START DIALOG DISCARDABLE  0, 0, 254, 89
+STYLE DS_MODALFRAME | WS_CAPTION
+CAPTION "Vertigo Scan - Start Scanning"
+FONT 8, "MS Sans Serif"
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,197,7,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,197,68,50,14
+    LTEXT           "Batch ID",IDC_SS_STATIC_BATCHID,20,29,28,11,
+                    SS_CENTERIMAGE
+    EDITTEXT        IDC_SS_ID1,55,29,29,12,ES_RIGHT | ES_AUTOHSCROLL
+    EDITTEXT        IDC_SS_ID2,85,29,29,12,ES_RIGHT | ES_AUTOHSCROLL
+    EDITTEXT        IDC_SS_ID3,115,29,29,12,ES_RIGHT | ES_AUTOHSCROLL
+    EDITTEXT        IDC_SS_ID4,145,29,29,12,ES_RIGHT | ES_AUTOHSCROLL
+    LTEXT           "Min X",IDC_SS_STATIC_MINX,20,44,31,11,SS_CENTERIMAGE
+    EDITTEXT        IDC_SS_MINX,55,44,29,12,ES_RIGHT | ES_AUTOHSCROLL
+    LTEXT           "Max X",IDC_SS_STATIC_MAXX,20,58,30,11,SS_CENTERIMAGE
+    EDITTEXT        IDC_SS_MAXX,55,58,29,12,ES_RIGHT | ES_AUTOHSCROLL
+    LTEXT           "Min Y",IDC_SS_STATIC_MINY,116,44,23,11,SS_CENTERIMAGE
+    EDITTEXT        IDC_SS_MINY,145,44,29,12,ES_RIGHT | ES_AUTOHSCROLL
+    LTEXT           "Max Y",IDC_SS_STATIC_MAXY,116,58,24,11,SS_CENTERIMAGE
+    EDITTEXT        IDC_SS_MAXY,145,58,29,12,ES_RIGHT | ES_AUTOHSCROLL
+    PUSHBUTTON      "Select Catalog",IDC_SS_SELCATALOG,20,30,53,11
+    EDITTEXT        IDC_SS_CATALOG,84,29,90,12,ES_AUTOHSCROLL
+    CONTROL         "Restore Configurations of connected objects",
+                    IDC_SS_RESTORECONFIGS,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,20,49,154,9
+    CONTROL         "Tab1",IDC_SS_TAB,"SysTabControl32",0x0,7,7,180,75
+END
+
+IDD_MANUAL_CHECKS DIALOGEX 0, 0, 241, 266
+STYLE DS_MODALFRAME | WS_CAPTION | WS_SYSMENU
+CAPTION "VertigoScan2 - Manual Checks - 2001 by Cristiano Bozza"
+FONT 8, "MS Sans Serif", 0, 0, 0x1
+BEGIN
+    LTEXT           "Track Position (X, Y, Z)",IDC_STATIC,7,7,91,11
+    EDITTEXT        IDC_MC_IX,109,7,47,12,ES_AUTOHSCROLL
+    EDITTEXT        IDC_MC_IY,159,7,47,12,ES_AUTOHSCROLL
+    EDITTEXT        IDC_MC_IZ,209,7,25,12,ES_AUTOHSCROLL
+    LTEXT           "Track Slope (X, Y)",IDC_STATIC,7,22,92,11
+    EDITTEXT        IDC_MC_SX,109,22,47,12,ES_AUTOHSCROLL
+    EDITTEXT        IDC_MC_SY,159,22,47,12,ES_AUTOHSCROLL
+    DEFPUSHBUTTON   "&Go",IDC_MC_GO,209,22,25,12
+    CONTROL         "&Show Expected Track",IDC_MC_SHOW,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,7,41,89,11
+    PUSHBUTTON      "Activate mouse on camera monitor\r<right click>=Return to primary monitor\r<1>=Fix first point\r<2>=Fix second point",
+                    IDC_MC_ACTIVATEMOUSE,7,55,227,51,BS_MULTILINE | BS_FLAT
+    LTEXT           "Pointer Position (X, Y, Z)",IDC_STATIC,7,109,91,11
+    EDITTEXT        IDC_MC_PX,109,109,47,12,ES_AUTOHSCROLL | ES_READONLY
+    EDITTEXT        IDC_MC_PY,159,109,47,12,ES_AUTOHSCROLL | ES_READONLY
+    LTEXT           "First Position (X, Y, Z)",IDC_STATIC,7,124,91,11
+    EDITTEXT        IDC_MC_FPX,109,124,47,12,ES_AUTOHSCROLL | ES_READONLY
+    EDITTEXT        IDC_MC_FPY,159,124,47,12,ES_AUTOHSCROLL | ES_READONLY
+    EDITTEXT        IDC_MC_FPZ,209,124,25,12,ES_AUTOHSCROLL | ES_READONLY
+    LTEXT           "Second Position (X, Y, Z)",IDC_STATIC,7,139,91,11
+    EDITTEXT        IDC_MC_SPX,109,139,47,12,ES_AUTOHSCROLL | ES_READONLY
+    EDITTEXT        IDC_MC_SPY,159,139,47,12,ES_AUTOHSCROLL | ES_READONLY
+    EDITTEXT        IDC_MC_SPZ,209,139,25,12,ES_AUTOHSCROLL | ES_READONLY
+    LTEXT           "Slope (X, Y)",IDC_STATIC,7,155,92,11
+    EDITTEXT        IDC_MC_MYSX,109,155,47,12,ES_AUTOHSCROLL | ES_READONLY
+    EDITTEXT        IDC_MC_MYSY,159,155,47,12,ES_AUTOHSCROLL | ES_READONLY
+    PUSHBUTTON      "&Load",IDC_MC_LOAD,7,173,24,12
+    PUSHBUTTON      "&Save",IDC_MC_SAVE,36,173,24,12
+    EDITTEXT        IDC_MC_CHECKFILE,65,173,154,12,ES_AUTOHSCROLL
+    PUSHBUTTON      "...",IDC_MC_SELCHECKFILE,222,173,12,12
+    CONTROL         "List1",IDC_MS_CHECKLIST,"SysListView32",LVS_REPORT | 
+                    LVS_SINGLESEL | WS_BORDER | WS_TABSTOP,7,189,227,55,
+                    WS_EX_CLIENTEDGE
+    PUSHBUTTON      "&Flag Selected",IDC_MC_FLAGSEL,7,247,51,12
+    EDITTEXT        IDC_MS_FLAGCODE,67,247,18,12,ES_AUTOHSCROLL
+    PUSHBUTTON      "G&o to Selected",IDC_MC_GOSEL,96,247,51,12
+    PUSHBUTTON      "E&xit",IDCANCEL,184,245,50,14
+END
+
+IDD_REMOTESCAN DIALOG DISCARDABLE  0, 0, 333, 28
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Remotely Controlled Scanning Session"
+FONT 8, "MS Sans Serif"
+BEGIN
+    PUSHBUTTON      "Cancel",IDCANCEL,276,7,50,14
+    LTEXT           "Press ""Cancel"" to close the remotely controlled scanning session",
+                    IDC_STATIC,7,7,253,14,SS_CENTERIMAGE
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO DISCARDABLE 
+BEGIN
+    IDD_MAINSWITCH, DIALOG
+    BEGIN
+        LEFTMARGIN, 1
+        RIGHTMARGIN, 310
+        TOPMARGIN, 2
+        BOTTOMMARGIN, 102
+    END
+
+    IDD_EDIT_CONFIG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 253
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 327
+    END
+
+    IDD_TEST_CONFIG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 356
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 290
+    END
+
+    IDD_SELECT_FIELD, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 201
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 37
+    END
+
+    IDD_EDIT_GRIDOPTS, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 167
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 38
+    END
+
+    IDD_INITMAP, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 235
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 114
+    END
+
+    IDD_SCAN, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 261
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 147
+    END
+
+    IDD_SCAN_START, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 247
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 82
+    END
+
+    IDD_MANUAL_CHECKS, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 234
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 259
+    END
+
+    IDD_REMOTESCAN, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 326
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 21
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Bitmap
+//
+
+IDB_WELCOME             BITMAP  DISCARDABLE     "VSWelcome256.bmp"
+#endif    // English (U.S.) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+/////////////////////////////////////////////////////////////////////////////
+// Italian (Italy) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ITA)
+#ifdef _WIN32
+LANGUAGE LANG_ITALIAN, SUBLANG_ITALIAN
+#pragma code_page(1252)
+#endif //_WIN32
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_PROJNAME            "VertigoScan2"
+END
+
+#endif    // Italian (Italy) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+

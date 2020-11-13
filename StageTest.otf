@@ -1,0 +1,125 @@
+D:\SySal2\StageTest
+StageTest
+CStageTest
+StageTest Class
+StageTest
+CF858251-D5A2-4373-8A24-71960407B0BC
+24646D75-90E9-4303-89CE-ACB889501CB4
+23
+XStep
+XStep
+X Step
+2
+10 2000 300
+YStep
+YStep
+Y Step
+2
+10 2000 300
+ZStep
+ZStep
+Z Step
+2
+5 500 50
+XAcc
+XAccel
+X Acceleration
+2
+100 1e+009 10000
+YAcc
+YAccel
+Y Acceleration
+2
+100 1e+009 10000
+ZAcc
+ZAccel
+Z Acceleration
+2
+100 1e+009 10000
+XSpeed
+XSpeed
+X Speed
+2
+100 100000 10000
+YSpeed
+YSpeed
+Y Speed
+2
+100 100000 10000
+ZSpeed
+ZSpeed
+Z Speed
+2
+100 100000 1000
+XLongRange
+XLongRange
+X Long Range Motion
+2
+100 1e+007 100000
+YLongRange
+YLongRange
+Y Long Range Motion
+2
+100 1e+007 100000
+ZLongRange
+ZLongRange
+Z Long Range Motion
+2
+100 100000 10000
+XStopTol
+XStopTol
+X Stop Tolerance
+2
+0 100 5
+YStopTol
+YStopTol
+Y Stop Tolerance
+2
+0 100 5
+ZStopTol
+ZStopTol
+Z Stop Tolerance
+2
+0 30 2
+XDampTol
+XDampTol
+X Damping Tolerance
+2
+0 2 0.3
+YDampTol
+YDampTol
+Y Damping Tolerance
+2
+0 2 0.3
+ZDampTol
+ZDampTol
+Z Damping Tolerance
+2
+0 2 0.3
+Samples
+Samples
+Time/Position Samples
+1
+100 1000000 1000
+XWait
+XWait
+X Waiting Time (ms)
+1
+0 10000 100
+YWait
+YWait
+Y Waiting Time (ms)
+1
+0 10000 100
+ZWait
+ZWait
+Z Waiting Time (ms)
+1
+0 10000 100
+UseStop
+UseStopCommand
+Use Stop Command
+3
+1
+1
+Stage
